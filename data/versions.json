@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.90",
+    "date": "2026-11-10",
+    "what": "getvocal-agents: round 2 answered (I56 note without the uncaptured Glovo page; levels defended)",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "f8b0f4c36"
+  },
+  {
     "version": "v0.0.89",
     "date": "2026-11-10",
     "what": "round two of review on six scans (noxus pass)",
