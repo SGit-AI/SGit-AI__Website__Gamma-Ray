@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.106",
+    "date": "2026-11-10",
+    "what": "two decisions for Dinis: a survey figure and In production; a private preview for the Portuguese cohort",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "b14c2bb2b"
+  },
+  {
     "version": "v0.0.105",
     "date": "2026-11-10",
     "what": "findings say which cards S4 lifted; an unfilled placeholder stops the build",
