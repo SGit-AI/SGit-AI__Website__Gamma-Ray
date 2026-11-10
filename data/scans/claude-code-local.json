@@ -459,6 +459,69 @@
       "finding": "The \"max\" configuration is \"Auto mode, tools and agent teams\": the three flags it turns on exist (auto, mcp, teams) and each is documented. No finding."
      }
     ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I18 and the configurations",
+      "severity": "must-fix",
+      "finding": "The scan contradicts itself, and the page it now cites says why. The permission modes page (read 2026-11-10): \"With Claude Code v2.1.283 or later, auto mode is the built-in starting permission mode for interactive terminal and VS Code sessions. On earlier versions, it is the built-in starting permission mode only on Pro, Max, Ultra, and Team plans.\" The scan marks I18 available (auto), keeps I16 and I38 as default on \"Manual mode\", and its \"As shipped\" configuration says \"Manual mode: shell commands and edits ask first\". The studio saw this in its own I18 response and left it. If auto is the starting mode, then as shipped on a current version the classifier reviews actions instead of the person, I18 is default, and the Manual-mode answers describe a mode a person chooses. Decide which version the scan describes, say so in the configuration notes, and set the modes to match. This changes what the card means for A, so it blocks sign-off."
+     },
+     {
+      "answer": "S1",
+      "severity": "should-fix",
+      "finding": "Argued against Autonomy 3, which rests on S1 and I18. The span is exact (10 words) and the fact is a named customer with a figure. But the figure is a rollout count: \"Deployed Claude Code to 1,370 engineers\". The scope asks for usage figures for the capability that acts, and a count of engineers who have it installed does not say that the agent completed anything. The same page lists, among Stripe's own results, an education program \"that reframed AI assistants as capable new engineers who need context, not replacements who work autonomously\". A3 is \"completes routine tasks end to end in production; a person handles exceptions\". The page the card cites for it says the customer does not treat it as working autonomously. The Scala to Java migration on the page (\"10,000 lines in four days\") is one task, with AI assistance. S1 stands only on the literal test. Two options: find a usage figure for what the agent did (sessions, pull requests, tasks), or state on the card that S1 is a rollout count. The Manus card has the stronger kind of figure (sessions)."
+     },
+     {
+      "answer": "I45",
+      "severity": "should-fix",
+      "finding": "Argued against Control 4. Under the Spectrum reading (data/indicators.json) a documented limit enforced outside the agent counts, and the note says the operator turns the sandbox on. The note leaves out what the sandboxing page says in three places: \"The sandbox is off by default\"; it \"wraps shell commands\" and the built-in file tools \"run outside it\"; and \"Claude can ask to run a command unsandboxed\" (excludedCommands and unsandboxed retries, with strict sandbox mode to turn the retry off). So C4 rests on a boundary that is opt in, covers shell commands only, and has a documented way for the agent to ask out of it. Add those three facts to the note so the card does not read as a boundary around the whole agent. A better statement of enforcement outside the model is on the permissions page: \"Permission rules are enforced by Claude Code, not by the model.\""
+     },
+     {
+      "answer": "I48",
+      "severity": "should-fix",
+      "finding": "The second fact of Control 4, available (managed). The settings page does say managed settings sit above user, project and local files. As the note says, it is a mechanism. It applies only where an organisation deploys it. Control 4 therefore needs two opt-in facts, sandbox and managed settings. Say so on the card; with no managed settings and no sandbox the card is Control 2 at most on the default."
+     },
+     {
+      "answer": "I41, I43",
+      "severity": "note",
+      "finding": "Control 3 (I41, I39, I43). I39 is default and its source is right: \"Stop the current response or tool call mid-turn so you can redirect\" (12 words, exact, interactive mode page). I41 and I43 are available (managed), exported OpenTelemetry events. I43 says it is monitored in operation; the page documents the export and the metrics, not that anybody looks. Acceptable on the Spectrum reading of available. Same condition as I48."
+     },
+     {
+      "answer": "I56",
+      "severity": "should-fix",
+      "finding": "Re-sourced to the settings reference. True: \"Default: unset, so Claude Code adds Co-Authored-By: <name> and the vendor's no-reply address. The name is the model in use when the commit is made, such as Claude Sonnet 5.\" and \"attribution.commit Change or hide the trailer\". The span is the second sentence of that, which does not by itself say it is an AI; the trailer sentence does. Use \"Claude Code adds Co-Authored-By: <name> and the vendor's no-reply address\" or similar (under 15 words). The note says pull request descriptions get \"a Generated with Claude Code line\"; the page says \"pull request descriptions get plain text\" and gives no wording. Remove the wording or cite where it is written. The mode is right as default, and the note already says a setting can hide it."
+     },
+     {
+      "answer": "S2",
+      "severity": "pass",
+      "finding": "The span \"Third-party plugins that their authors submitted to Anthropic\" (8 words) is exact on the Anthropic marketplaces page. It names a marketplace that holds third-party plugins. It is the vendor describing them; that is what the indicator asks. Round one finding answered."
+     },
+     {
+      "answer": "I61",
+      "severity": "pass",
+      "finding": "Model configuration page lists the aliases (Opus, Sonnet, Haiku, Fable) and what each resolves to. The span \"Uses the latest Opus model for complex reasoning tasks\" (9 words) is exact. Round one finding answered."
+     },
+     {
+      "answer": "I23",
+      "severity": "pass",
+      "finding": "The note now says 16 capabilities from 22 tool rows, none measured, all derived. That is what the profile says. Round one finding answered. On a card the Spectrum reading counts it."
+     },
+     {
+      "answer": "S1 round one, I39",
+      "severity": "pass",
+      "finding": "The S1 span is now the page's words. I39 is re-sourced to the interactive mode page and the span is exact. Both round one findings answered."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Levels three and four on the card: A4, C4. A4: A3 (I08, I18, S1) with I10 default and I18. The argument is above: the mode of I18 may make it default, which strengthens the chain, while S1 is a rollout count that the customer itself says is not autonomous work. C4: two opt-in facts, with caveats above. R2 (I10, I11), O2 (I22, I58, I61) not argued; they are not level three or four. Verdict changes: the contradiction in the modes must be settled before a level is read off this card."
+     }
+    ]
    }
   ],
   "note": "Published as an example on 10 November 2026, before the review workflow existed. Mapped by one agent. It goes through two rounds of review next.",
