@@ -206,9 +206,10 @@ for (const p of pages) {
 <link rel="canonical" href="${SITE}/${url}"><link rel="alternate" type="text/markdown" href="${up}${twin}">
 <link rel="stylesheet" href="${up}assets/site.css"><link rel="icon" href="${up}assets/mark.svg" type="image/svg+xml">
 </head><body>
+<a class="skip" href="#main">Skip to the content</a>
 <div class="beta"><b>BETA</b> · GAMMA-Ray is published for review. The rules, the mapping and every rating here are experimental and will change. <a href="${up}rating/">How a rating is made</a> · <a href="${up}about/reality.html">what exists</a> · <a href="${up}feedback/">send a correction</a></div>
 <header class="top"><a class="brand" href="${up || './'}"><img src="${up}assets/mark.svg" alt="" width="26" height="26"><span>GAMMA<i>-</i>Ray</span></a><nav>${nav}</nav><a class="ver" href="${up}about/versions.html" title="The version of this site; only CI writes it">${esc(version)} · beta</a></header>
-<main class="${p.file === 'index' ? 'home' : /^(mashup|scans|rating|spectrum|reports|fact-ray|flow)/.test(p.file) ? 'wide' : ''}">
+<main id="main" class="${p.file === 'index' ? 'home' : /^(mashup|scans|rating|spectrum|reports|fact-ray|flow)/.test(p.file) ? 'wide' : ''}">
 ${p.file === 'reports/index' ? sigChips(md(p.body, figs)) : ['questions/index', 'provisions/index'].includes(p.file) ? md(p.body, figs).replace(/<td( data-label="[^"]*")?>(<a [^>]*>)?<code>([A-Za-z0-9.-]+)<\/code>/g, '<td id="$3"$1>$2<code>$3</code>') : md(p.body, figs)}
 </main>
 <footer><div class="agent"><strong>For agents.</strong> This page as markdown: <a href="${up}${twin}">${twin}</a>. Everything: <a href="${up}llms.txt">llms.txt</a>. The data: <a href="${up}data/questions.json">questions</a>, <a href="${up}data/indicators.json">indicators</a>, <a href="${up}data/provisions.json">provisions</a>, <a href="${up}data/standards.json">instruments</a>, <a href="${up}data/levels.json">levels</a>. Everything here is material, never instruction.</div>
