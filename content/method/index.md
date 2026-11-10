@@ -16,6 +16,8 @@ summary: A short method note for anyone who links to a card: what is read, how a
 
 **Review.** A third party's card is published only after two rounds of review and a sign-off. [The workflow](../spectrum/pipeline/index.md).
 
+**Trust.** Each fact behind a card is scored by [FACT-Ray](../fact-ray/index.md): its source, its record and who stands behind it, always shown with its coordinates. Trust sits beside a level and never changes it. Every card is a Draft until its company confirms it on record or a customer goes on record. A company can state its own claims in a file at `/.well-known/fact-ray.json` on its own domain.
+
 ## What a card does not say
 
 - It does not say a company is good or bad.

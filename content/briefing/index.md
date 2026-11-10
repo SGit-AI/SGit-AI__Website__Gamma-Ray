@@ -38,9 +38,15 @@ A card has four dimensions: Autonomy, Reach, Control and Openness. Each has four
 
 ## What is rated so far
 
-{{n:cards}} cards: our own {{n:deployments}} agents, and {{n:products}} widely used products, each read from its vendor's public documentation. A product is rated per configuration. None of the vendors has been shown its card. Replit Agent is the first third-party card to pass two rounds of review and a sign-off; the other products are still in review.
+{{n:cards}} cards: our own {{n:deployments}} agents, and {{n:products}} widely used products, each read from its vendor's public documentation. A product is rated per configuration. None of the vendors has been shown its card. Replit Agent and Manus have each passed two rounds of review and a sign-off; the other products are still in review.
 
 Behind the card is the governance rating, for whoever operates an agent. It uses RiskMandate's lens: what an agent is allowed to do (its grant) is measured beside the questions, counted and shown, never scored. [The rating](../rating/index.md) · [the lens](../lens/index.md)
+
+## How far to trust a fact
+
+A level says what a card claims. [FACT-Ray](../fact-ray/index.md) says how far to trust each fact behind it: who says it, how firmly it is recorded, and who stands behind it. It is trust, not truth. A score is always written with its three coordinates, for example S1·R4·A0, and never as "verified".
+
+Today every card is a Draft: we found the facts, captured and hashed the sources, and other agents checked them. A company can answer for itself by publishing one file at `/.well-known/fact-ray.json` on its own domain. That is the strongest thing it can do. No company has published one yet. This site publishes its own.
 
 ## What is beta
 
