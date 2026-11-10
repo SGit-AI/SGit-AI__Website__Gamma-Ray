@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.103",
+    "date": "2026-11-10",
+    "what": "re-check of spinnable-ai-employees and codacy-ai-reviewer, round two of automaise-conversational-ai",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "e30d969e3"
+  },
+  {
     "version": "v0.0.102",
     "date": "2026-11-10",
     "what": "reaches, the mashup as one question at a time",
