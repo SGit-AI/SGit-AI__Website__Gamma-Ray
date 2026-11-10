@@ -276,7 +276,7 @@ export function cardWalk(m, sp, scanId, up = '../../../') {
         if (!d.used.length) { ys.push(yy + 14); blocks += `<text class="w-sm" x="${xI}" y="${yy + 18}">Nothing public found yet. Not a no.</text>`; yy += 34 }
         const mid = (ys[0] + ys[ys.length - 1]) / 2
         const nh = Math.max(64, Math.min(yy - top - 8, 96)), ny = top + 4
-        let node = `<path class="w-edge" d="M${xS} ${spine.length ? spine[spine.length - 1] : 0} V${ny + 22} h${xD - xS}"/>`
+        let node = `<path class="w-edge" d="M${xS} ${spine.length ? spine[spine.length - 1] : rl.length * LH + 14} V${ny + 22} h${xD - xS}"/>`
         spine.push(ny + 22)
         node += link(up + 'spectrum/cards/' + scan.id + '/' + anchor, `<g class="sp-${d.id}${d.level ? '' : ' sp-none'}"><rect class="w-dim" x="${xD}" y="${ny}" width="${wD}" height="${nh}" rx="8"/><text class="w-lv" x="${xD + wD / 2}" y="${ny + 30}" text-anchor="middle">${d.id}${d.level || '·'}</text><text class="w-sm" x="${xD + wD / 2}" y="${ny + 47}" text-anchor="middle">${esc(d.name)}</text>${[1, 2, 3, 4].map(n => `<rect class="w-pip${n <= d.level ? ' on' : ''}" x="${xD + 8 + (n - 1) * 15}" y="${ny + 56}" width="12" height="5" rx="2"/>`).join('')}</g>`, `${d.name}: ${d.level ? 'level ' + d.level + ', ' + d.levelName : 'not yet evidenced'} (this card's section)`)
         // elbows from the dimension to each indicator
