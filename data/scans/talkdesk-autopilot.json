@@ -89,6 +89,92 @@
      }
     ]
    }
+  ],
+  "responses": [
+   {
+    "round": 1,
+    "answer": "I03, I08, I10, I17, I20, I58, I65",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change to credits. The I10 note now also names re-routing shipments, as the page does; the I58 note is kept, since both data sources it names are on the same page, though the span covers Data Cloud only."
+   },
+   {
+    "round": 1,
+    "answer": "I08",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept, with the note now saying the address change comes from a worked customer scenario on the product page, so the reader sees Autonomy 3 rests on a vendor scenario."
+   },
+   {
+    "round": 1,
+    "answer": "I12",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Removed and moved to not credited: the blog states separate sub-agents with their own skills but not their own context and authority, which the scope requires. No level changes; Autonomy 4 still holds through I10."
+   },
+   {
+    "round": 1,
+    "answer": "I11",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: the page states the MCP capability for Talkdesk AI agents without a setup condition, so default stands; no level depends on it."
+   },
+   {
+    "round": 1,
+    "answer": "I19",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept as available with ops-center; the note now says only what the span supports: people can monitor live interactions, inspect execution behavior and enforce guardrails."
+   },
+   {
+    "round": 1,
+    "answer": "I41",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Removed and moved to not credited: it needs an observed or measured grade, and the page does not say the traces record tool calls or actions. The scorer did not count it, so no level changes."
+   },
+   {
+    "round": 1,
+    "answer": "I47",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept, with the note reworded to say it is a sample natural-language setup prompt in the press release that contains an escalation rule. Control 1 still rests on it; the Autopilot page guardrails sentence does not say the limit is prose or needs approval, so it was not used for I38 or I47."
+   },
+   {
+    "round": 1,
+    "answer": "I57",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Removed and moved to not credited: a platform vulnerability disclosure channel is not a channel to report agent output or contest it. No level depends on it."
+   },
+   {
+    "round": 1,
+    "answer": "I67",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept, with the note now saying the dashboard is a feature the product page lists."
+   },
+   {
+    "round": 1,
+    "answer": "S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept on the root llms.txt (re-fetched: status 200, 3357 bytes, span is its first line); the unsourced docs.talkdesk.com sentence is removed, and the note says the file is site-level, not specific to Autopilot."
+   },
+   {
+    "round": 1,
+    "answer": "S1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: S1 stays uncredited and is listed in not credited; the Quadient containment figure is for answering calls, not for the capability that acts."
+   },
+   {
+    "round": 1,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "After the edits the card is unchanged at A4 R2 C1 O1: Autonomy 4 now uses I10 and I19, Reach 2 uses I10 and I11, Control 1 rests on the sample prompt (I47), Openness 1 on I20 and I58. Autonomy 4 is available with Operations Center only, as the card shows."
+   }
   ]
  },
  "assessment": {
@@ -118,14 +204,14 @@
   },
   "I08": {
    "e": "https://www.talkdesk.com/cloud-contact-center/self-service-experience/autopilot/",
-   "n": "The product page describes Autopilot changing an order's delivery address itself through an integrated order system.",
+   "n": "In a worked customer scenario on the product page, Autopilot changes an order's delivery address itself through the integrated order management system.",
    "span": "it's able to autonomously make the change.",
    "g": "documented",
    "m": "default"
   },
   "I10": {
    "e": "https://www.talkdesk.com/blog/bringing-autopilots-agentic-ai-power-email-support/",
-   "n": "Autopilot executes tasks such as refunds and appointment changes through integrations with CRM and ERP systems.",
+   "n": "Autopilot for email executes tasks such as processing refunds, re-routing shipments and managing appointments through integrations with CRM and ERP systems.",
    "span": "By integrating with your CRM and ERP, Autopilot executes tasks",
    "g": "documented",
    "m": "default"
@@ -134,13 +220,6 @@
    "e": "https://www.talkdesk.com/customer-experience-automation/multi-agent-orchestration/",
    "n": "Talkdesk states that its AI agents use MCP to call external tools and services of third parties.",
    "span": "securely discover, invoke, and exchange information with external tools and services",
-   "g": "documented",
-   "m": "default"
-  },
-  "I12": {
-   "e": "https://www.talkdesk.com/blog/bringing-autopilots-agentic-ai-power-email-support/",
-   "n": "An orchestrator agent identifies intent and passes work to specialised sub-agents, each with its own skills.",
-   "span": "the orchestrator identifies the customer’s true intent and directs the work to specialized sub-agents",
    "g": "documented",
    "m": "default"
   },
@@ -153,7 +232,7 @@
   },
   "I19": {
    "e": "https://www.talkdesk.com/cloud-contact-center/self-service-experience/autopilot/",
-   "n": "With CXA Operations Center, people watch Autopilot's live interactions and set guardrails while it works on its own.",
+   "n": "With CXA Operations Center, people can monitor Autopilot's live interactions, inspect its execution behavior and enforce guardrails.",
    "span": "Monitor live interactions, inspect execution behavior, and enforce guardrails",
    "g": "documented",
    "m": "available",
@@ -166,25 +245,10 @@
    "g": "documented",
    "m": "default"
   },
-  "I41": {
-   "e": "https://www.talkdesk.com/customer-experience-automation/cxa-operations-center/",
-   "n": "CXA Operations Center records session-level execution traces of AI agents for inspection.",
-   "span": "analyze session-level execution traces, and diagnose failures in production",
-   "g": "documented",
-   "m": "available",
-   "cfg": "ops-center"
-  },
   "I47": {
    "e": "https://www.talkdesk.com/news-and-press/press-releases/ai-agents-for-voice/",
-   "n": "Limits are given to the agent as plain-language instructions, such as when to escalate to a live agent.",
+   "n": "The press release gives a sample natural-language setup prompt for an AI agent that includes a rule to escalate to a live agent on a medical emergency.",
    "span": "Escalate to a live agent if the customer mentions a medical emergency",
-   "g": "documented",
-   "m": "default"
-  },
-  "I57": {
-   "e": "https://www.talkdesk.com/contact-center-platform/security-compliance/certifications-standards/",
-   "n": "Talkdesk publishes a vulnerability disclosure channel for issues affecting its customers.",
-   "span": "If you find a vulnerability that affects Talkdesk customers, send us a report",
    "g": "documented",
    "m": "default"
   },
@@ -204,21 +268,42 @@
   },
   "I67": {
    "e": "https://www.talkdesk.com/cloud-contact-center/self-service-experience/autopilot/",
-   "n": "Autopilot's dashboard shows usage, intents and escalation rate to live agents.",
+   "n": "The product page lists a dashboard feature that shows usage, channel distribution, customer intents and escalation rate to live agents.",
    "span": "Visualize usage, channel distribution, customer intents, and escalation rate to live agents.",
    "g": "documented",
    "m": "default"
   },
   "S3": {
    "e": "https://www.talkdesk.com/llms.txt",
-   "n": "talkdesk.com publishes an llms.txt (fetched), and docs.talkdesk.com publishes one for its API documentation.",
+   "n": "talkdesk.com publishes an llms.txt (fetched), a site-level guide for language models that is not specific to Autopilot.",
    "span": "# Purpose: AI usage guidance for Large Language Models (LLMs)",
    "g": "observed",
    "m": "default",
    "method": "probe"
   }
  },
- "not_credited": [],
+ "not_credited": [
+  {
+   "what": "I12 Several agents coordinate inside the organisation",
+   "why": "The email blog says an orchestrator directs work to specialised sub-agents with specific skills, but does not say each has its own context and authority, which the indicator's scope requires.",
+   "source": "https://www.talkdesk.com/blog/bringing-autopilots-agentic-ai-power-email-support/"
+  },
+  {
+   "what": "I41 Its actions are logged",
+   "why": "The indicator needs an observed or measured grade and a log of what the agent does; the page is a vendor statement about session-level execution traces and does not say tool calls or actions are recorded.",
+   "source": "https://www.talkdesk.com/customer-experience-automation/cxa-operations-center/"
+  },
+  {
+   "what": "I57 A channel to report problems with it or contest its output",
+   "why": "The page offers a vulnerability disclosure channel for the platform for security researchers; it does not cover reporting wrong agent output or contesting a result, and does not name Autopilot.",
+   "source": "https://www.talkdesk.com/contact-center-platform/security-compliance/certifications-standards/"
+  },
+  {
+   "what": "S1 In production",
+   "why": "The 60% containment quote on the Autopilot page is about answering calls, and the Quadient story names Copilot and Knowledge Management, not the capability that acts; the Novobanco story ties Autopilot to call redistribution.",
+   "source": "https://www.talkdesk.com/cloud-contact-center/self-service-experience/autopilot/"
+  }
+ ],
  "announced": [
   {
    "what": "Agent Builder: zero-prompt creation, testing and validation of AI agents (press release, June 2026)",
@@ -265,42 +350,32 @@
   "https://www.talkdesk.com/about/": {
    "sha256": "2b014cff927baa3bbd835b2e8e940bcbbe77850ac021377ccaf3f49eb94a65ba",
    "bytes": 398743,
-   "read_at": "2026-11-10T10:43Z"
+   "read_at": "2026-11-10T13:46Z"
   },
   "https://www.talkdesk.com/blog/bringing-autopilots-agentic-ai-power-email-support/": {
-   "sha256": "7c7af60151aea1a644ffaa74dc612697743daf52b8e3bc97e0fe86448dff37ff",
+   "sha256": "1d5a7fdff43b918e03cba9e0b99cb6163b2536eb28ec1532ec8ef29418720221",
    "bytes": 426267,
-   "read_at": "2026-11-10T10:43Z"
+   "read_at": "2026-11-10T13:46Z"
   },
   "https://www.talkdesk.com/cloud-contact-center/self-service-experience/autopilot/": {
    "sha256": "2ed154096cde1a08fe868c0303764d101ef88aa8e828fb1c0f604edc3f136b98",
    "bytes": 548836,
-   "read_at": "2026-11-10T10:43Z"
-  },
-  "https://www.talkdesk.com/contact-center-platform/security-compliance/certifications-standards/": {
-   "sha256": "3a405109bbb12015b883eb23006111fc11a4cd9236894ba670f54da1edd0efe9",
-   "bytes": 402860,
-   "read_at": "2026-11-10T10:43Z"
-  },
-  "https://www.talkdesk.com/customer-experience-automation/cxa-operations-center/": {
-   "sha256": "f8d4ebef009febf68f89d44d9d7e17c8f82f7b0e9697af4afbeb9575c662fa04",
-   "bytes": 540859,
-   "read_at": "2026-11-10T10:43Z"
+   "read_at": "2026-11-10T13:46Z"
   },
   "https://www.talkdesk.com/customer-experience-automation/multi-agent-orchestration/": {
    "sha256": "ab02084289d49a43ca3604b202cbc1b6141919499fc74352ab77d04fb444c71c",
    "bytes": 503658,
-   "read_at": "2026-11-10T10:43Z"
+   "read_at": "2026-11-10T13:46Z"
   },
   "https://www.talkdesk.com/llms.txt": {
    "sha256": "e766ceca888f4db7430977b58ec984f42a8c8633901f2c9ebdf33a4a15d136a3",
    "bytes": 3357,
-   "read_at": "2026-11-10T10:43Z"
+   "read_at": "2026-11-10T13:46Z"
   },
   "https://www.talkdesk.com/news-and-press/press-releases/ai-agents-for-voice/": {
-   "sha256": "7da75a28ec69dba0fe9df71906ec0e78ddf37f296c94d1e12fdc1f3274c28cb0",
+   "sha256": "ef9b9034d7f73e83ba31a678343993703bb0a5cc1935dc4fc86fe712ca9f669f",
    "bytes": 281025,
-   "read_at": "2026-11-10T10:43Z"
+   "read_at": "2026-11-10T13:46Z"
   }
  }
 }
