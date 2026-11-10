@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.98",
+    "date": "2026-11-10",
+    "what": "codacy-ai-reviewer: round 2 answered (I47 re-spanned to the learning sentence; I01 available; I22 note)",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "ead297c4a"
+  },
+  {
     "version": "v0.0.97",
     "date": "2026-11-10",
     "what": "junie: round 3 answered (I25 and I50 re-spanned; I10 limit stated for the reviewer)",
