@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.79",
+    "date": "2026-11-10",
+    "what": "outsystems-agent-workbench: round 1 answered (I41 removed; S1, I08, I11 (available), S3 re-spanned)",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "2fdf4c240"
+  },
+  {
     "version": "v0.0.78",
     "date": "2026-11-10",
     "what": "talkdesk-autopilot: round 1 answered (I12, I41, I57 removed; notes on I08, I10, I19, I47, I67, S3)",
