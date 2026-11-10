@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.114",
+    "date": "2026-11-10",
+    "what": "re-checks of codacy-ai-reviewer (pass), automaise-conversational-ai (pass), bythelaw-legal-chat and spinnable-ai-employees (changes)",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "3e2ea219e"
+  },
+  {
     "version": "v0.0.113",
     "date": "2026-11-10",
     "what": "Pebl Alfie: round two answered (I15 and I17 reasons, I23 span and note)",
