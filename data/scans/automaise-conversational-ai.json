@@ -74,6 +74,71 @@
      }
     ]
    }
+  ],
+  "responses": [
+   {
+    "round": 1,
+    "answer": "I08",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Mode changed from default to available with the connected-systems configuration, and the note now says the transactions run through the operator's systems connected per deployment. Source, span and grade unchanged; Autonomy 3 holds, now marked available."
+   },
+   {
+    "round": 1,
+    "answer": "I10",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Source changed from the script bundle to the product page, where the same sentence is in the page text (span verified there). The note now says only categories are named and no named connector or integration list was found, and the FAQ task list was dropped as it shows task types, not systems."
+   },
+   {
+    "round": 1,
+    "answer": "I11",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Source changed from the company home page to the service terms, which say the platform answers on Facebook Messenger, WebChat, Twitter, E-mail and WhatsApp on behalf of businesses (span verified on the page). The note now says it concerns third-party messaging channels, and mode is available with connected-systems, since a channel is connected per deployment."
+   },
+   {
+    "round": 1,
+    "answer": "I17",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change. The escalation sentence exists only in the script file, as the note says; that file was refetched today with the same SHA-256 as the capture, so the vault copy preserves it if the bundle changes."
+   },
+   {
+    "round": 1,
+    "answer": "I20",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change. The FAQ states the request types the assistant handles on its own and that anything outside a predictable flow escalates, which is the documented task scope of the product as shipped; deployment-specific permissions are not public. The credit stays flagged for round two as the reviewer suggests."
+   },
+   {
+    "round": 1,
+    "answer": "I58",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Credit kept under needs: statement; the note is made more precise: the terms define the data a business provides to the service (assistant configurations, frequent questions' answers, messages, end-user data), which is the data the assistant works with. It does not describe the sources used for each answer, so it stays flagged for round two."
+   },
+   {
+    "round": 1,
+    "answer": "S1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the finding is a pass."
+   },
+   {
+    "round": 1,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Card unchanged at A3 R2 C- O1 after these edits: I08 and I10 are now both available, so Autonomy 3 and Reach 2 are marked available; Reach 2 also rests on I11 through the service terms."
+   },
+   {
+    "round": 1,
+    "answer": "I10,I20 and sources",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change needed; all five sources were refetched on 2026-11-10 and four match their captured SHA-256 exactly (the home page differs, and it is no longer cited after the I11 change)."
+   }
   ]
  },
  "assessment": {
@@ -96,25 +161,27 @@
  "answers": {
   "I08": {
    "e": "https://site.automaise.com/conversational-ai",
-   "n": "The product page says data changes, payments, orders and subscriptions are completed by the AI without an agent stepping in.",
+   "n": "The product page says data changes, payments, orders and service subscriptions are completed by the AI without an agent stepping in; such transactions run through the operator's own systems, connected per deployment.",
    "span": "completed end-to-end by the AI, with no need for an agent",
    "g": "documented",
-   "m": "default"
+   "m": "available",
+   "cfg": "connected-systems"
   },
   "I10": {
-   "e": "https://framerusercontent.com/sites/2oOCAmSqmUJsdceu4ef5J/Qq644o6Aab6qlVpuxwnOdBYCwMeQYtwb4UBEDaOYKYc.uN0Y50vq.mjs",
-   "n": "The product page says Conversational AI connects with CRM, contact-centre and messaging platforms, and its FAQ lists account management, payments, order tracking, scheduling and data updates (the FAQ text is in the product page's script file, captured as it loads).",
+   "e": "https://site.automaise.com/conversational-ai",
+   "n": "The product page says Conversational AI connects with CRM, contact-centre (CCaaS) and messaging platforms; it names these categories only, and no named connector or integration list was found in the sources.",
    "span": "Conversational AI connects with every major CRM, CCaaS, and messaging platform",
    "g": "documented",
    "m": "available",
    "cfg": "connected-systems"
   },
   "I11": {
-   "e": "https://www.automaise.com/",
-   "n": "The agents operate on third-party channels including WhatsApp and social media.",
-   "span": "We operate across voice, chat, email, WhatsApp, social media",
+   "e": "https://www.automaise.com/legal/privacy-policy",
+   "n": "The service terms say the platform's assistants answer on third-party messaging channels, naming Facebook Messenger, WebChat, Twitter, E-mail and WhatsApp, on behalf of businesses.",
+   "span": "automate answering on a given channel (Facebook Messenger, WebChat, Twitter, E-mail, WhatsApp",
    "g": "documented",
-   "m": "default"
+   "m": "available",
+   "cfg": "connected-systems"
   },
   "I17": {
    "e": "https://framerusercontent.com/sites/2oOCAmSqmUJsdceu4ef5J/Qq644o6Aab6qlVpuxwnOdBYCwMeQYtwb4UBEDaOYKYc.uN0Y50vq.mjs",
@@ -132,7 +199,7 @@
   },
   "I58": {
    "e": "https://www.automaise.com/legal/privacy-policy",
-   "n": "The service terms define the Customer Data the service processes, including assistant configurations and messages.",
+   "n": "The service terms define Customer Data as what a business provides to the service, including assistant configurations, frequent questions' answers and messages, and the data of its end users.",
    "span": "Virtual Employee configurations, frequent questions’ answers, text messages",
    "g": "documented",
    "m": "default"
@@ -145,7 +212,18 @@
    "m": "default"
   }
  },
- "not_credited": [],
+ "not_credited": [
+  {
+   "what": "Named connectors or an integration list for the CRM, CCaaS and messaging connections (would strengthen I10 and Reach 2)",
+   "why": "The product page names categories only; no connector, integration list or integration documentation was found in the scan's sources.",
+   "source": "https://site.automaise.com/conversational-ai"
+  },
+  {
+   "what": "Approval of critical decisions only (I18)",
+   "why": "The FAQ escalation text has a person take over the conversation, not approve a decision; it supports I17 only.",
+   "source": "https://framerusercontent.com/sites/2oOCAmSqmUJsdceu4ef5J/Qq644o6Aab6qlVpuxwnOdBYCwMeQYtwb4UBEDaOYKYc.uN0Y50vq.mjs"
+  }
+ ],
  "announced": [
   {
    "what": "Automaise Sustainable AI Platform (Portugal 2030 project, Green LLM Engine, AI carbon emissions calculator), due to conclude 20 September 2026 per Jornal Economico.",
@@ -180,27 +258,22 @@
   "https://framerusercontent.com/sites/2oOCAmSqmUJsdceu4ef5J/Qq644o6Aab6qlVpuxwnOdBYCwMeQYtwb4UBEDaOYKYc.uN0Y50vq.mjs": {
    "sha256": "38255827e2c7cf4cfb82ab50c8ed45e59c3c436f08ee5a79709e48922ed9f72e",
    "bytes": 256091,
-   "read_at": "2026-11-10T10:44Z"
+   "read_at": "2026-11-10T14:45Z"
   },
   "https://site.automaise.com/conversational-ai": {
    "sha256": "890debfa4d78df6be8c9f109e801724ad866170c745b1973094aac3a1d080cdd",
    "bytes": 481638,
-   "read_at": "2026-11-10T10:44Z"
+   "read_at": "2026-11-10T14:45Z"
   },
   "https://site.automaise.com/use-cases/via-ctt": {
    "sha256": "eb0467745f88219976d08818a8886f15190829f5d1160fecc7e5821271172ee1",
    "bytes": 396043,
-   "read_at": "2026-11-10T10:44Z"
-  },
-  "https://www.automaise.com/": {
-   "sha256": "6d960e65c2ac9629a7ebf3df8a2a01bd803a1e950588991725127957d4a515e5",
-   "bytes": 709741,
-   "read_at": "2026-11-10T10:44Z"
+   "read_at": "2026-11-10T14:45Z"
   },
   "https://www.automaise.com/legal/privacy-policy": {
    "sha256": "3b0ce570f79cb137fc9a425681fc238dc63d07a2f35502675e1f74812478289b",
    "bytes": 351114,
-   "read_at": "2026-11-10T10:44Z"
+   "read_at": "2026-11-10T14:45Z"
   }
  }
 }
