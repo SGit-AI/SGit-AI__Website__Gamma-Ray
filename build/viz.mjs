@@ -135,7 +135,7 @@ export function ring(m) {
     for (const [k, v] of Object.entries(m.pairs).sort((a, b) => a[1].length - b[1].length)) { const [a, b] = k.split('|'), [x1, y1] = pos[a], [x2, y2] = pos[b]
         o += `<path class="band" d="M${x1.toFixed(1)},${y1.toFixed(1)} Q${cx},${cy} ${x2.toFixed(1)},${y2.toFixed(1)}" style="stroke-width:${(1 + 13 * v.length / max).toFixed(1)};opacity:${(0.25 + 0.6 * v.length / max).toFixed(2)}"><title>${esc(m.S.get(a).short)} and ${esc(m.S.get(b).short)}: ${v.length} shared indicators</title></path>` }
     for (const s of S) { const [x, y, a] = pos[s.id], lx = cx + (r + 22) * Math.cos(a), ly = cy + (r + 22) * Math.sin(a)
-        o += `<circle class="node s-${s.id}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(7 + s.indicators / 4).toFixed(1)}"/><text class="s-${s.id} nl" x="${lx.toFixed(1)}" y="${(ly + 4).toFixed(1)}" text-anchor="${Math.cos(a) > 0.3 ? 'start' : Math.cos(a) < -0.3 ? 'end' : 'middle'}">${esc(s.short)} <tspan class="dim">${s.indicators}</tspan></text>` }
+        o += `<a href="../instruments/#${slug(s.name)}"><title>${esc(s.name)}: ${s.indicators} indicators cite it (its entry on the instruments page)</title><circle class="node s-${s.id}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(7 + s.indicators / 4).toFixed(1)}"/><text class="s-${s.id} nl" x="${lx.toFixed(1)}" y="${(ly + 4).toFixed(1)}" text-anchor="${Math.cos(a) > 0.3 ? 'start' : Math.cos(a) < -0.3 ? 'end' : 'middle'}">${esc(s.short)} <tspan class="dim">${s.indicators}</tspan></text></a>` }
     return o + '</svg><p class="figcap">A node is as large as the number of indicators that cite the instrument. A band is as thick as the number two instruments share.</p>'
 }
 
