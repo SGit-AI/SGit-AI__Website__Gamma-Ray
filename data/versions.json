@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.129",
+    "date": "2026-11-10",
+    "what": "Pebl Alfie: round three answered, pages cited by not_credited captured and hashed",
+    "by": "gamma.field@web-summit.dinis",
+    "from": "29e375fa1"
+  },
+  {
     "version": "v0.0.128",
     "date": "2026-11-10",
     "what": "sign off bythelaw-legal-chat, visor-ai-agents, claude-code-local",
