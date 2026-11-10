@@ -269,6 +269,13 @@
    "n": "A feedback command and a bug command send reports to the vendor.",
    "g": "documented",
    "m": "default"
+  },
+  "I45": {
+   "e": "https://code.claude.com/docs/en/sandboxing",
+   "n": "Sandboxing restricts shell commands at the operating system level (filesystem and network); the operator turns it on.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "sandbox"
   }
  },
  "configurations": [
@@ -526,6 +533,13 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "No change for this note; see the I18 response on which mode a terminal session starts in."
+   },
+   {
+    "round": 1,
+    "answer": "I45",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Restored under the Spectrum reading of I45 (gamma-ray@, data/indicators.json): the source documents a limit enforced outside the agent, named in the note. The governance rating still reads I45 from a measured grant only."
    }
   ]
  }

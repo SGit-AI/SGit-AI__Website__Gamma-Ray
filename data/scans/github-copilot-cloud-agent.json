@@ -118,6 +118,13 @@
    "g": "observed",
    "m": "default",
    "method": "probe"
+  },
+  "I45": {
+   "e": "https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/customize-the-agent-firewall",
+   "n": "\"By default, Copilot’s access to the internet is limited by a firewall.\" The vendor adds that it \"should not be considered a comprehensive security solution\".",
+   "g": "documented",
+   "m": "default",
+   "span": "access to the internet is limited by a firewall"
   }
  },
  "not_credited": [
@@ -307,6 +314,13 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "No change."
+   },
+   {
+    "round": 1,
+    "answer": "I45",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Restored under the Spectrum reading of I45 (gamma-ray@, data/indicators.json): the source documents a limit enforced outside the agent, named in the note. The governance rating still reads I45 from a measured grant only."
    }
   ]
  }

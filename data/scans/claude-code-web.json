@@ -202,6 +202,13 @@
    "n": "A page describes what data is sent, kept and used.",
    "g": "documented",
    "m": "default"
+  },
+  "I45": {
+   "e": "https://code.claude.com/docs/en/cloud-environments",
+   "n": "With the default (Trusted) network access, sessions reach allowlisted domains \"and nothing else through the session’s network\".",
+   "g": "documented",
+   "m": "default",
+   "span": "and nothing else through the session’s network"
   }
  },
  "configurations": [
@@ -398,6 +405,13 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "No change except I56, re-sourced from the overview’s description to the settings reference (attribution trailer on commits, including cloud commits, by default), to match the local scan’s fix."
+   },
+   {
+    "round": 1,
+    "answer": "I45",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Restored under the Spectrum reading of I45 (gamma-ray@, data/indicators.json): the source documents a limit enforced outside the agent, named in the note. The governance rating still reads I45 from a measured grant only."
    }
   ]
  }

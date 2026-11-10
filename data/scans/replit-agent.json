@@ -182,6 +182,13 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "Read; no change needed."
+   },
+   {
+    "round": 2,
+    "answer": "I18",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note trimmed to what the cited overview says; the paid-action confirmation (another page) is no longer in it."
    }
   ]
  },
@@ -296,7 +303,7 @@
   },
   "I18": {
    "e": "https://docs.replit.com/features/agent/overview",
-   "n": "In the default build mode Agent plans, writes code, sets up infrastructure, tests and deploys on its own from a description; changes from background tasks wait for the person's review and paid actions need confirmation.",
+   "n": "In the default build mode Agent plans, writes code, sets up infrastructure, tests and deploys on its own from a description.",
    "span": "Agent handles the rest, from planning to deployment",
    "g": "documented",
    "m": "default",
