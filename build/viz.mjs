@@ -309,3 +309,46 @@ export function cohort(m, sp, up = '') {
     })
     return o + `</svg><p class="figcap">The published cards side by side: four dimensions, each filled to its level and written as a number (a dot is not yet evidenced, which is not a no). Each row links to its card.</p>`
 }
+
+// 11. One path of a card's graph, drawn: the answer to "what does this level rest on, and what does that connect to?".
+// It takes the card's graph (build/graph.mjs), picks the dimension with the highest level, one fact under it and draws that fact's
+// neighbourhood: the level it holds up, the evidence and the page it was read on, who made and checked it, the provisions it speaks to
+// and the open question that would unlock the next level. Every edge carries its verb, every node says what it is, every node is a link.
+export function pathGraph(g, up = '../../../') {
+    const N = Object.fromEntries(g.nodes.map(n => [n.id, n])), out = id => g.edges.filter(e => e.from === id)
+    const card = g.nodes.find(n => n.type === 'card'); if (!card) return ''
+    const dims = out(card.id).filter(e => e.verb === 'rated_on').map(e => N[e.to]).map(d => ({ d, st: out(d.id).find(e => e.verb === 'stands_at') })).filter(x => x.st)
+    if (!dims.length) return ''
+    const lvlNum = x => +(N[x.st.to].id.match(/(\d)$/)?.[1] || 0), top = dims.sort((a, b) => lvlNum(b) - lvlNum(a))[0]
+    const level = N[top.st.to], factE = out(level.id).find(e => e.verb === 'rests_on'); if (!factE) return ''
+    const fact = N[factE.to], evE = out(fact.id).find(e => e.verb === 'backed_by'), ev = evE && N[evE.to]
+    const src = ev && N[out(ev.id).find(e => e.verb === 'observed_on')?.to]
+    const actors = ev ? out(ev.id).filter(e => /^(produced|checked)_by$/.test(e.verb)) : []
+    const provs = out(fact.id).filter(e => /^(matches|is_part_of|negates)$/.test(e.verb))
+    const awaits = out(top.d.id).filter(e => e.verb === 'awaits').slice(0, 1)
+    const W = 440, x0 = 44, wB = W - x0 - 2, LH = 15, scan = card.id.replace('card:', '')
+    let y = 0, o = ''
+    const link = (href, inner, title, ext) => `<a href="${esc(href)}"${ext ? ' target="_blank" rel="noopener"' : ''}><title>${esc(title)}</title>${inner}</a>`
+    const box = (x, w, kind, text, cls, href, title, ext, sub) => { const L = wrap(text, Math.floor((w - 16) / 6.4)), subs = sub ? [].concat(sub) : [], h = 22 + L.length * LH + subs.length * LH + 4
+        o += link(href, `<rect class="p-n ${cls}" x="${x}" y="${y}" width="${w}" height="${h}" rx="6"/><text class="p-k" x="${x + 8}" y="${y + 14}">${esc(kind)}</text>` + L.map((t, i) => `<text x="${x + 8}" y="${y + 29 + i * LH}">${esc(t)}</text>`).join('') + subs.map((t, i) => `<text class="p-sm" x="${x + 8}" y="${y + 29 + (L.length + i) * LH}">${esc(t)}</text>`).join(''), title, ext)
+        const b = y + h; y = b; return [b - h, b] }
+    const edge = (x, verb, len = 24) => { o += `<path class="p-e" d="M${x} ${y} v${len}"/><path class="p-ar" d="M${x - 4} ${y + len - 6} l4 6 l4 -6"/><text class="p-v" x="${x + 10}" y="${y + len / 2 + 4}">${esc(verb)}</text>`; y += len }
+    const cx = 24, cardPage = up + 'spectrum/cards/' + scan + '/'
+    box(0, W, 'CARD', `${card.label}: ${card.signature}`, 'p-card', cardPage, `The card: ${card.label}`); edge(cx, 'rated_on')
+    box(0, W, 'DIMENSION', top.d.label, 'p-dim', cardPage, `${top.d.label} on the card`); edge(cx, 'stands_at')
+    box(0, W, 'LEVEL', level.label, 'p-lvl', cardPage, `${level.label} (the card)`); edge(cx, 'rests_on')
+    const [fy0, fy1] = box(0, W, 'FACT', fact.label, 'p-fact', up + 'questions/#' + (fact.indicator || ''), `${fact.indicator || 'This fact'}: its row on the questions page`, false, fact.trust)
+    // branches hang off a spine at the fact's left
+    const spineTop = y; let spineEnd = y
+    const branch = (verb, draw) => { y += 22; o += `<path class="p-e" d="M${cx} ${y} h${x0 - cx - 8}"/><path class="p-ar" d="M${x0 - 14} ${y - 4} l6 4 l-6 4"/><text class="p-v" x="${cx + 6}" y="${y - 6}">${esc(verb)}</text>`; spineEnd = y; draw() }
+    if (ev) { branch('backed_by', () => { const [a0] = box(x0, wB, 'EVIDENCE', ev.label, 'p-ev', cardPage, 'The evidence, on the card page', false, [...(ev.sentence ? ['words: "' + short(ev.sentence, 48) + '"'] : []), `read ${ev.read_at}${ev.sha256 ? ' · sha256 ' + ev.sha256.slice(0, 8) : ''}`])
+        if (src) { edge(x0 + 14, 'observed_on', 22); box(x0, wB, 'SOURCE', hostPath(src.url), 'p-src', src.url, `The public source: ${src.url} (opens it)`, true) }
+        for (const e of actors) { y += 6; o += `<text class="p-sm" x="${x0 + 8}" y="${y + 12}">${esc(e.verb)} ${esc(N[e.to].label)}</text>`; y += 14 } }) }
+    for (const e of provs) branch(e.verb, () => { const P = N[e.to], I = out(P.id).find(x => x.verb === 'stated_in'); box(x0, wB, 'PROVISION', P.label, 'p-pv', up + 'provisions/' + P.id.replace('provision:', '') + '/', `${P.label} (its page)`, false, I ? 'stated_in ' + short(N[I.to].label, 40) : '') })
+    for (const e of awaits) branch('awaits', () => { const Q = N[e.to]; box(x0, wB, 'NOT YET EVIDENCED', Q.label, 'p-q', up + 'questions/#' + (Q.indicator || ''), `${Q.indicator}: an open question, not a no`, false, Q.would_reach ? 'would reach ' + Q.would_reach : '') })
+    o = `<path class="p-e" d="M${cx} ${spineTop} V${spineEnd}"/>` + o
+    const H = Math.ceil(y + 6)
+    const css = `<style>.pg text{font:12.5px var(--sans);fill:var(--ink)}.pg a{cursor:pointer}.pg a:hover rect,.pg a:focus rect{stroke-width:2.5}.pg .p-e{fill:none;stroke:var(--ink3);stroke-width:1.5}.pg .p-ar{fill:none;stroke:var(--ink3);stroke-width:1.5}.pg .p-v{font:italic 11.5px var(--mono);fill:var(--ink2)}.pg .p-k{font:700 10px var(--mono);letter-spacing:.06em;fill:var(--ink3)}.pg .p-sm{font-size:11.5px;fill:var(--ink3)}.pg .p-n{fill:var(--paper);stroke:var(--ink2);stroke-width:1.3}.pg .p-card{fill:var(--band);stroke:var(--ink);stroke-width:1.8}.pg .p-fact{stroke:var(--accent);stroke-width:2.2;fill:var(--band)}.pg .p-ev{stroke:var(--accent)}.pg .p-src{stroke:var(--accent);stroke-width:1.6}.pg .p-pv{stroke:var(--c-sf)}.pg .p-q{stroke-dasharray:5 3;stroke:var(--ink3)}</style>`
+    const sentence = `One path of the ${card.label} card as a graph: ${card.label} rated_on ${top.d.label}, stands_at ${level.label}, rests_on the fact "${fact.label}"${ev ? ', backed_by evidence' : ''}${src ? ' observed_on ' + hostPath(src.url) : ''}; the fact speaks to ${provs.length} provision${provs.length === 1 ? '' : 's'}${awaits.length ? ' and one open question awaits' : ''}.`
+    return `<svg class="fig walk pg" style="min-width:0;max-width:520px;margin:0 auto" viewBox="0 0 ${W} ${H}" role="group" aria-label="${esc(sentence)}">${css}${o}</svg><p class="figcap">One path from the card's graph, with each edge's verb written on it. Every node says what it is and is a link: the card, the question row, the public source (it opens the page), each provision's own page. A dashed box is an open question, not a no.</p>`
+}
