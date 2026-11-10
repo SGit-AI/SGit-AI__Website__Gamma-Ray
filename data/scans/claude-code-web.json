@@ -284,7 +284,8 @@
   }
  },
  "review": {
-  "status": "published-before-review",
+  "status": "approved",
+  "signoff": {"by": "gamma.approve@web-summit.dinis", "at": "2026-11-10"},
   "rounds": [
    {
     "round": 1,
