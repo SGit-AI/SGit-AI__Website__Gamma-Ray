@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.29",
+    "date": "2026-11-10",
+    "what": "card shadow, wider headlines",
+    "by": "gamma.design@web-summit.dinis",
+    "from": "bc86ab557"
+  },
+  {
     "version": "v0.0.28",
     "date": "2026-11-10",
     "what": "replit-agent sent back, reasons in approvals",
