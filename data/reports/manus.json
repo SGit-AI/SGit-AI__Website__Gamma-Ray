@@ -1,0 +1,330 @@
+{
+ "id": "manus",
+ "name": "Manus AI",
+ "url": "https://manus.im",
+ "country": "Singapore",
+ "sector": "general-purpose agents",
+ "read": "2026-11-10",
+ "basis": "Manus AI's own public pages (documentation, API documentation, security page, blog, customer stories) and, for company history only, Wikipedia",
+ "seen_by_subject": false,
+ "what": "Manus AI makes a general AI agent that plans and carries out tasks for a user in a cloud sandbox, a desktop app, a browser extension and through an API.",
+ "facts": [
+  {
+   "fact": "The company states it operates from Singapore.",
+   "url": "https://manus.im/blog/manus-joins-meta-for-next-era-of-innovation",
+   "span": "The company will continue to operate from Singapore."
+  },
+  {
+   "fact": "The company states Meta acquired Manus on 29 December 2025.",
+   "url": "https://manus.im/blog/a-note-to-our-users",
+   "span": "On December 29, 2025, Meta acquired Manus."
+  },
+  {
+   "fact": "The company states it formally resumed independent operations (post dated 1 September).",
+   "url": "https://manus.im/blog/manus-resumes-independent-operations",
+   "span": "Manus has formally resumed independent operations."
+  },
+  {
+   "fact": "The company states it raised $75M led by Benchmark before launch.",
+   "url": "https://manus.im/blog/manus-100m-arr",
+   "span": "Prior to our launch, we raised $75M led by Benchmark ."
+  },
+  {
+   "fact": "The company stated a headcount of 105 across Singapore, Tokyo and San Francisco (post dated 17 December).",
+   "url": "https://manus.im/blog/manus-100m-arr",
+   "span": "Today, we're 105 people across Singapore, Tokyo, and San Francisco."
+  },
+  {
+   "fact": "The company states user data is stored in the US and Singapore.",
+   "url": "https://manus.im/blog/a-note-to-our-users",
+   "span": "Our data is stored in the US and Singapore."
+  },
+  {
+   "fact": "Wikipedia states Butterfly Effect was founded in China and is based in Singapore.",
+   "url": "https://en.wikipedia.org/wiki/Manus_(AI_agent)",
+   "span": "developed by Butterfly Effect, a company founded in China and based in Singapore"
+  },
+  {
+   "fact": "The security page lists SOC 2 Type 2, SOC 2 Type 1, ISO 27001:2022 and ISO 27701:2019.",
+   "url": "https://manus.im/security",
+   "span": "SOC 2 Type 2 SOC 2 Type 1 ISO 27001:2022 ISO 27701:2019"
+  }
+ ],
+ "people": [
+  {
+   "name": "Xiao Hong",
+   "role": "CEO",
+   "url": "https://manus.im/blog/manus-joins-meta-for-next-era-of-innovation"
+  },
+  {
+   "name": "Tao Zhang",
+   "role": "Co-founder and Chief Product Officer; Web Summit Lisbon 2026 speaker",
+   "url": "https://manus.im/blog/manus-microsoft-agent365"
+  },
+  {
+   "name": "Yichao 'Peak' Ji",
+   "role": "Co-founder and chief scientist (per Wikipedia); author of the context engineering post",
+   "url": "https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus"
+  },
+  {
+   "name": "Chetan Puttagunta",
+   "role": "Board member (Benchmark General Partner)",
+   "url": "https://manus.im/blog/manus-100m-arr"
+  }
+ ],
+ "solutions": [
+  {
+   "id": "manus-agent",
+   "name": "Manus (general agent; modes Manus 2.0 Max, Manus 2.0, Manus 2.0 Lite)",
+   "short": "Manus",
+   "what": "Agent that plans a task and runs each step in its own cloud sandbox with internet access and a file system, delivering reports, slides, websites and other outputs.",
+   "status": "generally available (web, mobile, desktop)",
+   "url": "https://manus.im/docs/introduction/quickstart",
+   "scan": "manus-agent"
+  },
+  {
+   "id": "manus-flex",
+   "name": "Manus Flex",
+   "short": "Manus Flex",
+   "what": "Runs the Manus agent with the user's own API key from a listed inference provider.",
+   "status": "beta",
+   "url": "https://manus.im/docs/models/manus-flex"
+  },
+  {
+   "id": "wide-research",
+   "name": "Wide Research",
+   "short": "Wide Research",
+   "what": "Main agent splits a task into sub-tasks, each handled by a separate agent with its own context, and assembles the results.",
+   "status": "available",
+   "url": "https://manus.im/docs/features/wide-research"
+  },
+  {
+   "id": "cloud-browser",
+   "name": "Cloud Browser",
+   "short": "Cloud Browser",
+   "what": "A cloud browser the agent operates; the user may log into accounts in it so the agent acts in them.",
+   "status": "available",
+   "url": "https://manus.im/docs/features/cloud-browser"
+  },
+  {
+   "id": "browser-operator",
+   "name": "Browser Operator (My Browser)",
+   "short": "Browser Operator",
+   "what": "Browser extension that lets the agent act in the user's local browser with existing sessions, per authorised session.",
+   "status": "available (Chrome, Edge recommended)",
+   "url": "https://manus.im/docs/features/browser-operator"
+  },
+  {
+   "id": "manus-studio",
+   "name": "Manus Studio (desktop app: My Computer, Computer Use, Remote Control)",
+   "short": "Manus Studio",
+   "what": "Desktop app for macOS and Windows that lets the agent work with local files, terminal and apps under a chosen permission mode.",
+   "status": "available",
+   "url": "https://manus.im/docs/features/desktop"
+  },
+  {
+   "id": "connectors",
+   "name": "Connectors, MCP connectors and custom MCP servers",
+   "short": "Connectors and MCP",
+   "what": "Account connections and MCP servers that let the agent read data from and take actions in third-party apps.",
+   "status": "available",
+   "url": "https://manus.im/docs/integrations/connectors"
+  },
+  {
+   "id": "manus-api",
+   "name": "Manus API v2 and Open App (OAuth2)",
+   "short": "Manus API v2 and Open App",
+   "what": "Programmatic task creation, polling, action confirmation and webhooks; Open Apps act for team users through scoped OAuth2 tokens.",
+   "status": "available (Open App requires a Team account)",
+   "url": "https://open.manus.ai/docs/v2/introduction"
+  },
+  {
+   "id": "automations",
+   "name": "Automations and schedules",
+   "short": "Automations and schedules",
+   "what": "Runs tasks on a schedule or when something happens in a connected app.",
+   "status": "available",
+   "url": "https://manus.im/docs/automations"
+  },
+  {
+   "id": "slack",
+   "name": "Manus for Slack",
+   "short": "Manus for Slack",
+   "what": "Users tag @manus in a Slack thread and the agent works on the thread's request.",
+   "status": "available",
+   "url": "https://manus.im/docs/integrations/slack-integration"
+  },
+  {
+   "id": "mail-manus",
+   "name": "Mail Manus",
+   "short": "Mail Manus",
+   "what": "Tasks are started by forwarding email to a personal Manus bot address, with results returned by email.",
+   "status": "available",
+   "url": "https://manus.im/docs/features/mail-manus"
+  },
+  {
+   "id": "zapier",
+   "name": "Manus for Zapier",
+   "short": "Manus for Zapier",
+   "what": "Triggers Manus tasks from events in other apps through Zapier workflows.",
+   "status": "available",
+   "url": "https://manus.im/docs/integrations/zapier"
+  },
+  {
+   "id": "webdev",
+   "name": "Website and app builder (Manus 2.0 web development)",
+   "short": "Website and app builder",
+   "what": "The agent builds, hosts and publishes websites, web apps and mobile apps.",
+   "status": "available",
+   "url": "https://manus.im/docs/website-builder/getting-started"
+  }
+ ],
+ "stories": [
+  {
+   "customer": "k-ID",
+   "what": "Company customer story: k-ID's team uses Manus for legal and policy research and client reports; states session count and spend. Vendor-published.",
+   "url": "https://manus.im/blog/k-id-customer-story",
+   "span": "k-ID now runs over eight thousand Manus sessions across the team."
+  },
+  {
+   "customer": "Ascendea",
+   "what": "Company customer story: Ascendea uses a Manus agent it calls 'James' at the top of a three-layer agent system for complex work, with human review. Vendor-published.",
+   "url": "https://manus.im/blog/Ascendea-James-Customer-Story",
+   "span": "Ascendea placed Manus at the top of a three-layer system"
+  },
+  {
+   "customer": "Circa",
+   "what": "Company customer story: Circa's founders built and hosted the company website and internal tools on Manus and prepared applications with it. Vendor-published.",
+   "url": "https://manus.im/blog/circa-builds-customer-story",
+   "span": "They built and hosted the company’s website on Manus"
+  },
+  {
+   "customer": "Heicoders Academy",
+   "what": "Company customer story: Heicoders built operational systems such as a hiring portal with Manus. Vendor-published.",
+   "url": "https://manus.im/blog/heicoders-academy",
+   "span": "Within months of adopting Manus, Heicoders rebuilt their entire operational infrastructure."
+  },
+  {
+   "customer": "Mandai Smoke Co.",
+   "what": "Company customer story: the owner built an order prep calculator and logistics workflow with Manus. Vendor-published.",
+   "url": "https://manus.im/blog/mandai-smokehouse",
+   "span": "He asked Manus to build a simple prep calculator"
+  },
+  {
+   "customer": "Manus (company figures)",
+   "what": "Company-stated usage figures for the agent: tokens processed and virtual computers created since launch.",
+   "url": "https://manus.im/blog/manus-100m-arr",
+   "span": "Manus has processed more than 147T tokens and created more than 80M virtual computers."
+  }
+ ],
+ "analysis": [
+  "**The shape.** Manus reads A4 · R2 · C1 · O0. Once a task is created the agent runs asynchronously in its own cloud machine, and the API documents the actions it carries out itself: sending email, changing calendar events, running commands, deploying a service. With connectors it acts in apps such as Gmail and Notion.",
+  "**Where the evidence is strongest.** Autonomy is backed by a named customer: k-ID's team runs more than eight thousand Manus sessions, by Manus's own account. The API says where the agent stops and waits: a published list of actions that need the person's confirmation, and an endpoint to stop a running task.",
+  "**Control at level 1, and why not 2.** The confirmations are documented, which is level 1. Level 2 asks for access that is narrower than the whole account, or what it can reach enumerated in a measured profile. Manus Studio's approval modes limit what the agent changes, not what it reads, so the rule is not met yet.",
+  "**Openness reads \"not yet evidenced\".** The rule for Documented is met (limits and data use are written down), but the ladder starts with a public statement that the agent tells the people it talks to that it is an AI. Manus lists SOC 2 and ISO 27001 on its security page; the certificates sit behind a page we could not read without JavaScript, so they are shown and not counted.",
+  "**For readers.** The pages tell their own history: Meta acquired Manus on 29 December 2025, and Manus states it formally resumed independent operations in a post dated 1 September. The customer stories are Manus's own and are reported here as such."
+ ],
+ "article": {
+  "title": "Manus on the GAMMA-Ray Spectrum: A4 · R2 · C1 · O0",
+  "standfirst": "The GAMMA-Ray studio reads Manus AI's general agent from its public pages: it acts on its own in a cloud machine, its API names every action that waits for a person, and two published pages would move its card.",
+  "body": [
+   "Manus AI, whose co-founder Tao Zhang speaks at Web Summit Lisbon 2026, makes a general agent that plans and carries out tasks for a user. We read it only from public sources, captured and hashed on 10 November 2026, and the published rules computed the card.",
+   "**Autonomy 4, Orchestrates.** Once a task starts, the agent runs asynchronously in its own virtual machine and carries out actions itself, from running commands to deploying a service. A named customer, k-ID, runs more than eight thousand sessions. With connectors, it reaches apps such as Gmail and Notion.",
+   "**Reach 2, Integrated.** Connectors and MCP servers link the agent to outside services; Manus also publishes an API with an OpenAPI description and an llms.txt.",
+   "**Control 1, Stated.** The API lists the actions that wait for a person's confirmation and offers a way to stop a task. Access narrower than the whole account would reach level 2.",
+   "**Openness: not yet evidenced.** Limits and data use are documented; the first rung asks for a public statement that the agent tells the people it talks to that it is an AI.",
+   "The card is beta and Manus AI has not seen it. It can claim the card and add evidence; corrections are dated."
+  ],
+  "pt": {
+   "title": "O Manus no GAMMA-Ray Spectrum: A4 · R2 · C1 · O0",
+   "standfirst": "O estúdio GAMMA-Ray lê o agente geral da Manus AI a partir das suas páginas públicas: age sozinho numa máquina na nuvem e a sua API diz que ações esperam por uma pessoa.",
+   "body": [
+    "A Manus AI, cujo cofundador Tao Zhang fala no Web Summit Lisboa 2026, faz um agente geral que planeia e executa tarefas. Lemos apenas fontes públicas, capturadas e com hash a 10 de novembro de 2026.",
+    "**Autonomia 4.** O agente corre de forma assíncrona na sua própria máquina virtual; um cliente identificado, a k-ID, corre mais de oito mil sessões. **Alcance 2.** Conectores e servidores MCP ligam-no a serviços externos. **Controlo 1.** A API lista as ações que esperam confirmação e permite parar uma tarefa.",
+    "**Abertura: ainda sem evidência.** O primeiro degrau pede uma declaração pública de que o agente diz às pessoas que é uma IA. O cartão é beta e a Manus AI ainda não o viu; pode reclamá-lo e acrescentar evidência."
+   ]
+  }
+ },
+ "vault": {
+  "id": "wcvaw1bi",
+  "read_key": "sgit_public_read_5ab82ed8d04719fb9fa7ffa28ef3cbd9eec71b4b03b2958ee62f470c3c1e6ba9:wcvaw1bi",
+  "published": "2026-11-10"
+ },
+ "team": {
+  "researcher-assessor": "a sub-agent of gamma.studio@web-summit.dinis",
+  "challenger": "a sub-agent",
+  "scorer": "build/spectrum.mjs",
+  "analyst, designer, writer": "gamma.studio@web-summit.dinis",
+  "review": "gamma.review@web-summit.dinis (pending)",
+  "sign-off": "gamma.approve@web-summit.dinis (pending)"
+ },
+ "signoff": null,
+ "corrections": [],
+ "captures": {
+  "https://en.wikipedia.org/wiki/Manus_(AI_agent)": {
+   "sha256": "4de2f3ed3e1ec47a50e88af346f815d2e184749d0f80356d452d495b1f71fdf0",
+   "bytes": 213590,
+   "read_at": "2026-11-10T04:59Z"
+  },
+  "https://manus.im/blog/Ascendea-James-Customer-Story": {
+   "sha256": "8df8996ccf52f3a71d4041d6ae9bc5eebc58a432fb4c8d52b9880d97c233c37e",
+   "bytes": 170812,
+   "read_at": "2026-11-10T04:59Z"
+  },
+  "https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus": {
+   "sha256": "23e424e493af61632a1262c0ffcffe86b37c38a0a9d4abbe2d91d903badd2616",
+   "bytes": 241772,
+   "read_at": "2026-11-10T04:59Z"
+  },
+  "https://manus.im/blog/a-note-to-our-users": {
+   "sha256": "c275abc0a58b774c275494490a5a8459185ca5334d8f87f2c9c194e1c6b63a69",
+   "bytes": 163827,
+   "read_at": "2026-11-10T04:59Z"
+  },
+  "https://manus.im/blog/circa-builds-customer-story": {
+   "sha256": "3cb07e6d59ef6ac6a5c2ce306abd02edfe856211b4b1e7b41ad6ad841214ff78",
+   "bytes": 173559,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://manus.im/blog/heicoders-academy": {
+   "sha256": "c1cbca96f97b53d20b2725814129227de4a66008a387d864940c8470671878a8",
+   "bytes": 202271,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://manus.im/blog/k-id-customer-story": {
+   "sha256": "ae6bd06a1b3d9e38b2f4fa3eb5d4c03c55453e2a1b89a26e21e7e994381bca10",
+   "bytes": 162578,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://manus.im/blog/mandai-smokehouse": {
+   "sha256": "8a407b9e00e695d7689f6ce660e834a88ae8ca4f616340958a8b25c5c2bcdd20",
+   "bytes": 168674,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://manus.im/blog/manus-100m-arr": {
+   "sha256": "3b1f416135395e5c9711e4f2f6a57c13c420f94917417e6d5ae423ff2c043094",
+   "bytes": 154445,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://manus.im/blog/manus-joins-meta-for-next-era-of-innovation": {
+   "sha256": "a5886ffd94de30b01c0096e25a5edc42f8b5634408cd49a9b3d3e08b2fc7cf1c",
+   "bytes": 143899,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://manus.im/blog/manus-microsoft-agent365": {
+   "sha256": "8fada274717e485ebd800276c92e243fb862c46d2b4673a5ceb14a9148e9ed13",
+   "bytes": 145868,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://manus.im/blog/manus-resumes-independent-operations": {
+   "sha256": "a05d2e825e0c8e391bd6ff79fbe57f981135e5c820570d8cb14fd613a1768d6b",
+   "bytes": 145759,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://manus.im/security": {
+   "sha256": "096edaae3a819e40d000dd5998bdec2c6105353e08b557d0a75051006d698ba3",
+   "bytes": 157456,
+   "read_at": "2026-11-10T05:00Z"
+  }
+ }
+}

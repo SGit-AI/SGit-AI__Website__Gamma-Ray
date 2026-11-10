@@ -1,0 +1,280 @@
+{
+ "id": "jetbrains",
+ "name": "JetBrains",
+ "url": "https://www.jetbrains.com",
+ "country": "Czech Republic",
+ "sector": "developer tools",
+ "read": "2026-11-10",
+ "basis": "JetBrains' own public pages (Junie and AI documentation, blog, legal pages, Marketplace) and, for founding facts only, Wikipedia",
+ "seen_by_subject": false,
+ "what": "JetBrains makes software development tools, including IDEs such as IntelliJ IDEA and PyCharm, the Kotlin language, and AI coding tools such as Junie and JetBrains Air.",
+ "facts": [
+  {
+   "fact": "Founded in February 2000 in Prague (Wikipedia, read 2026-11-10).",
+   "url": "https://en.wikipedia.org/w/index.php?title=JetBrains&action=raw"
+  },
+  {
+   "fact": "Headquartered in Amsterdam (Wikipedia, read 2026-11-10).",
+   "url": "https://en.wikipedia.org/w/index.php?title=JetBrains&action=raw"
+  },
+  {
+   "fact": "Kirill Skrygan became CEO on 1 February 2024, after leading the IntelliJ department.",
+   "url": "https://blog.jetbrains.com/blog/2024/01/30/jetbrains-ceo-transition/",
+   "span": "will be stepping up as CEO effective February 1st 2024"
+  },
+  {
+   "fact": "In January 2024 JetBrains described itself as over 2000 people in 40 locations.",
+   "url": "https://blog.jetbrains.com/blog/2024/01/30/jetbrains-ceo-transition/",
+   "span": "over 2000 people spread across 40 locations"
+  },
+  {
+   "fact": "JetBrains states that 88 of the Fortune Global 100 are its customers (its own claim, page title).",
+   "url": "https://www.jetbrains.com/company/customers/",
+   "span": "Our Customers: 88 of Fortune Global 100 Companies"
+  },
+  {
+   "fact": "Junie left Beta and became generally available in June 2026.",
+   "url": "https://blog.jetbrains.com/junie/2026/06/junie-coding-agent-out-of-beta/",
+   "span": "Today, the JetBrains AI coding agent is leaving Beta."
+  },
+  {
+   "fact": "JetBrains Air Governance became generally available on 22 October 2026.",
+   "url": "https://blog.jetbrains.com/blog/2026/10/22/air-governance-manage-ai-agents-access-and-spend-throughout-your-organization/",
+   "span": "Today, JetBrains Air Governance becomes generally available."
+  },
+  {
+   "fact": "JetBrains hosts its own Mellum models, licensed under Apache 2.0, alongside third-party model providers.",
+   "url": "https://www.jetbrains.com/legal/docs/terms/jetbrains-ai/service-providers/",
+   "span": "JetBrains AI services are powered by a combination of AI models"
+  }
+ ],
+ "people": [
+  {
+   "name": "Kirill Skrygan",
+   "role": "Chief Executive Officer since 1 February 2024",
+   "url": "https://blog.jetbrains.com/blog/2024/01/30/jetbrains-ceo-transition/"
+  },
+  {
+   "name": "Maxim Shafirov",
+   "role": "Former CEO (about 11.5 years, until January 2024)",
+   "url": "https://blog.jetbrains.com/blog/2024/01/30/jetbrains-ceo-transition/"
+  },
+  {
+   "name": "Sergey Dmitriev",
+   "role": "Co-founder (Wikipedia)",
+   "url": "https://en.wikipedia.org/w/index.php?title=JetBrains&action=raw"
+  },
+  {
+   "name": "Valentin Kipyatkov",
+   "role": "Co-founder (Wikipedia)",
+   "url": "https://en.wikipedia.org/w/index.php?title=JetBrains&action=raw"
+  },
+  {
+   "name": "Eugene Belyaev",
+   "role": "Co-founder (Wikipedia)",
+   "url": "https://en.wikipedia.org/w/index.php?title=JetBrains&action=raw"
+  },
+  {
+   "name": "Danila Savenkov",
+   "role": "Team Lead, JetBrains Junie",
+   "url": "https://blog.jetbrains.com/teamcity/2025/06/how-junie-uses-teamcity/"
+  }
+ ],
+ "solutions": [
+  {
+   "id": "junie",
+   "name": "Junie (Junie CLI, Junie in JetBrains IDEs, Junie GitHub Action, Junie GitLab CI/CD)",
+   "short": "Junie",
+   "what": "Coding agent that plans, edits files, runs commands and tests, and opens pull requests; runs in the terminal, in JetBrains IDEs through AI Chat or its own plugin, and headless in CI.",
+   "status": "Generally available since June 2026; several features (hooks, sandbox mode, subagent settings) in the Early Access Program",
+   "url": "https://junie.jetbrains.com/docs/",
+   "scan": "junie"
+  },
+  {
+   "id": "junie-local",
+   "name": "Junie Local and Junie Lite",
+   "short": "Junie Local and Junie Lite",
+   "what": "Junie running on a local model on the user's machine (Junie Local), and a free model tier in every JetBrains account (Junie Lite).",
+   "status": "Released (blog posts August to October 2026)",
+   "url": "https://junie.jetbrains.com/docs/junie-local.html"
+  },
+  {
+   "id": "junie-review",
+   "name": "Junie code review agent",
+   "short": "Junie code review agent",
+   "what": "Junie mode that reviews local changes or pull requests and posts inline comments.",
+   "status": "Documented",
+   "url": "https://junie.jetbrains.com/docs/junie-review-agent.html"
+  },
+  {
+   "id": "ai-chat-agents",
+   "name": "JetBrains AI Assistant: AI Chat with coding agents",
+   "short": "AI Assistant agents",
+   "what": "Single chat in JetBrains IDEs that runs Junie, Claude Agent, Codex and GitHub Copilot as coding agents, plus any ACP agent.",
+   "status": "Generally available (AI Assistant 2026.2 documentation)",
+   "url": "https://www.jetbrains.com/help/ai-assistant/agents.html"
+  },
+  {
+   "id": "air",
+   "name": "JetBrains Air (Air in IDEs, Air Teams, Air Gateway, Air Context)",
+   "short": "JetBrains Air",
+   "what": "System for running several coding agents across IDEs, the browser, the CLI and cloud environments, with automations and shared context; Junie is part of it.",
+   "status": "Launched 22 September 2026; cloud runs rolling out gradually; Air Teams in early access",
+   "url": "https://www.jetbrains.com/air/"
+  },
+  {
+   "id": "air-governance",
+   "name": "JetBrains Air Governance",
+   "short": "JetBrains Air Governance",
+   "what": "Organisation controls for which models and agents developers use, permissions, spend limits and usage analytics.",
+   "status": "Generally available since 22 October 2026",
+   "url": "https://blog.jetbrains.com/blog/2026/10/22/air-governance-manage-ai-agents-access-and-spend-throughout-your-organization/"
+  },
+  {
+   "id": "mellum",
+   "name": "Mellum",
+   "short": "Mellum",
+   "what": "JetBrains' own code models, hosted by JetBrains and published under Apache 2.0.",
+   "status": "Released; Mellum-4b-base on Hugging Face",
+   "url": "https://huggingface.co/JetBrains/Mellum-4b-base"
+  },
+  {
+   "id": "acp",
+   "name": "Agent Client Protocol (ACP)",
+   "short": "Agent Client Protocol",
+   "what": "Open protocol between editors and coding agents; JetBrains is named with Zed Industries on the protocol site, and Junie implements it.",
+   "status": "Protocol v1 published; v2 draft",
+   "url": "https://agentclientprotocol.com/"
+  },
+  {
+   "id": "mcp",
+   "name": "MCP support in Junie and AI Assistant",
+   "short": "MCP support",
+   "what": "Junie and AI Chat agents can connect to Model Context Protocol servers configured by the user or project.",
+   "status": "Documented",
+   "url": "https://junie.jetbrains.com/docs/junie-cli-mcp-configuration.html"
+  },
+  {
+   "id": "eap-other",
+   "name": "Matter by JetBrains and Qure",
+   "short": "Matter by JetBrains and Qure",
+   "what": "Further AI services listed with their model providers on the AI service providers page; not examined further.",
+   "status": "Early Access Program, per that page",
+   "url": "https://www.jetbrains.com/legal/docs/terms/jetbrains-ai/service-providers/"
+  }
+ ],
+ "stories": [
+  {
+   "customer": "JetBrains (internal use)",
+   "what": "JetBrains teams used Junie internally from December 2024, before its closed beta; the post says internal use led to hundreds of improvements. This is JetBrains' own use, not a customer's.",
+   "url": "https://blog.jetbrains.com/life-at-jetbrains/2026/05/dogfooding-at-jetbrains/",
+   "span": "The team started using Junie internally in December 2024"
+  },
+  {
+   "customer": "JetBrains (internal use)",
+   "what": "A post on JetBrains' own AI spend lists Junie among the agents its developers use, beside Claude Code, Codex and others. This is JetBrains' own use, not a customer's.",
+   "url": "https://blog.jetbrains.com/ai/2026/08/our-first-moves-to-get-ai-spend-under-control/",
+   "span": "like Claude Code CLI, the AI chat in JetBrains IDEs, and Junie"
+  },
+  {
+   "customer": "JetBrains Marketplace",
+   "what": "The Marketplace reports the Junie plugin's download count; downloads count installs, not use.",
+   "url": "https://plugins.jetbrains.com/api/plugins/26104"
+  }
+ ],
+ "analysis": [
+  "**The shape.** Junie reads A2 · R2 · C2 · O3, at the Building stage, with two badges: Balanced (its controls and openness keep pace with its autonomy) and Shows its work (it publishes an evaluation result).",
+  "**Where the evidence is strongest.** Openness. Junie's release post publishes its SWE-Rebench result, a /feedback command sends a session's logs to the team, the AI terms describe the data used, and junie.jetbrains.com serves an llms.txt and an OpenAPI description. Control is documented as settings: most terminal commands, edits outside the project and MCP tool calls wait for approval, and in CI the GitHub Action runs with the workflow's stated permissions.",
+  "**Autonomy at level 2, and the one artefact that would lift it.** Junie's brave modes and allowlist let it act without asking, which the rules for levels 3 and 4 recognise. What they also ask for is a public source naming a customer, or giving figures, for what Junie does on its own. We found JetBrains' own internal use, a download count and a survey of developers who use Junie; none is that. One customer story would move Autonomy from 2 to 4 and the stage to Scaling.",
+  "**Seen, and not counted.** JetBrains Research reports that 5% of surveyed developers regularly use Junie at work. It is a figure for the whole product, read-only mode included; whether it should count is left to a person.",
+  "**For readers.** Junie is one of ten agentic solutions we found at JetBrains, among them JetBrains Air, Air Governance, the Mellum models and the Agent Client Protocol. Each can get its own card."
+ ],
+ "article": {
+  "title": "Junie on the GAMMA-Ray Spectrum: A2 · R2 · C2 · O3",
+  "standfirst": "The GAMMA-Ray studio reads JetBrains' coding agent from its public pages: it shows its work, its controls are settings, and one customer story would lift it to the next stage.",
+  "body": [
+   "JetBrains, whose CEO Kirill Skrygan speaks at Web Summit Lisbon 2026 on taming the agent swarm, makes Junie, a coding agent for its IDEs, the command line and CI. We read it only from public sources, captured and hashed on 10 November 2026, and the published rules computed the card.",
+   "**Openness 3, Measured.** Junie publishes an evaluation result, offers a feedback command that sends a session's logs, documents its data use in the AI terms, and serves an llms.txt for other agents to read. The card earns the Shows its work badge.",
+   "**Control 2, Configurable.** Most commands and outside edits wait for a person's approval; an allowlist and brave modes are settings the user chooses; in CI, the GitHub Action runs with stated permissions. The card is Balanced.",
+   "**Reach 2, Integrated.** Junie works across the code, the terminal, the debugger and databases, and connects to MCP servers.",
+   "**Autonomy 2, Suggests.** Junie can act on its own when the user allows it. The next level asks for a public source naming a customer using it that way; one would move the card to Scaling.",
+   "The card is beta and JetBrains has not seen it. It can claim the card and add evidence; corrections are dated."
+  ],
+  "pt": {
+   "title": "O Junie no GAMMA-Ray Spectrum: A2 · R2 · C2 · O3",
+   "standfirst": "O estúdio GAMMA-Ray lê o agente de programação da JetBrains a partir das suas páginas públicas: mostra o seu trabalho, os controlos são definições, e um caso de cliente levá-lo-ia à fase seguinte.",
+   "body": [
+    "A JetBrains, cujo CEO Kirill Skrygan fala no Web Summit Lisboa 2026, faz o Junie, um agente de programação. Lemos apenas fontes públicas, capturadas e com hash a 10 de novembro de 2026.",
+    "**Abertura 3.** O Junie publica um resultado de avaliação, tem um comando de feedback e serve um llms.txt. **Controlo 2.** A maioria dos comandos espera aprovação; os modos brave e a allowlist são definições. **Alcance 2.** Trabalha no código, no terminal, no depurador e em bases de dados.",
+    "**Autonomia 2.** O nível seguinte pede uma fonte pública que nomeie um cliente a usá-lo de forma autónoma. O cartão é beta e a JetBrains ainda não o viu; pode reclamá-lo e acrescentar evidência."
+   ]
+  }
+ },
+ "vault": {
+  "id": "zwx0116w",
+  "read_key": "sgit_public_read_76f22887a5be444fb2816ffb6b98e9a1b8278e8b351140d4874c78d0ac678601:zwx0116w",
+  "published": "2026-11-10"
+ },
+ "team": {
+  "researcher-assessor": "a sub-agent of gamma.studio@web-summit.dinis",
+  "challenger": "a sub-agent",
+  "scorer": "build/spectrum.mjs",
+  "analyst, designer, writer": "gamma.studio@web-summit.dinis",
+  "review": "gamma.review@web-summit.dinis (pending)",
+  "sign-off": "gamma.approve@web-summit.dinis (pending)"
+ },
+ "signoff": null,
+ "corrections": [],
+ "captures": {
+  "https://blog.jetbrains.com/ai/2026/08/our-first-moves-to-get-ai-spend-under-control/": {
+   "sha256": "b7197434835efbf47743f289cfb61c64bf71d6b28022f12301bf6bc0606282a4",
+   "bytes": 138775,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://blog.jetbrains.com/blog/2024/01/30/jetbrains-ceo-transition/": {
+   "sha256": "e0c480366ad2617a10d27ee430dc857326f99ed30225cb28075280463494348b",
+   "bytes": 128084,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://blog.jetbrains.com/blog/2026/10/22/air-governance-manage-ai-agents-access-and-spend-throughout-your-organization/": {
+   "sha256": "7b8ef5b493f7d95d61486a41603591a4f2b21daf3af3d76563753c269997c0a6",
+   "bytes": 142121,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://blog.jetbrains.com/junie/2026/06/junie-coding-agent-out-of-beta/": {
+   "sha256": "ac014f4922751d9ead7592eab04580fe14ee9b7c8ff39b47ec482bc64a755d9d",
+   "bytes": 137398,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://blog.jetbrains.com/life-at-jetbrains/2026/05/dogfooding-at-jetbrains/": {
+   "sha256": "9de7db918efc56e5119f76df98e435a16ad437b6b29dee5fe4c7e0e5aa735a67",
+   "bytes": 123897,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://blog.jetbrains.com/teamcity/2025/06/how-junie-uses-teamcity/": {
+   "sha256": "c0b1495f854b6333abf866a257568d7037cb1b745ec23d948f510bea3fb9c7bc",
+   "bytes": 135966,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://en.wikipedia.org/w/index.php?title=JetBrains&action=raw": {
+   "sha256": "81eeca285f6ec7a9e6a1240295acfe60eb284650086af076d12713964a3a6ea8",
+   "bytes": 55261,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://plugins.jetbrains.com/api/plugins/26104": {
+   "sha256": "7528639f1d4153db954ab4833c6a495d858e5a8701bcb97c1263ff80edc9d4c8",
+   "bytes": 4401,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://www.jetbrains.com/company/customers/": {
+   "sha256": "ee0e3cf7e28f7364bb2d485efa92deaa614178c7659263c316d1e3c3b97d839e",
+   "bytes": 42822,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://www.jetbrains.com/legal/docs/terms/jetbrains-ai/service-providers/": {
+   "sha256": "a9959e75c29f7a7208efb69f2ab6ba605e5c8c559498ff1449bf3ed66ad8cd6f",
+   "bytes": 49650,
+   "read_at": "2026-11-10T05:00Z"
+  }
+ }
+}

@@ -1,0 +1,342 @@
+{
+ "id": "manus-agent",
+ "name": "Manus",
+ "operator": "Manus AI (the vendor); each customer is the operator of its own use",
+ "company": "manus",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-10",
+ "tier": "public",
+ "basis": "Manus AI's own public documentation, API documentation, security page, blog and customer stories, and its published llms.txt and OpenAPI file",
+ "seen_by_operator": null,
+ "what": "Manus AI's general agent that plans and carries out tasks for a user in a cloud sandbox, and also through a desktop app, a browser extension and an API.",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer.",
+ "grant": null,
+ "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
+ "vault": {
+  "id": "wcvaw1bi",
+  "read_key": "sgit_public_read_5ab82ed8d04719fb9fa7ffa28ef3cbd9eec71b4b03b2958ee62f470c3c1e6ba9:wcvaw1bi",
+  "published": "2026-11-10"
+ },
+ "review": {
+  "status": "draft",
+  "rounds": []
+ },
+ "assessment": {
+  "by": "gamma.studio@web-summit.dinis",
+  "researcher_assessor": "a sub-agent of gamma.studio",
+  "challenger": "a sub-agent of gamma.studio",
+  "lowered": [
+   "I63",
+   "I25",
+   "I05",
+   "I61"
+  ],
+  "fixed": [
+   "I08",
+   "I18",
+   "I11",
+   "I54",
+   "I41"
+  ],
+  "files": "in the vault: work/assessment.json, work/challenger.json"
+ },
+ "answers": {
+  "I04": {
+   "e": "https://manus.im/blog/manus-sandbox",
+   "n": "The sandbox post says the agent works in its own cloud virtual machine and solves problems by writing code.",
+   "span": "the AI can solve problems through what it does best",
+   "g": "documented",
+   "m": "default"
+  },
+  "I08": {
+   "e": "https://open.manus.ai/docs/v2/task-lifecycle/confirmation-events.md",
+   "n": "The API docs list actions the agent carries out in its task loop, such as sending email, changing calendar events, running terminal commands and deploying a service.",
+   "span": "tools that the current Manus agent runs in the main task loop",
+   "g": "documented",
+   "m": "default"
+  },
+  "I10": {
+   "e": "https://manus.im/docs/introduction/quickstart.md",
+   "n": "Connectors let the agent read data from and act in apps such as Gmail and Notion once the user connects them.",
+   "span": "lets Manus read data from an app, such as Gmail or Notion",
+   "g": "documented",
+   "m": "available",
+   "cfg": "connectors"
+  },
+  "I11": {
+   "e": "https://manus.im/blog/similarweb-manus",
+   "n": "The Similarweb data integration is used without setup, the agent fetching metrics from the external service.",
+   "span": "Manus automatically connects to Similarweb and retrieves the exact metrics",
+   "g": "documented",
+   "m": "default"
+  },
+  "I16": {
+   "e": "https://manus.im/docs/features/desktop.md",
+   "n": "In Manus Studio the Ask for approval mode asks before every local action.",
+   "span": "Always asks for approval before local actions.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "studio-ask"
+  },
+  "I17": {
+   "e": "https://manus.im/docs/features/desktop.md",
+   "n": "In Manus Studio the default Approve for me mode auto-approves safe local actions and asks the person when a decision is needed.",
+   "span": "Reviews and auto-approves safe local actions.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "studio"
+  },
+  "I18": {
+   "e": "https://open.manus.ai/docs/v2/task-lifecycle.md",
+   "n": "The API docs say the agent runs asynchronously once a task is created and waits for the user at listed actions, such as sending email, deleting calendar events or deploying a service.",
+   "span": "the agent runs asynchronously",
+   "g": "documented",
+   "m": "default"
+  },
+  "I20": {
+   "e": "https://manus.im/docs/introduction/welcome.md",
+   "n": "The documentation states what the agent is for and describes the kinds of tasks it completes.",
+   "span": "autonomous general AI agent designed to complete tasks and deliver results",
+   "g": "documented",
+   "m": "default"
+  },
+  "I21": {
+   "e": "https://manus.im/docs/features/desktop.md",
+   "n": "Manus Studio's permission modes define which local actions run without approval and which need it, with the list of actions that need approval.",
+   "span": "decides which local actions Manus runs on its own and which need approval",
+   "g": "documented",
+   "m": "available",
+   "cfg": "studio"
+  },
+  "I22": {
+   "e": "https://manus.im/docs/features/browser-operator.md",
+   "n": "The Browser Operator page lists limitations, including complex interactions and sites with anti-bot measures.",
+   "span": "Complex interactions, such as drag-and-drop and multi-step forms, may not work perfectly.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "browser-operator"
+  },
+  "I38": {
+   "e": "https://open.manus.ai/docs/v2/task-lifecycle/confirmation-events.md",
+   "n": "The API docs list actions that wait for a confirmation, including sending email, deleting calendar events and deploying a service.",
+   "span": "Send, save as draft, or cancel",
+   "g": "documented",
+   "m": "default"
+  },
+  "I39": {
+   "e": "https://open.manus.ai/docs/v2/task.stop.md",
+   "n": "The API has an endpoint that stops a running task; the Studio page also says the person can stop a task at any time.",
+   "span": "Stops a running task.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I41": {
+   "e": "https://open.manus.ai/docs/v2/openapi_v2.json",
+   "n": "The API's message list returns, with verbose on, tool_used events recording the tools the agent invoked; the Browser Operator page also states its actions are logged.",
+   "span": "`tool_used` (tools the agent invoked)",
+   "g": "documented",
+   "m": "default"
+  },
+  "I46": {
+   "e": "https://manus.im/docs/features/desktop.md",
+   "n": "Studio's permission mode is a setting the task owner changes, including to Full access.",
+   "span": "Only the task owner can change the mode.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "studio"
+  },
+  "I47": {
+   "e": "https://manus.im/docs/features/desktop.md",
+   "n": "The Studio page shows limits given to the agent as written instructions in the prompt.",
+   "span": "Do not change files outside the src folder.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "studio"
+  },
+  "I54": {
+   "e": "https://status.manus.im/",
+   "n": "A public status page for manus.im, api.manus.im and the Manus computer offers email, Slack and Teams notices when an incident is created, updated or resolved.",
+   "span": "Get email notifications whenever Manus creates , updates or resolves an incident.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I57": {
+   "e": "https://help.manus.im/",
+   "n": "The help centre offers a support chat and articles on feature issues and task errors.",
+   "span": "Chat with our support team now for fast solutions.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I58": {
+   "e": "https://manus.im/blog/manus-sandbox",
+   "n": "The sandbox post lists what the task sandbox stores, and the Studio page says what is sent to the cloud.",
+   "span": "Your Manus Sandbox stores the files needed during task execution, including",
+   "g": "documented",
+   "m": "default"
+  },
+  "I65": {
+   "e": "https://manus.im/about",
+   "n": "The about page states the company builds general AI agents.",
+   "span": "We build general AI agents as the Action Engine for life.",
+   "g": "documented",
+   "m": "default"
+  },
+  "S1": {
+   "e": "https://manus.im/blog/k-id-customer-story",
+   "n": "A vendor-published customer story names k-ID and states its count of Manus sessions.",
+   "span": "k-ID now runs over eight thousand Manus sessions across the team.",
+   "g": "documented",
+   "m": "default"
+  },
+  "S3": {
+   "e": "https://manus.im/docs/llms.txt",
+   "n": "An llms.txt resolves for the product docs, and a second llms.txt and an OpenAPI 3.1 description resolve for the API.",
+   "span": "Manus Documentation",
+   "g": "observed",
+   "m": "default",
+   "method": "probe"
+  }
+ },
+ "not_credited": [],
+ "announced": [
+  {
+   "what": "Manus to be available with Microsoft Agent 365 as a launch partner ('available soon').",
+   "source": "https://manus.im/blog/manus-microsoft-agent365"
+  },
+  {
+   "what": "Manus will act more proactively on users' behalf and be more embedded in workflows.",
+   "source": "https://manus.im/blog/manus-resumes-independent-operations"
+  },
+  {
+   "what": "'Fastest startup to go from $0 to $100M' in ARR; an office in Paris soon.",
+   "source": "https://manus.im/blog/manus-100m-arr"
+  },
+  {
+   "what": "Context engineering post 'became an industry standard' (company's own wording).",
+   "source": "https://manus.im/blog/manus-100m-arr"
+  },
+  {
+   "what": "Security page marketing language (enterprise-grade, advanced threat protection).",
+   "source": "https://manus.im/security"
+  }
+ ],
+ "configurations": [
+  {
+   "id": "shipped",
+   "name": "As shipped",
+   "note": "The agent in Manus's cloud sandbox with its defaults, no apps connected.",
+   "on": []
+  },
+  {
+   "id": "connectors",
+   "name": "With connectors",
+   "note": "The user connects apps (for example Gmail or Notion) or MCP servers.",
+   "on": [
+    "connectors"
+   ]
+  },
+  {
+   "id": "studio",
+   "name": "Manus Studio, working locally",
+   "note": "The desktop app with Work locally on, in its default permission mode.",
+   "on": [
+    "studio"
+   ]
+  },
+  {
+   "id": "studio-ask",
+   "name": "Manus Studio, ask for approval",
+   "note": "The desktop app in the permission mode Ask for approval.",
+   "on": [
+    "studio",
+    "studio-ask"
+   ]
+  },
+  {
+   "id": "browser-operator",
+   "name": "Browser Operator",
+   "note": "The extension lets the agent work in the user's own browser.",
+   "on": [
+    "browser-operator"
+   ]
+  }
+ ],
+ "captures": {
+  "https://help.manus.im/": {
+   "sha256": "f42e76f81790da3571a53008641f27e68f1a3d57e33af3413fb57b01cde7cd66",
+   "bytes": 12403,
+   "read_at": "2026-11-10T04:59Z"
+  },
+  "https://manus.im/about": {
+   "sha256": "d206f9ac339cbfcb6fe736f934dff5b00c1e8829b1cdc2624fa042c008506036",
+   "bytes": 112274,
+   "read_at": "2026-11-10T04:59Z"
+  },
+  "https://manus.im/blog/k-id-customer-story": {
+   "sha256": "0f7caa90d1e9b97a5e4ba370ed3a90eed5b6c163c2807eab98654c825aadfaba",
+   "bytes": 162578,
+   "read_at": "2026-11-10T04:59Z"
+  },
+  "https://manus.im/blog/manus-sandbox": {
+   "sha256": "33be308ad9b3224264f115c5a7a048ab59b2a9e309a679c27d786ee29f0c2005",
+   "bytes": 175879,
+   "read_at": "2026-11-10T04:59Z"
+  },
+  "https://manus.im/blog/similarweb-manus": {
+   "sha256": "f44644af396f1ad02095e691ed09e4982f71e7da23d2bc6f033102255cd2f6b8",
+   "bytes": 261347,
+   "read_at": "2026-11-10T04:59Z"
+  },
+  "https://manus.im/docs/features/browser-operator.md": {
+   "sha256": "9c63bdb4aab197d147c8c446ccddde94922255264500b3a89626166fb31d99f6",
+   "bytes": 4783,
+   "read_at": "2026-11-10T04:59Z"
+  },
+  "https://manus.im/docs/features/desktop.md": {
+   "sha256": "96079a92f854e6e0130786add702d50d810cc49447e920c20d47517c206445e1",
+   "bytes": 17372,
+   "read_at": "2026-11-10T04:59Z"
+  },
+  "https://manus.im/docs/introduction/quickstart.md": {
+   "sha256": "f1932af9dccead997b3c8d2d6bddeae3d43a2b882b5449dfd3e01b65ea5f7f36",
+   "bytes": 5548,
+   "read_at": "2026-11-10T04:59Z"
+  },
+  "https://manus.im/docs/introduction/welcome.md": {
+   "sha256": "406cc9584db49f3332d6d1fa99a18bdcbac982bc96cc87f28074b488bb84d374",
+   "bytes": 1762,
+   "read_at": "2026-11-10T04:59Z"
+  },
+  "https://manus.im/docs/llms.txt": {
+   "sha256": "6eea19b4471185a08ee37ca64158aabaa6d01170f4bd781625f1a490e171f12b",
+   "bytes": 11379,
+   "read_at": "2026-11-10T04:59Z"
+  },
+  "https://open.manus.ai/docs/v2/openapi_v2.json": {
+   "sha256": "00c52eab76d9daa1b2f27a9cc3ecbc94e128fd1522c1aacfe7d12e628f381184",
+   "bytes": 302069,
+   "read_at": "2026-11-10T04:59Z"
+  },
+  "https://open.manus.ai/docs/v2/task-lifecycle.md": {
+   "sha256": "4ba9d1f1d0cb8d1241f28ccdcb39d1e442ecfc28d317bd3ecf246cefbe1d237a",
+   "bytes": 11306,
+   "read_at": "2026-11-10T04:59Z"
+  },
+  "https://open.manus.ai/docs/v2/task-lifecycle/confirmation-events.md": {
+   "sha256": "b51a0a23e9bc2981f03a3f04d886a55098ed365a38b87f25901f7a4a409d402e",
+   "bytes": 38345,
+   "read_at": "2026-11-10T04:59Z"
+  },
+  "https://open.manus.ai/docs/v2/task.stop.md": {
+   "sha256": "297dfba0e52c18614fd726b358d46f8157a31092938e6e2cff1deeba827e7436",
+   "bytes": 4751,
+   "read_at": "2026-11-10T04:59Z"
+  },
+  "https://status.manus.im/": {
+   "sha256": "010f0c4c1bcc196b612ba86d442bb43f66eea42ee320358bfd903061c60a71e6",
+   "bytes": 82809,
+   "read_at": "2026-11-10T04:59Z"
+  }
+ }
+}

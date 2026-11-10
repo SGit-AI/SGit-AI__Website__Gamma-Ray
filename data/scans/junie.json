@@ -1,0 +1,404 @@
+{
+ "id": "junie",
+ "name": "Junie",
+ "operator": "JetBrains (the vendor); each customer is the operator of its own use",
+ "company": "jetbrains",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-10",
+ "tier": "public",
+ "basis": "JetBrains' own public documentation for Junie, its blog, legal and AI terms pages, the JetBrains Marketplace, and Junie's published llms.txt",
+ "seen_by_operator": null,
+ "what": "JetBrains' coding agent that plans and makes changes in a code base, in JetBrains IDEs, on the command line and in CI through GitHub and GitLab.",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer.",
+ "grant": null,
+ "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
+ "vault": {
+  "id": "zwx0116w",
+  "read_key": "sgit_public_read_76f22887a5be444fb2816ffb6b98e9a1b8278e8b351140d4874c78d0ac678601:zwx0116w",
+  "published": "2026-11-10"
+ },
+ "review": {
+  "status": "draft",
+  "rounds": []
+ },
+ "assessment": {
+  "by": "gamma.studio@web-summit.dinis",
+  "researcher_assessor": "a sub-agent of gamma.studio",
+  "challenger": "a sub-agent of gamma.studio",
+  "lowered": [
+   "S1"
+  ],
+  "fixed": [
+   "I08",
+   "I10",
+   "I25",
+   "I52",
+   "I56",
+   "I58"
+  ],
+  "files": "in the vault: work/assessment.json, work/challenger.json"
+ },
+ "answers": {
+  "I04": {
+   "e": "https://junie.jetbrains.com/docs/junie-ide-plugin.html",
+   "n": "In code mode Junie runs terminal commands, creates and edits files and runs tests in the user's project.",
+   "span": "it can autonomously run terminal commands, create new files, write or edit code",
+   "g": "documented",
+   "m": "default"
+  },
+  "I07": {
+   "e": "https://junie.jetbrains.com/docs/junie-ide-plugin.html",
+   "n": "In ask mode Junie explores and explains the code without changing files; the person acts.",
+   "span": "In ask mode, Junie operates in read-only capacity",
+   "g": "documented",
+   "m": "available",
+   "cfg": "ask-mode"
+  },
+  "I08": {
+   "e": "https://junie.jetbrains.com/docs/junie-ide-plugin.html",
+   "n": "In code mode, the default, Junie runs terminal commands, creates and edits files and runs tests itself. The GitHub Action also opens pull requests from issues (available).",
+   "span": "it can autonomously run terminal commands, create new files, write or edit code",
+   "g": "documented",
+   "m": "default"
+  },
+  "I10": {
+   "e": "https://blog.jetbrains.com/junie/2026/06/junie-coding-agent-out-of-beta/",
+   "n": "Junie works across the codebase, the terminal, the IDE debugger, databases configured in the IDE, and reviews triggered from GitHub Actions or GitLab.",
+   "span": "Junie connects to the databases configured in your IDE",
+   "g": "documented",
+   "m": "default"
+  },
+  "I11": {
+   "e": "https://junie.jetbrains.com/docs/junie-cli-mcp-configuration.html",
+   "n": "Junie CLI can connect to external tools through MCP servers that the user configures.",
+   "span": "You can connect Junie CLI to external tools via Model Context Protocol (MCP).",
+   "g": "documented",
+   "m": "available",
+   "cfg": "mcp"
+  },
+  "I16": {
+   "e": "https://junie.jetbrains.com/docs/action-allowlist-junie-cli.html",
+   "n": "Unless brave mode is turned on, Junie CLI asks before terminal commands, MCP tools and other sensitive actions.",
+   "span": "Junie CLI will ask for user approval before running terminal commands, MCP tools",
+   "g": "documented",
+   "m": "default"
+  },
+  "I17": {
+   "e": "https://junie.jetbrains.com/docs/junie-cli.html",
+   "n": "Commands added to the Action Allowlist run without a prompt; anything else still asks the person.",
+   "span": "the command will always be executed without user approval in the future",
+   "g": "documented",
+   "m": "available",
+   "cfg": "allowlist"
+  },
+  "I18": {
+   "e": "https://junie.jetbrains.com/docs/junie-cli.html",
+   "n": "In brave mode Auto, a safety check approves commands it classes as safe and asks for the rest.",
+   "span": "automatically approves the ones it considers safe, while still asking for approval",
+   "g": "documented",
+   "m": "available",
+   "cfg": "brave-auto"
+  },
+  "I19": {
+   "e": "https://junie.jetbrains.com/docs/junie-cli.html",
+   "n": "With brave mode On, Junie CLI runs every sensitive action without asking; the user turns it on.",
+   "span": "Junie CLI executes all potentially sensitive actions without user approval.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "brave-on"
+  },
+  "I20": {
+   "e": "https://junie.jetbrains.com/docs/junie-cli.html",
+   "n": "The documentation states what Junie CLI is for: reviewing, writing and modifying code.",
+   "span": "is the agentic coding tool by JetBrains that provides an interactive terminal interface",
+   "g": "documented",
+   "m": "default"
+  },
+  "I21": {
+   "e": "https://junie.jetbrains.com/docs/action-allowlist-junie-cli.html",
+   "n": "The allowlist defines five action types and, for each, rules that allow an action or ask first.",
+   "span": "There are five types of actions that can be allowed with the",
+   "g": "documented",
+   "m": "default"
+  },
+  "I22": {
+   "e": "https://junie.jetbrains.com/docs/junie-headless.html",
+   "n": "The headless page states that non-interactive runs load project configuration without a trust prompt.",
+   "span": "Only run Junie non-interactively in projects you trust.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I25": {
+   "e": "https://junie.jetbrains.com/docs/junie-on-github.html",
+   "n": "The GitHub Action template sets the job's permissions to write on contents, pull requests and issues; Junie runs with that workflow token.",
+   "span": "The GitHub token used by the Junie action.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "github-action"
+  },
+  "I38": {
+   "e": "https://junie.jetbrains.com/docs/junie-cli.html",
+   "n": "Most terminal commands, edits outside the project and MCP tool calls wait for the user's approval.",
+   "span": "Junie CLI will ask for approval from the user",
+   "g": "documented",
+   "m": "default"
+  },
+  "I46": {
+   "e": "https://junie.jetbrains.com/docs/junie-cli.html",
+   "n": "The allowlist is a file in the user's home directory that the user can edit; brave mode is a toggle.",
+   "span": "You can also edit this file manually to add or remove allowed",
+   "g": "documented",
+   "m": "default"
+  },
+  "I47": {
+   "e": "https://junie.jetbrains.com/docs/guidelines-and-memory.html",
+   "n": "Project and global AGENTS.md guidelines give the agent written rules it adds to every task.",
+   "span": "Guidelines allow you to provide persistent, reusable context to the agent.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "guidelines"
+  },
+  "I48": {
+   "e": "https://junie.jetbrains.com/docs/junie-cli-hooks.html",
+   "n": "PreToolUse hooks can inspect or block a tool call before it runs; hooks are in the Early Access Program. This is a mechanism, documented only.",
+   "span": "inspect or block a tool call before it runs",
+   "g": "documented",
+   "m": "available",
+   "cfg": "hooks"
+  },
+  "I50": {
+   "e": "https://blog.jetbrains.com/junie/2026/06/junie-coding-agent-out-of-beta/",
+   "n": "The release post publishes Junie's SWE-Rebench result, quoted from the benchmark's research lead.",
+   "span": "with 61.6% resolved and a 72.7% pass@5",
+   "g": "documented",
+   "m": "default"
+  },
+  "I52": {
+   "e": "https://blog.jetbrains.com/junie/2026/06/junie-coding-agent-out-of-beta/",
+   "n": "The post describes SWE-Rebench as an independent agent benchmark and quotes a research lead at Nebius.",
+   "span": "an independent agent benchmark",
+   "g": "documented",
+   "m": "default"
+  },
+  "I56": {
+   "e": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html",
+   "n": "The IDE documentation presents Junie to its users as an AI coding agent. No source shows it disclosing this to others in GitHub or GitLab threads.",
+   "span": "is an AI coding agent developed by JetBrains",
+   "g": "documented",
+   "m": "default"
+  },
+  "I57": {
+   "e": "https://junie.jetbrains.com/docs/slash-commands.html",
+   "n": "A /feedback command sends feedback on the current session, with its logs, to the Junie team.",
+   "span": "Share feedback about the current session with the Junie team.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I58": {
+   "e": "https://www.jetbrains.com/legal/docs/terms/jetbrains-ai-service/",
+   "n": "The JetBrains AI terms (AI Assistant, Junie) describe the data used: source code, information derived from it and usage information sent with inputs; a separate notice describes collected data.",
+   "span": "Your Data may include the source code processed in the Product",
+   "g": "documented",
+   "m": "default"
+  },
+  "I61": {
+   "e": "https://www.jetbrains.com/legal/docs/terms/jetbrains-ai/service-providers/",
+   "n": "The service providers page lists OpenAI, Google, Anthropic and SpaceXAI as model providers for Junie, and the models JetBrains hosts.",
+   "span": "JetBrains AI services use the third-party language model service providers listed below",
+   "g": "documented",
+   "m": "default"
+  },
+  "I65": {
+   "e": "https://blog.jetbrains.com/blog/2026/09/22/introducing-jetbrains-air/",
+   "n": "The CEO's post sets out the company's direction for agentic software development through JetBrains Air.",
+   "span": "building for the wider system through which agentic work is initiated, executed",
+   "g": "documented",
+   "m": "default"
+  },
+  "S3": {
+   "e": "https://junie.jetbrains.com/llms.txt",
+   "n": "junie.jetbrains.com serves an llms.txt and links an OpenAPI description; both resolved when fetched on 10 November 2026.",
+   "span": "Machine-readable endpoints",
+   "g": "observed",
+   "m": "default",
+   "method": "probe"
+  }
+ },
+ "not_credited": [
+  {
+   "what": "A JetBrains Research post reports from surveys that 5% of developers regularly use Junie at work.",
+   "why": "A usage figure for the whole product, ask mode included, not for what Junie does on its own; read strictly, it does not meet the rule for being in production. Whether it should is a question for a person.",
+   "source": "https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/"
+  },
+  {
+   "what": "The Junie plugin reports tens of millions of downloads on the JetBrains Marketplace.",
+   "why": "Downloads count installs, not what the agent does on its own.",
+   "source": "https://plugins.jetbrains.com/api/plugins/26104"
+  }
+ ],
+ "announced": [
+  {
+   "what": "Junie 'Top performer on SWE-Rebench' and 'The most cost efficient coding agent' (marketing headline).",
+   "source": "https://www.jetbrains.com/junie/"
+  },
+  {
+   "what": "Air cloud runs: rollout to all remaining customers gradually over the coming months.",
+   "source": "https://www.jetbrains.com/air/"
+  },
+  {
+   "what": "Junie Eco mode: about half the model cost with similar resolve rates in internal benchmarks.",
+   "source": "https://blog.jetbrains.com/junie/2026/10/junie-eco-mode/"
+  },
+  {
+   "what": "Junie page: JetBrains tools adhere to security standards including SOC 2 certification (no report linked).",
+   "source": "https://www.jetbrains.com/junie/"
+  },
+  {
+   "what": "Remote ACP agents: full support evolving in the ecosystem.",
+   "source": "https://junie.jetbrains.com/docs/junie-cli-acp.html"
+  }
+ ],
+ "configurations": [
+  {
+   "id": "shipped",
+   "name": "As shipped",
+   "note": "Junie in a JetBrains IDE or the CLI with its defaults: sensitive actions ask first.",
+   "on": []
+  },
+  {
+   "id": "ask",
+   "name": "Ask mode",
+   "note": "Read-only exploration; no file changes.",
+   "on": [
+    "ask-mode"
+   ]
+  },
+  {
+   "id": "allowlist",
+   "name": "With an allowlist",
+   "note": "Commands the user allows run without asking.",
+   "on": [
+    "allowlist"
+   ]
+  },
+  {
+   "id": "brave-auto",
+   "name": "Brave mode Auto",
+   "note": "A safety classifier approves terminal commands it considers safe.",
+   "on": [
+    "brave-auto"
+   ]
+  },
+  {
+   "id": "brave-on",
+   "name": "Brave mode On",
+   "note": "Potentially sensitive actions run without approval.",
+   "on": [
+    "brave-on"
+   ]
+  },
+  {
+   "id": "mcp",
+   "name": "With MCP servers",
+   "note": "The user or project configures MCP servers.",
+   "on": [
+    "mcp"
+   ]
+  },
+  {
+   "id": "ci",
+   "name": "In CI (GitHub Action)",
+   "note": "Junie runs on the customer's GitHub runners with the documented workflow permissions.",
+   "on": [
+    "github-action"
+   ]
+  },
+  {
+   "id": "guided",
+   "name": "With guidelines and hooks",
+   "note": "An AGENTS.md guidelines file; hooks in the early access CLI.",
+   "on": [
+    "guidelines",
+    "hooks"
+   ]
+  }
+ ],
+ "captures": {
+  "https://blog.jetbrains.com/blog/2026/09/22/introducing-jetbrains-air/": {
+   "sha256": "fd6e7c9c18eb17dbc62b36e013a2f870a681c7999b349b8cb960545e35f3d909",
+   "bytes": 143939,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://blog.jetbrains.com/junie/2026/06/junie-coding-agent-out-of-beta/": {
+   "sha256": "ac014f4922751d9ead7592eab04580fe14ee9b7c8ff39b47ec482bc64a755d9d",
+   "bytes": 137398,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://junie.jetbrains.com/docs/action-allowlist-junie-cli.html": {
+   "sha256": "a6c43c1efe081f491a3bfb7e465a12c3edb56dc75b25c5392d35ceccdbc841bc",
+   "bytes": 15718,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://junie.jetbrains.com/docs/guidelines-and-memory.html": {
+   "sha256": "32a73cfaee8badc672fcfb259fa389874852c3d4322213845dc1fdacde5485b2",
+   "bytes": 12795,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://junie.jetbrains.com/docs/junie-cli-hooks.html": {
+   "sha256": "56ca1a86e5cdfddd54af8a463f0fba7562a4800ca293e5b645574c4fc5ec4859",
+   "bytes": 71887,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://junie.jetbrains.com/docs/junie-cli-mcp-configuration.html": {
+   "sha256": "c382fa1c5990403390fa7527138330ca64a8ca1a09824b18a96bbdd329c1e51f",
+   "bytes": 19644,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://junie.jetbrains.com/docs/junie-cli.html": {
+   "sha256": "3c4d259048ef47f2703168484189fd5570b50c6f76fe9f5a331e2502773fe740",
+   "bytes": 60954,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://junie.jetbrains.com/docs/junie-headless.html": {
+   "sha256": "5920a8d35583ad969df0b49b51052361d9815408bf626b5dc16ff0f114e37a9f",
+   "bytes": 8602,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://junie.jetbrains.com/docs/junie-ide-plugin.html": {
+   "sha256": "9a2fe0e8f2fcd2343fafe0a1c43b75d25da66aac8c33e8596949fa57871cb9a7",
+   "bytes": 42917,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://junie.jetbrains.com/docs/junie-on-github.html": {
+   "sha256": "8a7522c3cd679d21fd88b6d4db63a28f81496d1652d8ada95c8ea67cbaa69584",
+   "bytes": 28128,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://junie.jetbrains.com/docs/slash-commands.html": {
+   "sha256": "5493e3614bfa4e1859f6057bf37aba49680ad95521eb8efd53680e9f0457a1d1",
+   "bytes": 32826,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://junie.jetbrains.com/llms.txt": {
+   "sha256": "47614ecd4279c07e29dde74dfd53aa5e25cbb0c7b0560b3cda661fab7255872c",
+   "bytes": 1440,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://www.jetbrains.com/help/ai-assistant/junie-agent.html": {
+   "sha256": "1aa95e4448af94e7475f2aaa21b136de28626e4de8c0eb9fbe2607323f8689b3",
+   "bytes": 34746,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://www.jetbrains.com/legal/docs/terms/jetbrains-ai-service/": {
+   "sha256": "e9d6b9a0881df8bd5f81cec376d5e66b66476d2c88ab392a63849530792e8144",
+   "bytes": 93667,
+   "read_at": "2026-11-10T05:00Z"
+  },
+  "https://www.jetbrains.com/legal/docs/terms/jetbrains-ai/service-providers/": {
+   "sha256": "a9959e75c29f7a7208efb69f2ab6ba605e5c8c559498ff1449bf3ed66ad8cd6f",
+   "bytes": 49650,
+   "read_at": "2026-11-10T05:00Z"
+  }
+ }
+}

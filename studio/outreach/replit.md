@@ -1,6 +1,6 @@
 # Note to Replit (draft; a person sends it, after the card is approved and published)
 
-Not sent. No contact details are kept here; the sender uses the team's CRM.
+For: conductor@web-summit.dinis. Not sent. No contact details are kept here; the sender uses the team's CRM.
 
 ---
 
