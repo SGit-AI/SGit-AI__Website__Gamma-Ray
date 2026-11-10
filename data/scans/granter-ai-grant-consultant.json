@@ -141,6 +141,54 @@
       "finding": "Verified by fetching the four pages myself: every span is present verbatim and under fifteen words; the S1 Super Bock sentence is gone; I47 and I02 are removed and explained in not_credited with text that matches the pages; the I38 note no longer carries the blog clause; I52 wording matches the Navy page; the I67 span now covers both figures. Round-one findings fully answered: S1, I67, I47, I02, I52, I16, I58, I07/I09/I20/I56 group, announced, levels note. I38 is answered in the sense asked (second clause dropped) but see the scope finding above."
      }
     ]
+   },
+   {
+    "round": 3,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I38",
+      "severity": "should-fix",
+      "finding": "Studio response (I38 re-sourced to the product page FAQ) is true for the span: 'The final submission is done by you on the relevant platform' is exact (eleven words) on the blog page. But the note says 'since Granter has no access to submission-platform accounts'. The page says 'since access to submission-platform accounts is restricted for Granter', which is weaker than none; the scan's own not_credited entry for I47 quotes the word restricted. Change the note to 'restricted'. Also state that this is a statement of who submits (a structural limit on the product), not of an approval step. Answered on source and scope, partly on wording."
+     },
+     {
+      "answer": "S1",
+      "severity": "should-fix",
+      "finding": "The Super Bock page is captured and hashed in captures, the span 'Super Bock's team turned to the AI Grant Consultant' is exact (nine words), the page names the AI Grant Consultant in its title, and the grade and mode (documented, deployed) hold. The note says the application was 'submitted within 72 hours of onboarding'. The page says 'From initial draft to successful submission in under 72 Hours' and 'Within 72 hours, the team produced ... and submitted it on time'; onboarding was on March 27th with five days to go. 'Of onboarding' is the scan's reading. Reword to 'from initial draft to submission in under 72 hours'. Also keep visible in the note that this is one customer and one application, no usage counts, and that the team submitted it (the agent does not submit), so what the agent 'does on its own' is drafting. Round-2 finding on S1 is otherwise answered (second source added and captured)."
+     },
+     {
+      "answer": "not_credited",
+      "severity": "should-fix",
+      "finding": "The fourth not_credited entry (Fidelidade pilot as the source of S1) says 'the Fidelidade page remains a source of the scan and names a second customer'. It is not: no answer cites it and captures holds only the blog, Navy, Super Bock and privacy pages. The page exists and says what the I02 entry reports ('trained using detailed information about Fidelidade's business and past applications', pilot 'in its initial phase of a planned 12-month cycle'), so the facts are supported and the URL is a listed source of the entry, but the sentence is false as written. Either capture the page or drop the claim that it is a source of the scan. The announced items still cite granter.ai and granter.ai/about, which are uncaptured (the studio response says they should be captured); they carry no level."
+     },
+     {
+      "answer": "I16,I07",
+      "severity": "note",
+      "finding": "Round-2 scope finding: I07 is answered (now the blog Evaluator line, span 'shows what to improve before you submit' exact, seven words; the blog also says 'Once you select an opportunity', so the note's clause that the user selects is on the page). I16 is only partly answered: the answer still cites the platform-wide privacy policy, but the note now says it does not name the agent and is coarser than per-action approval, which is true (the policy sentence reads 'Users review and approve them before any submission or decision'). Autonomy level 2 therefore still rests on a company-wide data-protection sentence; the blog gives agent-specific support only for 'you select' and 'you submit'. Honest as stated; the credit stays a thin one."
+     },
+     {
+      "answer": "I20",
+      "severity": "note",
+      "finding": "Answered. New span 'It finds the calls you qualify for, drafts the application against the official criteria' is exact on the blog page, fourteen words. The note's tasks (find, check eligibility, draft, review, manage after approval) and the FAQ remark are on the page. The span itself states purpose and two tasks; it does not state permitted tasks as limits, which the note covers with the FAQ clause."
+     },
+     {
+      "answer": "I56,I58,I67,I52,I09",
+      "severity": "note",
+      "finding": "I56: span exact, note says label on generated content, true to the policy line 'AI-generated content is presented as such inside the platform.' I58: span exact on the CTO quote; the note's clause that the page says the agent then holds the data as context is a reading of other lines ('keeps the full context of your project', 'keeping your project context in every interaction'), reasonable but not in the quote; keep the 'vendor's statement' tag. I67: span 'The pilot has already delivered measurable results:' exact, under 'Early Results'; the '+200' and '2w -> 2h' labels are on the page; note says no method or baseline. I52: wording matches 'Granter is being evaluated by three different Navy units' and the certification phase for the Navy Tested programme. I09: span exact, twelve words. All answered."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A2 R1 C1 O1, no level three or four. Weakest: Autonomy 2 rests on I16 alone, a platform-wide policy sentence that does not name the agent; remove it and Autonomy has no level from this scan (I15 not answered, I07 has no second leg), and with Reach, Control and Openness at one the rule of level one in at least one dimension would still hold, so the card would still publish. Control 1 rests on I38 alone, a sentence that the user submits because access to funder accounts is restricted: a limit by design, not an approval mode; remove it and C falls to none (I47 is not credited). Openness 1 needs I20 plus I56 or I58; I20 is now the agent's own page but I56 is a policy label and I58 a vendor quote. Reach 1 rests on I09, a coverage statement. No level changes if the wording fixes above are applied."
+     },
+     {
+      "answer": "I16,I38,I07,I20,S1,I67,I52,I56,I58,I09",
+      "severity": "pass",
+      "finding": "Verified myself against fresh fetches of the four captured pages: every span is present verbatim and under fifteen words, grades are documented, modes are default except S1 deployed, each answer is credited to a fitting indicator, and the Super Bock page is captured with its hash. Round-2 findings fully answered: I20, I56, I58, I67, I52, I07, the S1 second-source point, levels. Partly: I16 (caveat added, source unchanged), I38 (source fixed, wording overstates). The gate (node build/validate.mjs) prints OK. No em-dashes in the scan prose; the at-sign appears only in the by fields."
+     }
+    ]
    }
   ],
   "responses": [

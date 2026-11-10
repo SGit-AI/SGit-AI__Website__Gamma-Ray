@@ -234,6 +234,44 @@
       "finding": "Card A4 R2 C2 O3 (computed). A4 rests on I08 (default), I18 and I19 (both available, brave mode Auto or On, which the user switches on) and I10 (default, two systems, one vendor post sentence); remove I10 and Autonomy falls to 3, remove I18 and I19 and it falls to 2. C2 rests on I38 (documented, default) plus I23 (a documented list of five action types) and I25 (a template); if I23 is removed, I25 alone carries it and its span covers one scope. O3 rests on I50 (the vendor post quoting a third party's results, no link in the scan) plus S3 (llms.txt resolves, observed) and I57 (a documented slash command); if I50 is removed Openness is 2 (I22, I58 and I61 with I20). R2 holds on I11 (MCP servers the user configures) even without I10. The weakest fact is I10 for A4, then I50 for O3."
      }
     ]
+   },
+   {
+    "round": 4,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "I10",
+      "severity": "note",
+      "finding": "Answered in text, not in substance. The note and span are exact and the live release post says 'Junie connects to the databases configured in your IDE through DataGrip and the JetBrains Database plugin, and then it queries your real data and writes, fixes, and validates SQL in the same session that handles your code'. But the indicator reads 'works across several domains or systems' and the span shows two (a database and the code base), in one sentence of one vendor post. The studio declined to change it and handed the decision to the operator. It is the only fact that lifts Autonomy from 3 to 4 (rule: level three, plus I10, I12 or I13, plus I18 or I19; no I12 or I13 is answered). Either add a second public source showing a third system or domain in the same agent, or remove I10 so the card reads A3. A card at A3 R2 C2 O3 still publishes. Reviewer treatment: a capability list of connected systems that lifts Autonomy to 4 under the rule is the same shape as on the Replit, Manus and cloud-session cards, where I recorded it as a note and asked gamma-ray@ about the rule; the card shows Autonomy 4 as available (brave mode and the IDE database connection). I keep it a note here for the same reason, with the point on record that the span shows two systems."
+     },
+     {
+      "answer": "I25",
+      "severity": "note",
+      "finding": "Answered. The live junie-on-github page says to add a workflow file to the repository's .github/workflows/ and 'you can copy and paste the following junie.yaml template'; the template has, under runs-on, 'permissions: contents: write pull-requests: write issues: write' (8 words, exact, contiguous in the page text). The note matches, mode available and cfg github-action are right. One residual doubt on the indicator (asks for narrower access than the whole account): a scoped token block in a template is a documented scoping, but it is write on three scopes and is the user's file, so I25 is weak support for C2; C2 holds on I38 and I23 without it."
+     },
+     {
+      "answer": "I50",
+      "severity": "note",
+      "finding": "Answered. The span 'with 61.6% resolved' is exact in the live post, 4 words, no at-sign. The note (61.6% resolved, quote attributed to a Research Lead at Nebius, links the SWE-Rebench site) matches the post: the quote sits in a blockquote and the post has an anchor to https://swe-rebench.com/, so the studio's correction to the round-three finding is true. No name of a person is written in the scan. The studio dropped reliance on the separate swe-rebench capture. Still one vendor post, the result quoted from a third party, grade documented is right; it is a vendor-selected cycle ('came out as the top model-harness')."
+     },
+     {
+      "answer": "I23",
+      "severity": "note",
+      "finding": "Answered as before (no change). Live page: 'There are five types of actions that can be allowed with the allowlist.json file: fileEditing ... executables ...'; the note names all five and says it is a documented list. The span ends mid-sentence ('with the') and does not name the types; exact and under fifteen words, but the types follow in the next sentence. The studio's reason (a longer span would cross a code element) is plausible. Mode default and grade documented are defensible; it counts only under the Spectrum reading of the indicator scope, which a public card uses."
+     },
+     {
+      "answer": "I45, I08, I56, I46, I47, I20, I65, I48, I22, I61, I52, I57, I58, S3, S1, S4, I04, I07, I11, I16, I17, I18, I19, I21, I38",
+      "severity": "pass",
+      "finding": "Verified against freshly fetched pages: the answers changed since the round-three commit are only I25 and I50 (a git diff shows the rest is read_at stamps and two capture hashes). Unchanged answers keep their spans (checked: none is fifteen words or more, none has an at-sign, no em-dash in the file). The not_credited entries (research survey 5%, marketplace downloads, IDE help description, allowlist file and brave mode as user setting) cite sources that are listed in the scan or its sources. Round three: I25, I10 (limit stated only), I50, I23, I45, I08 and the grouped items have the studio's response and the scan agree; I10 is not resolved on the merits (see above)."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A4 R2 C2 O3 (computed: A used I10,I18,I19; R used I10,I11; C used I38,I23,I25; O used I50,I57,S3). A4 rests on I10 (documented, default, two systems in one vendor sentence) and on I18 and I19 (available, brave mode, switched on by the user); remove I10 and Autonomy is 3, remove I18 and I19 and it is 2. R2 uses I10 too but I11 (user-configured MCP servers) carries it. C2 rests on I38 (default) with I23 (documented list, Spectrum reading) and I25 (template); remove I25 and C2 holds. O3 rests on I50, one vendor post quoting a third-party result, with I57 (a slash command) and S3 (llms.txt, observed); remove I50 and Openness falls to 2. The weakest fact is I10 for A4, then I50 for O3. The card publishes with level one or more in every dimension either way."
+     }
+    ]
    }
   ],
   "responses": [

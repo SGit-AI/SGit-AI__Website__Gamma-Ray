@@ -151,6 +151,59 @@
       "finding": "Verified answered or unchanged and correct against freshly fetched pages: I04 removed and recorded in not_credited with a reason that matches the product page and CTO post; I50 note now says published on arXiv, Ethiack's own run, and the post does say 'Hackian isn't in the paper itself'; the span is 13 words in the page; I11 Beacon page has the span and 'the beacon initiates the tunnel automatically', mode available with cfg beacon is right; I08, I20, I47 spans exact, under fifteen words, right indicator; S3 llms.txt resolves (200) and contains the REST API description; I41 is documented and correctly not counted (needs operation). Note on style: none of the changed notes contain em-dashes, addresses or at-signs. Round-one findings fully answered: 12 of 15; partly answered: I19, I10, I57."
      }
     ]
+   },
+   {
+    "round": 3,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I19",
+      "severity": "should-fix",
+      "finding": "Round two finding: partly answered. The source is now the Test Details page and the span 'giving clients visibility into what is being tested and how the assessment is progressing' is exact (14 words). The page does carry the policy sentence ('Once the pentest has started, the policy can no longer be edited') and the Activity log, so the boundaries half and a visibility half are there. It does not say that Hackian acts without a person approving, and the studio's claim that 'there is no approval step on the page' is an absence, not a statement. The words that show the agent deciding for itself ('an agentic test relies on this policy to make decisions in real time') are on the policy-guidelines page, which is a captured source of the scan but is not cited by I19. The visibility sentence is the same activity log that I41 cites, so one sentence now carries both the I19 credit and the I41 answer. The page also says the log gives visibility, not that a customer watches the run, and the policy lock applies to pentests, while the CAEV continuous mode (the mode that the other Autonomy answers describe) has no policy box on this page. Suggest citing the policy-guidelines span for I19, or saying in the note that the page shows a locked policy and a visibility log but not the agent's autonomy. I19 remains the only credit for Autonomy 3 and 4."
+     },
+     {
+      "answer": "I10",
+      "severity": "note",
+      "finding": "Studio kept it with a response that quotes 'your domains' and 'all assets in scope' from the continuous-validation page; both are on the page and the span 'Hackian continuously analyzes your entire attack surface in breadth' is exact (9 words). It is breadth over one customer's assets, a thin reading of several domains or systems, but the sentence says what the indicator states and the I12 sentence is correctly left not credited. Grade documented and mode default are right. Reach 2 also has I11 (Beacon, available). Treated as answered; the thinness is recorded here."
+     },
+     {
+      "answer": "I57",
+      "severity": "note",
+      "finding": "Answered. The note now says the Support Portal takes tickets about the Ethiack platform and that the page does not name Hackian or its findings; the page says 'Add a step by step guide of how you reproduce the issue.' (12 words, exact) and does not name Hackian. The other not_credited reasons for I57 (Updates feed 'between all participants', Invalid status 'Usually assigned to vulnerabilities that are false positives') match the pages. No level uses I57: Openness 3 needs I50 and one of I57, I54, S3 but Openness is capped at 1 because level 2 is not met."
+     },
+     {
+      "answer": "I39",
+      "severity": "note",
+      "finding": "Answered. The span now reads 'the header also includes a control to pause or restart the test' (12 words), exact on the Test Details page; the page text is 'For Continuous Adversarial Exposure Validation tests, the header also includes a control to pause or restart the test', so the note's 'continuous tests only' is right. Grade documented, mode default. Control 3 needs I41, I39 and I43, and I43 is not credited, so no level uses it."
+     },
+     {
+      "answer": "I22",
+      "severity": "note",
+      "finding": "Answered as defended. The Expert Pentests page (cited with the human-in-the-loop address, which it is the captured source for) says 'technologies and test types that Hackian does not currently handle on its own, such as mobile applications'; the note says a scope limit and claims no failure cases. It is a documented limit but a routing statement for human-led tests. Openness 1 rests on I20 plus I22 only; remove I22 and Openness is 0, and the card still publishes on the other dimensions."
+     },
+     {
+      "answer": "S1",
+      "severity": "note",
+      "finding": "Answered. The span 'Hackian, our agentic AI pentester, runs against U.Porto's exposure 24/7' is exact (10 words) on the case study and the note says only that. The case study is vendor-authored, so the customer is named in the vendor's words, not in a statement by the customer."
+     },
+     {
+      "answer": "I04 (not_credited)",
+      "severity": "note",
+      "finding": "New small problem in the not_credited entry for I04: the source field names the Introducing Hackian post, but the quoted phrases 'exploit generation' and 'builds and executes sophisticated exploit chains' are on the product page ethiack.com/hackian (captured), not on the post; the post says 'a virtual machine or API access' only. Point the source at the product page or split the entry. The conclusion (not credited) is still right. The Integrations, Updates feed and status flow entries match their pages; those pages are listed sources but are not in captures, which the rule allows."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card computed A4, R2, C1, O1 (sum 8). Autonomy 4 rests on I08 (a product-page sentence), I10 (breadth over one customer's attack surface) and I19, all vendor documentation graded documented, default, nothing observed. I19 is the single point of failure: the replacement page shows a locked policy and an activity log, which evidences boundaries and visibility but not that the agent acts on its own; the autonomy half is on the policy page, so with that page cited I19 would stand, and as cited it is weak. If I19 is removed Autonomy is 0 and no other dimension gives the card a level without it, but Reach 2 (I10, I11), Control 1 (I47) and Openness 1 (I20, I22) each give level one or more, so the card still publishes on the rule that one dimension at level one is enough; Autonomy would show as absent, not as no. Reach 2 is met by the rule but neither credited answer is a connector, as the not_credited entry says."
+     },
+     {
+      "answer": "I08, I11, I20, I41, I47, I50, S3",
+      "severity": "pass",
+      "finding": "Re-verified against freshly fetched pages: spans exact and under fifteen words for all 13 answers; I08 span on the Hackian product page; I11 Beacon page has the span and 'the beacon initiates the tunnel automatically', mode available with cfg beacon; I20 and I47 spans exact on their pages; I50 note matches the post ('Hackian isn't in the paper itself', EthiBench published on arXiv in May) and the span is on the page; S3 llms.txt resolves and lists the REST API; I41 span exact and documented, so not counted for an operation fact. No em-dashes, addresses or at-signs in the changed notes. Round-two findings fully answered: 6 of 7 (I19 partly)."
+     }
+    ]
    }
   ],
   "responses": [
