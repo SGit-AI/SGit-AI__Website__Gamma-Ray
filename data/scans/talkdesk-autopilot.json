@@ -217,6 +217,55 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "After the edits the card is unchanged at A4 R2 C1 O1: Autonomy 4 now uses I10 and I19, Reach 2 uses I10 and I11, Control 1 rests on the sample prompt (I47), Openness 1 on I20 and I58. Autonomy 4 is available with Operations Center only, as the card shows."
+   },
+   {
+    "round": 2,
+    "answer": "S1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Read the linked Quadient story (talkdesk.com/customers/quadient/, status 200) and reworded the not-credited reason to what the two pages say: the quote gives a containment rate without saying it is for the capability that acts, and the story names Copilot, Knowledge Management and AI summaries, not Autopilot. The unsourced Novobanco and calls wording is gone; S1 stays uncredited, no level effect."
+   },
+   {
+    "round": 2,
+    "answer": "I58",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note shortened to the span: it now names Talkdesk Data Cloud only (history, intent and sentiment). Knowledge Management is dropped from the note; Openness 1 still holds on I20 plus I58."
+   },
+   {
+    "round": 2,
+    "answer": "I19",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept, available with ops-center, span unchanged. The note now carries the autonomy half by naming the section's page heading, Resolve requests autonomously with Talkdesk Autopilot (re-fetched, exact), under which the page places the monitoring and guardrails sentence; the guardrails are the boundaries and the page describes no per-action approval."
+   },
+   {
+    "round": 2,
+    "answer": "I03, I08, I10, I11, I17, I20, I47, I65, I67, S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Passed; no further change except the I08 note, which now also says the page states Autopilot completes tasks across channels (same page, I20 span)."
+   },
+   {
+    "round": 2,
+    "answer": "I08, I12, I41, I57",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Passed; no change."
+   },
+   {
+    "round": 2,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Defended, with evidence. A3: I08 is not a single scenario only; the same page says Autopilot completes tasks across voice and digital channels, and the email blog (re-fetched) says Autopilot executes tasks such as processing refunds, re-routing shipments and managing appointments; I17 is a plain feature statement. A4: kept as available with Operations Center, as the card shows; I19 now names the autonomy heading, and the I10 half is the email channel of the same product, which the card names. C1: a sample setup prompt with an escalation rule is a limit written in prose, which is what I47 asks, and the Autopilot page says goals are set in plain language. O1: holds on I20 and I58, whose note now matches its span. No level depends on an observed fact; all are documented vendor statements, as the reviewer notes."
+   },
+   {
+    "round": 2,
+    "answer": "all",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Passed; the S1 not-credited reason is rewritten so it names only facts in read sources. No em-dashes, at-signs or contact details in the proposals."
    }
   ]
  },
@@ -247,7 +296,7 @@
   },
   "I08": {
    "e": "https://www.talkdesk.com/cloud-contact-center/self-service-experience/autopilot/",
-   "n": "In a worked customer scenario on the product page, Autopilot changes an order's delivery address itself through the integrated order management system.",
+   "n": "The product page says Autopilot completes tasks across channels and, in a worked customer scenario, changes an order's delivery address itself through the integrated order management system.",
    "span": "it's able to autonomously make the change.",
    "g": "documented",
    "m": "default"
@@ -275,7 +324,7 @@
   },
   "I19": {
    "e": "https://www.talkdesk.com/cloud-contact-center/self-service-experience/autopilot/",
-   "n": "With CXA Operations Center, people can monitor Autopilot's live interactions, inspect its execution behavior and enforce guardrails.",
+   "n": "Under the page heading Resolve requests autonomously with Talkdesk Autopilot, the page says that with CXA Operations Center people monitor live interactions, inspect execution behavior and enforce guardrails.",
    "span": "Monitor live interactions, inspect execution behavior, and enforce guardrails",
    "g": "documented",
    "m": "available",
@@ -297,7 +346,7 @@
   },
   "I58": {
    "e": "https://www.talkdesk.com/cloud-contact-center/self-service-experience/autopilot/",
-   "n": "The data Autopilot draws on is named: Talkdesk Data Cloud interaction history and Knowledge Management content.",
+   "n": "The product page names Talkdesk Data Cloud as the data AI Agents use to understand interaction history, intent and sentiment.",
    "span": "Leverage the Talkdesk Data Cloud so AI Agents understand history, intent, and sentiment",
    "g": "documented",
    "m": "default"
@@ -343,8 +392,8 @@
   },
   {
    "what": "S1 In production",
-   "why": "The 60% containment quote on the Autopilot page is about answering calls, and the Quadient story names Copilot and Knowledge Management, not the capability that acts; the Novobanco story ties Autopilot to call redistribution.",
-   "source": "https://www.talkdesk.com/cloud-contact-center/self-service-experience/autopilot/"
+   "why": "The Autopilot page quotes a Quadient director on a 60% containment rate and does not say the figure is for the capability that acts. The linked Quadient story (read) names Talkdesk Copilot, Knowledge Management and AI summaries as deployed and quotes a bot using integrations, but does not name Autopilot.",
+   "source": "https://www.talkdesk.com/customers/quadient/"
   }
  ],
  "announced": [
@@ -391,34 +440,34 @@
  ],
  "captures": {
   "https://www.talkdesk.com/about/": {
-   "sha256": "2b014cff927baa3bbd835b2e8e940bcbbe77850ac021377ccaf3f49eb94a65ba",
+   "sha256": "4a748a69a41203b294c4f528a72831af790b927fc8bd288553cd3a75c551ae2f",
    "bytes": 398743,
-   "read_at": "2026-11-10T13:46Z"
+   "read_at": "2026-11-10T15:45Z"
   },
   "https://www.talkdesk.com/blog/bringing-autopilots-agentic-ai-power-email-support/": {
-   "sha256": "1d5a7fdff43b918e03cba9e0b99cb6163b2536eb28ec1532ec8ef29418720221",
-   "bytes": 426267,
-   "read_at": "2026-11-10T13:46Z"
+   "sha256": "9b4949c9627ce1ff2c8308a0af482337c07a56dc61cea10fec9752f77984c524",
+   "bytes": 426111,
+   "read_at": "2026-11-10T15:45Z"
   },
   "https://www.talkdesk.com/cloud-contact-center/self-service-experience/autopilot/": {
-   "sha256": "2ed154096cde1a08fe868c0303764d101ef88aa8e828fb1c0f604edc3f136b98",
-   "bytes": 548836,
-   "read_at": "2026-11-10T13:46Z"
+   "sha256": "dfa1cc79d013e60bba6dceb1a063786392379d9edabf048c8fccbf9eec6a29f6",
+   "bytes": 548566,
+   "read_at": "2026-11-10T15:45Z"
   },
   "https://www.talkdesk.com/customer-experience-automation/multi-agent-orchestration/": {
-   "sha256": "ab02084289d49a43ca3604b202cbc1b6141919499fc74352ab77d04fb444c71c",
-   "bytes": 503658,
-   "read_at": "2026-11-10T13:46Z"
+   "sha256": "92ef8eab59b76e44fb00431776d9aa4088d4871db8cbe70a1abd56f44a302299",
+   "bytes": 503502,
+   "read_at": "2026-11-10T15:45Z"
   },
   "https://www.talkdesk.com/llms.txt": {
    "sha256": "e766ceca888f4db7430977b58ec984f42a8c8633901f2c9ebdf33a4a15d136a3",
    "bytes": 3357,
-   "read_at": "2026-11-10T13:46Z"
+   "read_at": "2026-11-10T15:45Z"
   },
   "https://www.talkdesk.com/news-and-press/press-releases/ai-agents-for-voice/": {
-   "sha256": "ef9b9034d7f73e83ba31a678343993703bb0a5cc1935dc4fc86fe712ca9f669f",
+   "sha256": "132281985eaabae7608a74f884552f46295ecd3f8a063645d754adfaf8a1ec2f",
    "bytes": 281025,
-   "read_at": "2026-11-10T13:46Z"
+   "read_at": "2026-11-10T15:45Z"
   }
  }
 }
