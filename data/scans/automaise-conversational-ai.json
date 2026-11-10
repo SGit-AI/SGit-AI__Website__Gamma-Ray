@@ -196,6 +196,76 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "No change needed; all five sources were refetched on 2026-11-10 and four match their captured SHA-256 exactly (the home page differs, and it is no longer cited after the I11 change)."
+   },
+   {
+    "round": 2,
+    "answer": "I08",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "The unsourced clause about the operator's own systems is gone; the note now says the page does not say through which systems, that the connected-systems configuration is the scan's inference, and that the credit is one vendor sentence with no named customer. Span, grade and mode unchanged."
+   },
+   {
+    "round": 2,
+    "answer": "I11",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Conceded and removed: a channel the assistant answers on is its interface, not a tool it calls, and the terms text is about the Virtual Employee platform, not tied to Conversational AI. Recorded in not_credited with the open list ('etc.'); Reach 2 still holds on I10."
+   },
+   {
+    "round": 2,
+    "answer": "I10",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the pass is accepted, and the not_credited entry for named connectors stays so a reader sees Reach 2 rests on one vendor sentence naming categories."
+   },
+   {
+    "round": 2,
+    "answer": "I17",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change. A fresh raw fetch with curl on 10 November 2026 returned 256091 bytes with SHA-256 38255827...f72e, identical to the recorded capture, and the escalation sentence is in it; the reviewer's 255917 bytes is likely the fetch tool's decoding. The capture is the evidence, as the reviewer says."
+   },
+   {
+    "round": 2,
+    "answer": "I20",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the credit is read as stated tasks under needs: statement, and it is acknowledged that the same FAQ passage feeds I20 and I17."
+   },
+   {
+    "round": 2,
+    "answer": "I58",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the note says the terms define what a customer gives the service, not what the agent draws on, so a reader can judge the narrower reading of Openness 1."
+   },
+   {
+    "round": 2,
+    "answer": "S1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the page carries no date, period or volume, and the credit feeds only the In production badge."
+   },
+   {
+    "round": 2,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Autonomy 3 kept as the reviewer allows: I08 now names its single-source vendor basis and drops the unsourced clause, I17 supports the second half, the level shows as available, and I18 and I19 stay not credited so A4 is not claimed. Reach 2 now rests on I10 alone after I11 is removed; Openness 1 stays on I20 and I58 as worded."
+   },
+   {
+    "round": 2,
+    "answer": "D-new",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Fresh raw curl fetches of all four sources on 10 November 2026 match the recorded captures byte for byte and by SHA-256 (script 256091, product 481638, CTT 396043, terms 351114), so the match is confirmed by a second fetch; the reviewer's differing byte counts are most likely tool decoding. No S4 or I13 evidence was found, so none is claimed."
+   },
+   {
+    "round": 2,
+    "answer": "all other round-one findings",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Accepted; the only round-one item still open, I11, is now removed (see I11)."
    }
   ]
  },
@@ -219,7 +289,7 @@
  "answers": {
   "I08": {
    "e": "https://site.automaise.com/conversational-ai",
-   "n": "The product page says data changes, payments, orders and service subscriptions are completed by the AI without an agent stepping in; such transactions run through the operator's own systems, connected per deployment.",
+   "n": "The product page says, in one vendor sentence with no named customer, that data changes, payments, orders and service subscriptions are completed end-to-end by the AI with no agent stepping in; it does not say through which systems, and the connected-systems configuration is the scan's inference.",
    "span": "completed end-to-end by the AI, with no need for an agent",
    "g": "documented",
    "m": "available",
@@ -229,14 +299,6 @@
    "e": "https://site.automaise.com/conversational-ai",
    "n": "The product page says Conversational AI connects with CRM, contact-centre (CCaaS) and messaging platforms; it names these categories only, and no named connector or integration list was found in the sources.",
    "span": "Conversational AI connects with every major CRM, CCaaS, and messaging platform",
-   "g": "documented",
-   "m": "available",
-   "cfg": "connected-systems"
-  },
-  "I11": {
-   "e": "https://www.automaise.com/legal/privacy-policy",
-   "n": "The service terms say the platform's assistants answer on third-party messaging channels, naming Facebook Messenger, WebChat, Twitter, E-mail and WhatsApp, on behalf of businesses.",
-   "span": "automate answering on a given channel (Facebook Messenger, WebChat, Twitter, E-mail, WhatsApp",
    "g": "documented",
    "m": "available",
    "cfg": "connected-systems"
@@ -280,6 +342,11 @@
    "what": "Approval of critical decisions only (I18)",
    "why": "The FAQ escalation text has a person take over the conversation, not approve a decision; it supports I17 only.",
    "source": "https://framerusercontent.com/sites/2oOCAmSqmUJsdceu4ef5J/Qq644o6Aab6qlVpuxwnOdBYCwMeQYtwb4UBEDaOYKYc.uN0Y50vq.mjs"
+  },
+  {
+   "what": "Third-party messaging channels named in the service terms (I11 connects to external tools or services across a trust boundary)",
+   "why": "The terms describe the company's Virtual Employee platform answering on channels (Facebook Messenger, WebChat, Twitter, E-mail, WhatsApp, etc.); a channel it answers on is its interface, not a tool it calls, and the page does not tie that text to Conversational AI. Reach 2 rests on I10.",
+   "source": "https://www.automaise.com/legal/privacy-policy"
   }
  ],
  "announced": [
@@ -316,22 +383,22 @@
   "https://framerusercontent.com/sites/2oOCAmSqmUJsdceu4ef5J/Qq644o6Aab6qlVpuxwnOdBYCwMeQYtwb4UBEDaOYKYc.uN0Y50vq.mjs": {
    "sha256": "38255827e2c7cf4cfb82ab50c8ed45e59c3c436f08ee5a79709e48922ed9f72e",
    "bytes": 256091,
-   "read_at": "2026-11-10T14:45Z"
+   "read_at": "2026-11-10T17:48Z"
   },
   "https://site.automaise.com/conversational-ai": {
    "sha256": "890debfa4d78df6be8c9f109e801724ad866170c745b1973094aac3a1d080cdd",
    "bytes": 481638,
-   "read_at": "2026-11-10T14:45Z"
+   "read_at": "2026-11-10T17:48Z"
   },
   "https://site.automaise.com/use-cases/via-ctt": {
    "sha256": "eb0467745f88219976d08818a8886f15190829f5d1160fecc7e5821271172ee1",
    "bytes": 396043,
-   "read_at": "2026-11-10T14:45Z"
+   "read_at": "2026-11-10T17:48Z"
   },
   "https://www.automaise.com/legal/privacy-policy": {
    "sha256": "3b0ce570f79cb137fc9a425681fc238dc63d07a2f35502675e1f74812478289b",
    "bytes": 351114,
-   "read_at": "2026-11-10T14:45Z"
+   "read_at": "2026-11-10T17:48Z"
   }
  }
 }
