@@ -367,6 +367,69 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "No change; passed."
+   },
+   {
+    "round": 3,
+    "answer": "I19",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Re-sourced to the policy-guidelines page (captured), whose sentence 'an agentic test relies on this policy to make decisions in real time' (13 words, verified on re-fetch) states the agent deciding for itself within the customer's policy and guardrails; the note scopes it to agentic pentests and says the monitoring half is the activity log already cited for I41, so the I19 credit no longer rests on the I41 sentence and no claim of absence is made."
+   },
+   {
+    "round": 3,
+    "answer": "I10",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the thin reading (breadth over one customer's assets) is recorded in the finding and the answer claims no more than the sentence says."
+   },
+   {
+    "round": 3,
+    "answer": "I57",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; finding confirms the note and span, and no level uses I57."
+   },
+   {
+    "round": 3,
+    "answer": "I39",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; finding confirms the span and the continuous-only scope in the note."
+   },
+   {
+    "round": 3,
+    "answer": "I22",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the note states a scope limit (test types Hackian does not handle on its own go to human testers) and claims no failure cases, which is what the page says."
+   },
+   {
+    "round": 3,
+    "answer": "S1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the note says only what the vendor-authored case study says, and the span is exact."
+   },
+   {
+    "round": 3,
+    "answer": "I04 (not_credited)",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Split into two entries with the right sources: the 'exploit generation' and 'exploit chains' phrases point at the product page ethiack.com/hackian (verified on re-fetch), and the hackbot-tools phrases ('executing commands or sending requests', 'a virtual machine or API access') point at the Introducing Hackian post. Still not credited."
+   },
+   {
+    "round": 3,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Autonomy 3 and 4 now rest on an I19 whose autonomy half is the policy-guidelines sentence and whose monitoring half is the I41 activity log, which the reviewer names as the condition for I19 to stand; Autonomy 4 also stands on I08 and I10 as documented vendor statements, not observed. Reach 2 is kept by the rule any(I10, I11), with the not-connectors caveat already recorded in not_credited."
+   },
+   {
+    "round": 3,
+    "answer": "I08, I11, I20, I41, I47, I50, S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; all re-verified by the reviewer as exact and correctly graded."
    }
   ]
  },
@@ -413,9 +476,9 @@
    "cfg": "beacon"
   },
   "I19": {
-   "e": "https://docs.ethiack.com/docs/portal/tests/test-details",
-   "n": "The test page shows the customer's policy, which cannot be edited once a pentest has started, and an activity log of the actions Hackian performs that gives the customer visibility of the test's progress.",
-   "span": "giving clients visibility into what is being tested and how the assessment is progressing",
+   "e": "https://docs.ethiack.com/docs/portal/tests/agentic-pentest-policy-guidelines",
+   "n": "For agentic pentests, the policy guidelines say the autonomous agent relies on the customer's written policy, with guardrails on what it must not do, to make its decisions in real time; the monitoring half is the activity log cited for I41.",
+   "span": "an agentic test relies on this policy to make decisions in real time",
    "g": "documented",
    "m": "default"
   },
@@ -486,11 +549,6 @@
  },
  "not_credited": [
   {
-   "what": "I04 (generates and executes code with privileges)",
-   "why": "The CTO post describes the tools of a hackbot in general (executing commands, sending requests, a virtual machine), not of Hackian as shipped; the product page's 'exploit generation' and 'builds and executes sophisticated exploit chains' do not show code executed with local or cloud privileges. No level used it.",
-   "source": "https://ethiack.com/info-hub/product/introducing-hackian"
-  },
-  {
    "what": "I12 (several agents coordinate)",
    "why": "The policy page says 'Hackian uses Primary Focus to distribute work across multiple agents'; it does not show agents with their own context and authority passing work between them, which the indicator's scope requires.",
    "source": "https://docs.ethiack.com/docs/portal/tests/agentic-pentest-policy-guidelines"
@@ -560,59 +618,59 @@
  ],
  "captures": {
   "https://docs.ethiack.com/docs/general/support-portal": {
-   "sha256": "c199055f99dd8d62ecc8fac900199dde84f23a39a0248789d272acb756335fe8",
+   "sha256": "64c2744300c3c844a49ea680a03132de538886b95aeaef716fec2b6ca7583bdd",
    "bytes": 230735,
-   "read_at": "2026-11-10T16:45Z"
+   "read_at": "2026-11-10T18:46Z"
   },
   "https://docs.ethiack.com/docs/portal/surface/configuring-your-beacon": {
-   "sha256": "34df9f424e208778355b6fa3dc1e1bc11db8318a3b94f765c49cbc0b5879e342",
+   "sha256": "42e46ff48d128a6b639f83859143f64d5391eeeee4d941bd4b19880c54c50a03",
    "bytes": 343242,
-   "read_at": "2026-11-10T16:45Z"
+   "read_at": "2026-11-10T18:46Z"
   },
   "https://docs.ethiack.com/docs/portal/tests/agentic-pentest-policy-guidelines": {
-   "sha256": "1d0df5bcc3dd0d1dec9324f603c6458ac5462b65b9b95cd89854dfa6ca703990",
+   "sha256": "5c1fef33a54a2908fa3550b4aaf1a77b976455813ee083284ff78718cbfd57e2",
    "bytes": 246595,
-   "read_at": "2026-11-10T16:45Z"
+   "read_at": "2026-11-10T18:46Z"
   },
   "https://docs.ethiack.com/docs/portal/tests/agentic-pentests": {
-   "sha256": "944c113087530ea5aabc2b4ed6e0eee9a6af6e5c72cea95af9a18623fc349d8b",
+   "sha256": "0cb62d70e5725a9b7169b5ef71eb592c7c4dee8cfd3bbcbb31eea0a210649d16",
    "bytes": 233529,
-   "read_at": "2026-11-10T16:45Z"
+   "read_at": "2026-11-10T18:46Z"
   },
   "https://docs.ethiack.com/docs/portal/tests/continuous-adversarial-exposure-validation": {
-   "sha256": "cd0ae5a00665f433050c8d2fae97cc441fe1c85d9a8ae22585989f603409c35c",
+   "sha256": "5a17e7ce54dd7b455d16745609b2de35d5717a51588af5918b9d46050d0194c4",
    "bytes": 230332,
-   "read_at": "2026-11-10T16:45Z"
+   "read_at": "2026-11-10T18:46Z"
   },
   "https://docs.ethiack.com/docs/portal/tests/human-in-the-loop": {
-   "sha256": "c320a260db041fe7cca2d2c97eff77175fe16ca5b86d8a37011b8e4ddd7e20e0",
+   "sha256": "af014a8ffe6dd86b82d0d799068960a59677df1ac002e33ce845d506dbb7ef2f",
    "bytes": 227727,
-   "read_at": "2026-11-10T16:45Z"
+   "read_at": "2026-11-10T18:46Z"
   },
   "https://docs.ethiack.com/docs/portal/tests/test-details": {
-   "sha256": "83120b4fae441256c74ece2ec35d361687a23782923b95b9dcf0c791bc7b1fb3",
+   "sha256": "8f5b86d1a387db7ac18ab5f96fd4fb86be7f5951d2f0c56004d6b4438cb06d80",
    "bytes": 254499,
-   "read_at": "2026-11-10T16:45Z"
+   "read_at": "2026-11-10T18:46Z"
   },
   "https://docs.ethiack.com/llms.txt": {
    "sha256": "f0f352298b06ae2a1ed034ee626a9d45baa156dd50d44dfba8cfa43006d1b0bb",
    "bytes": 54222,
-   "read_at": "2026-11-10T16:45Z"
+   "read_at": "2026-11-10T18:46Z"
   },
   "https://ethiack.com/hackian": {
    "sha256": "5f4cecee0abc3d7ac58c29535d3c95b746dd85ceea6b90093944eb9bc9a1a5fe",
    "bytes": 420871,
-   "read_at": "2026-11-10T16:45Z"
+   "read_at": "2026-11-10T18:46Z"
   },
   "https://ethiack.com/info-hub/case-studies/scaling-security-how-uporto-and-ethiack-protected-5000-assets-with-ai-powered-intelligence": {
    "sha256": "5b34d184cb10e624233d924e435abaee8ea0c60d5f577a8952b56ab05184f3c5",
    "bytes": 286290,
-   "read_at": "2026-11-10T16:45Z"
+   "read_at": "2026-11-10T18:46Z"
   },
   "https://ethiack.com/info-hub/research/ai-pentesting-benchmarks-are-so-bad-we-made-a-new-one": {
    "sha256": "a80896db5705974ddc4ee66d581bcbc627dd3118949bcfebec066626dc484ea3",
    "bytes": 320186,
-   "read_at": "2026-11-10T16:45Z"
+   "read_at": "2026-11-10T18:46Z"
   }
  }
 }
