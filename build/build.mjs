@@ -57,7 +57,7 @@ function md(src, figs) {
 // ---------- pages ----------
 const pages = []           // { url: 'standard/', title, summary, body (markdown), section }
 const NAV = [['spectrum/', 'Spectrum'], ['fact-ray/', 'FACT-Ray'], ['reports/', 'Reports'], ['scans/', 'Ratings'], ['standard/', 'The standard'], ['about/', 'About'], ['feedback/', 'Corrections']]
-const NAV_MORE = [['briefing/', 'The briefing'], ['flow/', 'From a stand to a card'], ['rating/', 'How a rating is made'], ['questions/', 'Questions'], ['mashup/', 'The mashup'], ['lens/', 'The lens'], ['coverage/', 'Coverage'], ['provisions/', 'The provisions'], ['instruments/', 'Instruments']]
+const NAV_MORE = [['briefing/', 'The briefing'], ['decisions/', 'Open decisions'], ['flow/', 'From a stand to a card'], ['rating/', 'How a rating is made'], ['questions/', 'Questions'], ['mashup/', 'The mashup'], ['lens/', 'The lens'], ['coverage/', 'Coverage'], ['provisions/', 'The provisions'], ['instruments/', 'Instruments']]
 const figs = { paths: id => viz.paths(GRAPHS.find(x => x.s.id === id).g, '../../'), cardpaths: id => { const x = GRAPHS.find(x => x.s.id === id); return x ? viz.paths(x.g, '../../../') : '' }, path: id => viz.pathGraph(GRAPHS.find(x => x.s.id === id).g, '../../'), cohort: () => viz.cohort(m, sp, '../'), walk: id => viz.cardWalk(m, sp, id), label: id => viz.label(m, id), profile: id => viz.profile(m, id), configs: id => viz.configs(m, id), pairs: () => viz.pairs(m), ring: () => viz.ring(m), scans: () => viz.scanMatrix(m), grant: id => viz.grantGrid(m, id), lit: id => viz.graph(m, id), graph: () => viz.graph(m), funnel: () => viz.funnel(m), coverage: () => viz.coverage(m), matrix: () => viz.matrix(m), quadrant: id => viz.quadrant(m, id) }
 const figText = { paths: 'For each dimension, what its level rests on: one fold-out per fact, each opening that fact\'s path down to the source.', cardpaths: 'For each dimension, what its level rests on: one fold-out per fact, each opening that fact\'s path down to the source.', path: 'One path of a card graph, from the card down to the words on a public page and across to the provisions, with the verb on every edge.', cohort: 'The published cards side by side, one row each; the table below has the same.', walk: 'The walk from the card down to each indicator, its public source and the instruments it touches; the sections below list the same in text.', label: 'The label for this rating; its contents are in the text.', profile: 'One square per indicator, by question; every answer is listed below.', configs: 'The freedom level of each configuration; the table has the same.', pairs: 'How many indicators each pair of instruments shares; the same counts are in /data/summary.json.', ring: 'The instruments as a ring joined by shared indicators.', scans: 'Every scan against every question.', grant: 'The grant as a grid of capabilities; the table below has every row.', lit: 'The mashup graph with this agent\'s evidenced indicators lit.', graph: 'The mashup as a graph (questions, indicators, provisions). The same data: /data/questions.json, /data/indicators.json, /data/provisions.json.', funnel: 'The compression in four bars; the numbers are in the text.', coverage: 'Coverage of each instrument by tier; the table below has the numbers.', matrix: 'Questions by instruments; the questions page lists every citation.', quadrant: 'The quadrant of freedom against governance; the levels are in the text.' }
 function front(src) {
@@ -126,6 +126,12 @@ Object.assign(gen, {
     'flow-rail': () => flowHtml(FLOW, fr, '../').rail,
     'flow-says': () => FLOW.says,
     'flow-intake': () => { const c = s => INTAKE.filter(i => i.status === s).length; return `${INTAKE.length} compan${INTAKE.length === 1 ? 'y' : 'ies'} met so far: ${c('intake')} at intake, ${c('drafting')} being drafted, ${c('in-review')} in review, ${c('published')} published, ${c('no-agent')} with no agent found` }
+})
+const DEC = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/decisions.json'), 'utf8')).decisions
+Object.assign(gen, {
+    'decisions-open': () => { const o = DEC.filter(d => !d.answer); return o.length ? o.map((d, i) => `### ${i + 1}. ${d.question}\n\n${d.options.map(x => `- ${x}`).join('\n')}\n\n**Recommended:** ${d.recommendation} *Asked ${d.asked}; from ${d.from}.*`).join('\n\n') : 'Nothing is waiting.' },
+    'decisions-answered': () => { const a = DEC.filter(d => d.answer); return a.length ? `| Question | Answer | When |\n|---|---|---|\n` + a.map(d => `| ${d.question} | ${d.answer.text} | ${d.answer.at} |`).join('\n') : 'None yet.' },
+    'decisions-count': () => String(DEC.filter(d => !d.answer).length)
 })
 const GRAPHS = SPX.cards.filter(x => x.c.publishable).map(({ s, c }) => ({ s, g: cardGraph(m, sp, s, c, TRUST.of.get(s.id)) }))
 Object.assign(gen, {
@@ -218,6 +224,7 @@ w('data/cards.json', JSON.stringify({ spectrum: sp.version, beta: true, note: 'G
 w('data/evidence.json', JSON.stringify(SPX.evidence, null, 1))
 for (const [rel, s] of Object.entries(FRX.files)) w(rel, s)
 for (const { s, g } of GRAPHS) w(`data/graphs/${s.id}.json`, JSON.stringify(g, null, 1))
+w('data/decisions.json', fs.readFileSync(path.join(ROOT, 'data/decisions.json')))
 w('data/flow.json', fs.readFileSync(path.join(ROOT, 'data/flow.json')))
 w('data/graphs/verbs.json', JSON.stringify({ note: 'The verbs of the card graphs. Two are from the fifteen of Fractal Semantic Graphs; the others are ours and are marked.', verbs: VERBS }, null, 1))
 w('data/fact-ray/nodes.json', JSON.stringify({ standard: 'FACT-Ray ' + fr.axes.version, note: 'Every fact behind a published card, as a FACT-Ray node with its claim. Trust, not truth.', nodes: FRX.nodesJson }, null, 1))

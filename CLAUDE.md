@@ -60,6 +60,10 @@ Built inside this site first (Dinis, 10 November 2026); it will move to its own 
 
 Dinis, 10 November 2026: a fact has meaning only through what it connects to, and the whole thing is fractal: the top-level mapping inherits from below, all the way down to specific evidence (graphs.sgit.ai, *Fractal Semantic Graphs: Meaning Through Connectivity*). `build/graph.mjs` makes one graph per published card in that grammar: every edge a directed verb with a named inverse (`VERBS`), no generic association, an absence is a node, evidence carries its words. A new verb needs a sentence, a different sentence for its inverse, and the node types at each end. The graph connects; it never scores.
 
+## Decisions
+
+A question that is Dinis's to decide goes in `data/decisions.json` (shown at `/decisions/`) with its options, the recommendation and where it came from, not only in a message. When he answers, record `answer: {text, at}` and act on it; nothing is deleted.
+
 ## Rules for content
 
 - Read a source yourself before citing it. Quote exactly, with the link and the date read.
