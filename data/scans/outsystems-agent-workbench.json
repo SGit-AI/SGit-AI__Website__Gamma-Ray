@@ -94,6 +94,99 @@
      }
     ]
    }
+  ],
+  "responses": [
+   {
+    "round": 1,
+    "answer": "S1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept as documented with a new note and span: the page names TeamWork, quotes it saying Agent Workbench helps it equip its consultants with AI tools and that some apps are built with it, and the note now says the Customer Support Agent's results are expectations, not that this agent is live on Agent Workbench."
+   },
+   {
+    "round": 1,
+    "answer": "I41",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Removed and listed as not credited: the monitoring page shows traces an agent originated but does not say tool or action calls are logged, and an operation fact at documented grade would not count anyway."
+   },
+   {
+    "round": 1,
+    "answer": "I48",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept as documented, mode available (guardrails); the scorer counts an operation fact only at observed or measured, so it stays uncounted and feeds no level."
+   },
+   {
+    "round": 1,
+    "answer": "I11",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Changed to mode available with a new mcp-connection configuration, matching I13 and I14: the MCP page says you create a connection in ODC Portal and import tools before an agent can use them; the new span is on that page. Reach 2 still holds through I10."
+   },
+   {
+    "round": 1,
+    "answer": "I12, I13, I18, I10 (Autonomy 4)",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: each answer's span is on its page and the modes are available where a builder step is needed, so Autonomy 4 is read as what the product documents when configured, as the configurations say; I12 and I13 carry the 'any' clause on documentation pages if I10 is set aside."
+   },
+   {
+    "round": 1,
+    "answer": "I14, I25 (Reach 3)",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: I14 is met as written by the A2A 0.3.0 client connector and I25 by the per-agent set of actions; S4 stays unclaimed because ODC exposes no A2A server in the sources read. The card label is the rule's, not ours to change here."
+   },
+   {
+    "round": 1,
+    "answer": "I25, I38 (Control 2)",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: both spans are on their pages and the next unlock, I43, is not claimed."
+   },
+   {
+    "round": 1,
+    "answer": "I22, I58, I61 (Openness 2)",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: each answer says what its page documents (guardrail limits, grounding sources, supported providers), and Openness 2 needs only two of the three."
+   },
+   {
+    "round": 1,
+    "answer": "S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note now names only the www.outsystems.com llms.txt, which is the answer's source and capture (fetched again 2026-11-10, same SHA-256); the uncaptured success.outsystems.com file is dropped from the note."
+   },
+   {
+    "round": 1,
+    "answer": "I08",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Source changed to the action-calling page, which says both that agents call the server actions granted to them and that the AI model decides which action to run, so the note now matches its source; the span is on that page."
+   },
+   {
+    "round": 1,
+    "answer": "I03, I10, I20",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: passed."
+   },
+   {
+    "round": 1,
+    "answer": "I17, I39, I40, I21, I47",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: passed."
+   },
+   {
+    "round": 1,
+    "answer": "I13, I14, I12, I38, I22",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: passed."
+   }
   ]
  },
  "assessment": {
@@ -122,9 +215,9 @@
    "m": "default"
   },
   "I08": {
-   "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=24d5a0ea-68c8-4851-b7de-e0908c122862",
-   "n": "Agents call tools that retrieve data or perform operations in other systems, choosing the actions themselves.",
-   "span": "Agents can call external tools to retrieve data or perform operations in other systems.",
+   "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=aec0cd3b-dcd4-4077-b0c0-04e987bdb690",
+   "n": "Agents call the server actions granted to them, the AI model deciding which action or sequence of actions to run.",
+   "span": "The AI model autonomously decides which action (or sequence of actions) is appropriate",
    "g": "documented",
    "m": "default"
   },
@@ -137,10 +230,11 @@
   },
   "I11": {
    "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=7a08a9ca-8a6e-4f48-9079-8f840ce01a7b",
-   "n": "Agents use tools from external MCP servers, imported as server actions, with OAuth, API key or no authentication.",
-   "span": "extend AI agents in OutSystems Developer Cloud (ODC) with external systems",
+   "n": "Once an MCP server connection is created in ODC Portal and its tools imported as server actions, agents can call them, with OAuth, API key or no authentication.",
+   "span": "create a connection in ODC Portal, import selected tools, then reference them",
    "g": "documented",
-   "m": "default"
+   "m": "available",
+   "cfg": "mcp-connection"
   },
   "I12": {
    "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=2d97c9e1-6bd4-48ef-8efc-66b75069eb5f",
@@ -234,13 +328,6 @@
    "m": "available",
    "cfg": "hitl-workflow"
   },
-  "I41": {
-   "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=ca7cae65-c466-4d93-bab6-85ac740519c0",
-   "n": "ODC Portal logs and traces can be filtered by agent, showing the requests an agent originated, kept for four weeks.",
-   "span": "you see traces where that agent is the origin of the trace",
-   "g": "documented",
-   "m": "default"
-  },
   "I47": {
    "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=24d5a0ea-68c8-4851-b7de-e0908c122862",
    "n": "Each agent's system prompt sets its role, behaviour and constraints in natural language.",
@@ -272,21 +359,27 @@
   },
   "S1": {
    "e": "https://www.outsystems.com/case-studies/teamwork-ai-agents/",
-   "n": "TeamWork, a named customer, runs a Customer Support Agent built on Agent Workbench that classifies and routes support tickets.",
-   "span": "auto-classifies and routes support tickets",
+   "n": "TeamWork, a named customer, says Agent Workbench helps it equip its consultants with AI tools and that some of its apps are built with it; the results of its Customer Support Agent are given as expectations.",
+   "span": "It helps us equip our consultants with innovative AI tools",
    "g": "documented",
    "m": "default"
   },
   "S3": {
    "e": "https://www.outsystems.com/llms.txt",
-   "n": "An llms.txt resolves at the site root, and a documentation llms.txt at success.outsystems.com (both fetched 2026-11-10).",
+   "n": "An llms.txt resolves at the www.outsystems.com site root (fetched 2026-11-10).",
    "span": "OutSystems combines low-code simplicity with AI software development",
    "g": "observed",
    "m": "default",
    "method": "probe"
   }
  },
- "not_credited": [],
+ "not_credited": [
+  {
+   "what": "I41 Its actions are logged",
+   "why": "The monitoring page says logs and traces can be filtered by agent and kept four weeks, showing traces the agent originated, but it does not say the agent's tool or action calls are recorded, and an operation fact needs an observed or measured grade.",
+   "source": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=ca7cae65-c466-4d93-bab6-85ac740519c0"
+  }
+ ],
  "announced": [
   {
    "what": "'Orchestrate your entire AI workforce' and use cases such as delayed-shipment handling 'no human needed' (marketing page, not counted).",
@@ -343,73 +436,76 @@
    "on": [
     "a2a-connection"
    ]
+  },
+  {
+   "id": "mcp-connection",
+   "name": "MCP connection",
+   "note": "An administrator creates a connection to an MCP server in the ODC Portal and imports selected tools as server actions, which the builder adds to the agent; not part of an agent by default.",
+   "on": [
+    "mcp-connection"
+   ]
   }
  ],
  "captures": {
   "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=24d5a0ea-68c8-4851-b7de-e0908c122862": {
    "sha256": "4bebd8d78dce8555d02f587d98acd039138c572867f1833bda8a650f1bb2ee48",
    "bytes": 10362,
-   "read_at": "2026-11-10T10:39Z"
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=2d97c9e1-6bd4-48ef-8efc-66b75069eb5f": {
    "sha256": "409bddbad33512f9612b91dd12f8438d8b80c8f81e0cfc94300491b7b179ce84",
    "bytes": 5626,
-   "read_at": "2026-11-10T10:39Z"
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=5332e43d-bd1c-4403-8f46-5cbdaf198318": {
    "sha256": "ad4921b706fb6cc071f628d46a60e1545d3cfc92b4215f1c3b9de5a0439c65d8",
    "bytes": 12205,
-   "read_at": "2026-11-10T10:39Z"
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=673835c6-c109-4aa2-a3b5-507ab4da8611": {
    "sha256": "adaf537c0b182a67c4332d181c7ba491bb190cf0947f79eb0c05cf849f0a5067",
    "bytes": 11825,
-   "read_at": "2026-11-10T10:39Z"
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=6c449182-a1d4-4584-9558-5292f761f97a": {
    "sha256": "7bc6c8084a21d0cf8c67cb15f758aeadaf07b5f15ab84958bdd002a7264d19e8",
    "bytes": 5684,
-   "read_at": "2026-11-10T10:39Z"
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=7a08a9ca-8a6e-4f48-9079-8f840ce01a7b": {
    "sha256": "097ef201374564258dfc53fee26ed1cd6749d452cd0623471c895b826a9d49da",
    "bytes": 7806,
-   "read_at": "2026-11-10T10:39Z"
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=8764e4f7-25f3-4a21-b6a9-000c59f4a93a": {
    "sha256": "305b5bf8b523b55b31b9924e449c109fd32f00d25882867aad96259fca028538",
    "bytes": 7966,
-   "read_at": "2026-11-10T10:39Z"
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=aec0cd3b-dcd4-4077-b0c0-04e987bdb690": {
    "sha256": "b9307656fbaee2ea2f42753372b4595e709c0be5e7e99f33c626b4825056a05d",
    "bytes": 8460,
-   "read_at": "2026-11-10T10:39Z"
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=af45db6e-ac0f-4ab9-8e4a-4ba8fd559812": {
    "sha256": "0727bf95007ca7984997cf96dc70e716cbd7a39e63d3030efe2b32bec810f20b",
    "bytes": 22009,
-   "read_at": "2026-11-10T10:39Z"
-  },
-  "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=ca7cae65-c466-4d93-bab6-85ac740519c0": {
-   "sha256": "8c5f5bd38553a3fda940b14cad310d1967e8cead1a90085a12ecf71d26d5ea71",
-   "bytes": 9339,
-   "read_at": "2026-11-10T10:39Z"
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://www.outsystems.com/case-studies/teamwork-ai-agents/": {
    "sha256": "632f93d6aa40cf3eacb174fd4630ba1d5a9e4d6daefef474105e18dbe1f8006d",
    "bytes": 52752,
-   "read_at": "2026-11-10T10:39Z"
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://www.outsystems.com/llms.txt": {
    "sha256": "570b2029b8c6dd4d7d5cd145bcc362bda5d069859ed63b9b2575dcf5dcd2d101",
    "bytes": 11052,
-   "read_at": "2026-11-10T10:39Z"
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://www.outsystems.com/platform/agentic-ai-workbench": {
    "sha256": "b8d83b34ccd1be37d4816d5020bb93805fea4cbc6b94eeee99fe0d44385d2920",
    "bytes": 337100,
-   "read_at": "2026-11-10T10:39Z"
+   "read_at": "2026-11-10T13:47Z"
   }
  }
 }
