@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.82",
+    "date": "2026-11-10",
+    "what": "what each level rests on, as fold-out paths on every card page",
+    "by": "gamma-ray@web-summit.dinis",
+    "from": "714aab1b8"
+  },
+  {
     "version": "v0.0.81",
     "date": "2026-11-10",
     "what": "one caption for the fold-out paths",
