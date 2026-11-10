@@ -93,8 +93,17 @@ for (const f of walk(OUT).filter(f => /\.(html|md|txt|json)$/.test(f))) {
 { const q = fs.readFileSync(path.join(OUT, 'questions/index.html'), 'utf8'), pv = fs.readFileSync(path.join(OUT, 'provisions/index.html'), 'utf8')
   for (const i of I) if (!q.includes(`id="${i.id}"`)) { bad('anchors', `/questions/ has no anchor for ${i.id}`); break }
   for (const p of read('data/provisions.json')) if (!pv.includes(`id="${p.id}"`)) { bad('anchors', `/provisions/ has no anchor for ${p.id}`); break } }
+// 4d the card graphs keep their grammar: every edge is a known verb between the node types it names, every piece of
+// evidence is observed on a page and produced by someone, and no node is left without an edge
+{ const dir = path.join(OUT, 'data/graphs'), V = Object.fromEntries(JSON.parse(fs.readFileSync(path.join(dir, 'verbs.json'), 'utf8')).verbs.map(v => [v.verb, v]))
+  for (const f of fs.readdirSync(dir).filter(f => f !== 'verbs.json')) { const g = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')), N = Object.fromEntries(g.nodes.map(n => [n.id, n])), touched = new Set()
+    for (const e of g.edges) { const v = V[e.verb]; touched.add(e.from); touched.add(e.to)
+      if (!v) { bad('graph', `${f}: unknown verb ${e.verb}`); continue }
+      if (!N[e.from] || !N[e.to] || N[e.from].type !== v.from || N[e.to].type !== v.to) bad('graph', `${f}: ${e.from} ${e.verb} ${e.to} does not join a ${v.from} to a ${v.to}`) }
+    for (const n of g.nodes) { if (!touched.has(n.id)) bad('graph', `${f}: ${n.id} has no edge`)
+      if (n.type === 'evidence') for (const verb of ['observed_on', 'produced_by']) if (!g.edges.some(e => e.from === n.id && e.verb === verb)) bad('graph', `${f}: ${n.id} is not ${verb} anything`) } } }
 // 5 the version is CI's: version.txt, if present, is a plain number
 const vf = path.join(ROOT, 'build/version.txt'); if (fs.existsSync(vf) && !/^v\d+\.\d+\.\d+\n?$/.test(fs.readFileSync(vf, 'utf8'))) bad('version', 'build/version.txt is not vX.Y.Z')
 
 if (problems.length) { console.log(problems.join('\n')); console.log(`${problems.length} problem(s); the gate is red`); process.exit(1) }
-console.log(`OK (${gen.version}: ${gen.pages.length} pages, ${gen.totals.provisions} provisions, ${gen.totals.indicators} indicators, ${gen.totals.questions} questions, 6 checks)`)
+console.log(`OK (${gen.version}: ${gen.pages.length} pages, ${gen.totals.provisions} provisions, ${gen.totals.indicators} indicators, ${gen.totals.questions} questions, 7 checks)`)
