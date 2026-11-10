@@ -19,8 +19,62 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "draft",
-  "rounds": []
+  "status": "round-1",
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I08",
+      "severity": "should-fix",
+      "finding": "Source and span are right: the product page benefits section says data changes, payments, orders and service subscriptions are completed end-to-end by the AI, with no need for an agent to step in. Grade documented is right (needs: statement). The mode default is doubtful. The scan's own configuration note says connections to the operator's CRM, contact-centre or messaging platforms are built per deployment, and a payment or order can only be completed through such a connection. The page gives no sign that this is on out of the box. Suggest mode available with the connected-systems configuration, or a note saying why default holds. The card counts available answers, so the Autonomy level would not move, but its marker would. The sentence is a benefit statement with no named customer for payments or orders; only the CTT case (S1) shows an account change done by the assistant."
+     },
+     {
+      "answer": "I10",
+      "severity": "should-fix",
+      "finding": "Span is on the product page and in the captured script file. Mode available with the connected-systems configuration is right for a per-deployment connection. Two issues. First, the cited source is the Framer script bundle, but the CRM sentence is also in the product page text, so that page is the better citation; only the FAQ escalation answer (I17) is in the script alone. Second, Reach 2 is described as documented connectors to common tools. The page names categories only (CRM, CCaaS, messaging) and no connector, integration list or integration documentation was found in the sources. The grade documented is a vendor assertion of connectivity; the note should say that no named connector was found. The FAQ list in the note (account management, payments and so on) shows task types, not systems, so it is weak support for several systems."
+     },
+     {
+      "answer": "I11",
+      "severity": "should-fix",
+      "finding": "Span is exact and on the home page: 'We operate across voice, chat, email, WhatsApp, social media'. The weakness is the credit. The home page says 'we', the company, not the Conversational AI product that this product-shape scan covers, and it states channels the company works on, not a tool or service the agent calls across a trust boundary (indicator I11). The terms page (the privacy-policy URL, a source of this scan) does say the platform answers on Facebook Messenger, WebChat, Twitter, E-mail and WhatsApp on behalf of businesses; that is a better anchor for the third-party channel point. Reach 2 still holds through I10, so no level changes, but the note should cite the terms text and say it concerns channels, or the answer should be lowered."
+     },
+     {
+      "answer": "I17",
+      "severity": "note",
+      "finding": "Both parts of the note are on the page as the scan says. 'Anything that follows a predictable flow can be handled autonomously' is in the product page text. The escalation answer ('When a conversation reaches a point that requires human intervention, it transitions seamlessly to an available agent, with full context carried over') is NOT in the page's static HTML or the fetched page text; it is only in the captured script file, in the FAQ component data. The scan states that, so the citation is honest, but it is a fragile source (a runtime bundle whose hash changes on any site release). Span is 10 words and exact. Grade documented and mode default are fine. The answer shows the person is consulted on exceptions (indicator I17), with no approval step; it does not reach I18."
+     },
+     {
+      "answer": "I20",
+      "severity": "note",
+      "finding": "Span is exact and on the product page FAQ. Grade and mode pass. The FAQ lists what the assistant can handle on its own, which states a purpose and a list of task types. It is a capability list, not a statement of what the agent is permitted or not permitted to do, so the credit is on the generous side of 'permitted tasks'. The Openness 1 level depends on it together with I58."
+     },
+     {
+      "answer": "I58",
+      "severity": "note",
+      "finding": "The URL is titled Privacy Policy but the text is the General Terms of Service. The note correctly calls it the service terms. The span is exact (curly apostrophe only differs). The terms define Customer Data as what the customer provides to the service, naming Virtual Employee configurations, frequent questions' answers, text messages, pictures and videos, plus End User Data. That describes the data the service holds and processes, which supports 'the data it uses is described' only in a loose sense: it does not say what data the assistant uses to answer. Openness 1 rests on I20 plus I58 (no I56 or I22 on the card), so this credit decides that level. Defensible under needs: statement, but flag it for round two."
+     },
+     {
+      "answer": "S1",
+      "severity": "pass",
+      "finding": "Checked on the CTT use-case page. CTT is named as the client, the solution is listed as Conversational AI, and the page says the chat assistant is able to manage and autonomously solve account access issues such as password recovery, unblocking accounts or setting new passwords, and that the new channel completely replaced the traditional phone support line. Impact figure '93% Automation rate of the webchat interactions' is a rate of interactions, not an install or seat count, and the named customer is enough under the scope. Span is exact, 10 words. Grade documented, mode default fine. The page carries no date, and the 93% rate has no stated period or volume. Earns the In production badge only; it does not feed Autonomy."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card computed as A3 R2 C- O1 (Autonomy 3, Reach 2, Control none, Openness 1). Autonomy 3 (Acts) rests on I08 plus I17, both vendor statements on the product page FAQ and benefits section; no operation fact (needs: operation) is used, so the grade rule is satisfied. The evidence is descriptive statements, not an artefact such as a log, an API or a measured run. The CTT case corroborates I08 for one account-access flow, and its 93% rate (so some interactions are not automated) is consistent with I17, but neither is cited as a second source for those answers. Autonomy 4 is not reached: no I18 (approval of critical decisions only), I19 or I12/I13 found, and the escalation text has the person take over, not approve. Reach 2 depends on I10 (categories only) and I11 (channel statement); if both were lowered as suggested Reach would fall to none. Openness 1 depends on I20 and I58 as noted. No level 3 or 4 on the card other than Autonomy 3. S4 (agent-callable interface) is not in the scan; no MCP server, agent card or agent API appears in any of the five sources, so nothing to check there."
+     },
+     {
+      "answer": "I10,I20 and sources",
+      "severity": "pass",
+      "finding": "All five sources fetched on 2026-11-10 (product page, CTT page, home page, terms page, script file). Every span is present and under fifteen words (8 to 11). Every claim in each note is on the page cited, with these two clarifications: the FAQ escalation text exists only in the script file, and the product page is JS-rendered (Framer), so its FAQ answers beyond the first need the raw HTML or script file. No note cites a page, name or figure outside the scan's sources. Assessment fields (lowered I47, I63, I02; fixed I17, I10, S1) were not checked against the vault work files, which were not read."
+     }
+    ]
+   }
+  ]
  },
  "assessment": {
   "by": "gamma.studio@web-summit.dinis",

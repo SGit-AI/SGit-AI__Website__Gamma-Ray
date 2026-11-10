@@ -19,8 +19,67 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "draft",
-  "rounds": []
+  "status": "round-1",
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I57",
+      "severity": "should-fix",
+      "finding": "The note says answers also carry like and dislike feedback. The cited page (the Portuguese product news of 21 May 2026) says only that the report-error button is a floating popup over the help icon and on failed messages. I searched every text of the scan for like, dislike and thumbs and found nothing. Remove the like and dislike clause, or cite a source that has it. The report-error part is on the page and the span is exact; the grade and mode are right. This indicator is not what the S3/O3 rule needs on this card, so no level changes."
+     },
+     {
+      "answer": "I01",
+      "severity": "should-fix",
+      "finding": "The note says lawyers use the assistant as provided through a subscription. The cited page (help.bythelaw.com o-que-e-a-bythelaw) says nothing about a subscription or plans. The span is exact and the first part (an AI platform for lawyers) is on the page. Cite a page that names plans (the 21 December 2025 news page lists Free, Pro and Pro Teams) or drop the word. Level R1 also has I09, so no level changes."
+     },
+     {
+      "answer": "I15",
+      "severity": "should-fix",
+      "finding": "Autonomy 1 rests on this single indicator, 'every action is prompted and controlled by the person'. The cited help page says the assistant 'interprets the request and returns an answer', which supports the chat only. Two sources of the same scan point the other way for the Citius integration, which the card already counts for Reach and Control: the Citius terms (article 2.2) authorise using the credentials to access Citius 'de forma automatizada' at a periodicity ByTheLaw chooses, and llms.txt says ByTheLaw checks Citius daily at 11:00, 14:00 and 17:00 and calls the product 'fully autonomous'. So some actions are not prompted by the person. The note should say it is true of the chat only, and the card should record that the Citius scheduled reading is not prompted. If I15 were removed the card would have no Autonomy level, so this is the answer to challenge. I did not check for I08, I17 to I19 evidence, which would be needed for Autonomy 3 and which the page does not show."
+     },
+     {
+      "answer": "I39",
+      "severity": "should-fix",
+      "finding": "The note says the stop button works 'on all plans'. The cited news page (21 December 2025, Portuguese) says availability is 'Planos Free, Pro e Pro Teams', three named plans, not all plans. The span (Pode interromper a resposta do chatbot a qualquer momento) is exact. Also note it is a release announcement from December 2025, not a current help page, so it shows the feature was introduced, not that it is there today. Grade documented and mode default are acceptable. I39 does not feed a level (Control 3 needs I41, I39 and I43)."
+     },
+     {
+      "answer": "I07",
+      "severity": "note",
+      "finding": "The span is exact and under fifteen words. The page says the product answers legal questions from official sources and that the citation lets you verify before using content in a filing. It does not say the product recommends actions; it supports 'retrieves information; a person acts' only in the retrieval half. Not used in any level. The note's phrase 'which the lawyer checks' paraphrases 'lets you verify', which is fine."
+     },
+     {
+      "answer": "I46",
+      "severity": "note",
+      "finding": "The indicator is 'a limit on it is a setting that its own account could change' (a barrier of the setting kind). The answer credits the per-project Sources tab, a setting the user switches on or off; the help page does say that (span exact, mode available is right, since a user must set it). It is a user preference restricting retrieval sources, not clearly a limit on what the agent may do. Reasonable as a lens barrier, but a reader could dispute it. Not used in any level."
+     },
+     {
+      "answer": "I36",
+      "severity": "note",
+      "finding": "The privacy page does say personal data is processed in accordance with the GDPR, and the span is exact. The indicator asks that the laws that apply to the agent are identified; the GDPR is a data law, and the Citius terms also name articles 28 and 32 of the GDPR and article 92 of the lawyers' statute. Acceptable at tier declared, grade documented. Not used in any level."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card computed with the repo scorer: A1, R2, C1, O2. No level 3 or 4, so nothing to argue against in that sense. A1 rests on I15 alone (see I15). R2 rests on I11, mode available: the Citius integration is experimental, offered only to users ByTheLaw assigns it to (terms 3.1, 3.4), which the note says; the mode is correct. C1 rests on I47 and I38, both from the Citius terms only and both mode available, so the Control level describes the optional Citius integration and not the chat everyone gets; the chat control found (stop button, I39) does not feed a level. O2 rests on I22 and I58 (count two) with I20 for O1; all three are on the help pages and are artefacts, not adjectives. S1 and S4 are not answered; none is claimed, which is right: no usage figures and no agent-callable interface were found in the sources."
+     },
+     {
+      "answer": "S3",
+      "severity": "note",
+      "finding": "llms.txt resolves (fetched, HTTP 200, 4.5 KB), so grade observed and mode default are right and the scope (a file that resolves) is met. The span is exact and under fifteen words. Observation: the same file calls the product 'fully autonomous', which contrasts with the I15 answer; the scan does not mention it. S3 does not feed a level on this card (Openness 3 also needs I50)."
+     },
+     {
+      "answer": "I09, I11, I20, I21, I22, I38, I47, I54, I58",
+      "severity": "pass",
+      "finding": "Each source opened and read in full (home page en, five help pages, the Citius terms version 1.2 of 6 November 2026, two news pages, llms.txt). I09: span is on the home page; the note's case law and uploaded documents appear in its FAQ. I11: Citius terms 2.2 b and 3.4; span exact; the 'selected users' claim is in 3.1. I20: span on the 'What ByTheLaw is' page, with the listed tasks (questions, analysis, translation, drafting, reading legislation, organising work). I21: terms 2.3 say consultation and reading only and no procedural acts; span exact (Portuguese, 11 words). I22: formats page, span exact, upload limits (10 documents per message, 50 MB) present. I38: terms 2.4, unread notifications opened only after prior express user action with an irreversible-read warning; span exact. I47: terms 2.3, span exact. I54: terms 5.4, span exact. I58: sources page, span exact. All grades documented and modes right (Citius items available, the rest default). Spans all under fifteen words."
+     }
+    ]
+   }
+  ]
  },
  "assessment": {
   "by": "gamma.studio@web-summit.dinis",
