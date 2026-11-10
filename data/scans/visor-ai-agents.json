@@ -19,8 +19,82 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "draft",
-  "rounds": []
+  "status": "round-1",
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I03",
+      "severity": "should-fix",
+      "finding": "The cited voice-agent page says each agent is a flow on a canvas and that the model and speech services are settings on its nodes. It does not say the builder is low-code or no-code, and it does not say the agent acts on real organisational data, which the indicator requires. The no-code half is on the Generali page (a source of the scan), which says Generali resolves requests and builds complex workflows 'without needing a developer', and its stats give 30+ self-service processes built by Generali's own team. Re-source or add the Generali page. No level uses I03 now (A2 also needs I07, which is not answered), so no level changes."
+     },
+     {
+      "answer": "I17",
+      "severity": "should-fix",
+      "finding": "The span 'It handles a wide range of conversations from start to finish' is on the Generali page but carries only the routine half and the vendor's wording 'wide range'. The exception half of the indicator (a person consulted on exceptions) is only in the note, where the page says an advisor picks it up in live chat. A span of that half under fifteen words, such as 'an advisor picks it up in live chat', would show the fact. The full sentence on the page is 15 words, so it must be cut. Credit and mode (deployed) are right. This answer is one of the two that hold Autonomy 3."
+     },
+     {
+      "answer": "I08",
+      "severity": "pass",
+      "finding": "Span 'those requests now run end to end as automated workflows' is on the Generali page (sentence: Generali looked at its most common requests, duplicate documents, address changes, adding a vehicle and cancellations, and connected the platform to its own systems through web services). Grade documented and mode deployed are right: a named customer, named request types, vendor-authored. Note content matches the page."
+     },
+     {
+      "answer": "I10, I11",
+      "severity": "pass",
+      "finding": "I10: the voice-agent page says 'It connects to your telephony and to your contact-centre or CCaaS platform'. I11: the Generali page says Generali connected the platform to its own systems through web services; mode deployed right. Both documented. I10 as 'several domains or systems' is a thin credit (telephony and CCaaS are two systems of one domain) but I11 alone also holds Reach 2, so the level stands."
+     },
+     {
+      "answer": "S1",
+      "severity": "should-fix",
+      "finding": "Mode is given as default but this is a named customer deployment, so it should be deployed. The 80,000 figure is on the Generali page, paired in the markup with the label 'conversations between brokers and the AI agent every month', but the span quotes only the label, not the figure. The page markup carries a claim-source attribute stating the stats were archived from a Wayback copy of 2022-08-20, so the figure may be about four years old and is undated on the page; the note presents it in the present tense. Suggest adding the date caveat to the note. Conversations are sessions in kind, not install or seat counts, so S1 is acceptable as the In production badge."
+     },
+     {
+      "answer": "I60",
+      "severity": "should-fix",
+      "finding": "Indicator: its privacy risk has been examined. The healthcare page says only that before go-live Visor agrees with the customer's data protection officer what the agents may ask for and where conversations and recordings are kept. That is a scoping agreement, not an examination or assessment of risk, and no impact assessment is named on the page. The note repeats the page faithfully but the credit overstates the indicator. Mode available with healthcare-deployment is right. No level uses I60."
+     },
+     {
+      "answer": "I67",
+      "severity": "should-fix",
+      "finding": "The note says 'Millennium BCP reports' the figures. The page is Visor's own success story, which states 'Max started at 65% automation in 2021, and the goal is 80%'; it does not say the bank reported it. Change to 'The Visor success story states'. The 80% is a goal, not a measured value; only the 65% is a result, and it is a 2021 figure. The page markup also says the content was archived from a 2022 Wayback copy. Mode deployed and grade documented are right. No level uses I67."
+     },
+     {
+      "answer": "I47",
+      "severity": "note",
+      "finding": "Healthcare page (Chat AI Agent): 'you describe, in plain language, what the agent must not handle'; a matching conversation is 'flagged critical, and a person on your team steps in'. Span exact, note accurate, mode available with issue-agent right (the customer writes the criteria). Control 1 rests on this one answer, and it is a vendor feature description, not an artefact such as a captured configuration. The configuration issue-agent belongs to the chat agent while the scan's shipped configuration is the Voice AI Agent. The same page also states 'The agent isn't set up to give clinical advice', which is a limit in prose too."
+     },
+     {
+      "answer": "I22, I58, I61",
+      "severity": "pass",
+      "finding": "I22: voice-agent page says the models 'can occasionally fail' and that providers 'do not guarantee total availability'; documented, default. I58: chat-agent page says the agent answers from a knowledge base built from the customer's own documents, kept in sync; documented, default. I61: security page subprocessor table lists Azure, Vertex AI Gemini, Deepgram, AssemblyAI, ElevenLabs and what each processes; the span 'Gemini large language models used by the AI agents to process conversations' is on the page. Openness 2 rests on these three; they are artefacts (a named provider list), not adjectives."
+     },
+     {
+      "answer": "I20, I36, I40",
+      "severity": "pass",
+      "finding": "I20: healthcare page 'The agents are set up for administrative contact, and the scope written before work starts says so'; available with healthcare-deployment is right. I36: voice-agent page 'Each agent runs twelve automatic checks against the EU AI Act and the GDPR', and every check cites its article, as the note says. I40: chat-agent page 'When a chat needs a human, it moves to live chat and is routed to the right department with everything the customer already wrote'; the note says 'with its history', which is a fair paraphrase. Spans exact and under fifteen words."
+     },
+     {
+      "answer": "I37, I66, I68",
+      "severity": "note",
+      "finding": "All three are exact on the voice-agent page (I37: 'We test end to end, then your team validates it in real conditions before launch'; I66: 'We train your people to run the platform confidently'; I68: 'Nexa reads real conversations on a schedule', and 'nothing changes until someone on your team accepts it'). They describe Visor's deployment service rather than the product as shipped, so mode default is a loose label; deployed or a named service configuration would be more exact. I68 is a proposal cycle with human acceptance; accepted as improvement on a cycle. No level uses them."
+     },
+     {
+      "answer": "S3",
+      "severity": "note",
+      "finding": "llms.txt resolves and begins 'Build AI Agents that learn from your business'; span exact. Each entry carries a Markdown link and I fetched one twin (chat-agent index.md), which returns text/markdown, so the note is right. Observed, default are right. S4 is not answered; the pages show no MCP server or agent-facing API, and none is claimed."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A3 R2 C1 O2. Autonomy 3 rests on I08 and I17 at one customer (Generali) on one vendor-authored page, whose figures date from a 2022 archive; artefacts present (named customer, named request types, a conversation count) but no figure shows how many requests complete without a person, and the 80,000 counts conversations. Level 3 holds on the rule, with I17 span to be corrected. Autonomy 4 is not reached (no I18/I19). No note in the scan cites a page, name or figure absent from its sources; the page, claim and figure checks all matched. The scan's announced items (up to 85% automation, 70% first contact, Nexa 'Agentic Superintelligence') are from pages not in the scan's sources and are correctly kept out of the answers."
+     }
+    ]
+   }
+  ]
  },
  "assessment": {
   "by": "gamma.studio@web-summit.dinis",
