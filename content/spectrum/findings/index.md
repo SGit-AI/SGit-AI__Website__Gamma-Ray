@@ -18,7 +18,9 @@ Every card was scored again with the corrected rules. The evidence did not chang
 
 **2. No zeros on a card.** A dimension with no evidence prints as a dash in the signature and as "not yet evidenced" in the card. In `cards.json` its level is `null`. The stage sum counts it as nothing.
 
-**3. Reach three can be reached.** Every card sat at Reach two, because level three asked for agents talking to agents (`I14`) or published authorisation metadata (`I24`). A new indicator, `S4` (it exposes an agent interface: a published MCP server, an agent card, or an API documented for agents to call), now also opens level three, with `I25` as before. No scan has been read for `S4` yet, so no card has moved on it; the scans are being read for it now.
+**3. Reach three can be reached.** Every card sat at Reach two, because level three asked for agents talking to agents (`I14`) or published authorisation metadata (`I24`). A new indicator, `S4` (it exposes an agent interface: a published MCP server, an agent card, or an API documented for agents to call), now also opens level three, with `I25` as before. What it has done on published cards so far:
+
+{{gen:spectrum-reach-three}}
 
 **4. Openness one fits products that do not chat.** Level one asked that the product tell the people it talks to that it is an AI (`I56`), which a builder tool has nobody to tell. Now it asks for a stated purpose (`I20`) with one of `I56`, `I22`, `I58`.
 

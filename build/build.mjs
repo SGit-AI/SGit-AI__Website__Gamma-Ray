@@ -34,6 +34,7 @@ function md(src, figs) {
         const l = L[i]
         if (!l.trim()) { i++; continue }
         let x
+        if (/^\{\{/.test(l) && !/^\{\{fig:([a-z-]+)(?::([a-z0-9-]+))?\}\}$/.test(l)) throw new Error(`an unfilled placeholder: ${l} (names are lower-case letters and hyphens)`)
         if ((x = l.match(/^\{\{fig:([a-z-]+)(?::([a-z0-9-]+))?\}\}$/))) { out.push(`<figure>${figs[x[1]](x[2])}</figure>`); i++; continue }
         if ((x = l.match(/^(#{1,4}) (.*)$/))) { const n = x[1].length; out.push(`<h${n} id="${slug(x[2])}">${inline(x[2])}</h${n}>`); i++; continue }
         if (l.startsWith('<')) { out.push(l); i++; continue }

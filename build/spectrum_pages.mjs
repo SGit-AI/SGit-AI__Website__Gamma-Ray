@@ -38,6 +38,8 @@ export function build(m, sp, T) {
                 const mv = ap.map((x, i) => x === bp[i] ? null : `${bp[i]} to ${x}`).filter(Boolean)
                 const nb = c.badges.filter(x => !(b.badges || []).includes(x)).map(x => sp.badges.find(y => y.id === x).name)
                 return `| ${s.name} | ${bs} | ${c.signature} | ${b.stage || 'not yet'} (${b.sum}) to ${c.stage || 'not yet'} (${c.sum}) | ${[...mv, ...nb.map(x => 'badge: ' + x)].join('; ') || 'nothing'} |` }).join('\n') },
+        'spectrum-reach-three': () => { const r = cards.filter(x => x.c.publishable).map(({ s, c }) => ({ s, d: c.dims.find(d => d.id === 'R') })).filter(x => x.d.level >= 3)
+            return r.length ? r.map(({ s, d }) => `- **${s.name}** is at Reach ${d.level} through ${d.used.map(id => '`' + id + '`').join(' and ')}${d.used.includes('S4') ? ': the new indicator' : ''}.`).join('\n') : 'No published card has reached Reach 3 yet.' },
         'spectrum-broke': () => { const out = []
             for (const { s, c } of cards) { const a = c.dims.find(d => d.id === 'A'); if (a.level === 0 && s.answers.I08) out.push(`- **${s.name}** acts on its own (\`I08\`) and has no Autonomy level: no rule fits it.`) }
             { const r = cards.map(x => x.c.dims.find(d => d.id === 'R').level), same = r.every(x => x === r[0]); if (same) out.push(`- **Reach does not tell the cards apart.** All ${cards.length} cards are at Reach ${r[0] || 'not yet evidenced'}.`) }
