@@ -285,6 +285,49 @@
       "finding": "Verified against pages fetched today. I11: spans and note true (GitHub.com supports MCP servers configured at the repository level, 9 words; the page says the GitHub and Playwright servers are configured by default, GitHub with a read-only token on the current repository and Playwright limited to localhost, and that the MCP policy is disabled by default), so mode available is defensible; the earlier must-fix is answered. I14 is removed and the Reach 3 route is closed (I14, I24, S4 not answered); Reach 2 stands on I10 and I11. I41: span \"Each commit message includes a link to the agent session logs\" is 11 words and in the page; it is documented, and as an operation fact it does not count, as the note says. I21, I38, S2 spans exact (8, 12, 11 words). I27: commits show as Verified. I20, I22 notes match the intended-uses and limitations sections. S3: https://docs.github.com/llms.txt resolves (HTTP 200) and is observed. The not_credited item (CodeQL and scanning) names a page that is a source of the scan. Round-one findings fully answered: I11, I14, I10, I41, I45, I21, I38, S2 and the grouped pass; I18 and I56 partly."
      }
     ]
+   },
+   {
+    "round": 3,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I45",
+      "severity": "pass",
+      "finding": "Correction before this round was recorded: the reader found the firewall page missing from captures. It is now captured: the scan holds a capture of https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/customize-the-agent-firewall (written in commit 172d9cf by gamma-ray@ at 19:10Z, after the reader fetched). So the round-two request for that capture is answered. The note itself was checked against the live page and is accurate: the firewall is on by default, applies to processes started through the Bash tool and not to MCP server processes or setup steps, and the page says it should not be considered a comprehensive security solution."
+     },
+     {
+      "answer": "I18",
+      "severity": "note",
+      "finding": "Partly answered. True in the page: the agent can pick up a task, create a branch and open a pull request, and workflows its pull requests trigger need approval from a user with write access; span 'require approval from a user with write access before they will run' is 10 words and exact. Gaps: (1) that sentence is about running workflows, one gate on one action, and it is the same sentence already credited to I38, so one sentence now carries Autonomy 3, Autonomy 4 and Control 2. It does not say the person approves critical decisions only. (2) The studio response says the merge is the critical decision the person approves; the cloud-agent text on the responsible-use page does not say the person approves or performs the merge (the 'Human review before merge' sentence is about the Copilot app, a different product surface), and the note does not claim it, so the response overstates the page. (3) 'It can push only to that one branch' is slightly off: the page says the existing pull request branch when triggered by mention, or a new copilot/ branch. Fix: say in the note that the level rests on the documented workflow-approval gate plus the pull-request flow, and that no sentence states what the person must approve; or lower Autonomy to what I08 alone supports. Reviewer treatment: the credit is true and honestly worded in the scan note (it names the branch limit and the workflow approval), so the point is strength of evidence, which I record as a note on cards where one true sentence carries a level; the card shows Autonomy 4 as available (mcp)."
+     },
+     {
+      "answer": "I10",
+      "severity": "should-fix",
+      "finding": "Partly answered. The new source is the MCP page and the span 'integrating it with a wide range of existing tools and services' (11 words) is exact. But it sits in the page's general opening about MCP across IDE, CLI, the app and the agent on GitHub.com, and the issue-tracker example is also in that general passage; the cloud-agent specific part of the page says repository-level servers apply to it and that the GitHub and Playwright servers are on by default. The note presents the general sentence as a statement about the cloud agent working across systems. The indicator asks that it works across several domains or systems; the page documents a mechanism for adding tools, not that it works across systems. As this is the only support for Autonomy 4 (mode available, cfg mcp) the note should say it is the mechanism and that no page shows it running multi-step work across systems, or cite the sentence naming Teams, Linear, Slack and Jira again alongside. The studio's removal of reliance on per-organisation set-up is right."
+     },
+     {
+      "answer": "I23",
+      "severity": "note",
+      "finding": "New answer, checked. Span 'Copilot is read-only when a user has read access' (9 words) is exact on the responsible-use page; the secrets and variables and one-branch claims are on the same page. Under the Spectrum scope documented scopes count. Weak fit: Control 2 is described as settings and scopes that are documented as configurable, and these are fixed rules, not settings. Control 2 depends on this plus I38. Also the third not_credited item lists the same read-only and one-branch facts as not credited while the note on it says they are credited under I23 (and I21 credits one branch): the entry is both credited and not credited; reword it to be only the I25 point, or drop it."
+     },
+     {
+      "answer": "I56, not_credited",
+      "severity": "note",
+      "finding": "I56 removal answered. The not_credited entries cite only the responsible-use page, which is captured and hashed (sha256 4c556dc5...). The CodeQL entry and the commit-authorship entry match the page. No uncaptured page is cited there; the only uncaptured page cited anywhere is the firewall page under I45. The scan field moved reads 'As above. Scanning of generated code is no longer counted as testing of the agent.' which refers to nothing that follows it; reword."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A4, R2, C2, O1 (as the scorer prints it; Autonomy 4 needs I10, available under the mcp configuration, so as shipped it reads A3). Arguing against level three and four: Autonomy 3 is I08 (solid, page says it can create branches, write code and open pull requests) plus I18, and I18 is one workflow-approval sentence that is also the whole of I38, so it does not show the person approves critical decisions only; Autonomy 4 adds I10, a statement that MCP can add tools, and I18 again, with no page showing multi-step work across systems, and level four's rule also wants the person to set goals and review outcomes, which no cited sentence says. The card stands (Reach 2, Control 2, Openness 1 each have support), and the as-shipped versus connected split is shown; the weakness is that all of Autonomy above level one rests on one sentence and one capability mechanism."
+     },
+     {
+      "answer": "I04, I08, I11, I20, I21, I22, I27, I38, I41, S2, S3, round-2 I10/I25/I56/levels responses on the studio's side",
+      "severity": "pass",
+      "finding": "Fetched all four sources fresh today and checked. I04 span 'ephemeral, firewalled environment', I08 sentence, I20 (maintenance, feature development, prototyping all on the page), I21 span 'It can only push to a single branch' (8 words) and secrets sentence, I22 (limited scope, inaccurate or insecure code, security risks, public code matches), I27 (commits signed, Verified), I38 span (10 words), I41 span 'Each commit message includes a link to the agent session logs' (11 words, documented, operation so it does not count), I11 (repository-level MCP; GitHub server read-only token on the current repository, Playwright limited to localhost; MCP policy disabled by default), S2 span (11 words), S3 llms.txt fetched (HTTP 200). Latest-round findings: I56 fully answered (removed, moved to not_credited, Openness 1 stands on I20 and I22); I25 note fully answered (removed, credited as I23); the levels finding answered in part (concession made that as shipped the card is A3, but the I18 weakness remains, see I18). Counts: of the five latest-round findings (I18, I56, I45, I10, I25) plus levels and the pass group, I56, I25 and I10-as-recorded are answered, I18 partly, I45 not, levels partly. No em-dashes, addresses or adjectives found in the scan text I read."
+     }
+    ]
    }
   ],
   "note": "Published as an example on 10 November 2026, before the review workflow existed. Mapped by one agent. It goes through two rounds of review next.",

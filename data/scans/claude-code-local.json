@@ -560,6 +560,49 @@
       "finding": "Verified against the live pages. S1 is removed and the not_credited entry is true: the Stripe page says \"Deployed Claude Code to 1,370 engineers\" and \"reframed AI assistants as capable new engineers who need context\"; the page is captured. I39 span is exact and Ctrl+C is on the interactive mode page. S2 span \"Third-party plugins that their authors submitted to Anthropic\" (8 words) is exact, and authors' own marketplaces are on the same page. I61 span (9 words) is exact. I23, I41, I43, I46, I12, I04, I63, I57 match their pages. The configuration entries are consistent with the answers (cfg manual, sandbox, managed, rules, mcp, teams all exist). Nothing else changed since the round two commit."
      }
     ]
+   },
+   {
+    "round": 4,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "I45",
+      "severity": "pass",
+      "finding": "Correction before this round was committed: when the re-check read the scan, https://code.claude.com/docs/en/sandboxing was not among the captures. It is now: the scan holds a capture of that page (sha256 7770e2b3dceae7bf8c388553fd06b7f9e64d35e4a0b200e4c703860d96815fa4, read 2026-11-10T19:09Z), written in commit 172d9cf by gamma-ray@ at 19:10Z. So the I45 finding, which asked for that capture, is answered. The note text was already checked against the live page (off by default, wraps shell commands only, the agent can ask to run unsandboxed unless strict sandbox mode is on)."
+     },
+     {
+      "answer": "I48",
+      "severity": "pass",
+      "finding": "Answered. The hooks clause is gone and the full stop is fixed. The note (managed settings, nothing in a user's own files or the --settings flag overrides a managed key; a mechanism, not a policy; only where deployed) matches the settings page: \"Nothing in your own settings files or --settings overrides a managed key\". The new span \"overrides a managed key\" is 4 words and exact. The page is captured. Grade documented and mode available with cfg managed are right."
+     },
+     {
+      "answer": "I18 and the configurations",
+      "severity": "pass",
+      "finding": "Answered. The As shipped note now says what the permission modes page says (read 2026-11-10): v2.1.283 or later for interactive terminal and VS Code sessions, earlier only on Pro, Max, Ultra and Team plans; \"claude -p or Agent SDK runs start in Manual mode\"; auto mode \"Requires a supported model, and your organization can turn auto mode off\". The I18 span \"approve the action so Claude may retry\" (7 words) is exact. I18 default, I16 and I38 available under the Manual mode configuration are consistent. The classifier-first reading of I18 stays a judgement for sign-off, as recorded."
+     },
+     {
+      "answer": "I56",
+      "severity": "note",
+      "finding": "Unchanged since round three (only moved in the file). Span \"so Claude Code adds Co-Authored-By: <name>\" is exact on the settings reference, under fifteen words. The credit remains weak for the indicator, as round three said; Openness 1 holds on I22 without it. No level depends on it."
+     },
+     {
+      "answer": "configuration sandbox",
+      "severity": "note",
+      "finding": "The Sandbox on configuration note says \"Shell commands confined by the operating system\" and omits the native Windows line, MCP servers and hooks that the I45 note now carries. A reader of the configuration list alone gets the wider reading. Optional: reuse the I45 wording there."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A4 R2 C4 O2 (computed). A4: I10 or I12 plus I18 on top of Acts (I08, I18). The card now lists I10, I12, I18 as used; I18 is the weakest fact, default only on interactive sessions from v2.1.283 and not on claude -p or where an organisation turns auto off, and without it Autonomy falls to A2 on I16 (available under Manual). Removing I10 leaves A4 through I12, which is experimental and disabled by default, so A4 is not carried by it alone. C4: I45 (sandbox, off by default, shell commands only, escape hatch, unsandboxed on native Windows) with I48 (managed settings, only where an organisation deploys them); without either, Control holds at 3 on I41, I39, I43 (I41 and I43 under managed settings) and at 2 on the default. Control 4 is a property of a configuration, not of the product as shipped, and the card must say that; S1 is correctly removed. The publication rule (level one or more in one dimension) is met in all four."
+     },
+     {
+      "answer": "S1, I04, I08, I10, I11, I12, I16, I20, I21, I22, I23, I38, I39, I41, I43, I46, I57, I58, I61, I63, S2, S3, not_credited, captures other than I45",
+      "severity": "pass",
+      "finding": "Re-read against the live pages. Changed entries since the round three commit are I45, I48 and the As shipped note; I12, I56, I57 and I58 only moved position with identical content. Every other cited page, including the Stripe page of not_credited, is a capture key. No em-dash, no email address in the scan content. Spans are all under fifteen words (I39 12, I46 13, I61 9, S2 8, I18 7)."
+     }
+    ]
    }
   ],
   "note": "Published as an example on 10 November 2026, before the review workflow existed. Mapped by one agent. It goes through two rounds of review next.",
