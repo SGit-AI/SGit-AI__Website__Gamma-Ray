@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.107",
+    "date": "2026-11-10",
+    "what": "automaise-conversational-ai: round 2 answered (I11 removed; I08 note on its single source)",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "8066a0edd"
+  },
+  {
     "version": "v0.0.106",
     "date": "2026-11-10",
     "what": "two decisions for Dinis: a survey figure and In production; a private preview for the Portuguese cohort",
