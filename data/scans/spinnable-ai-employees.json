@@ -398,6 +398,34 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "Autonomy 3 is kept on I08 and I17, and the note says plainly that no documentation page describes how approval is configured. The reviewer judges that disclosure adequate for beta and nothing read contradicts the statement. Control 1, Reach 2 and Openness 2 stand unchallenged."
+   },
+   {
+    "round": 4,
+    "answer": "I56",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Cut the not_credited item 'AI disclosure for a worker that sends from a company email address', the only one that cited the uncaptured security best practices page. Its claim is not on the captured corporate-email page (re-fetched as raw/ans-401.md), so it is removed rather than moved; the remaining item on the footer being removed when the signature is off still qualifies I56 from a captured source, and every not_credited source is now captured."
+   },
+   {
+    "round": 4,
+    "answer": "I17",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Pass acknowledged; no change."
+   },
+   {
+    "round": 4,
+    "answer": "I04, I12, I25, I39, I41, I46, I68, S1, I08, I10, I11, I20, I21, I22, I26, I30, I40, I47, I57, I58, S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Pass acknowledged; no change."
+   },
+   {
+    "round": 4,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No answer changes, so the card stays A3 R2 C1 O2. Autonomy 3 rests on I08 and I17, with the I17 note saying no documentation page describes how approval is configured; nothing read contradicts it, and the card keeps level one or more in all four dimensions even if Autonomy fell away."
    }
   ]
  },
@@ -586,11 +614,6 @@
  },
  "not_credited": [
   {
-   "what": "AI disclosure for a worker that sends from a company email address",
-   "why": "The security best practices page says recipients of such a worker do not and should not know it is an AI; this qualifies the I56 footer, which applies to the default Spinnable signature only, and is recorded here rather than in the I56 note because it is a different source. Add this URL to the scan's sources and run tools/capture.mjs so it carries a hash.",
-   "source": "https://docs.spinnable.ai/guides/security-best-practices"
-  },
-  {
    "what": "AI disclosure when the default email signature is off",
    "why": "The corporate-email page, a captured source, says the disclosure footer is part of the Spinnable signature card and is not controlled separately. It says that turning off Email signature removes the footer, and its troubleshooting gives that as the fix when the footer appears on outgoing emails. No other disclosure is documented, so I56 is credited for the default only.",
    "source": "https://docs.spinnable.ai/guides/corporate-email"
@@ -647,97 +670,97 @@
   "https://docs.spinnable.ai/concepts/ai-workers": {
    "sha256": "9d2680d11239f6d5cc68691a81a34b547d9f74d7c670c91fd52a9fa72cd5ce57",
    "bytes": 204713,
-   "read_at": "2026-11-10T17:49Z"
+   "read_at": "2026-11-10T18:44Z"
   },
   "https://docs.spinnable.ai/concepts/communication-channels": {
    "sha256": "3238e5ebe58318f2c74cd6293835c2536b67f43366b6acd0f98500309316b151",
    "bytes": 302593,
-   "read_at": "2026-11-10T17:49Z"
+   "read_at": "2026-11-10T18:44Z"
   },
   "https://docs.spinnable.ai/concepts/tool-permissions": {
    "sha256": "54facc40f5311df9cc870e87b54e89109ba51f1772835a21be7b3c45c469ef00",
    "bytes": 190309,
-   "read_at": "2026-11-10T17:49Z"
+   "read_at": "2026-11-10T18:44Z"
   },
   "https://docs.spinnable.ai/guides/change-manager": {
    "sha256": "015d7bc82014937aa171c2e91ad81d0fbec2678d5fac503967873cde6ac48b65",
    "bytes": 147921,
-   "read_at": "2026-11-10T17:49Z"
+   "read_at": "2026-11-10T18:44Z"
   },
   "https://docs.spinnable.ai/guides/connecting-tools": {
    "sha256": "4aa99c79cbbd32dec81e17bfc9ff5231f62c7660ff7104b7eb741724b77de69d",
    "bytes": 224098,
-   "read_at": "2026-11-10T17:49Z"
+   "read_at": "2026-11-10T18:44Z"
   },
   "https://docs.spinnable.ai/guides/corporate-email": {
    "sha256": "cb7502b01ed16d98ba55dedce79fa4bd11f7606efe728ef5e0daccd8f1343054",
    "bytes": 237173,
-   "read_at": "2026-11-10T17:49Z"
+   "read_at": "2026-11-10T18:44Z"
   },
   "https://docs.spinnable.ai/guides/worker-communication-restrictions": {
    "sha256": "2f6cfc3d13abe68e5698b346884fc38e473dab4b290c9e8bb8ec019d5c586ca1",
    "bytes": 167677,
-   "read_at": "2026-11-10T17:49Z"
+   "read_at": "2026-11-10T18:44Z"
   },
   "https://docs.spinnable.ai/guides/worker-vault": {
    "sha256": "0cb980961bd96379579b7f9c44e4482f51884ff9b958b2c90303152d1129559e",
    "bytes": 192088,
-   "read_at": "2026-11-10T17:49Z"
+   "read_at": "2026-11-10T18:44Z"
   },
   "https://docs.spinnable.ai/introduction": {
    "sha256": "6be24a237da5989af9d65e4300c0a3b79ce1840d4a0f3a2328dc0a7af1b3c741",
    "bytes": 200358,
-   "read_at": "2026-11-10T17:49Z"
+   "read_at": "2026-11-10T18:44Z"
   },
   "https://docs.spinnable.ai/llms.txt": {
    "sha256": "a017860de55023b0b7bbee5a32ff663c2a59731473b0b9e5484ae16d4496a99c",
    "bytes": 23038,
-   "read_at": "2026-11-10T17:49Z"
+   "read_at": "2026-11-10T18:44Z"
   },
   "https://docs.spinnable.ai/release-notes/2026-06-10": {
    "sha256": "711b6a566750236a47496435793909f6407e128db4795979f98626d1619b46a3",
    "bytes": 139482,
-   "read_at": "2026-11-10T17:49Z"
+   "read_at": "2026-11-10T18:44Z"
   },
   "https://docs.spinnable.ai/release-notes/2026-08-05": {
    "sha256": "4ea7fdba1017416249e5aa88e5852dbaa8837554418f3e8240074d713c50e45c",
    "bytes": 136790,
-   "read_at": "2026-11-10T17:49Z"
+   "read_at": "2026-11-10T18:44Z"
   },
   "https://docs.spinnable.ai/release-notes/2026-10-28": {
    "sha256": "3e1d8435beb22b547cfd1057560f72c94e96aee4a3b3df65e89f7d6fce4b7a88",
    "bytes": 140766,
-   "read_at": "2026-11-10T17:49Z"
+   "read_at": "2026-11-10T18:44Z"
   },
   "https://docs.spinnable.ai/support/contact": {
    "sha256": "3f2ac086be2cb2bcf215c7ab5416551554220786a7cfc5d2213507cc908dcb90",
    "bytes": 163341,
-   "read_at": "2026-11-10T17:49Z"
+   "read_at": "2026-11-10T18:44Z"
   },
   "https://docs.spinnable.ai/tools/overview": {
    "sha256": "98954df3c93aac4508afefc36dac734a5b00103efc8eca9c1363037c84b9ebfd",
    "bytes": 234728,
-   "read_at": "2026-11-10T17:49Z"
+   "read_at": "2026-11-10T18:44Z"
   },
   "https://docs.spinnable.ai/troubleshooting/index": {
    "sha256": "1ffe15fcec195f9f2788464fb0606da6137d9f12ec30908f931cc5b486b551c8",
    "bytes": 250020,
-   "read_at": "2026-11-10T17:49Z"
+   "read_at": "2026-11-10T18:44Z"
   },
   "https://www.spinnable.ai/": {
    "sha256": "e524bed247dadd0eca56b19d8c15d4402114b66f247bd628787d39cb9ce6aada",
    "bytes": 387013,
-   "read_at": "2026-11-10T17:49Z"
+   "read_at": "2026-11-10T18:44Z"
   },
   "https://www.spinnable.ai/llms.txt": {
    "sha256": "c702a4fd1b2a1dcc565ed33c5f2aa79dc56085dabb2b2bb746d2a0e8189bd207",
    "bytes": 58211,
-   "read_at": "2026-11-10T17:49Z"
+   "read_at": "2026-11-10T18:44Z"
   },
   "https://www.spinnable.ai/privacy-policy": {
    "sha256": "7558a1dcef25c8a600513e59be6c15750da4f1f2c2cdd061424988a11ac91b3c",
    "bytes": 82161,
-   "read_at": "2026-11-10T17:49Z"
+   "read_at": "2026-11-10T18:44Z"
   }
  }
 }
