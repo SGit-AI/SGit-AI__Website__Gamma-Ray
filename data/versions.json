@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.15",
+    "date": "2026-11-10",
+    "what": "Manus AI and JetBrains: draft cards for Manus (A4 · R2 · C1 · O0) and Junie (A2 · R2 · C2 · O3), their vaults, reports, articles and claim notes",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "293382a0b"
+  },
+  {
     "version": "v0.0.14",
     "date": "2026-11-10",
     "what": "Replit end to end: a draft card for Replit Agent (A4 · R2 · C2 · O0), its vault, the company report and article, and the note to Replit",
