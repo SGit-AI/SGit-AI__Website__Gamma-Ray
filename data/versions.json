@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.52",
+    "date": "2026-11-10",
+    "what": "report prose for Codacy, Spinnable, OutSystems, Noxus and Ethiack",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "4fb1a73e3"
+  },
+  {
     "version": "v0.0.51",
     "date": "2026-11-10",
     "what": "ByTheLaw: a Portuguese draft card for ByTheLaw (Legal Chat)",
