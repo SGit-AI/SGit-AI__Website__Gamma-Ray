@@ -30,14 +30,6 @@
    "g": "documented",
    "m": "default"
   },
-  "I10": {
-   "e": "https://docs.github.com/en/copilot/concepts/agents/coding-agent/mcp-and-coding-agent",
-   "n": "MCP servers configured for a repository give it tools in other systems while it works, for example an issue tracker it can look a bug up in; the page says this extends Copilot with existing tools and services.",
-   "span": "integrating it with a wide range of existing tools and services",
-   "g": "documented",
-   "m": "available",
-   "cfg": "mcp"
-  },
   "I11": {
    "e": "https://docs.github.com/en/copilot/concepts/agents/coding-agent/mcp-and-coding-agent",
    "n": "Repository-level MCP servers connect it to external tools; by default only the GitHub server (read-only token on the current repository) and a Playwright server limited to localhost are configured.",
@@ -48,7 +40,7 @@
   },
   "I18": {
    "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
-   "n": "It picks up a task, creates a branch, writes code and opens a pull request on its own; it can push only to that one branch, and Actions workflows its pull requests trigger need approval from a user with write access before they run.",
+   "n": "It picks up a task, creates a branch, writes code and opens a pull request on its own, pushing only to the existing pull request branch when triggered by mention or otherwise to a new copilot/ branch; Actions workflows its pull requests trigger need approval from a user with write access before they run. The credit rests on that workflow-approval gate plus the pull-request flow; no sentence on the page states which decisions the person must approve.",
    "span": "require approval from a user with write access before they will run",
    "g": "documented",
    "m": "default"
@@ -133,8 +125,13 @@
    "source": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent"
   },
   {
-   "what": "It is read-only where the user has only read access, and it can push to one branch.",
-   "why": "These are limits the vendor places on the agent, not a request by the agent for narrower access (I25); they are credited as documented permission scopes (I23).",
+   "what": "It works across several systems (I10) once MCP servers or external applications are connected.",
+   "why": "The MCP page documents a mechanism for adding tools, in a general passage covering every Copilot surface; the responsible-use page says the cloud agent can receive context from applications such as Teams, Linear, Slack and Jira. Neither shows it running multi-step work across systems, so I10 is not credited and Autonomy 4 is not claimed.",
+   "source": "https://docs.github.com/en/copilot/concepts/agents/coding-agent/mcp-and-coding-agent"
+  },
+  {
+   "what": "Its permission limits as a request for narrower access (I25).",
+   "why": "Being read-only for a user with only read access is a limit the vendor places on the agent, not a request by the agent for narrower access than the whole account.",
    "source": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent"
   }
  ],
@@ -154,7 +151,7 @@
    ]
   }
  ],
- "moved": "As above. Scanning of generated code is no longer counted as testing of the agent.",
+ "moved": "Scanning of generated code (CodeQL, secret scanning, dependency analysis) is no longer counted as testing of the agent; it is listed under not credited.",
  "captures": {
   "https://docs.github.com/en/copilot/concepts/agents/coding-agent/mcp-and-coding-agent": {
    "sha256": "704241bd605b6bbbbb7c062c5d58c3f862e63d2e20c5abd4e2a6eb88ed421b76",
@@ -465,6 +462,55 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "No change; the reviewer verified these against pages fetched today."
+   },
+   {
+    "round": 3,
+    "answer": "I45",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Pass acknowledged; the firewall page is captured and the note is unchanged."
+   },
+   {
+    "round": 3,
+    "answer": "I18",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Conceded by narrowing: the note now says the credit rests on the workflow-approval gate plus the pull-request flow and that no sentence states what the person must approve, and the branch wording follows the page (existing pull request branch when triggered by mention, else a new copilot/ branch). The round-two claim that the person approves the merge is withdrawn; the note does not make it."
+   },
+   {
+    "round": 3,
+    "answer": "I10",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Conceded: I10 is removed rather than re-sourced, since neither the MCP page nor the Teams, Linear, Slack and Jira sentence shows the agent running work across systems. The point moves to not_credited; Reach 2 still holds on I11 and Autonomy 4 is no longer claimed."
+   },
+   {
+    "round": 3,
+    "answer": "I23",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "The third not_credited entry is replaced by one about the I25 point only, so the read-only and one-branch facts are only credited (I23, I21). I23 is kept because the Spectrum reading of its scope counts documented permission scopes; the weak fit with 'settings' at Control 2 is recorded here, not argued."
+   },
+   {
+    "round": 3,
+    "answer": "I56, not_credited",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "The moved field is reworded to stand alone: scanning of generated code is no longer counted as testing of the agent and is listed under not credited."
+   },
+   {
+    "round": 3,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Autonomy 4 is conceded (I10 removed), so the card is A3 R2 C2 O1 in every configuration. Autonomy 3 rests on I08 plus the narrowed I18, whose note now discloses that it is one workflow-approval sentence and the pull-request flow; removing it would leave Autonomy with no level, which the note makes visible."
+   },
+   {
+    "round": 3,
+    "answer": "I04, I08, I11, I20, I21, I22, I27, I38, I41, S2, S3, round-2 I10/I25/I56/levels responses on the studio's side",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Pass acknowledged; no change to these answers. The I18 and levels gaps named in the count are answered above."
    }
   ]
  }
