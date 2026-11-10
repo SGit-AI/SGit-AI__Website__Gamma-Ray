@@ -215,11 +215,11 @@
      },
      {
       "answer": "I18",
-    "severity": "should-fix",
-    "finding": "The note says the person reviews the pull request before merging. I could not find that sentence in the responsible-use page. Cite the sentence or soften the note."
-   },
-   {
-    "answer": "I21",
+      "severity": "should-fix",
+      "finding": "The note says the person reviews the pull request before merging. I could not find that sentence in the responsible-use page. Cite the sentence or soften the note."
+     },
+     {
+      "answer": "I21",
       "severity": "pass",
       "finding": "The span \"It can only push to a single branch\" (8 words) is in the page. The second half, no access to Actions secrets beyond those configured for it, is the page's: \"only secrets and variables specifically added to the copilot environment are passed to the agent\". Correct."
      },
@@ -241,6 +241,7 @@
     ]
    }
   ],
-  "note": "Published as an example on 10 November 2026, before the review workflow existed. Mapped by one agent. It goes through two rounds of review next."
+  "note": "Published as an example on 10 November 2026, before the review workflow existed. Mapped by one agent. It goes through two rounds of review next.",
+  "keep_published": true
  }
 }

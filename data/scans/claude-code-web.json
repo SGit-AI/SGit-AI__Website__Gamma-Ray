@@ -344,6 +344,7 @@
     ]
    }
   ],
-  "note": "Published as an example on 10 November 2026, before the review workflow existed. Mapped by one agent. It goes through two rounds of review next."
+  "note": "Published as an example on 10 November 2026, before the review workflow existed. Mapped by one agent. It goes through two rounds of review next.",
+  "keep_published": true
  }
 }

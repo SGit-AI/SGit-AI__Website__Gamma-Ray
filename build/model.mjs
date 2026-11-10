@@ -14,7 +14,7 @@ export function load(root) {
     const lens = read(d('lens.json'))
     // a third party's scan is published once it is approved (two review rounds and a sign-off: team/README.md)
     const every = fs.readdirSync(d('scans')).filter(f => f.endsWith('.json')).sort().map(f => read(d('scans/' + f)))
-    const isPublished = s => s.ours || ['approved', 'published-before-review'].includes(s.review?.status)
+    const isPublished = s => s.ours || s.review?.status === 'approved' || s.review?.status === 'published-before-review' || s.review?.keep_published === true
     const scans = every.filter(isPublished), drafts = every.filter(s => !isPublished(s))
     const P = new Map(provisions.map(p => [p.id, p])), I = new Map(indicators.map(i => [i.id, i])), S = new Map(standards.map(s => [s.id, s]))
 

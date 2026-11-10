@@ -49,6 +49,7 @@ for (const f of fs.readdirSync(path.join(ROOT, 'data/scans')).filter(f => f.ends
             if ((rv.rounds || []).length < 2 || rv.rounds.some(r => r.verdict !== 'pass' && r.round >= (rv.rounds.length - 1))) bad('scan', `${f}: approved without two review rounds that pass`)
             if (!rv.signoff?.by || !rv.signoff?.at) bad('scan', `${f}: approved without a sign-off`)
             else if (by.has(rv.signoff.by)) bad('scan', `${f}: signed off by its own reviewer`) } }
+    if (s.review?.keep_published && !['claude-code-local', 'claude-code-web', 'github-copilot-cloud-agent'].includes(s.id)) bad('scan', `${f}: keep_published is only for the three examples published before the review workflow`)
     if (s.answers.I49 && !(s.mandate && s.grant)) bad('scan', `${f}: I49 (the delta) needs a mandate and a grant`)
     const caps = new Set(read('data/lens.json').capabilities.map(c => c.id)), bars = new Set(read('data/lens.json').barriers.map(b => b.id))
     if (s.grant) for (const r of s.grant.rows) { if (!caps.has(r.capability)) bad('scan', `${f}: unknown capability ${r.capability}`); if (!bars.has(r.barrier)) bad('scan', `${f}: unknown barrier ${r.barrier}`) }
