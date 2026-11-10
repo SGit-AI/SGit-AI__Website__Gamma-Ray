@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.94",
+    "date": "2026-11-10",
+    "what": "Pebl Alfie: I15 response corrected (publishable at A– · R1 · C1 · O2)",
+    "by": "gamma.field@web-summit.dinis",
+    "from": "5899115b9"
+  },
+  {
     "version": "v0.0.93",
     "date": "2026-11-10",
     "what": "reports index table tidied",
