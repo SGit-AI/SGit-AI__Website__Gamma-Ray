@@ -1,6 +1,6 @@
 :root{--paper:#fbfaf7;--ink:#15161b;--ink2:#4a4d57;--ink3:#737683;--hair:#e2ded3;--band:#f2efe7;--accent:#0b6b4b;--accent2:#b3541e;--ok:#d9efe3;--over:#f6e3d6;--serif:"Newsreader","Iowan Old Style",Georgia,serif;--sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
---c-sf:#2f6fb7;--c-eaamm:#8a5cc2;--c-owasp:#0b8a6a;--c-mcp:#c7821a;--c-aagmm:#5b6b8f;--c-ms:#5a7d2a;--c-nist:#2b8fa3;--c-aiact:#a8632b;--c-rm:#d1495b;--t1:#0b6b4b;--t2:#c7821a;--t3:#8a5cc2;--t0:#cfcabd}
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--paper:#111217;--ink:#ecebe6;--ink2:#b9bac2;--ink3:#8b8d98;--hair:#2b2d36;--band:#191b22;--accent:#7be0b0;--accent2:#f0a36b;--ok:#17352a;--over:#3a2619;--c-sf:#6ea8e6;--c-eaamm:#b596e6;--c-owasp:#56c9a6;--c-mcp:#e6ad52;--c-aagmm:#a9b6d3;--c-ms:#9cc264;--c-nist:#6cc3d6;--c-aiact:#d79a63;--c-rm:#f0808f;--t1:#7be0b0;--t2:#e6ad52;--t3:#b596e6;--t0:#3a3d48}}
+--c-sf:#2f6fb7;--c-eaamm:#8a5cc2;--c-owasp:#0b8a6a;--c-mcp:#c7821a;--c-aagmm:#5b6b8f;--c-ms:#5a7d2a;--c-nist:#2b8fa3;--c-aiact:#8c7a4a;--c-rm:#d1495b;--t1:#0b6b4b;--t2:#c7821a;--t3:#8a5cc2;--t0:#cfcabd}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--paper:#111217;--ink:#ecebe6;--ink2:#b9bac2;--ink3:#8b8d98;--hair:#2b2d36;--band:#191b22;--accent:#7be0b0;--accent2:#f0a36b;--ok:#17352a;--over:#3a2619;--c-sf:#6ea8e6;--c-eaamm:#b596e6;--c-owasp:#56c9a6;--c-mcp:#e6ad52;--c-aagmm:#a9b6d3;--c-ms:#9cc264;--c-nist:#6cc3d6;--c-aiact:#c9b27e;--c-rm:#f0808f;--t1:#7be0b0;--t2:#e6ad52;--t3:#b596e6;--t0:#3a3d48}}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--sans)}
 a{color:var(--accent);text-underline-offset:3px}a:hover{text-decoration-thickness:2px}
@@ -62,3 +62,14 @@ footer{border-top:1px solid var(--hair);background:var(--band);padding:26px max(
 .sp-foot{font-size:12px;color:var(--ink3);border-top:1px solid var(--hair);padding-top:8px;margin-top:8px!important}
 @media (max-width:520px){.sp-sig{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .fb-form{display:grid;gap:12px;max-width:640px;margin:1.4em 0}.fb-form label{display:grid;gap:4px;font:600 13px var(--sans);color:var(--ink2)}.fb-form input,.fb-form select,.fb-form textarea{font:16px var(--sans);padding:9px 11px;border:1px solid var(--hair);border-radius:8px;background:var(--paper);color:var(--ink)}.fb-form textarea{min-height:140px}.fb-form button{justify-self:start;font:600 15px var(--sans);padding:10px 20px;border-radius:8px;border:0;background:var(--accent);color:var(--paper);cursor:pointer}.fb-status{font-size:14px;color:var(--ink2)}
+
+.top nav{align-items:center;flex-wrap:nowrap;gap:4px 22px}
+.more{position:relative}.more summary{list-style:none;cursor:pointer;color:var(--ink2);padding:3px 0;border-bottom:2px solid transparent;user-select:none}
+.more summary::-webkit-details-marker{display:none}.more summary::after{content:"";display:inline-block;margin-left:7px;width:6px;height:6px;border:solid currentColor;border-width:0 1.5px 1.5px 0;transform:translateY(-3px) rotate(45deg)}
+.more summary:hover,.more[open] summary,.more[data-here] summary{color:var(--ink);border-color:var(--accent)}
+.more .menu{position:absolute;right:0;top:calc(100% + 12px);min-width:230px;background:var(--paper);border:1px solid var(--hair);border-radius:10px;box-shadow:0 10px 30px rgba(20,20,30,.14);padding:6px;display:flex;flex-direction:column;z-index:9}
+.more .menu a{padding:8px 12px;border:0;border-radius:6px;white-space:nowrap}.more .menu a:hover{background:var(--band)}
+@media (max-width:820px){.top{gap:8px 14px}.top nav{order:3;flex:1 1 100%;flex-wrap:wrap;gap:2px 16px;font-size:14.5px}.more .menu{position:fixed;left:16px;right:16px;top:auto;margin-top:10px;min-width:0}.ver{margin-left:auto}}
+main.home>h1{max-width:980px;font-size:clamp(30px,4.2vw,46px);line-height:1.12}main.home>.eyebrow{max-width:980px}
+.sp-head{flex-direction:column;align-items:flex-start;gap:8px}.sp-meta{align-self:flex-start;white-space:normal}
+@media (max-width:560px){main .tag{border-radius:10px}}

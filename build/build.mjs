@@ -51,7 +51,8 @@ function md(src, figs) {
 
 // ---------- pages ----------
 const pages = []           // { url: 'standard/', title, summary, body (markdown), section }
-const NAV = [['spectrum/', 'Spectrum'], ['standard/', 'The standard'], ['questions/', 'Questions'], ['rating/', 'The rating'], ['mashup/', 'The mashup'], ['lens/', 'The lens'], ['coverage/', 'Coverage'], ['instruments/', 'Instruments'], ['scans/', 'Scans'], ['feedback/', 'Corrections'], ['about/', 'About']]
+const NAV = [['spectrum/', 'Spectrum'], ['scans/', 'Ratings'], ['standard/', 'The standard'], ['about/', 'About'], ['feedback/', 'Corrections']]
+const NAV_MORE = [['rating/', 'How a rating is made'], ['questions/', 'Questions'], ['mashup/', 'The mashup'], ['lens/', 'The lens'], ['coverage/', 'Coverage'], ['instruments/', 'Instruments']]
 const figs = { label: id => viz.label(m, id), profile: id => viz.profile(m, id), configs: id => viz.configs(m, id), pairs: () => viz.pairs(m), ring: () => viz.ring(m), scans: () => viz.scanMatrix(m), grant: id => viz.grantGrid(m, id), lit: id => viz.graph(m, id), graph: () => viz.graph(m), funnel: () => viz.funnel(m), coverage: () => viz.coverage(m), matrix: () => viz.matrix(m), quadrant: id => viz.quadrant(m, id) }
 const figText = { label: 'The label for this rating; its contents are in the text.', profile: 'One square per indicator, by question; every answer is listed below.', configs: 'The freedom level of each configuration; the table has the same.', pairs: 'How many indicators each pair of instruments shares; the same counts are in /data/summary.json.', ring: 'The instruments as a ring joined by shared indicators.', scans: 'Every scan against every question.', grant: 'The grant as a grid of capabilities; the table below has every row.', lit: 'The mashup graph with this agent\'s evidenced indicators lit.', graph: 'The mashup as a graph (questions, indicators, provisions). The same data: /data/questions.json, /data/indicators.json, /data/provisions.json.', funnel: 'The compression in four bars; the numbers are in the text.', coverage: 'Coverage of each instrument by tier; the table below has the numbers.', matrix: 'Questions by instruments; the questions page lists every citation.', quadrant: 'The quadrant of freedom against governance; the levels are in the text.' }
 function front(src) {
@@ -140,7 +141,9 @@ const depth = p => p.file.split('/').length - 1
 for (const p of pages) {
     const up = '../'.repeat(depth(p)), url = urlOf(p), twin = p.file + '.md'
     const title = p.title || (p.body.match(/^# (.*)$/m) || [])[1] || 'GAMMA-Ray'
-    const nav = NAV.map(([u, t]) => `<a href="${up}${u}"${url.startsWith(u) ? ' aria-current="page"' : ''}>${t}</a>`).join('')
+    const navA = ([u, t]) => `<a href="${up}${u}"${url.startsWith(u) ? ' aria-current="page"' : ''}>${t}</a>`
+    const inMore = NAV_MORE.some(([u]) => url.startsWith(u))
+    const nav = NAV.map(navA).join('') + `<details class="more"${inMore ? ' data-here' : ''}><summary>More</summary><div class="menu">${NAV_MORE.map(navA).join('')}</div></details>`
     const html = `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}${p.file === 'index' ? '' : ' · GAMMA-Ray'}</title>
