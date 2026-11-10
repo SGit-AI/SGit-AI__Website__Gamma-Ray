@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.84",
+    "date": "2026-11-10",
+    "what": "round one of review on pebl-alfie",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "44171e068"
+  },
+  {
     "version": "v0.0.83",
     "date": "2026-11-10",
     "what": "round one of review on visor-ai-agents",
