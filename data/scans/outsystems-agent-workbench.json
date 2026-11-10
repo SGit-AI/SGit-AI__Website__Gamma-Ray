@@ -19,8 +19,82 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "draft",
-  "rounds": []
+  "status": "round-1",
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "S1",
+      "severity": "should-fix",
+      "finding": "The TeamWork case study names the customer and describes a Customer Support Agent that auto-classifies and routes support tickets, so the span is in the source. But the same page gives the outcome only as an expectation: TeamWork expects that 20% of incidents will be resolved automatically, with a 25% reduction in time to resolution, and later says the new AI capabilities are expected to yield results. It gives no usage figure in sessions, tasks or tickets, and it does not say the Customer Support Agent is live. It also says only that some applications are built using Agent Workbench; it does not say this agent is. The note 'built on Agent Workbench' is stronger than the page. Under the S1 scope a demonstration or roadmap does not count, so the grade documented and the note should say the page reports plans and expectations, or S1 should be lowered. S1 earns only the In production badge, so no level changes."
+     },
+     {
+      "answer": "I41",
+      "severity": "should-fix",
+      "finding": "I41 needs operation, so it counts only if observed or measured; it is graded documented. It currently feeds no level (Control stops at 2 and I41 is part of the C3 rule), so the card is unaffected, but the answer should be marked not counted or lowered. The scope asks that the log cover what the agent does (tool calls, commands); the monitoring page says logs and traces can be filtered by agent, back up to four weeks, and that when you filter by an agent you see traces where that agent is the origin of the trace. It also says traces where the agent runs as a span inside another app's trace are not returned by the agent filter. The page does not say tool or action calls are recorded. The marketing page (not a source of this answer) says tool usage is tracked. The scan note 'showing the requests an agent originated' is accurate but is a weaker fact than the indicator."
+     },
+     {
+      "answer": "I48",
+      "severity": "note",
+      "finding": "I48 needs operation and is graded documented, mode available (guardrails). The guardrails page does say Guardrails check each agent call in real time and that a block action stops the call, but under the CLAUDE.md rule an operation fact is not counted at documented grade. It does not feed the card (Control level 4 needs I45 as well). Make sure it stays uncounted."
+     },
+     {
+      "answer": "I11",
+      "severity": "note",
+      "finding": "Span and note match the MCP page (OAuth, System to system OAuth, API key and No auth are all listed). Mode default is arguable: an administrator must create the MCP connection, which is the same kind of opt-in that the scan marks as available for the A2A connection (I13, I14). No level depends on it, because Reach 2 is also met by I10. For consistency consider mode available."
+     },
+     {
+      "answer": "I12, I13, I18, I10 (Autonomy 4)",
+      "severity": "note",
+      "finding": "Autonomy 4 (Orchestrates) rests on I08 and I18 for level 3 (I17 also qualifies), then I10, I12 or I13, plus I18. I18 is the only required fact in mode available (hitl-workflow configuration). All of it is documentation of builder patterns: the workflows page says a Human activity pauses the workflow until a user or group acts, with Approve or Reject, and that agents can be chained sequentially. No operation or customer evidence supports the autonomy side (S1 is weak, see above). The level is therefore what the product documents as possible when configured, not what a deployment does. I18 is credited from the workflows page, whose span 'Agents may require human oversight for high-stakes decisions or when their confidence is low' is in the source. The page describes oversight as optional ('may require'), which fits mode available and fits the indicator only loosely (a person approves critical decisions only). I10 alone meets the 'any' clause and comes from a product-page FAQ sentence (Agents orchestrate workflows across platforms while maintaining security and governance), a marketing statement; I12 and I13 are better artefacts (documentation pages). I12 is correctly credited: the scope needs agents with their own context and authority, and the page says each agent has an independent lifecycle."
+     },
+     {
+      "answer": "I14, I25 (Reach 3)",
+      "severity": "note",
+      "finding": "Reach 3 is named 'A published agent interface with documented authorisation'. The evidence is the A2A 0.3.0 connector, and the A2A page says it supports only the client side: agentic apps delegate to external agents and the SendMessage action is created for the connection. ODC exposes no A2A server in the sources read. I14 (a published protocol layer between agents) is met by the wording; S4 (an interface the product exposes for agents to call) is not claimed, correctly. I25 (a set of actions granted to each agent) is a tool allowlist inside the app, not a permission scope on the user account; the sources do not say what identity the actions run under. Reach 3 holds on the rule as written, but the card label overstates what the evidence shows for a reader who takes 'published agent interface' as something others call."
+     },
+     {
+      "answer": "I25, I38 (Control 2)",
+      "severity": "note",
+      "finding": "Control 2 takes I38 (available, hitl-workflow; the pattern stops at a high-stakes trigger and alerts a human to verify or decide, with a vendor approval example) and I25. I25 is documented in the action-calling page: You provide the agent with a set of available actions. Control 2 means approval modes, permission scopes and roles are documented settings; the human activity is assigned to a user or role (I40), which supports that. The next unlock is I43, which is not claimed."
+     },
+     {
+      "answer": "I22, I58, I61 (Openness 2)",
+      "severity": "note",
+      "finding": "Openness 2 needs two of I22, I58, I61, and all three are credited. I22 documents limits of the guardrails feature only (files are not analysed, other languages can bypass filters in basic coverage regions, no enforcement in two regions), not the agent as a whole, so it is a narrow reading of 'its limits and known failure cases'. I58 describes grounding data in general terms (internal aggregates, search services, external tools), which is the customer's data, not a description of data the product itself holds. I61 lists providers (AI21, Amazon Bedrock, Anthropic, Azure OpenAI, Cohere, Databricks, Gemini, IBM watsonx.ai, Mistral, OpenAI) that a customer can connect; it is a list of supported providers, not of models the product uses. Each is acceptable but loose; the level is still met if any one of the three is dropped, so no level depends on a single weak answer."
+     },
+     {
+      "answer": "S3",
+      "severity": "should-fix",
+      "finding": "The llms.txt at the www site root resolves (fetched, 200) and the span 'OutSystems combines low-code simplicity with AI software development' is in it. Grade observed is right. The note also says a documentation llms.txt exists at success.outsystems.com; I fetched that URL and it returns 200 text, but it is not among the scan's sources or captures, so that claim has no capture and no hash. Add it as a source and capture it, or drop it from the note. The www file is mostly a site navigation dump; it resolves, which is all the indicator checks. S3 only matters at Openness 3, which needs I50 and is not reached."
+     },
+     {
+      "answer": "I08",
+      "severity": "note",
+      "finding": "Span is in the source and is a direct statement that agents call tools to retrieve data or perform operations. The note adds 'choosing the actions themselves', which is stated on a different page (the action-calling page: the AI model autonomously decides which action is appropriate), not on the page cited for I08. Citing that page too would make the answer exact. Grade documented and mode default are right: the builder grants actions, and the agent runs them without a person by default."
+     },
+     {
+      "answer": "I03, I10, I20",
+      "severity": "pass",
+      "finding": "Product page spans are exact. I03: visual drag-and-drop builder and ERP and CRM connection are on the page. I20: the sentence 'Agent Workbench empowers enterprises to design, build, govern, and scale agentic AI systems' is on the page. I10: the FAQ says agents connect to APIs, databases, ERP, CRM and legacy systems and orchestrate workflows across platforms. All documented, default, spans under fifteen words (I08's 14 words is also under the limit)."
+     },
+     {
+      "answer": "I17, I39, I40, I21, I47",
+      "severity": "pass",
+      "finding": "Verified against the agentic patterns, workflows and action-calling pages. I17: the trigger point wording (a low confidence score or a high-stakes financial transaction) and the autonomous processing step are in the page, mode available fits since the human activity is placed by the builder. I39: A human activity pauses the workflow until a specific user or group performs a task; the call condition stops the action loop (token, loop and call counts are internal variables). I40: Assign the activity to a user or role is in the page. I21: grant of server actions and a call condition are both documented. I47: system prompts define the role, behaviour and constraints, found on the agentic apps page. Declared tiers for I21, I39, I40 fit documentation statements."
+     },
+     {
+      "answer": "I13, I14, I12, I38, I22",
+      "severity": "pass",
+      "finding": "Spans found exactly in their pages: A2A page (collaborate with external agents), the connector page (supports only A2A 0.3.0, agent card, authentication mechanisms listed), the workflows page (chain multiple agents sequentially), the patterns page (stops and alerts a human), the guardrails page (other languages can bypass safety filters). Modes available for the A2A, workflow and human activity answers fit: each needs a connection or builder step, and the configurations list says so."
+     }
+    ]
+   }
+  ]
  },
  "assessment": {
   "by": "gamma.studio@web-summit.dinis",

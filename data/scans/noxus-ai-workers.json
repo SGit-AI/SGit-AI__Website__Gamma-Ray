@@ -19,8 +19,62 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "draft",
-  "rounds": []
+  "status": "round-1",
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I04, I08, I11, I17, I20, I21, I22, I23, I26, I38, I41, I45, I47, I54, I57, I61, S1, S3, S4",
+      "severity": "pass",
+      "finding": "Opened each source (the docs pages, the CUF case study, the about page, the status page, the OpenAPI file). Each note matches its page, each span is in the page text (the I45 and I26 spans differ from the page only by a curly apostrophe or by punctuation), all spans are under fifteen words, and grades and modes are right: Code Execution, HITL, Require Approval, the sandbox, the Google Chat service account bot and the Phoenix or Langfuse feedback are each switched on per agent or per deployment, so mode available is correct. The tools page says actions run without asking unless Require Approval is on, which confirms I38 as available and not default. S1 uses 3,000+ patient communications processed per month for a named customer (CUF): a task count, not seats or installs. S3: the OpenAPI file resolves with openapi 3.1.0 and title Noxus Backend, and the docs llms.txt returns 200 text/plain, so observed is right. S4: the MCP overview page says Noxus runs a hosted MCP server that other clients and agents call; this is an interface it exposes, not one it only consumes."
+     },
+     {
+      "answer": "I58",
+      "severity": "should-fix",
+      "finding": "The note says agents read from knowledge bases, tables and connected databases, but the cited page (platform/concepts/agents) only lists Knowledge Access: search and retrieve information from knowledge bases. Tables and database connections are on the tools page, not this one. Narrow the note to knowledge bases, or cite the tools page for the rest. No level changes: Openness 2 also holds through I22 and I61."
+     },
+     {
+      "answer": "I03",
+      "severity": "note",
+      "finding": "The span (no-code builder) is on the page, but the note also says the agents connect to the organisation's own data. The same page supports this only loosely (knowledge bases powered by your documents and data). The span covers the builder half of the indicator. I03 feeds only Autonomy 2, which A4 already exceeds, so no level depends on it."
+     },
+     {
+      "answer": "I10",
+      "severity": "note",
+      "finding": "The catalog page lists categories (Outlook, Teams, SharePoint, Dynamics 365; Gmail, Drive, Sheets, Docs, Calendar; Jira and Confluence; GitHub, Linear, GitLab; Slack, Notion) and also says the full catalog is under construction. The span names only the Microsoft 365 items; Google Workspace and Atlassian are in the same list, so the note is right. It shows breadth of connectors offered, not use across systems by one agent."
+     },
+     {
+      "answer": "I39",
+      "severity": "note",
+      "finding": "The cited page is an auto-generated API reference stub for POST .../deactivate on an agent deployment; the span is the page title. It shows a channel deployment can be deactivated, which stops the agent answering on that channel, not the agent everywhere. The same OpenAPI file lists a Public Stop Run endpoint (POST /v1/runs/{run_id}/stop), which is a stronger source for a way to stop work. I39 only matters for Control 3, which is not reached (I43 not credited), so no level depends on it."
+     },
+     {
+      "answer": "I41",
+      "severity": "note",
+      "finding": "The logging page is under Infrastructure and Deployment, Operations, and describes what Noxus logs: agent interactions with tool calls and model reasoning steps, plus run-level logs for every agent and flow run. I41 is needs: operation and graded documented. It is not used by the card (Control 3 needs I41, I39 and I43 and I43 is missing), so it does not matter now. If I43 is ever added, the question of whether documented counts for I41 on a Spectrum card should be settled first; its scope has no Spectrum reading."
+     },
+     {
+      "answer": "I25",
+      "severity": "note",
+      "finding": "The note is supported by the tools page (database connections the agent may query, read-only SQL, tables read-only unless Allow edits is on), but the same page adds that queries run with that connection's privileges, which the note leaves out. Reach 3 rests on S4 plus I25, and I25 is about which tools an agent may use, not about authorisation on the MCP interface. The MCP overview page has a closer fact: authenticate with a workspace API key; tools are gated by that key's permissions. Consider adding that as the support for the documented authorisation in the Open protocol level."
+     },
+     {
+      "answer": "I18, I10, I08, I17",
+      "severity": "note",
+      "finding": "Autonomy 4 rests on I08 (default) with I18 (available, HITL tool turned on) and I10 (default); Autonomy 3 alone holds without I18 through I17 (deployed, CUF case study, vendor-written, routes complex cases to staff). I18 is documented-available: the page says to enable HITL to get approval for critical actions and use it as a safety net for high-stakes decisions; it does not say Noxus agents run unattended with approval only for critical decisions, so the card is Orchestrates only for an agent with HITL enabled. The Orchestrates meaning is running multi-step workflows across systems or coordinating other agents; I12 and I13 are not credited, though the what-is-noxus page mentions multi-agent environments in one sentence. The evidence is documentation, not an adjective, but it is documentation of options, not of a deployment that does all of it. The card already records this as available."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A4 R3 C2 O2 (recomputed). Levels 3 or 4: Autonomy 4 (above) and Reach 3 (S4 plus I25: hosted MCP server, API key permissions, selected tools). Both rest on vendor documentation artefacts, no adjectives. Control 2 is I38 (available, Require Approval or HITL) with I23 and I25. Control 3 and 4 are not reached; I45 is credited (sandbox, available) but Control 4 also needs one of I27, I28, I48. Openness 2 is I22, I58, I61. The product-shape rules apply: per-configuration, no governance level."
+     }
+    ]
+   }
+  ]
  },
  "assessment": {
   "by": "gamma.studio@web-summit.dinis",
