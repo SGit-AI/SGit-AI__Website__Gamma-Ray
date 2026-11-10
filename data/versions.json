@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.133",
+    "date": "2026-11-10",
+    "what": "compact report rows on phones",
+    "by": "gamma.design@web-summit.dinis",
+    "from": "f29f944ea"
+  },
+  {
     "version": "v0.0.132",
     "date": "2026-11-10",
     "what": "capture.mjs captures every page a scan cites, and merges",
