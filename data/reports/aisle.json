@@ -157,31 +157,31 @@
   }
  ],
  "analysis": [
-  "**The shape.** The AISLE platform reads A4 · R2 · C1 · O0. It builds a customer's repository in an isolated container, writes a patch, runs the customer's tests and opens a pull request; it plugs into scanners, repositories and CI. A merge to the main branch always waits for a person on the customer's team.",
+  "**The shape.** The AISLE platform reads {sig:aisle-platform} ({stage:aisle-platform}). It builds a customer's repository in an isolated container, writes a patch, runs the customer's tests and opens a pull request; it plugs into scanners, repositories and CI. A merge to the main branch always waits for a person on the customer's team.",
   "**Where the evidence is strongest.** The work is visible outside AISLE's own pages. OpenSSL's vulnerabilities page, curl's machine-readable vulnerability list and Samba's advisory credit AISLE's research team, and AISLE is a CVE Numbering Authority. The card counts what the agent does on its own from a named customer: Productboard rolled AISLE out across all 56 repositories, with automated triage and AI-generated pull requests.",
   "**Autonomy 4, as an option.** How far AISLE goes is a setting the customer chooses per severity and per repository: stop at triage, or go on to a tested pull request. The page states no default, so Autonomy 4 is marked available.",
   "**Control 1, and what would lift it.** The merge gate is documented. Level 2 asks for access narrower than the whole account, stated for AISLE itself: a public page on the scopes AISLE asks for when it connects to GitHub, GitLab, Bitbucket or Azure DevOps would meet it. The read-only MCP server limits what other agents can read from AISLE, which is a different thing, and is shown, not counted.",
-  "**Openness reads \"not yet evidenced\".** Data use and limits are documented; the first rung asks for a public statement that the agent tells the people it talks to, such as the maintainers who receive its pull requests, that it is an AI.",
+  "**Openness.** Data use and the limits of what it fixes are documented, which meets Disclosed and Documented under Spectrum 0.2. Published evaluation results with a method would reach level 3; the headline figures on its pages have none.",
   "**For readers.** On 15 October 2026 AISLE and Cohere signed a letter of intent for Cohere to acquire AISLE; nothing we read says it has completed."
  ],
  "article": {
-  "title": "AISLE on the GAMMA-Ray Spectrum: A4 · R2 · C1 · O0",
+  "title": "AISLE on the GAMMA-Ray Spectrum: {sig:aisle-platform}",
   "standfirst": "The GAMMA-Ray studio reads AISLE's vulnerability platform from its public pages and from open-source records: it writes and tests fixes as pull requests, a person always merges, and one page on its access would lift its controls.",
   "body": [
    "AISLE, whose co-founder Stanislav Fort speaks at Web Summit Lisbon 2026, sells a platform of AI agents that find vulnerabilities in source code, triage them and write fixes. We read it only from public sources, captured and hashed on 10 November 2026, and the published rules computed the card.",
    "**Autonomy 4, Orchestrates (available).** AISLE builds the code in an isolated container, writes a patch, runs the tests and opens a pull request, across a customer's scanners, repositories and CI. Productboard rolled it out across all 56 repositories. How far it goes is the customer's setting, so the level is marked available.",
    "**Reach 2, Integrated.** It connects to hosted version control and to the tools a team already uses, such as Jira and Slack.",
    "**Control 1, Stated.** A merge always waits for a person. A public page on the access AISLE asks for in a customer's repositories would reach level 2.",
-   "**Openness: not yet evidenced.** The first rung asks for a public statement that the agent tells people it is an AI.",
+   "**Openness 2, Documented.** Data use and limits are documented; published evaluation results with a method would reach level 3.",
    "Outside AISLE's own pages, OpenSSL, curl and Samba credit its research team for vulnerabilities found. AISLE and Cohere have signed a letter of intent for Cohere to acquire AISLE. The card is beta and AISLE has not seen it; it can claim the card and add evidence."
   ],
   "pt": {
-   "title": "A AISLE no GAMMA-Ray Spectrum: A4 · R2 · C1 · O0",
+   "title": "A AISLE no GAMMA-Ray Spectrum: {sig:aisle-platform}",
    "standfirst": "O estúdio GAMMA-Ray lê a plataforma de vulnerabilidades da AISLE a partir das suas páginas públicas e de registos de código aberto: escreve e testa correções como pull requests, e uma pessoa faz sempre o merge.",
    "body": [
     "A AISLE, cujo cofundador Stanislav Fort fala no Web Summit Lisboa 2026, vende uma plataforma de agentes de IA que encontram vulnerabilidades no código e escrevem correções. Lemos apenas fontes públicas, capturadas e com hash a 10 de novembro de 2026.",
     "**Autonomia 4 (opcional).** Escreve um patch, corre os testes e abre um pull request; a Productboard usa-a em 56 repositórios. **Alcance 2.** Liga-se ao controlo de versões e a ferramentas como Jira e Slack. **Controlo 1.** O merge espera sempre por uma pessoa.",
-    "**Abertura: ainda sem evidência.** OpenSSL, curl e Samba creditam a equipa de investigação da AISLE. O cartão é beta e a AISLE ainda não o viu; pode reclamá-lo e acrescentar evidência."
+    "**Abertura 2.** OpenSSL, curl e Samba creditam a equipa de investigação da AISLE. O cartão é beta e a AISLE ainda não o viu; pode reclamá-lo e acrescentar evidência."
    ]
   }
  },

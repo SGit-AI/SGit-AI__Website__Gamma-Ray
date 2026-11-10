@@ -154,14 +154,14 @@
   }
  ],
  "analysis": [
-  "**The shape.** GetVocal AI agents read A4 · R2 · C1 · O1. The agents write to the systems they are connected to, such as updating a booking or a customer record, across a customer's CRM, contact-centre, telephony and helpdesk tools. Each step of an agent's graph defines the data it may use and when it escalates; requests outside its authority go to a human operator with the conversation's context.",
-  "**The first card with Openness at level 1.** GetVocal's agents talk to the public, and one deployment shows the rung the other cards are missing: for a large Spanish telecom operator, each call opened by saying the caller was speaking with a virtual assistant. It is marked available, because no page states it as the default, and the Glovo story says many restaurant partners never realised they were speaking with AI. A page stating disclosure as a setting or a default would make it hold everywhere.",
+  "**The shape.** GetVocal AI agents read {sig:getvocal-agents} ({stage:getvocal-agents}). The agents write to the systems they are connected to, such as updating a booking or a customer record, across a customer's CRM, contact-centre, telephony and helpdesk tools. Each step of an agent's graph defines the data it may use and when it escalates; requests outside its authority go to a human operator with the conversation's context.",
+  "**Disclosure, from a deployment.** GetVocal's agents talk to the public, and one deployment shows the AI disclosure: for a large Spanish telecom operator, each call opened by saying the caller was speaking with a virtual assistant. No page states it as the default, and the Glovo story says many restaurant partners never realised they were speaking with AI. A page stating disclosure as a setting or a default would make it hold everywhere.",
   "**Where the evidence is strongest.** Named customers with figures: Equans France (over half of calls resolved by the agents in the first 90 days), Vodafone, Glovo (80 agents across more than 20 markets) and Nicomatic, whose assistant logs confirmed production events in an ISO database on its own. A public status page reports incidents with timed updates.",
   "**Control and Openness, what would move them.** Human validation of high-stakes actions is documented as a choice the customer configures, which is Control 1. A page naming the access the agents are granted in a customer's systems would reach level 2. For Openness 2, a page on the agents' limits and known failure cases, or a list of the models they run on, would meet the rule; the privacy policy names companies that receive data, not the models used.",
   "**For readers.** GetVocal's own pages give two founding years: the About page says 2024 and the Series A post says 2023. The company raised a 26 million dollar Series A led by Creandum, as its post and tech.eu report."
  ],
  "article": {
-  "title": "GetVocal AI agents on the GAMMA-Ray Spectrum: A4 · R2 · C1 · O1",
+  "title": "GetVocal AI agents on the GAMMA-Ray Spectrum: {sig:getvocal-agents}",
   "standfirst": "The GAMMA-Ray studio reads GetVocal's contact-centre agents from their public pages: they act in a customer's systems, people step in on high-stakes actions, and one deployment shows the AI disclosure the other cards lack.",
   "body": [
    "GetVocal AI, a featured startup at Web Summit Lisbon 2026, sells voice, chat, WhatsApp and email agents for enterprise contact centres. We read it only from public sources, captured and hashed on 10 November 2026, and the published rules computed the card.",
@@ -172,7 +172,7 @@
    "The card is beta and GetVocal AI has not seen it. It can claim the card and add evidence; corrections are dated."
   ],
   "pt": {
-   "title": "Os agentes da GetVocal AI no GAMMA-Ray Spectrum: A4 · R2 · C1 · O1",
+   "title": "Os agentes da GetVocal AI no GAMMA-Ray Spectrum: {sig:getvocal-agents}",
    "standfirst": "O estúdio GAMMA-Ray lê os agentes de contact centre da GetVocal a partir das suas páginas públicas: agem nos sistemas do cliente, pessoas intervêm em ações críticas, e uma implementação mostra a divulgação de IA que falta aos outros cartões.",
    "body": [
     "A GetVocal AI, startup em destaque no Web Summit Lisboa 2026, vende agentes de voz, chat, WhatsApp e email para contact centres. Lemos apenas fontes públicas, capturadas e com hash a 10 de novembro de 2026.",

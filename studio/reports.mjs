@@ -71,9 +71,13 @@ function graph(r, m, sols) {
 export function build(m, sp, SPX, reports) {
     const cardOf = new Map(SPX.cards.map(x => [x.s.id, x]))
     const out = { pages: [], json: [], full: [] }
-    for (const r of reports) {
+    for (let r of reports) {
         const sols = r.solutions.map(s => { const x = s.scan ? cardOf.get(s.scan) : null; return { ...s, scan: x ? x.s : null, card: x ? x.c : null } })
         const carded = sols.filter(s => s.card && s.card.publishable)
+        // prose may name a card's computed values as {sig:<scan>}, {stage:<scan>} or {sum:<scan>}, so a rule change never leaves it stale
+        const fillT = t => typeof t !== 'string' ? t : t.replace(/\{(sig|stage|sum):([a-z0-9-]+)\}/g, (m0, k, id) => { const c = cardOf.get(id)?.c; return c ? String(k === 'sig' ? c.signature : k === 'stage' ? c.stage : c.sum) : m0 })
+        const fillDeep = x => Array.isArray(x) ? x.map(fillDeep) : x && typeof x === 'object' ? Object.fromEntries(Object.entries(x).map(([k, v]) => [k, fillDeep(v)])) : fillT(x)
+        r = { ...r, analysis: fillDeep(r.analysis), article: fillDeep(r.article) }
         const caps = { ...(r.captures || {}) }; for (const s of carded) Object.assign(caps, s.scan.captures || {})
         const hashed = Object.values(caps).filter(c => c.sha256).length
         const lit = new Set(carded.flatMap(s => Object.keys(s.scan.answers).flatMap(id => (m.I.get(id)?.links || []).map(l => l.provision))))
