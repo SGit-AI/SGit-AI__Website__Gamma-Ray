@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.19",
+    "date": "2026-11-10",
+    "what": "round one of review on replit-agent",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "82bf912aa"
+  },
+  {
     "version": "v0.0.18",
     "date": "2026-11-10",
     "what": "no sideways scroll on phones",
