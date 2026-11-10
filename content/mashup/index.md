@@ -10,7 +10,15 @@ summary: The graph that joins the instruments: provisions, indicators and questi
 
 {{fig:funnel}}
 
-## The graph
+## Ask one question
+
+A graph of every provision, indicator and question at once cannot be read, so start from one question. Open it to see what one answer reaches: the indicators it is asked as, the instruments those sit in and each provision itself. Every node is a link.
+
+{{fig:reaches}}
+
+## The whole mashup, for a wide screen
+
+The same data drawn all at once: questions on the left, indicators in the middle, provisions on the right. It needs a wide screen; on a phone use the questions above. Every dot is a link.
 
 {{fig:graph}}
 
