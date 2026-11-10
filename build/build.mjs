@@ -37,7 +37,7 @@ function md(src, figs) {
         if (l.startsWith('|')) {
             const rows = []; while (i < L.length && L[i].startsWith('|')) rows.push(L[i++].trim().replace(/^\||\|$/g, '').split('|').map(c => c.trim()))
             const head = rows[0], body = rows.slice(2)
-            out.push(`<div class="tw"><table><thead><tr>${head.map(c => `<th>${inline(c)}</th>`).join('')}</tr></thead><tbody>${body.map(r => `<tr>${r.map(c => `<td>${inline(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`); continue
+            out.push(`<div class="tw"><table><thead><tr>${head.map(c => `<th>${inline(c)}</th>`).join('')}</tr></thead><tbody>${body.map(r => `<tr>${r.map((c, i) => `<td data-label="${esc(String(head[i] || '').replace(/[*`_]/g, ''))}">${inline(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`); continue
         }
         if (/^(-|\d+\.) /.test(l)) {
             const ord = /^\d/.test(l), items = []
@@ -52,7 +52,7 @@ function md(src, figs) {
 
 // ---------- pages ----------
 const pages = []           // { url: 'standard/', title, summary, body (markdown), section }
-const NAV = [['spectrum/', 'Spectrum'], ['scans/', 'Ratings'], ['standard/', 'The standard'], ['about/', 'About'], ['feedback/', 'Corrections']]
+const NAV = [['spectrum/', 'Spectrum'], ['reports/', 'Reports'], ['scans/', 'Ratings'], ['standard/', 'The standard'], ['about/', 'About'], ['feedback/', 'Corrections']]
 const NAV_MORE = [['briefing/', 'The briefing'], ['rating/', 'How a rating is made'], ['questions/', 'Questions'], ['mashup/', 'The mashup'], ['lens/', 'The lens'], ['coverage/', 'Coverage'], ['provisions/', 'The provisions'], ['instruments/', 'Instruments']]
 const figs = { cohort: () => viz.cohort(m, sp, '../'), walk: id => viz.cardWalk(m, sp, id), label: id => viz.label(m, id), profile: id => viz.profile(m, id), configs: id => viz.configs(m, id), pairs: () => viz.pairs(m), ring: () => viz.ring(m), scans: () => viz.scanMatrix(m), grant: id => viz.grantGrid(m, id), lit: id => viz.graph(m, id), graph: () => viz.graph(m), funnel: () => viz.funnel(m), coverage: () => viz.coverage(m), matrix: () => viz.matrix(m), quadrant: id => viz.quadrant(m, id) }
 const figText = { cohort: 'The published cards side by side, one row each; the table below has the same.', walk: 'The walk from the card down to each indicator, its public source and the instruments it touches; the sections below list the same in text.', label: 'The label for this rating; its contents are in the text.', profile: 'One square per indicator, by question; every answer is listed below.', configs: 'The freedom level of each configuration; the table has the same.', pairs: 'How many indicators each pair of instruments shares; the same counts are in /data/summary.json.', ring: 'The instruments as a ring joined by shared indicators.', scans: 'Every scan against every question.', grant: 'The grant as a grid of capabilities; the table below has every row.', lit: 'The mashup graph with this agent\'s evidenced indicators lit.', graph: 'The mashup as a graph (questions, indicators, provisions). The same data: /data/questions.json, /data/indicators.json, /data/provisions.json.', funnel: 'The compression in four bars; the numbers are in the text.', coverage: 'Coverage of each instrument by tier; the table below has the numbers.', matrix: 'Questions by instruments; the questions page lists every citation.', quadrant: 'The quadrant of freedom against governance; the levels are in the text.' }
