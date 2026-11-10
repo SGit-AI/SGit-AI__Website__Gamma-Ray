@@ -338,6 +338,62 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "No change to what passed; the scope finding on I38 is answered above."
+   },
+   {
+    "round": 3,
+    "answer": "I38",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note changed from 'has no access' to the page's 'access to submission-platform accounts is restricted for Granter' (verified on re-fetch), and now says this is a statement of who submits, a structural limit on the product, not an approval step; source and span unchanged."
+   },
+   {
+    "round": 3,
+    "answer": "S1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note reworded to the page's 'from initial draft to submission in under 72 hours' (verified on re-fetch; 'of onboarding' dropped), and now says it is one customer and one application with no usage counts, that the agent drafted and the team submitted; span, grade and mode unchanged."
+   },
+   {
+    "round": 3,
+    "answer": "not_credited",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "The Fidelidade entry is replaced: the false clause that the page 'remains a source of the scan' is dropped and the entry now says the page is cited only in not_credited and is not captured; its facts (agents trained on Fidelidade's business and past applications, pilot in its initial phase) were re-verified on a fresh fetch. The announced items' pages (granter.ai, granter.ai/about) carry no level and tools/capture.mjs captures answer sources only, so they stay uncaptured; the earlier response saying they should be captured is withdrawn as not required."
+   },
+   {
+    "round": 3,
+    "answer": "I16,I07",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; I07 is answered, and the I16 note already states that the policy is platform-wide, does not name the agent and is coarser than per-action approval, which the reviewer accepts as honest; the credit stays thin and Autonomy 2 rests on it."
+   },
+   {
+    "round": 3,
+    "answer": "I20",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the note's FAQ clause covers the limit the span itself does not state."
+   },
+   {
+    "round": 3,
+    "answer": "I56,I58,I67,I52,I09",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; I58 keeps its 'vendor's statement' tag as the reviewer asks."
+   },
+   {
+    "round": 3,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No level changes: the wording fixes to I38 and S1 keep A2 R1 C1 O1; C1 still rests on I38, now worded as a structural limit on who submits, and A2 on the platform-wide I16 with its caveat stated."
+   },
+   {
+    "round": 3,
+    "answer": "I16,I38,I07,I20,S1,I67,I52,I56,I58,I09",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change beyond the I38 and S1 wording above; spans, grades and modes stand as verified."
    }
   ]
  },
@@ -390,7 +446,7 @@
   },
   "I38": {
    "e": "https://granter.ai/blog/ai-grant-consultant",
-   "n": "The product page's FAQ says Granter does not submit the application: the user makes the final submission on the funding platform, since Granter has no access to submission-platform accounts.",
+   "n": "The product page's FAQ says Granter does not submit the application: the user makes the final submission on the funding platform, since access to submission-platform accounts is restricted for Granter; this states who submits, a structural limit on the product, not an approval step.",
    "span": "The final submission is done by you on the relevant platform",
    "g": "documented",
    "m": "default"
@@ -425,7 +481,7 @@
   },
   "S1": {
    "e": "https://granter.ai/case-studies/superbock",
-   "n": "Granter's case study names the Super Bock Group, whose R&D and innovation department used the AI Grant Consultant to build an FCT doctoral scholarship application and submitted it within 72 hours of onboarding (vendor's account).",
+   "n": "Granter's case study (vendor's account) names one customer, the Super Bock Group, whose R&D and innovation team used the AI Grant Consultant to draft one FCT doctoral scholarship application and then submitted it themselves, from initial draft to submission in under 72 hours; it gives no usage counts.",
    "span": "Super Bock's team turned to the AI Grant Consultant",
    "g": "documented",
    "m": "deployed"
@@ -446,11 +502,6 @@
    "what": "I11 from the CORDIS tool (the agent reads the EU's public database of funded projects through a dedicated tool)",
    "why": "The page does not say whether this is a live connection across a trust boundary or Granter's own copy of public data; not stretched into Reach 2.",
    "source": "https://granter.ai/blog/ai-grant-consultant"
-  },
-  {
-   "what": "Fidelidade pilot as the source of S1",
-   "why": "Replaced by the Super Bock case study, a completed use of the agent rather than a pilot in its initial phase; the Fidelidade page remains a source of the scan and names a second customer.",
-   "source": "https://granter.ai/case-studies/fidelidade"
   }
  ],
  "announced": [
@@ -487,22 +538,22 @@
   "https://granter.ai/blog/ai-grant-consultant": {
    "sha256": "939ffa1a99921cebb4dd509822646f9bf524a971fe0d64afd4bbebb4325fbb9c",
    "bytes": 499709,
-   "read_at": "2026-11-10T17:50Z"
+   "read_at": "2026-11-10T18:46Z"
   },
   "https://granter.ai/case-studies/marinha": {
    "sha256": "a6b46185d03c0012028bb1f68dc469204e30f59eafa4bd303fcfbb3b40b7d8cb",
    "bytes": 487913,
-   "read_at": "2026-11-10T17:50Z"
+   "read_at": "2026-11-10T18:46Z"
   },
   "https://granter.ai/case-studies/superbock": {
    "sha256": "0da57a037f92737bda1d6fe53ad4a9a732fbaad1fa304fa982ccef3c23547047",
    "bytes": 442114,
-   "read_at": "2026-11-10T17:50Z"
+   "read_at": "2026-11-10T18:46Z"
   },
   "https://granter.ai/privacy-policy": {
    "sha256": "278075589d6cb14792578a442545a13411a49d439932973007e07b74a9072c28",
    "bytes": 572845,
-   "read_at": "2026-11-10T17:50Z"
+   "read_at": "2026-11-10T18:46Z"
   }
  }
 }
