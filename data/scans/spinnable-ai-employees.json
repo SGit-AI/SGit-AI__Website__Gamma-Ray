@@ -235,6 +235,29 @@
       "finding": "Card A3 R2 C1 O2, no level four. Autonomy 3 rests on I08 and I17, and I17 is one home page FAQ sentence of vendor copy with no documented approval mechanism, so removing it leaves Autonomy with no level; the note discloses this. Control 1 rests on I47 alone, Reach 2 on I10 and I11, Openness 2 on I22 and I58, each one fact from dropping a level. Level one or more holds in four dimensions, so the publication rule holds even without Autonomy."
      }
     ]
+   },
+   {
+    "round": 6,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "I56",
+      "severity": "pass",
+      "finding": "Round five's should-fix is answered and true in the scan as it stands. The SOC 2 announced entry now cites https://www.spinnable.ai/ (a capture key); I re-fetched the home page and its footer reads SOC 2 Type II in progress. The launch PDF entry is cut. Every URL in answers, not_credited and announced is now a key of the 19 captures (compared one by one)."
+     },
+     {
+      "answer": "I04, I08, I10, I11, I12, I17, I20, I21, I22, I25, I26, I30, I39, I40, I41, I46, I47, I56, I57, I58, I68, S1, S3",
+      "severity": "pass",
+      "finding": "Diff since the commit that recorded round five (4aa12da): only review.responses (four round-five entries), the SOC 2 announced source, the cut launch prediction announced entry and capture hashes with read dates (same commit as the studio answer, none after it) changed. No answer, span, grade, mode or not_credited entry changed. Spot-checked live: the I17 span (won't take actions with external consequences without your approval, 10 words) is on the home page; the corporate-email page has the AI worker disclosure line and the send-approvals line cited in not_credited. No em-dashes in the scan. The uncaptured enterprise, launch PDF and security-best-practices URLs occur only inside review prose of earlier rounds, not as sources."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A3 R2 C1 O2. Autonomy 3 rests on I08 and I17, and I17 is one home page FAQ sentence of vendor copy with no documented approval mechanism (the docs describe none; the studio lists it as not credited for control), so it is the single fact holding level three; the note and not_credited disclose this and the card keeps level one or more in all four dimensions without it. Control 1 (I47), Reach 2 (I10, I11) and Openness 2 (I22, I58) are each one fact from dropping a level. The publication rule holds."
+     }
+    ]
    }
   ],
   "responses": [
