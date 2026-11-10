@@ -258,6 +258,18 @@ export function cardWalk(m, sp, scanId, up = '../../../') {
                 blocks += link(up + 'instruments/#' + slug(S.name), `<g class="s-${sid}"><rect class="w-ch" x="${cx}" y="${cy}" width="${cw}" height="22" rx="11"/><circle class="w-dot" cx="${cx + 11}" cy="${cy + 11}" r="4.5"/><text x="${cx + 21}" y="${cy + 15.5}">${esc(t)}</text></g>`, `${n} provision${n > 1 ? 's' : ''} of ${S.name} (the instruments page)`)
                 cx += cw + 6
             }
+            // and the provisions themselves, one link each to its own row on /provisions/ (part and absence are written out)
+            if (per.size) {
+                let px = xI + 16, py = cy + 22 + 18; blocks += `<text class="w-sm" x="${xI + 16}" y="${py}">provisions:</text>`; px = xI + 16 + 74
+                for (const l of ind.links) {
+                    const P = m.P.get(l.provision); if (!P) continue
+                    const t = l.provision + (l.relation === 'same' ? '' : l.relation === 'part' ? ' (part)' : ' (absence)'), tw = t.length * 6.7 + 10
+                    if (px + tw > W) { px = xI + 16; py += 17 }
+                    blocks += link(up + 'provisions/#' + l.provision, `<text class="w-pv" x="${px}" y="${py}">${esc(t)}</text>`, `${m.S.get(P.standard).short}, ${P.ref}: ${l.relation === 'same' ? 'the same fact' : l.relation === 'part' ? 'part of what the provision asks' : 'the provision describes the absence of this fact'} (the provisions page)`)
+                    px += tw
+                }
+                cy = py - 22
+            }
             yy = cy + 22 + 16
         }
         if (!d.used.length) { ys.push(yy + 14); blocks += `<text class="w-sm" x="${xI}" y="${yy + 18}">Nothing public found yet. Not a no.</text>`; yy += 34 }
@@ -275,9 +287,9 @@ export function cardWalk(m, sp, scanId, up = '../../../') {
     // the spine closes at the last dimension; the root's drop line
     body += `<path class="w-edge" d="M${xS} ${rl.length * LH + 14} V${spine[0]}"/>`
     const H = Math.ceil(y)
-    const css = `<style>.walk{--dc:var(--ink3)}.walk text{font:12.5px var(--sans);fill:var(--ink)}.walk a{cursor:pointer}.walk a:hover rect,.walk a:focus rect{stroke:var(--ink);stroke-width:2}.walk .w-edge{fill:none;stroke:var(--ink3);stroke-width:1.5}.walk .w-root{fill:var(--band);stroke:var(--ink);stroke-width:1.5}.walk .w-rt{font:600 13px var(--sans)}.walk .w-dim{fill:var(--band);stroke:var(--dc);stroke-width:2}.walk .w-lv{font:700 22px var(--mono);fill:var(--dc)}.walk .w-sm{font-size:11.5px;fill:var(--ink3)}.walk .sp-A{--dc:var(--t2)}.walk .sp-R{--dc:var(--c-sf)}.walk .sp-C{--dc:var(--accent)}.walk .sp-O{--dc:var(--c-eaamm)}.walk .sp-none{--dc:var(--ink3)}.walk .w-dim{stroke-dasharray:none}.walk .sp-none .w-dim{stroke-dasharray:4 3}.walk .w-pip{fill:var(--hair)}.walk .w-pip.on{fill:var(--dc)}.walk .w-ind{fill:var(--paper);stroke:var(--ink2);stroke-width:1.2}.walk .w-id{font:600 12px var(--mono);fill:var(--ink2)}.walk .w-ev{fill:var(--paper);stroke:var(--accent);stroke-width:1.5}.walk .w-av{stroke-dasharray:5 3}.walk .w-evt{font:12px var(--mono);fill:var(--accent)}.walk .w-ch{fill:var(--paper);stroke:var(--c);stroke-width:1.5}.walk .w-dot{fill:var(--c)}</style>`
+    const css = `<style>.walk{--dc:var(--ink3)}.walk text{font:12.5px var(--sans);fill:var(--ink)}.walk a{cursor:pointer}.walk a:hover rect,.walk a:focus rect{stroke:var(--ink);stroke-width:2}.walk .w-edge{fill:none;stroke:var(--ink3);stroke-width:1.5}.walk .w-root{fill:var(--band);stroke:var(--ink);stroke-width:1.5}.walk .w-rt{font:600 13px var(--sans)}.walk .w-dim{fill:var(--band);stroke:var(--dc);stroke-width:2}.walk .w-lv{font:700 22px var(--mono);fill:var(--dc)}.walk .w-sm{font-size:11.5px;fill:var(--ink3)}.walk .sp-A{--dc:var(--t2)}.walk .sp-R{--dc:var(--c-sf)}.walk .sp-C{--dc:var(--accent)}.walk .sp-O{--dc:var(--c-eaamm)}.walk .sp-none{--dc:var(--ink3)}.walk .w-dim{stroke-dasharray:none}.walk .sp-none .w-dim{stroke-dasharray:4 3}.walk .w-pip{fill:var(--hair)}.walk .w-pip.on{fill:var(--dc)}.walk .w-ind{fill:var(--paper);stroke:var(--ink2);stroke-width:1.2}.walk .w-id{font:600 12px var(--mono);fill:var(--ink2)}.walk .w-ev{fill:var(--paper);stroke:var(--accent);stroke-width:1.5}.walk .w-av{stroke-dasharray:5 3}.walk .w-evt{font:12px var(--mono);fill:var(--accent)}.walk .w-ch{fill:var(--paper);stroke:var(--c);stroke-width:1.5}.walk .w-dot{fill:var(--c)}.walk .w-pv{font:11px var(--mono);fill:var(--ink2);text-decoration:underline}.walk a:hover .w-pv{fill:var(--ink)}</style>`
     const sentence = `${scan.name}: ${c.dims.map(d => `${d.name} ${d.level ? 'level ' + d.level : 'not yet evidenced'}`).join(', ')}. ${c.answers} evidenced indicators, ${c.sources} sources, ${instAll.size} instruments touched. The same walk is listed in text below.`
-    return `<svg class="fig walk" style="min-width:0;max-width:520px;margin:0 auto" viewBox="0 0 ${W} ${H}" role="group" aria-label="${esc(sentence)}">${css}${body}</svg><p class="figcap">The walk down from this card: each dimension, the indicators its level stands on (a link to the indicator's row), the public source of each answer (a link out; dashed means available, not default) and the instruments its provisions sit in (a link to the instrument). A solid frame is evidenced; a dashed frame is not yet evidenced, which is not a no.</p>`
+    return `<svg class="fig walk" style="min-width:0;max-width:520px;margin:0 auto" viewBox="0 0 ${W} ${H}" role="group" aria-label="${esc(sentence)}">${css}${body}</svg><p class="figcap">The walk down from this card: each dimension, the indicators its level stands on (a link to the indicator's row), the public source of each answer (a link out; dashed means available, not default) the instruments its provisions sit in (a link to the instrument) and each provision itself (a link to its row on the provisions page). A solid frame is evidenced; a dashed frame is not yet evidenced, which is not a no.</p>`
 }
 
 // 10. The cohort: the published cards side by side, one row per card, one block of four cells per dimension. A card is a link;
