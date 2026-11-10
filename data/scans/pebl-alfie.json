@@ -205,6 +205,20 @@
     "by": "gamma.field@web-summit.dinis",
     "at": "2026-11-10",
     "response": "Note now says the structured program clause is on the product page's FAQ, not on the updates page, and that most entries sit in the embedded data."
+   },
+   {
+    "round": 2,
+    "answer": "I15",
+    "by": "gamma.field@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Both leftovers fixed. The I17 reason no longer asserts the lowered inference; it says only that no source goes beyond the FAQ's 'take an action that you request'. The I15 reason now names the three help articles, the third by its URL (How can I access Alfie through Global Work Platform); its rendered text is in the vault as work/rendered/how-to-access-alfie.txt. It does not mention confirmation either."
+   },
+   {
+    "round": 2,
+    "answer": "I23",
+    "by": "gamma.field@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Span moved from the title to a row of the Time table: 'Pending approvals queue (view only)' (5 words, verified in the capture). Note reworded to 'tables of features by role', one per feature group with a column per role, and says time-off approvals are ticked for some roles only. The vault's work/rendered/ holds the three articles as rendered (checked by a fresh clone with the public read key). I08 left on the product page: the table row is noted under I23 rather than moving I08 again."
    }
   ]
  },
@@ -294,8 +308,8 @@
   },
   "I23": {
    "e": "https://help.hellopebl.com/en-US/pebl/article/97eBwj8y-what-can-i-do-with-alfie-based-on-my-role",
-   "n": "Pebl's help article enumerates, in a table per platform role (Company Admin, HR Manager, PTO Manager, Billing Admin, Supported Employee), which Alfie features each role can use, among them support tickets, time-off requests and approvals, compensation reports and currency conversion. It is a statement of scope; no source shows how it is enforced. The article's text is in the captured page's embedded data and shows only in a browser; the rendered text is in the vault (work/rendered/).",
-   "span": "What Can I Do With Alfie Based on My Role?",
+   "n": "Pebl's help article sets out, in tables of features by role (one per feature group: Support, Time, Benefits and Payroll, Billing, Reporting and others, with a column per role: Company Admin, HR Manager, PTO Manager, Billing Admin, Supported Employee), which Alfie features each role can use, among them support tickets, time-off requests and approvals, a view-only queue of pending approvals, compensation reports and currency conversion. Time-off approvals are ticked for some roles only. It is a statement of scope; no source shows how it is enforced. The article's text is in the captured page's embedded data and shows only in a browser; the rendered text is in the vault (work/rendered/what-can-i-do-with-alfie-based-on-my-role.txt).",
+   "span": "Pending approvals queue (view only)",
    "g": "documented",
    "m": "default"
   },
@@ -418,7 +432,7 @@
   },
   {
    "what": "I17: Alfie Support answers routine questions and routes those needing human expertise to a Pebl specialist.",
-   "why": "A handoff of a support conversation (credited as I40), not the agent carrying out routine tasks on its own with a person consulted on exceptions; every named action is made at the user's request (I15).",
+   "why": "A handoff of a support conversation (credited as I40), not the agent carrying out routine tasks on its own with a person consulted on exceptions. No source says how Alfie's actions are started or confirmed beyond the FAQ's 'take an action that you request'.",
    "source": "https://hellopebl.com/news/pebl-introduces-new-ai-agents-redefine-speed-intelligence-and-compliance-global-hiring/"
   },
   {
@@ -428,7 +442,7 @@
   },
   {
    "what": "I15: the FAQ says Pebl shares data only to answer or to \"take an action that you request\".",
-   "why": "Lowered after review round one: the sentence is about data sharing and shows only that an action can follow a request; no source says who controls each action, and the pages also show Alfie prompting the user (recommended next steps, follow-up prompts). Pebl's three help-centre articles on Alfie, read in a browser on 2026-11-10, do not say whether Alfie asks for confirmation before it acts, so I16 is not evidenced either. Not evidenced is not no.",
+   "why": "Lowered after review round one: the sentence is about data sharing and shows only that an action can follow a request; no source says who controls each action, and the pages also show Alfie prompting the user (recommended next steps, follow-up prompts). Pebl's three help-centre articles on Alfie (What is Alfie, What can I do with Alfie based on my role, both sources of I40 and I23, and https://help.hellopebl.com/en-US/pebl/article/PPx0P6e8-how-can-i-access-alfie-through-global-work-platform), read in a browser on 2026-11-10, do not say whether Alfie asks for confirmation before it acts, so I16 is not evidenced either. Not evidenced is not no.",
    "source": "https://hellopebl.com/platform/alfie-ai-assistant/"
   }
  ],
