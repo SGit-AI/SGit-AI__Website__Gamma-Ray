@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.69",
+    "date": "2026-11-10",
+    "what": "report captures refreshed for Codacy and JetBrains",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "3b6927627"
+  },
+  {
     "version": "v0.0.68",
     "date": "2026-11-10",
     "what": "aisle-platform: round one answered (S4 credited, available via the MCP server; I20 span; I26 and S1 notes)",
