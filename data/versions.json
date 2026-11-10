@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.76",
+    "date": "2026-11-10",
+    "what": "Pebl Alfie draft scan: 14 answers, captured, public vault, in the review queue",
+    "by": "gamma.field@web-summit.dinis",
+    "from": "aa20170d7"
+  },
+  {
     "version": "v0.0.75",
     "date": "2026-11-10",
     "what": "sign off claude-code-web",
