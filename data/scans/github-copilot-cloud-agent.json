@@ -157,19 +157,24 @@
  "moved": "As above. Scanning of generated code is no longer counted as testing of the agent.",
  "captures": {
   "https://docs.github.com/en/copilot/concepts/agents/coding-agent/mcp-and-coding-agent": {
-   "sha256": "e0ab793e5f76b3f42b2558e223531a107db296cbb497ed36f695b38eb1aa7006",
-   "bytes": 664382,
-   "read_at": "2026-11-10T06:11Z"
+   "sha256": "704241bd605b6bbbbb7c062c5d58c3f862e63d2e20c5abd4e2a6eb88ed421b76",
+   "bytes": 665177,
+   "read_at": "2026-11-10T19:09Z"
+  },
+  "https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/customize-the-agent-firewall": {
+   "sha256": "509dba201d858485e269b7e4f78631835328362e8a07aabba4644bd031d72232",
+   "bytes": 675482,
+   "read_at": "2026-11-10T19:09Z"
   },
   "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent": {
-   "sha256": "4c556dc5c787186a539d5a157375e2264c1b4c2fcd2b090effde2f3fe5aaf444",
-   "bytes": 797760,
-   "read_at": "2026-11-10T06:11Z"
+   "sha256": "cb8dc8815eba8b7492de06ac630655576477980106d476816c59c7efb5debc38",
+   "bytes": 798555,
+   "read_at": "2026-11-10T19:09Z"
   },
   "https://docs.github.com/llms.txt": {
    "sha256": "c10af0cdb5576f81fd29373cf56ac65608d24c3e4c935c7993d2bba27d56af4e",
    "bytes": 28642,
-   "read_at": "2026-11-10T06:11Z"
+   "read_at": "2026-11-10T19:09Z"
   }
  },
  "review": {
