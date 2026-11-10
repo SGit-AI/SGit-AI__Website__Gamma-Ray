@@ -184,6 +184,76 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "Passed; no change beyond the I10 span and the I40 FAQ wording noted above."
+   },
+   {
+    "round": 2,
+    "answer": "I56 / O1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Dropped the Glovo sentence from the I56 note and the Glovo entry from not_credited (this list replaces the scan's not_credited, leaving only the I39 entry), so nothing rests on an uncaptured page. The live Glovo page does say 'Many restaurant partners never realized they were speaking with AI' (raw/ans-101.html); if the studio wants that fact back, it must first add the page to the scan's sources and capture it. I56 stays documented, available, disclosure-node; O1 is unchanged on I20 and I58."
+   },
+   {
+    "round": 2,
+    "answer": "I08, I40, I48",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Passed; no change. Spans re-checked in today's raw voice and Control Tower pages (raw/ans-104.html, raw/ans-105.html)."
+   },
+   {
+    "round": 2,
+    "answer": "I39",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Passed; I39 stays removed and in not_credited with the captured Control Tower page as its source."
+   },
+   {
+    "round": 2,
+    "answer": "I41, I48",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Passed; both stay documented operation facts and uncounted."
+   },
+   {
+    "round": 2,
+    "answer": "S1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Passed; no change. The Nicomatic span is in today's page (raw/ans-102.html). S1 rests on a named customer for the capability that acts, which the scope permits; no usage figures are claimed."
+   },
+   {
+    "round": 2,
+    "answer": "S4",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Agreed; no S4 answer."
+   },
+   {
+    "round": 2,
+    "answer": "I10",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change. The span is exact in today's llms.txt (raw/ans-106.html). I10 is the only Autonomy source among I10, I12 and I13, but it is a dated statement naming four kinds of system, which is what the indicator asks. R2 also stands on I11 alone."
+   },
+   {
+    "round": 2,
+    "answer": "scan note and not_credited wording check",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Glovo was the only uncaptured reference. It is now gone from both the I56 note and not_credited. The configuration note 'seen in one deployment' refers to the captured telecom story."
+   },
+   {
+    "round": 2,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "A4 defended, not lowered. I08 ('the agent can update a booking or a customer record', voice FAQ) is a product-wide statement that the agent acts itself, and the captured Nicomatic story backs it with a named deployment ('Sam automatically logs the event in the ISO database'). We keep the voice FAQ as I08's single source because it states the default, and Nicomatic stays the S1 source. I18 is the Control Tower's literal 'AI proactively asks a human to approve critical decisions before executing them', so it matches the indicator text, and it is marked available with human-validation. I10 names four systems. 'Orchestrates' is the standard's name for level four, not our wording, and the card shows A4 as available. R2: I11 alone is enough (named Genesys Cloud and Salesforce REST integrations). C1: llms.txt states human-in-the-loop approval on high-stakes actions (re-verified), shown as available. We do not add I47 to back it up, because the business rules are a graph, not a rule in prose. O1: I20 plus I58, without I56. No level is lowered."
+   },
+   {
+    "round": 2,
+    "answer": "I03, I11, I17, I18, I20, I21, I36, I38, I54, I58, I67, I68, S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Passed; no change."
    }
   ]
  },
@@ -310,7 +380,7 @@
   },
   "I56": {
    "e": "https://www.getvocal.ai/customers/large-spanish-telecom",
-   "n": "In one deployment for an unnamed large Spanish telecom operator, each call opened with a disclosure that the caller was speaking with a virtual assistant. No GetVocal page states that agents disclose they are AI by default or documents a disclosure setting; the EU AI Act blog advises deployers to add a disclosure node. In the Glovo deployment, GetVocal reports that many restaurant partners never realised they were speaking with AI.",
+   "n": "In one deployment for an unnamed large Spanish telecom operator, each call opened with a disclosure that the caller was speaking with a virtual assistant. No GetVocal page states that agents disclose they are AI by default or documents a disclosure setting; the EU AI Act blog advises deployers to add a disclosure node.",
    "span": "clear disclosure that the caller was speaking with a virtual assistant",
    "g": "documented",
    "m": "available",
@@ -355,11 +425,6 @@
  },
  "not_credited": [
   {
-   "what": "GetVocal's Glovo story says many restaurant partners never realised they were speaking with AI.",
-   "why": "Shown because it bears on disclosure; the card counts disclosure only where a deployment is configured for it.",
-   "source": "https://www.getvocal.ai/customers/glovo"
-  },
-  {
    "what": "There is a way to pause or stop the agent (I39).",
    "why": "The pages describe operators taking over one conversation and supervisors overriding an agent; pausing appears only as advice on what a kill switch should include, not as a described GetVocal feature.",
    "source": "https://www.getvocal.ai/control-tower"
@@ -400,49 +465,49 @@
  ],
  "captures": {
   "https://status.getvocal.ai/events": {
-   "sha256": "74a8ed351f4842724dac987a12c053394c8c2f5877627694e4f27247725c83a8",
-   "bytes": 518785,
-   "read_at": "2026-11-10T07:54Z"
+   "sha256": "8387a684a8749c1b660b01f5f0c38edabfacef6e60ee9da38f89f8f1ef0510c4",
+   "bytes": 518752,
+   "read_at": "2026-11-10T15:45Z"
   },
   "https://www.getvocal.ai/blog/ai-agent-escalation-logic-human-handoff": {
-   "sha256": "8e7b3b6db7f3de47a983a209a554f5fa306f868ede2d874ffb09be2f20b64c92",
+   "sha256": "20a40e83c0c18c049b977baa4cedfc9d081dba4c01e7b7f7a4b5977e1c9f76e4",
    "bytes": 718394,
-   "read_at": "2026-11-10T07:54Z"
+   "read_at": "2026-11-10T15:45Z"
   },
   "https://www.getvocal.ai/blog/eu-ai-act-compliance-customer-service-ai-agents": {
-   "sha256": "1e6826a51d5effbcd438696cf5814a7e146119393ff72d4b1e65cbb0cdae332c",
+   "sha256": "3f6dcec078de693aaf77c6c4c26c4944d1af2b9800bcdcd9eb677f22aa2590f3",
    "bytes": 753558,
-   "read_at": "2026-11-10T07:54Z"
+   "read_at": "2026-11-10T15:45Z"
   },
   "https://www.getvocal.ai/control-tower": {
-   "sha256": "b345423bdcd11081157bf3cd90b9adf1c77886f9b600dff8f9acca20c8a0e27a",
+   "sha256": "4b0df640abc62a40874a9e844c90b427cef25be97712ba7144682c107553d44b",
    "bytes": 654180,
-   "read_at": "2026-11-10T07:54Z"
+   "read_at": "2026-11-10T15:45Z"
   },
   "https://www.getvocal.ai/customers/large-spanish-telecom": {
-   "sha256": "bb32d3f2da2dc60f5ec722b9c9a1f1c0b237acdfc8ac80589f0f0903c1c3bcb1",
+   "sha256": "7395e9c14edfe0e1b06fb3285ce6ee84d992f59963c1806c4e0be22a3284d4d9",
    "bytes": 630359,
-   "read_at": "2026-11-10T07:54Z"
+   "read_at": "2026-11-10T15:45Z"
   },
   "https://www.getvocal.ai/customers/nicomatic": {
    "sha256": "caa2019ba39b7e40275b2614fccd01ca602bdca0f42fa359b70e05c5e86bdfac",
    "bytes": 637173,
-   "read_at": "2026-11-10T07:54Z"
+   "read_at": "2026-11-10T15:45Z"
   },
   "https://www.getvocal.ai/enterprise-ai-agents": {
-   "sha256": "d8c3ef0e7f0ba5e64094171e7c2d6e365ed9f68efe59c9b07db19a790fddc3dc",
-   "bytes": 697397,
-   "read_at": "2026-11-10T07:54Z"
+   "sha256": "cd7ed09e9b8276c88669f7821690781ffec5d83ecf26287d48d22041c18b8f95",
+   "bytes": 697067,
+   "read_at": "2026-11-10T15:45Z"
   },
   "https://www.getvocal.ai/llms.txt": {
    "sha256": "a24b2369870940e0dc1240fb106d27bf387441eef7611554499e7ec049b704a4",
    "bytes": 3023,
-   "read_at": "2026-11-10T07:54Z"
+   "read_at": "2026-11-10T15:45Z"
   },
   "https://www.getvocal.ai/voice": {
-   "sha256": "74a48ff2b6668fe092525aad3a742784236892569da176861390e1be6278e42b",
+   "sha256": "f5e924a8de49c1d406950e1e701755918c7ac52dd162002068bf78404060df57",
    "bytes": 654485,
-   "read_at": "2026-11-10T07:54Z"
+   "read_at": "2026-11-10T15:45Z"
   }
  }
 }
