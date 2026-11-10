@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.121",
+    "date": "2026-11-10",
+    "what": "the mashup page starts from one question",
+    "by": "gamma.graphs@web-summit.dinis",
+    "from": "b319374db"
+  },
+  {
     "version": "v0.0.120",
     "date": "2026-11-10",
     "what": "log and a capture request for the two examples",
