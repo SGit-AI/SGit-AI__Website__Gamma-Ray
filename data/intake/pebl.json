@@ -1,0 +1,23 @@
+{
+ "id": "pebl",
+ "company": "Pebl",
+ "domain": "hellopebl.com",
+ "products": [
+  { "name": "Alfie", "said": "Your global hiring co-pilot.", "agent_candidate": true }
+ ],
+ "seen": { "event": "Web Summit 2026", "where": "stand E163", "on": "2026-11-10", "by": "Dinis Cruz", "medium": "two photos of the stand" },
+ "photo": { "held_by": "Dinis Cruz", "published": false, "why": "they show people" },
+ "booth_claims": [
+  { "text": "Meet Alfie. Your global hiring co-pilot.", "reads": "S2·R3·A0" },
+  { "text": "Build teams anywhere.", "reads": "S2·R3·A0" },
+  { "text": "Scale your global workforce fast", "reads": "S2·R3·A0" },
+  { "text": "Hire in 185+ countries without entities", "reads": "S2·R3·A0" },
+  { "text": "End-to-end global payroll", "reads": "S2·R3·A0" },
+  { "text": "Built-in compliance with local labor laws", "reads": "S2·R3·A0" },
+  { "text": "Hire in minutes, not months", "reads": "S2·R3·A0" }
+ ],
+ "note": "One line on the stand is partly hidden behind people (\"Yes... there.\") and is not transcribed. A side panel begins \"Trusted worldwide\" and a ranking (\"#1 Rated\"); the rest is out of frame and is not transcribed.",
+ "triage": { "agent": null, "why": "Not read yet. \"Co-pilot\" is a candidate, not evidence: whether Alfie acts on its own is for the public pages to say." },
+ "scan": null,
+ "status": "intake"
+}

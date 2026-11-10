@@ -102,8 +102,18 @@ for (const f of walk(OUT).filter(f => /\.(html|md|txt|json)$/.test(f))) {
       if (!N[e.from] || !N[e.to] || N[e.from].type !== v.from || N[e.to].type !== v.to) bad('graph', `${f}: ${e.from} ${e.verb} ${e.to} does not join a ${v.from} to a ${v.to}`) }
     for (const n of g.nodes) { if (!touched.has(n.id)) bad('graph', `${f}: ${n.id} has no edge`)
       if (n.type === 'evidence') for (const verb of ['observed_on', 'produced_by']) if (!g.edges.some(e => e.from === n.id && e.verb === verb)) bad('graph', `${f}: ${n.id} is not ${verb} anything`) } } }
+// 4e intake: the companies met at the summit. Exact words only, under fifteen; a photo that shows people is never published
+{ const dir = path.join(ROOT, 'data/intake'), ST = ['intake', 'no-agent', 'drafting', 'in-review', 'published'], F = read('data/flow.json')
+  if (!Array.isArray(F.steps) || F.steps.some((s, i) => s.n !== i + 1 || !F.kinds[s.kind])) bad('flow', 'data/flow.json: steps numbered from 1, each with a known kind')
+  for (const f of fs.existsSync(dir) ? fs.readdirSync(dir).filter(f => f.endsWith('.json')) : []) { const o = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')), at = `data/intake/${f}`
+    if (o.id + '.json' !== f) bad('intake', `${at}: id must match the file name`)
+    if (!o.company || !o.seen || !o.seen.event || !o.seen.on || !Array.isArray(o.booth_claims)) bad('intake', `${at}: company, seen and booth_claims are required`)
+    if (!ST.includes(o.status)) bad('intake', `${at}: status must be one of ${ST.join(', ')}`)
+    if (o.photo && o.photo.published !== false) bad('intake', `${at}: a photo is never published from intake`)
+    for (const c of o.booth_claims || []) if (!c.text || c.text.split(/\s+/).length >= 15) bad('intake', `${at}: a booth claim must be exact and under fifteen words`)
+    if (o.scan && !fs.existsSync(path.join(ROOT, 'data/scans', o.scan + '.json'))) bad('intake', `${at}: scan ${o.scan} does not exist`) } }
 // 5 the version is CI's: version.txt, if present, is a plain number
 const vf = path.join(ROOT, 'build/version.txt'); if (fs.existsSync(vf) && !/^v\d+\.\d+\.\d+\n?$/.test(fs.readFileSync(vf, 'utf8'))) bad('version', 'build/version.txt is not vX.Y.Z')
 
 if (problems.length) { console.log(problems.join('\n')); console.log(`${problems.length} problem(s); the gate is red`); process.exit(1) }
-console.log(`OK (${gen.version}: ${gen.pages.length} pages, ${gen.totals.provisions} provisions, ${gen.totals.indicators} indicators, ${gen.totals.questions} questions, 7 checks)`)
+console.log(`OK (${gen.version}: ${gen.pages.length} pages, ${gen.totals.provisions} provisions, ${gen.totals.indicators} indicators, ${gen.totals.questions} questions, 8 checks)`)

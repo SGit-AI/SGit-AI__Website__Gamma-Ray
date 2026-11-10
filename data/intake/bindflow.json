@@ -1,0 +1,17 @@
+{
+ "id": "bindflow",
+ "company": "Bind Flow",
+ "domain": null,
+ "products": [
+  { "name": "Bind Flow", "said": "AI-powered customer engagement platform", "agent_candidate": true }
+ ],
+ "seen": { "event": "Web Summit 2026", "where": "a hanging banner next to stand E163", "on": "2026-11-10", "by": "Dinis Cruz", "medium": "in the background of a photo of another stand" },
+ "photo": { "held_by": "Dinis Cruz", "published": false, "why": "it shows people" },
+ "booth_claims": [
+  { "text": "AI-powered customer engagement platform", "reads": "S2·R3·A0" }
+ ],
+ "note": "Seen only on a banner; the name's last letters are cut off by the frame. No domain was visible: identify the company before anything else, and drop this intake if it cannot be identified from public sources.",
+ "triage": { "agent": null, "why": "Not identified yet." },
+ "scan": null,
+ "status": "intake"
+}

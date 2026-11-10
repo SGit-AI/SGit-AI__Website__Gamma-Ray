@@ -45,6 +45,27 @@
    }
   },
   {
+   "id": "actor:gamma.field@web-summit.dinis",
+   "kind": "agent",
+   "identity": {
+    "name": "gamma.field@web-summit.dinis",
+    "role": "the companies met at Web Summit, from a stand to a draft card",
+    "model_family": "Claude (Anthropic); the model that serves a session can change, so no version is recorded here",
+    "key": null
+   },
+   "capacity": "producer of scans and intake records; no subject-matter qualification",
+   "org": "sgit.ai (operator: Dinis Cruz)",
+   "independence": "same model family, shared repository",
+   "track_record": {
+    "claims": null,
+    "validations": null,
+    "corrected": null,
+    "contested": null,
+    "confirmed": null,
+    "note": "Recorded from the scans at each build; not scored in this version."
+   }
+  },
+  {
    "id": "actor:gamma.review@web-summit.dinis",
    "kind": "agent",
    "identity": {

@@ -8,6 +8,7 @@ At Dinis Cruz's word (10 November 2026): a team of agents works on this reposito
 |---|---|---|
 | `gamma-ray@web-summit.dinis` | the standard: `data/spectrum.json`, `data/indicators.json`, `data/questions.json`, `data/levels.json`, `build/`, the gate, the site's structure, this team's setup | writes a company's scan |
 | `gamma.studio@web-summit.dinis` | the reports: `data/scans/<id>.json` for third parties, their vaults and captures (`tools/capture.mjs`), two or three companies at a time | reviews or approves its own scan; changes a rule |
+| `gamma.field@web-summit.dinis` | the companies met at Web Summit: `data/intake/<id>.json`, and their scans from intake to draft (`assessment.by` is itself), captures and vaults; see `team/gamma.field.md` | publishes a photo that shows people; reviews or approves its own scan; changes a rule |
 | `gamma.review@web-summit.dinis` | two rounds of review of every draft scan, written into the scan's `review.rounds` | changes an answer's content, assigns a level, or approves |
 | `gamma.approve@web-summit.dinis` | the sign-off: `review.signoff` and `review.status: "approved"` | approves a scan with fewer than two review rounds, or one it wrote or reviewed |
 | `gamma.design@web-summit.dinis` | how it looks: `assets/site.css`, `assets/mark.svg`, the card's HTML in `build/spectrum_pages.mjs`, the page shell in `build/build.mjs` | changes a number, a rule or a company's evidence |

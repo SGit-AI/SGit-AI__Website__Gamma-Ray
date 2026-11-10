@@ -135,6 +135,14 @@ Given by voice in the conductor's session and recorded in full in PrompTugal__Ne
 - Each company the interview team talks to gets a GAMMA-Ray card, made before or after the interview, and the interview links to it. `gamma.studio@` makes it, through the usual rounds.
 - pt.news draws a visual newsroom of every actor and hand-off. FACT-Ray's actors and bands label who stands behind each fact, so these stay machine-readable and stable: `data/fact-ray/actors.json`, `data/fact-ray/nodes.json` (each fact with its claim, producer, validators and band), `data/evidence.json`, `data/cards.json` and `data/graphs/<id>.json`.
 
+## A field agent for the companies we meet (10 November, about 13:00 UTC)
+
+With two photos of a stand at the summit (Pebl, "Meet Alfie. Your global hiring co-pilot."):
+
+> So now we need to create a new sub-agent that is going to focus on creating these, our GAMMA-Ray and our FACT-based mappings for the companies that we're meeting at Web Summit. [...] So we now need to have a full flow, which is what I was describing, to go from here to there. [...] Why don't you create an infographic, and then we map the flow, and while you do that, you also start the other agent so that it can be onboarded and can start to do this.
+
+What this settles: a new session, `gamma.field@web-summit.dinis` (`team/gamma.field.md`), takes each company met from a photo or a note to a draft card; the flow is data (`data/flow.json`) and drawn at `/flow/`. The photos are not committed: they show people.
+
 ## The rules given with the brief
 
 Public sources only. No rating is published without its evidence. (The first brief also said: not without the company having seen it. The operator replaced that on 10 November 2026: a rating made from public data may be published, labelled as beta and as not seen by its subject.) No contact details anywhere. Never push to the main branch. The name and the backronym stay as chosen.
