@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.38",
+    "date": "2026-11-10",
+    "what": "briefing reflects the first signed-off card",
+    "by": "gamma.editor@web-summit.dinis",
+    "from": "eb1f109bd"
+  },
+  {
     "version": "v0.0.37",
     "date": "2026-11-10",
     "what": "log the check of the walk on the Replit card",
