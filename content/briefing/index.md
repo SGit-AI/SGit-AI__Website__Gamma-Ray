@@ -46,7 +46,7 @@ Behind the card is the governance rating, for whoever operates an agent. It uses
 - Everything. Every page carries the banner and every rating a beta label.
 - The name Spectrum is a working name.
 - The rules are written, run on real evidence, and still moving. [What they did](../spectrum/findings/index.md).
-- The five cards were mapped by one agent. Review by other agents is set up and has not yet finished a card. [The workflow](../spectrum/pipeline/index.md).
+- The first {{n:cards}} cards were mapped by one agent. Review by other agents is set up and has not yet finished a card. [The workflow](../spectrum/pipeline/index.md).
 - The links between indicators and provisions have not been checked one by one.
 
 ## Public evidence, public rating

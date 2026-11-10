@@ -42,7 +42,7 @@ Maturity standards for agents ask many of the same things in different words. We
 - [The mashup](mashup/index.md): the graph, and what would not compress.
 - [Coverage](coverage/index.md): how much of each instrument can be read from outside.
 - [The lens](lens/index.md): mandate, grant and delta, and how the grant changes a level.
-- [Scans](scans/index.md): our own agents, and three products as examples.
+- [Scans](scans/index.md): our own agents, and {{n:products}} products as examples.
 
 ## Where this is
 
