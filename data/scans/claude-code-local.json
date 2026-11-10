@@ -515,6 +515,49 @@
       "finding": "Levels three and four on the card: A4, C4. A4: A3 (I08, I18, S1) with I10 default and I18. The argument is above: the mode of I18 may make it default, which strengthens the chain, while S1 is a rollout count that the customer itself says is not autonomous work. C4: two opt-in facts, with caveats above. R2 (I10, I11), O2 (I22, I58, I61) not argued; they are not level three or four. Verdict changes: the contradiction in the modes must be settled before a level is read off this card."
      }
     ]
+   },
+   {
+    "round": 3,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I45",
+      "severity": "should-fix",
+      "finding": "Round two asked for three facts in the note; the note now has them and each is true on the sandboxing page (read 2026-11-10): \"The sandbox is off by default\", the sandbox covers shell commands only while file tools run outside it, and \"Claude can ask to run a command unsandboxed\" with allowUnsandboxedCommands false as the way to turn that off. But the page the answer cites, https://code.claude.com/docs/en/sandboxing, is not in the scan's captures, so it has no recorded hash, and Control 4 rests on it. Run tools/capture.mjs for this scan so the page is captured and hashed. The same page also says commands run unsandboxed on native Windows and that MCP servers and hooks run outside the sandbox; the note could carry the Windows line, since the card is read as a boundary for the terminal product. Partly answered."
+     },
+     {
+      "answer": "I48",
+      "severity": "should-fix",
+      "finding": "The caveat finding is answered: the note now says it applies only where an organisation deploys managed settings, and the settings page does say \"Nothing in your own settings files or --settings overrides a managed key\". Two problems remain in the note. First, \"hooks run on every tool call and can block it\" is not on the cited settings page (it shows a hooks example and says no hooks run by default; I found no statement there that hooks block a call), and the hooks page is not a source of the scan. Cite a captured page that says it, or cut the clause. Second, a full stop is missing: \"not a policy It applies only where\" should read \"not a policy. It applies only where\". Partly answered."
+     },
+     {
+      "answer": "I18",
+      "severity": "note",
+      "finding": "Round two must-fix answered. Verified on the permission modes page: \"With Claude Code v2.1.283 or later, auto mode is the built-in starting permission mode for interactive terminal and VS Code sessions\"; the span \"approve the action so Claude may retry\" is exact (7 words) and the blocked-action text matches. I18 is default, I16 and I38 are available under the new Manual mode configuration, \"As shipped\" says auto mode, and no answer still describes Manual mode as the start. Left out of the notes, from the same page: below v2.1.283 the start is auto only on Pro, Max, Ultra and Team plans (v2.1.228 or later is needed for the built-in auto default at all); claude -p and the Agent SDK start in Manual; auto mode requires a supported model and an organisation can turn it off. A reader on an older version or a managed machine gets a different As shipped. One clause in the configuration note would cover it. The indicator is a person approving critical decisions only; here a classifier decides first and the person approves what it blocks, which the studio argued in round one and I leave as a judgement for sign-off."
+     },
+     {
+      "answer": "I56",
+      "severity": "note",
+      "finding": "Answered. The span \"so Claude Code adds Co-Authored-By: <name>\" is exact on the settings reference (7 words), the note says what the page says (trailer naming the model in use; attribution.commit changes or hides it), and the pull request wording is gone. The credit stays weak for the indicator: the trailer is read by people reviewing commits, not by people the agent talks to. Openness 1 does not depend on it, since I22 gives the same level."
+     },
+     {
+      "answer": "I45",
+      "severity": "note",
+      "finding": "Changed-answer check of mode and grade: documented and available with cfg sandbox is right for an opt-in sandbox; the indicator scope allows a documented sandbox on a Spectrum card if the note says what enforces it, and the note does."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A4 R2 C4 O2 (computed). A4 is I08 and I18 for Acts, then I10 default for the second step; I12 (agent teams, experimental and disabled by default) is an alternative. Without I18 the card falls to A2 on I16 (Manual, available), so Autonomy rests on one fact whose truth depends on version, plan and organisation policy; without I10 it stays A4 through I12. C4 is I45 plus I48, both opt in, and the notes now say so (shell commands only, escape hatch, managed settings only where deployed); remove either and Control is 3, held by I41, I39, I43, of which I41 and I43 are available under managed settings. Control 4 is therefore not a property of the product as shipped; the card must show its configuration. S1 is gone and Autonomy does not use it. The publication rule (level one or more in at least one dimension) is met many times over."
+     },
+     {
+      "answer": "S1, I18 and the configurations, I41, I43, I56, S2, I61, I23, I39, not_credited, I04, I08, I10, I11, I16, I20, I21, I22, I38, I46, I57, I58, I63, S3, I12",
+      "severity": "pass",
+      "finding": "Verified against the live pages. S1 is removed and the not_credited entry is true: the Stripe page says \"Deployed Claude Code to 1,370 engineers\" and \"reframed AI assistants as capable new engineers who need context\"; the page is captured. I39 span is exact and Ctrl+C is on the interactive mode page. S2 span \"Third-party plugins that their authors submitted to Anthropic\" (8 words) is exact, and authors' own marketplaces are on the same page. I61 span (9 words) is exact. I23, I41, I43, I46, I12, I04, I63, I57 match their pages. The configuration entries are consistent with the answers (cfg manual, sandbox, managed, rules, mcp, teams all exist). Nothing else changed since the round two commit."
+     }
+    ]
    }
   ],
   "note": "Published as an example on 10 November 2026, before the review workflow existed. Mapped by one agent. It goes through two rounds of review next.",
