@@ -19,7 +19,7 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "round-1",
+  "status": "round-2",
   "rounds": [
    {
     "round": 1,
@@ -121,6 +121,69 @@
       "answer": "S1, S4",
       "severity": "pass",
       "finding": "Neither is claimed, correctly. S1: the two sources set aside (a 5% developer survey figure and Marketplace downloads) are not sessions, tasks or pull requests, so not crediting them is right and the In production badge stays off. S4: nothing found shows Junie exposing an interface for agents to call. The site OpenAPI covers website endpoints. Junie CLI supports ACP (a protocol where editors drive the agent) and the scan lists remote ACP as announced; ACP is not an MCP server, agent card or API documented for agent use, so a person could decide whether it counts, but the pages read do not evidence it as such."
+     }
+    ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I25",
+      "severity": "should-fix",
+      "finding": "Partly answered. The claim that Junie runs with the workflow token is dropped and the note now describes the template permissions (contents, pull-requests and issues set to write), which are on the page. But the span, 'You can adapt the templates to configure triggers, permissions, branches, or output', is a generic sentence about customising templates. It does not show the three scopes or any narrower access; the scopes are in the YAML block that round one asked the span to be anchored on. The note's main claim is therefore outside the span. Use a span from the permissions block if the text allows, or word the note as only what the span says (permissions can be adapted) and decide whether that is I25 at all. Mode available and cfg github-action are right. Control 2 no longer depends on I25 alone, since I23 now gives a second route."
+     },
+     {
+      "answer": "I23",
+      "severity": "should-fix",
+      "finding": "Round-one note answered in substance (the Spectrum reading of the scope allows documented permission scopes; the page lists five action types: fileEditing, executables, mcpTools, readOutsideProject, readSecretFile, each with allow or ask rules; verified on the live page). But the span, 'Each rule must specify either a prefix or a pattern', says how a rule is written and enumerates nothing, so the span does not support the note. Control 2 (default) now rests on I38 plus this answer, so re-anchor the span on the list of action types (for example the sentence naming readOutsideProject or readSecretFile). Also note that I23 is needs: operation with grade documented; the card counts it under the Spectrum reading, which the scope text permits; the note should say it is a documented list, not a measured grant. Mode default is defensible: the five types exist as shipped, though the rules are the user's file."
+     },
+     {
+      "answer": "I45",
+      "severity": "note",
+      "finding": "Answered. Span 'wraps every agent-issued terminal command in an OS-level sandbox' is on the CLI page (9 words); the page marks sandbox mode Early Access, available on macOS and Linux, off unless started with --sandbox or /sandbox, and says MCP servers, hooks and operations performed directly by Junie CLI outside those tools are not isolated. Mode available and cfg sandbox are right. One wording point: the note says it limits filesystem writes; the page says it limits filesystem access and restricts native edit tools (a denyWrite list exists in the policy). Say access. Control stays 2: level 3 is not met and level 4 would also need I27, I28 or I48 (I48 is documented, needs operation, and is not claimed as counted)."
+     },
+     {
+      "answer": "I08",
+      "severity": "pass",
+      "finding": "Answered. Note now says only what the IDE plugin page says: code mode breaks the task into a multistep plan and can autonomously run terminal commands, create files, edit code and run tests. Span found, 13 words. The default claim is gone. Mode default is still defensible for the IDE (Code mode is one of the modes the user picks, and the AI Assistant page, not cited, says it is the default), but the answer no longer rests on a claim the cited page lacks."
+     },
+     {
+      "answer": "I10",
+      "severity": "note",
+      "finding": "Mostly answered. The note now names DataGrip or the JetBrains Database plugin, which the post says. It adds that reviews from GitHub Actions or GitLab work 'once that integration is set up'; the post does not say that, it only lists GitHub Actions and GitLab as a trigger (the setup is in the GitHub page). Drop that clause or cite the page. The span covers only the database sentence, while the note lists four domains; the debugger and terminal statements are elsewhere in the same post. A4 and R2 rely on this answer, so word the note to what the span shows or add a span."
+     },
+     {
+      "answer": "I56, I46",
+      "severity": "pass",
+      "finding": "Answered. Both removed from the answers and recorded in not_credited with a reason that matches the sources: the AI Assistant page describes the product to its user, and the allowlist file and brave mode are user settings (page: sandbox policy edit needs a fresh approval). No level used either."
+     },
+     {
+      "answer": "I47",
+      "severity": "pass",
+      "finding": "Answered. Span 'define personal preferences or organization-wide rules that apply to all your projects' is on the guidelines page (12 words) and the page says guidelines are added as context to every task. Mode available, cfg guidelines right."
+     },
+     {
+      "answer": "I20",
+      "severity": "pass",
+      "finding": "Answered. Span now 'provides an interactive terminal interface for developers to review, write, and modify code', found on the CLI page, 13 words."
+     },
+     {
+      "answer": "I65",
+      "severity": "pass",
+      "finding": "Answered. The note names JetBrains Air; the Air post says Junie will be supported across all Air surfaces, and the span is in the post. The note's 'a product line that the post says will support Junie' matches."
+     },
+     {
+      "answer": "I48, I22, I61, I50, I52, I57, I58, S3, S1, S4, I04, I07, I11, I16, I17, I18, I19, I21, I38",
+      "severity": "pass",
+      "finding": "Round-one findings of note or pass level that the studio left unchanged were re-checked against the live pages or are unchanged since round one: I48 (hooks, documented, needs operation, not used by any level), I22 (headless page), I61, I50 (post quotes 61.6% resolved and 72.7% pass-at-5 from a research lead), I52 (the word independent is the post's own; no level uses it), S3 (llms.txt resolves), S1 and S4 unclaimed. All spans in the scan are found in their source and under fifteen words (checked with the helper). The studio's responses for these are true."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A4 R2 C2 O3. A4: A3 rests on I08 (default) plus I19 (available, brave mode On), and A4 adds I10 and I18 or I19. Every step of Autonomy above 2 therefore rests on the user switching brave mode on (CLI page: On executes all potentially sensitive actions without approval). If I19 and I18 are removed, Autonomy falls to 2 (I16, I07 with I04). The card marks A as available, which is honest. I08 and I10 are plain feature statements, not adjectives, but I10 is a vendor release post listing integrations, not a documented multi-system workflow; I12 and I13 are not claimed, so A4 is a user-enabled mode plus a feature list. The A4 label 'runs multi-step workflows across systems' is met by the rule text only. C2: I38 (documented, default, CLI page) plus I23; with I23 removed it rests on the available I25, whose span does not show the scopes, so the C2 evidence is thinner than the label suggests (see I23 and I25). O3: I50 plus S3 or I57. I50 is the vendor's quotation of a third party's benchmark with no link to the results; if I50 goes, Openness is 2. S3 is an artefact (llms.txt resolves) and I57 is a documented command, so the second half is firm. R2: I10 or I11; I11 (MCP, available, documented in a configuration page) holds even if I10 were removed."
      }
     ]
    }

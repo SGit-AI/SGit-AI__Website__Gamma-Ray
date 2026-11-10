@@ -19,7 +19,7 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "round-1",
+  "status": "round-2",
   "rounds": [
    {
     "round": 1,
@@ -91,6 +91,79 @@
       "answer": "I13, I14, I12, I38, I22",
       "severity": "pass",
       "finding": "Spans found exactly in their pages: A2A page (collaborate with external agents), the connector page (supports only A2A 0.3.0, agent card, authentication mechanisms listed), the workflows page (chain multiple agents sequentially), the patterns page (stops and alerts a human), the guardrails page (other languages can bypass safety filters). Modes available for the A2A, workflow and human activity answers fit: each needs a connection or builder step, and the configurations list says so."
+     }
+    ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "S1",
+      "severity": "should-fix",
+      "finding": "Round one finding partly answered. The note now says the Customer Support Agent results are expectations, and the span 'It helps us equip our consultants with innovative AI tools' is exact in the case study (10 words). But the page still gives no figure that belongs to an agent built on Agent Workbench: the only agent figure on the page ('4 AI agents in production since early 2024') predates the product and is not tied to it, the page says only that 'some of the applications are augmented with AI capabilities and built using Agent Workbench', and the quote speaks of AI tools for consultants, not of an agent acting on its own. Under the S1 scope (a customer named, for the capability that acts; a roadmap does not count) the fact is weak for grade documented. Either say in the note that no usage figure or named agent is tied to Agent Workbench and that the page's agent count dates from before it, or lower the grade. Effect: only the In production badge; no level changes."
+     },
+     {
+      "answer": "I25",
+      "severity": "should-fix",
+      "finding": "Changed answer (note rewritten) is not fully supported. The span 'You provide the agent with a set of available actions' is exact on the action-calling page. The note adds 'not every action in the app or tenant' and 'including imported MCP tools'; the page says nothing about the rest of the app or tenant (it is the studio's inference) and mentions MCP tools only in a sentence about typing their output fields. Also the page does not say under which identity the actions run, so it is a tool allowlist, not narrower access than the account. I25 carries Reach 3 (with I14) and Control 2 (with I38), so it matters twice. Reword the note to what the page says (the builder gives the agent a set of server actions; an MCP tool's output is typed when it can be) and drop the tenant claim."
+     },
+     {
+      "answer": "I08",
+      "severity": "pass",
+      "finding": "Round one finding answered. I08 now cites the action-calling page; the span 'The AI model autonomously decides which action (or sequence of actions) is appropriate' is exact there (13 words), and the note ('call the server actions granted to them, the AI model deciding') matches the page. Grade documented, mode default fit."
+     },
+     {
+      "answer": "I11",
+      "severity": "pass",
+      "finding": "Round one finding answered. Mode is now available with a new mcp-connection configuration. The new span 'create a connection in ODC Portal, import selected tools, then reference them' is exact on the MCP page (12 words); OAuth, System to system OAuth, API key and No auth are listed on that page, so the note is supported. Indicator I11 (an external tool across a trust boundary) fits. No level depends on it (Reach 2 also from I10)."
+     },
+     {
+      "answer": "I41",
+      "severity": "pass",
+      "finding": "Round one finding answered. I41 is removed from the answers and listed under not_credited with a reason that matches the monitoring page (filter by agent, four weeks, no statement that tool calls are logged). Control stays 2; I41 was not needed."
+     },
+     {
+      "answer": "I48",
+      "severity": "pass",
+      "finding": "Round one note answered. I48 is needs operation, graded documented, so the scorer does not count it; card output confirms Control 2 does not use it. Span 'Guardrails check each agent call in real time' is exact on the guardrails page (the note's 'can block it' is on the same page). Keep it uncounted."
+     },
+     {
+      "answer": "S3",
+      "severity": "pass",
+      "finding": "Round one finding answered. The note now names only the www llms.txt, which is the answer's source and is among the captures. I fetched it: it resolves and holds the span 'OutSystems combines low-code simplicity with AI software development'. Observed is right. It does not move Openness (I50 is missing)."
+     },
+     {
+      "answer": "I12, I13, I18, I10 (Autonomy 4)",
+      "severity": "note",
+      "finding": "Round one note: no change made by the studio, and the response only restates the scan's own reading. Not a defect that blocks, but see the 'levels' finding: Autonomy 4 rests on one fact."
+     },
+     {
+      "answer": "I14, I25 (Reach 3)",
+      "severity": "note",
+      "finding": "Round one note: no change by the studio. The label 'Open protocol' / 'published agent interface' still rests on a client-only A2A connector; the card should carry the configuration text (ODC acts as A2A 0.3.0 client only), which the configurations do show. Not a blocker."
+     },
+     {
+      "answer": "I25, I38 (Control 2)",
+      "severity": "note",
+      "finding": "Round one note: no change, fine. I38 span 'alerts a human user to provide verification or a decision before proceeding' is exact on the patterns page. See the I25 finding for the note wording."
+     },
+     {
+      "answer": "I22, I58, I61 (Openness 2)",
+      "severity": "note",
+      "finding": "Round one note: no change. Verified: I22 note matches the guardrails page (files not analysed; Basic coverage regions Canada Central, Sao Paulo, London support English, French, Spanish only; two unsupported regions, Cape Town and Hong Kong). I61 'trial models' is on the models page. I22 is about guardrails only, and I58 describes grounding in general, so Openness 2 rests on two loose answers if one of three is weak; it holds with any two."
+     },
+     {
+      "answer": "levels",
+      "severity": "should-fix",
+      "finding": "Arguing against level three and four. Autonomy 4 (Orchestrates): level 3 needs I08 plus one of I17, I18, I19; level 4 needs I18 or I19 explicitly, and I19 is not claimed, so I18 is the single fact the level hangs on. Remove I18 and Autonomy falls to 3 (I17 still meets level 3). I18 is a documentation sentence about a builder pattern: 'Agents may require human oversight for high-stakes decisions or when their confidence is low' is permissive ('may'), and the indicator reads 'the person approves critical decisions only'. It is an artefact (a dated documentation page) but states a possibility, mode available, in a hitl-workflow configuration that is not on by default; the card shows it as available, which is honest, but a reader of 'Orchestrates' will not see that the only route to level 4 is an optional human step plus I08 from a separate page. The remaining pieces are better: I12 (workflow chaining, 'Each agent has an independent lifecycle') and I13 (A2A delegation) are specific documentation statements; I10 is a product-page FAQ line, marketing-grade, and should not be relied on (I12 or I13 carry the 'any' clause). No operation, usage or customer fact supports the power side (S1 is weak). Reach 3: needs I14 and I25; I14 is a precise artefact (A2A 0.3.0 connector, agent card) but available and client-only, I25 is a tool allowlist read as 'narrower access'. Remove either and Reach is 2. The Reach 3 name (published agent interface, Open protocol badge) overstates a connector that lets ODC agents call others, not one that others call. Recommend the card keep the available marks and the client-only note visible beside Autonomy 4 and Reach 3; no level change is forced, but the I18 and I25 wording (see above) must be tightened first."
+     },
+     {
+      "answer": "I03, I10, I20, I17, I39, I40, I21, I47, I13, I14, I12, I38, I22, I18, I58, I61, S3",
+      "severity": "pass",
+      "finding": "Checked all 22 answers plus S3 for span presence (all exact in their cited source, none over fifteen words; longest are 14: I18 and I21), mode and grade against the pages: A2A connection, hitl-workflow, agent-workflow, mcp-connection and guardrails modes are available and match the configurations. No note names a page, figure or name absent from the sources; the announced item about Mentor access enforcement was checked against its page (it says 'OutSystems is rolling out Mentor access enforcement in phases') though that page is not in the captures. No em-dash found in the scan. Card signature A4 R3 C2 O2 reproduced with node."
      }
     ]
    }

@@ -19,7 +19,7 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "round-1",
+  "status": "round-2",
   "rounds": [
    {
     "round": 1,
@@ -71,6 +71,39 @@
       "answer": "levels",
       "severity": "note",
       "finding": "Card A4 R3 C2 O2 (recomputed). Levels 3 or 4: Autonomy 4 (above) and Reach 3 (S4 plus I25: hosted MCP server, API key permissions, selected tools). Both rest on vendor documentation artefacts, no adjectives. Control 2 is I38 (available, Require Approval or HITL) with I23 and I25. Control 3 and 4 are not reached; I45 is credited (sandbox, available) but Control 4 also needs one of I27, I28, I48. Openness 2 is I22, I58, I61. The product-shape rules apply: per-configuration, no governance level."
+     }
+    ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A4 R3 C2 O2 (recomputed). Arguing against the level three and four facts. Autonomy 4 rests on I08 (default), I10 (default) and I18 (documented, available, hitl). I18's span is a single documentation sentence, Use HITL as a safety net for high-stakes decisions, from a list of when to enable the Human in the Loop tool; it documents an option an agent owner may switch on, not how any Noxus agent is shipped or run. Remove I18 and Autonomy falls to 3 (the card marks the level as available, which is honest). I10 rests on a catalog page that lists connector categories, so it shows breadth offered by the platform, not one agent working across systems; the one deployed fact, I17 (CUF routes complex cases to staff), is a vendor-written case study. I12 and I13 are rightly not credited (the single sentence on multi-agent environments on the what-is-noxus page does not describe one agent coordinating others; verified). Reach 3 rests on S4 (hosted MCP server, API key permissions gate the tools; verified on the MCP overview page, including that a key without the sandboxes:run permission cannot start sandboxes) plus I25 (tools, flows, knowledge bases and database connections selected per agent). Both are dated documentation statements, not adjectives, and both are default mode, so no mode caveat is needed. Remove S4 and Reach drops to 2 at most; remove I25 alone and the effect depends on the Reach 3 rule, which I did not find to fall back on another credited fact. Residual weakness: all level three and four facts are vendor documentation of capabilities, with only I17 and S1 tied to a deployment, and I18 is the single sentence between Autonomy 3 and 4."
+     },
+     {
+      "answer": "I03, I10, I25, I58, S4",
+      "severity": "note",
+      "finding": "Changed answers re-checked in full. I03: span (no-code builder) is on the what-is-noxus page and the narrowed note now matches it. I25: note now states that SQL runs with that connection's privileges, which the tools page says (queries run with that connection's privileges); read-only SQL and the Allow edits switch for tables are on the same page. I58: source moved to platform/agents/tools; the span Query, and optionally edit, workspace tables is on the page (6 words, apostrophe-free match), and the note's three items (knowledge bases, connected databases queried read-only, workspace tables) are all on that page. A small point only: the span covers the tables item, not the whole note, which is acceptable because the indicator is about data being described. S4: the authorisation clause is on the MCP overview page (Authenticate with a workspace API key; tools are gated by that key's permissions); span, grade and mode unchanged and fine. Grades and modes of all four are right."
+     },
+     {
+      "answer": "I45",
+      "severity": "note",
+      "finding": "Not a round-one finding. The I45 span differs from the sandbox page only by a straight versus curly apostrophe (the page has the curly one); the words are the same, 11 words. The note's claim that the sandbox sits outside the agent is supported by the page (each Syd sandbox has its own filesystem and process namespace, isolated from the platform), and the sandboxes:run sentence is on the page. Mode available is right (a per-agent tool). No change needed."
+     },
+     {
+      "answer": "I39, I10, I41, I08, I17, I18",
+      "severity": "note",
+      "finding": "Round-one notes with a studio reply of no change were re-checked and the replies are true. I39: the OpenAPI file's Public Stop Run response is PublicSimplifiedRun, whose properties include workflow_id and node_ids and no agent id, so the studio is right that it stops a flow run, and the not_credited entry says so. I41: the logging page text is unchanged and the indicator is not used by any level. I10: note claims only several suites. I18, I10, I08, I17: no change, and Autonomy 3 versus 4 is explained honestly in the studio response. The not_credited entry for I12/I13 matches the what-is-noxus sentence (verified)."
+     },
+     {
+      "answer": "I04, I08, I11, I17, I20, I21, I22, I23, I26, I38, I41, I45, I47, I54, I57, I61, S1, S3, S4, I58, I03, I25",
+      "severity": "pass",
+      "finding": "Round-one findings: 12 in total (one grouped pass, I58 should-fix, I03, I10, I39, I41, I25, the I18 group and levels as notes). All answered: I58 answered (re-sourced, span and note verified on the tools page), I03 answered (note narrowed), I25 answered (privileges sentence added, authorisation fact placed on S4 and verified), I10, I39, I41, I18 group and levels answered or correctly declined with a true reason. Every changed answer was re-fetched on 2026-11-10: all spans are in their sources and under fifteen words, grades are documented or observed (S3), modes are default or available as the pages say, and indicators fit their scope (I23 documented tool list is allowed on a Spectrum card). Source captures were refreshed (read_at 13:47Z, new hashes) and the old concepts/agents capture was dropped with the I58 move. Check D: no note names a page, figure or name absent from the sources (Syd, sandboxes:run, CUF, Phoenix, Langfuse, OpenAPI 3.1.0 all found). No em-dashes, addresses or at-signs seen in the new text."
      }
     ]
    }

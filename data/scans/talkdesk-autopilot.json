@@ -19,7 +19,7 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "round-1",
+  "status": "round-2",
   "rounds": [
    {
     "round": 1,
@@ -86,6 +86,49 @@
       "answer": "levels",
       "severity": "note",
       "finding": "Card computed: A4 R2 C1 O1. Autonomy 4 uses I10, I12 and I19: level 3 comes from I08 and I17 (default, as shipped), and level 4 needs I19, which is available only with CXA Operations Center and rests on a product page feature statement. Without I19 the card would read A3. Level 4 is also reached via I10 on the other half of its rule, so I12's weakness does not matter. Reach 2 rests on I10 and I11 (documented statements). Control 1 rests on one example prompt (I47). Openness 1 rests on two statements (I20, I58). No level 3 or 4 on the card rests on an observed or measured fact; all are vendor statements graded documented, which is consistent with the product-shape rule of rating a product as its vendor documents it. Capture hashes exist for all eight sources."
+     }
+    ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "S1",
+      "severity": "should-fix",
+      "finding": "Round-one S1 finding is not fully answered. The studio response and the not_credited reason say the 60% containment quote is about answering calls, that the Quadient story names Copilot and Knowledge Management, and that a Novobanco story ties Autopilot to call redistribution. None of that is in a source of the scan: the Autopilot page carries only the quote (\"When we launched Talkdesk, we immediately saw a 60% containment rate\") with the speaker's title at Quadient and a READ STORY link; the name Novobanco appears in no captured source, and the quote does not say calls. Either add the linked story pages as sources (and read them) or reword the reason to what the page says: the page quotes a customer on a containment rate, does not say the figure is for the capability that acts, and the linked stories were not read. No level depends on it."
+     },
+     {
+      "answer": "I58",
+      "severity": "note",
+      "finding": "Round-one point is only partly answered: the span names Talkdesk Data Cloud only, yet the note still also names Knowledge Management content and interaction history. Knowledge Management is on the same page in a different sentence (searching and extracting information from Talkdesk Knowledge Management), so it is true, but the span does not carry it. Shorten the note to the span or use a second span. Level effect: Openness 1 needs I20 plus one of I56, I22, I58, so I58 is the only support for O1."
+     },
+     {
+      "answer": "I19",
+      "severity": "should-fix",
+      "finding": "Round-one finding is answered on the note (it now says only monitor, inspect and enforce guardrails, matching the span, which I verified exact in the page, 9 words, mode available with ops-center). But the indicator reads: the agent has full autonomy within boundaries and the person monitors. The span supports the person-monitors half only; nothing in it says the agent has full autonomy within boundaries. The page heading says Resolve requests autonomously, and the Frank scenario says it is able to autonomously make the change, so the other half could be shown with a second span or a note naming that heading. As it stands Autonomy 4 rests on an indicator whose first half is not in its span."
+     },
+     {
+      "answer": "I03, I08, I10, I11, I17, I20, I47, I65, I67, S3",
+      "severity": "pass",
+      "finding": "All changed answers re-checked against freshly fetched pages. I08: span exact (7 words), note now says worked customer scenario, true (the Frank example). I10: span exact (10 words), note now names refunds, re-routing shipments and appointments, true in the email blog; note says Autopilot for email, right. I47: span exact (12 words), note says sample natural-language setup prompt and escalation on a medical emergency, true (the page prompt continues with bereavement fare, fine). I67: span exact (12), note says the product page lists a dashboard feature, true, tier declared right. S3: span exact (10), llms.txt re-read (3357 bytes), unsourced docs.talkdesk.com sentence gone, note now says site-level, observed with method probe fits scope. I03, I17, I20, I65, I11 unchanged and still match their pages. I11 note says external tools and services of third parties: the page says MCP lets agents invoke external tools and services and talk to third-party AI platforms, close enough, default stays defensible and no level depends on it alone (R2 also has I10). Indicator fit checked against scope for each."
+     },
+     {
+      "answer": "I08, I12, I41, I57",
+      "severity": "pass",
+      "finding": "Round-one findings on I08 (note now says vendor scenario), I12 (removed, now in not_credited with the scope reason, which matches the blog text), I41 (removed, reason true: the Operations Center page says traces and diagnosis but not tool calls or actions) and I57 (removed, reason true) are answered in the scan as it stands. Round-one finding on I47 (sample prompt) answered: note reworded. I67 note and S3 note answered. I11 and the pass finding on I03, I10, I17, I20, I65 stand. Of the 12 round-one findings, 11 are fully answered; S1 is not; I58 is only partly answered, and I19 is answered on the note but not on the missing autonomy half."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A4 R2 C1 O1. Argument against level 3 and 4. Autonomy 3 rests on I08 (a vendor worked scenario about one imagined customer, 7-word span) plus I17 (routine/complex handoff statement); it is a documented page statement, not observed. If I08 goes, Autonomy drops to 2 at most (I16 or I07 are not credited), so A3 hangs on a single marketing scenario. Autonomy 4 needs I19, which is mode available (CXA Operations Center, a separate product), and its span lacks the full-autonomy half; without I19 the card is A3. The I10 half of the level-4 rule comes from the email blog only and describes the email channel. The card does show A4 as available, which is honest, and no level three or four rests on an observed fact; all are vendor statements graded documented. Reach 2 uses I10 and I11 (default) and survives losing either. Control 1 rests only on I47, a sample prompt in a press release, and drops to none if it is removed (the page sentence on guardrails could be argued for I38, not credited). Openness 1 rests on I20 plus I58, whose span covers Data Cloud only. No level 3 on Reach, Control or Openness, so nothing else to argue."
+     },
+     {
+      "answer": "all",
+      "severity": "pass",
+      "finding": "Style: no em-dashes, no at-signs, no contact details in the scan data I read. Part D: notes name pages and facts present in sources, except the S1 not_credited reason (Novobanco, Quadient story contents, calls), reported above."
      }
     ]
    }

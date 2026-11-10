@@ -19,7 +19,7 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "round-1",
+  "status": "round-2",
   "rounds": [
    {
     "round": 1,
@@ -66,6 +66,64 @@
       "answer": "I03, I10, I11, I17, I18, I20, I21, I36, I38, I40, I54, I58, I67, I68, S3",
       "severity": "pass",
       "finding": "Checked against the fetched sources: spans found and exact (apostrophe differences ignored), all under fifteen words (longest I58, 14 words), credited to indicators whose text they show. I03 llms.txt describes Agent Builder as no engineering. I11 escalation blog names Genesys Cloud CX API v2 and Salesforce Service Cloud REST API. I17 and I18 Control Tower page ('Guide the Edge Cases', 'Validate for Sensitive Actions'); mode available is right because the blog says operators configure which nodes need validation. I20 llms.txt. I21 EU AI Act blog says each node defines data access, logic, outputs and escalation conditions, graded documented, tier declared is fine. I36 llms.txt names GDPR and the EU AI Act as 'aligned', which is a self-description, not a legal determination; documented is acceptable. I38 mode available: the page does not say it is on by default. I54 status page shows a 28 September 2026 incident, call gateway, with Investigating, Identified and Resolved updates with times (investigating span is from 2:46 PM UTC); public status page, grade documented fine. I58 enterprise FAQ. I67 and I68 are marketing statements, graded documented and tier declared, no level used. S3 llms.txt resolves (observed, fetched 2026-11-10, capture hash recorded)."
+     }
+    ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I56 / O1",
+      "severity": "should-fix",
+      "finding": "The studio's reply is true as far as it goes: the scan note now says I56 is shown for the AI-disclosure fact and that Openness 1 stands on I20 and I58, and the card computed here confirms O1 uses I20, I56 and I58 with I58 alone sufficient. But the I56 note still names the Glovo deployment ('many restaurant partners never realised they were speaking with AI') and not_credited cites https://www.getvocal.ai/customers/glovo as its source. That page is not among the nine captured sources of the scan (captures list has no Glovo URL), and the sentence appears in none of the nine fetched pages. I fetched the live Glovo page myself: it says 'Many restaurant partners never realized they were speaking with AI' (so the claim is true), but a note and a not_credited entry resting on an uncaptured page break the rule that every answer has a public, captured source. Add the Glovo page to the sources and capture it, or drop the Glovo sentence from the I56 note and the not_credited entry. The same applies to the configuration note 'seen in one deployment' which is fine. Round one's Equans problem recurred in a smaller form."
+     },
+     {
+      "answer": "I08, I40, I48",
+      "severity": "pass",
+      "finding": "Answered. The three spans do not appear in the visible stripped text, but I confirmed each exactly in the raw HTML: voice FAQ JSON-LD ('...so the agent can update a booking or a customer record exactly as your policies allow'; '...it escalates to a human operator instead of improvising'), and the control-tower raw ('...but it cannot take actions the graph does not contain'). Spans are under fifteen words. The notes now say 'An FAQ answer on the ...' and name the question, which fixes the reader's problem. Grades documented and mode default are fair. Minor: the I08 note adds 'through scoped integrations', which is in the same FAQ sentence group ('agents act through scoped, permissioned integrations'), so it is supported."
+     },
+     {
+      "answer": "I39",
+      "severity": "pass",
+      "finding": "Answered. I39 is gone from answers and is listed in not_credited with a reason that matches the pages (take-over of one conversation and override are not pause or stop; kill switch appears only as advice). The note does not name any page not in the scan: the not_credited source is the captured control-tower page. Control 3 stays out of reach, correctly; card output shows C1 with next I23."
+     },
+     {
+      "answer": "I41, I48",
+      "severity": "pass",
+      "finding": "Answered. Both remain documented, needs operation, so they are not counted (card output: Control uses only I38). I41 span ('GetVocal generates an immutable audit trail for every AI action' region) still found in the escalation blog raw text, and the I41 note's list (graph node, data sources accessed, timestamp) matches the blog sentence. I48 note now states it is an FAQ answer and the span is exact in the control-tower raw."
+     },
+     {
+      "answer": "S1",
+      "severity": "pass",
+      "finding": "Answered. The Equans sentence is removed. The note now says Nicomatic's Sam 'logs confirmed production events in the ISO database, notifies the supervisor and escalates when required'; the Nicomatic page says 'Sam automatically logs the event in the ISO database, applies the correct data-handling rules, notifies the supervisor and escalates when required', so it is supported. Weak point worth knowing: the page names the customer and the deployment (sites in France, UAE, India, Senegal, Morocco) but gives no usage figures, so S1 rests on 'names a customer for the capability that acts', which the scope permits."
+     },
+     {
+      "answer": "S4",
+      "severity": "pass",
+      "finding": "Answered by agreement, no S4 answer. I looked for an MCP server, agent card or agent-facing API in the fetched pages and llms.txt and found none; the REST API in the escalation blog is a handoff payload GetVocal sends to a customer's agent desktop."
+     },
+     {
+      "answer": "I10",
+      "severity": "note",
+      "finding": "Changed since round one, re-checked. Span 'Agents handle voice and chat across your existing stack (CRM, CCaaS, telephony, helpdesk)' is exact in llms.txt, 13 words, indicator I10 (several domains or systems) fits, grade documented, mode default. The weakness: this is a single marketing sentence on llms.txt. Any one of I10, I12, I13 satisfies the A4 and R2 rules, and I10 is the only one answered for Autonomy; R2 has I11 as a second, more specific source (named Genesys Cloud and Salesforce integrations in the escalation blog). The studio answered the round-one finding; nothing wrong remains."
+     },
+     {
+      "answer": "scan note and not_credited wording check",
+      "severity": "note",
+      "finding": "Changed notes check (D). I08, I40, I48, I10, S1 notes name only pages in the scan. The I56 note's mention 'the EU AI Act blog advises deployers to add a disclosure node' is supported ('Implement Article 50 disclosure nodes', 'Disclosure node as first step in every Context Graph'). The I56 span ('clear disclosure that the caller was speaking with a virtual assistant', 11 words) is exact in the telecom page ('Each interaction began with clear disclosure that the caller was speaking with a virtual assistant'). The only uncaptured reference is Glovo (see I56 finding)."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Arguing against A4, R2, C1, O1. A4 = I08 plus I17 or I18 (A3), plus I10, plus I18. It rests on three vendor-prose statements: one FAQ sentence in JSON-LD (I08, 'the agent can update a booking or a customer record'), the llms.txt stack sentence (I10), and the Control Tower 'Validate for Sensitive Actions' feature (I18, mode available, only when operators configure validation nodes). These are dated page statements, not adjectives, but none is observed or measured; the only concrete deployment (Nicomatic's Sam logs events, notifies the supervisor) supports I08 in practice and is not cited under I08. Without I18, A falls to A3 (I17 also satisfies A3 but A4 needs I18 or I19); without I08 the A3 and A4 rules fail and the dimension drops sharply. So A4 hangs on I08 and I18 together, and the card correctly marks A as available. 'Orchestrates' is a strong label for 'works across several systems' given only capability statements. R2 rests on I10 and I11, either sufficient; I11 is a specific, documented fact (REST API, Genesys Cloud CX API v2, Salesforce Service Cloud REST API), so R2 survives removal of I10. C1 (a stated level one) rests only on I38, from llms.txt plus a blog saying operators configure validation nodes; it is mode available, shown as such, and removing I38 would give no Control level (I47 is not answered). O1 stands on I20 plus I58 without I56. I20 is a vendor description of purpose in llms.txt and the FAQ; adequate. Modes are shown honestly (A4, C1 marked available; O1 and R2 default). Remaining suggestion only: consider citing the Nicomatic page as a second source for I08."
+     },
+     {
+      "answer": "I03, I11, I17, I18, I20, I21, I36, I38, I54, I58, I67, I68, S3",
+      "severity": "pass",
+      "finding": "Re-verified against live fetched sources: spans exact and under fifteen words (longest I58, 14), right indicators, grades and modes consistent. I54: status page shows Sep 28, 2026 incident with timed updates (4:11 PM and 5:04 PM UTC on the page); note supported. I36: llms.txt names GDPR and EU AI Act as alignment, a self-description, documented is acceptable. I03 fits the scope of a no-engineering builder. S3: llms.txt resolves, observed, hash recorded."
      }
     ]
    }

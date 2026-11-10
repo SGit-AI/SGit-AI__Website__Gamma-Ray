@@ -19,7 +19,7 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "round-1",
+  "status": "round-2",
   "rounds": [
    {
     "round": 1,
@@ -66,6 +66,34 @@
       "answer": "levels",
       "severity": "note",
       "finding": "Card computed with node: A4 R2 C1 O2. A4 uses I10 and I18 (I18 flagged available). R2 uses I10 and I11, next unlocks I13 and S2. C1 uses I38 only, next I23. O2 uses I22 and I58, next I50. Levels 3 and 4 appear only in Autonomy. Every item behind them is a vendor statement graded documented; no operation was observed. The grant is stated as not measured, which is correct for a product kind. The scan is still a draft with no review rounds; the I20 span fix and the I26 source fix are needed before it moves on."
+     }
+    ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "S4",
+      "severity": "should-fix",
+      "finding": "Credit is right in substance (round one finding answered in part). The span 'Developers can connect AISLE to AI agents that support the Model Context Protocol' is 13 words and exact in the October rollout post (fetched 10 November 2026); grade documented, mode available, cfg mcp, indicator S4 fit the scope. But the note states that the announcement post 'returned 404 on 10 November 2026' and was 'captured earlier'. When fetched by this reviewer the URL aisle.com/blog/announcing-the-aisle-mcp-server answered 200 with the full post titled 'Announcing the AISLE MCP Server'; it says the server is read-only, lists five tools (issue-list, issue-detail, issue-count, fix-list, repo-list) and gives sign-in by OAuth or a personal access token. The 404 claim is false as the page stands, and the page is no longer among the scan's captures, so 'five tools' cannot be checked from the scan. Needed: drop the 404 sentence, and either re-capture the announcement post and cite it (it is the stronger source for a published, callable interface) or keep only what the rollout post says. S4 does not change any level: Reach level three needs I25 as well, and removing S4 leaves the card A4 R2 C1 O2."
+     },
+     {
+      "answer": "not_credited",
+      "severity": "should-fix",
+      "finding": "Two defects in the not_credited list after round one. (1) The entry 'OpenSSL, curl and Samba advisories credit vulnerabilities to researchers of Aisle Research' now appears twice, identical: the studio's edit duplicated it instead of only removing the MCP entry. Remove one. (2) The entry names curl and Samba, but its only source, the OpenSSL vulnerabilities page, contains 'Aisle Research' 40 times and the words curl and Samba zero times; no source of the scan supports curl or Samba. Either add a source for each or say only OpenSSL. The I26 mock-up entry is supported: aisle-security appears on aisle.com/open-source as a styled graphic, as the entry says, and I26 now rests on the OpenSSL story alone."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A4 R2 C1 O2 (S4 added changes nothing). Levels three and four are only in Autonomy, and I removed each fact in turn with node. Without I18 the Autonomy dimension is A- (no level at all, below the one-level floor), because I15, I16 and I07 are not credited and A2 has nothing else; without I08 it is also A-; without I10 the card is A3; without S4 it stays A4. So the whole Autonomy rating rests on I08 and the single fact I18. I18 is a vendor statement graded documented, and its span 'All you do is review and merge.' is a marketing line; the firmer artefacts are the FAQ 'Can AISLE merge a fix without us? No.' and 'Nothing reaches your main branch until someone on your team merges it', which show the human merge step, and the triage page 'it doesn't have to' shows that the customer chooses how far it goes. The default is not stated anywhere, so mode available is the honest choice and A4 must always be displayed with that flag; shown without it the card would claim a default behaviour no page states. A4 (I10 added) rests on one integration sentence, 'plugs into the scanners, repos, and CI you already run', naming GitHub, GitLab and Bitbucket: a dated page statement, but not an operation. Nothing is observed or measured; the grade ceiling is documented for the whole card. Recommend the display say A4 is read from vendor statements and opt-in."
+     },
+     {
+      "answer": "I20, I26, I18, S1, I41, I04, I08, I10, I11, I21, I22, I38, I57, I58, I67, I68",
+      "severity": "pass",
+      "finding": "Verified against freshly fetched sources. I20: new span 'finds, fixes, and verifies vulnerabilities in your source code' is 10 words and exact on the home page (finding answered). I26: the note now has only the OpenSSL story claim; span 'Maintainers can trigger an AISLE review simply by tagging the aisle-analyzer handle' is exact on the OpenSSL customer page, grade documented, mode deployed, note says the account was not checked (answered). I18 and A4: no change, accepted; the available flag is kept and the response is true, span exact on the remediation page (answered). S1: note now says the named customer limb is what is counted and that no pull request or task count is published; Productboard, 56 repositories and the span 'Jira ticket creation, Slack notifications, and AI-powered pull requests' are exact on the customer page; scope fits by the named-customer limb (answered). I41: documented, counts toward no level, note says documented only (answered). The eleven passed statements (I04, I08, I10, I11, I21, I22, I38, I57, I58, I67, I68) were unchanged since round one; the show check finds every span in its source and under fifteen words. Part D: every page, figure and name in the notes (Productboard, 56 repositories, Claude Code, Cursor, OpenSSL, aisle-analyzer) is in a source of the scan, except curl and Samba as listed above. Round-one findings: 8 in total, 6 fully answered (I20, I26, I18/A4, S1, I41, the grouped pass), levels answered as a note; S4 answered in substance but with a false statement in the note."
      }
     ]
    }
