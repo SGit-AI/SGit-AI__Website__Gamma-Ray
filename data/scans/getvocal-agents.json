@@ -10,7 +10,7 @@
  "basis": "GetVocal AI's own public product, blog, customer-story, privacy and status pages, and its published llms.txt",
  "seen_by_operator": null,
  "what": "GetVocal AI's voice, chat, WhatsApp and email agents for enterprise contact centres, built in its Agent Builder and supervised by people through its control console.",
- "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer.",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. I56 is shown for the AI-disclosure fact; the Openness 1 level stands on I20 and I58.",
  "grant": null,
  "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
  "vault": {
@@ -69,6 +69,64 @@
      }
     ]
    }
+  ],
+  "responses": [
+   {
+    "round": 1,
+    "answer": "I56 / O1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change to I56: mode available with the disclosure-node configuration and grade documented stand. O1 holds without I56 (I20 plus I58); we propose the scan note add one sentence: 'I56 is shown for the AI-disclosure fact; the Openness 1 level stands on I20 and I58.'"
+   },
+   {
+    "round": 1,
+    "answer": "I08, I40, I48",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Spans re-verified in the raw voice and Control Tower pages; each note now says the text is in an FAQ answer and names the question. I08 keeps the voice FAQ as its single source; Nicomatic is already the S1 source and is cited there as the concrete deployment example."
+   },
+   {
+    "round": 1,
+    "answer": "I39",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Removed: take-over of one conversation and override are not pausing or stopping the agent, and the kill-switch text is advice. Listed in not_credited; no level changes."
+   },
+   {
+    "round": 1,
+    "answer": "I41, I48",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change in grade or count: both stay documented and uncounted as operation facts; I48's note now says the text is an FAQ answer."
+   },
+   {
+    "round": 1,
+    "answer": "S1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Removed the Equans sentence from the note so it rests only on the captured Nicomatic story; the In production badge is unchanged."
+   },
+   {
+    "round": 1,
+    "answer": "S4",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Agreed, no S4 answer; nothing changed."
+   },
+   {
+    "round": 1,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "I10's span now carries the named systems (CRM, CCaaS, telephony, helpdesk), verified literally in llms.txt at 13 words. A4 R2 C1 O1 is unchanged and A4 stays marked available."
+   },
+   {
+    "round": 1,
+    "answer": "I03, I10, I11, I17, I18, I20, I21, I36, I38, I40, I54, I58, I67, I68, S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Passed; no change beyond the I10 span and the I40 FAQ wording noted above."
+   }
   ]
  },
  "assessment": {
@@ -100,15 +158,15 @@
   },
   "I08": {
    "e": "https://www.getvocal.ai/voice",
-   "n": "The voice FAQ says agents write to connected systems, such as updating a booking or a customer record.",
+   "n": "An FAQ answer on the voice page (the CRM question) says agents write to connected systems through scoped integrations, such as updating a booking or a customer record.",
    "span": "the agent can update a booking or a customer record",
    "g": "documented",
    "m": "default"
   },
   "I10": {
    "e": "https://www.getvocal.ai/llms.txt",
-   "n": "The agents are described as working across the customer's CRM, CCaaS, telephony and helpdesk systems.",
-   "span": "Agents handle voice and chat across your existing stack",
+   "n": "The llms.txt says the agents work across the customer's CRM, CCaaS, telephony and helpdesk systems.",
+   "span": "Agents handle voice and chat across your existing stack (CRM, CCaaS, telephony, helpdesk)",
    "g": "documented",
    "m": "default"
   },
@@ -164,16 +222,9 @@
    "m": "available",
    "cfg": "human-validation"
   },
-  "I39": {
-   "e": "https://www.getvocal.ai/control-tower",
-   "n": "The Control Tower page says operators can take over a conversation from the agent at once, and llms.txt says supervisors can override any agent. No page describes pausing or stopping an agent or the fleet.",
-   "span": "Operators take over instantly to protect the customer relationship.",
-   "g": "documented",
-   "m": "default"
-  },
   "I40": {
    "e": "https://www.getvocal.ai/voice",
-   "n": "Requests outside the agent's authority are described as escalated to a human operator with the conversation context.",
+   "n": "An FAQ answer on the voice page (the hallucination question) says requests outside the agent's authority are escalated to a human operator.",
    "span": "it escalates to a human operator instead of improvising",
    "g": "documented",
    "m": "default"
@@ -187,7 +238,7 @@
   },
   "I48": {
    "e": "https://www.getvocal.ai/control-tower",
-   "n": "Agent actions are described as limited to those present in the business-rule graph.",
+   "n": "An FAQ answer on the Control Tower page says agent actions are limited to those present in the business-rule graph.",
    "span": "it cannot take actions the graph does not contain",
    "g": "documented",
    "m": "default"
@@ -230,7 +281,7 @@
   },
   "S1": {
    "e": "https://www.getvocal.ai/customers/nicomatic",
-   "n": "GetVocal's Nicomatic story names the customer and says its assistant Sam logs confirmed production events in the ISO database, notifies the supervisor and escalates when required. The Equans France news item (over half of calls resolved without human intervention in 90 days) is a usage figure for resolution, mostly answering queries, and is kept only as context.",
+   "n": "GetVocal's Nicomatic story names the customer and says its assistant Sam logs confirmed production events in the ISO database, notifies the supervisor and escalates when required.",
    "span": "Sam automatically logs the event in the ISO database",
    "g": "documented",
    "m": "default"
@@ -249,6 +300,11 @@
    "what": "GetVocal's Glovo story says many restaurant partners never realised they were speaking with AI.",
    "why": "Shown because it bears on disclosure; the card counts disclosure only where a deployment is configured for it.",
    "source": "https://www.getvocal.ai/customers/glovo"
+  },
+  {
+   "what": "There is a way to pause or stop the agent (I39).",
+   "why": "The pages describe operators taking over one conversation and supervisors overriding an agent; pausing appears only as advice on what a kill switch should include, not as a described GetVocal feature.",
+   "source": "https://www.getvocal.ai/control-tower"
   }
  ],
  "announced": [],
