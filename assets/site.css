@@ -94,3 +94,9 @@ main.wide>h1{max-width:980px}
 .fr-matrix{overflow-x:auto;margin:1.4em 0}.fr-matrix table{border-collapse:separate;border-spacing:4px;width:100%;min-width:560px}.fr-matrix th{font:600 12.5px var(--sans);color:var(--ink2);text-align:left;padding:6px 8px;border:0;background:none}
 .fr-matrix td{padding:0;border:0;border-radius:8px;text-align:center}.fr-matrix td a{display:block;padding:14px 6px;text-decoration:none;color:var(--ink);border-radius:8px}.fr-matrix td a:hover{box-shadow:inset 0 0 0 2px var(--ink)}.fr-matrix td b{display:block;font:600 14.5px var(--sans)}.fr-matrix td span{display:block;font:500 11px var(--mono);color:var(--ink2);margin-top:2px}
 .fr-none{background:var(--band)}.fr-none b{color:var(--ink3);font-weight:500!important}.fr-low{background:color-mix(in srgb,var(--c-mcp) 20%,var(--paper))}.fr-moderate{background:color-mix(in srgb,var(--c-nist) 24%,var(--paper))}.fr-high{background:color-mix(in srgb,var(--accent) 28%,var(--paper))}.fr-strong{background:color-mix(in srgb,var(--accent) 58%,var(--paper))}
+main a{overflow-wrap:anywhere}
+.fr-matrix td{transition:transform .12s,box-shadow .12s}.fr-matrix td:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(20,22,30,.18);position:relative;z-index:1}
+.fr-matrix td a:focus-visible{outline:3px solid var(--accent);outline-offset:1px}.fr-matrix td a:hover{box-shadow:inset 0 0 0 2px var(--accent)}
+.fr-matrix tr:hover th:first-child{color:var(--ink);box-shadow:inset 3px 0 0 var(--accent)}
+main :is(h2,h3)[id]:target{scroll-margin-top:90px;background:var(--band);box-shadow:-10px 0 0 var(--band),inset 3px 0 0 var(--accent);padding-left:10px;border-radius:4px}
+.sp-pi{overflow-wrap:anywhere}
