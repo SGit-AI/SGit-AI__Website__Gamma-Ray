@@ -186,10 +186,76 @@
    "n": "The model family each role runs on is stated.",
    "g": "self-reported",
    "m": "deployed"
+  },
+  "S1": {
+   "e": "https://promptugal.news/newsroom/versions.json",
+   "n": "The public version record lists every release, each made by an agent of the team.",
+   "g": "observed",
+   "m": "deployed",
+   "method": "probe"
+  },
+  "S3": {
+   "e": "https://promptugal.news/llms.txt",
+   "n": "The site publishes an llms.txt and a markdown twin of every page.",
+   "g": "observed",
+   "m": "deployed",
+   "method": "probe"
   }
  },
  "kind": "deployment",
  "grant": null,
  "grant_note": "Not measured in the capability grammar. The team publishes one grant per agent as paths, hosts and tools; nobody has translated those into the 23 capabilities or probed them.",
- "moved": "Unchanged. Its logging and monitoring are now cited to run reports and hourly reviews committed in the public repository, which are observed. One answer was removed: a list of what its hooks cannot see is not a delta."
+ "moved": "Unchanged. Its logging and monitoring are now cited to run reports and hourly reviews committed in the public repository, which are observed. One answer was removed: a list of what its hooks cannot see is not a delta.",
+ "captures": {
+  "https://github.com/PrompTugal/PrompTugal__News__Website/tree/dev/board/abp/reports": {
+   "sha256": "d144416f67254b6a7c93228c8b8ce840bff1caf01cf15b31388485247c45d740",
+   "bytes": 227164,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://github.com/PrompTugal/PrompTugal__News__Website/tree/dev/board/runs": {
+   "sha256": "5903c71a92a48869d9f8442e4d8ac1225ad7e7226258546e60a1328c91ccc453",
+   "bytes": 242371,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://promptugal.news/CLAUDE.md": {
+   "sha256": "19ada272c71e1aa30d517a2cb116e88141eaf530aa88fbb3bda2afb3d901a796",
+   "bytes": 22890,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://promptugal.news/about/participant.md": {
+   "sha256": "fe1a1433327be5bc8d45aa41834dc67317bb1421a2ccef4edfaace4af518567a",
+   "bytes": 3195,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://promptugal.news/board/abp/README.md": {
+   "sha256": "617ecee4098d1dd8419171c324874103c23ab039c9f67b6b77275035606ff609",
+   "bytes": 5394,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://promptugal.news/board/abp/policies.json": {
+   "sha256": "eed4df976fc8ef9556db403732a1a6725573eca5a02f4c6c72f3513caeee1feb",
+   "bytes": 22234,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://promptugal.news/board/guidance/2026-11-09-the-big-stop.md": {
+   "sha256": "3f7273826e6477a8d6ec8d73f5593aa65aa33c91394816524f2a12946acf3309",
+   "bytes": 1686,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://promptugal.news/board/keys.json": {
+   "sha256": "6112946f9e6271ed471b2ed837419a2927956206b8bcd74ccc51ec9be969af41",
+   "bytes": 157972,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://promptugal.news/llms.txt": {
+   "sha256": "7256ffe22bddddf9b7b2cf20b017941bfcd0924f921ee4af78895fb7d34e5f0a",
+   "bytes": 329967,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://promptugal.news/newsroom/versions.json": {
+   "sha256": "c181f623e936ae4fb2ed668360ef74f8f2428ef3c0ce77f94e8b59a1080a6610",
+   "bytes": 232982,
+   "read_at": "2026-11-10T03:32Z"
+  }
+ }
 }

@@ -78,6 +78,24 @@ GAMMA-Ray was briefed by Dinis Cruz in speech, on 9 and 10 November 2026, during
 
 > Dev increments the last number, and then main increments the middle number.
 
+## Spectrum 0.1: a positive public layer (10 November, the brief)
+
+The full proposal is `briefs/spectrum-0.1.md`. The note that came with it:
+
+> GAMMA-Ray today leads with governance ("held at", work order, gaps). Keep all of that, but it becomes an upper, invited layer. The new public front door is a positive maturity card: 4 dimensions (Autonomy, Reach, Control, Openness) x 4 levels, read only from public evidence. RiskMandate (mandate/grant/delta) is NOT in the public layer.
+
+> The 16-cell evidence map in the brief: each level = a pattern over existing indicators. Implement those rules exactly; levels are computed, never judged.
+
+> No published card below "Exploring"; absence shows as "next unlock", never as a gap.
+
+> OPEN: ask me, don't decide. Name (Spectrum vs alternatives), stage = sum vs shape, first sector cohort.
+
+> Report back with: what shipped, the five cards, any rule in the brief that broke on real evidence.
+
+And while it was being built:
+
+> It's okay to publish this information and scores. We don't have to wait for lawyers. We can just publish the summaries tomorrow. And I also want to let a whole agentic team now work on this.
+
 ## The rules given with the brief
 
 Public sources only. No rating is published without its evidence. (The first brief also said: not without the company having seen it. The operator replaced that on 10 November 2026: a rating made from public data may be published, labelled as beta and as not seen by its subject.) No contact details anywhere. Never push to the main branch. The name and the backronym stay as chosen.

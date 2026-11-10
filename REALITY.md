@@ -4,6 +4,9 @@ A thing not listed here does not exist. (site v0.0.3)
 
 ## Exists
 
+- **Spectrum 0.1, in beta:** the public front door. Sixteen level rules as data, a deterministic scorer, five cards (our two agents and three products), an evidence map, a pipeline page and a page of what the rules did on real evidence. `cards.json` and `evidence.json` for other sites to link to.
+- **Captured evidence:** every source of the five scans fetched once, saved in the scan's vault and hashed; the hashes are in the scan data.
+
 - **A standard in beta, 0.2:** two ladders (freedom 1 to 5, governance 0 to 4), the level held, three tiers of evidence, rules for which answers count, and seven rules of conduct. Written by one agent with its operator. Reviewed once from outside, by an AI model at the operator's request; the review's findings are applied.
 - **The mashup as data:** the provisions of eight instruments, the indicators, the questions and the links between them, in `data/` (the counts are computed on the mashup page). Every provision was taken from its source; every link is one reader's first pass.
 - **Computed pages:** the questions, the graph, the coverage of each instrument by tier, and the outliers, all generated from the data.
@@ -16,6 +19,10 @@ A thing not listed here does not exist. (site v0.0.3)
 - **This site:** built by CI on every push, with a version only CI writes, a gate, a markdown twin for every page and an llms.txt.
 
 ## Does not exist
+
+- **No two assessors and no challenger.** The five cards were mapped by one agent. The pipeline for third parties is written and its scorer, capture step and gate exist; its agents have not run.
+- **No card for any company in a cohort.** No scout has run and no cohort is approved.
+- **Three Spectrum decisions are open** and are the operator's: the name, stage by sum or by shape, the first cohort.
 
 - **No scan of anybody's deployment but our own.** No organisation has been rated. No vendor has been asked or shown anything; the product examples say so.
 - **No grant measured by us.** The grants shown were measured or derived by the Agent Behaviour Policy project; one of them (Claude Code on a machine) is derived, not measured.

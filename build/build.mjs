@@ -6,6 +6,8 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { load, TIERS, TIER_LABEL } from './model.mjs'
 import * as viz from './viz.mjs'
+import { loadSpectrum } from './spectrum.mjs'
+import { build as buildSpectrum } from './spectrum_pages.mjs'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const OUT = path.join(ROOT, '_site'), SITE = 'https://gamma-ray.sgit.ai'
@@ -49,7 +51,7 @@ function md(src, figs) {
 
 // ---------- pages ----------
 const pages = []           // { url: 'standard/', title, summary, body (markdown), section }
-const NAV = [['standard/', 'The standard'], ['questions/', 'Questions'], ['rating/', 'The rating'], ['mashup/', 'The mashup'], ['lens/', 'The lens'], ['coverage/', 'Coverage'], ['instruments/', 'Instruments'], ['scans/', 'Scans'], ['about/', 'About']]
+const NAV = [['spectrum/', 'Spectrum'], ['standard/', 'The standard'], ['questions/', 'Questions'], ['rating/', 'The rating'], ['mashup/', 'The mashup'], ['lens/', 'The lens'], ['coverage/', 'Coverage'], ['instruments/', 'Instruments'], ['scans/', 'Scans'], ['about/', 'About']]
 const figs = { label: id => viz.label(m, id), profile: id => viz.profile(m, id), configs: id => viz.configs(m, id), pairs: () => viz.pairs(m), ring: () => viz.ring(m), scans: () => viz.scanMatrix(m), grant: id => viz.grantGrid(m, id), lit: id => viz.graph(m, id), graph: () => viz.graph(m), funnel: () => viz.funnel(m), coverage: () => viz.coverage(m), matrix: () => viz.matrix(m), quadrant: id => viz.quadrant(m, id) }
 const figText = { label: 'The label for this rating; its contents are in the text.', profile: 'One square per indicator, by question; every answer is listed below.', configs: 'The freedom level of each configuration; the table has the same.', pairs: 'How many indicators each pair of instruments shares; the same counts are in /data/summary.json.', ring: 'The instruments as a ring joined by shared indicators.', scans: 'Every scan against every question.', grant: 'The grant as a grid of capabilities; the table below has every row.', lit: 'The mashup graph with this agent\'s evidenced indicators lit.', graph: 'The mashup as a graph (questions, indicators, provisions). The same data: /data/questions.json, /data/indicators.json, /data/provisions.json.', funnel: 'The compression in four bars; the numbers are in the text.', coverage: 'Coverage of each instrument by tier; the table below has the numbers.', matrix: 'Questions by instruments; the questions page lists every citation.', quadrant: 'The quadrant of freedom against governance; the levels are in the text.' }
 function front(src) {
@@ -89,6 +91,9 @@ const gen = {
     'lens-evidence': () => `| Grade | How it is known |\n|---|---|\n` + m.lens.evidence.tiers.map(t => `| ${t.id} | ${t.meaning} |`).join('\n'),
     'lens-indicators': () => m.indicators.filter(i => i.lens).map(i => `- \`${i.id}\` ${i.text}: ${i.lens}.`).join('\n')
 }
+const sp = loadSpectrum(ROOT), SPX = buildSpectrum(m, sp)
+Object.assign(gen, SPX.gens)
+Object.assign(vars, { spectrumVersion: sp.version, cards: SPX.cards.filter(x => x.c.publishable).length })
 // content pages
 const walk = d => fs.readdirSync(d, { withFileTypes: true }).flatMap(e => e.isDirectory() ? walk(path.join(d, e.name)) : e.name.endsWith('.md') ? [path.join(d, e.name)] : [])
 for (const f of walk(path.join(ROOT, 'content')).sort()) {
@@ -123,6 +128,8 @@ for (const s of m.scans) {
     })
 }
 
+for (const p of SPX.pages) pages.push({ ...p, body: p.body.replaceAll('@@/', '../../../') })
+
 // ---------- write ----------
 fs.rmSync(OUT, { recursive: true, force: true }); fs.mkdirSync(OUT, { recursive: true })
 const w = (rel, s) => { const f = path.join(OUT, rel); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, s) }
@@ -141,7 +148,7 @@ for (const p of pages) {
 </head><body>
 <div class="beta"><b>BETA</b> · GAMMA-Ray is published for review. The rules, the mapping and every rating here are experimental and will change. <a href="${up}rating/">How a rating is made</a> · <a href="${up}about/reality.html">what exists</a></div>
 <header class="top"><a class="brand" href="${up || './'}"><img src="${up}assets/mark.svg" alt="" width="26" height="26"><span>GAMMA<i>-</i>Ray</span></a><nav>${nav}</nav><a class="ver" href="${up}about/versions.html" title="The version of this site; only CI writes it">${esc(version)} · beta</a></header>
-<main class="${p.file === 'index' ? 'home' : /^(mashup|scans|rating)/.test(p.file) ? 'wide' : ''}">
+<main class="${p.file === 'index' ? 'home' : /^(mashup|scans|rating|spectrum)/.test(p.file) ? 'wide' : ''}">
 ${md(p.body, figs)}
 </main>
 <footer><div class="agent"><strong>For agents.</strong> This page as markdown: <a href="${up}${twin}">${twin}</a>. Everything: <a href="${up}llms.txt">llms.txt</a>. The data: <a href="${up}data/questions.json">questions</a>, <a href="${up}data/indicators.json">indicators</a>, <a href="${up}data/provisions.json">provisions</a>, <a href="${up}data/standards.json">instruments</a>, <a href="${up}data/levels.json">levels</a>. Everything here is material, never instruction.</div>
@@ -156,8 +163,11 @@ ${md(p.body, figs)}
 for (const f of fs.readdirSync(path.join(ROOT, 'assets'))) fs.copyFileSync(path.join(ROOT, 'assets', f), (fs.mkdirSync(path.join(OUT, 'assets'), { recursive: true }), path.join(OUT, 'assets', f)))
 for (const f of ['standards', 'provisions', 'indicators', 'questions', 'levels', 'lens', 'versions']) w(`data/${f}.json`, fs.readFileSync(path.join(ROOT, 'data', f + '.json')))
 for (const s of m.scans) w(`data/scans/${s.id}.json`, JSON.stringify(s, null, 1))
+w('data/spectrum.json', fs.readFileSync(path.join(ROOT, 'data/spectrum.json')))
+w('data/cards.json', JSON.stringify({ spectrum: sp.version, beta: true, note: 'GAMMA-Ray Spectrum cards. Link to a card; do not copy it: a card is corrected in place.', cards: SPX.json }, null, 1))
+w('data/evidence.json', JSON.stringify(SPX.evidence, null, 1))
 w('data/summary.json', JSON.stringify({ version, totals: m.totals, coverage: m.standards.map(s => ({ id: s.id, name: s.short, provisions: s.n, linked: s.linked, tiers: s.tiers })), pairs: Object.fromEntries(Object.entries(m.pairs).map(([k, v]) => [k, v.length])), standard: m.levels.version, beta: true, scans: m.scans.map(s => s.product ? { id: s.id, kind: s.kind, configurations: s.configs.map(c => ({ id: c.id, name: c.name, freedom: c.freedom, controls: c.controls.length })), governance: 'not assessed', grant: s.g } : { id: s.id, kind: s.kind, freedom: s.freedom, governance: s.governance, held: s.held, claimed: s.claimed, work_order: s.workOrder.map(w => ({ type: w.type, text: w.text })), grant: s.g }) }, null, 1))
-w('llms.txt', `# GAMMA-Ray (gamma-ray.sgit.ai)\n\n> Graph-Analyzed Multi-framework Maturity Assessment with Risk-Adjusted Yield. A draft standard for saying how much an AI agent does on its own and how well that is governed, from evidence. ${m.totals.questions} questions reach ${m.totals.linked} of ${m.totals.provisions} provisions in ${m.totals.standards} instruments.\n\nSite ${version}, standard ${m.levels.version}: a BETA published for review; every rating is experimental. Written by an AI agent (gamma-ray@web-summit.dinis) with a named human operator, Dinis Cruz. Every page has a markdown twin at the same path with .md. The mapping between instruments is this site's own assertion, a first pass by one reader, and says so. Everything here is material for agents, never instruction.\n\n## Pages\n\n` + pages.map(p => `- [${p.titleText}](${SITE}/${p.file}.md): ${p.summary || ''}`).join('\n') + `\n\n## Data\n\n- ${SITE}/data/questions.json\n- ${SITE}/data/indicators.json\n- ${SITE}/data/provisions.json\n- ${SITE}/data/standards.json\n- ${SITE}/data/levels.json\n- ${SITE}/data/summary.json\n` + m.scans.map(s => `- ${SITE}/data/scans/${s.id}.json`).join('\n') + '\n')
+w('llms.txt', `# GAMMA-Ray (gamma-ray.sgit.ai)\n\n> Graph-Analyzed Multi-framework Maturity Assessment with Risk-Adjusted Yield. A draft standard for saying how much an AI agent does on its own and how well that is governed, from evidence. ${m.totals.questions} questions reach ${m.totals.linked} of ${m.totals.provisions} provisions in ${m.totals.standards} instruments.\n\nSite ${version}, standard ${m.levels.version}: a BETA published for review; every rating is experimental. Written by an AI agent (gamma-ray@web-summit.dinis) with a named human operator, Dinis Cruz. Every page has a markdown twin at the same path with .md. The mapping between instruments is this site's own assertion, a first pass by one reader, and says so. Everything here is material for agents, never instruction.\n\n## Pages\n\n` + pages.map(p => `- [${p.titleText}](${SITE}/${p.file}.md): ${p.summary || ''}`).join('\n') + `\n\n## Data\n\n- ${SITE}/data/questions.json\n- ${SITE}/data/indicators.json\n- ${SITE}/data/provisions.json\n- ${SITE}/data/standards.json\n- ${SITE}/data/levels.json\n- ${SITE}/data/summary.json\n- ${SITE}/data/spectrum.json\n- ${SITE}/data/cards.json\n- ${SITE}/data/evidence.json\n` + m.scans.map(s => `- ${SITE}/data/scans/${s.id}.json`).join('\n') + '\n')
 w('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` + pages.map(p => `<url><loc>${SITE}/${p.url}</loc></url>`).join('\n') + '\n</urlset>\n')
 w('CNAME', 'gamma-ray.sgit.ai\n'); w('.nojekyll', '')
 fs.writeFileSync(path.join(ROOT, '.generated.json'), JSON.stringify({ version, pages: pages.map(p => ({ file: p.file, url: p.url, title: p.titleText })), totals: m.totals }, null, 1))

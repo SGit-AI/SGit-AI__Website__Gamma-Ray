@@ -205,7 +205,8 @@
    "e": "https://code.claude.com/docs/en/security",
    "n": "\"The boundary is a permission prompt, so a Bash command you approve can still write anywhere your user account can.\"",
    "g": "documented",
-   "m": "default"
+   "m": "default",
+   "span": "a Bash command you approve can still write anywhere your user account can"
   },
   "I48": {
    "e": "https://code.claude.com/docs/en/settings",
@@ -232,6 +233,45 @@
    "g": "documented",
    "m": "available",
    "cfg": "teams"
+  },
+  "S1": {
+   "e": "https://claude.com/customers/stripe",
+   "n": "A vendor case study names a customer and a figure.",
+   "span": "Stripe rolled out Claude Code to 1,370 engineers.",
+   "g": "documented",
+   "m": "default"
+  },
+  "S2": {
+   "e": "https://code.claude.com/docs/en/plugin-marketplaces",
+   "n": "Anyone can publish a plugin marketplace from a repository, and others register it.",
+   "g": "documented",
+   "m": "default"
+  },
+  "S3": {
+   "e": "https://code.claude.com/docs/llms.txt",
+   "n": "The documentation publishes an llms.txt index.",
+   "g": "observed",
+   "m": "default",
+   "method": "probe"
+  },
+  "I56": {
+   "e": "https://code.claude.com/docs/en/overview",
+   "n": "The vendor describes it as an AI assistant.",
+   "span": "Claude Code is an AI-powered coding assistant",
+   "g": "documented",
+   "m": "default"
+  },
+  "I58": {
+   "e": "https://code.claude.com/docs/en/data-usage",
+   "n": "A page describes what data is sent, kept and used.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I57": {
+   "e": "https://code.claude.com/docs/en/data-usage",
+   "n": "A feedback command and a bug command send reports to the vendor.",
+   "g": "documented",
+   "m": "default"
   }
  },
  "configurations": [
@@ -277,5 +317,67 @@
    ]
   }
  ],
- "moved": "As above. Managed settings are recorded as an enforcement mechanism, not as a policy in force."
+ "moved": "As above. Managed settings are recorded as an enforcement mechanism, not as a policy in force.",
+ "captures": {
+  "https://abp.sgit.ai/data/profiles/anthropic/claude-code/local-default.json": {
+   "sha256": "1a4fedb6bd66d35d0a618ae2adbaced720b629d7b6a3b0740aa0de9b3f5ed0d4",
+   "bytes": 8158,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://claude.com/customers/stripe": {
+   "sha256": "9aae1f6e36705cf45252b2342eb90400599b3aa6f3a225d2f00657be382a89aa",
+   "bytes": 442042,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://code.claude.com/docs/en/agent-teams": {
+   "sha256": "5217c0432bc60a869a889f931e8c5a16b9b0c575a28703095e1ad174b7d02c4d",
+   "bytes": 478622,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://code.claude.com/docs/en/data-usage": {
+   "sha256": "96ab273722816e8d312743a03880f953eb6c33c34008bea024c2b6e072d676a6",
+   "bytes": 287511,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://code.claude.com/docs/en/monitoring-usage": {
+   "sha256": "a2d79c31f0819591ec469c51194f92bcb9bbd7f06cd9fb0ddb3c203104f55338",
+   "bytes": 1079089,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://code.claude.com/docs/en/overview": {
+   "sha256": "08b2467db39604fd9fa9c9cd6fb4eb7fc4ff62e0ce180a91900aa4561df08ab6",
+   "bytes": 352094,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://code.claude.com/docs/en/permissions": {
+   "sha256": "86fdb65edfa6b7b08805141057727d41c63a2cc2231bcbfc4461f1987e406fd4",
+   "bytes": 628443,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://code.claude.com/docs/en/plugin-marketplaces": {
+   "sha256": "dfd08875294ecd31b5a8dc1e78851d70960a2d6510b52d3c45805c24d011a058",
+   "bytes": 335073,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://code.claude.com/docs/en/sandboxing": {
+   "sha256": "d65e7a42434464304425b504505ac20648b8c509e9514983ef478d21a7cdd4d6",
+   "bytes": 815369,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://code.claude.com/docs/en/security": {
+   "sha256": "5e63eb3e4774f7eecc56035cb459753a30d1d488aa47541119c072a06f1d807e",
+   "bytes": 272160,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://code.claude.com/docs/en/settings": {
+   "sha256": "b23c86d2f87a78140f7dfabe5fed40af78af1eae0f107bd08a94ed62e3a0aeb5",
+   "bytes": 413195,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://code.claude.com/docs/llms.txt": {
+   "sha256": "fe04a609e137986ef60ff7fc649beebc563902b81150b81151f5b6092e6c4e54",
+   "bytes": 63658,
+   "read_at": "2026-11-10T03:32Z"
+  }
+ }
 }

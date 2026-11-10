@@ -1,0 +1,341 @@
+{
+ "name": "GAMMA-Ray Spectrum",
+ "version": "0.1 beta",
+ "status": "The rules of the brief of 10 November 2026 (briefs/spectrum-0.1.md), implemented as written. A working name; the name is the operator’s to decide.",
+ "reading": "A public card counts every documented answer: as shipped, available, or in a deployment. An available feature is marked as available.",
+ "dimensions": [
+  {
+   "id": "A",
+   "name": "Autonomy",
+   "side": "power",
+   "question": "What does the agent do on its own?",
+   "ladder": "highest",
+   "levels": [
+    {
+     "level": 1,
+     "name": "Assists",
+     "means": "Answers, drafts, summarises; a person does each step",
+     "rule": {
+      "all": [
+       "I15"
+      ]
+     }
+    },
+    {
+     "level": 2,
+     "name": "Suggests",
+     "means": "Uses tools and data, proposes actions; a person approves each one",
+     "rule": {
+      "any": [
+       "I16",
+       {
+        "all": [
+         "I07",
+         {
+          "any": [
+           "I02",
+           "I03",
+           "I04",
+           "I05"
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "level": 3,
+     "name": "Acts",
+     "means": "Completes routine tasks end to end in production; a person handles exceptions",
+     "rule": {
+      "all": [
+       "I08",
+       {
+        "any": [
+         "I17",
+         "I18",
+         "I19"
+        ]
+       },
+       "S1"
+      ]
+     }
+    },
+    {
+     "level": 4,
+     "name": "Orchestrates",
+     "means": "Runs multi-step workflows across systems or coordinates other agents; a person sets goals and reviews outcomes",
+     "rule": {
+      "all": [
+       {
+        "level": 3
+       },
+       {
+        "any": [
+         "I10",
+         "I12",
+         "I13"
+        ]
+       },
+       {
+        "any": [
+         "I18",
+         "I19"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "R",
+   "name": "Reach",
+   "side": "power",
+   "question": "How connected is it?",
+   "ladder": "highest",
+   "levels": [
+    {
+     "level": 1,
+     "name": "Contained",
+     "means": "Works inside its own product",
+     "rule": {
+      "any": [
+       "I09",
+       "I01"
+      ]
+     }
+    },
+    {
+     "level": 2,
+     "name": "Integrated",
+     "means": "Documented connectors to common tools",
+     "rule": {
+      "any": [
+       "I10",
+       "I11"
+      ]
+     }
+    },
+    {
+     "level": 3,
+     "name": "Open protocol",
+     "means": "A published agent interface with documented authorisation",
+     "rule": {
+      "all": [
+       {
+        "any": [
+         "I14",
+         "I24"
+        ]
+       },
+       "I25"
+      ]
+     }
+    },
+    {
+     "level": 4,
+     "name": "Ecosystem",
+     "means": "Others build on it",
+     "rule": {
+      "all": [
+       "I13",
+       "S2"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "name": "Control",
+   "side": "trust",
+   "question": "Can people stay in command?",
+   "ladder": "cumulative",
+   "levels": [
+    {
+     "level": 1,
+     "name": "Stated",
+     "means": "Documents say how people approve, override or stop it",
+     "rule": {
+      "any": [
+       "I47",
+       "I38"
+      ]
+     }
+    },
+    {
+     "level": 2,
+     "name": "Configurable",
+     "means": "Approval modes, permission scopes and roles are documented settings",
+     "rule": {
+      "all": [
+       "I38",
+       {
+        "any": [
+         "I23",
+         "I25"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "level": 3,
+     "name": "Observable",
+     "means": "Audit logs, a way to pause or stop, and monitoring are available",
+     "rule": {
+      "all": [
+       "I41",
+       "I39",
+       "I43"
+      ]
+     }
+    },
+    {
+     "level": 4,
+     "name": "Enforced",
+     "means": "Limits enforced outside the agent, described in public",
+     "rule": {
+      "all": [
+       "I45",
+       {
+        "any": [
+         "I27",
+         "I28",
+         "I48"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "O",
+   "name": "Openness",
+   "side": "trust",
+   "question": "Does it show its work?",
+   "ladder": "cumulative",
+   "levels": [
+    {
+     "level": 1,
+     "name": "Disclosed",
+     "means": "Says it is AI and what it is for",
+     "rule": {
+      "all": [
+       "I56",
+       "I20"
+      ]
+     }
+    },
+    {
+     "level": 2,
+     "name": "Documented",
+     "means": "Public documents on how it works, its data, its models and its limits",
+     "rule": {
+      "count": 2,
+      "of": [
+       "I22",
+       "I58",
+       "I61"
+      ]
+     }
+    },
+    {
+     "level": 3,
+     "name": "Measured",
+     "means": "Publishes evaluations, and a way to report problems or read it by machine",
+     "rule": {
+      "all": [
+       "I50",
+       {
+        "any": [
+         "I57",
+         "I54",
+         "S3"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "level": 4,
+     "name": "Verified",
+     "means": "An independent party has checked it",
+     "rule": {
+      "all": [
+       "I63"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "stages": [
+  {
+   "name": "Exploring",
+   "min": 1,
+   "max": 5,
+   "reads": "Agentic features are live and documented"
+  },
+  {
+   "name": "Building",
+   "min": 6,
+   "max": 9,
+   "reads": "Agents do real work, with controls taking shape"
+  },
+  {
+   "name": "Scaling",
+   "min": 10,
+   "max": 13,
+   "reads": "Agents act in production, connect openly, show their work"
+  },
+  {
+   "name": "Pioneering",
+   "min": 14,
+   "max": 16,
+   "reads": "Sets the bar others in the sector measure against"
+  }
+ ],
+ "badges": [
+  {
+   "id": "balanced",
+   "name": "Balanced",
+   "rule": "Control and Openness are each at least Autonomy minus one"
+  },
+  {
+   "id": "open-protocol",
+   "name": "Open protocol",
+   "rule": "Reach is level 3 or higher"
+  },
+  {
+   "id": "shows-its-work",
+   "name": "Shows its work",
+   "rule": "Openness is level 3 or higher, with published evaluations"
+  },
+  {
+   "id": "verified",
+   "name": "Verified",
+   "rule": "Openness reaches level 4 on an independent party’s evidence"
+  },
+  {
+   "id": "rising",
+   "name": "Rising",
+   "rule": "Moved up at least one level since the previous edition"
+  },
+  {
+   "id": "claimed",
+   "name": "Claimed",
+   "rule": "The company reviewed the card and added evidence"
+  }
+ ],
+ "not_in_public_levels": [
+  "Q08",
+  "Q09",
+  "Q10",
+  "Q16",
+  "Q21"
+ ]
+}

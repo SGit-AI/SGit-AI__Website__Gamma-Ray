@@ -18,7 +18,8 @@
   "indicators": [
    "I06",
    "I07",
-   "I08"
+   "I08",
+   "S1"
   ]
  },
  {
@@ -38,7 +39,8 @@
   "indicators": [
    "I12",
    "I13",
-   "I14"
+   "I14",
+   "S2"
   ]
  },
  {
@@ -172,7 +174,8 @@
   "text": "Do people know it is an AI, and can they answer back?",
   "indicators": [
    "I56",
-   "I57"
+   "I57",
+   "S3"
   ]
  },
  {

@@ -33,6 +33,16 @@ No dependencies: Node 18+ only. Edit `content/`, `data/` and `assets/`, never `_
 
 Numbers on pages come from the data through `{{n:...}}` and `{{gen:...}}`; never type a count into a page.
 
+## Spectrum: the public front door
+
+`briefs/spectrum-0.1.md` is the proposal; Dinis's brief of 10 November 2026 says what to do with it (in `BRIEF.md`). The public layer is a positive card: four dimensions (Autonomy, Reach, Control, Openness) by four levels, read only from public evidence. RiskMandate is not in the public layer. The governance rating (`/scans/`, `/rating/`) is the layer above.
+
+- `data/spectrum.json`: the sixteen level rules, the stages and the badges. `build/spectrum.mjs` is the scorer: deterministic, and the only thing that assigns a level. An agent maps evidence to indicators; it never assigns a level.
+- `tools/capture.mjs <scan id> <vault dir>`: fetches every source of a scan once, saves it in the vault and writes its SHA-256 into the scan. Run it before a card is published.
+- A card says what is there. Absence appears only as a next unlock. No card below level one in every dimension. No adjectives about a company. A quoted span is under fifteen words.
+- A third party's card needs two assessors who do not share context, a challenger on every level three and four, the gate, and a person's sign-off (`/spectrum/pipeline/`). The name, stage by sum or by shape, and the first cohort are Dinis's to decide: ask.
+- Dinis, 10 November 2026: it is fine to publish this information and these scores without waiting for a legal read; a team of agents will work on this repository. Write for them: say in `REALITY.md` what exists, and leave nothing in a session that the next agent needs.
+
 ## Rules for content
 
 - Read a source yourself before citing it. Quote exactly, with the link and the date read.

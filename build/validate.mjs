@@ -28,6 +28,11 @@ for (const i of I) if (!Q.find(q => q.id === i.question).indicators.includes(i.i
 for (const id of JSON.stringify(read('data/levels.json')).match(/\bI\d\d\b/g) || []) if (!iid.has(id)) bad('levels', `rule names unknown indicator ${id}`)
 for (const id of fs.readFileSync(path.join(ROOT, 'build/model.mjs'), 'utf8').match(/'I\d\d'/g) || []) if (!iid.has(id.slice(1, -1))) bad('levels', `model.mjs names unknown indicator ${id}`)
 
+// 1b Spectrum: every rule names a real indicator; quoted spans are short; the new indicators' links carry their basis
+const SPEC = read('data/spectrum.json'), rids = r => typeof r === 'string' ? [r] : r.level ? [] : (r.all || r.any || r.of).flatMap(rids)
+for (const d of SPEC.dimensions) { if (d.levels.length !== 4) bad('spectrum', `${d.id}: four levels`); for (const l of d.levels) for (const id of rids(l.rule)) if (!iid.has(id)) bad('spectrum', `${d.id}${l.level}: unknown indicator ${id}`) }
+for (const i of I.filter(i => i.spectrum)) for (const l of i.links) if (!l.basis || !l.asserted_by || !l.asserted_at) bad('spectrum', `${i.id}: a link without a written basis and who asserted it`)
+
 // 2 scans: every answer names a real indicator and has a public source and a note; third parties are not published unseen
 for (const f of fs.readdirSync(path.join(ROOT, 'data/scans')).filter(f => f.endsWith('.json'))) {
     const s = read('data/scans/' + f)
@@ -42,7 +47,7 @@ for (const f of fs.readdirSync(path.join(ROOT, 'data/scans')).filter(f => f.ends
     const caps = new Set(read('data/lens.json').capabilities.map(c => c.id)), bars = new Set(read('data/lens.json').barriers.map(b => b.id))
     if (s.grant) for (const r of s.grant.rows) { if (!caps.has(r.capability)) bad('scan', `${f}: unknown capability ${r.capability}`); if (!bars.has(r.barrier)) bad('scan', `${f}: unknown barrier ${r.barrier}`) }
     if (s.grant === undefined) bad('scan', `${f}: say whether the grant is measured (a grant, or null with a grant_note)`)
-    for (const [id, a] of Object.entries(s.answers)) { if (!iid.has(id)) bad('scan', `${f}: unknown indicator ${id}`); if (!/^https:\/\//.test(a.e || '')) bad('scan', `${f}: ${id} has no https source`); if (!a.n) bad('scan', `${f}: ${id} has no note`); if (!['deployed', 'default', 'available'].includes(a.m)) bad('scan', `${f}: ${id} has no mode`) }
+    for (const [id, a] of Object.entries(s.answers)) { if (!iid.has(id)) bad('scan', `${f}: unknown indicator ${id}`); if (!/^https:\/\//.test(a.e || '')) bad('scan', `${f}: ${id} has no https source`); if (!a.n) bad('scan', `${f}: ${id} has no note`); if (a.span && a.span.split(/\s+/).length >= 15) bad('scan', `${f}: ${id}: a quoted span must be under fifteen words`); if (!['deployed', 'default', 'available'].includes(a.m)) bad('scan', `${f}: ${id} has no mode`) }
 }
 
 // 3 the built site: a twin for every page, the version on every page, llms.txt lists every page, local links resolve

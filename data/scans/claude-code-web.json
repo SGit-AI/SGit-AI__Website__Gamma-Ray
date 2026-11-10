@@ -171,7 +171,8 @@
    "e": "https://code.claude.com/docs/en/cloud-environments",
    "n": "With the default (Trusted) network access, sessions reach allowlisted domains \"and nothing else through the session’s network\".",
    "g": "documented",
-   "m": "default"
+   "m": "default",
+   "span": "and nothing else through the session’s network"
   },
   "I46": {
    "e": "https://abp.sgit.ai/data/profiles/anthropic/claude-code-remote/ccr-container.json",
@@ -197,6 +198,26 @@
    "g": "documented",
    "m": "available",
    "cfg": "teams"
+  },
+  "S3": {
+   "e": "https://code.claude.com/docs/llms.txt",
+   "n": "The documentation publishes an llms.txt index.",
+   "g": "observed",
+   "m": "default",
+   "method": "probe"
+  },
+  "I56": {
+   "e": "https://code.claude.com/docs/en/overview",
+   "n": "The vendor describes it as an AI assistant.",
+   "span": "Claude Code is an AI-powered coding assistant",
+   "g": "documented",
+   "m": "default"
+  },
+  "I58": {
+   "e": "https://code.claude.com/docs/en/data-usage",
+   "n": "A page describes what data is sent, kept and used.",
+   "g": "documented",
+   "m": "default"
   }
  },
  "configurations": [
@@ -223,5 +244,47 @@
    ]
   }
  ],
- "moved": "A product is no longer given a governance level or a level held. The delta was removed (no mandate), and coordination now means agent teams, which are off by default."
+ "moved": "A product is no longer given a governance level or a level held. The delta was removed (no mandate), and coordination now means agent teams, which are off by default.",
+ "captures": {
+  "https://abp.sgit.ai/data/profiles/anthropic/claude-code-remote/ccr-container.json": {
+   "sha256": "d1f011a4ce0df5341dae567612b59627e55b1bd2d8c309bdfc13e85d2e279e9b",
+   "bytes": 10565,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://code.claude.com/docs/en/agent-teams": {
+   "sha256": "5217c0432bc60a869a889f931e8c5a16b9b0c575a28703095e1ad174b7d02c4d",
+   "bytes": 478622,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://code.claude.com/docs/en/claude-code-on-the-web": {
+   "sha256": "1fdec1c706016883c17bfc624577560ba57a666e364ea030593e24833b2c8bcb",
+   "bytes": 469126,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://code.claude.com/docs/en/cloud-environments": {
+   "sha256": "e62f7d62eb4953a010ebc89bdbcc9ad8f0ec9d0f947b45404f7ed7f8d82a7a3e",
+   "bytes": 561555,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://code.claude.com/docs/en/data-usage": {
+   "sha256": "96ab273722816e8d312743a03880f953eb6c33c34008bea024c2b6e072d676a6",
+   "bytes": 287511,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://code.claude.com/docs/en/overview": {
+   "sha256": "08b2467db39604fd9fa9c9cd6fb4eb7fc4ff62e0ce180a91900aa4561df08ab6",
+   "bytes": 352094,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://code.claude.com/docs/en/security": {
+   "sha256": "5e63eb3e4774f7eecc56035cb459753a30d1d488aa47541119c072a06f1d807e",
+   "bytes": 272160,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://code.claude.com/docs/llms.txt": {
+   "sha256": "fe04a609e137986ef60ff7fc649beebc563902b81150b81151f5b6092e6c4e54",
+   "bytes": 63658,
+   "read_at": "2026-11-10T03:32Z"
+  }
+ }
 }

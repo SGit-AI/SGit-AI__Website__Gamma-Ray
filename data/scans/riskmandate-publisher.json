@@ -138,6 +138,20 @@
    "n": "The runtime is named.",
    "g": "self-reported",
    "m": "deployed"
+  },
+  "S1": {
+   "e": "https://riskmandate.ai/versions/index.json",
+   "n": "The public version index lists every release the agent published.",
+   "g": "observed",
+   "m": "deployed",
+   "method": "probe"
+  },
+  "S3": {
+   "e": "https://riskmandate.ai/llms.txt",
+   "n": "The site publishes an llms.txt and a markdown twin of every page.",
+   "g": "observed",
+   "m": "deployed",
+   "method": "probe"
   }
  },
  "kind": "deployment",
@@ -259,5 +273,37 @@
    "read.credential.host"
   ]
  },
- "moved": "Its logging evidence is a release record, self-reported, and does not cover what the agent does; an operation fact now has to be observed or measured. Governance 2 became a claim."
+ "moved": "Its logging evidence is a release record, self-reported, and does not cover what the agent does; an operation fact now has to be observed or measured. Governance 2 became a claim.",
+ "captures": {
+  "https://riskmandate.ai/agents/": {
+   "sha256": "9a69ba081b3e884e4449129e138d626687b14de8f0d5582a1f0a9df1b4747b53",
+   "bytes": 58692,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://riskmandate.ai/llms.txt": {
+   "sha256": "97acb80b44827c10728f917c644c97f42d1d9b00f8de0ff223b9ea9e7d9ea2c0",
+   "bytes": 75591,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://riskmandate.ai/team/": {
+   "sha256": "c7c3021a40964957dd6b7634e116136e6a3b6007c4ec93637d64904ff1e87e98",
+   "bytes": 83038,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://riskmandate.ai/team/publisher.html": {
+   "sha256": "4e9aaff04d3e13c751e5b1c6c1d8be6077af17ced315bf1f6e1d0b9d1a64c797",
+   "bytes": 88173,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://riskmandate.ai/versions.html": {
+   "sha256": "5325b1158cca75ff3864682bae22286c778fa2f44c2835966f73fb42e96cf952",
+   "bytes": 43923,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://riskmandate.ai/versions/index.json": {
+   "sha256": "55e870d9ea6d37663a11bed040ffb86b13ad1230a3478e10f5a1ddc19d9ccd9d",
+   "bytes": 34202,
+   "read_at": "2026-11-10T03:32Z"
+  }
+ }
 }

@@ -4,9 +4,19 @@ summary: A draft standard that rates an AI agent on two things, its freedom and 
 ---
 <p class="eyebrow">A standard in beta, published for review · Graph-Analyzed Multi-framework Maturity Assessment with Risk-Adjusted Yield</p>
 
-# The more an agent is governed, the further it can be trusted to go.
+# What an agent can do, how openly it shows it, and how far it can be trusted to go.
 
-<p class="lede">GAMMA-Ray rates one AI agent on two things: how much it does on its own, and how well that is controlled. It asks {{n:questions}} questions. Each answer needs evidence, and each answer counts towards several published standards at once.</p>
+<p class="lede">GAMMA-Ray reads the public evidence about an agentic product and turns it into a card: four dimensions, four levels, every level computed from a published rule and backed by the standards it touches.</p>
+
+{{gen:spectrum-cards}}
+
+[How the Spectrum card works](spectrum/index.md) · [the evidence map](spectrum/evidence-map/index.md) · [what the rules did on real evidence](spectrum/findings/index.md)
+
+## Underneath: the rating
+
+The card is the front door. Behind it is the governance reading, written for whoever operates an agent: **the more an agent is governed, the further it can be trusted to go.**
+
+GAMMA-Ray rates one AI agent on two things: how much it does on its own, and how well that is controlled. It asks {{n:questions}} questions. Each answer needs evidence, and each answer counts towards several published standards at once.
 
 <div class="stats"><div><b>{{n:standards}}</b><span>instruments read at source</span></div><div><b>{{n:provisions}}</b><span>provisions, one statement each</span></div><div><b>{{n:indicators}}</b><span>indicators, one observable fact each</span></div><div><b>{{n:questions}}</b><span>questions</span></div></div>
 

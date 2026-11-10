@@ -59,7 +59,8 @@
    "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
    "n": "\"It can only push to a single branch\"; it has no access to Actions secrets beyond those configured for it.",
    "g": "documented",
-   "m": "default"
+   "m": "default",
+   "span": "It can only push to a single branch"
   },
   "I22": {
    "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
@@ -83,7 +84,8 @@
    "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
    "n": "Workflows triggered by its pull requests \"require approval from a user with write access before they will run\".",
    "g": "documented",
-   "m": "default"
+   "m": "default",
+   "span": "require approval from a user with write access before they will run"
   },
   "I41": {
    "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
@@ -95,11 +97,33 @@
    "e": "https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/customize-the-agent-firewall",
    "n": "\"By default, Copilot’s access to the internet is limited by a firewall.\" The vendor adds that it \"should not be considered a comprehensive security solution\".",
    "g": "documented",
-   "m": "default"
+   "m": "default",
+   "span": "access to the internet is limited by a firewall"
   },
   "I56": {
    "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
    "n": "Its commits and pull requests are attributed to Copilot.",
+   "g": "documented",
+   "m": "default"
+  },
+  "S2": {
+   "e": "https://docs.github.com/en/copilot/concepts/agents/coding-agent/mcp-and-coding-agent",
+   "n": "A registry lists servers that partners and the community publish for it.",
+   "span": "a curated list of MCP servers from partners and the community",
+   "g": "documented",
+   "m": "default"
+  },
+  "S3": {
+   "e": "https://docs.github.com/llms.txt",
+   "n": "The documentation publishes an llms.txt index.",
+   "g": "observed",
+   "m": "default",
+   "method": "probe"
+  },
+  "I14": {
+   "e": "https://docs.github.com/en/copilot/concepts/agents/coding-agent/mcp-and-coding-agent",
+   "n": "The vendor publishes and maintains a Model Context Protocol server for its platform.",
+   "span": "provided and maintained by GitHub",
    "g": "documented",
    "m": "default"
   }
@@ -127,5 +151,27 @@
    ]
   }
  ],
- "moved": "As above. Scanning of generated code is no longer counted as testing of the agent."
+ "moved": "As above. Scanning of generated code is no longer counted as testing of the agent.",
+ "captures": {
+  "https://docs.github.com/en/copilot/concepts/agents/coding-agent/mcp-and-coding-agent": {
+   "sha256": "e0ab793e5f76b3f42b2558e223531a107db296cbb497ed36f695b38eb1aa7006",
+   "bytes": 664382,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/customize-the-agent-firewall": {
+   "sha256": "a2b6119ffb44740c5797edde4f3ff563623e030543dca7c3acd48ee594bdb0c6",
+   "bytes": 674687,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent": {
+   "sha256": "4c556dc5c787186a539d5a157375e2264c1b4c2fcd2b090effde2f3fe5aaf444",
+   "bytes": 797760,
+   "read_at": "2026-11-10T03:32Z"
+  },
+  "https://docs.github.com/llms.txt": {
+   "sha256": "c10af0cdb5576f81fd29373cf56ac65608d24c3e4c935c7993d2bba27d56af4e",
+   "bytes": 28642,
+   "read_at": "2026-11-10T03:32Z"
+  }
+ }
 }
