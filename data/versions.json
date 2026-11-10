@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.96",
+    "date": "2026-11-10",
+    "what": "re-check of getvocal-agents and junie, round two of codacy-ai-reviewer, spinnable-ai-employees and ethiack-hackian",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "8e27f547b"
+  },
+  {
     "version": "v0.0.95",
     "date": "2026-11-10",
     "what": "re-check of aisle-platform, talkdesk-autopilot and outsystems-agent-workbench (pass)",
