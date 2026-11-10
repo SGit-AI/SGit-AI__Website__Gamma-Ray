@@ -10,7 +10,7 @@ summary: A draft standard that rates an AI agent on two things, its freedom and 
 
 {{gen:spectrum-cards}}
 
-[How the Spectrum card works](spectrum/index.md) · [the evidence map](spectrum/evidence-map/index.md) · [what the rules did on real evidence](spectrum/findings/index.md)
+**New here?** [The briefing](briefing/index.md) is two minutes on a phone. · [How the Spectrum card works](spectrum/index.md) · [the evidence map](spectrum/evidence-map/index.md) · [what the rules did on real evidence](spectrum/findings/index.md)
 
 ## Underneath: the rating
 
@@ -46,4 +46,4 @@ Maturity standards for agents ask many of the same things in different words. We
 
 ## Where this is
 
-A beta, site {{n:version}}, standard {{n:standardVersion}}. Every rating is experimental. The mapping between instruments is a first pass by one reader and has not been checked by a second. It rates our own agents, and shows three widely used products as examples from their vendors' documentation. [What exists and what does not](about/reality.md).
+A beta, site {{n:version}}, standard {{n:standardVersion}}. Every rating is experimental. The mapping between instruments is a first pass by one reader and has not been checked by a second. It rates {{n:deployments}} of our own agents, and shows {{n:products}} widely used products as examples from their vendors' documentation. [What exists and what does not](about/reality.md).
