@@ -19,7 +19,7 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "round-1",
+  "status": "round-2",
   "rounds": [
    {
     "round": 1,
@@ -91,6 +91,44 @@
       "answer": "I01, I04, I07, I08, I09, I11, I20, I21, I22, I39, I41, I46, I47, I57, I58, I68, S2, S3",
       "severity": "pass",
       "finding": "Opened each source. The note says what the page says; the grade documented is right (S3 observed: llms.txt resolves and lists Agent, MCP, security pages); mode is right (I07 plan-mode, I11 connectors, I47 custom instructions are available; the rest are default). Spans are under fifteen words (the longest, I21, has 14). I39: \"Select Stop in the Agent panel to halt it immediately\" is on the help page. I68: the changelog index lists a dated entry for 6 November 2026. I22: freezing, looping and unrequested features are on the help page."
+     }
+    ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "S1",
+      "severity": "should-fix",
+      "finding": "Round one answered; re-read. The new source is a Forbes article reposted on Replit's newsroom (the funding announcement). The span \"Zillow has roughly 600 Replit seats for its employees\" is exact (8 words), and the page goes on: \"who have made more than 7,000 apps using the tool over the past year\" and that customers \"use it to build internal apps for their teams\". Against it: (1) the figures are seats of the platform and a count of apps, not usage of Agent; the article says \"Replit\" and \"the tool\", and calls the product \"an AI agent that could write its own code\" only in its origin story, and it announces Agent 4 as new. (2) The reader cannot see the article's date in the page text. (3) It is a vendor-hosted reprint, and its only voice for Zillow is a quote about prototyping. For it: it names a customer and gives a usage figure over a year, in internal use, which is more than a hackathon. My verdict: S1 stands as a named customer with usage figures (the literal test), and it is stronger than Plaid. It is not evidence that the agent \"completes routine tasks end to end\" for anyone; the card should not word Autonomy 3 as if it were. I do not block it. The Plaid story, kept as second source in the note, is fine as written."
+     },
+     {
+      "answer": "I18",
+      "severity": "should-fix",
+      "finding": "New span \"Agent handles the rest, from planning to deployment\" is exact (overview). It is a sentence of the vendor's description of the product, not a measurement; credit as documented is correct. Two small points: the note also says \"paid actions need confirmation\", which is from the Agent modes page, not the overview the answer cites, and it is a statement about cost, not a critical decision of the work; and \"changes from background tasks wait for the person's review\" is from the task lifecycle page. The facts are true and on those pages; either cite them or drop them from the note so the source and the note match. Plan toggle off: \"Agent builds directly\" is on the plan mode page, which confirms the default."
+     },
+     {
+      "answer": "I10",
+      "severity": "should-fix",
+      "finding": "Argued against Autonomy 4 as a whole. A4 is \"Runs multi-step workflows across systems or coordinates other agents\". Replit reaches it by S1 (A3), I10 and I19 or I18. I10 is a list of connectors Agent can read and write (\"BigQuery, Linear, Slack, Notion\"), available when the person adds them. Nothing on the cited pages says Agent runs a multi-step workflow across them; the page says Agent \"can read and write data directly\". The rule gives A4 to any agent that reaches A3 and has connectors, so the card says A4 for what the sources show only as a capability. Round one: the studio agreed as shipped it reads A3. Condition for approval: the card must show the configuration that A4 holds in (connectors on) and that A3 rests on S1 above. I have already asked gamma-ray@; this is not for the studio to fix in the scan."
+     },
+     {
+      "answer": "I19",
+      "severity": "pass",
+      "finding": "Exact and available. It satisfies \"I18 or I19\" for A4 together with I18, so A4 does not rest on it alone."
+     },
+     {
+      "answer": "I25",
+      "severity": "note",
+      "finding": "C2 (I38 and I23 or I25) holds only on Enterprise through I25. The card should say so. Not a level three or four."
+     },
+     {
+      "answer": "levels",
+      "severity": "pass",
+      "finding": "Levels three and four on the card: only Autonomy 4. No level three or four on Reach (2), Control (2), Openness (0). The levels argued above. Round-one findings: S1 changed and re-sourced, I18 re-sourced, I61 and the apostrophes done; I10, I25 and the other notes were agreed with no change needed, which I accept."
      }
     ]
    }
