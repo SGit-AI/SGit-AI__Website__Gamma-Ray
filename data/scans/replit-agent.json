@@ -94,6 +94,57 @@
      }
     ]
    }
+  ],
+  "responses": [
+   {
+    "round": 1,
+    "answer": "S1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Changed. S1 now cites the Forbes article on Replit's newsroom: Zillow, about 600 seats, more than 7,000 apps over a year, a named customer with usage figures over a year rather than one hackathon. It says 'Replit', and the same article describes the product as an AI agent writing its own code; the Plaid story, which names Replit Agent, is kept in the note as a second source. Whether a customer's apps built by the agent meet S1's 'capability that acts' is the scope question you put to gamma-ray@; we read it as yes, because building and deploying the app is what the agent does on its own."
+   },
+   {
+    "round": 1,
+    "answer": "I18",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Changed. Span now 'Agent handles the rest, from planning to deployment' (overview); the plan-mode page also says that with the Plan toggle off Agent builds directly, which is the default. Plan mode is no longer folded into the note."
+   },
+   {
+    "round": 1,
+    "answer": "I10",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Agreed: A4 holds only with connectors on; as shipped the card reads A3 (with S1). The card marks I10 as available; showing the level per configuration is the card's layout, asked of gamma-ray@ in your request. No change to the answer."
+   },
+   {
+    "round": 1,
+    "answer": "I25",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Agreed, Control 2 holds on Enterprise only; same as I10. No change to the answer."
+   },
+   {
+    "round": 1,
+    "answer": "I61",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Changed: the note says it is a list of providers, not of the model Agent uses."
+   },
+   {
+    "round": 1,
+    "answer": "typography",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Changed: the spans of I01, I07, I21, I38, I47, I57 and S2 now use the page's curly apostrophe. I18 has a new span."
+   },
+   {
+    "round": 1,
+    "answer": "I17, I19, I38, I51, I52, I63",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Read; no change needed."
+   }
   ]
  },
  "assessment": {
@@ -140,7 +191,7 @@
   "I01": {
    "e": "https://docs.replit.com/help/agent-and-ai",
    "n": "The help page states the model behind Agent runs on Replit's infrastructure and cannot be replaced by the user.",
-   "span": "The model that powers the Agent experience itself runs on Replit's infrastructure",
+   "span": "The model that powers the Agent experience itself runs on Replit’s infrastructure",
    "g": "documented",
    "m": "default",
    "agree": "a, accepted by the challenger"
@@ -156,7 +207,7 @@
   "I07": {
    "e": "https://docs.replit.com/features/agent/plan-mode",
    "n": "In Plan mode Agent brainstorms and plans without changing code or data; the person then chooses to build.",
-   "span": "ask questions without modifying your project's code or data",
+   "span": "ask questions without modifying your project’s code or data",
    "g": "documented",
    "m": "available",
    "cfg": "plan-mode",
@@ -207,8 +258,8 @@
   },
   "I18": {
    "e": "https://docs.replit.com/features/agent/overview",
-   "n": "Agent builds on its own; the person refines through chat and decides when to publish. In plan mode the person approves the plan before Agent builds.",
-   "span": "Chat with Agent to refine your project, then publish when you're ready.",
+   "n": "In the default build mode Agent plans, writes code, sets up infrastructure, tests and deploys on its own from a description; changes from background tasks wait for the person's review and paid actions need confirmation.",
+   "span": "Agent handles the rest, from planning to deployment",
    "g": "documented",
    "m": "default",
    "agree": "both"
@@ -233,7 +284,7 @@
   "I21": {
    "e": "https://docs.replit.com/features/agent/general-agent",
    "n": "The page defines that Agent reaches external tools only through connectors the user adds and has no access by default.",
-   "span": "Agent can read and write to them, but it doesn't have access by default",
+   "span": "Agent can read and write to them, but it doesn’t have access by default",
    "g": "documented",
    "m": "default",
    "agree": "both"
@@ -258,7 +309,7 @@
   "I38": {
    "e": "https://docs.replit.com/features/agent/task-lifecycle",
    "n": "Changes made by background tasks are held for the person to review before they are applied to the main version.",
-   "span": "Review the task's work log, test results, and preview before applying changes.",
+   "span": "Review the task’s work log, test results, and preview before applying changes.",
    "g": "documented",
    "m": "default",
    "agree": "both"
@@ -290,7 +341,7 @@
   "I47": {
    "e": "https://docs.replit.com/features/agent/agent-customization",
    "n": "Workspace custom instructions are guidance in prose that Agent is guided to follow, without a guarantee.",
-   "span": "Agent is guided to follow them, but strict requirements aren't guaranteed.",
+   "span": "Agent is guided to follow them, but strict requirements aren’t guaranteed.",
    "g": "documented",
    "m": "available",
    "cfg": "custom-instructions",
@@ -315,7 +366,7 @@
   "I57": {
    "e": "https://docs.replit.com/help/agent-and-ai",
    "n": "The Agent help page points users with unresolved Agent problems to Replit Support.",
-   "span": "If your Agent question isn't answered here,",
+   "span": "If your Agent question isn’t answered here,",
    "g": "documented",
    "m": "default",
    "agree": "both"
@@ -330,7 +381,7 @@
   },
   "I61": {
    "e": "https://replit.com/subprocessors",
-   "n": "The subprocessor list names Anthropic, OpenAI and Google as providers of AI models.",
+   "n": "The subprocessor list names the providers of AI models (Anthropic, OpenAI, Google); it lists providers, not which model Agent uses.",
    "g": "documented",
    "m": "default",
    "agree": "both"
@@ -343,17 +394,16 @@
    "agree": "a, accepted by the challenger"
   },
   "S1": {
-   "e": "https://replit.com/customers/plaid",
-   "n": "A customer story names Plaid as building an SLA dashboard with Replit Agent, now in use as an internal dashboard; its savings figures are the story's estimates.",
-   "span": "How Plaid Built a Production SLA Dashboard with Replit Agent",
+   "e": "https://replit.com/news/funding-announcement",
+   "n": "A Forbes article reposted on Replit's newsroom names Zillow, with about 600 seats and more than 7,000 apps its employees made with Replit over a year; the article describes Replit's product as an AI agent that writes its own code. A second source, Replit's Plaid story, names Replit Agent and an internal dashboard in use.",
+   "span": "Zillow has roughly 600 Replit seats for its employees",
    "g": "documented",
-   "m": "default",
-   "agree": "both"
+   "m": "default"
   },
   "S2": {
    "e": "https://docs.replit.com/features/agent/skills-directory",
    "n": "The skills directory lists skills published by partners such as Stripe, PayPal and Atlassian for Agent.",
-   "span": "Replit's partners publish skills that teach Agent how to build with their products.",
+   "span": "Replit’s partners publish skills that teach Agent how to build with their products.",
    "g": "documented",
    "m": "default",
    "agree": "both"
@@ -448,92 +498,92 @@
   "https://docs.replit.com/_llms/en/features.txt": {
    "sha256": "2e20971e9962f4cae1dead8a12b8f5fb670f59b706b2ca8db4f7630ef97a0adb",
    "bytes": 14312,
-   "read_at": "2026-11-10T04:20Z"
+   "read_at": "2026-11-10T05:44Z"
   },
   "https://docs.replit.com/features/agent/agent-customization": {
    "sha256": "b5b576cc757a6d03c72047eb388a6d890a90b2f2e453601363965474aff73ecf",
    "bytes": 368535,
-   "read_at": "2026-11-10T04:20Z"
+   "read_at": "2026-11-10T05:44Z"
   },
   "https://docs.replit.com/features/agent/agent-modes": {
    "sha256": "d5384b250dce1edd307d44ba9381d88477c2eb2b253f3ae1b2c2879d1c2f05e1",
    "bytes": 332399,
-   "read_at": "2026-11-10T04:20Z"
+   "read_at": "2026-11-10T05:44Z"
   },
   "https://docs.replit.com/features/agent/app-testing": {
    "sha256": "666730392081686eab8af40e52c020b88bd53af00a61ca8607a4de264044280f",
    "bytes": 342787,
-   "read_at": "2026-11-10T04:20Z"
+   "read_at": "2026-11-10T05:44Z"
   },
   "https://docs.replit.com/features/agent/general-agent": {
    "sha256": "7dee387f587385fc9d14cb95b1ea20139a4f2b6ab82a9cad109cdc5615938a0a",
    "bytes": 320732,
-   "read_at": "2026-11-10T04:20Z"
+   "read_at": "2026-11-10T05:44Z"
   },
   "https://docs.replit.com/features/agent/overview": {
    "sha256": "351087bd1f78f8419c49890686821b988591157b85f9ca294ce536d4a90408c7",
    "bytes": 419582,
-   "read_at": "2026-11-10T04:20Z"
+   "read_at": "2026-11-10T05:44Z"
   },
   "https://docs.replit.com/features/agent/plan-mode": {
    "sha256": "1c2834bd959ed8d7c321be2c76d1b1eb8abb1e00ec5afe35cd25744a512a8091",
    "bytes": 333664,
-   "read_at": "2026-11-10T04:20Z"
+   "read_at": "2026-11-10T05:44Z"
   },
   "https://docs.replit.com/features/agent/skills-directory": {
    "sha256": "a8478b581f6046ad94316871dc2350a29401c5cca95d096a152e1f5d7e5b606a",
    "bytes": 327861,
-   "read_at": "2026-11-10T04:20Z"
+   "read_at": "2026-11-10T05:44Z"
   },
   "https://docs.replit.com/features/agent/task-lifecycle": {
    "sha256": "d4df1864788c50698a7f6526574079a859c8150bce10a685f70fc2c5eb5803df",
    "bytes": 339892,
-   "read_at": "2026-11-10T04:20Z"
+   "read_at": "2026-11-10T05:44Z"
   },
   "https://docs.replit.com/features/integrations/overview": {
    "sha256": "29d5d4195ad021ddf1950cac83fe1bc17f5d8d49e76a8e7f8f709c52159394f9",
    "bytes": 484978,
-   "read_at": "2026-11-10T04:20Z"
+   "read_at": "2026-11-10T05:44Z"
   },
   "https://docs.replit.com/features/mcp/overview": {
    "sha256": "8f0d0d44edb190fbdf095fe3733371724786bf8dd64fb9354a5721a98f4d4441",
    "bytes": 422041,
-   "read_at": "2026-11-10T04:20Z"
+   "read_at": "2026-11-10T05:44Z"
   },
   "https://docs.replit.com/features/version-control/checkpoints-and-rollbacks": {
    "sha256": "3a1b8fde4d8a91f3f363593cb0063fc5f6d392c728832b8aa21c3986adbf8567",
    "bytes": 380724,
-   "read_at": "2026-11-10T04:20Z"
+   "read_at": "2026-11-10T05:44Z"
   },
   "https://docs.replit.com/help/agent-and-ai": {
    "sha256": "c787756fd19c0948321c511f36ebf115ee7c76c036ac56036cfe2412c9d6cb42",
    "bytes": 162629,
-   "read_at": "2026-11-10T04:20Z"
+   "read_at": "2026-11-10T05:44Z"
   },
   "https://docs.replit.com/legal-and-security-info/model-improvement": {
    "sha256": "b330256ef72ada5593e09e227ff1b551a01475e5679887ab6b66ea204db0d110",
    "bytes": 133938,
-   "read_at": "2026-11-10T04:20Z"
+   "read_at": "2026-11-10T05:44Z"
   },
   "https://docs.replit.com/llms.txt": {
    "sha256": "d2fa30b48300baaa698d6dc7ee5e471a417c6c0fcad851025650b2089f4036d3",
    "bytes": 52262,
-   "read_at": "2026-11-10T04:20Z"
+   "read_at": "2026-11-10T05:44Z"
   },
-  "https://replit.com/customers/plaid": {
-   "sha256": "0870b6e534ef22a68d99dbc3eb83ed13dc0a821c3e5e0bb32618b159ae844ed5",
-   "bytes": 21516,
-   "read_at": "2026-11-10T04:20Z"
+  "https://replit.com/news/funding-announcement": {
+   "sha256": "f7aa1e18e16de47b04b759e32f1fa4d728203c1eb1208169644c5333777b8b9f",
+   "bytes": 110099,
+   "read_at": "2026-11-10T05:44Z"
   },
   "https://replit.com/security": {
-   "sha256": "ca159f55c62f57d146722ed37ec99f93594113c0a17bb9475278712d285022db",
+   "sha256": "c69e270c51d716d90adb85953580f061000cbbfcbd9fb82606791d5ac08da6bf",
    "bytes": 161305,
-   "read_at": "2026-11-10T04:20Z"
+   "read_at": "2026-11-10T05:44Z"
   },
   "https://replit.com/subprocessors": {
-   "sha256": "69c65d9cb156577f8e708d0686782b230baaea02a8abf86c7faa47e78652fff9",
-   "bytes": 95057,
-   "read_at": "2026-11-10T04:20Z"
+   "sha256": "43bd18511a5644e73b62402fcbb767379359842654bef126c3f86541dfbd00fb",
+   "bytes": 95113,
+   "read_at": "2026-11-10T05:44Z"
   }
  }
 }
