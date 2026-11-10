@@ -46,7 +46,7 @@ export function load(root) {
     for (const i of indicators) { const ss = stdOf(i); for (const a of ss) for (const b of ss) if (a < b) (pairs[a + '|' + b] = pairs[a + '|' + b] || []).push(i.id) }
     for (const s of standards) s.indicators = indicators.filter(i => stdOf(i).includes(s.id)).length
     totals.pairs = Object.keys(pairs).length; totals.lens = indicators.filter(i => i.lens).length
-    for (const sc of scans) Object.assign(sc, score(sc, levels), { g: grant(sc, lens) })
+    for (const sc of scans) Object.assign(sc, score(sc, levels, I, lens), { g: grant(sc, lens) })
     scans.sort((a, b) => (b.ours ? 1 : 0) - (a.ours ? 1 : 0) || a.name.localeCompare(b.name))
     return { standards, provisions, indicators, questions, levels, scans, lens, pairs, stdOf, P, I, S, totals }
 }
@@ -67,33 +67,57 @@ export function grant(scan, lens) {
 }
 
 // The levels are patterns over indicators (data/levels.json states them in words; this is the same rule in code).
-// An answer has a mode: deployed (true of this deployment), default (true of the product as shipped) or available
-// (a control the operator can turn on). `held` counts deployed and default only; `potential` counts all three.
-// Where a grant is measured, two indicators are read from it and not from words: I23 (the grant is enumerated)
-// and I45 (a limit is enforced outside the agent's reach: at least one row whose barrier is a boundary).
-export function score(scan, levels) {
-    const fromGrant = scan.grant ? { I23: true, I45: scan.grant.rows.some(r => r.barrier === 'boundary') } : {}
-    const run = withAvailable => {
-        const y = id => id in fromGrant ? fromGrant[id] || (withAvailable && scan.answers[id]?.m === 'available') : !!scan.answers[id] && (withAvailable || scan.answers[id].m !== 'available')
-        const any = (...ids) => ids.some(y)
-        let f = 1
-        if (y('I16') || (y('I07') && any('I02', 'I03', 'I04', 'I05'))) f = 2
-        if (y('I08') && any('I17', 'I18', 'I19')) f = 3
-        if (f === 3 && any('I04', 'I10', 'I11')) f = 4
-        if (f === 4 && any('I12', 'I13') && any('I18', 'I19')) f = 5
-        let g = 0; const missing = []
-        const step = (lvl, parts) => {
-            if (g !== lvl - 1) return
-            const not = parts.filter(p => !p[1])
-            if (not.length === 0) g = lvl; else if (!missing.length) missing.push(...not.map(p => ({ for: lvl, need: p[0], ids: p[2] })))
-        }
-        step(1, [['what it is for is written down', y('I20'), ['I20']], ['a policy or written rules', any('I34', 'I47'), ['I34', 'I47']]])
-        step(2, [['a named owner or accountable person', any('I30', 'I32'), ['I30', 'I32']], ['a person can approve or stop', any('I38', 'I39'), ['I38', 'I39']], ['its actions are logged', y('I41'), ['I41']]])
-        step(3, [['what it can reach is enumerated', y('I23'), ['I23']], ['a limit enforced outside its own reach', y('I45'), ['I45']], ['it is monitored in operation', y('I43'), ['I43']]])
-        step(4, [['test or evaluation results are published', y('I50'), ['I50']], ['an independent check', any('I52', 'I63', 'I64'), ['I52', 'I63', 'I64']]])
-        const clears = levels.governance[g].clears
-        return { freedom: f, governance: g, clears, held: Math.min(f, clears), workOrder: missing }
+//
+// Eligibility. An indicator is a statement fact (the publication is itself the evidence: a purpose written down, an
+// owner named) or an operation fact (something that has to be true while the agent runs: it is logged, it is watched).
+// A statement fact counts with any grade. An operation fact counts only when its grade is observed or measured;
+// otherwise it is CLAIMED: shown, and not counted towards the level held.
+// Scope. Two facts are read from a measured grant and never from words: I23 (the grant is enumerated: a profile whose
+// rows are mostly observed or measured) and I45 (bounded: every capability in the grant whose effect cannot be undone
+// sits behind a boundary).
+// A product is not given a governance level or a level held: those belong to a deployment. A product gets a freedom
+// level for each named configuration, and the list of controls that configuration brings.
+const STRONG = new Set(['observed', 'measured'])
+const GOV = [
+    [1, [['what it is for is written down', ['I20']], ['a policy in force, or written rules', ['I34', 'I47']]]],
+    [2, [['a named owner or accountable person', ['I30', 'I32']], ['a person can approve or stop', ['I38', 'I39']], ['its actions are logged', ['I41']]]],
+    [3, [['the grant is enumerated, from a measured profile', ['I23']], ['every capability that cannot be undone is behind a boundary', ['I45']], ['it is monitored in operation', ['I43']]]],
+    [4, [['test or evaluation results are published', ['I50']], ['an independent check', ['I52', 'I63', 'I64']]]]
+]
+function ladder(y) {
+    const any = (...ids) => ids.some(y)
+    let f = 1
+    if (y('I16') || (y('I07') && any('I02', 'I03', 'I04', 'I05'))) f = 2
+    if (y('I08') && any('I17', 'I18', 'I19')) f = 3
+    if (f === 3 && any('I04', 'I10', 'I11')) f = 4
+    if (f === 4 && any('I12', 'I13') && any('I18', 'I19')) f = 5
+    let g = 0, missing = []
+    for (const [lvl, parts] of GOV) { const not = parts.filter(p => !p[1].some(y)); if (not.length) { missing = not.map(p => ({ for: lvl, need: p[0], ids: p[1] })); break } g = lvl }
+    return { freedom: f, governance: g, missing }
+}
+export function score(scan, levels, I, lens) {
+    const A = scan.answers, undo = Object.fromEntries(lens.capabilities.map(c => [c.id, c.undo])), rows = scan.grant ? scan.grant.rows : null
+    const irreversible = rows ? rows.filter(r => undo[r.capability] === 'no') : [], loose = irreversible.filter(r => r.barrier !== 'boundary')
+    const refused = rows && scan.mandate ? rows.filter(r => (scan.mandate.do_not_want || []).includes(r.capability)) : []
+    const fromGrant = rows ? { I23: rows.filter(r => STRONG.has(r.evidence)).length * 2 >= rows.length, I45: irreversible.length > 0 && loose.length === 0 } : { I23: false, I45: false }
+    const eligible = id => A[id] && (I.get(id).needs === 'statement' || STRONG.has(A[id].g))
+    if (scan.kind === 'product-shape') {
+        const configs = (scan.configurations || [{ id: 'shipped', name: 'As shipped', note: '', on: [] }]).map(c => {
+            const on = id => A[id] && (A[id].m === 'default' || (A[id].m === 'available' && c.on.includes(A[id].cfg)))
+            const l = ladder(on), ids = Object.keys(A).filter(on)
+            return { ...c, freedom: l.freedom, controls: ids.filter(id => I.get(id).question > 'Q05'), added: ids.filter(id => A[id].m === 'available') }
+        })
+        const fs_ = configs.map(c => c.freedom)
+        return { product: true, freedom: configs[0].freedom, freedomMax: Math.max(...fs_), configs, governance: null, held: null, workOrder: [], evidenced: Object.values(A).filter(a => a.m !== 'available').length, available: Object.values(A).filter(a => a.m === 'available').length, irreversible: irreversible.length, loose: loose.length }
     }
-    const now = run(false), pot = run(true), n = Object.values(scan.answers)
-    return { ...now, gap: now.freedom - now.held, potential: pot, evidenced: n.filter(a => a.m !== 'available').length, available: n.filter(a => a.m === 'available').length }
+    const claimed = ladder(id => id in fromGrant && rows ? fromGrant[id] || !!A[id] : !!A[id])
+    const ev = ladder(id => id in fromGrant ? fromGrant[id] : eligible(id))
+    const clears = g => levels.governance[g].clears
+    const work = []
+    for (const r of refused.filter(r => r.barrier !== 'boundary')) work.push({ type: 'refused', text: `\`${r.capability}\` is refused by the mandate and is in the grant with ${r.barrier === 'none' ? 'nothing' : 'only a ' + r.barrier} in the way`, capability: r.capability })
+    if (rows && loose.length) work.push({ type: 'unbounded', text: `${loose.length} of the ${irreversible.length} capabilities in the grant whose effect cannot be undone are not behind a boundary: ${loose.map(r => '`' + r.capability + '`').join(', ')}` })
+    for (const x of ev.missing) { const cl = x.ids.filter(id => A[id] && !(id in fromGrant)); work.push({ type: cl.length ? 'claimed' : 'missing', for: x.for, need: x.need, ids: x.ids, text: cl.length ? `${x.need}: stated, but known only as ${cl.map(id => A[id].g).join(', ')}; it has to be observed or measured to count` : (x.ids.some(id => id in fromGrant) ? (rows ? `${x.need}` : `${x.need}: no grant has been measured`) : `${x.need}: not evidenced`) }) }
+    const held = Math.min(ev.freedom, clears(ev.governance)), claimedHeld = Math.min(claimed.freedom, clears(claimed.governance))
+    return { product: false, freedom: ev.freedom, governance: ev.governance, clears: clears(ev.governance), held, gap: ev.freedom - held, claimed: { governance: claimed.governance, held: claimedHeld }, nextLevel: ev.missing.length ? ev.missing[0].for : null, workOrder: work,
+        evidenced: Object.keys(A).filter(eligible).length, claimedOnly: Object.keys(A).filter(id => !eligible(id)).length, available: 0, irreversible: irreversible.length, loose: loose.length, refused: refused.length }
 }

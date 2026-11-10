@@ -68,6 +68,16 @@ GAMMA-Ray was briefed by Dinis Cruz in speech, on 9 and 10 November 2026, during
 
 > Do another pass where you add up all the graphs and all the interconnections.
 
+## Publish, in beta, with a label (10 November, later still)
+
+> What we're doing here is what a lot of companies have done with public ratings of SSL reviews or public reviews of companies. There's a long tradition of this. At the end of the day, this is all public data. We linked everything that's there, so we can basically just publish this for all sorts of websites.
+
+> I'm quite keen to see what will actually the label look like and what the visualization will look like of the particular agent. And take into account that most likely the deployment matters. So we should start to have that matrix in play.
+
+> Can you add to the top of the website like a beta? This is being launched for a review, and the rating should have that beta version rating in there, so we also say this is still experimental.
+
+> Dev increments the last number, and then main increments the middle number.
+
 ## The rules given with the brief
 
-Public sources only. No rating of a named company is published without its evidence and without the company having seen it. No contact details anywhere. Never push to the main branch. The name and the backronym stay as chosen.
+Public sources only. No rating is published without its evidence. (The first brief also said: not without the company having seen it. The operator replaced that on 10 November 2026: a rating made from public data may be published, labelled as beta and as not seen by its subject.) No contact details anywhere. Never push to the main branch. The name and the backronym stay as chosen.

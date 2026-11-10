@@ -105,7 +105,7 @@
   },
   "I41": {
    "e": "https://riskmandate.ai/versions.html",
-   "n": "Every release is a written note in the version record.",
+   "n": "Every release is a written note in the version record. That records releases, not what the agent did between them.",
    "g": "self-reported",
    "m": "deployed"
   },
@@ -258,5 +258,6 @@
    "grant.credential.self",
    "read.credential.host"
   ]
- }
+ },
+ "moved": "Its logging evidence is a release record, self-reported, and does not cover what the agent does; an operation fact now has to be observed or measured. Governance 2 became a claim."
 }

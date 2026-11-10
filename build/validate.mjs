@@ -22,6 +22,7 @@ for (const i of I) {
     for (const l of i.links) { if (!pid.has(l.provision)) bad('data', `indicator ${i.id}: unknown provision ${l.provision}`); if (!['same', 'part', 'negation'].includes(l.relation)) bad('data', `indicator ${i.id}: relation`) }
 }
 for (const q of Q) { for (const id of q.indicators) if (!iid.has(id)) bad('data', `question ${q.id}: unknown indicator ${id}`); if (!['freedom', 'governance'].includes(q.axis)) bad('data', `question ${q.id}: axis`) }
+for (const i of I) if (!['statement', 'operation'].includes(i.needs)) bad('data', `indicator ${i.id}: needs`)
 for (const i of I) if (!Q.find(q => q.id === i.question).indicators.includes(i.id)) bad('data', `indicator ${i.id} is not listed by its question`)
 // the level rules name only indicators that exist
 for (const id of JSON.stringify(read('data/levels.json')).match(/\bI\d\d\b/g) || []) if (!iid.has(id)) bad('levels', `rule names unknown indicator ${id}`)
@@ -32,9 +33,12 @@ for (const f of fs.readdirSync(path.join(ROOT, 'data/scans')).filter(f => f.ends
     const s = read('data/scans/' + f)
     if (s.id + '.json' !== f) bad('scan', `${f}: id does not match the file`)
     if (!s.vault || !/^sgit_public_read_[0-9a-f]{32,}:[a-z0-9]+$/.test(s.vault.read_key || '')) bad('scan', `${f}: no public vault read key (every assessment lives in a vault)`)
-    // a third party: only a product as its vendor documents it, labelled as an example, or a scan its operator has seen
-    if (!s.ours && !s.seen_by_operator && !(s.kind === 'product-shape' && s.basis)) bad('scan', `${f}: a third party's deployment needs seen_by_operator; a product example needs kind product-shape and a basis`)
-    if (!s.ours) for (const [id, a] of Object.entries(s.answers)) if (!['documented', 'observed', 'measured'].includes(a.g)) bad('scan', `${f}: ${id}: a third party's answer must be documented by the vendor or measured`)
+    // a rating of anybody but ourselves: public sources only, a stated basis, and every answer documented or better
+    if (!s.ours && !s.basis) bad('scan', `${f}: a rating of a third party needs a basis (what public sources it was made from)`)
+    if (!s.ours) for (const [id, a] of Object.entries(s.answers)) if (!['documented', 'observed', 'measured'].includes(a.g)) bad('scan', `${f}: ${id}: a third party's answer must be documented or measured`)
+    if (s.kind === 'product-shape') { const tags = new Set((s.configurations || []).flatMap(c => c.on)); if (!s.configurations?.length || s.configurations[0].on.length) bad('scan', `${f}: a product needs configurations, the first of them as shipped`)
+        for (const [id, a] of Object.entries(s.answers)) if (a.m === 'available' && !tags.has(a.cfg)) bad('scan', `${f}: ${id} is available but no configuration turns it on`) }
+    if (s.answers.I49 && !(s.mandate && s.grant)) bad('scan', `${f}: I49 (the delta) needs a mandate and a grant`)
     const caps = new Set(read('data/lens.json').capabilities.map(c => c.id)), bars = new Set(read('data/lens.json').barriers.map(b => b.id))
     if (s.grant) for (const r of s.grant.rows) { if (!caps.has(r.capability)) bad('scan', `${f}: unknown capability ${r.capability}`); if (!bars.has(r.barrier)) bad('scan', `${f}: unknown barrier ${r.barrier}`) }
     if (s.grant === undefined) bad('scan', `${f}: say whether the grant is measured (a grant, or null with a grant_note)`)

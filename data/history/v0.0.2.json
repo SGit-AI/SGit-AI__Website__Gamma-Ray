@@ -1,0 +1,240 @@
+{
+ "version": "v0.0.2",
+ "totals": {
+  "provisions": 279,
+  "linked": 209,
+  "indicators": 69,
+  "questions": 21,
+  "standards": 8,
+  "links": 253,
+  "byTier": {
+   "public": 40,
+   "declared": 25,
+   "evidenced": 4
+  },
+  "shared": 28,
+  "pairs": 22,
+  "lens": 6
+ },
+ "coverage": [
+  {
+   "id": "sf",
+   "name": "Salesforce",
+   "provisions": 34,
+   "linked": 31,
+   "tiers": {
+    "public": 22,
+    "declared": 9,
+    "evidenced": 0
+   }
+  },
+  {
+   "id": "eaamm",
+   "name": "EAAMM",
+   "provisions": 12,
+   "linked": 12,
+   "tiers": {
+    "public": 8,
+    "declared": 4,
+    "evidenced": 0
+   }
+  },
+  {
+   "id": "owasp",
+   "name": "OWASP",
+   "provisions": 35,
+   "linked": 34,
+   "tiers": {
+    "public": 17,
+    "declared": 13,
+    "evidenced": 4
+   }
+  },
+  {
+   "id": "mcp",
+   "name": "MCP authorization",
+   "provisions": 15,
+   "linked": 15,
+   "tiers": {
+    "public": 8,
+    "declared": 0,
+    "evidenced": 7
+   }
+  },
+  {
+   "id": "aagmm",
+   "name": "AAGMM",
+   "provisions": 12,
+   "linked": 12,
+   "tiers": {
+    "public": 6,
+    "declared": 6,
+    "evidenced": 0
+   }
+  },
+  {
+   "id": "ms",
+   "name": "Microsoft",
+   "provisions": 88,
+   "linked": 45,
+   "tiers": {
+    "public": 22,
+    "declared": 22,
+    "evidenced": 1
+   }
+  },
+  {
+   "id": "nist",
+   "name": "NIST AI RMF",
+   "provisions": 72,
+   "linked": 50,
+   "tiers": {
+    "public": 19,
+    "declared": 31,
+    "evidenced": 0
+   }
+  },
+  {
+   "id": "aiact",
+   "name": "EU AI Act",
+   "provisions": 11,
+   "linked": 10,
+   "tiers": {
+    "public": 6,
+    "declared": 4,
+    "evidenced": 0
+   }
+  }
+ ],
+ "pairs": {
+  "ms|sf": 10,
+  "nist|owasp": 13,
+  "owasp|sf": 7,
+  "ms|owasp": 14,
+  "aagmm|owasp": 13,
+  "aagmm|sf": 12,
+  "aagmm|ms": 9,
+  "eaamm|ms": 5,
+  "aiact|nist": 11,
+  "ms|nist": 14,
+  "aagmm|mcp": 2,
+  "mcp|sf": 1,
+  "nist|sf": 8,
+  "aagmm|nist": 10,
+  "aagmm|aiact": 5,
+  "aiact|owasp": 5,
+  "aiact|sf": 3,
+  "aiact|ms": 5,
+  "eaamm|nist": 5,
+  "aagmm|eaamm": 3,
+  "aiact|eaamm": 3,
+  "eaamm|sf": 2
+ },
+ "scans": [
+  {
+   "id": "riskmandate-publisher",
+   "kind": "deployment",
+   "freedom": 5,
+   "governance": 2,
+   "held": 3,
+   "potential": {
+    "freedom": 5,
+    "governance": 2,
+    "held": 3
+   },
+   "grant": {
+    "size": 17,
+    "by": {
+     "none": 11,
+     "expectation": 0,
+     "setting": 3,
+     "boundary": 3
+    },
+    "bounded": 3,
+    "unbounded": 14,
+    "measured": 15,
+    "delta": {
+     "wanted": 13,
+     "aligned": 13,
+     "excess": 4,
+     "unboundedExcess": 3,
+     "shortfall": 0
+    }
+   }
+  },
+  {
+   "id": "promptugal-newsroom-team",
+   "kind": "deployment",
+   "freedom": 5,
+   "governance": 2,
+   "held": 3,
+   "potential": {
+    "freedom": 5,
+    "governance": 2,
+    "held": 3
+   },
+   "grant": null
+  },
+  {
+   "id": "claude-code-web",
+   "kind": "product-shape",
+   "freedom": 4,
+   "governance": 0,
+   "held": 1,
+   "potential": {
+    "freedom": 5,
+    "governance": 0,
+    "held": 1
+   },
+   "grant": {
+    "size": 15,
+    "by": {
+     "none": 10,
+     "expectation": 0,
+     "setting": 2,
+     "boundary": 3
+    },
+    "bounded": 3,
+    "unbounded": 12,
+    "measured": 13
+   }
+  },
+  {
+   "id": "claude-code-local",
+   "kind": "product-shape",
+   "freedom": 2,
+   "governance": 0,
+   "held": 1,
+   "potential": {
+    "freedom": 5,
+    "governance": 1,
+    "held": 2
+   },
+   "grant": {
+    "size": 16,
+    "by": {
+     "none": 13,
+     "expectation": 1,
+     "setting": 2,
+     "boundary": 0
+    },
+    "bounded": 0,
+    "unbounded": 16,
+    "measured": 0
+   }
+  },
+  {
+   "id": "github-copilot-cloud-agent",
+   "kind": "product-shape",
+   "freedom": 4,
+   "governance": 0,
+   "held": 1,
+   "potential": {
+    "freedom": 4,
+    "governance": 0,
+    "held": 1
+   },
+   "grant": null
+  }
+ ]
+}

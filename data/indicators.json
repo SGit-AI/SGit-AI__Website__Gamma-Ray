@@ -3,6 +3,7 @@
   "id": "I01",
   "question": "Q01",
   "tier": "public",
+  "needs": "statement",
   "text": "It is a vendor's assistant, used as supplied",
   "links": [
    {
@@ -15,6 +16,7 @@
   "id": "I02",
   "question": "Q01",
   "tier": "public",
+  "needs": "statement",
   "text": "It runs on an AI platform with the organisation's own data, without executing arbitrary code",
   "links": [
    {
@@ -27,6 +29,7 @@
   "id": "I03",
   "question": "Q01",
   "tier": "public",
+  "needs": "statement",
   "text": "It is configured on a low-code or no-code builder and acts on real organisational data",
   "links": [
    {
@@ -39,6 +42,7 @@
   "id": "I04",
   "question": "Q01",
   "tier": "public",
+  "needs": "statement",
   "text": "It generates and executes code with local or cloud privileges",
   "links": [
    {
@@ -51,6 +55,7 @@
   "id": "I05",
   "question": "Q01",
   "tier": "public",
+  "needs": "statement",
   "text": "It is built in-house: the organisation controls its identity, tools and boundaries",
   "links": [
    {
@@ -63,6 +68,7 @@
   "id": "I06",
   "question": "Q02",
   "tier": "public",
+  "needs": "statement",
   "text": "It follows fixed rules, with no reasoning",
   "links": [
    {
@@ -87,6 +93,7 @@
   "id": "I07",
   "question": "Q02",
   "tier": "public",
+  "needs": "statement",
   "text": "It retrieves information and recommends actions; a person acts",
   "links": [
    {
@@ -103,6 +110,7 @@
   "id": "I08",
   "question": "Q02",
   "tier": "public",
+  "needs": "statement",
   "text": "It executes actions itself",
   "links": [
    {
@@ -123,6 +131,7 @@
   "id": "I09",
   "question": "Q03",
   "tier": "public",
+  "needs": "statement",
   "text": "It works in one domain's data",
   "links": [
    {
@@ -139,6 +148,7 @@
   "id": "I10",
   "question": "Q03",
   "tier": "public",
+  "needs": "statement",
   "text": "It works across several domains or systems",
   "links": [
    {
@@ -167,6 +177,7 @@
   "id": "I11",
   "question": "Q03",
   "tier": "public",
+  "needs": "statement",
   "text": "It connects to external tools or services across a trust boundary",
   "links": [
    {
@@ -187,6 +198,8 @@
   "id": "I12",
   "question": "Q04",
   "tier": "public",
+  "needs": "statement",
+  "scope": "Agents that each have their own context and authority and pass work between them. One agent delegating a side task inside its own session does not count.",
   "text": "Several agents coordinate inside the organisation",
   "links": [
    {
@@ -211,6 +224,7 @@
   "id": "I13",
   "question": "Q04",
   "tier": "public",
+  "needs": "statement",
   "text": "Agents operate across organisational boundaries or disparate stacks",
   "links": [
    {
@@ -235,6 +249,7 @@
   "id": "I14",
   "question": "Q04",
   "tier": "public",
+  "needs": "statement",
   "text": "There is a published protocol or communication layer between agents",
   "links": [
    {
@@ -255,6 +270,7 @@
   "id": "I15",
   "question": "Q05",
   "tier": "public",
+  "needs": "statement",
   "text": "The person operates: every action is prompted and controlled by them",
   "links": [
    {
@@ -267,6 +283,7 @@
   "id": "I16",
   "question": "Q05",
   "tier": "public",
+  "needs": "statement",
   "text": "The agent suggests; the person reviews and approves each action",
   "links": [
    {
@@ -279,6 +296,7 @@
   "id": "I17",
   "question": "Q05",
   "tier": "public",
+  "needs": "statement",
   "text": "The agent handles routine tasks; the person is consulted on exceptions",
   "links": [
    {
@@ -291,6 +309,7 @@
   "id": "I18",
   "question": "Q05",
   "tier": "public",
+  "needs": "statement",
   "text": "The agent works independently; the person approves critical decisions only",
   "links": [
    {
@@ -303,6 +322,7 @@
   "id": "I19",
   "question": "Q05",
   "tier": "public",
+  "needs": "statement",
   "text": "The agent has full autonomy within boundaries; the person monitors",
   "links": [
    {
@@ -319,6 +339,7 @@
   "id": "I20",
   "question": "Q06",
   "tier": "public",
+  "needs": "statement",
   "text": "Its purpose and permitted tasks are stated in writing",
   "links": [
    {
@@ -348,6 +369,7 @@
   "id": "I21",
   "question": "Q06",
   "tier": "declared",
+  "needs": "statement",
   "text": "Its autonomy limits and the tools it may use are defined",
   "links": [
    {
@@ -368,6 +390,7 @@
   "id": "I22",
   "question": "Q06",
   "tier": "public",
+  "needs": "statement",
   "text": "Its limits and known failure cases are documented for those who use it",
   "links": [
    {
@@ -388,6 +411,8 @@
   "id": "I23",
   "question": "Q07",
   "tier": "public",
+  "needs": "operation",
+  "scope": "Read from a grant profile only: a description of permissions in prose does not count.",
   "text": "What it can reach is enumerated: scopes, permissions, tools",
   "links": [
    {
@@ -409,6 +434,7 @@
   "id": "I24",
   "question": "Q07",
   "tier": "public",
+  "needs": "statement",
   "text": "Its authorisation is published as metadata that anyone can read",
   "links": [
    {
@@ -433,6 +459,7 @@
   "id": "I25",
   "question": "Q07",
   "tier": "public",
+  "needs": "statement",
   "text": "It asks for narrower access than the whole account",
   "links": [
    {
@@ -461,6 +488,7 @@
   "id": "I26",
   "question": "Q07",
   "tier": "declared",
+  "needs": "statement",
   "text": "It has its own identity, separate from any person's",
   "links": [
    {
@@ -481,6 +509,7 @@
   "id": "I27",
   "question": "Q07",
   "tier": "public",
+  "needs": "statement",
   "text": "Its identity is cryptographic and can be checked by others",
   "links": [
    {
@@ -493,6 +522,7 @@
   "id": "I28",
   "question": "Q07",
   "tier": "evidenced",
+  "needs": "operation",
   "text": "Its tokens are bound to the service they were issued for and are not passed on",
   "links": [
    {
@@ -529,6 +559,7 @@
   "id": "I29",
   "question": "Q08",
   "tier": "declared",
+  "needs": "statement",
   "text": "The organisation keeps a registry of its agents",
   "links": [
    {
@@ -561,6 +592,7 @@
   "id": "I30",
   "question": "Q08",
   "tier": "declared",
+  "needs": "statement",
   "text": "Each agent has a named owner",
   "links": [
    {
@@ -581,6 +613,7 @@
   "id": "I31",
   "question": "Q08",
   "tier": "declared",
+  "needs": "statement",
   "text": "Agents are retired by a defined process",
   "links": [
    {
@@ -605,6 +638,7 @@
   "id": "I32",
   "question": "Q09",
   "tier": "public",
+  "needs": "statement",
   "text": "A named executive or body is accountable for the organisation's agents",
   "links": [
    {
@@ -637,6 +671,7 @@
   "id": "I33",
   "question": "Q09",
   "tier": "declared",
+  "needs": "statement",
   "text": "Roles and responsibilities for AI risk are documented",
   "links": [
    {
@@ -657,6 +692,8 @@
   "id": "I34",
   "question": "Q10",
   "tier": "public",
+  "needs": "statement",
+  "scope": "A policy that is in force for this agent. A product feature that lets an operator deploy rules is a mechanism, not a policy.",
   "text": "A governance policy for agents is published",
   "links": [
    {
@@ -701,6 +738,7 @@
   "id": "I35",
   "question": "Q10",
   "tier": "declared",
+  "needs": "statement",
   "text": "Agents and use cases are classed by risk",
   "links": [
    {
@@ -745,6 +783,7 @@
   "id": "I36",
   "question": "Q10",
   "tier": "declared",
+  "needs": "statement",
   "text": "The laws that apply to it are identified",
   "links": [
    {
@@ -765,6 +804,7 @@
   "id": "I37",
   "question": "Q10",
   "tier": "declared",
+  "needs": "statement",
   "text": "New agents pass an approval or review before they run",
   "links": [
    {
@@ -785,6 +825,7 @@
   "id": "I38",
   "question": "Q11",
   "tier": "public",
+  "needs": "statement",
   "text": "High-impact actions need a person's approval",
   "links": [
    {
@@ -817,6 +858,7 @@
   "id": "I39",
   "question": "Q11",
   "tier": "declared",
+  "needs": "statement",
   "text": "There is a way to pause or stop it",
   "links": [
    {
@@ -837,6 +879,7 @@
   "id": "I40",
   "question": "Q11",
   "tier": "declared",
+  "needs": "statement",
   "text": "There is a defined escalation path",
   "links": [
    {
@@ -857,6 +900,8 @@
   "id": "I41",
   "question": "Q12",
   "tier": "declared",
+  "needs": "operation",
+  "scope": "The log must cover what the agent does (its tool calls, commands or commits), not only what is released.",
   "text": "Its actions are logged",
   "links": [
    {
@@ -885,6 +930,7 @@
   "id": "I42",
   "question": "Q12",
   "tier": "evidenced",
+  "needs": "operation",
   "text": "The log is tamper-evident and kept for a stated time",
   "links": [
    {
@@ -909,6 +955,8 @@
   "id": "I43",
   "question": "Q13",
   "tier": "declared",
+  "needs": "operation",
+  "scope": "Somebody or something must be shown to look at the record while the agent runs: a dated report, an alert, a review.",
   "text": "It is monitored in operation",
   "links": [
    {
@@ -949,6 +997,7 @@
   "id": "I44",
   "question": "Q13",
   "tier": "evidenced",
+  "needs": "operation",
   "text": "Anomalies are detected in real time and raise alerts",
   "links": [
    {
@@ -981,6 +1030,8 @@
   "id": "I45",
   "question": "Q14",
   "tier": "public",
+  "needs": "operation",
+  "scope": "Read from a measured grant only. It holds when every capability in the grant whose effect cannot be undone sits behind a boundary.",
   "text": "A limit on it is enforced by something outside its own reach",
   "links": [
    {
@@ -1010,6 +1061,7 @@
   "id": "I46",
   "question": "Q14",
   "tier": "public",
+  "needs": "statement",
   "text": "A limit on it is a setting that its own account could change",
   "links": [],
   "lens": "a barrier of the kind setting"
@@ -1018,6 +1070,7 @@
   "id": "I47",
   "question": "Q14",
   "tier": "public",
+  "needs": "statement",
   "text": "A limit on it is a rule in prose",
   "links": [
    {
@@ -1031,6 +1084,7 @@
   "id": "I48",
   "question": "Q14",
   "tier": "declared",
+  "needs": "operation",
   "text": "Policy is enforced as machine-readable rules",
   "links": [
    {
@@ -1051,6 +1105,8 @@
   "id": "I49",
   "question": "Q14",
   "tier": "public",
+  "needs": "statement",
+  "scope": "Needs both a mandate and a grant. Without a written mandate there is no delta to state.",
   "text": "The difference between what it can reach and what it is for is stated",
   "links": [],
   "lens": "the delta"
@@ -1059,6 +1115,7 @@
   "id": "I50",
   "question": "Q15",
   "tier": "public",
+  "needs": "statement",
   "text": "Test or evaluation results are published",
   "links": [
    {
@@ -1091,6 +1148,8 @@
   "id": "I51",
   "question": "Q15",
   "tier": "declared",
+  "needs": "operation",
+  "scope": "The agent itself must be tested, including by attack. Scanning the code or content it produces is a different fact.",
   "text": "It is tested for safety and security, including by attack",
   "links": [
    {
@@ -1115,6 +1174,7 @@
   "id": "I52",
   "question": "Q15",
   "tier": "declared",
+  "needs": "statement",
   "text": "People who did not build it take part in assessing it",
   "links": [
    {
@@ -1127,6 +1187,7 @@
   "id": "I53",
   "question": "Q16",
   "tier": "declared",
+  "needs": "statement",
   "text": "There is an incident process for agents",
   "links": [
    {
@@ -1155,6 +1216,7 @@
   "id": "I54",
   "question": "Q16",
   "tier": "public",
+  "needs": "statement",
   "text": "Incidents and errors are communicated to those affected",
   "links": [
    {
@@ -1175,6 +1237,7 @@
   "id": "I55",
   "question": "Q16",
   "tier": "declared",
+  "needs": "statement",
   "text": "There is a plan for a failure of a third party it depends on",
   "links": [
    {
@@ -1187,6 +1250,7 @@
   "id": "I56",
   "question": "Q17",
   "tier": "public",
+  "needs": "statement",
   "text": "It tells the people it talks to that it is an AI",
   "links": [
    {
@@ -1199,6 +1263,7 @@
   "id": "I57",
   "question": "Q17",
   "tier": "public",
+  "needs": "statement",
   "text": "There is a channel to report problems with it or contest its output",
   "links": [
    {
@@ -1227,6 +1292,7 @@
   "id": "I58",
   "question": "Q18",
   "tier": "public",
+  "needs": "statement",
   "text": "The data it uses is described",
   "links": [
    {
@@ -1251,6 +1317,7 @@
   "id": "I59",
   "question": "Q18",
   "tier": "declared",
+  "needs": "statement",
   "text": "There are data quality rules for what it reads",
   "links": [
    {
@@ -1275,6 +1342,7 @@
   "id": "I60",
   "question": "Q18",
   "tier": "declared",
+  "needs": "statement",
   "text": "Its privacy risk has been examined",
   "links": [
    {
@@ -1291,6 +1359,7 @@
   "id": "I61",
   "question": "Q19",
   "tier": "public",
+  "needs": "statement",
   "text": "The models and third-party components it uses are listed",
   "links": [
    {
@@ -1307,6 +1376,7 @@
   "id": "I62",
   "question": "Q19",
   "tier": "declared",
+  "needs": "operation",
   "text": "Third-party components are monitored and have risk controls",
   "links": [
    {
@@ -1331,6 +1401,7 @@
   "id": "I63",
   "question": "Q20",
   "tier": "public",
+  "needs": "statement",
   "text": "A public certificate or audit report covers it",
   "links": [
    {
@@ -1347,6 +1418,7 @@
   "id": "I64",
   "question": "Q20",
   "tier": "evidenced",
+  "needs": "operation",
   "text": "Compliance evidence is produced continuously, ready for a regulator",
   "links": [
    {
@@ -1367,6 +1439,7 @@
   "id": "I65",
   "question": "Q21",
   "tier": "public",
+  "needs": "statement",
   "text": "There is a stated strategy for agents",
   "links": [
    {
@@ -1403,6 +1476,7 @@
   "id": "I66",
   "question": "Q21",
   "tier": "declared",
+  "needs": "statement",
   "text": "The people who work with it are trained",
   "links": [
    {
@@ -1443,6 +1517,7 @@
   "id": "I67",
   "question": "Q21",
   "tier": "declared",
+  "needs": "statement",
   "text": "Its value is measured",
   "links": [
    {
@@ -1507,6 +1582,7 @@
   "id": "I68",
   "question": "Q21",
   "tier": "declared",
+  "needs": "statement",
   "text": "It is improved on a regular cycle",
   "links": [
    {
@@ -1543,6 +1619,7 @@
   "id": "I69",
   "question": "Q21",
   "tier": "declared",
+  "needs": "statement",
   "text": "The organisation's risk management covers agents",
   "links": [
    {

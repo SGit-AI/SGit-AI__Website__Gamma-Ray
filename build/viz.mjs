@@ -102,13 +102,13 @@ export function quadrant(m, only) {
     G.forEach(g => o += `<text x="${x0 - 12}" y="${y0 + (4 - g.level) * c + c / 2 + 4}" text-anchor="end">${g.level} ${esc(g.name)}</text>`)
     F.forEach(f => o += `<text x="${x0 + (f.level - 1) * cw + cw / 2}" y="${y0 + 5 * c + 18}" text-anchor="middle">${f.level} ${esc(f.name)}</text>`)
     o += `<text class="axis" x="${x0 + 2.5 * cw}" y="${y0 + 5 * c + 44}" text-anchor="middle">Freedom: what the agent does on its own →</text><text class="axis" transform="translate(18,${y0 + 2.5 * c}) rotate(-90)" text-anchor="middle">Governance: how it is controlled →</text>`
-    const scans = m.scans.filter(s => !only || s.id === only), seen = {}
+    const scans = m.scans.filter(s => !s.product && (!only || s.id === only)), seen = {}
     const at = (f, g) => [x0 + (f - 1) * cw + 12, y0 + (4 - g) * c + 6]
+    const nm = s => short(s.name.replace(/^The /, '').replace(/ agent team$/, '').replace(/\.news$/, '').replace(/^RiskMandate Publisher$/, 'RM Publisher'), 17)
     for (const s of scans) {
-        const k = s.freedom + '-' + s.governance, n = seen[k] = (seen[k] || 0) + 1
-        const [x, y0_] = at(s.freedom, s.governance), y = y0_ + n * 16, P = s.potential
-        if (P.freedom !== s.freedom || P.governance !== s.governance) { const [px, py] = at(P.freedom, P.governance); o += `<path class="range" d="M${x},${y - 4} L${px + cw - 30},${py + 16 - 4}"/><circle class="dot pot" cx="${px + cw - 30}" cy="${py + 16 - 4}" r="4"><title>${esc(s.name)}, with its optional controls and modes turned on</title></circle>` }
-        o += `<circle class="dot${s.kind === 'product-shape' ? ' prod' : ''}" cx="${x}" cy="${y - 4}" r="4.5"/><text class="lab" x="${x + 9}" y="${y}">${esc(short(s.name.replace(/^The /, '').replace(/ agent team$/, '').replace(/\.news$/, '').replace(/, on your own machine$/, ' (local)').replace(/ on the web$/, ' (web)').replace(/^GitHub Copilot cloud agent$/, 'Copilot agent').replace(/^RiskMandate Publisher$/, 'RM Publisher'), 17))}</text>`
+        const k = s.freedom + '-' + s.governance, n = seen[k] = (seen[k] || 0) + 1, [x, yy] = at(s.freedom, s.governance), y = yy + n * 16
+        if (s.claimed.governance !== s.governance) { const [px, py] = at(s.freedom, s.claimed.governance); o += `<path class="range" d="M${x},${y - 4} L${px},${py + 12}"/><circle class="dot pot" cx="${px}" cy="${py + 12}" r="4.5"><title>${esc(s.name)}: where its own statements would put it</title></circle><text class="lab dim" x="${px + 9}" y="${py + 16}">claimed</text>` }
+        o += `<circle class="dot" cx="${x}" cy="${y - 4}" r="4.5"/><text class="lab" x="${x + 9}" y="${y}">${esc(nm(s))}</text>`
     }
     return o + '</svg>'
 }
@@ -163,4 +163,51 @@ export function grantGrid(m, id) {
     const leg = [['b-none', 'nothing in the way'], ['b-expectation', 'a rule in prose'], ['b-setting', 'a setting it could change'], ['b-boundary', 'a boundary outside its reach']]; let lx = x0
     for (const [c, l] of leg) { o += `<rect class="${c}" x="${lx}" y="${y + 6}" width="12" height="12" rx="2"/><text class="sm" x="${lx + 18}" y="${y + 16}">${l}</text>`; lx += 34 + l.length * 6.6 }
     return `<svg class="fig grant" viewBox="0 0 ${x0 + per * tw + 6} ${y + 26}" role="img" aria-label="The grant of ${esc(s.name)}: ${s.g.size} of ${m.lens.capabilities.length} capabilities, ${s.g.bounded} of them behind a boundary.">${o}</svg>`
+}
+
+// 10. The label: what a rating looks like when it is shown somewhere else.
+export function label(m, id) {
+    const s = m.scans.find(x => x.id === id), W = 520, H = 168, F = m.levels.freedom
+    const big = s.product ? (s.freedom === s.freedomMax ? String(s.freedom) : s.freedom + '-' + s.freedomMax) : String(s.held)
+    const cap = s.product ? 'FREEDOM' : 'HELD AT'
+    const lines = s.product
+        ? [`As shipped: ${s.freedom} ${F[s.freedom - 1].name}` + (s.freedomMax !== s.freedom ? `, up to ${s.freedomMax} ${F[s.freedomMax - 1].name}` : ''), `${s.configs.length} configurations rated`, 'Deployment governance: not assessed', s.g ? `Grant ${s.g.size} of ${m.lens.capabilities.length}, ${s.g.bounded} behind a boundary` : 'Grant: not measured']
+        : [`Reaches ${s.freedom} ${F[s.freedom - 1].name}`, `Governance ${s.governance} ${m.levels.governance[s.governance].name}` + (s.claimed.governance !== s.governance ? ` (claims ${s.claimed.governance})` : ''), s.g ? `Grant ${s.g.size} of ${m.lens.capabilities.length}, ${s.g.bounded} behind a boundary` : 'Grant: not measured', s.g?.delta ? `${s.g.delta.excess} in excess of its mandate` : `${s.workOrder.length} item${s.workOrder.length === 1 ? '' : 's'} on its work order`]
+    let o = `<svg class="fig label" viewBox="0 0 ${W} ${H}" role="img" aria-label="GAMMA-Ray beta label for ${esc(s.name)}: ${cap.toLowerCase()} ${big}. ${esc(lines.join('. '))}.">`
+    o += `<rect class="lb" x="1" y="1" width="${W - 2}" height="${H - 2}" rx="12"/><path class="ld" d="M13,1 h137 v${H - 2} h-137 a12,12 0 0 1 -12,-12 v-${H - 26} a12,12 0 0 1 12,-12 z"/>`
+    o += `<text class="lcap" x="76" y="34" text-anchor="middle">${cap}</text><text class="lbig${big.length > 1 ? ' sm2' : ''}" x="76" y="104" text-anchor="middle">${big}</text><text class="lof" x="76" y="130" text-anchor="middle">${s.product ? 'by configuration' : 'of 5'}</text>`
+    o += `<rect class="lbeta" x="38" y="140" width="76" height="17" rx="8.5"/><text class="lbt" x="76" y="152" text-anchor="middle">BETA RATING</text>`
+    o += `<text class="lname" x="168" y="32">${esc(short(s.name, 38))}</text>`
+    lines.forEach((l, k) => { o += `<text class="lline" x="168" y="${58 + k * 20}">${esc(l)}</text>` })
+    o += `<text class="lfoot" x="168" y="${H - 14}">GAMMA-Ray ${esc(m.levels.version)} · Public tier · ${s.read}</text>`
+    return o + '</svg>'
+}
+
+// 11. One agent's profile: every indicator as a square, by question.
+export function profile(m, id) {
+    const s = m.scans.find(x => x.id === id), x0 = 330, sq = 20, rh = 24, y0 = 6, W = x0 + 6 * sq + 250, H = y0 + m.questions.length * rh + 36
+    const strong = a => a.g === 'observed' || a.g === 'measured'
+    const cls = i => { const a = s.answers[i.id]; if (!a) return 'p-none'; if (a.m === 'available') return 'p-avail'; return i.needs === 'statement' || strong(a) ? 'p-yes' : 'p-claim' }
+    let o = `<svg class="fig profile" viewBox="0 0 ${W} ${H}" role="img" aria-label="The profile of ${esc(s.name)}: for each question, which indicators are evidenced, claimed, available or not evidenced.">`
+    m.questions.forEach((q, r) => { const y = y0 + r * rh
+        o += `<text x="${x0 - 12}" y="${y + 15}" text-anchor="end">${esc(short(q.text, 48))}</text>`
+        q.ind.forEach((i, k) => { o += `<rect class="${cls(i)}" x="${x0 + k * sq}" y="${y + 2}" width="${sq - 4}" height="${sq - 4}" rx="3"><title>${esc(i.text)}</title></rect>` })
+        const n = q.ind.filter(i => cls(i) === 'p-yes').length; o += `<text class="dim" x="${x0 + 6 * sq + 8}" y="${y + 15}">${n} of ${q.ind.length}${q.axis === 'freedom' ? ' · freedom' : ''}</text>` })
+    let lx = x0 - 200; const ly = y0 + m.questions.length * rh + 14
+    for (const [c, l] of [['p-yes', 'evidenced'], ['p-claim', 'claimed, not counted'], ['p-avail', 'available'], ['p-none', 'not evidenced']]) { o += `<rect class="${c}" x="${lx}" y="${ly - 11}" width="14" height="14" rx="3"/><text class="sm" x="${lx + 20}" y="${ly}">${l}</text>`; lx += 40 + l.length * 6.8 }
+    return o + '</svg>'
+}
+
+// 12. A product's configurations: freedom for each, and the controls each brings.
+export function configs(m, id) {
+    const s = m.scans.find(x => x.id === id); if (!s.product) return ''
+    const x0 = 300, cw = 62, rh = 44, y0 = 30, W = x0 + 5 * cw + 250, H = y0 + s.configs.length * rh + 6
+    let o = `<svg class="fig cfg" viewBox="0 0 ${W} ${H}" role="img" aria-label="The configurations of ${esc(s.name)} and the freedom level of each: ${s.configs.map(c => c.name + ' ' + c.freedom).join('; ')}.">`
+    m.levels.freedom.forEach(f => o += `<text class="sm" x="${x0 + (f.level - 1) * cw + cw / 2}" y="18" text-anchor="middle">${f.level}</text>`)
+    o += `<text class="sm" x="${x0 - 12}" y="18" text-anchor="end">Freedom level</text>`
+    s.configs.forEach((c, r) => { const y = y0 + r * rh
+        o += `<text class="cn2" x="${x0 - 12}" y="${y + 18}" text-anchor="end">${esc(c.name)}</text><text class="dim" x="${x0 - 12}" y="${y + 33}" text-anchor="end">${esc(short(c.note, 44))}</text>`
+        for (let f = 1; f <= 5; f++) o += `<rect class="${f <= c.freedom ? 'f-on' : 'f-off'}" x="${x0 + (f - 1) * cw + 2}" y="${y + 6}" width="${cw - 4}" height="${rh - 14}" rx="4"/>`
+        o += `<text class="cn2" x="${x0 + 5 * cw + 14}" y="${y + 18}">${c.controls.length} controls</text><text class="dim" x="${x0 + 5 * cw + 14}" y="${y + 33}">${c.added.length ? c.added.length + ' turned on by the operator' : 'all as shipped'}</text>` })
+    return o + '</svg>'
 }

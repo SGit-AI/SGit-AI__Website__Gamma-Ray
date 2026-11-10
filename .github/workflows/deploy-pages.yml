@@ -47,6 +47,7 @@ jobs:
         if: github.event_name == 'push'
         env:
           BRANCH: ${{ github.ref_name }}
+          GH_TOKEN: ${{ github.token }}
         run: build/tag_release.sh
       - name: Build (a manual dispatch, no number)
         if: github.event_name != 'push'

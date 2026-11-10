@@ -28,7 +28,7 @@ Each scan is kept in an encrypted vault that holds the agent's evidence, the ans
 
 - Plain files and Node, no dependencies. `content/` and `data/` are the source; pages are generated and never committed.
 - Every page has a markdown twin at the same address with `.md`, and the site has an [llms.txt](../llms.txt).
-- The version on every page is written by the CI pipeline on every push, and by nothing else. [Versions](versions.md).
+- The version on every page is written by the CI pipeline on every push, and by nothing else: a push to the development branch moves the last number, a release moves the middle one. [Versions](versions.md).
 - A gate checks every build: every link in the graph resolves, every answer in a scan has a source, every page has its twin.
 
 [Who is behind this](participant.md) · [What exists](reality.md) · [The brief](brief.md) · [Research notes](../research/index.md)

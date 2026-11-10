@@ -1,17 +1,78 @@
 {
- "status": "draft v0.1, written by gamma-ray@web-summit.dinis for Dinis Cruz to argue with; the rules below are ours, not any standard's",
+ "version": "0.2 beta",
+ "status": "draft 0.2, a beta for review, written by gamma-ray@web-summit.dinis for Dinis Cruz; the rules below are ours and not those of any standard. An operation fact (logged, monitored and the like) counts only when it is observed or measured; the grant facts are read from a measured grant only.",
  "freedom": [
-  {"level":1,"name":"Answers","agent":"A question in, an answer out","person":"operates every step","rule":"default when the agent is evidenced at all"},
-  {"level":2,"name":"Suggests","agent":"Works with your data or tools and suggests actions","person":"approves each action","rule":"I16, or I07 with one of I02 I03 I04 I05"},
-  {"level":3,"name":"Acts","agent":"Carries out routine tasks itself","person":"is consulted on exceptions","rule":"I08 and one of I17 I18 I19"},
-  {"level":4,"name":"Acts widely","agent":"Acts across domains, code or external tools","person":"approves only critical decisions","rule":"level 3 and one of I04 I10 I11"},
-  {"level":5,"name":"Coordinates","agent":"Agents working with agents","person":"approves critical decisions or observes","rule":"level 4 and one of I12 I13, and one of I18 I19"}
+  {
+   "level": 1,
+   "name": "Answers",
+   "agent": "A question in, an answer out",
+   "person": "operates every step",
+   "rule": "default when the agent is evidenced at all"
+  },
+  {
+   "level": 2,
+   "name": "Suggests",
+   "agent": "Works with your data or tools and suggests actions",
+   "person": "approves each action",
+   "rule": "I16, or I07 with one of I02 I03 I04 I05"
+  },
+  {
+   "level": 3,
+   "name": "Acts",
+   "agent": "Carries out routine tasks itself",
+   "person": "is consulted on exceptions",
+   "rule": "I08 and one of I17 I18 I19"
+  },
+  {
+   "level": 4,
+   "name": "Acts widely",
+   "agent": "Acts across domains, code or external tools",
+   "person": "approves only critical decisions",
+   "rule": "level 3 and one of I04 I10 I11"
+  },
+  {
+   "level": 5,
+   "name": "Coordinates",
+   "agent": "Agents working with agents",
+   "person": "approves critical decisions or observes",
+   "rule": "level 4 and one of I12 I13, and one of I18 I19"
+  }
  ],
  "governance": [
-  {"level":0,"name":"Unstated","meaning":"Nothing about how it is governed is evidenced","rule":"default","clears":1},
-  {"level":1,"name":"Stated","meaning":"What it is for and the rules for it are written down","rule":"I20 and one of I34 I47","clears":2},
-  {"level":2,"name":"Owned","meaning":"Somebody answers for it, a person can step in, and what it does is logged","rule":"level 1 and one of I30 I32, one of I38 I39, and I41","clears":3},
-  {"level":3,"name":"Bounded","meaning":"What it can reach is enumerated, a limit is enforced outside its own reach, and it is watched","rule":"level 2 and I23, I45 and I43","clears":4},
-  {"level":4,"name":"Proven","meaning":"Results are shown and somebody independent has checked","rule":"level 3 and I50, and one of I52 I63 I64","clears":5}
+  {
+   "level": 0,
+   "name": "Unstated",
+   "meaning": "Nothing about how it is governed is evidenced",
+   "rule": "default",
+   "clears": 1
+  },
+  {
+   "level": 1,
+   "name": "Stated",
+   "meaning": "What it is for and the rules for it are written down",
+   "rule": "I20 and one of I34 I47",
+   "clears": 2
+  },
+  {
+   "level": 2,
+   "name": "Owned",
+   "meaning": "Somebody answers for it, a person can step in, and what it does is logged",
+   "rule": "level 1 and one of I30 I32, one of I38 I39, and I41 observed or measured",
+   "clears": 3
+  },
+  {
+   "level": 3,
+   "name": "Bounded",
+   "meaning": "Its grant is measured, every capability that cannot be undone is behind a boundary, and it is watched",
+   "rule": "level 2 and, from a measured grant, I23 and I45; and I43 observed or measured",
+   "clears": 4
+  },
+  {
+   "level": 4,
+   "name": "Proven",
+   "meaning": "Results are shown and somebody independent has checked",
+   "rule": "level 3 and I50, and one of I52 I63 I64",
+   "clears": 5
+  }
  ]
 }

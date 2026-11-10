@@ -40,7 +40,8 @@
    "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
    "n": "It \"can receive information and context from MCP\" and from external applications.",
    "g": "documented",
-   "m": "available"
+   "m": "available",
+   "cfg": "mcp"
   },
   "I18": {
    "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
@@ -96,23 +97,35 @@
    "g": "documented",
    "m": "default"
   },
-  "I51": {
-   "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
-   "n": "New code is analysed with CodeQL, secret scanning and dependency analysis during generation.",
-   "g": "documented",
-   "m": "default"
-  },
   "I56": {
    "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
    "n": "Its commits and pull requests are attributed to Copilot.",
    "g": "documented",
    "m": "default"
-  },
-  "I61": {
-   "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
-   "n": "The page describes the models and data flows of each agentic feature.",
-   "g": "documented",
-   "m": "available"
   }
- }
+ },
+ "not_credited": [
+  {
+   "what": "New code is analysed with CodeQL, secret scanning and dependency analysis during generation.",
+   "why": "That tests what the agent produces. No indicator asks for it yet, and it is not evidence that the agent itself is tested.",
+   "source": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent"
+  }
+ ],
+ "configurations": [
+  {
+   "id": "shipped",
+   "name": "As shipped",
+   "note": "The firewall and its recommended allowlist are on.",
+   "on": []
+  },
+  {
+   "id": "mcp",
+   "name": "With external tools connected",
+   "note": "Model Context Protocol servers and other applications.",
+   "on": [
+    "mcp"
+   ]
+  }
+ ],
+ "moved": "As above. Scanning of generated code is no longer counted as testing of the agent."
 }

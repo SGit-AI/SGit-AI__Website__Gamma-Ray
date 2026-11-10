@@ -146,15 +146,15 @@
    "m": "deployed"
   },
   "I41": {
-   "e": "https://promptugal.news/board/abp/README.md",
-   "n": "Every tool call is logged and every run ends with a run report.",
-   "g": "self-reported",
+   "e": "https://github.com/PrompTugal/PrompTugal__News__Website/tree/dev/board/runs",
+   "n": "A run report for every run of every agent is committed to the public repository: its tool calls, counted against the grant.",
+   "g": "observed",
    "m": "deployed"
   },
   "I43": {
-   "e": "https://promptugal.news/board/abp/README.md",
-   "n": "An hourly review of the run reports and the commit log.",
-   "g": "self-reported",
+   "e": "https://github.com/PrompTugal/PrompTugal__News__Website/tree/dev/board/abp/reports",
+   "n": "Dated hourly reports that review the run reports and the commit log are committed to the public repository.",
+   "g": "observed",
    "m": "deployed"
   },
   "I46": {
@@ -175,12 +175,6 @@
    "g": "self-reported",
    "m": "deployed"
   },
-  "I49": {
-   "e": "https://promptugal.news/board/abp/README.md",
-   "n": "The policy has a section on what the hooks cannot see.",
-   "g": "self-reported",
-   "m": "deployed"
-  },
   "I56": {
    "e": "https://promptugal.news/about/participant.md",
    "n": "The site says it is built and run by AI agents with a named operator.",
@@ -196,5 +190,6 @@
  },
  "kind": "deployment",
  "grant": null,
- "grant_note": "Not measured in the capability grammar. The team publishes one grant per agent as paths, hosts and tools; nobody has translated those into the 23 capabilities or probed them."
+ "grant_note": "Not measured in the capability grammar. The team publishes one grant per agent as paths, hosts and tools; nobody has translated those into the 23 capabilities or probed them.",
+ "moved": "Unchanged. Its logging and monitoring are now cited to run reports and hourly reviews committed in the public repository, which are observed. One answer was removed: a list of what its hooks cannot see is not a delta."
 }

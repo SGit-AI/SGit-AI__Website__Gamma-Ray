@@ -24,11 +24,13 @@ The other half is what the agent **can do**: the permissions it was actually giv
 Two indicators are read from the grant whenever one has been measured, and not from anybody's description:
 
 - **the grant is enumerated**: there is a profile;
-- **a limit is enforced outside the agent's own reach**: at least one capability sits behind a boundary.
+- **it is bounded**: every capability that cannot be undone sits behind a boundary.
 
-Both are needed for governance level 3. So a deployment that says it is controlled but whose measured grant shows no boundary does not reach it, and one that says little but is measurably bounded can. Beyond that, the grant is **counted and shown, never scored**: how many capabilities, how many behind a boundary, and, where a mandate is written, how many in excess.
+Both are needed for governance level 3, and neither can be met by a description. "Bounded" has a scope: **every capability in the grant whose effect cannot be undone** has to sit behind a boundary. A proxy on the network does not bound a push to a repository.
 
-This is a first rule and a narrow one. How much more of the ladder should be read from the grant is open.
+The grant also writes the top of the work order: a capability the mandate refuses that is in the grant anyway comes first, then the capabilities that cannot be undone and are not bounded.
+
+Beyond that, the grant is **counted and shown, never scored**: how many capabilities, how many behind a boundary, and, where a mandate is written, how many in excess.
 
 ## The capability grammar
 
