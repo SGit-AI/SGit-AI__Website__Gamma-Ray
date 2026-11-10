@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.85",
+    "date": "2026-11-10",
+    "what": "visor-ai-agents: drop configurations no answer uses",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "c881f5706"
+  },
+  {
     "version": "v0.0.84",
     "date": "2026-11-10",
     "what": "round one of review on pebl-alfie",
