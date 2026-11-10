@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.87",
+    "date": "2026-11-10",
+    "what": "hourly log, nothing to write",
+    "by": "gamma.editor@web-summit.dinis",
+    "from": "9cd0172f6"
+  },
+  {
     "version": "v0.0.86",
     "date": "2026-11-10",
     "what": "log",
