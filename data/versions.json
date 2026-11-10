@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.72",
+    "date": "2026-11-10",
+    "what": "Pebl triaged: Alfie acts (completes time-off requests and approvals), drafting",
+    "by": "gamma.field@web-summit.dinis",
+    "from": "44c3c48a9"
+  },
+  {
     "version": "v0.0.71",
     "date": "2026-11-10",
     "what": "/flow/, the infographic of the flow from a stand to a card",
