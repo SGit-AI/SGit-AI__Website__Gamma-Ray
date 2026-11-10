@@ -38,7 +38,7 @@ A card has four dimensions: Autonomy, Reach, Control and Openness. Each has four
 
 ## What is rated so far
 
-{{n:cards}} cards: our own {{n:deployments}} agents, and {{n:products}} widely used products, each read from its vendor's public documentation. A product is rated per configuration. None of the vendors has been shown its card. Replit Agent and Manus have each passed two rounds of review and a sign-off; the other products are still in review.
+{{n:cards}} cards: our own {{n:deployments}} agents, and {{n:products}} widely used products, each read from its vendor's public documentation. A product is rated per configuration. None of the vendors has been shown its card. Some have passed two rounds of review and a sign-off and the rest are still in review; [the pipeline page](../spectrum/pipeline/index.md) shows where each one stands.
 
 Behind the card is the governance rating, for whoever operates an agent. It uses RiskMandate's lens: what an agent is allowed to do (its grant) is measured beside the questions, counted and shown, never scored. [The rating](../rating/index.md) · [the lens](../lens/index.md)
 
