@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.134",
+    "date": "2026-11-10",
+    "what": "re-check of pebl-alfie (changes)",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "4c1739c20"
+  },
+  {
     "version": "v0.0.133",
     "date": "2026-11-10",
     "what": "compact report rows on phones",
