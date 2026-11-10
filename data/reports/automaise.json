@@ -1,0 +1,229 @@
+{
+ "id": "automaise",
+ "name": "Automaise (Automaise S.A.)",
+ "url": "https://www.automaise.com/",
+ "country": "Portugal",
+ "sector": "customer service / insurance and utilities",
+ "read": "2026-11-10",
+ "basis": "Automaise (Automaise S.A.)'s own public pages and, for company basics only, the news sources named beside each fact",
+ "seen_by_subject": false,
+ "what": "Automaise sells a set of three AI agents for customer service teams: a voice and chat assistant, a copilot for human agents, and back-office workflow automation.",
+ "facts": [
+  {
+   "fact": "Founded in 2017 by Ernesto Pedrosa and Carlos Oliveira (investor note).",
+   "url": "https://armilar.com/articles/automaises-ai-agents-secure-eu5-million-investment-to-accelerate-growth",
+   "span": "Since its founding in 2017 by Ernesto Pedrosa and Carlos Oliveira"
+  },
+  {
+   "fact": "Headquartered in Braga, Portugal (investor note).",
+   "url": "https://armilar.com/articles/automaises-ai-agents-secure-eu5-million-investment-to-accelerate-growth",
+   "span": "Founded in 2017 and headquartered in Braga (Portugal)"
+  },
+  {
+   "fact": "Raised a EUR 5 million Series A in March 2025, led by Oxy Capital.",
+   "url": "https://armilar.com/articles/automaises-ai-agents-secure-eu5-million-investment-to-accelerate-growth",
+   "span": "a significant boost with a €5 million Series A funding round"
+  },
+  {
+   "fact": "The company describes three agents built to work together.",
+   "url": "https://www.automaise.com/",
+   "span": "Three AI Agents. One ecosystem. Built to work together."
+  },
+  {
+   "fact": "The about page lists offices in Braga, Lisbon, Madrid and Barcelona.",
+   "url": "https://site.automaise.com/about-us",
+   "span": "Braga, Portugal Lisbon Madrid Barcelona"
+  },
+  {
+   "fact": "The trust centre lists ISO/IEC 27001 and SOC2 Type 2.",
+   "url": "https://www.automaise.com/legal/trust-center",
+   "span": "ISO/IEC 27001 SOC2 Type 2"
+  },
+  {
+   "fact": "The trust centre says Automaise acts as a data processor for its customers.",
+   "url": "https://www.automaise.com/legal/trust-center",
+   "span": "Automaise processes data on behalf of its customers, acting as a data processor."
+  },
+  {
+   "fact": "Automaise S.A. was a beneficiary of the Center for Responsible AI agenda (PRR), with a stated investment of EUR 2,628,142.",
+   "url": "https://site.automaise.com/legal/responsible-ai",
+   "span": "ENTIDADE BENEFICIÁRIA | AUTOMAISE SA"
+  },
+  {
+   "fact": "In 2023 Automaise announced its own customer-service LLM, Quokka, hosted on its own servers.",
+   "url": "https://site.automaise.com/automaise-large-language-model-quokka",
+   "span": "With our Large Language Model hosted on our own servers"
+  },
+  {
+   "fact": "Jornal Economico (1 July 2026) reports a Portugal 2030-backed project, the Automaise Sustainable AI Platform.",
+   "url": "https://jornaleconomico.sapo.pt/noticias/automaise-desenvolve-projeto-de-um-plataforma-de-ia-sustentavel/",
+   "span": "está a desenvolver o projeto “Automaise Sustainable AI Platform”"
+  }
+ ],
+ "people": [
+  {
+   "name": "Ernesto Pedrosa",
+   "role": "Co-founder and CEO",
+   "url": "https://armilar.com/articles/automaises-ai-agents-secure-eu5-million-investment-to-accelerate-growth"
+  },
+  {
+   "name": "Carlos Oliveira",
+   "role": "Co-founder",
+   "url": "https://armilar.com/articles/automaises-ai-agents-secure-eu5-million-investment-to-accelerate-growth"
+  },
+  {
+   "name": "Fábio Pinto",
+   "role": "Head of AI (as named in a July 2023 company blog post)",
+   "url": "https://site.automaise.com/automaise-large-language-model-quokka"
+  }
+ ],
+ "solutions": [
+  {
+   "id": "conversational-ai",
+   "name": "Conversational AI",
+   "short": "Conversational AI",
+   "what": "Voice and chat assistant (inbound and outbound voice, customer self-service chat, internal helpdesk chat) that answers customers and completes transactions such as data changes, payments and orders.",
+   "status": "generally available (named customer stories)",
+   "url": "https://site.automaise.com/conversational-ai",
+   "scan": "automaise-conversational-ai"
+  },
+  {
+   "id": "ai-workflows",
+   "name": "AI Workflows",
+   "short": "AI Workflows",
+   "what": "Back-office automation of multi-step processes (data changes, payments, claims) across CRM, ERP and APIs, with a no-code workflow builder.",
+   "status": "generally available (anonymised customer stories)",
+   "url": "https://site.automaise.com/ai-workflows"
+  },
+  {
+   "id": "agent-assist",
+   "name": "Agent Assist",
+   "short": "Agent Assist",
+   "what": "Copilot for human agents that follows live voice and chat interactions and puts suggested answers and next steps on the agent's screen.",
+   "status": "generally available (named customer stories)",
+   "url": "https://site.automaise.com/agent-assist"
+  }
+ ],
+ "stories": [
+  {
+   "customer": "CTT (ViaCTT)",
+   "what": "Conversational AI chat assistant that resolves account access issues (password recovery, account unblocking, new passwords); 93% automation rate of webchat interactions.",
+   "url": "https://site.automaise.com/use-cases/via-ctt",
+   "span": "able to manage and autonomously solve account access related issues"
+  },
+  {
+   "customer": "Leroy Merlin",
+   "what": "Conversational AI chat assistant integrated with the CRM; customers can manage orders and a cart and schedule delivery and service requests.",
+   "url": "https://www.automaise.com/use-cases/leroy-merlin",
+   "span": "manage orders and a live shopping cart; schedule delivery and service requests"
+  },
+  {
+   "customer": "Novobanco",
+   "what": "Conversational AI internal helpdesk assistant that triages, tags and closes support tickets; 32% deflection within 3 weeks.",
+   "url": "https://site.automaise.com/use-cases/novobanco",
+   "span": "autonomously, close a wide range of support tickets."
+  },
+  {
+   "customer": "Caravela Seguros",
+   "what": "Conversational AI assistant for policyholders that executes service requests; 84% self-service rate.",
+   "url": "https://site.automaise.com/use-cases/caravela",
+   "span": "but also to execute advanced service requests."
+  },
+  {
+   "customer": "MC Sonae (Continente)",
+   "what": "Agent Assist ticket workflow in Salesforce that classifies, routes and closes tickets; 35% closed without human intervention.",
+   "url": "https://site.automaise.com/use-cases/mc-sonae",
+   "span": "classify, distribute, prioritize and close a wide range of diverse tickets."
+  },
+  {
+   "customer": "Large health insurance provider (unnamed)",
+   "what": "AI Workflows automation of medical claim approvals; 58% of claims fully automated.",
+   "url": "https://www.automaise.com/use-cases/health-insurance-client",
+   "span": "58% of medical claims fully automated"
+  }
+ ],
+ "analysis": [],
+ "article": null,
+ "vault": {
+  "id": "gn938lnr",
+  "read_key": "sgit_public_read_ac0df2472fde834f3552fd90441fa936ba011f083701d052d32d69a8b44ef30d:gn938lnr",
+  "published": "2026-11-10"
+ },
+ "team": {
+  "researcher-assessor": "a sub-agent of gamma.studio@web-summit.dinis",
+  "challenger": "a sub-agent",
+  "scorer": "build/spectrum.mjs",
+  "analyst, designer, writer": "gamma.studio@web-summit.dinis",
+  "review": "gamma.review@web-summit.dinis (pending)",
+  "sign-off": "gamma.approve@web-summit.dinis (pending)"
+ },
+ "signoff": null,
+ "corrections": [],
+ "captures": {
+  "https://armilar.com/articles/automaises-ai-agents-secure-eu5-million-investment-to-accelerate-growth": {
+   "sha256": "33db7f89240c3fe481923f7fba436ee416b16735738fc73f6845c3dafbf84694",
+   "bytes": 26953,
+   "read_at": "2026-11-10T10:44Z"
+  },
+  "https://jornaleconomico.sapo.pt/noticias/automaise-desenvolve-projeto-de-um-plataforma-de-ia-sustentavel/": {
+   "sha256": "88d8dae0fb3b0b5a17adfce3606e04b7e831597f953f456a64cc6384e38e6a12",
+   "bytes": 144254,
+   "read_at": "2026-11-10T10:44Z"
+  },
+  "https://site.automaise.com/about-us": {
+   "sha256": "7a99e436003377069c4033a1945b99deafe44d460d10b1b68db958e98fe85938",
+   "bytes": 452303,
+   "read_at": "2026-11-10T10:44Z"
+  },
+  "https://site.automaise.com/automaise-large-language-model-quokka": {
+   "sha256": "b3ae950caa1cb94341dedd17d97228e9bda85e876e93a741e6ef158f0f9adf82",
+   "bytes": 335431,
+   "read_at": "2026-11-10T10:44Z"
+  },
+  "https://site.automaise.com/legal/responsible-ai": {
+   "sha256": "6e7ee4335c8d31e620e24f875471f515cc409ac9edb26fb582569ed596cf75d4",
+   "bytes": 300434,
+   "read_at": "2026-11-10T10:44Z"
+  },
+  "https://site.automaise.com/use-cases/caravela": {
+   "sha256": "f480b5ae7389c15884e6d8968b0d95ebecc35c3ea5c3f6c677df256c3278f149",
+   "bytes": 397778,
+   "read_at": "2026-11-10T10:44Z"
+  },
+  "https://site.automaise.com/use-cases/mc-sonae": {
+   "sha256": "0e36b563dac45705365849a67159d0a1e0db68963947ffcd79df94bca4907627",
+   "bytes": 397480,
+   "read_at": "2026-11-10T10:44Z"
+  },
+  "https://site.automaise.com/use-cases/novobanco": {
+   "sha256": "83644305b867db6b16685adf26ce64b05bc7ac591b9c75407ed863f8f559ae38",
+   "bytes": 396420,
+   "read_at": "2026-11-10T10:44Z"
+  },
+  "https://site.automaise.com/use-cases/via-ctt": {
+   "sha256": "eb0467745f88219976d08818a8886f15190829f5d1160fecc7e5821271172ee1",
+   "bytes": 396043,
+   "read_at": "2026-11-10T10:44Z"
+  },
+  "https://www.automaise.com/": {
+   "sha256": "f33d8240d602c55766a3d5007d15c76ff6d78e7fcb6b7968c28ae3aad205d961",
+   "bytes": 695405,
+   "read_at": "2026-11-10T10:44Z"
+  },
+  "https://www.automaise.com/legal/trust-center": {
+   "sha256": "96dca86d7ead2dec7f91125883579bad780019522d989c4c56f7d7c920b8ef86",
+   "bytes": 307510,
+   "read_at": "2026-11-10T10:44Z"
+  },
+  "https://www.automaise.com/use-cases/health-insurance-client": {
+   "sha256": "bff206fe80f5c5e7c6e3b87b6ef26b69f64dbeebd278e8a4bffc58262856bbba",
+   "bytes": 395162,
+   "read_at": "2026-11-10T10:44Z"
+  },
+  "https://www.automaise.com/use-cases/leroy-merlin": {
+   "sha256": "adb08c911499a8c1d34524865aa264a66ccf4a262c7605066c9812a58e5d4fcc",
+   "bytes": 396861,
+   "read_at": "2026-11-10T10:44Z"
+  }
+ }
+}

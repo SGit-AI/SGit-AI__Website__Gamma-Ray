@@ -1,0 +1,152 @@
+{
+ "id": "automaise-conversational-ai",
+ "name": "Automaise Conversational AI",
+ "operator": "Automaise (Automaise S.A.) (the vendor); each customer is the operator of its own use",
+ "company": "automaise",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-10",
+ "tier": "public",
+ "basis": "Automaise (Automaise S.A.)'s own public pages (product, documentation, blog, customer stories, legal and security pages)",
+ "seen_by_operator": null,
+ "what": "Voice and chat assistant (inbound and outbound voice, customer self-service chat, internal helpdesk chat) that answers customers and completes transactions such as data changes, payments and orders.",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. Part of the first Portuguese cohort.",
+ "grant": null,
+ "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
+ "vault": {
+  "id": "gn938lnr",
+  "read_key": "sgit_public_read_ac0df2472fde834f3552fd90441fa936ba011f083701d052d32d69a8b44ef30d:gn938lnr",
+  "published": "2026-11-10"
+ },
+ "review": {
+  "status": "draft",
+  "rounds": []
+ },
+ "assessment": {
+  "by": "gamma.studio@web-summit.dinis",
+  "researcher_assessor": "a sub-agent of gamma.studio",
+  "challenger": "a sub-agent of gamma.studio",
+  "lowered": [
+   "I47",
+   "I63",
+   "I02"
+  ],
+  "fixed": [
+   "I17",
+   "I10",
+   "S1"
+  ],
+  "added_by_challenger": [],
+  "files": "in the vault: work/assessment.json, work/challenger.json"
+ },
+ "answers": {
+  "I08": {
+   "e": "https://site.automaise.com/conversational-ai",
+   "n": "The product page says data changes, payments, orders and subscriptions are completed by the AI without an agent stepping in.",
+   "span": "completed end-to-end by the AI, with no need for an agent",
+   "g": "documented",
+   "m": "default"
+  },
+  "I10": {
+   "e": "https://framerusercontent.com/sites/2oOCAmSqmUJsdceu4ef5J/Qq644o6Aab6qlVpuxwnOdBYCwMeQYtwb4UBEDaOYKYc.uN0Y50vq.mjs",
+   "n": "The product page says Conversational AI connects with CRM, contact-centre and messaging platforms, and its FAQ lists account management, payments, order tracking, scheduling and data updates (the FAQ text is in the product page's script file, captured as it loads).",
+   "span": "Conversational AI connects with every major CRM, CCaaS, and messaging platform",
+   "g": "documented",
+   "m": "available",
+   "cfg": "connected-systems"
+  },
+  "I11": {
+   "e": "https://www.automaise.com/",
+   "n": "The agents operate on third-party channels including WhatsApp and social media.",
+   "span": "We operate across voice, chat, email, WhatsApp, social media",
+   "g": "documented",
+   "m": "default"
+  },
+  "I17": {
+   "e": "https://framerusercontent.com/sites/2oOCAmSqmUJsdceu4ef5J/Qq644o6Aab6qlVpuxwnOdBYCwMeQYtwb4UBEDaOYKYc.uN0Y50vq.mjs",
+   "n": "The FAQ says requests that follow a predictable flow are handled autonomously, and that a conversation needing human intervention passes to an available agent with its context (the FAQ text is in the product page's script file, captured as it loads).",
+   "span": "When a conversation reaches a point that requires human intervention",
+   "g": "documented",
+   "m": "default"
+  },
+  "I20": {
+   "e": "https://site.automaise.com/conversational-ai",
+   "n": "The FAQ lists the types of request the assistant handles on its own.",
+   "span": "account management, payments, order tracking, appointment scheduling, data updates",
+   "g": "documented",
+   "m": "default"
+  },
+  "I58": {
+   "e": "https://www.automaise.com/legal/privacy-policy",
+   "n": "The service terms define the Customer Data the service processes, including assistant configurations and messages.",
+   "span": "Virtual Employee configurations, frequent questions’ answers, text messages",
+   "g": "documented",
+   "m": "default"
+  },
+  "S1": {
+   "e": "https://site.automaise.com/use-cases/via-ctt",
+   "n": "CTT, a named customer, uses the chat assistant to resolve account access issues itself (password recovery, unblocking accounts, new passwords); the page gives 93% as the automation rate of all webchat interactions.",
+   "span": "able to manage and autonomously solve account access related issues",
+   "g": "documented",
+   "m": "default"
+  }
+ },
+ "not_credited": [],
+ "announced": [
+  {
+   "what": "Automaise Sustainable AI Platform (Portugal 2030 project, Green LLM Engine, AI carbon emissions calculator), due to conclude 20 September 2026 per Jornal Economico.",
+   "source": "https://jornaleconomico.sapo.pt/noticias/automaise-desenvolve-projeto-de-um-plataforma-de-ia-sustentavel/"
+  },
+  {
+   "what": "Homepage claims of improvements in CSAT, first response time, efficiency and handling time within 30 to 60 days (figures rendered by script, not readable in the static page).",
+   "source": "https://www.automaise.com/"
+  },
+  {
+   "what": "Expansion into new markets in Europe and the United States (Series A note, March 2025).",
+   "source": "https://armilar.com/articles/automaises-ai-agents-secure-eu5-million-investment-to-accelerate-growth"
+  }
+ ],
+ "configurations": [
+  {
+   "id": "shipped",
+   "name": "As shipped",
+   "note": "Conversational AI with its documented defaults.",
+   "on": []
+  },
+  {
+   "id": "connected-systems",
+   "name": "Connected systems",
+   "note": "A deployment connected to the operator's own CRM, contact-centre or messaging platforms; the connection is built per deployment.",
+   "on": [
+    "connected-systems"
+   ]
+  }
+ ],
+ "captures": {
+  "https://framerusercontent.com/sites/2oOCAmSqmUJsdceu4ef5J/Qq644o6Aab6qlVpuxwnOdBYCwMeQYtwb4UBEDaOYKYc.uN0Y50vq.mjs": {
+   "sha256": "38255827e2c7cf4cfb82ab50c8ed45e59c3c436f08ee5a79709e48922ed9f72e",
+   "bytes": 256091,
+   "read_at": "2026-11-10T10:44Z"
+  },
+  "https://site.automaise.com/conversational-ai": {
+   "sha256": "890debfa4d78df6be8c9f109e801724ad866170c745b1973094aac3a1d080cdd",
+   "bytes": 481638,
+   "read_at": "2026-11-10T10:44Z"
+  },
+  "https://site.automaise.com/use-cases/via-ctt": {
+   "sha256": "eb0467745f88219976d08818a8886f15190829f5d1160fecc7e5821271172ee1",
+   "bytes": 396043,
+   "read_at": "2026-11-10T10:44Z"
+  },
+  "https://www.automaise.com/": {
+   "sha256": "6d960e65c2ac9629a7ebf3df8a2a01bd803a1e950588991725127957d4a515e5",
+   "bytes": 709741,
+   "read_at": "2026-11-10T10:44Z"
+  },
+  "https://www.automaise.com/legal/privacy-policy": {
+   "sha256": "3b0ce570f79cb137fc9a425681fc238dc63d07a2f35502675e1f74812478289b",
+   "bytes": 351114,
+   "read_at": "2026-11-10T10:44Z"
+  }
+ }
+}
