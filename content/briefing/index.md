@@ -59,6 +59,8 @@ If a fact on your card is wrong, or a public page exists that we did not find, t
 
 The evidence for each scan is in a public vault, and its read key is on the scan's page. [All scans](../scans/index.md).
 
+The short method note, for linking: [how a card is made](../method/index.md).
+
 ## The numbers
 
 <div class="stats"><div><b>{{n:standards}}</b><span>instruments read at source</span></div><div><b>{{n:provisions}}</b><span>provisions</span></div><div><b>{{n:questions}}</b><span>questions</span></div><div><b>{{n:cards}}</b><span>cards</span></div></div>
