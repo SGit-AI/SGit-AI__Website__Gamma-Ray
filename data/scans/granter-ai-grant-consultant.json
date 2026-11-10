@@ -432,6 +432,48 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "No change beyond the I38 and S1 wording above; spans, grades and modes stand as verified."
+   },
+   {
+    "round": 4,
+    "answer": "not_credited",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Conceded: the I02 entry, the only one citing the uncaptured Fidelidade page, is removed; no answer or level used I02, so nothing else changes."
+   },
+   {
+    "round": 4,
+    "answer": "announced",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Conceded: the two announced items sourced to uncaptured pages (the About page milestone and the granter.ai home page marketing figures, indices 3 and 4) are removed, so every remaining announced item rests on a captured page."
+   },
+   {
+    "round": 4,
+    "answer": "I38",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the reviewer confirms the note and span, and the note already says it is a limit by who submits, not an approval step."
+   },
+   {
+    "round": 4,
+    "answer": "S1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; 'team' is kept as a paraphrase of the page's R&D and innovation department, which the note names in full."
+   },
+   {
+    "round": 4,
+    "answer": "I16,I07,I20,I56,I58,I67,I52,I09",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the reviewer re-verified all spans, notes, grades and modes."
+   },
+   {
+    "round": 4,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No level change: A2 R1 C1 O1 stands; the reviewer finds the levels thin but no credit unsupported, and the caveats on I16 and I38 are already in their notes."
    }
   ]
  },
@@ -532,11 +574,6 @@
    "source": "https://granter.ai/privacy-policy"
   },
   {
-   "what": "I02 (own data, without executing arbitrary code)",
-   "why": "The Fidelidade page says a tailored pilot's agents were trained on the customer's business and past applications; no source says the agent runs without executing arbitrary code, and the pilot is not shown to be the default product.",
-   "source": "https://granter.ai/case-studies/fidelidade"
-  },
-  {
    "what": "I11 from the CORDIS tool (the agent reads the EU's public database of funded projects through a dedicated tool)",
    "why": "The page does not say whether this is a live connection across a trust boundary or Granter's own copy of public data; not stretched into Reach 2.",
    "source": "https://granter.ai/blog/ai-grant-consultant"
@@ -554,14 +591,6 @@
   {
    "what": "Expansion of coverage to more European countries.",
    "source": "https://granter.ai/blog/ai-grant-consultant"
-  },
-  {
-   "what": "Smarter AI and deeper integrations (About page, Future milestone).",
-   "source": "https://granter.ai/about"
-  },
-  {
-   "what": "Marketing figures: 2x higher approval rates, 75% less time, 3000+ companies (vendor claims, not counted).",
-   "source": "https://granter.ai/"
   }
  ],
  "configurations": [
@@ -576,22 +605,22 @@
   "https://granter.ai/blog/ai-grant-consultant": {
    "sha256": "939ffa1a99921cebb4dd509822646f9bf524a971fe0d64afd4bbebb4325fbb9c",
    "bytes": 499709,
-   "read_at": "2026-11-10T18:46Z"
+   "read_at": "2026-11-10T19:45Z"
   },
   "https://granter.ai/case-studies/marinha": {
    "sha256": "a6b46185d03c0012028bb1f68dc469204e30f59eafa4bd303fcfbb3b40b7d8cb",
    "bytes": 487913,
-   "read_at": "2026-11-10T18:46Z"
+   "read_at": "2026-11-10T19:45Z"
   },
   "https://granter.ai/case-studies/superbock": {
    "sha256": "0da57a037f92737bda1d6fe53ad4a9a732fbaad1fa304fa982ccef3c23547047",
    "bytes": 442114,
-   "read_at": "2026-11-10T18:46Z"
+   "read_at": "2026-11-10T19:45Z"
   },
   "https://granter.ai/privacy-policy": {
    "sha256": "278075589d6cb14792578a442545a13411a49d439932973007e07b74a9072c28",
    "bytes": 572845,
-   "read_at": "2026-11-10T18:46Z"
+   "read_at": "2026-11-10T19:45Z"
   }
  }
 }
