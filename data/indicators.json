@@ -1649,7 +1649,7 @@
   "question": "Q02",
   "tier": "public",
   "needs": "statement",
-  "scope": "A public source has to name a customer, or give usage figures, for the capability that acts: sessions, tasks or pull requests, not install or seat counts. A demonstration or a roadmap does not count. Since Spectrum 0.2 this fact earns the In production badge; it is no longer part of an Autonomy level.",
+  "scope": "Either of two things earns it: a public source names a customer using the capability that acts, or it gives usage figures for that capability (sessions, tasks, pull requests). An install, seat or team-size count is not a usage figure, but it does not take away a named customer. A demonstration or a roadmap does not count. Since Spectrum 0.2 this fact earns the In production badge; it is no longer part of an Autonomy level.",
   "text": "It is in production: a public source names a customer or gives usage figures for what it does on its own",
   "spectrum": true,
   "links": [
