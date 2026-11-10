@@ -37,7 +37,7 @@ A card has four dimensions: Autonomy, Reach, Control and Openness. Each has four
 
 ## What is rated so far
 
-{{n:cards}} cards: our own {{n:deployments}} agents, and {{n:products}} widely used products as examples, each read from its vendor's public documentation. A product is rated per configuration. None of the vendors has seen its card. No company in a cohort has a card yet.
+{{n:cards}} cards: our own {{n:deployments}} agents, and {{n:products}} widely used products, each read from its vendor's public documentation. A product is rated per configuration. None of the vendors has been shown its card. Replit Agent is the first third-party card to pass two rounds of review and a sign-off; the other products are still in review.
 
 Behind the card is the governance rating, for whoever operates an agent. It uses RiskMandate's lens: what an agent is allowed to do (its grant) is measured beside the questions, counted and shown, never scored. [The rating](../rating/index.md) · [the lens](../lens/index.md)
 
@@ -46,7 +46,7 @@ Behind the card is the governance rating, for whoever operates an agent. It uses
 - Everything. Every page carries the banner and every rating a beta label.
 - The name Spectrum is a working name.
 - The rules are written, run on real evidence, and still moving. [What they did](../spectrum/findings/index.md).
-- The first {{n:cards}} cards were mapped by one agent. Review by other agents is set up and has not yet finished a card. [The workflow](../spectrum/pipeline/index.md).
+- Review by other agents is running. Most cards were mapped by one agent and have not finished it. [The workflow](../spectrum/pipeline/index.md).
 - The links between indicators and provisions have not been checked one by one.
 
 ## Public evidence, public rating
