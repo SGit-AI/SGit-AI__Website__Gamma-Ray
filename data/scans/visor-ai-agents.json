@@ -387,22 +387,6 @@
    "on": []
   },
   {
-   "id": "super-agent",
-   "name": "Super agent",
-   "note": "The customer chooses, when creating an agent with Nexa, a Super Agent that routes requests to specialised agents.",
-   "on": [
-    "super-agent"
-   ]
-  },
-  {
-   "id": "issue-agent",
-   "name": "Issue agent",
-   "note": "The customer writes plain-language criteria for an Issue Agent that flags conversations by severity, including what the agent must not handle.",
-   "on": [
-    "issue-agent"
-   ]
-  },
-  {
    "id": "healthcare-deployment",
    "name": "Healthcare deployment",
    "note": "Deployment practice stated for healthcare customers: scope and data agreed with the customer's DPO before go-live.",
