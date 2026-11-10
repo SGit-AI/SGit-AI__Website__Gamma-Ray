@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.91",
+    "date": "2026-11-10",
+    "what": "log",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "c26db705c"
+  },
+  {
     "version": "v0.0.90",
     "date": "2026-11-10",
     "what": "getvocal-agents: round 2 answered (I56 note without the uncaptured Glovo page; levels defended)",
