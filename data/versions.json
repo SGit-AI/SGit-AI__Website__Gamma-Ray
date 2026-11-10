@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.48",
+    "date": "2026-11-10",
+    "what": "Visor.ai: a Portuguese draft card for Visor.ai AI agents (voice and chat)",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "785cf7762"
+  },
+  {
     "version": "v0.0.47",
     "date": "2026-11-10",
     "what": "the first five Portuguese drafts: Codacy, Spinnable, OutSystems, Noxus, Ethiack",
