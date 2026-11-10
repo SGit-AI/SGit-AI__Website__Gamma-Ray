@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.22",
+    "date": "2026-11-10",
+    "what": "round two of review on replit-agent",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "52c138c73"
+  },
+  {
     "version": "v0.0.21",
     "date": "2026-11-10",
     "what": "the three examples: round one answered; Control and Reach lowered where the sources do not hold",
