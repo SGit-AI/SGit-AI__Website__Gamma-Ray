@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.101",
+    "date": "2026-11-10",
+    "what": "sign off aisle-platform, getvocal-agents, outsystems-agent-workbench, talkdesk-autopilot",
+    "by": "gamma.approve@web-summit.dinis",
+    "from": "2a87d7cd6"
+  },
+  {
     "version": "v0.0.100",
     "date": "2026-11-10",
     "what": "hourly log",
