@@ -1,0 +1,270 @@
+{
+ "id": "aisle",
+ "name": "AISLE",
+ "url": "https://aisle.com",
+ "country": "Czech Republic",
+ "sector": "software security",
+ "read": "2026-11-10",
+ "basis": "AISLE's own public pages (product, blog, about, customer stories), third-party vulnerability records (OpenSSL, curl, Samba) and, for company basics only, BetaKit",
+ "seen_by_subject": false,
+ "what": "AISLE sells a software platform that uses AI agents to find vulnerabilities in source code, triage them, write and test patches, and deliver them as pull requests for people to merge.",
+ "facts": [
+  {
+   "fact": "Emerged from stealth on 16 October 2025, datelined San Francisco and Prague.",
+   "url": "https://aisle.com/newsroom/press-releases/aisle-emerges-from-stealth",
+   "span": "AISLE today emerged from stealth"
+  },
+  {
+   "fact": "AISLE and Cohere signed a letter of intent for Cohere to acquire AISLE; not stated as completed.",
+   "url": "https://aisle.com/blog/aisle-and-cohere-to-join-forces",
+   "span": "signed a Letter of Intent (LoI) for Cohere to acquire AISLE"
+  },
+  {
+   "fact": "AISLE refers to its Prague headquarters.",
+   "url": "https://aisle.com/blog/aisle-and-cohere-to-join-forces",
+   "span": "our Prague headquarters will become Cohere's Prague office"
+  },
+  {
+   "fact": "Legal entities: Aisle Inc. (San Francisco) and Aisle s.r.o. (Prague).",
+   "url": "https://aisle.com/privacy-policy",
+   "span": "Aisle s.r.o., Jungmannova 750/34, 110 00 Prague 1, Czech Republic"
+  },
+  {
+   "fact": "About 50 full-time employees, per an AISLE spokesperson quoted by BetaKit (news, October 2026).",
+   "url": "https://betakit.com/cohere-to-acquire-czech-ai-cybersecurity-firm-aisle-set-up-new-cyber-division/",
+   "span": "approximately 50 full-time employees will all join Cohere"
+  },
+  {
+   "fact": "AISLE is a CVE Numbering Authority under ENISA, with scope expanded on 26 August 2026 to third-party software not covered by another CNA.",
+   "url": "https://aisle.com/newsroom/press-releases/aisle-achieves-expanded-scope-as-cve-numbering-authority",
+   "span": "Designation as a Researcher CNA"
+  },
+  {
+   "fact": "The site states the platform covers own code, dependencies, secrets, licenses and IaC.",
+   "url": "https://aisle.com/platform/autonomous-remediation",
+   "span": "AISLE delivers verified fixes for code and dependency vulnerabilities."
+  },
+  {
+   "fact": "Funding amounts were not found on AISLE's site; angel investors are named on the About page.",
+   "url": "https://aisle.com/about-us",
+   "span": "Angel Investors"
+  }
+ ],
+ "people": [
+  {
+   "name": "Ondrej Vlcek",
+   "role": "Co-founder and CEO",
+   "url": "https://aisle.com/about-us"
+  },
+  {
+   "name": "Jaya Baloo",
+   "role": "Co-founder, COO and CISO",
+   "url": "https://aisle.com/about-us"
+  },
+  {
+   "name": "Stanislav Fort",
+   "role": "Co-founder, Chief Scientist (About page); described as CTO and Chief Scientist in AISLE's Cohere post and as CTO by BetaKit",
+   "url": "https://aisle.com/blog/aisle-and-cohere-to-join-forces"
+  }
+ ],
+ "solutions": [
+  {
+   "id": "aisle-platform",
+   "name": "AISLE platform (AI-native Cyber Reasoning System): Vulnerability Discovery, Vulnerability Triage, Autonomous Remediation, Continuous Improvement",
+   "short": "AISLE platform",
+   "what": "Analyzes connected repositories, verifies and ranks findings, writes patches, tests them in an isolated container and in the customer's CI, and opens pull requests that people merge.",
+   "status": "generally available (Managed SaaS, Private Cloud, On-Prem, Air-Gapped)",
+   "url": "https://aisle.com/platform",
+   "scan": "aisle-platform"
+  },
+  {
+   "id": "snapshot",
+   "name": "AISLE Snapshot",
+   "short": "AISLE Snapshot",
+   "what": "A one-time AI code audit that delivers prioritized findings, deployable inside the customer's perimeter.",
+   "status": "available",
+   "url": "https://aisle.com/snapshot"
+  },
+  {
+   "id": "dependency-firewall",
+   "name": "Dependency Firewall (AI package firewall)",
+   "short": "Dependency Firewall",
+   "what": "A read-only proxy for crates.io, npm and PyPI that checks package requests and blocks malicious packages.",
+   "status": "available (rolled out October 2026)",
+   "url": "https://aisle.com/dependency-firewall"
+  },
+  {
+   "id": "mcp-server",
+   "name": "AISLE MCP Server",
+   "short": "AISLE MCP Server",
+   "what": "A read-only MCP server with five tools that lets coding agents such as Claude Code, Codex and Cursor read AISLE findings and fixes.",
+   "status": "announced 9 November 2026; read-only",
+   "url": "https://aisle.com/blog/announcing-the-aisle-mcp-server"
+  },
+  {
+   "id": "proof-of-exploitability",
+   "name": "Proof of exploitability for web apps and APIs",
+   "short": "Proof of exploitability",
+   "what": "With customer authorization, an agent sends targeted requests to a running test application to confirm a finding and attaches the evidence.",
+   "status": "rolled out October 2026 (blog)",
+   "url": "https://aisle.com/blog/aisle-october-rollout"
+  },
+  {
+   "id": "open-source-analyzer",
+   "name": "AISLE analyzer for open source",
+   "short": "Open-source analyzer",
+   "what": "No-cost use of the analyzer for eligible critical open-source projects, reviewing pull requests (e.g. OpenSSL, curl, OpenEMR).",
+   "status": "available on application",
+   "url": "https://aisle.com/open-source"
+  }
+ ],
+ "stories": [
+  {
+   "customer": "OpenSSL Foundation",
+   "what": "AISLE's story says the Foundation uses AISLE internally to analyze pull requests and generate fixes, and that AISLE found 20 of 23 OpenSSL CVEs in six months; OpenSSL's own vulnerabilities page credits Aisle Research staff as finders and fix developers.",
+   "url": "https://aisle.com/customers/openssl",
+   "span": "Now AISLE is analyzing pull requests (PRs), flagging issues, and generating fixes"
+  },
+  {
+   "customer": "OpenSSL (third-party record)",
+   "what": "OpenSSL's vulnerabilities page lists Aisle Research staff as finders of multiple CVEs and as fix developers. The credit names a person of AISLE's research team; it shows the team's work, which the card does not count as the agent acting on its own.",
+   "url": "https://openssl-library.org/news/vulnerabilities/index.html",
+   "span": "Joshua Rogers (Aisle Research)"
+  },
+  {
+   "customer": "curl project",
+   "what": "AISLE's story says curl has used AISLE to find and propose fixes since February 2026, with 35 CVEs attributed to AISLE in 12 months; curl's vuln.json credits Aisle Research as finder on 34 CVE entries.",
+   "url": "https://aisle.com/customers/curl",
+   "span": "bringing AISLE’s 12-month total to 35 CVEs"
+  },
+  {
+   "customer": "curl (third-party record)",
+   "what": "curl's machine-readable vulnerability list credits Aisle Research staff as finders, and in some entries as remediation developers. The credit names a person of AISLE's research team; it shows the team's work, which the card does not count as the agent acting on its own.",
+   "url": "https://curl.se/docs/vuln.json",
+   "span": "Joshua Rogers (Aisle Research)"
+  },
+  {
+   "customer": "Productboard",
+   "what": "Customer story: rolled out across all 56 repositories, reducing 30,000 alerts to six actionable items, with Jira, Slack and AI-generated pull requests.",
+   "url": "https://aisle.com/customers/productboard",
+   "span": "Productboard rolled out AISLE across all 56 repositories"
+  },
+  {
+   "customer": "Samba (CVE-2025-10230)",
+   "what": "Samba's advisory for a CVSS 10.0 WINS hook command injection credits a researcher of Aisle Research. The credit names a person of AISLE's research team; it shows the team's work, which the card does not count as the agent acting on its own.",
+   "url": "https://www.samba.org/samba/security/CVE-2025-10230.html",
+   "span": "Reported by Igor Morgenstern of Aisle Research."
+  }
+ ],
+ "analysis": [
+  "**The shape.** The AISLE platform reads A4 · R2 · C1 · O0. It builds a customer's repository in an isolated container, writes a patch, runs the customer's tests and opens a pull request; it plugs into scanners, repositories and CI. A merge to the main branch always waits for a person on the customer's team.",
+  "**Where the evidence is strongest.** The work is visible outside AISLE's own pages. OpenSSL's vulnerabilities page, curl's machine-readable vulnerability list and Samba's advisory credit AISLE's research team, and AISLE is a CVE Numbering Authority. The card counts what the agent does on its own from a named customer: Productboard rolled AISLE out across all 56 repositories, with automated triage and AI-generated pull requests.",
+  "**Autonomy 4, as an option.** How far AISLE goes is a setting the customer chooses per severity and per repository: stop at triage, or go on to a tested pull request. The page states no default, so Autonomy 4 is marked available.",
+  "**Control 1, and what would lift it.** The merge gate is documented. Level 2 asks for access narrower than the whole account, stated for AISLE itself: a public page on the scopes AISLE asks for when it connects to GitHub, GitLab, Bitbucket or Azure DevOps would meet it. The read-only MCP server limits what other agents can read from AISLE, which is a different thing, and is shown, not counted.",
+  "**Openness reads \"not yet evidenced\".** Data use and limits are documented; the first rung asks for a public statement that the agent tells the people it talks to, such as the maintainers who receive its pull requests, that it is an AI.",
+  "**For readers.** On 15 October 2026 AISLE and Cohere signed a letter of intent for Cohere to acquire AISLE; nothing we read says it has completed."
+ ],
+ "article": {
+  "title": "AISLE on the GAMMA-Ray Spectrum: A4 · R2 · C1 · O0",
+  "standfirst": "The GAMMA-Ray studio reads AISLE's vulnerability platform from its public pages and from open-source records: it writes and tests fixes as pull requests, a person always merges, and one page on its access would lift its controls.",
+  "body": [
+   "AISLE, whose co-founder Stanislav Fort speaks at Web Summit Lisbon 2026, sells a platform of AI agents that find vulnerabilities in source code, triage them and write fixes. We read it only from public sources, captured and hashed on 10 November 2026, and the published rules computed the card.",
+   "**Autonomy 4, Orchestrates (available).** AISLE builds the code in an isolated container, writes a patch, runs the tests and opens a pull request, across a customer's scanners, repositories and CI. Productboard rolled it out across all 56 repositories. How far it goes is the customer's setting, so the level is marked available.",
+   "**Reach 2, Integrated.** It connects to hosted version control and to the tools a team already uses, such as Jira and Slack.",
+   "**Control 1, Stated.** A merge always waits for a person. A public page on the access AISLE asks for in a customer's repositories would reach level 2.",
+   "**Openness: not yet evidenced.** The first rung asks for a public statement that the agent tells people it is an AI.",
+   "Outside AISLE's own pages, OpenSSL, curl and Samba credit its research team for vulnerabilities found. AISLE and Cohere have signed a letter of intent for Cohere to acquire AISLE. The card is beta and AISLE has not seen it; it can claim the card and add evidence."
+  ],
+  "pt": {
+   "title": "A AISLE no GAMMA-Ray Spectrum: A4 · R2 · C1 · O0",
+   "standfirst": "O estúdio GAMMA-Ray lê a plataforma de vulnerabilidades da AISLE a partir das suas páginas públicas e de registos de código aberto: escreve e testa correções como pull requests, e uma pessoa faz sempre o merge.",
+   "body": [
+    "A AISLE, cujo cofundador Stanislav Fort fala no Web Summit Lisboa 2026, vende uma plataforma de agentes de IA que encontram vulnerabilidades no código e escrevem correções. Lemos apenas fontes públicas, capturadas e com hash a 10 de novembro de 2026.",
+    "**Autonomia 4 (opcional).** Escreve um patch, corre os testes e abre um pull request; a Productboard usa-a em 56 repositórios. **Alcance 2.** Liga-se ao controlo de versões e a ferramentas como Jira e Slack. **Controlo 1.** O merge espera sempre por uma pessoa.",
+    "**Abertura: ainda sem evidência.** OpenSSL, curl e Samba creditam a equipa de investigação da AISLE. O cartão é beta e a AISLE ainda não o viu; pode reclamá-lo e acrescentar evidência."
+   ]
+  }
+ },
+ "vault": {
+  "id": "z11yqwik",
+  "read_key": "sgit_public_read_5dcfc650a15adce6282cb5996d1cd2f57f8bd817588886e419e57a94246fdabd:z11yqwik",
+  "published": "2026-11-10"
+ },
+ "team": {
+  "researcher-assessor": "a sub-agent of gamma.studio@web-summit.dinis",
+  "challenger": "a sub-agent",
+  "scorer": "build/spectrum.mjs",
+  "analyst, designer, writer": "gamma.studio@web-summit.dinis",
+  "review": "gamma.review@web-summit.dinis (pending)",
+  "sign-off": "gamma.approve@web-summit.dinis (pending)"
+ },
+ "signoff": null,
+ "corrections": [],
+ "captures": {
+  "https://aisle.com/about-us": {
+   "sha256": "c2435d6bd46472c35d0eef16d36edb9710aa3006b6d45754cc687552afded4df",
+   "bytes": 180553,
+   "read_at": "2026-11-10T06:54Z"
+  },
+  "https://aisle.com/blog/aisle-and-cohere-to-join-forces": {
+   "sha256": "3d719f8785c2bfd6422caa6736208f61640862fc963c74d6d63a468512596882",
+   "bytes": 181227,
+   "read_at": "2026-11-10T06:54Z"
+  },
+  "https://aisle.com/customers/curl": {
+   "sha256": "a9b30d11d7312a01da9a512cdd1f1d1c3c479e7ccbde5eeac456d4d5c59cc031",
+   "bytes": 231836,
+   "read_at": "2026-11-10T06:54Z"
+  },
+  "https://aisle.com/customers/openssl": {
+   "sha256": "80ebdf6dcc09023be9167c6e91c8b5424e0f348e6b956d4e9cbef462fe9fd6fc",
+   "bytes": 216193,
+   "read_at": "2026-11-10T06:54Z"
+  },
+  "https://aisle.com/customers/productboard": {
+   "sha256": "c47822c4de89ebaa88f3f5aac2f0e2bf464b726d0e4fb7a2fae43cb9eb186d94",
+   "bytes": 199492,
+   "read_at": "2026-11-10T06:54Z"
+  },
+  "https://aisle.com/newsroom/press-releases/aisle-achieves-expanded-scope-as-cve-numbering-authority": {
+   "sha256": "a80b1b9e5262bce74d39ccf7c9344d295373cd84b775afdcddd82b9b21fc547c",
+   "bytes": 126450,
+   "read_at": "2026-11-10T06:54Z"
+  },
+  "https://aisle.com/newsroom/press-releases/aisle-emerges-from-stealth": {
+   "sha256": "20d872d1ee49c60e29467b3a8e8b5f6c8c9f3c5ec75e1a26dfa2bac3c8be448b",
+   "bytes": 126595,
+   "read_at": "2026-11-10T06:54Z"
+  },
+  "https://aisle.com/platform/autonomous-remediation": {
+   "sha256": "5948470fb82fa5990ece81d7e28947927b3b2bd23416e6d852b0347d6408f850",
+   "bytes": 228619,
+   "read_at": "2026-11-10T06:54Z"
+  },
+  "https://aisle.com/privacy-policy": {
+   "sha256": "0f136b0895b94456e7d74bc79ada1f29a3ee9b8dc3af3ab8b231b1071636ab59",
+   "bytes": 154604,
+   "read_at": "2026-11-10T06:54Z"
+  },
+  "https://betakit.com/cohere-to-acquire-czech-ai-cybersecurity-firm-aisle-set-up-new-cyber-division/": {
+   "sha256": "d4e66a70222918a2d0c7bbbaaa80a0be81291de0a3a49f8a51625741ac54ea76",
+   "bytes": 118216,
+   "read_at": "2026-11-10T06:54Z"
+  },
+  "https://curl.se/docs/vuln.json": {
+   "sha256": "97e81f9a06590abd5641ce14269f613eac26fc109bc7f57aa1df1390110dc164",
+   "bytes": 650967,
+   "read_at": "2026-11-10T06:54Z"
+  },
+  "https://openssl-library.org/news/vulnerabilities/index.html": {
+   "sha256": "b8f6515103b07f6fbdf47162a203f26f0b2bd554c88dd10f6619071217d6ee92",
+   "bytes": 758834,
+   "read_at": "2026-11-10T06:54Z"
+  },
+  "https://www.samba.org/samba/security/CVE-2025-10230.html": {
+   "sha256": "5ba8380d2c449c67420a829c361851aca88f1967924b05ad4bce171a0b61193e",
+   "bytes": 3609,
+   "read_at": "2026-11-10T06:54Z"
+  }
+ }
+}

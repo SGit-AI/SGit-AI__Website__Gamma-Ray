@@ -1,0 +1,267 @@
+{
+ "id": "aisle-platform",
+ "name": "AISLE platform",
+ "operator": "AISLE (the vendor); each customer is the operator of its own use",
+ "company": "aisle",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-10",
+ "tier": "public",
+ "basis": "AISLE's own public product, blog and about pages, and third-party vulnerability records (OpenSSL, curl, Samba) that credit its work",
+ "seen_by_operator": null,
+ "what": "AISLE's platform of AI agents that finds vulnerabilities in source code, triages them, writes and tests patches, and delivers them as pull requests for people to merge.",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer.",
+ "grant": null,
+ "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
+ "vault": {
+  "id": "z11yqwik",
+  "read_key": "sgit_public_read_5dcfc650a15adce6282cb5996d1cd2f57f8bd817588886e419e57a94246fdabd:z11yqwik",
+  "published": "2026-11-10"
+ },
+ "review": {
+  "status": "draft",
+  "rounds": []
+ },
+ "assessment": {
+  "by": "gamma.studio@web-summit.dinis",
+  "researcher_assessor": "a sub-agent of gamma.studio",
+  "challenger": "a sub-agent of gamma.studio",
+  "lowered": [
+   "I14",
+   "I25"
+  ],
+  "fixed": [
+   "I18",
+   "S1",
+   "I26",
+   "I67",
+   "I68"
+  ],
+  "files": "in the vault: work/assessment.json, work/challenger.json"
+ },
+ "answers": {
+  "I04": {
+   "e": "https://aisle.com/platform/autonomous-remediation",
+   "n": "The remediation FAQ states AISLE builds the repository in an isolated container, applies its patch and runs the tests.",
+   "span": "AISLE builds your repository in an isolated container, applies the patch",
+   "g": "documented",
+   "m": "default"
+  },
+  "I08": {
+   "e": "https://aisle.com/platform/autonomous-remediation",
+   "n": "The page states AISLE writes a patch, runs it against the customer's tests and opens a pull request.",
+   "span": "AISLE writes the patch, runs it against your own test suite",
+   "g": "documented",
+   "m": "default"
+  },
+  "I10": {
+   "e": "https://aisle.com/platform",
+   "n": "The platform page states it plugs into the customer's scanners, repositories and CI.",
+   "span": "AISLE plugs into the scanners, repos, and CI you already run",
+   "g": "documented",
+   "m": "default"
+  },
+  "I11": {
+   "e": "https://aisle.com/platform/vulnerability-discovery",
+   "n": "AISLE connects from its own service to the customer's hosted version control systems.",
+   "span": "AISLE connects to GitHub, GitLab, Bitbucket, and Azure DevOps.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I18": {
+   "e": "https://aisle.com/platform/autonomous-remediation",
+   "n": "The page states AISLE writes and tests a patch and opens a pull request, and the customer reviews and merges. The triage page says the customer chooses, per severity and repository, whether it stops at triage or goes on to a PR; no default is stated.",
+   "span": "All you do is review and merge.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "pull-requests"
+  },
+  "I20": {
+   "e": "https://aisle.com/",
+   "n": "The home page states what the system is for: finding, fixing and verifying vulnerabilities in source code.",
+   "span": "AISLE finds, fixes, and verifies vulnerabilities autonomously",
+   "g": "documented",
+   "m": "default"
+  },
+  "I21": {
+   "e": "https://aisle.com/platform/autonomous-remediation",
+   "n": "The customer sets how far AISLE acts on its own, per severity and per repository.",
+   "span": "You decide how far AISLE goes on its own",
+   "g": "documented",
+   "m": "default"
+  },
+  "I22": {
+   "e": "https://aisle.com/platform/autonomous-remediation",
+   "n": "The page states which findings get guidance instead of a patch, and that a fix breaking tests goes back to the team.",
+   "span": "When findings can't be safely patched, it provides clear remediation advice instead.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I26": {
+   "e": "https://aisle.com/customers/openssl",
+   "n": "AISLE's OpenSSL story states maintainers invoke it by tagging the GitHub handle @aisle-analyzer, and the open-source page shows an 'aisle-security' bot account in a mock-up. Stated by AISLE; the accounts were not checked on GitHub.",
+   "span": "Maintainers can trigger an AISLE review simply by tagging @aisle-analyzer",
+   "g": "documented",
+   "m": "deployed"
+  },
+  "I38": {
+   "e": "https://aisle.com/platform/autonomous-remediation",
+   "n": "A merge to the main branch needs a person on the customer's team; AISLE opens the pull request and waits.",
+   "span": "it opens the pull request and waits for human approval",
+   "g": "documented",
+   "m": "default"
+  },
+  "I41": {
+   "e": "https://aisle.com/enterprise",
+   "n": "The enterprise FAQ states every finding and fix is logged through to the approved pull request, with timestamps and approvers; documented only, not observed.",
+   "span": "every finding and fix is logged from detection to verified fix",
+   "g": "documented",
+   "m": "default"
+  },
+  "I57": {
+   "e": "https://aisle.com/platform/vulnerability-triage",
+   "n": "Users can contest a triage decision by explaining why and sending the issue back for re-assessment.",
+   "span": "just explain why and send the issue back through triage",
+   "g": "documented",
+   "m": "default"
+  },
+  "I58": {
+   "e": "https://aisle.com/privacy-policy",
+   "n": "The privacy policy lists customer data as code repositories and related data submitted to the service.",
+   "span": "Code repositories and related data submitted to Services",
+   "g": "documented",
+   "m": "default"
+  },
+  "I67": {
+   "e": "https://aisle.com/enterprise",
+   "n": "The enterprise page states a figure for engineering hours saved, and the remediation page gives monthly patch and hours figures; no method is published.",
+   "span": "AISLE has already saved teams 50,000+ engineering hours.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I68": {
+   "e": "https://aisle.com/deployment/managed-saas",
+   "n": "The deployment comparison states updates and intel are continuous for Managed SaaS and delivered monthly for private cloud and on-prem; this is an update cadence, with no improvement process described.",
+   "span": "Monthly registry push/pull",
+   "g": "documented",
+   "m": "default"
+  },
+  "S1": {
+   "e": "https://aisle.com/customers/productboard",
+   "n": "A customer story names Productboard, rolled out across all 56 repositories, as using AISLE's automated triage and AI-powered pull requests in its workflow. CVE credits to Aisle Research name staff researchers and are not counted here.",
+   "span": "Jira ticket creation, Slack notifications, and AI-powered pull requests",
+   "g": "documented",
+   "m": "default"
+  }
+ },
+ "not_credited": [
+  {
+   "what": "OpenSSL, curl and Samba advisories credit vulnerabilities to researchers of Aisle Research.",
+   "why": "The credits name people, so they show AISLE's team at work, not the agent acting on its own.",
+   "source": "https://openssl-library.org/news/vulnerabilities/index.html"
+  },
+  {
+   "what": "A read-only MCP server lets a customer's coding agent read AISLE's findings.",
+   "why": "An agent-to-tool interface over AISLE's data, not a protocol between agents; its read-only limit is the channel's, not AISLE's own access.",
+   "source": "https://aisle.com/blog/announcing-the-aisle-mcp-server"
+  }
+ ],
+ "announced": [
+  {
+   "what": "Cohere to acquire AISLE (letter of intent signed 15 October 2026; completion not stated).",
+   "source": "https://aisle.com/blog/aisle-and-cohere-to-join-forces"
+  },
+  {
+   "what": "MCP server: more actions beyond read access are 'on the way'.",
+   "source": "https://aisle.com/blog/aisle-october-rollout"
+  },
+  {
+   "what": "Dependency firewall: more registries coming.",
+   "source": "https://aisle.com/blog/aisle-october-rollout"
+  },
+  {
+   "what": "Headline figures: 650+ CVEs, 91% true positive rate, 85% fix acceptance, 4-day MTTR, '10x more cost-efficient than Mythos', 15,000+ engineering hours saved per month. Vendor figures, method not published on the page.",
+   "source": "https://aisle.com/platform"
+  },
+  {
+   "what": "'#1' on the UC Berkeley Vulnerability Initiative leaderboard (the leaderboard data does list 'AISLE Research Team' with 514 in Volume).",
+   "source": "https://vuln.cs.berkeley.edu/"
+  }
+ ],
+ "configurations": [
+  {
+   "id": "shipped",
+   "name": "As shipped",
+   "note": "The platform connected to a customer's repositories, delivering findings and patches as pull requests.",
+   "on": []
+  },
+  {
+   "id": "pull-requests",
+   "name": "Fixes as pull requests",
+   "note": "The customer sets, per severity and repository, that AISLE goes on from triage to open a pull request with a tested patch.",
+   "on": [
+    "pull-requests"
+   ]
+  },
+  {
+   "id": "mcp",
+   "name": "With the MCP server",
+   "note": "A customer connects AISLE's read-only MCP server to its own coding agent.",
+   "on": [
+    "mcp"
+   ]
+  }
+ ],
+ "captures": {
+  "https://aisle.com/": {
+   "sha256": "18dd9a5b479ea1fa4089d07ddd95b031cba422e7464c46a7f3a8a4a90e7679e8",
+   "bytes": 319332,
+   "read_at": "2026-11-10T06:54Z"
+  },
+  "https://aisle.com/customers/openssl": {
+   "sha256": "3795f9e564eed2bd476b68799785a7335223291d854cff7b8a600f58059eec11",
+   "bytes": 216193,
+   "read_at": "2026-11-10T06:54Z"
+  },
+  "https://aisle.com/customers/productboard": {
+   "sha256": "ffe473f71f837ca35a0fee742d7808eccbaf67a3f042360cda286a9878598245",
+   "bytes": 199492,
+   "read_at": "2026-11-10T06:54Z"
+  },
+  "https://aisle.com/deployment/managed-saas": {
+   "sha256": "7b2be1d709d597eb1245b870cf4685f3121b4b7df1a114c4551e5431c1d2fd2d",
+   "bytes": 181969,
+   "read_at": "2026-11-10T06:54Z"
+  },
+  "https://aisle.com/enterprise": {
+   "sha256": "a76a27c511d6ed26c5958496d73f1191bb3520b53fdd7d26e1d405c947c97725",
+   "bytes": 290149,
+   "read_at": "2026-11-10T06:54Z"
+  },
+  "https://aisle.com/platform": {
+   "sha256": "c58814093dde44535c4320baaf1f7199e8bcc980229778a3d0b1d15e347940f2",
+   "bytes": 563256,
+   "read_at": "2026-11-10T06:54Z"
+  },
+  "https://aisle.com/platform/autonomous-remediation": {
+   "sha256": "f23f884729842a5412ec2bddfe08980c42e615a17ac4b3bcff69d109b8542cc2",
+   "bytes": 228619,
+   "read_at": "2026-11-10T06:54Z"
+  },
+  "https://aisle.com/platform/vulnerability-discovery": {
+   "sha256": "b7d3a3e66a43acfe58a05fd33f23dc438580fbdae92abf6d2bd1a24b9f1caf12",
+   "bytes": 281628,
+   "read_at": "2026-11-10T06:54Z"
+  },
+  "https://aisle.com/platform/vulnerability-triage": {
+   "sha256": "ef7b92d02f624f06d1e0341acd336808aba08400b3484c5eec035d7f2128acad",
+   "bytes": 213443,
+   "read_at": "2026-11-10T06:54Z"
+  },
+  "https://aisle.com/privacy-policy": {
+   "sha256": "2ee691b4babcf83f80b72eff57e7fcf4bf3376d889b9b24461ccdd96d75fe641",
+   "bytes": 154604,
+   "read_at": "2026-11-10T06:54Z"
+  }
+ }
+}

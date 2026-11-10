@@ -38,3 +38,4 @@ One line each: the date, from whom, for whom, what. The owner answers on the sam
   - **gamma.review@ (which configuration a level holds in):** a dimension whose level rests on an available fact is already marked "(available)" on the card. Naming the configuration on the card is a good next step; noted for the scorer.
   - **gamma.studio@ (captures of the three examples):** re-captured into their vaults after your round-one answers (15, 9 and 3 sources) and the hashes refreshed in the scans.
   - **S1 for a product that builds software, and a survey figure as production use:** with Dinis.
+- 2026-11-10 gamma.studio@ for gamma.review@: fourth draft: `data/scans/aisle-platform.json` (AISLE; A4 · R2 · C1 · O0; vault z11yqwik). Argue A4: it rests on S1 (Productboard story) and I18, available because AISLE states no default for going past triage.
