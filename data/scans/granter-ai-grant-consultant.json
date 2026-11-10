@@ -19,8 +19,72 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "draft",
-  "rounds": []
+  "status": "round-1",
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "S1",
+      "severity": "should-fix",
+      "finding": "The note says Super Bock prepared a submitted application with the agent. The name Super Bock appears in none of the four sources of the scan (searched the fidelidade, marinha, blog and privacy texts). Remove that sentence. The Fidelidade page does say 'the two agents are live, and the platform is actively being used to identify new opportunities and begin drafting applications', and it names a customer, so the badge claim rests on a named customer in a pilot in its 'initial phase of a planned 12-month cycle', with no sessions, tasks or pull request counts. The span is present and under fifteen words. Note that the pilot is described as at its initial phase and results are due at the 6-month mark."
+     },
+     {
+      "answer": "I67",
+      "severity": "should-fix",
+      "finding": "The marinha page has the stat labels '200' with 'Relevant funding opportunities added to a defence grants database' and '2w -> 2h' with 'first drafts presenting significant time saving'. The note's figures are on the page, but the span only supports the 200 figure, not the two weeks to two hours claim. The page figures are stated by the vendor in a case study, with no method or baseline given. 'Its value is measured' is a stretch for a count of database entries and an unexplained before/after label; consider quoting the 2w to 2h label as a second span or lowering to a note that no measurement method is stated. The grade 'documented' is acceptable only as 'the page reports figures', not as a measurement."
+     },
+     {
+      "answer": "I47",
+      "severity": "should-fix",
+      "finding": "The span is present in the privacy policy: 'the platform does not take decisions about you on its own.' But the sentence is a data-protection statement about decisions concerning a person (the data subject), under a 'How we use AI' heading, not a limit on what the agent may do. The indicator is 'A limit on it is a rule in prose'. The credit is to a nearby fact. This answer is one of two that give Control level 1 (the other is I38), so it should not be counted unless the assessor argues it states a limit on the agent."
+     },
+     {
+      "answer": "I38",
+      "severity": "should-fix",
+      "finding": "Span 'Users review and approve them before any submission or decision' is in the privacy policy, and it supports approval before submission. The note's second clause, 'the submission itself is made by the user', is not on the privacy policy page cited as source. It is on the blog page FAQ: 'Does Granter submit the application for me? No. The final submission is done by you'. Cite the blog as a second source or drop the clause. Credit to I38 is reasonable: a submission to a funder is the high-impact action. Control level 1 holds on this answer alone."
+     },
+     {
+      "answer": "I02",
+      "severity": "should-fix",
+      "finding": "The span is on the fidelidade page ('trained using detailed information about Fidelidade's business and past applications', apostrophe aside). It supports 'AI platform with the organisation's own data'. Nothing in any source says it runs without executing arbitrary code, which is the second half of the indicator. Also the Fidelidade case describes a tailored pilot, not necessarily the default product; mode 'default' is doubtful. I02 is the second leg of the I07 route to Autonomy 2, but I16 alone gives level 2, so the level does not change."
+     },
+     {
+      "answer": "I16",
+      "severity": "note",
+      "finding": "Span present in the privacy policy, the policy says 'outputs are suggestions' and users review and approve before any submission or decision. The indicator says the person approves each action; the page says before submission or decision, not each step. Acceptable as stated; the card level A2 rests on this answer alone, so it is the one to keep sharp. I07 uses the identical span and is the same fact; fine, but it is not independent evidence."
+     },
+     {
+      "answer": "I52",
+      "severity": "should-fix",
+      "finding": "Span 'Granter is being evaluated by three different Navy units' is in the marinha page, in the sentence 'The partnership is currently in the certification phase for the Navy Tested programme'. The note says 'a certification process run by the Navy'; the page names the programme but does not say who runs it, so say 'a certification phase for the Navy Tested programme'. Certification is in progress, not granted. Tier is declared: this is the vendor's own account of the Navy's evaluation, not a Navy publication. Grade 'documented' is fine for that."
+     },
+     {
+      "answer": "I58",
+      "severity": "note",
+      "finding": "Quote is on the blog page, attributed to Bernardo Tavares, CTO at Granter; the note's 'the CTO' is correct. The span and the extraction from official documents clause are both in the quote. Pass, with the note that it is a vendor spokesperson's statement."
+     },
+     {
+      "answer": "I07,I09,I20,I56",
+      "severity": "pass",
+      "finding": "Checked against the pages. I07: privacy policy says 'outputs are suggestions' and users review and approve. I09: the blog says the consultant scans 'regional, national and EU opportunities' and the span covers public and private funding; domain is grants. I20: privacy policy opening says the platform helps organisations find, prepare and manage applications for grants and other funding. I56: 'AI-generated content is presented as such inside the platform.' Spans found, under fifteen words, grades documented, mode default (stated generally, no opt-in found)."
+     },
+     {
+      "answer": "announced / sources",
+      "severity": "note",
+      "finding": "The 'announced' field cites granter.ai/about and the home page, which are not sources of the scan; the card does not rely on them. The blog page still carries 'Automated Submission (coming soon)' text while the FAQ says the user submits; the scan handles this correctly by not crediting submission automation. No I08/I17 answer, so no level three; none of the checked evidence is an adjective."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A2 R1 C1 O1. No level 3 or 4. A2 rests on I16 (suggest, person approves). R1 on I09. C1 on I47 and I38; if I47 is removed, I38 alone still gives C1. O1 on I20 plus I56 and I58 (I20 and I56 from the privacy policy, I58 from the blog). The levels are consistent with the evidence once the I47 weakness is noted; they do not change if the should-fix items are applied."
+     }
+    ]
+   }
+  ]
  },
  "assessment": {
   "by": "gamma.studio@web-summit.dinis",
