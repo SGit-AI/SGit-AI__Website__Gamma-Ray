@@ -131,6 +131,44 @@
       "finding": "Verified by fetching the cited pages: every span in the scan is present on its cited page (checked with whitespace and non-breaking-space normalisation) and is under fifteen words (S1 is 14, I47 12, I25 11). Grades documented and observed are right; S3 observed is supported by fetch (llms.txt and swagger.yaml resolve). I20 and I58 match their pages (the reviewer 'comments only on the Codacy issues it judges worth a reviewer's attention'; what is sent, what Codacy stores, redaction before code is sent). Every figure and name in the notes (BFI Finance, 170, 270,000 tokens, 1 MB, OpenAI, Amazon Bedrock, Jira, Linear, review.md, AGENTS.md and the other guideline files) is in a cited page. Round one's S1, I25, S3 and I47-note changes were made as the studio says; round one's no-change responses (I57, I15, I11, I10, I01/I20/I22/I58, levels) are true in the scan as it stands. Round one findings fully answered: all except I47."
      }
     ]
+   },
+   {
+    "round": 3,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I47",
+      "severity": "should-fix",
+      "finding": "Round two's I47 finding is only partly answered. The new span 'it picks up on what your team cares about and what to stop flagging' is exact on the Codacy AI page (14 words, under fifteen). But it comes from the Learning from your reviews section: it says the reviewer adapts from past review comments, replies and reactions. It is a learning feature, not a rule in prose that limits or directs the reviewer, which is what I47 ('A limit on it is a rule in prose') asks for. The note's other half, that review.md suggested contents include what reviewers should ignore or not enforce, is true but is a line of the example prompt for drafting the file ('Out of scope: Anything reviewers should explicitly ignore or not enforce'), and the page describes review.md as helping the reviewer understand the structure of the code, the business logic and preferences. No page sentence says the reviewer is bound by or must follow review.md. The studio's response concedes this ('No page says it is bound by review.md'). The credit is therefore a stretch and the span no longer matches the note's first claim. Options: remove I47 (Control shows as a next unlock); or restore a span from the review.md sentence ('These instructions are specified in a review.md file') with a note that this is a team-written instruction file and nothing more, and let Dinis decide whether that is a limit in prose. Correction to round two: with I47 removed the card is A1, R2, C-, O2; build/spectrum.mjs sets publishable when any dimension is at level one or above, so the card would still be publishable, as the studio says. My round-two statement that it would not be publishable was wrong."
+     },
+     {
+      "answer": "I01",
+      "severity": "pass",
+      "finding": "Round two note on I01 answered: mode is now available with cfg ai-reviewer, the note says 'once an admin turns it on', and the span 'Codacy AI is a set of optional features integrated into the Software' (12 words) is on the Codacy AI page, which says the AI Reviewer is strictly opt-in and runs only where an admin enabled it. Feeds Reach 1 only; Reach 2 supersedes it."
+     },
+     {
+      "answer": "I22",
+      "severity": "pass",
+      "finding": "Round two note on I22 answered: the note now names the limits page for the 270,000 tokens or 1 MB diff and the Codacy AI docs page for GitHub only. Both fetched: span 'The AI Reviewer doesn't review pull requests whose changes' (9 words) is exact on the limits page, which also says it posts a short review that the pull request is too large; the Codacy AI page says 'currently only available on GitHub, for all Team and Business plans'. Grade documented, mode default, right indicator."
+     },
+     {
+      "answer": "S1, I25, I15, I57, I11, I10, S3, I20, I58",
+      "severity": "pass",
+      "finding": "Re-fetched all five sources of the scan; these answers are unchanged since round two and the spans are still present and under fifteen words; S3 llms.txt fetch still returns 200. Round two notes on S1 (vendor claim, badge only), I25 (platform GitHub App, page does not mention the reviewer), I15 (lowest rung, manual-review cfg) and the unchanged no-change items are true as the scan stands. Every name and figure in the notes (BFI Finance, 170, 270,000 tokens, 1 MB, OpenAI, Amazon Bedrock, Jira, Linear, review.md) is on a source of the scan. Round-two findings fully answered: I01, I22, S1, I25, I15, I57, I11, I10, S3, levels note, grouped pass (10 of 11); I47 remains partly answered."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card computed: A1 R2 C1 O2; no level three or four exists, so I argue against the weakest credited level, Control 1. It rests on I47 alone, and I47's best support now is a team-written review.md file and a learning-from-replies feature, neither stated as a limit on the reviewer. If I47 is removed the card is A1 R2 C- O2 (still publishable by the any-dimension rule) and Control reads not yet evidenced with I38 as the next unlock. Reach 2 survives losing I10 through I11; Autonomy 1 rests on I15 only in the manual-review configuration; Openness 2 needs both I22 and I58."
+     },
+     {
+      "answer": "round two record",
+      "severity": "note",
+      "finding": "Correction to the round-two finding on I47: it said that without I47 the card is not publishable because no card goes below level one in every dimension. That was wrong. The rule needs level one or more in at least one dimension, and this card has Autonomy 1, Reach 2 and Openness 2. Without I47 the Control dimension shows no level and the card still publishes."
+     }
+    ]
    }
   ],
   "responses": [

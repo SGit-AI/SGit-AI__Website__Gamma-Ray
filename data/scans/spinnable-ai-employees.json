@@ -146,6 +146,39 @@
       "finding": "Reviewer check against the cited home page: the exceptions half is on the same page. It says \"Approve key actions and set what each teammate can access\" and, in the answer to what workers cannot do, \"it won't take actions with external consequences without your approval. When it's unsure, it asks instead of improvising.\" So the fix for the I17 finding is a second span from those sentences (each under fifteen words), not a new source."
      }
     ]
+   },
+   {
+    "round": 3,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I17",
+      "severity": "should-fix",
+      "finding": "The span 'it won't take actions with external consequences without your approval' is exact in the home page FAQ (10 words), and 'asks instead of improvising' is in the next sentence, so the exceptions half is now quoted and the round-two finding is answered on the span. The note, however, also says the security best practices guide advises writing an approval rule into the worker's instructions. That page (docs.spinnable.ai/guides/security-best-practices) says so (I fetched it: workers told not to delete files, remove data or make irreversible changes without your approval), but it is not among the scan's sources and has no capture hash; the not_credited items name it as a source with the instruction to add and capture it, and that has not been done. A note should rest on a captured source of the scan. Fix: add the page to the sources and run tools/capture.mjs, or cut the clause from the note."
+     },
+     {
+      "answer": "I56",
+      "severity": "should-fix",
+      "finding": "Round-two finding on the missing capture is not answered: the security best practices page is still not in the scan's captures (19 pages hashed, none for it), and the studio response defers it to the studio owner. The not_credited item is accurate against the live page. Same fix as I17: add the source and capture it. The not_credited entry for an approval step also names the managing-multiple-workers guide and its line 'Approve sensitive actions' (true on the live page, listed under human oversight tasks), but that page is not captured either."
+     },
+     {
+      "answer": "I39, I68, I04",
+      "severity": "pass",
+      "finding": "Changed answers checked against fresh fetches. I39: the communication-channels page says Send now 'immediately cancels the current in-flight generation'; the note now says only that and states the limit; the paused-task clause is gone. Span exact, 8 words, documented, default. I68: llms.txt lists dated notes from 8 January 2026 to 28 October 2026 with gaps (none between 22 January and 5 February, 29 April and 13 May, 24 June and 8 July); 'most weeks, with some gaps' is true; span 'October 28, 2026' is exact. I04: the vault page table row says 'Exposed as VAULT_ environment variables for Python code and custom scripts' (11 words, exact); the note matches. I04 is not used by any level."
+     },
+     {
+      "answer": "I12, I25, I46, I41, S1, I08, I10, I11, I20, I21, I22, I26, I30, I40, I47, I57, I58, S3",
+      "severity": "pass",
+      "finding": "Unchanged since round two and re-fetched fresh (19 pages, hashes updated 16:44Z). No em-dashes in the scan. The studio accepted the passes and the I46 gloss, which feeds no level. Round-two findings fully answered: I12, I25, I46, I41, S1, I39, I68, I04, I08-group passes (answered by acceptance or by correct rewrite); I17 answered on the span but its note keeps an uncaptured source; I56 not answered (capture still missing); the levels finding answered by argument (see levels)."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A3 R2 C1 O2; no level four. Autonomy 3 rests on I08 (docs: workers update databases and send emails) and I17 (one home page FAQ answer, vendor copy, documented, default); with I17 removed the card has no Autonomy level, so the weakest fact removes the dimension, and no documentation page describes how approval is configured, as the note itself says. Control 1 rests only on I47 (Worker Policy prose rule), Reach 2 on I10 and I11 (connector lists), Openness 2 on I22 and I58 (troubleshooting and privacy pages); none of these is contradicted by anything read. The disclosure of the approval gap in the note and not_credited is adequate for beta."
+     }
+    ]
    }
   ],
   "responses": [

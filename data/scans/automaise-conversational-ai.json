@@ -19,7 +19,7 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "round-1",
+  "status": "round-2",
   "rounds": [
    {
     "round": 1,
@@ -71,6 +71,64 @@
       "answer": "I10,I20 and sources",
       "severity": "pass",
       "finding": "All five sources fetched on 2026-11-10 (product page, CTT page, home page, terms page, script file). Every span is present and under fifteen words (8 to 11). Every claim in each note is on the page cited, with these two clarifications: the FAQ escalation text exists only in the script file, and the product page is JS-rendered (Framer), so its FAQ answers beyond the first need the raw HTML or script file. No note cites a page, name or figure outside the scan's sources. Assessment fields (lowered I47, I63, I02; fixed I17, I10, S1) were not checked against the vault work files, which were not read."
+     }
+    ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I08",
+      "severity": "should-fix",
+      "finding": "Round-one finding (mode default doubtful): the mode is now available with connected-systems, so that part is answered. But the added clause in the note, 'such transactions run through the operator's own systems, connected per deployment', is in no source of the scan. The product page (fetched fresh) says only that data changes, payments, orders and service subscriptions are completed end-to-end by the AI with no agent stepping in; it does not say how or through which systems. The clause is the scan's own inference, taken from its configuration note. Either drop the clause from the note or say plainly that it is an inference. Span exact, 11 words, grade documented right for a statement. This is the only benefit sentence behind Autonomy 3 (see levels)."
+     },
+     {
+      "answer": "I11",
+      "severity": "should-fix",
+      "finding": "Round-one finding (credit weak) is only partly answered. The span is exact on the terms page (12 words) and the mode is now available. Problems: (1) the terms page describes the company's Virtual Employee SaaS platform (Digital Assistants on Facebook Messenger, WebChat, Twitter, E-mail, WhatsApp), and a product-shape scan covers the named configuration of Conversational AI; the page does not tie that platform text to Conversational AI, whose own page speaks of voice and chat. (2) Indicator I11 is a tool or service the agent calls across a trust boundary; a channel it answers on is its interface, not a tool it calls, so the credit stays generous. (3) The note says 'the platform's assistants answer on third-party messaging channels'; the span is cut inside an open bracket and ends at 'WhatsApp' while the page continues 'etc.', so the note should say the list is not closed. (4) Mode available with connected-systems rests on the scan's configuration note, not on the cited page, which says nothing about per-deployment connection. No level moves, since Reach 2 is satisfied by I10 alone (rule: any of I10, I11), so the credit is redundant; lower it or move it to a note."
+     },
+     {
+      "answer": "I10",
+      "severity": "pass",
+      "finding": "Re-checked in full after the change: source is now the product page, span 'Conversational AI connects with every major CRM, CCaaS, and messaging platform' is exact (11 words) in the section titled Seamless Integrations, the note says categories only and that no named connector was found (true: no connector, API or integration list in the page text). The not_credited entry for named connectors is accurate and its source is a scan source. Mode available with connected-systems is reasonable for per-deployment connection although the page itself does not say per deployment. Note that 'every major' is a vendor claim, so documented is the ceiling and the grade is right. Reach 2 therefore rests on one vendor sentence naming categories."
+     },
+     {
+      "answer": "I17",
+      "severity": "note",
+      "finding": "Studio response (no change, same SHA-256 on refetch) is true as far as it goes. My fresh fetch of the script file gives 255917 bytes against 256091 captured, so the hash I got today does not match the capture; the studio's claim that it matched on 10 November 14:45Z cannot be confirmed by me today, and the escalation sentence is still present in the file ('When a conversation reaches a point that requires human intervention, it transitions seamlessly to an available agent, with full context carried over'). The other half, 'Anything that follows a predictable flow can be handled autonomously', is in the product page text. Span 10 words, exact. Still a runtime bundle citation: the vault copy is the durable source, so the vault capture should be verified to hold the same bytes. The change in size is not a fault of the answer, but the capture should be treated as the evidence."
+     },
+     {
+      "answer": "I20",
+      "severity": "note",
+      "finding": "Studio kept the credit and said so. Verified on the page: the FAQ question 'What types of requests can Conversational AI handle on its own' lists account management, payments, order tracking, appointment scheduling, data updates and knowledge base queries. That is a capability list of task types, not a statement of what the agent may not do. Defensible as stated purpose and tasks under needs: statement, but note that it is the same FAQ answer that supports I17, so one FAQ passage feeds I20 and I17."
+     },
+     {
+      "answer": "I58",
+      "severity": "note",
+      "finding": "Studio kept the credit with a more precise note. Verified on the terms page: 'Customer Data' means information provided to the Website or Service, including Virtual Employee configurations, frequent questions' answers, text messages, pictures or videos, Profile Content and End User Data. That defines what a customer gives the service, which the studio now says; it does not say what data the agent uses to answer. Openness 1 (I20 plus I58) rests on this reading. Honest as worded; if the standard means data the agent draws on, this credit would fall and Openness would be none, with no I56 or I22 on the card."
+     },
+     {
+      "answer": "S1",
+      "severity": "note",
+      "finding": "No change since round one, still true on the live CTT page: client CTT, solution Conversational AI, assistant manages and autonomously solves account access issues, the new channel replaced the phone support line, impact 93% automation rate of the webchat interactions. The page carries no date and gives no period or volume. Source is a scan source; span exact. It feeds the In production badge only."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A3 R2 C- O1. Only Autonomy 3 is level three or four. Argument against Autonomy 3 (rule: I08 and any of I17, I18, I19): it rests on I08 and I17, both marketing statements, no artefact (no log, API, run or documentation of the transaction flow). Remove I08, the benefit sentence 'completed end-to-end by the AI, with no need for an agent', and Autonomy falls to none, because I15 is not credited and no I16, I07 is in the scan; the card would show no Autonomy at all. I17 alone cannot hold a level. The sentence has no named customer for payments or orders; the CTT page shows only account access (password recovery, unblocking), which is a narrower action than payments or orders, and no one cross-cites it for I08. Mode: I08 is marked available with connected-systems on the strength of the scan's own inference, so the level is shown as available, which is honest, but the I08 note's clause about operator systems should not be in the note as if sourced. Autonomy 4 is not reached (no I18 or I19; the escalation text is a person taking over, which is correctly in not_credited). Reach 2 rests on I10 alone in effect (I11 is redundant and weak); remove I10 and I11 and Reach is none. Openness 1 rests on I20 and I58, the latter loosely. Suggest: keep A3 only if I08 is shown with its single-source basis in the note, and drop the unsourced clause."
+     },
+     {
+      "answer": "D-new",
+      "severity": "note",
+      "finding": "New check, not from round one: not_credited entries cite only scan sources (product page, script file); the I18 entry is accurate. The S4 or agent-callable interface and I13 (next unlocks listed by the card) are not in the scan and none appeared on the product page (no MCP, API or agent card text found). The home page was dropped from the sources and nothing remaining in the notes cites it. Review responses are all about the right answers; the studio response for 'I10,I20 and sources' says four of five hashes match, but my fresh fetches of all four sources differ in byte count from the captures (script 255917 vs 256091, product 481586 vs 481638, CTT 395955 vs 396043, terms 350724 vs 351114); this is likely rendering or fetch-tool variation, but means the match claim cannot be confirmed by a different reader."
+     },
+     {
+      "answer": "all other round-one findings",
+      "severity": "pass",
+      "finding": "Verified answered: round-one I08 mode (now available), I10 source and note (product page, categories only), I11 re-source to terms (partly: see I11), the I20, I58 and I17 notes (kept and flagged honestly), S1 pass, and the sources pass. All spans checked in the fresh fetches: I08 11 words, I10 11, I11 12, I17 10, I20 9, I58 8, S1 10, all exact and under fifteen words. No em-dashes, no email addresses or at-signs, no private persons in the notes."
      }
     ]
    }
