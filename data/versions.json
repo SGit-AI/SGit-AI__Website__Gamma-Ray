@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.81",
+    "date": "2026-11-10",
+    "what": "one caption for the fold-out paths",
+    "by": "gamma.graphs@web-summit.dinis",
+    "from": "ec4834110"
+  },
+  {
     "version": "v0.0.80",
     "date": "2026-11-10",
     "what": "log",
