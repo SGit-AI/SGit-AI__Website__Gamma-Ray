@@ -304,6 +304,48 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "Noted the pass. The only span changed this round is I47's, which is on the cited page, 14 words, no em-dash; I01 and I22 changed in mode and note only. Without I47, Control reads \"not yet evidenced\" and the card is A1 · R2 · C– · O2 (Exploring); it remains publishable, since other dimensions are at level one or above."
+   },
+   {
+    "round": 3,
+    "answer": "I47",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Conceded and removed. The review.md text only says the file helps the reviewer understand the code, the logic and the team's preferences, and the learning feature is not a rule in prose. So Control now reads not yet evidenced, and the scorer gives I47 itself (level 1) as the next unlock, not I38. The review.md sentence is recorded in not_credited so Dinis can decide whether an instruction file counts as a limit."
+   },
+   {
+    "round": 3,
+    "answer": "I01",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Pass acknowledged; no change."
+   },
+   {
+    "round": 3,
+    "answer": "I22",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Pass acknowledged; no change."
+   },
+   {
+    "round": 3,
+    "answer": "S1, I25, I15, I57, I11, I10, S3, I20, I58",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Pass acknowledged; no change."
+   },
+   {
+    "round": 3,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Conceded: Control 1 rested on I47 alone and I47 is removed, so the card is A1 R2 C- O2 (sum 5; stage Exploring, down from Building). It is still publishable because Autonomy, Reach and Openness are at level one or above. Reach 2, Autonomy 1 (manual-review configuration) and Openness 2 stand as the reviewer describes."
+   },
+   {
+    "round": 3,
+    "answer": "round two record",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Correction noted. The round-two response also said that removing I47 would make the card unpublishable, which was wrong for the same reason. The card stays publishable without I47."
    }
   ]
  },
@@ -382,14 +424,6 @@
    "g": "documented",
    "m": "default"
   },
-  "I47": {
-   "e": "https://docs.codacy.com/codacy-ai/codacy-ai/",
-   "n": "The docs say teams can write prose instructions for the reviewer in a review.md file, whose suggested contents include what reviewers should ignore or not enforce, and that from people's written replies to its comments the reviewer picks up what to stop flagging.",
-   "span": "it picks up on what your team cares about and what to stop flagging",
-   "g": "documented",
-   "m": "available",
-   "cfg": "ai-reviewer"
-  },
   "I57": {
    "e": "https://docs.codacy.com/codacy-ai/codacy-ai/",
    "n": "People can contest a review comment by replying in the pull request, and the reviewer learns from those replies and reactions.",
@@ -425,6 +459,11 @@
   {
    "what": "A page sentence that the reviewer follows review.md",
    "why": "Re-read the Codacy AI docs page (fetched 2026-11-10, raw/ans-006.html) and the AI Reviewer product page (raw/ans-008.html): neither says the reviewer obeys or is bound by review.md; the docs say the file helps it understand the code, logic and preferences. The I47 credit no longer rests on that claim.",
+   "source": "https://docs.codacy.com/codacy-ai/codacy-ai/"
+  },
+  {
+   "what": "A limit on the reviewer written as a rule in prose (I47)",
+   "why": "Re-read on 2026-11-10 (raw/ans-009.html). The docs say teams can write custom instructions in a review.md file ('These instructions are specified in a review.md file') that 'help the AI Reviewer understand the structure of the code, the business logic of the project, and your own preferences'; the out-of-scope line is part of an example prompt for drafting that file, and the Learning from your reviews section describes adapting from replies and reactions. No sentence says the reviewer is limited by or must follow the file, so the credit is withdrawn rather than stretched. Whether a team-written instruction file counts as a limit in prose is a question for Dinis.",
    "source": "https://docs.codacy.com/codacy-ai/codacy-ai/"
   }
  ],
@@ -478,32 +517,32 @@
   "https://docs.codacy.com/codacy-ai/codacy-ai/": {
    "sha256": "1ccd57719e29bac8aedd2695a5a8f5caf9b273a69acace6ab8af27fd4383e579",
    "bytes": 216811,
-   "read_at": "2026-11-10T16:45Z"
+   "read_at": "2026-11-10T17:49Z"
   },
   "https://docs.codacy.com/faq/code-analysis/does-codacy-place-limits-on-the-code-analysis/": {
    "sha256": "70910c14872491868e0e06c5af266abb6cd62f826411d7bf3d65bb55eead34a2",
    "bytes": 206422,
-   "read_at": "2026-11-10T16:45Z"
+   "read_at": "2026-11-10T17:49Z"
   },
   "https://docs.codacy.com/getting-started/which-permissions-does-codacy-need-from-my-account/": {
    "sha256": "86c7dbdcaceb3cdd387457663230cffcf1150e246f3067de0da1adde1273140c",
    "bytes": 213206,
-   "read_at": "2026-11-10T16:45Z"
+   "read_at": "2026-11-10T17:49Z"
   },
   "https://docs.codacy.com/repositories-configure/integrations/github-integration/": {
    "sha256": "1d7691aa3224a7ab92b45da0d0226efb0769f244032bb65832d70f43a13dcfb3",
    "bytes": 212630,
-   "read_at": "2026-11-10T16:45Z"
+   "read_at": "2026-11-10T17:49Z"
   },
   "https://resources.codacy.com/resources/case-study-bfi-finance": {
    "sha256": "563b62540a7f7d7b1589f174808eadf01702defe61972c5a59d757842c5625cc",
    "bytes": 102820,
-   "read_at": "2026-11-10T16:45Z"
+   "read_at": "2026-11-10T17:49Z"
   },
   "https://www.codacy.com/llms.txt": {
    "sha256": "52a0c32c01ff8deaef2556e3aba3b54f9e68c1f3f24907a4ca5f58e6a0ac1e5e",
    "bytes": 12244,
-   "read_at": "2026-11-10T16:45Z"
+   "read_at": "2026-11-10T17:49Z"
   }
  }
 }
