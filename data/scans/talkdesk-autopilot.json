@@ -1,0 +1,237 @@
+{
+ "id": "talkdesk-autopilot",
+ "name": "Talkdesk Autopilot",
+ "operator": "Talkdesk (the vendor); each customer is the operator of its own use",
+ "company": "talkdesk",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-10",
+ "tier": "public",
+ "basis": "Talkdesk's own public pages (product, documentation, blog, customer stories, legal and security pages)",
+ "seen_by_operator": null,
+ "what": "Customer-facing AI agent that resolves requests and completes tasks across voice, digital and email channels, handing over to a human agent when needed.",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. Part of the first Portuguese cohort.",
+ "grant": null,
+ "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
+ "vault": {
+  "id": "2y7brc8i",
+  "read_key": "sgit_public_read_3d0b44fafd298169b107547dca711422049fe47f11a1f3d00f99b74f7377f6e7:2y7brc8i",
+  "published": "2026-11-10"
+ },
+ "review": {
+  "status": "draft",
+  "rounds": []
+ },
+ "assessment": {
+  "by": "gamma.studio@web-summit.dinis",
+  "researcher_assessor": "a sub-agent of gamma.studio",
+  "challenger": "a sub-agent of gamma.studio",
+  "lowered": [
+   "S2",
+   "I13",
+   "I14",
+   "S1",
+   "I45",
+   "I63",
+   "I21"
+  ],
+  "fixed": [],
+  "added_by_challenger": [],
+  "files": "in the vault: work/assessment.json, work/challenger.json"
+ },
+ "answers": {
+  "I03": {
+   "e": "https://www.talkdesk.com/cloud-contact-center/self-service-experience/autopilot/",
+   "n": "Autopilot is configured with no-code tools by operations staff and acts on connected systems such as order management.",
+   "span": "Powerful no-code tools put you in control.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I08": {
+   "e": "https://www.talkdesk.com/cloud-contact-center/self-service-experience/autopilot/",
+   "n": "The product page describes Autopilot changing an order's delivery address itself through an integrated order system.",
+   "span": "it's able to autonomously make the change.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I10": {
+   "e": "https://www.talkdesk.com/blog/bringing-autopilots-agentic-ai-power-email-support/",
+   "n": "Autopilot executes tasks such as refunds and appointment changes through integrations with CRM and ERP systems.",
+   "span": "By integrating with your CRM and ERP, Autopilot executes tasks",
+   "g": "documented",
+   "m": "default"
+  },
+  "I11": {
+   "e": "https://www.talkdesk.com/customer-experience-automation/multi-agent-orchestration/",
+   "n": "Talkdesk states that its AI agents use MCP to call external tools and services of third parties.",
+   "span": "securely discover, invoke, and exchange information with external tools and services",
+   "g": "documented",
+   "m": "default"
+  },
+  "I12": {
+   "e": "https://www.talkdesk.com/blog/bringing-autopilots-agentic-ai-power-email-support/",
+   "n": "An orchestrator agent identifies intent and passes work to specialised sub-agents, each with its own skills.",
+   "span": "the orchestrator identifies the customer’s true intent and directs the work to specialized sub-agents",
+   "g": "documented",
+   "m": "default"
+  },
+  "I17": {
+   "e": "https://www.talkdesk.com/cloud-contact-center/self-service-experience/autopilot/",
+   "n": "Autopilot handles routine queries and passes complex cases that need a person to a human agent.",
+   "span": "when complex cases are detected that need human empathy and expertise",
+   "g": "documented",
+   "m": "default"
+  },
+  "I19": {
+   "e": "https://www.talkdesk.com/cloud-contact-center/self-service-experience/autopilot/",
+   "n": "With CXA Operations Center, people watch Autopilot's live interactions and set guardrails while it works on its own.",
+   "span": "Monitor live interactions, inspect execution behavior, and enforce guardrails",
+   "g": "documented",
+   "m": "available",
+   "cfg": "ops-center"
+  },
+  "I20": {
+   "e": "https://www.talkdesk.com/cloud-contact-center/self-service-experience/autopilot/",
+   "n": "The product page states what Autopilot is for: resolving customer requests and completing tasks across channels.",
+   "span": "agentic AI that resolves customer requests and completes tasks across voice and digital channels",
+   "g": "documented",
+   "m": "default"
+  },
+  "I41": {
+   "e": "https://www.talkdesk.com/customer-experience-automation/cxa-operations-center/",
+   "n": "CXA Operations Center records session-level execution traces of AI agents for inspection.",
+   "span": "analyze session-level execution traces, and diagnose failures in production",
+   "g": "documented",
+   "m": "available",
+   "cfg": "ops-center"
+  },
+  "I47": {
+   "e": "https://www.talkdesk.com/news-and-press/press-releases/ai-agents-for-voice/",
+   "n": "Limits are given to the agent as plain-language instructions, such as when to escalate to a live agent.",
+   "span": "Escalate to a live agent if the customer mentions a medical emergency",
+   "g": "documented",
+   "m": "default"
+  },
+  "I57": {
+   "e": "https://www.talkdesk.com/contact-center-platform/security-compliance/certifications-standards/",
+   "n": "Talkdesk publishes a vulnerability disclosure channel for issues affecting its customers.",
+   "span": "If you find a vulnerability that affects Talkdesk customers, send us a report",
+   "g": "documented",
+   "m": "default"
+  },
+  "I58": {
+   "e": "https://www.talkdesk.com/cloud-contact-center/self-service-experience/autopilot/",
+   "n": "The data Autopilot draws on is named: Talkdesk Data Cloud interaction history and Knowledge Management content.",
+   "span": "Leverage the Talkdesk Data Cloud so AI Agents understand history, intent, and sentiment",
+   "g": "documented",
+   "m": "default"
+  },
+  "I65": {
+   "e": "https://www.talkdesk.com/about/",
+   "n": "Talkdesk states a strategy of a hybrid workforce of AI agents and human agents on one platform.",
+   "span": "a hybrid workforce enabled by our platform",
+   "g": "documented",
+   "m": "default"
+  },
+  "I67": {
+   "e": "https://www.talkdesk.com/cloud-contact-center/self-service-experience/autopilot/",
+   "n": "Autopilot's dashboard shows usage, intents and escalation rate to live agents.",
+   "span": "Visualize usage, channel distribution, customer intents, and escalation rate to live agents.",
+   "g": "documented",
+   "m": "default"
+  },
+  "S3": {
+   "e": "https://www.talkdesk.com/llms.txt",
+   "n": "talkdesk.com publishes an llms.txt (fetched), and docs.talkdesk.com publishes one for its API documentation.",
+   "span": "# Purpose: AI usage guidance for Large Language Models (LLMs)",
+   "g": "observed",
+   "m": "default",
+   "method": "probe"
+  }
+ },
+ "not_credited": [],
+ "announced": [
+  {
+   "what": "Agent Builder: zero-prompt creation, testing and validation of AI agents (press release, June 2026)",
+   "source": "https://www.talkdesk.com/news-and-press/press-releases/agent-builder/"
+  },
+  {
+   "what": "CXA Operations Center: observability, evaluation and simulation for AI agents (press release, March 2026)",
+   "source": "https://www.talkdesk.com/news-and-press/press-releases/cxa-operations-center/"
+  },
+  {
+   "what": "Autopilot extended to email with an orchestrator agent and sub-agents (blog, April 2026)",
+   "source": "https://www.talkdesk.com/blog/bringing-autopilots-agentic-ai-power-email-support/"
+  },
+  {
+   "what": "Overwatch guardrail layer described in a governance blog post (October 2026); not tied to a dated product release",
+   "source": "https://www.talkdesk.com/blog/beyond-determinism-ai-agents-governance/"
+  }
+ ],
+ "configurations": [
+  {
+   "id": "shipped",
+   "name": "As shipped",
+   "note": "Talkdesk Autopilot (AI Agents for voice, digital and email) with its documented defaults.",
+   "on": []
+  },
+  {
+   "id": "ops-center",
+   "name": "Ops center",
+   "note": "Talkdesk CXA Operations Center, a separate CXA product for observability, evaluation and guardrails of AI agents in production.",
+   "on": [
+    "ops-center"
+   ]
+  },
+  {
+   "id": "uipath-mcp",
+   "name": "Uipath mcp",
+   "note": "The Talkdesk and UiPath integration over MCP; needs the customer to run UiPath as well.",
+   "on": [
+    "uipath-mcp"
+   ]
+  }
+ ],
+ "captures": {
+  "https://www.talkdesk.com/about/": {
+   "sha256": "2b014cff927baa3bbd835b2e8e940bcbbe77850ac021377ccaf3f49eb94a65ba",
+   "bytes": 398743,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://www.talkdesk.com/blog/bringing-autopilots-agentic-ai-power-email-support/": {
+   "sha256": "7c7af60151aea1a644ffaa74dc612697743daf52b8e3bc97e0fe86448dff37ff",
+   "bytes": 426267,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://www.talkdesk.com/cloud-contact-center/self-service-experience/autopilot/": {
+   "sha256": "2ed154096cde1a08fe868c0303764d101ef88aa8e828fb1c0f604edc3f136b98",
+   "bytes": 548836,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://www.talkdesk.com/contact-center-platform/security-compliance/certifications-standards/": {
+   "sha256": "3a405109bbb12015b883eb23006111fc11a4cd9236894ba670f54da1edd0efe9",
+   "bytes": 402860,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://www.talkdesk.com/customer-experience-automation/cxa-operations-center/": {
+   "sha256": "f8d4ebef009febf68f89d44d9d7e17c8f82f7b0e9697af4afbeb9575c662fa04",
+   "bytes": 540859,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://www.talkdesk.com/customer-experience-automation/multi-agent-orchestration/": {
+   "sha256": "ab02084289d49a43ca3604b202cbc1b6141919499fc74352ab77d04fb444c71c",
+   "bytes": 503658,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://www.talkdesk.com/llms.txt": {
+   "sha256": "e766ceca888f4db7430977b58ec984f42a8c8633901f2c9ebdf33a4a15d136a3",
+   "bytes": 3357,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://www.talkdesk.com/news-and-press/press-releases/ai-agents-for-voice/": {
+   "sha256": "7da75a28ec69dba0fe9df71906ec0e78ddf37f296c94d1e12fdc1f3274c28cb0",
+   "bytes": 281025,
+   "read_at": "2026-11-10T10:43Z"
+  }
+ }
+}

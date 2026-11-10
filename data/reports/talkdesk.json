@@ -1,0 +1,244 @@
+{
+ "id": "talkdesk",
+ "name": "Talkdesk",
+ "url": "https://www.talkdesk.com/",
+ "country": "Portugal",
+ "sector": "customer service",
+ "read": "2026-11-10",
+ "basis": "Talkdesk's own public pages and, for company basics only, the news sources named beside each fact",
+ "seen_by_subject": false,
+ "what": "Talkdesk sells a cloud contact-centre platform and a customer experience automation layer in which AI agents handle and route customer conversations alongside human agents.",
+ "facts": [
+  {
+   "fact": "Founded in 2011 by two Tecnico alumni",
+   "url": "https://tecnico.ulisboa.pt/en/news/campus-community/tecnico-startup-is-the-new-portuguese-unicorn/",
+   "span": "was founded in 2011 by two Técnico alumni: Tiago Paiva and Cristina Fonseca."
+  },
+  {
+   "fact": "Described by Tecnico as the third Portuguese startup valued over 1 billion dollars",
+   "url": "https://tecnico.ulisboa.pt/en/news/campus-community/tecnico-startup-is-the-new-portuguese-unicorn/",
+   "span": "Talkdesk is the third Portuguese startup being valued at over $1 billion."
+  },
+  {
+   "fact": "Portuguese entity named in the privacy notice",
+   "url": "https://www.talkdesk.com/terms-of-service/privacy-notice/",
+   "span": "Talkdesk Inc. Portugal Unipessoal Lda,"
+  },
+  {
+   "fact": "US-headquartered multinational",
+   "url": "https://www.talkdesk.com/terms-of-service/privacy-notice/",
+   "span": "As a US-headquartered multinational company"
+  },
+  {
+   "fact": "Company figures stated on its about page",
+   "url": "https://www.talkdesk.com/about/",
+   "span": "Monthly Customer Interactions"
+  },
+  {
+   "fact": "ISO/IEC 42001 certification announced January 2026",
+   "url": "https://www.talkdesk.com/news-and-press/press-releases/iso-42001-certification/",
+   "span": "Talkdesk earns ISO/IEC 42001 certification, the global standard for responsible AI"
+  }
+ ],
+ "people": [
+  {
+   "name": "Tiago Paiva",
+   "role": "Chief Executive Officer and Founder",
+   "url": "https://www.talkdesk.com/about/leadership/"
+  },
+  {
+   "name": "Cristina Fonseca",
+   "role": "Co-founder (per Tecnico, 2018)",
+   "url": "https://tecnico.ulisboa.pt/en/news/campus-community/tecnico-startup-is-the-new-portuguese-unicorn/"
+  },
+  {
+   "name": "Munil Shah",
+   "role": "Chief Product, Technology, and Customer Officer",
+   "url": "https://www.talkdesk.com/about/leadership/"
+  },
+  {
+   "name": "Albert Caravelli",
+   "role": "Chief Revenue Officer",
+   "url": "https://www.talkdesk.com/about/leadership/"
+  },
+  {
+   "name": "Neville Letzerich",
+   "role": "Chief Marketing Officer",
+   "url": "https://www.talkdesk.com/about/leadership/"
+  },
+  {
+   "name": "David Middler",
+   "role": "Chief Legal Officer",
+   "url": "https://www.talkdesk.com/about/leadership/"
+  },
+  {
+   "name": "Pedro Andrade",
+   "role": "Vice-president of AI",
+   "url": "https://www.talkdesk.com/blog/beyond-determinism-ai-agents-governance/"
+  },
+  {
+   "name": "Yunjing Ma",
+   "role": "Vice president of AI",
+   "url": "https://www.talkdesk.com/blog/building-secure-ai-agent/"
+  }
+ ],
+ "solutions": [
+  {
+   "id": "autopilot",
+   "name": "Talkdesk Autopilot (AI Agents for voice, digital and email)",
+   "short": "Talkdesk Autopilot",
+   "what": "Customer-facing AI agent that resolves requests and completes tasks across voice, digital and email channels, handing over to a human agent when needed.",
+   "status": "generally available (launched March 2024; voice agents March 2025; email April 2026)",
+   "url": "https://www.talkdesk.com/cloud-contact-center/self-service-experience/autopilot/",
+   "scan": "talkdesk-autopilot"
+  },
+  {
+   "id": "multi-agent-orchestration",
+   "name": "Talkdesk CXA multi-agent orchestration",
+   "short": "Talkdesk CXA multi-agent orche",
+   "what": "Orchestration layer in which an orchestrator agent passes work to specialised sub-agents; MCP is used to reach third-party tools and platforms.",
+   "status": "available",
+   "url": "https://www.talkdesk.com/customer-experience-automation/multi-agent-orchestration/"
+  },
+  {
+   "id": "cxa-operations-center",
+   "name": "Talkdesk CXA Operations Center",
+   "short": "Talkdesk CXA Operations Center",
+   "what": "Observability, evaluation, simulation and guardrail configuration for AI agents in production.",
+   "status": "announced March 2026; product page live",
+   "url": "https://www.talkdesk.com/customer-experience-automation/cxa-operations-center/"
+  },
+  {
+   "id": "agent-builder",
+   "name": "Talkdesk Agent Builder",
+   "short": "Talkdesk Agent Builder",
+   "what": "Natural-language tool to create, test and validate AI agents before a human operator approves deployment.",
+   "status": "announced June 2026",
+   "url": "https://www.talkdesk.com/news-and-press/press-releases/agent-builder/"
+  },
+  {
+   "id": "navigator",
+   "name": "Talkdesk Navigator",
+   "short": "Talkdesk Navigator",
+   "what": "AI-powered routing of customers to AI and human agents.",
+   "status": "available",
+   "url": "https://www.talkdesk.com/cloud-contact-center/omnichannel-engagement/navigator/"
+  },
+  {
+   "id": "copilot",
+   "name": "Talkdesk Copilot",
+   "short": "Talkdesk Copilot",
+   "what": "Assistant for human contact-centre agents (summaries, suggested answers).",
+   "status": "available",
+   "url": "https://www.talkdesk.com/cloud-contact-center/omnichannel-engagement/copilot/"
+  },
+  {
+   "id": "agentic-outbound",
+   "name": "Agentic Outbound",
+   "short": "Agentic Outbound",
+   "what": "Proactive outbound engagement with AI agents.",
+   "status": "available",
+   "url": "https://www.talkdesk.com/cloud-contact-center/omnichannel-engagement/proactive-outbound-engagement/"
+  }
+ ],
+ "stories": [
+  {
+   "customer": "Novobanco",
+   "what": "Portuguese bank; a virtual agent built with Talkdesk Autopilot answers routine requests such as account balances; AI agents handle 3% of calls.",
+   "url": "https://www.talkdesk.com/customers/novobanco/",
+   "span": "AI agents handle 3% of calls"
+  },
+  {
+   "customer": "Quadient",
+   "what": "Reported a 60% containment rate after launching Talkdesk self-service (quoted on the Autopilot page).",
+   "url": "https://www.talkdesk.com/cloud-contact-center/self-service-experience/autopilot/",
+   "span": "we immediately saw a 60% containment rate."
+  },
+  {
+   "customer": "Quadient",
+   "what": "Customer story: customers helped by a bot through integrations with Quadient's web application.",
+   "url": "https://www.talkdesk.com/customers/quadient/",
+   "span": "we could help customers with a bot instead of a human."
+  },
+  {
+   "customer": "UiPath (integration partner)",
+   "what": "UiPath announced an MCP-based integration in which a Talkdesk AI agent calls UiPath document processing during a call.",
+   "url": "https://www.uipath.com/newsroom/uipath-integrates-with-talkdesk-to-transform-the-customer-experience",
+   "span": "A Talkdesk AI agent handling a customer inquiry can instantly tap into UiPath"
+  }
+ ],
+ "analysis": [],
+ "article": null,
+ "vault": {
+  "id": "2y7brc8i",
+  "read_key": "sgit_public_read_3d0b44fafd298169b107547dca711422049fe47f11a1f3d00f99b74f7377f6e7:2y7brc8i",
+  "published": "2026-11-10"
+ },
+ "team": {
+  "researcher-assessor": "a sub-agent of gamma.studio@web-summit.dinis",
+  "challenger": "a sub-agent",
+  "scorer": "build/spectrum.mjs",
+  "analyst, designer, writer": "gamma.studio@web-summit.dinis",
+  "review": "gamma.review@web-summit.dinis (pending)",
+  "sign-off": "gamma.approve@web-summit.dinis (pending)"
+ },
+ "signoff": null,
+ "corrections": [],
+ "captures": {
+  "https://tecnico.ulisboa.pt/en/news/campus-community/tecnico-startup-is-the-new-portuguese-unicorn/": {
+   "sha256": "347dd6ec7f29497ab5724bd1e6afb270e857378bab569b20a043e71019cc31ba",
+   "bytes": 95069,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://www.talkdesk.com/about/": {
+   "sha256": "2b014cff927baa3bbd835b2e8e940bcbbe77850ac021377ccaf3f49eb94a65ba",
+   "bytes": 398743,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://www.talkdesk.com/about/leadership/": {
+   "sha256": "cc04833ceba26731807f7ab6ead2194c7025806162e055a48b4eb70b772fe7d5",
+   "bytes": 421117,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://www.talkdesk.com/blog/beyond-determinism-ai-agents-governance/": {
+   "sha256": "ce3c1b8f3096220823080dc0beba0c309c8a7f7b88f60670ed5fe8dcda9c6f05",
+   "bytes": 436087,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://www.talkdesk.com/blog/building-secure-ai-agent/": {
+   "sha256": "1e5bde649d4cbf6d55dd6cb6f707a67131f4a2e42b9c23233140cfbbc79603b2",
+   "bytes": 412345,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://www.talkdesk.com/cloud-contact-center/self-service-experience/autopilot/": {
+   "sha256": "2ed154096cde1a08fe868c0303764d101ef88aa8e828fb1c0f604edc3f136b98",
+   "bytes": 548836,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://www.talkdesk.com/customers/novobanco/": {
+   "sha256": "67eb98d184a1cba3f86dcbc97a2b5ef6dd46ba188cede2d570a1e6bf9b86e779",
+   "bytes": 345927,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://www.talkdesk.com/customers/quadient/": {
+   "sha256": "d86c6c35ee9c14a2a3ce969809febc2f61daf0157c10f992450ff0e4c5741ea5",
+   "bytes": 391596,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://www.talkdesk.com/news-and-press/press-releases/iso-42001-certification/": {
+   "sha256": "6f3abec8eb40607433e31bda76654e1c55d8de67a6cbf8fbef3b4ddb6f30369d",
+   "bytes": 274143,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://www.talkdesk.com/terms-of-service/privacy-notice/": {
+   "sha256": "8c2fb73153986ba8709be3a0f80bceda8206f5c51f34b93342d6a5001c6814eb",
+   "bytes": 381745,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://www.uipath.com/newsroom/uipath-integrates-with-talkdesk-to-transform-the-customer-experience": {
+   "sha256": "b394e493f5ce191bc48024a5475cb5efb6e8c49b5b5fb45c34a08bc40ef851a9",
+   "bytes": 393370,
+   "read_at": "2026-11-10T10:43Z"
+  }
+ }
+}
