@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.20",
+    "date": "2026-11-10",
+    "what": "replit-agent: round one answered (S1 to Zillow with Plaid second, I18 re-sourced, I61 note, apostrophes)",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "e2cf406a6"
+  },
+  {
     "version": "v0.0.19",
     "date": "2026-11-10",
     "what": "round one of review on replit-agent",
