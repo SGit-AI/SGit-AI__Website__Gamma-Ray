@@ -1649,7 +1649,7 @@
   "question": "Q02",
   "tier": "public",
   "needs": "statement",
-  "scope": "A public source has to name a customer, or give usage figures, for the capability that acts. A demonstration or a roadmap does not count.",
+  "scope": "A public source has to name a customer, or give usage figures, for the capability that acts: sessions, tasks or pull requests, not install or seat counts. A demonstration or a roadmap does not count. Since Spectrum 0.2 this fact earns the In production badge; it is no longer part of an Autonomy level.",
   "text": "It is in production: a public source names a customer or gives usage figures for what it does on its own",
   "spectrum": true,
   "links": [
@@ -1743,6 +1743,49 @@
     "provision": "aiact.art-13",
     "relation": "part",
     "basis": "The article concerns information provided to those who deploy a system; documentation written for machines is one form of providing it.",
+    "asserted_by": "gamma-ray@web-summit.dinis",
+    "asserted_at": "2026-11-10",
+    "strength": "weak: one reader, unchecked"
+   }
+  ]
+ },
+ {
+  "id": "S4",
+  "question": "Q04",
+  "tier": "public",
+  "needs": "statement",
+  "scope": "The product publishes an interface that other agents can call: a published MCP server, an A2A agent card, or an API documented for agent use. Checked by a read-only fetch of the interface or its description, or on a vendor documentation page. An interface the product only consumes (it calls other MCP servers) does not count.",
+  "text": "It exposes an agent interface: a published MCP server, an agent card, or an API documented for agents to call",
+  "spectrum": true,
+  "links": [
+   {
+    "provision": "mcp.01",
+    "relation": "part",
+    "basis": "The requirement applies to MCP servers; a product that publishes one is a subject of it. Publishing the server is not evidence that the metadata is implemented.",
+    "asserted_by": "gamma-ray@web-summit.dinis",
+    "asserted_at": "2026-11-10",
+    "strength": "weak: one reader, unchecked"
+   },
+   {
+    "provision": "owasp.AT6",
+    "relation": "part",
+    "basis": "The type is an agent that connects to external tools and services across trust boundaries; an interface published for other agents is the other end of such a connection.",
+    "asserted_by": "gamma-ray@web-summit.dinis",
+    "asserted_at": "2026-11-10",
+    "strength": "weak: one reader, unchecked"
+   },
+   {
+    "provision": "owasp.k08",
+    "relation": "part",
+    "basis": "The action is a central registry of agentic systems; a published, addressable agent interface is one thing such a registry would list. It is not a registry.",
+    "asserted_by": "gamma-ray@web-summit.dinis",
+    "asserted_at": "2026-11-10",
+    "strength": "weak: one reader, unchecked"
+   },
+   {
+    "provision": "sf.a18",
+    "relation": "part",
+    "basis": "The step is a communication layer between agents; a callable agent interface is one half of one.",
     "asserted_by": "gamma-ray@web-summit.dinis",
     "asserted_at": "2026-11-10",
     "strength": "weak: one reader, unchecked"

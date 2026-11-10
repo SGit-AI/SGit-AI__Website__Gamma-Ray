@@ -96,6 +96,7 @@ const gen = {
     'lens-evidence': () => `| Grade | How it is known |\n|---|---|\n` + m.lens.evidence.tiers.map(t => `| ${t.id} | ${t.meaning} |`).join('\n'),
     'lens-indicators': () => m.indicators.filter(i => i.lens).map(i => `- \`${i.id}\` ${i.text}: ${i.lens}.`).join('\n')
 }
+m.spectrumBefore = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/history/spectrum-0.1.json'), 'utf8'))
 const sp = loadSpectrum(ROOT), SPX = buildSpectrum(m, sp)
 Object.assign(gen, SPX.gens)
 Object.assign(vars, { spectrumVersion: sp.version, cards: SPX.cards.filter(x => x.c.publishable).length })

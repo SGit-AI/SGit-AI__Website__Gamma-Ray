@@ -58,6 +58,7 @@ export function card(scan, sp, m) {
     const lv = Object.fromEntries(dims.map(d => [d.id, d.level])), sum = dims.reduce((n, d) => n + d.level, 0)
     const stage = sp.stages.find(s => sum >= s.min && sum <= s.max) || null
     const badges = []
+    if (has('S1')) badges.push('in-production')
     if (lv.A >= 1 && lv.C >= lv.A - 1 && lv.O >= lv.A - 1) badges.push('balanced')
     if (lv.R >= 3) badges.push('open-protocol')
     if (lv.O >= 3 && has('I50')) badges.push('shows-its-work')
@@ -71,5 +72,5 @@ export function card(scan, sp, m) {
     // the standout: the highest level reached, and the evidence behind it
     const top = [...dims].sort((a, b) => b.level - a.level)[0]
     const sources = new Set(Object.values(A).map(a => a.e))
-    return { signature: dims.map(d => d.id + d.level).join(' · '), dims, sum, stage: stage ? stage.name : null, publishable: dims.some(d => d.level >= 1), badges, constellation, lit: lit.size, instruments: constellation.filter(c => c.lit).length, unlock, standout: top && top.level ? top : null, sources: sources.size, answers: Object.keys(A).length }
+    return { signature: dims.map(d => d.id + (d.level || '–')).join(' · '), dims, sum, stage: stage ? stage.name : null, publishable: dims.some(d => d.level >= 1), badges, constellation, lit: lit.size, instruments: constellation.filter(c => c.lit).length, unlock, standout: top && top.level ? top : null, sources: sources.size, answers: Object.keys(A).length }
 }

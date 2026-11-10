@@ -37,6 +37,7 @@ Numbers on pages come from the data through `{{n:...}}` and `{{gen:...}}`; never
 
 `briefs/spectrum-0.1.md` is the proposal; Dinis's brief of 10 November 2026 says what to do with it (in `BRIEF.md`). The public layer is a positive card: four dimensions (Autonomy, Reach, Control, Openness) by four levels, read only from public evidence. RiskMandate is not in the public layer. The governance rating (`/scans/`, `/rating/`) is the layer above.
 
+- `briefs/gamma-ray-brief-2.md` (Dinis, 10 November 2026) corrects four rules (Spectrum 0.2), asks for provision anchors with source links, trust on every evidence item (FACT-Ray, `briefs/fact-ray-brief.md`) and doors for companies and customers; its order and deadline are in its part 5.
 - `data/spectrum.json`: the sixteen level rules, the stages and the badges. `build/spectrum.mjs` is the scorer: deterministic, and the only thing that assigns a level. An agent maps evidence to indicators; it never assigns a level.
 - `tools/capture.mjs <scan id> <vault dir>`: fetches every source of a scan once, saves it in the vault and writes its SHA-256 into the scan. Run it before a card is published.
 - A card says what is there. Absence appears only as a next unlock. No card below level one in every dimension. No adjectives about a company. A quoted span is under fifteen words.

@@ -1,7 +1,7 @@
 {
  "name": "GAMMA-Ray Spectrum",
- "version": "0.1 beta",
- "status": "The rules of the brief of 10 November 2026 (briefs/spectrum-0.1.md), implemented as written. A working name; the name is the operator’s to decide.",
+ "version": "0.2 beta",
+ "status": "The rules of the brief of 10 November 2026 (briefs/spectrum-0.1.md), with the four corrections of the second brief of the same day (briefs/gamma-ray-brief-2.md, part 1). A working name; the name is the operator’s to decide.",
  "reading": "A public card counts every documented answer: as shipped, available, or in a deployment. An available feature is marked as available.",
  "dimensions": [
   {
@@ -47,7 +47,7 @@
     {
      "level": 3,
      "name": "Acts",
-     "means": "Completes routine tasks end to end in production; a person handles exceptions",
+     "means": "Completes routine tasks end to end; a person handles exceptions",
      "rule": {
       "all": [
        "I08",
@@ -57,8 +57,7 @@
          "I18",
          "I19"
         ]
-       },
-       "S1"
+       }
       ]
      }
     },
@@ -127,7 +126,8 @@
        {
         "any": [
          "I14",
-         "I24"
+         "I24",
+         "S4"
         ]
        },
        "I25"
@@ -222,11 +222,17 @@
     {
      "level": 1,
      "name": "Disclosed",
-     "means": "Says it is AI and what it is for",
+     "means": "Says what it is for, and that it is AI, what its limits are or what data it uses",
      "rule": {
       "all": [
-       "I56",
-       "I20"
+       "I20",
+       {
+        "any": [
+         "I56",
+         "I22",
+         "I58"
+        ]
+       }
       ]
      }
     },
@@ -301,6 +307,11 @@
  ],
  "badges": [
   {
+   "id": "in-production",
+   "name": "In production",
+   "rule": "A public source names a customer, or gives usage figures (sessions, tasks, pull requests; not installs or seats), for the capability that acts"
+  },
+  {
    "id": "balanced",
    "name": "Balanced",
    "rule": "Control and Openness are each at least Autonomy minus one"
@@ -337,5 +348,6 @@
   "Q10",
   "Q16",
   "Q21"
- ]
+ ],
+ "reading_ladders": "Autonomy and Reach read as the highest level whose rule is met. Control and Openness are cumulative: a level counts only when every level below it is met."
 }

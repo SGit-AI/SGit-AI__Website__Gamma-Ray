@@ -1,0 +1,101 @@
+{
+ "spectrum": "0.2 beta",
+ "taken": "2026-11-10T10:40Z",
+ "note": "Every scan scored again with the four corrections of briefs/gamma-ray-brief-2.md part 1. The evidence is unchanged from data/history/spectrum-0.1.json.",
+ "cards": {
+  "aisle-platform": {
+   "name": "AISLE platform",
+   "signature": "A4 · R2 · C1 · O2",
+   "stage": "Building",
+   "sum": 9,
+   "badges": [
+    "in-production"
+   ],
+   "status": "draft"
+  },
+  "claude-code-local": {
+   "name": "Claude Code, on your own machine",
+   "signature": "A4 · R2 · C4 · O2",
+   "stage": "Scaling",
+   "sum": 12,
+   "badges": [],
+   "status": "published-before-review"
+  },
+  "claude-code-web": {
+   "name": "Claude Code on the web",
+   "signature": "A4 · R2 · C– · O2",
+   "stage": "Building",
+   "sum": 8,
+   "badges": [],
+   "status": "published-before-review"
+  },
+  "getvocal-agents": {
+   "name": "GetVocal AI agents",
+   "signature": "A4 · R2 · C1 · O1",
+   "stage": "Building",
+   "sum": 8,
+   "badges": [
+    "in-production"
+   ],
+   "status": "draft"
+  },
+  "github-copilot-cloud-agent": {
+   "name": "GitHub Copilot cloud agent",
+   "signature": "A4 · R2 · C2 · O1",
+   "stage": "Building",
+   "sum": 9,
+   "badges": [],
+   "status": "published-before-review"
+  },
+  "junie": {
+   "name": "Junie",
+   "signature": "A4 · R2 · C2 · O3",
+   "stage": "Scaling",
+   "sum": 11,
+   "badges": [
+    "shows-its-work"
+   ],
+   "status": "draft"
+  },
+  "manus-agent": {
+   "name": "Manus",
+   "signature": "A3 · R2 · C1 · O2",
+   "stage": "Building",
+   "sum": 8,
+   "badges": [
+    "in-production"
+   ],
+   "status": "round-2"
+  },
+  "promptugal-newsroom-team": {
+   "name": "The PrompTugal.news agent team",
+   "signature": "A4 · R2 · C3 · O1",
+   "stage": "Scaling",
+   "sum": 10,
+   "badges": [
+    "in-production"
+   ],
+   "status": "ours"
+  },
+  "replit-agent": {
+   "name": "Replit Agent",
+   "signature": "A4 · R2 · C2 · O2",
+   "stage": "Scaling",
+   "sum": 10,
+   "badges": [
+    "in-production"
+   ],
+   "status": "approved"
+  },
+  "riskmandate-publisher": {
+   "name": "RiskMandate Publisher",
+   "signature": "A4 · R2 · C2 · O1",
+   "stage": "Building",
+   "sum": 9,
+   "badges": [
+    "in-production"
+   ],
+   "status": "ours"
+  }
+ }
+}

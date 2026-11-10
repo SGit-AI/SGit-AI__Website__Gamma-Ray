@@ -1,0 +1,91 @@
+{
+ "spectrum": "0.1 beta",
+ "taken": "2026-11-10T10:10Z",
+ "cards": {
+  "riskmandate-publisher": {
+   "name": "RiskMandate Publisher",
+   "signature": "A4 · R2 · C2 · O1",
+   "stage": "Building",
+   "sum": 9,
+   "badges": [],
+   "status": "ours"
+  },
+  "promptugal-newsroom-team": {
+   "name": "The PrompTugal.news agent team",
+   "signature": "A4 · R2 · C3 · O1",
+   "stage": "Scaling",
+   "sum": 10,
+   "badges": [],
+   "status": "ours"
+  },
+  "claude-code-web": {
+   "name": "Claude Code on the web",
+   "signature": "A0 · R2 · C0 · O2",
+   "stage": "Exploring",
+   "sum": 4,
+   "badges": [],
+   "status": "published-before-review"
+  },
+  "claude-code-local": {
+   "name": "Claude Code, on your own machine",
+   "signature": "A2 · R2 · C4 · O2",
+   "stage": "Scaling",
+   "sum": 10,
+   "badges": [
+    "balanced"
+   ],
+   "status": "published-before-review"
+  },
+  "github-copilot-cloud-agent": {
+   "name": "GitHub Copilot cloud agent",
+   "signature": "A0 · R2 · C2 · O1",
+   "stage": "Exploring",
+   "sum": 5,
+   "badges": [],
+   "status": "published-before-review"
+  },
+  "replit-agent": {
+   "name": "Replit Agent",
+   "signature": "A4 · R2 · C2 · O0",
+   "stage": "Building",
+   "sum": 8,
+   "badges": [],
+   "status": "approved"
+  },
+  "aisle-platform": {
+   "name": "AISLE platform",
+   "signature": "A4 · R2 · C1 · O0",
+   "stage": "Building",
+   "sum": 7,
+   "badges": [],
+   "status": "draft"
+  },
+  "getvocal-agents": {
+   "name": "GetVocal AI agents",
+   "signature": "A4 · R2 · C1 · O1",
+   "stage": "Building",
+   "sum": 8,
+   "badges": [],
+   "status": "draft"
+  },
+  "junie": {
+   "name": "Junie",
+   "signature": "A2 · R2 · C2 · O3",
+   "stage": "Building",
+   "sum": 9,
+   "badges": [
+    "balanced",
+    "shows-its-work"
+   ],
+   "status": "draft"
+  },
+  "manus-agent": {
+   "name": "Manus",
+   "signature": "A3 · R2 · C1 · O0",
+   "stage": "Building",
+   "sum": 6,
+   "badges": [],
+   "status": "round-2"
+  }
+ }
+}

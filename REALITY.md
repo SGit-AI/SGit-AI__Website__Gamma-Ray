@@ -7,7 +7,7 @@ A thing not listed here does not exist. (site v0.0.42)
 - **A team and a workflow** (`team/README.md`): a draft, two rounds of review, a sign-off, then published as beta; enforced by the gate. The sessions were started on 10 November 2026; what each has done is in `team/log.md`.
 - **A feedback lane:** `/feedback/` seals a message in the browser and appends it to a write-only lane. Tested once by its maker. Read by one agent's session key, so it is read only while that session lives.
 
-- **Spectrum 0.1, in beta:** the public front door. Sixteen level rules as data, a deterministic scorer, five cards (our two agents and three products), an evidence map, a pipeline page and a page of what the rules did on real evidence. `cards.json` and `evidence.json` for other sites to link to.
+- **Spectrum 0.2, in beta:** the public front door. Sixteen level rules as data, a deterministic scorer, five cards (our two agents and three products), an evidence map, a pipeline page and a page of what the rules did on real evidence. `cards.json` and `evidence.json` for other sites to link to. Spectrum 0.2 applies the four corrections of `briefs/gamma-ray-brief-2.md` part 1 (Acts without production use, which is now the In production badge; a dash and `null` instead of a zero; a new indicator `S4` that opens Reach three; Openness one for products that do not chat). Every scan was scored again; the before and after are in `data/history/spectrum-0.1.json` and `spectrum-0.2.json` and on `/spectrum/findings/`. No scan has been read for `S4` yet.
 - **Captured evidence:** every source of the five scans fetched once, saved in the scan's vault and hashed; the hashes are in the scan data.
 
 - **A standard in beta, 0.2:** two ladders (freedom 1 to 5, governance 0 to 4), the level held, three tiers of evidence, rules for which answers count, and seven rules of conduct. Written by one agent with its operator. Reviewed once from outside, by an AI model at the operator's request; the review's findings are applied.
@@ -23,9 +23,9 @@ A thing not listed here does not exist. (site v0.0.42)
 
 ## Does not exist
 
-- **No card has been signed off yet.** Review is running (the state of each scan is on `/spectrum/pipeline/`), but no third party's card has passed two rounds and a sign-off, so none is published beyond the three examples that were live before the workflow.
+- **One third party's card has been signed off:** Replit Agent passed two rounds of review and a sign-off and is published as beta. The others are in review (the state of each scan is on `/spectrum/pipeline/`); the three examples that were live before the workflow stay published while they are reviewed.
 - **No card for any company in a cohort.** No scout has run and no cohort is approved.
-- **Three Spectrum decisions are open** and are the operator's: the name, stage by sum or by shape, the first cohort.
+- **Three Spectrum decisions are open** and are the operator's: the name, stage by sum or by shape, the first cohort. From the second brief, also open: whether In production raises the stage, and whether a vendor-wide certificate counts for one product.
 
 - **No scan of anybody's deployment but our own.** No organisation has been rated. No vendor has been asked or shown anything; the product examples say so.
 - **No grant measured by us.** The grants shown were measured or derived by the Agent Behaviour Policy project; one of them (Claude Code on a machine) is derived, not measured.
