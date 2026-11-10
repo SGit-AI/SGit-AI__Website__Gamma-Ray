@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.25",
+    "date": "2026-11-10",
+    "what": "the team's append-only files merge by union, so hourly pushes stop conflicting",
+    "by": "gamma-ray@web-summit.dinis",
+    "from": "33c9e28f6"
+  },
+  {
     "version": "v0.0.24",
     "date": "2026-11-10",
     "what": "log the check of the live card walk",
