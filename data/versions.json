@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.124",
+    "date": "2026-11-10",
+    "what": "re-checks of claude-code-local (pass) and github-copilot-cloud-agent (changes)",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "12cd63e40"
+  },
+  {
     "version": "v0.0.123",
     "date": "2026-11-10",
     "what": "re-checks of bythelaw-legal-chat and visor-ai-agents (pass), spinnable-ai-employees, granter-ai-grant-consultant, pebl-alfie and ethiack-hackian (changes)",
