@@ -446,6 +446,62 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "A4 is kept: it is marked available because A3 and A4 rest on I18 and I19, which the CLI page documents as brave mode Auto and On, and I10 now has a span showing database and code work in one session; the card claims the rule text only, and I12 and I13 are not claimed. C2 is kept: I38 (default) plus I23, whose span now names the five action types, with I25 now anchored on the permissions block as a second route. O3 is kept: besides the vendor post (I50), the SWE-rebench leaderboard at swe-rebench.com lists Junie and its notes say 'Added reference evaluation for Junie CLI' (fetched 10 November 2026, raw/ans-105.html), so the results are published by the benchmark itself; S3 and I57 hold the second half. R2 holds on I11 alone."
+   },
+   {
+    "round": 3,
+    "answer": "I25",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Span replaced with the contiguous permissions block as the page shows it ('permissions: contents: write pull-requests: write issues: write', 8 words, re-fetched 10 November 2026, raw/ans-201), and the note now says it is a template the user copies into .github/workflows/, as the page says ('copy and paste the following junie.yaml template'). Mode available and cfg github-action unchanged."
+   },
+   {
+    "round": 3,
+    "answer": "I23",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change. The span is exact; the alternative that names types ('fileEditing: editing files outside the project directory') crosses a code element on the page (raw/ans-202), so the studio keeps the single-text-node sentence and lets the note carry the five names."
+   },
+   {
+    "round": 3,
+    "answer": "I10",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change, limit acknowledged: the span shows two systems, the IDE-configured databases (through DataGrip and the JetBrains Database plugin) and the code base, in one session; the card claims only the A4 rule text and no more than the post states. If the operator reads 'several' as more than two, I10 should be removed and Autonomy falls to 3; the studio flags that as the decision point rather than stretching the note."
+   },
+   {
+    "round": 3,
+    "answer": "I45",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the reviewer passes it."
+   },
+   {
+    "round": 3,
+    "answer": "I08",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the reviewer passes it."
+   },
+   {
+    "round": 3,
+    "answer": "I50",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Span shortened to 'with 61.6% resolved' (on the page, no at-sign). O3 now rests on the vendor post only, as the scan carries it; the studio drops the swe-rebench.com / raw/ans-105 argument. One correction to the finding: the post does link the results, its 'SWE-Rebench' anchor points to https://swe-rebench.com/ (raw/ans-203.html), and the note now says so."
+   },
+   {
+    "round": 3,
+    "answer": "I56, I46, I47, I20, I65, I48, I22, I61, I52, I57, I58, S3, S1, S4, I04, I07, I11, I16, I17, I18, I19, I21, I38",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the reviewer re-checked these and passes them."
+   },
+   {
+    "round": 3,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Card stays A4 R2 C2 O3. A4: I08 default, I18 and I19 available (brave mode), I10 kept with its two-system limit stated (see I10; removing it gives A3). C2: I38 plus I23 and I25, whose span now covers all three scopes. O3: I50 on the vendor post, which links swe-rebench.com, plus S3 and I57; the separate swe-rebench capture is no longer relied on. R2 on I11."
    }
   ]
  },
@@ -565,8 +621,8 @@
   },
   "I25": {
    "e": "https://junie.jetbrains.com/docs/junie-on-github.html",
-   "n": "The page's junie.yaml workflow template declares a job permissions block with three entries, contents, pull-requests and issues, each set to write.",
-   "span": "contents: write",
+   "n": "The page gives a junie.yaml template that the user copies into the repository's .github/workflows/; its job permissions block has three entries, contents, pull-requests and issues, each set to write.",
+   "span": "permissions: contents: write pull-requests: write issues: write",
    "g": "documented",
    "m": "available",
    "cfg": "github-action"
@@ -604,8 +660,8 @@
   },
   "I50": {
    "e": "https://blog.jetbrains.com/junie/2026/06/junie-coding-agent-out-of-beta/",
-   "n": "The release post publishes Junie's SWE-Rebench result, quoted from the benchmark's research lead.",
-   "span": "with 61.6% resolved and a 72.7% pass@5",
+   "n": "The release post reports Junie's SWE-Rebench result (61.6% resolved) in a quote attributed to a Research Lead at Nebius, and links the SWE-Rebench site.",
+   "span": "with 61.6% resolved",
    "g": "documented",
    "m": "default"
   },
@@ -774,72 +830,72 @@
   "https://blog.jetbrains.com/blog/2026/09/22/introducing-jetbrains-air/": {
    "sha256": "fd6e7c9c18eb17dbc62b36e013a2f870a681c7999b349b8cb960545e35f3d909",
    "bytes": 143939,
-   "read_at": "2026-11-10T15:46Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://blog.jetbrains.com/junie/2026/06/junie-coding-agent-out-of-beta/": {
    "sha256": "ac014f4922751d9ead7592eab04580fe14ee9b7c8ff39b47ec482bc64a755d9d",
    "bytes": 137398,
-   "read_at": "2026-11-10T15:46Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://junie.jetbrains.com/docs/action-allowlist-junie-cli.html": {
    "sha256": "ce31f17094967ff10ff0693ed127c537d65e11462658504452337f95be7fa4fa",
    "bytes": 15624,
-   "read_at": "2026-11-10T15:46Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://junie.jetbrains.com/docs/guidelines-and-memory.html": {
    "sha256": "383c91a53ceaf36e1e3b81027aa24dba3950dd6ec6df9d3cd1df8c81632efef3",
    "bytes": 12725,
-   "read_at": "2026-11-10T15:46Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://junie.jetbrains.com/docs/junie-cli-hooks.html": {
    "sha256": "b2b9042613fe2d801f9de60b9fc93a54220f74e3090d50ff54b33fad5b87ab84",
    "bytes": 71901,
-   "read_at": "2026-11-10T15:46Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://junie.jetbrains.com/docs/junie-cli-mcp-configuration.html": {
    "sha256": "6ee3c2568d54ec5b6a4813b265b98a1b1e5cccc20e6065c1a79913a172b0ff91",
    "bytes": 19644,
-   "read_at": "2026-11-10T15:46Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://junie.jetbrains.com/docs/junie-cli.html": {
    "sha256": "b0b650713bc6581d38f8b8dee5bb2127b6aeedd81b91766c7b41dc92c073c750",
    "bytes": 60954,
-   "read_at": "2026-11-10T15:46Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://junie.jetbrains.com/docs/junie-headless.html": {
    "sha256": "ead8a5d98b378046b480cca4ec55fb56dd945a03cce901a4021e87294c6777f1",
    "bytes": 8626,
-   "read_at": "2026-11-10T15:46Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://junie.jetbrains.com/docs/junie-ide-plugin.html": {
    "sha256": "984128be0de34df9cc47125660d23cc3446cfb0cd772733ecd1b9deeaa9eb3f1",
    "bytes": 42649,
-   "read_at": "2026-11-10T15:46Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://junie.jetbrains.com/docs/junie-on-github.html": {
    "sha256": "cf442bf79a61c709c17d95d9a30f24b0d403d29fb5b5289a941b877decb77b10",
    "bytes": 28419,
-   "read_at": "2026-11-10T15:46Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://junie.jetbrains.com/docs/slash-commands.html": {
    "sha256": "22503c010b2b1eb3bec8258c0fd5dd5421fd648f76d6b12527d806edb8d81735",
    "bytes": 35236,
-   "read_at": "2026-11-10T15:46Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://junie.jetbrains.com/llms.txt": {
    "sha256": "47614ecd4279c07e29dde74dfd53aa5e25cbb0c7b0560b3cda661fab7255872c",
    "bytes": 1440,
-   "read_at": "2026-11-10T15:46Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://www.jetbrains.com/legal/docs/terms/jetbrains-ai-service/": {
-   "sha256": "e9d6b9a0881df8bd5f81cec376d5e66b66476d2c88ab392a63849530792e8144",
-   "bytes": 93667,
-   "read_at": "2026-11-10T15:46Z"
+   "sha256": "98a9dc4e40fd7ca057d928d0800801739cb4352aa68173b33ba9c98fe9b0bb05",
+   "bytes": 92987,
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://www.jetbrains.com/legal/docs/terms/jetbrains-ai/service-providers/": {
-   "sha256": "a9959e75c29f7a7208efb69f2ab6ba605e5c8c559498ff1449bf3ed66ad8cd6f",
-   "bytes": 49650,
-   "read_at": "2026-11-10T15:46Z"
+   "sha256": "97586ed8484a3293d7f2301249c279dd67c48b4e5a8eebf356d1d4da4ab5e885",
+   "bytes": 48970,
+   "read_at": "2026-11-10T16:45Z"
   }
  }
 }
