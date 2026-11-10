@@ -19,8 +19,92 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "draft",
-  "rounds": []
+  "status": "round-1",
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I19",
+      "severity": "should-fix",
+      "finding": "Level 4 Autonomy rests on this answer (with I08 and I10). I19 reads: full autonomy within boundaries; the person monitors. The cited policy page supports the first half: it says 'an agentic test relies on this policy to make decisions in real time' and that Guardrails define what the agent must not do. It says nothing about a person monitoring. The note adds 'findings and the activity log show its progress', which comes from the agentic-pentests page (findings appear as discovered) and the test-details page (Activity log), not from the cited source. The CTO post says the vendor team reviews traces after execution, which is the vendor, not the customer. The agentic-pentests page also says scope, policy and credentials cannot be edited once an Agentic Pentest is launched, and no page read gives a pause or stop control for an Agentic Pentest (the pause control is documented for continuous tests only). The evidence is an artefact (documentation of a policy editor and an activity log), not an adjective, but the answer should cite the page that shows the monitoring half or say it is drawn from two pages. The level survives because I18 is not claimed; the word 'monitors' is only partly sourced."
+     },
+     {
+      "answer": "I10",
+      "severity": "should-fix",
+      "finding": "Source (CAEV page) does say Hackian 'continuously analyzes your entire attack surface in breadth', with wildcard assets and reconnaissance, so it works across many assets and domains of one customer. Grade documented and mode default are right. But I10 is the second leg of Autonomy 4 and the only leg of Reach 2 in effect (I11 is available only with a Beacon). Breadth over one customer's assets is a weak reading of 'runs multi-step workflows across systems or coordinates other agents'. A stronger artefact is on the policy-guidelines page: 'Hackian uses Primary Focus to distribute work across multiple agents'. It is not credited; consider citing it. For Reach 2 (Integrated: documented connectors to common tools) no connector or integrations page was cited; the level rests on surface breadth and the Beacon, not on connectors."
+     },
+     {
+      "answer": "I11",
+      "severity": "pass",
+      "finding": "Beacon page opens with 'The Ethiack Beacon securely extends the Ethiack Hackian Engine testing capabilities into your internal networks.' The span is in the source, under fifteen words. Mode available is right: the customer must install the Beacon and expose CIDRs. Crossing a trust boundary into customer networks via an outbound tunnel is shown. Credited correctly."
+     },
+     {
+      "answer": "I04",
+      "severity": "should-fix",
+      "finding": "Span is in the CTO post, but it sits in a general section 'Building a Hackbot: The Four Core Components', describing tools an agent can have ('giving the hackbot a virtual machine or API access'), not stated of Hackian's shipped product. The indicator is generating and executing code with privileges. The post speaks of executing commands or sending requests, not code generation; the product page lists 'Non-destructive exploit generation' and may be a better source. No level uses I04 (Autonomy is carried by I08 and I19), so no level changes; the note should say the post describes the architecture in general."
+     },
+     {
+      "answer": "I41",
+      "severity": "note",
+      "finding": "Test-details page says Activity is 'A log of the actions Hackian has been performing during the test'. Span present. The indicator needs operation: it counts only when observed or measured. It is graded documented, so it is correctly not counted; Control stays at level 1 and I41 appears in no level. Pause (I39) is documented for continuous tests only. Mode default is fine."
+     },
+     {
+      "answer": "I39",
+      "severity": "pass",
+      "finding": "Test-details page: 'For Continuous Adversarial Exposure Validation tests, the header also includes a control to pause or restart the test'. Span is a fragment present in the source and under fifteen words. It pauses a continuous test, not individual agent actions, and applies to continuous tests only. Fine for a documented answer; it does not feed a level."
+     },
+     {
+      "answer": "S1",
+      "severity": "should-fix",
+      "finding": "Span 'Hackian, our agentic AI pentester, runs against U.Porto's exposure 24/7' is in the case study, and it names a customer, so the In production badge is supported. Figures are asset counts (1,000 critical assets within 5,000), not sessions or tasks, but a named customer is sufficient. The note also says 'Jumia and CEGID case studies also name Hackian'. I searched every fetched Ethiack source of the scan (including the case study and product page) and neither name appears. Remove that clause or add and cite the source for it."
+     },
+     {
+      "answer": "S3",
+      "severity": "pass",
+      "finding": "The documentation llms.txt resolves (HTTP 200) and contains '- [Overview](/docs/api): Ethiack REST API documentation.' as well as portal and test pages. Grade observed by probe is right. Note it also feeds Openness 3 only with I50, but Openness is capped at level 1 here. Note: the span is the REST API description line; the note says it indexes portal, API and test documentation, which is true of the file. Not an interface for agents to call (S4 not claimed): correct."
+     },
+     {
+      "answer": "I50",
+      "severity": "note",
+      "finding": "Benchmark post says 'our own agent Hackian led on both F1 and recall under the same protocol' (13 words, present). Results are published, including Claude Code and PentAGI comparisons, and the protocol is described as published on arXiv and adaptable. The results are the vendor's own run of the vendor's own benchmark, and the post states Hackian is not in the paper itself. The note says 'open EthiBench protocol'; 'published' is what the page shows, 'open' is a stretch. Does not change a level (Openness 3 is not reached)."
+     },
+     {
+      "answer": "I57",
+      "severity": "should-fix",
+      "finding": "Findings-details page says 'Edit severity and score: adjust the severity or CVSS score assigned to the finding'. Present and under fifteen words. That is a customer's own edit control, not a channel to report problems or contest output to the vendor. The Updates feed is described as 'A chronological feed of status changes and comments between all participants', with 'ethical hackers or triagers', where participants are those of an engagement (written there for Expert engagements). The page also has 'Ask Hackian'. Cite the Updates sentence and say it is shown for engagements with triagers, or lower the grade of the claim to what is shown. No level changes (Openness stays 1)."
+     },
+     {
+      "answer": "I08",
+      "severity": "pass",
+      "finding": "Product page: 'It autonomously executes benign exploitation routines to confirm vulnerabilities.' Exact, 9 words. Documented, default, credited to the right indicator (the product itself executes the action). It is a vendor marketing page, so documented is the correct ceiling."
+     },
+     {
+      "answer": "I20",
+      "severity": "pass",
+      "finding": "Agentic Pentests page: 'Hackian performs a focused, in-depth analysis of a defined set of assets'. Present, under fifteen words. It states purpose and the Swift and Depth variants. Right grade and mode."
+     },
+     {
+      "answer": "I22",
+      "severity": "should-fix",
+      "finding": "Span is in the Expert Pentests page: 'technologies and test types that Hackian does not currently handle on its own, such as mobile applications'. It names a scope limit, not known failure cases. The CAEV page also says it covers common vulnerabilities, 'prioritizing coverage over depth'. The benchmark post discusses error rates of agents. Together O1 (Disclosed: I20 plus I22) holds on a scope limit; consider saying in the note that this is a scope limit, which is what the evidence is."
+     },
+     {
+      "answer": "I47",
+      "severity": "pass",
+      "finding": "Policy-guidelines page: 'Guardrails define what the agent must not do.' present, with four standard guardrails written by the customer in prose. Right indicator, documented, default. It carries Control 1. It is a customer-written instruction, not an enforced limit; Control does not claim more."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card computed: A4, R2, C1, O1 (sum 8). Level 4 Autonomy rests on I08, I19 and I10: all three are vendor documentation, not observed operation, and the I19 monitoring leg and the I10 'orchestrate' reading are the soft points (see those findings). Reach 2 rests on I10 plus an available-only Beacon (I11). Control and Openness are 1 each; Balanced would not apply (A minus one is 3). The announced-features list (MCP server, execution visibility) is correctly not credited. I did not verify the scan's announced sources or the lowered answers I05, I25, I36, I48, I54, I56, I58. Assessment and not_credited record lowered items; not_credited is empty."
+     }
+    ]
+   }
+  ]
  },
  "assessment": {
   "by": "gamma.studio@web-summit.dinis",

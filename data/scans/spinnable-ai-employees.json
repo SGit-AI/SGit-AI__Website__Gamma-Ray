@@ -19,8 +19,62 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "draft",
-  "rounds": []
+  "status": "round-1",
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I17",
+      "severity": "should-fix",
+      "finding": "Autonomy 3 rests on I08 and I17, so I17 carries the level. The only evidence is one sentence in the troubleshooting page, under a heading for missing context or ambiguous instructions: the worker may pause and wait for manager guidance rather than guessing. The words are hedged (may), the page presents it as a failure case with a fix (give the missing information or write fallback instructions in the Worker Policy), and it is not a stated design in which routine work is done by the worker and exceptions go to a person. The source says what the note says, and grade documented and mode default are right, but it is weak support for the indicator. Without I17 the card has no Autonomy level at all (I18 and I19 are not answered, and Autonomy 2 needs I16, or I07 with one of I02 to I05, none of which is answered), so the whole card turns on this sentence. Suggest the assessor look for a firmer page (for example the Worker Policy or the automation settings page, or the paused-task email in I40 as a defined exception path) or record that the level rests on one hedged sentence."
+     },
+     {
+      "answer": "I56",
+      "severity": "should-fix",
+      "finding": "The note says the security guide advises that recipients of a company-address worker need not know. No such statement is in the corporate-email page cited, and the scan lists no security guide among its sources; I grepped all fetched Spinnable pages for it and found nothing. The rest is correct: the corporate-email page says outbound email includes a default disclosure footer reading 'is an AI worker hired through Spinnable', that managers can turn the Email signature setting off, and that turning it off removes the footer. Remove the unsourced clause or add and capture the source. Span is in the page and under fifteen words (the scan uses the placeholder form from the page). Mode default is right since the signature is on by default. It feeds Openness only through any(I56, I22, I58), which I22 and I58 already satisfy, so no level changes."
+     },
+     {
+      "answer": "I12",
+      "severity": "note",
+      "finding": "Span 'When a worker delegates tasks to other workers in your team' is in the 10 June 2026 release note (Sub-Tasks Activity Trail); mode available with configuration multi-worker is right because it needs two or more workers. The sentence 'Since 13 May 2026 a worker can also be added as co-manager of another worker' is not on the cited page: it comes from the docs llms.txt index entry for 13 May 2026, which reads 'Workers as co-managers'. Cite that source in the note or drop the sentence. The page does not itself say that workers have their own context and authority, though the AI workers page says each has its own email address (I26), so the scope fit is acceptable. I12 feeds only Autonomy 4, which the card does not reach."
+     },
+     {
+      "answer": "I25",
+      "severity": "note",
+      "finding": "Release note of 5 August 2026 says Read means workers can search and look up but never create, change or send; Full access 'stays the default'; and 'When you connect a new account, Read is preselected'. The page is therefore internally mixed on which is the default. Mode available (configuration read-only-connection) is the conservative and right reading. Span is in the source. I25 is not used by any level on this card (Reach 3 also needs a published agent interface; Control 2 needs I38, which is not answered)."
+     },
+     {
+      "answer": "I46",
+      "severity": "note",
+      "finding": "Span 'Only the worker's manager or co-managers can change these controls' is in the communication-restrictions page (differs from the scan text only in the apostrophe). The page does document a per-worker setting for who may message the worker. The indicator is 'A limit on it is a setting that its own account could change' (lens: barrier of the kind setting); the evidence shows a setting that managers change, which fits the lens reading but not clearly the 'its own account' wording. It feeds no level. Consider noting the reading used."
+     },
+     {
+      "answer": "I41",
+      "severity": "note",
+      "finding": "Connecting-tools page says 'All tool actions are logged with' timestamp, worker ID, tool and method used, success or failure status, and user context. Note matches. Indicator needs operation and the grade is documented, so it correctly counts for nothing; Control 3 would need I41, I39 and I43 with observed or measured evidence. Control stays 1 on I47 (Worker Policy, 'highest-priority rules', a rule in prose). Control 1 therefore rests on a prose rule, a modest basis, but the span is exact and the rule matches I47."
+     },
+     {
+      "answer": "S1",
+      "severity": "note",
+      "finding": "Home page testimonial by the CEO of Smart Role says Clara manages his calendar, runs his outreach and keeps his pipeline current, and that two workers were running in under an hour; the span is exact. It names a customer for work the workers do, so it meets the 'names a customer' branch of S1; it gives no sessions, tasks or pull requests. It is a quote chosen and published by the vendor, which the note already says. S1 earns the badge only and feeds no level."
+     },
+     {
+      "answer": "I04, I08, I10, I11, I20, I21, I22, I26, I30, I39, I40, I47, I57, I58, I68, S3",
+      "severity": "pass",
+      "finding": "Checked in the fetched pages. I04: vault page says credentials are exposed as VAULT_ environment variables to Python code in the code execution sandbox, mode default fits. I08: AI workers page says they can check a calendar, update databases and send emails. I10 and I11: tools overview lists many tools by category (HubSpot, Salesforce, GitHub, Notion, Google tools) and authentication by OAuth 2.0 or API key. I20: introduction. I21: tool-permissions page, tools granted per worker with a chosen connection. I22: troubleshooting page documents a worker that stops mid-way, with causes and fixes. I26: 'They have their own email addresses'. I30: change-manager page says 'A worker's manager can administer its settings'. I39: communication-channels page says interrupt cancels the current in-flight generation; the 28 October note covers pausing failing recurring tasks. I40: 28 October release note says a recurring task failing or blocked three runs in a row is paused and the manager emailed with the reason. I47: Worker Policy passage. I57: support page gives an email channel for worker issues, for managers and for workers. I58: privacy policy lists email content, calendar events, documents, messages and customer data from integrated platforms. I68: docs llms.txt lists dated release notes through 28 October 2026. S3: an llms.txt resolves on both www.spinnable.ai and docs.spinnable.ai (observed, fetched). Spans in the scan that my checker flagged as not found (I30, I40, I46) differ from the page only by curly versus straight apostrophes, so they pass. All spans are under fifteen words. Grades and modes are fine; no needs operation answer is counted as documented for a level. S4 is not answered and no agent-callable interface was seen in the sources, which is consistent with Reach 2."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card computed as A3, R2, C1, O2. Level 3 appears only in Autonomy (I08 plus I17, see the I17 finding); nothing is at level 4. Reach 2 rests on I10 and I11, both documented connectors lists, an artefact. Openness 2 rests on I22 and I58, both public pages (troubleshooting and privacy policy), artefacts and not adjectives. Control 1 rests on one prose rule (I47). The I54 answer the assessment lowered is not on the card and no source I read contradicts that."
+     }
+    ]
+   }
+  ]
  },
  "assessment": {
   "by": "gamma.studio@web-summit.dinis",

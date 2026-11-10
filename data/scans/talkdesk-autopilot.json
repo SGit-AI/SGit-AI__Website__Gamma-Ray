@@ -19,8 +19,77 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "draft",
-  "rounds": []
+  "status": "round-1",
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I03, I08, I10, I17, I20, I58, I65",
+      "severity": "pass",
+      "finding": "Read each source myself (eight pages, all fetched with status 200 and all text present). I03: the no-code span is on the Autopilot page and the FAQ there says operational staff train the agent. I08: the order-address change sits on the Autopilot page. I10: the span is in the email blog and the same sentence lists refunds, shipment re-routing and appointments. I17: the escalation span is on the Autopilot page. I20, I58 and I65 spans are in their pages. All spans are exact in their words and under fifteen words. Grades documented and mode default are right for these: none of the pages states an opt-in. Two small points: the I10 note says refunds and appointment changes and the page also says shipments; I58 note names Knowledge Management, which is in a different sentence of the same page than the span."
+     },
+     {
+      "answer": "I08",
+      "severity": "note",
+      "finding": "The span comes from the Frank scenario on the Autopilot page, a worked narrative about one imagined customer, not a named deployment. It states the product is able to make the change, so documented is right, but together with I17 it is the whole basis of Autonomy level 3, so the reader should know it is a vendor scenario."
+     },
+     {
+      "answer": "I12",
+      "severity": "should-fix",
+      "finding": "The scope asks for agents that each have their own context and authority and pass work between them. The blog says an orchestrator directs work to sub-agents such as a refund agent, a rebooking agent or a loyalty agent, each equipped with specific skills. It does not say they have their own context or authority, and the passage describes the email channel. Passing work between separate agents is stated; the own-context and own-authority part is not. The note should say it is the email channel and that authority is not stated. No level change: Autonomy 4 and Reach 2 are also reached through I10."
+     },
+     {
+      "answer": "I11",
+      "severity": "note",
+      "finding": "The span is on the multi-agent orchestration page, under a heading that reads Multi-Context Protocol, and says the protocol lets agents invoke external tools and services. It is a platform-wide statement for Talkdesk AI agents, not Autopilot specifically, and the page gives no setup or opt-in. The scan has a separate uipath-mcp configuration, so the reader may wonder whether default is right: the page states the capability without conditions, so default is defensible. Reach 2 is reached by I10 alone, so no level depends on it."
+     },
+     {
+      "answer": "I19",
+      "severity": "should-fix",
+      "finding": "Autonomy 4 rests entirely on this answer: I08 plus I17 give level 3, and level 4 needs I18 or I19 as well. The span is exact and is on the Autopilot page, under a heading about human oversight through CXA Operations Center, which the scan treats as a separate product (mode available, config ops-center). The mode is right. The note, though, says people watch live interactions and set guardrails while Autopilot works on its own; the span supports monitoring and guardrails, and the on-its-own part comes from other sentences on the page. The evidence is a product feature statement (an artefact of the product page), not an adjective, but it is marketing copy with no description of what a person can approve or stop. The card should show Autonomy 4 as available with Operations Center, as it does (avail available), and the note should be tightened."
+     },
+     {
+      "answer": "I41",
+      "severity": "should-fix",
+      "finding": "The indicator needs: operation, with a scope that the log must cover what the agent does (tool calls, commands, commits). The answer is graded documented and its source only says Operations Center can analyze session-level execution traces. That is a vendor statement (not observed or measured), and it does not say tool calls or actions are recorded. The scorer correctly leaves it out of Control (C used I47 only), so no level changes, but the answer should be dropped or its note should say it is documented only and that traces are not stated to cover actions. Span is exact (9 words) and the mode available is right."
+     },
+     {
+      "answer": "I47",
+      "severity": "should-fix",
+      "finding": "Control level 1 rests only on this answer. The span is exact and is in the press release for AI Agents for voice, but it is part of an illustrative example prompt the press release gives for how an operator might instruct an agent. It is an example of an operator-written rule, not a documented control setting. The note generalises it to say limits are given to the agent as plain-language instructions; the page supports that a prompt can carry an escalate rule, not that Talkdesk publishes this as a limit. The Autopilot page sentence about setting guardrails and monitoring AI behavior would support Control level 1 better under I38 or I47. Mode default is acceptable. Suggest rewording the note to say it is a sample prompt."
+     },
+     {
+      "answer": "I57",
+      "severity": "should-fix",
+      "finding": "Credited to a nearby fact. The indicator is a channel to report problems with the agent or contest its output. The cited page is the Talkdesk security and compliance page, whose vulnerability disclosure section asks researchers to report vulnerabilities that affect Talkdesk customers. It is a security disclosure channel for the platform, says nothing about Autopilot, and does not cover reporting wrong or harmful agent output or contesting a result. Span is exact (13 words). The page also gives an address that must not be copied into the scan, and the scan does not. No level depends on it (Openness 3 needs I50 as well). Either lower the note to say security disclosure for the platform, or drop the answer."
+     },
+     {
+      "answer": "I67",
+      "severity": "note",
+      "finding": "Tier declared and grade documented. The span is exact and the dashboard feature list names usage, channel distribution, intents and escalation rate. This shows that usage is displayed to the customer, not that the value of the agent is measured; the Autopilot page also quotes a customer on a 60% containment rate. No level depends on it. Acceptable but the note should say the dashboard is a documented feature."
+     },
+     {
+      "answer": "S3",
+      "severity": "should-fix",
+      "finding": "Observed is right for the root file: I fetched talkdesk.com llms.txt, it resolves with status 200 and 3357 bytes and the span is its first line (10 words). The note also says docs.talkdesk.com publishes one for its API documentation. That claim is true (I fetched docs.talkdesk.com llms.txt: status 200, about 126 KB, headed Talkdesk Developers Documentation) but that URL is not among the scan's sources or captures, so the claim is unsourced in the scan. Add it as a source or remove the sentence. Also, the root llms.txt is a site-level guide to pages; it is not specific to Autopilot. No level depends on it."
+     },
+     {
+      "answer": "S1",
+      "severity": "note",
+      "finding": "There is no S1 answer (the scan's assessment lists S1 as lowered). The Autopilot page names a customer by title and company in a quoted statement about a 60% containment rate after launch. Whether that is for the capability that acts, and whether it is a usage figure or a customer named for it, is for the scorer; if S1 were credited it would only earn the In production badge and does not change any level. No S4 answer was given and none is needed: the pages describe MCP use (consumption), which S4 excludes."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card computed: A4 R2 C1 O1. Autonomy 4 uses I10, I12 and I19: level 3 comes from I08 and I17 (default, as shipped), and level 4 needs I19, which is available only with CXA Operations Center and rests on a product page feature statement. Without I19 the card would read A3. Level 4 is also reached via I10 on the other half of its rule, so I12's weakness does not matter. Reach 2 rests on I10 and I11 (documented statements). Control 1 rests on one example prompt (I47). Openness 1 rests on two statements (I20, I58). No level 3 or 4 on the card rests on an observed or measured fact; all are vendor statements graded documented, which is consistent with the product-shape rule of rating a product as its vendor documents it. Capture hashes exist for all eight sources."
+     }
+    ]
+   }
+  ]
  },
  "assessment": {
   "by": "gamma.studio@web-summit.dinis",
