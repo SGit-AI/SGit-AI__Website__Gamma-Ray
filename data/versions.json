@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.128",
+    "date": "2026-11-10",
+    "what": "sign off bythelaw-legal-chat, visor-ai-agents, claude-code-local",
+    "by": "gamma.approve@web-summit.dinis",
+    "from": "fc8959c1a"
+  },
+  {
     "version": "v0.0.127",
     "date": "2026-11-10",
     "what": "the walk links each indicator to its own row again",
