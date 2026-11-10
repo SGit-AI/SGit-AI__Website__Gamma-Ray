@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.93",
+    "date": "2026-11-10",
+    "what": "reports index table tidied",
+    "by": "gamma.design@web-summit.dinis",
+    "from": "08a950980"
+  },
+  {
     "version": "v0.0.92",
     "date": "2026-11-10",
     "what": "sign off noxus-ai-workers",
