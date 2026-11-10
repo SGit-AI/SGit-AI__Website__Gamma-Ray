@@ -89,6 +89,10 @@ for (const f of walk(OUT).filter(f => /\.(html|md|txt|json)$/.test(f))) {
   const own = read('data/fact-ray/well-known.json'); for (const p of wk(own, own.issuer.domain)) bad('fact-ray', `well-known.json: ${p}`)
   for (const p of read('data/provisions.json')) if (!/^https:\/\//.test(p.source_url || '') || !p.source_depth) bad('provisions', `${p.id}: no source_url or source_depth (run tools/source-links.mjs)`)
   const ev = JSON.parse(fs.readFileSync(path.join(OUT, 'data/evidence.json'), 'utf8')); for (const e of ev) if (e.fact_ray.band && !(e.fact_ray.source && e.fact_ray.record && e.fact_ray.accountability)) bad('fact-ray', `${e.id}: a band without its coordinates`) }
+// 4c the anchors other pages link to are there: one per indicator on /questions/, one per provision on /provisions/
+{ const q = fs.readFileSync(path.join(OUT, 'questions/index.html'), 'utf8'), pv = fs.readFileSync(path.join(OUT, 'provisions/index.html'), 'utf8')
+  for (const i of I) if (!q.includes(`id="${i.id}"`)) { bad('anchors', `/questions/ has no anchor for ${i.id}`); break }
+  for (const p of read('data/provisions.json')) if (!pv.includes(`id="${p.id}"`)) { bad('anchors', `/provisions/ has no anchor for ${p.id}`); break } }
 // 5 the version is CI's: version.txt, if present, is a plain number
 const vf = path.join(ROOT, 'build/version.txt'); if (fs.existsSync(vf) && !/^v\d+\.\d+\.\d+\n?$/.test(fs.readFileSync(vf, 'utf8'))) bad('version', 'build/version.txt is not vX.Y.Z')
 
