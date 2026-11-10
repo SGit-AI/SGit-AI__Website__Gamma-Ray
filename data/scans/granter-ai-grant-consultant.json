@@ -84,6 +84,85 @@
      }
     ]
    }
+  ],
+  "responses": [
+   {
+    "round": 1,
+    "answer": "S1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Super Bock sentence removed. The note now says the Fidelidade pilot is in the initial phase of a planned 12-month cycle with results due at the 6-month mark; span and badge kept, resting on one named customer."
+   },
+   {
+    "round": 1,
+    "answer": "I67",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept as a declared, vendor-reported figure: the span is now 'The pilot has already delivered measurable results:', which covers both labels, and the note names both figures and states that no method or baseline is given. Q21 is outside the public levels, so the card does not change."
+   },
+   {
+    "round": 1,
+    "answer": "I47",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Removed. The privacy policy sentence concerns decisions about the data subject, not a limit on the agent; recorded in not_credited. Control level 1 holds on I38."
+   },
+   {
+    "round": 1,
+    "answer": "I38",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Second clause ('the submission itself is made by the user') dropped; the note now says only what the privacy policy says. Credit kept; Control level 1 rests on it."
+   },
+   {
+    "round": 1,
+    "answer": "I02",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Removed: nothing in any source says the agent runs without executing arbitrary code, and the cited case is a tailored pilot, not shown as the default. Autonomy level 2 holds on I16."
+   },
+   {
+    "round": 1,
+    "answer": "I16",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change. The policy says outputs are suggestions that users review and approve before any submission or decision; A2 rests on this answer, and I07 is noted as the same fact, not independent evidence."
+   },
+   {
+    "round": 1,
+    "answer": "I52",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note reworded to 'a certification phase for the Navy Tested programme', without saying who runs it, and states certification is not yet granted. Tier stays declared (the vendor's own account)."
+   },
+   {
+    "round": 1,
+    "answer": "I58",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: the note already attributes the quote to the CTO, a vendor spokesperson."
+   },
+   {
+    "round": 1,
+    "answer": "I07,I09,I20,I56",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; passed by the reviewer."
+   },
+   {
+    "round": 1,
+    "answer": "announced / sources",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change. The announced items are listed and not counted, so citing the About and home pages there does not support any level."
+   },
+   {
+    "round": 1,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change expected or found: the card stays A2 R1 C1 O1 after the edits (A2 on I16, R1 on I09, C1 on I38, O1 on I20 with I56 and I58)."
+   }
   ]
  },
  "assessment": {
@@ -105,13 +184,6 @@
   "files": "in the vault: work/assessment.json, work/challenger.json"
  },
  "answers": {
-  "I02": {
-   "e": "https://granter.ai/case-studies/fidelidade",
-   "n": "In the Fidelidade pilot, the agents were trained on Fidelidade's business information and past applications, on Granter's platform.",
-   "span": "trained using detailed information about Fidelidade’s business and past applications",
-   "g": "documented",
-   "m": "default"
-  },
   "I07": {
    "e": "https://granter.ai/privacy-policy",
    "n": "The platform's AI outputs are suggestions that users review and approve before any submission or decision.",
@@ -142,21 +214,14 @@
   },
   "I38": {
    "e": "https://granter.ai/privacy-policy",
-   "n": "A user reviews and approves outputs before any submission or decision; the submission itself is made by the user.",
+   "n": "The privacy policy says users review and approve the platform's outputs before any submission or decision.",
    "span": "Users review and approve them before any submission or decision",
-   "g": "documented",
-   "m": "default"
-  },
-  "I47": {
-   "e": "https://granter.ai/privacy-policy",
-   "n": "The privacy policy states in prose that the platform does not take decisions about a person on its own.",
-   "span": "the platform does not take decisions about you on its own.",
    "g": "documented",
    "m": "default"
   },
   "I52": {
    "e": "https://granter.ai/case-studies/marinha",
-   "n": "Three Portuguese Navy units are evaluating the agent as part of a certification process run by the Navy.",
+   "n": "Granter's Navy case study says three Navy units are evaluating the agent in a certification phase for the Navy Tested programme; certification is not yet granted.",
    "span": "Granter is being evaluated by three different Navy units",
    "g": "documented",
    "m": "default"
@@ -177,20 +242,36 @@
   },
   "I67": {
    "e": "https://granter.ai/case-studies/marinha",
-   "n": "The Navy case study reports pilot figures: over 200 opportunities added to a defence grants database, and first drafts cut from two weeks to two hours (vendor-reported).",
-   "span": "Relevant funding opportunities added to a defence grants database",
+   "n": "The Navy case study reports two pilot figures, over 200 opportunities added to a defence grants database and first drafts from two weeks to two hours, with no method or baseline stated (vendor-reported).",
+   "span": "The pilot has already delivered measurable results:",
    "g": "documented",
    "m": "default"
   },
   "S1": {
    "e": "https://granter.ai/case-studies/fidelidade",
-   "n": "Fidelidade runs a pilot of the agent: two agents, one per entity, are live and in use to find calls and start drafts. Super Bock prepared a submitted application with it.",
+   "n": "Fidelidade runs a pilot of the agent, in the initial phase of a planned 12-month cycle: two agents, one per entity, are live and used to find calls and begin drafts; results are due at the 6-month mark.",
    "span": "the platform is actively being used to identify new opportunities and begin drafting applications",
    "g": "documented",
    "m": "default"
   }
  },
- "not_credited": [],
+ "not_credited": [
+  {
+   "what": "I47 (a limit on it is a rule in prose)",
+   "why": "The privacy policy sentence 'the platform does not take decisions about you on its own' is a data-protection statement about decisions concerning the data subject, not a limit on what the agent may do. The blog FAQ line 'access to submission-platform accounts is restricted for Granter' is an access restriction, not a prose rule of the expectation kind; neither is credited.",
+   "source": "https://granter.ai/privacy-policy"
+  },
+  {
+   "what": "I02 (own data, without executing arbitrary code)",
+   "why": "The Fidelidade page says a tailored pilot's agents were trained on the customer's business and past applications; no source says the agent runs without executing arbitrary code, and the pilot is not shown to be the default product.",
+   "source": "https://granter.ai/case-studies/fidelidade"
+  },
+  {
+   "what": "Super Bock as a customer for the In production badge",
+   "why": "Not in the scan's sources; the Fidelidade pilot alone carries S1.",
+   "source": "https://granter.ai/case-studies/superbock"
+  }
+ ],
  "announced": [
   {
    "what": "Automated submission of applications through official channels, marked coming soon in older text that the blog page still carries; the current FAQ on the same page says the user submits.",
@@ -225,22 +306,22 @@
   "https://granter.ai/blog/ai-grant-consultant": {
    "sha256": "939ffa1a99921cebb4dd509822646f9bf524a971fe0d64afd4bbebb4325fbb9c",
    "bytes": 499709,
-   "read_at": "2026-11-10T10:43Z"
+   "read_at": "2026-11-10T14:45Z"
   },
   "https://granter.ai/case-studies/fidelidade": {
    "sha256": "5540efe3cdd81e0a93879808808d39a5d3373c021dffd505fc6a9c99bab92685",
    "bytes": 447459,
-   "read_at": "2026-11-10T10:43Z"
+   "read_at": "2026-11-10T14:45Z"
   },
   "https://granter.ai/case-studies/marinha": {
    "sha256": "a6b46185d03c0012028bb1f68dc469204e30f59eafa4bd303fcfbb3b40b7d8cb",
    "bytes": 487913,
-   "read_at": "2026-11-10T10:43Z"
+   "read_at": "2026-11-10T14:45Z"
   },
   "https://granter.ai/privacy-policy": {
    "sha256": "278075589d6cb14792578a442545a13411a49d439932973007e07b74a9072c28",
    "bytes": 572845,
-   "read_at": "2026-11-10T10:43Z"
+   "read_at": "2026-11-10T14:45Z"
   }
  }
 }
