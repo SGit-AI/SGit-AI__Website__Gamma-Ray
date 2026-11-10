@@ -4,8 +4,9 @@ import { card } from './spectrum.mjs'
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 const short = (s, n) => s.length > n ? s.slice(0, n - 1).trimEnd() + '…' : s
 
+const slugQ = q => `${q.id.replace('Q', 'Q ')}. ${q.text}`.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 // 1. The mashup: questions, indicators, provisions, as three linked columns.
-export function graph(m, scanId) {
+export function graph(m, scanId, up = scanId ? '../../' : '../') {
     const scan = scanId && m.scans.find(x => x.id === scanId), lit = scan ? new Set(Object.keys(scan.answers)) : null
     const hit = ok => lit && ok ? ' hit' : ''
     const W = 1180, top = 46, rowQ = 40, H = top + m.questions.length * rowQ + 30
@@ -35,11 +36,11 @@ export function graph(m, scanId) {
         const y = top + si * bandH
         o += `<text class="band s-${s.id}" x="${xP + 16}" y="${y + 12}">${esc(s.short)} <tspan class="dim">${s.linked} of ${s.n} linked</tspan></text>`
     })
-    for (const p of m.provisions) { const [x, y] = pxy.get(p.id); o += `<circle class="p s-${p.standard}${p.by.length ? '' : ' out'} ${p.by.map(b => 'q-' + m.I.get(b.indicator).question).join(' ')}${hit(p.by.some(b => lit?.has(b.indicator)))}" cx="${x}" cy="${y}" r="3.6"><title>${esc(m.S.get(p.standard).short + ', ' + p.ref + ': ' + short(p.text, 140))}</title></circle>` }
-    for (const i of m.indicators) o += `<circle class="i t-${i.tier} q-${i.question}${hit(lit?.has(i.id))}" cx="${xI}" cy="${iy.get(i.id).toFixed(1)}" r="4"><title>${esc(i.text + ' (' + TIER_LABEL[i.tier] + ' tier; cites ' + i.links.length + ')')}</title></circle>`
+    for (const p of m.provisions) { const [x, y] = pxy.get(p.id); o += `<a href="${up}provisions/${p.id}/"><circle class="p s-${p.standard}${p.by.length ? '' : ' out'} ${p.by.map(b => 'q-' + m.I.get(b.indicator).question).join(' ')}${hit(p.by.some(b => lit?.has(b.indicator)))}" cx="${x}" cy="${y}" r="3.6"><title>${esc(m.S.get(p.standard).short + ', ' + p.ref + ': ' + short(p.text, 140))}</title></circle></a>` }
+    for (const i of m.indicators) o += `<a href="${up}questions/#${i.id}"><circle class="i t-${i.tier} q-${i.question}${hit(lit?.has(i.id))}" cx="${xI}" cy="${iy.get(i.id).toFixed(1)}" r="4"><title>${esc(i.text + ' (' + TIER_LABEL[i.tier] + ' tier; cites ' + i.links.length + ')')}</title></circle></a>`
     for (const q of m.questions) {
         const y = qy.get(q.id)
-        o += `<g class="q q-${q.id}${hit(q.ind.some(i => lit?.has(i.id)))}" data-q="${q.id}" tabindex="0"><rect x="0" y="${y - rowQ / 2 + 2}" width="${xQ + 14}" height="${rowQ - 4}" rx="4"/><text x="${xQ - 6}" y="${y - 2}" text-anchor="end">${esc(short(q.text, 46))}</text><text class="dim" x="${xQ - 6}" y="${y + 12}" text-anchor="end">${q.id.replace('Q', 'Q ')} · ${q.axis} · ${q.provisions.length} provisions in ${q.standards.length} instrument${q.standards.length === 1 ? '' : 's'}</text><circle cx="${xQ + 6}" cy="${y}" r="5" class="ax-${q.axis}"/></g>`
+        o += `<g class="q q-${q.id}${hit(q.ind.some(i => lit?.has(i.id)))}" data-q="${q.id}"><a href="${up}questions/#${slugQ(q)}"><rect x="0" y="${y - rowQ / 2 + 2}" width="${xQ + 14}" height="${rowQ - 4}" rx="4"/><text x="${xQ - 6}" y="${y - 2}" text-anchor="end">${esc(short(q.text, 46))}</text><text class="dim" x="${xQ - 6}" y="${y + 12}" text-anchor="end">${q.id.replace('Q', 'Q ')} · ${q.axis} · ${q.provisions.length} provisions in ${q.standards.length} instrument${q.standards.length === 1 ? '' : 's'}</text><circle cx="${xQ + 6}" cy="${y}" r="5" class="ax-${q.axis}"/></a></g>`
     }
     if (lit) return o + `</svg><p class="figcap">Lit: the ${lit.size} indicators with evidence for this agent, the questions they answer and the provisions they reach.</p>`
     return o + '</svg><p class="figcap">Hover or tab to a question to see what one answer reaches. Hollow dots are provisions that no question reaches yet. Dashed lines are provisions that describe the absence of something.</p>'
