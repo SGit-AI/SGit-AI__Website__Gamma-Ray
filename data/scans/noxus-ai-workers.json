@@ -74,6 +74,71 @@
      }
     ]
    }
+  ],
+  "responses": [
+   {
+    "round": 1,
+    "answer": "I04, I08, I11, I17, I20, I21, I22, I23, I26, I38, I41, I45, I47, I54, I57, I61, S1, S3, S4",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change to these answers on the pass. S4's note is extended (see I25) with the authorisation sentence from the same MCP overview page; its source, span, grade and mode are unchanged."
+   },
+   {
+    "round": 1,
+    "answer": "I58",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Source moved to the tools page, which describes knowledge bases, connected databases queried read-only and workspace tables, so the note now matches its source; span verified on that page. Openness stays 2."
+   },
+   {
+    "round": 1,
+    "answer": "I03",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note narrowed to what the page says: a visual builder without code, and agents searching knowledge bases built from the organisation's documents and data. Span and level unchanged."
+   },
+   {
+    "round": 1,
+    "answer": "I10",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: the catalog lists Microsoft 365, Google Workspace, Atlassian, developer tools and collaboration suites, and the note claims only that integrations cover several suites, not that one agent uses them all."
+   },
+   {
+    "round": 1,
+    "answer": "I39",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change. The suggested Public Stop Run endpoint returns a workflow run (workflow_id in its schema), so it stops a flow run rather than an agent; the deactivate-deployment note already says only that a channel deployment can be deactivated. Recorded under not_credited."
+   },
+   {
+    "round": 1,
+    "answer": "I41",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: the logging page documents agent tool calls and reasoning steps and run-level logs, which meets the scope's wording; it is not used by the card while I43 is absent, and whether documented counts for an operation fact on a Spectrum card is left for the operator to settle if I43 is ever added."
+   },
+   {
+    "round": 1,
+    "answer": "I25",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note now includes that database queries run with that connection's privileges. The MCP overview's authorisation fact (workspace API key; tools gated by that key's permissions) is added to S4's note, which carries the published interface for Reach 3; I25 still rests on per-agent selection of tools and connections."
+   },
+   {
+    "round": 1,
+    "answer": "I18, I10, I08, I17",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: I18 stays documented-available under the hitl configuration, so Autonomy 4 reads only for an agent with HITL turned on, as the card already marks; Autonomy 3 holds without it through I08 and I17."
+   },
+   {
+    "round": 1,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Recomputed after the edits: still A4 R3 C2 O2; no level moved."
+   }
   ]
  },
  "assessment": {
@@ -94,7 +159,7 @@
  "answers": {
   "I03": {
    "e": "https://docs.noxus.ai/core/what-is-noxus",
-   "n": "Agents and flows are configured in a visual builder and connect to the organisation's own systems and data.",
+   "n": "Agents and flows are configured in a visual builder without code, and agents search knowledge bases built from the organisation's documents and data.",
    "span": "Build sophisticated automations without writing code.",
    "g": "documented",
    "m": "default"
@@ -173,7 +238,7 @@
   },
   "I25": {
    "e": "https://docs.noxus.ai/platform/agents/tools",
-   "n": "Each agent reaches only the flows, actions, knowledge bases and database connections selected for it; its SQL is generated read-only, and tables are read-only unless edits are allowed.",
+   "n": "Each agent reaches only the flows, actions, knowledge bases and database connections selected for it; its SQL is generated read-only and runs with that connection's privileges, and tables are read-only unless edits are allowed.",
    "span": "Select which database connection(s) the agent may query",
    "g": "documented",
    "m": "default"
@@ -239,9 +304,9 @@
    "cfg": "obs-feedback"
   },
   "I58": {
-   "e": "https://docs.noxus.ai/platform/concepts/agents",
-   "n": "Agents read from the organisation's knowledge bases, tables and connected databases.",
-   "span": "Search and retrieve information from knowledge bases",
+   "e": "https://docs.noxus.ai/platform/agents/tools",
+   "n": "The tools page describes the data an agent can use: knowledge bases, connected databases queried read-only, and workspace tables.",
+   "span": "Query, and optionally edit, workspace tables",
    "g": "documented",
    "m": "default"
   },
@@ -269,13 +334,24 @@
   },
   "S4": {
    "e": "https://docs.noxus.ai/sdk/mcp/overview",
-   "n": "A hosted MCP server lets external clients and agents call Noxus agents, conversations and workflows as tools.",
+   "n": "A hosted MCP server lets external clients and agents call Noxus agents, conversations and workflows as tools, authenticated with a workspace API key whose permissions gate the tools.",
    "span": "Drive the Noxus platform from any MCP-compatible client",
    "g": "documented",
    "m": "default"
   }
  },
- "not_credited": [],
+ "not_credited": [
+  {
+   "what": "Public Stop Run endpoint (POST /v1/runs/{run_id}/stop) as the source for I39",
+   "why": "Its response schema is a workflow run (workflow_id, node_ids), so it stops a flow run, not an agent; the deactivate-deployment source is kept with its narrow note.",
+   "source": "https://docs.noxus.ai/api-reference/v1--runs/public-stop-run"
+  },
+  {
+   "what": "I12 or I13 (coordinates other agents) from the multi-agent mention",
+   "why": "One sentence on what-is-noxus says the tools can be composed into multi-agent environments; it does not document an agent coordinating other agents.",
+   "source": "https://docs.noxus.ai/core/what-is-noxus"
+  }
+ ],
  "announced": [
   {
    "what": "Genie evaluations: Genie will write and run tests for flows and agents (coming soon page)",
@@ -346,87 +422,82 @@
   "https://backend.noxus.ai/openapi.json": {
    "sha256": "acf57bee22546b3abc01b8243571ce794f448da20a31ee669930fa00afe100da",
    "bytes": 909642,
-   "read_at": "2026-11-10T10:39Z"
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://docs.noxus.ai/api-reference/v1--deployments/deactivate-deployment": {
-   "sha256": "fa8002433ecb7c911f446d1b8ba48f96c05702f7ba85dc8ebf8289af80d6ca3e",
-   "bytes": 482824,
-   "read_at": "2026-11-10T10:39Z"
+   "sha256": "8f3513998ba71ee5458579330cf3e5df11d28e75c552a975765f298d36617aae",
+   "bytes": 482693,
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://docs.noxus.ai/core/concepts/agents": {
-   "sha256": "f599b7df7b3a0a20cc3f0b668389de349ca85d6746af0f00a2c961a7d10ab153",
-   "bytes": 188894,
-   "read_at": "2026-11-10T10:39Z"
+   "sha256": "7a3cd3a8a80eda871a9e0784a5b8d21fb696181b4dfb836f042da7796104c2ae",
+   "bytes": 188763,
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://docs.noxus.ai/core/infrastructure/models-providers": {
-   "sha256": "24dde5bdbb6ca0c12bb7ea4639f26e04ad097eec6a584363b01f4e127e0f6dd2",
-   "bytes": 310274,
-   "read_at": "2026-11-10T10:39Z"
+   "sha256": "07871ddc8cdc31c0b1adba7c0dc012b0becd16de3620194505447ec3aeae4b72",
+   "bytes": 310143,
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://docs.noxus.ai/core/infrastructure/observability-providers": {
-   "sha256": "094f38f0de99a6937af34d0ee677e628fd5de4602b5b63d870144d3046c886eb",
-   "bytes": 184216,
-   "read_at": "2026-11-10T10:39Z"
+   "sha256": "c68d9ab6a421ec4f38b227930b0d2b50301fe31c979e4b9f407098edf31e1948",
+   "bytes": 184085,
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://docs.noxus.ai/core/what-is-noxus": {
-   "sha256": "f67b8a1ef1ce0928ea4a4dc571a1ece984bf6962063202090183b2c050b1b787",
-   "bytes": 242932,
-   "read_at": "2026-11-10T10:39Z"
+   "sha256": "7d7d75d93fa0de0481c0f57e04515fc7e34a672356c40730deeff403e95a203e",
+   "bytes": 242801,
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://docs.noxus.ai/deployment/operations/logging": {
-   "sha256": "306501fb79d687043093aa88679629172b1c3b504b546ce7ad3027132c96c0bf",
-   "bytes": 173411,
-   "read_at": "2026-11-10T10:39Z"
+   "sha256": "1c9046cef2b13f025f52f081549fa484fb2204fde3e7da7f31bc89dd37df6f0a",
+   "bytes": 173280,
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://docs.noxus.ai/integrations/catalog": {
-   "sha256": "d5316e3291a5b71156a7c9c883c309e9a161bcaf4e37601d51491938afbf6a01",
-   "bytes": 162934,
-   "read_at": "2026-11-10T10:39Z"
+   "sha256": "5d6ac89efdac4b92c705f098f4796b572ad56c5b1eed6f3ace253da0b6a2471a",
+   "bytes": 162803,
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://docs.noxus.ai/platform/agents/deployments/google-chat": {
-   "sha256": "ddae47a82173403d85f9022e4107b8721897c13071db255fee7ee2a8782f27e2",
-   "bytes": 334538,
-   "read_at": "2026-11-10T10:39Z"
+   "sha256": "7243c4e48d64f8b3d370bdae5d4cf6d132d4eee93e1403eb5fbe3910e2b024d0",
+   "bytes": 334407,
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://docs.noxus.ai/platform/agents/introduction": {
-   "sha256": "15ba455a7092d468119102a8234bfa7a6d54592f3e41a31973f5955cb4cbfaf9",
-   "bytes": 181762,
-   "read_at": "2026-11-10T10:39Z"
+   "sha256": "a382e91011b1d938d03eb0417a1e108f54144177a936ce839e29c23b95339163",
+   "bytes": 181631,
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://docs.noxus.ai/platform/agents/sandbox": {
-   "sha256": "75c96bd5398f4a78803c7e4b540b1e94193877167be97af45b3c15e187214f1f",
-   "bytes": 201680,
-   "read_at": "2026-11-10T10:39Z"
+   "sha256": "5406bc8307d96e303062e8359e0c9143b6eb20a5c770483377a7355aa0192e4a",
+   "bytes": 201549,
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://docs.noxus.ai/platform/agents/tools": {
-   "sha256": "8ad6df315e0abaa7e258f5ee3c50c1a6bed52a6b5a3c6614722003fa946bf2ce",
-   "bytes": 251220,
-   "read_at": "2026-11-10T10:39Z"
-  },
-  "https://docs.noxus.ai/platform/concepts/agents": {
-   "sha256": "d6c4ba1a7f8840b269d3b18df1dbbcc670dbc501b18d7ff37405e0a41aad6b57",
-   "bytes": 227313,
-   "read_at": "2026-11-10T10:39Z"
+   "sha256": "6284c127b851feea9eb4a902d02935287e98f13819719934e9b981ba2ef84ce1",
+   "bytes": 251089,
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://docs.noxus.ai/sdk/mcp/overview": {
-   "sha256": "4e46018467bf13d3f9cb3340d7dc64d0e33614697bf9f42f9993ee739f670965",
-   "bytes": 185598,
-   "read_at": "2026-11-10T10:39Z"
+   "sha256": "1dc092eb19af6d61c83819c82fe056ca5d5ffeb12af04200fabf0df6c47a1bcd",
+   "bytes": 185467,
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://status.noxus.ai/": {
-   "sha256": "318a9fc1394815c041f960c2bf9ba2e30eecf3ddc4f70c6c655420b2ed0572fe",
+   "sha256": "9f44bf45c44deab40545251de805b8474d136ec5bd8d0b871ef3ef027c542bae",
    "bytes": 80478,
-   "read_at": "2026-11-10T10:39Z"
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://www.noxus.ai/aboutus": {
    "sha256": "0109bcdc540a1a13b7fc08bd99728557a43a7efe0cbcae128f0b28c9c59e0981",
    "bytes": 293111,
-   "read_at": "2026-11-10T10:39Z"
+   "read_at": "2026-11-10T13:47Z"
   },
   "https://www.noxus.ai/case-studies/cuf-healthcare": {
    "sha256": "278999c51d7a72d791f3425969036e0cddfecee3567f072783a0f37e2f325c0e",
    "bytes": 294129,
-   "read_at": "2026-11-10T10:39Z"
+   "read_at": "2026-11-10T13:47Z"
   }
  }
 }
