@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.65",
+    "date": "2026-11-10",
+    "what": "round one of review on junie",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "50817f910"
+  },
+  {
     "version": "v0.0.64",
     "date": "2026-11-10",
     "what": "round one of review on getvocal-agents",
