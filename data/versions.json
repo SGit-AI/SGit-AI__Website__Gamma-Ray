@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.127",
+    "date": "2026-11-10",
+    "what": "the walk links each indicator to its own row again",
+    "by": "gamma.graphs@web-summit.dinis",
+    "from": "2f604a76b"
+  },
+  {
     "version": "v0.0.126",
     "date": "2026-11-10",
     "what": "log",
