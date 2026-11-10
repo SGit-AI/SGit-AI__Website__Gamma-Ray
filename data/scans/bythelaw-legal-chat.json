@@ -280,6 +280,48 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "No level three or four to defend. A1 rests on I15 alone, now worded for the chat only; R2 on I11, marked available with the Citius configuration and its experimental, selected-user status in the configuration note; C1 on I47 (and I38), both mode available for Citius, so Control shows as an available-mode level; O2 on I22 and I58, default. The reviewer's correction is accepted: the card publishes on R2 and O2 even without I15."
+   },
+   {
+    "round": 3,
+    "answer": "announced",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Every announced item now cites a captured source: the two product-page items move to llms.txt, which says 'a fully autonomous Legal AI' and 'up to ~20h/week saved' (re-fetched 10 November 2026, hash matches the 17:48Z capture), and 'service-as-a-software', found only on the product page, is dropped. The NPL pilot item (index 1) is removed because only the uncaptured NPL page says it; to keep it, run tools/capture.mjs so the scan records a hash for https://bythelaw.com/en/npl/ ('We are preparing a paid pilot in Portugal with one of the largest Iberian NPL servicers', re-fetched today), and leave index 1 as it is."
+   },
+   {
+    "round": 3,
+    "answer": "I15",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Accepted; no change."
+   },
+   {
+    "round": 3,
+    "answer": "I57",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Accepted; no change."
+   },
+   {
+    "round": 3,
+    "answer": "I01",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Accepted; no change. The note already says that 'used as supplied' is the scan's reading."
+   },
+   {
+    "round": 3,
+    "answer": "I39, I07, I46, I36, S3, not_credited",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Accepted; no change."
+   },
+   {
+    "round": 3,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No level three or four is on the card (A1 R2 C1 O2), so nothing has to be defended. The limits the reviewer names are already in the notes: A1 is read for the chat only, and R2 and C1 rest on the Citius configuration with mode available, so the card shows them as available. No change."
    }
   ]
  },
@@ -443,16 +485,12 @@
    "source": "https://bythelaw.com/en/"
   },
   {
-   "what": "A paid NPL pilot with an Iberian servicer is being prepared.",
-   "source": "https://bythelaw.com/en/npl/"
+   "what": "llms.txt calls the product 'a fully autonomous Legal AI'; not counted.",
+   "source": "https://bythelaw.com/llms.txt"
   },
   {
-   "what": "Marketing calls the product 'fully autonomous' and a 'service-as-a-software'; not counted.",
-   "source": "https://bythelaw.com/en/product/"
-  },
-  {
-   "what": "Product page claims up to 20 hours a week saved; not counted.",
-   "source": "https://bythelaw.com/en/product/"
+   "what": "llms.txt claims up to about 20 hours a week saved; not counted.",
+   "source": "https://bythelaw.com/llms.txt"
   }
  ],
  "configurations": [
@@ -481,59 +519,59 @@
  ],
  "captures": {
   "https://app.bythelaw.com/pt/termos-citius": {
-   "sha256": "f4f0c1e31279b4cfc3f97db6c2ce4b4f9bcbcd7ce39824c950797c9fc1da0f56",
-   "bytes": 55478,
-   "read_at": "2026-11-10T17:48Z"
+   "sha256": "8cdb661d2a779f7d7386f59a5e0fc5fc88354cef992c1567af392e0f5ca90917",
+   "bytes": 55476,
+   "read_at": "2026-11-10T18:45Z"
   },
   "https://bythelaw.com/en/": {
    "sha256": "36d714b4205c7b076a0bd85184c196d15388ffe5e2a4fa5954375ad38a5d57cf",
    "bytes": 91735,
-   "read_at": "2026-11-10T17:48Z"
+   "read_at": "2026-11-10T18:45Z"
   },
   "https://bythelaw.com/llms.txt": {
    "sha256": "8d558d4149240db06e57369e23da302a7e5ae99476ab4ba809aa6595ff557451",
    "bytes": 4557,
-   "read_at": "2026-11-10T17:48Z"
+   "read_at": "2026-11-10T18:45Z"
   },
   "https://help.bythelaw.com/en/escolher-as-fontes-de-um-projeto/": {
    "sha256": "65b55689e0a9d696585097139513224ad46a0e3a63231773d83f802a4be4e920",
    "bytes": 38162,
-   "read_at": "2026-11-10T17:48Z"
+   "read_at": "2026-11-10T18:45Z"
   },
   "https://help.bythelaw.com/en/escrever-o-primeiro-prompt/": {
    "sha256": "d975dcaa530f859f27b4503536d6d28dee7c7995bb032c3cb45ef99136632623",
    "bytes": 38633,
-   "read_at": "2026-11-10T17:48Z"
+   "read_at": "2026-11-10T18:45Z"
   },
   "https://help.bythelaw.com/en/fontes-oficiais/": {
    "sha256": "ba9211ba0a9d771ebcdacc40aea1ad6431031b33c081c1b999b5b79085366974",
    "bytes": 41833,
-   "read_at": "2026-11-10T17:48Z"
+   "read_at": "2026-11-10T18:45Z"
   },
   "https://help.bythelaw.com/en/formatos-limites-e-ocr/": {
    "sha256": "1ce90174b97b213cde9226f1871ea348ed620d3c4514a466800b856478cb571d",
    "bytes": 38031,
-   "read_at": "2026-11-10T17:48Z"
+   "read_at": "2026-11-10T18:45Z"
   },
   "https://help.bythelaw.com/en/o-que-e-a-bythelaw/": {
    "sha256": "089820ad43c181f54710ab2cb1db81234bc448d4b5c16909a40f41aac9e7ae54",
    "bytes": 38168,
-   "read_at": "2026-11-10T17:48Z"
+   "read_at": "2026-11-10T18:45Z"
   },
   "https://help.bythelaw.com/en/privacidade-e-dados/": {
-   "sha256": "20e1736d7feae1f542bb985b20999f0e44b11625ffbf9dcbe125d55f2f54b4c2",
+   "sha256": "c323bf8686d890fcea49d0e9ba7d1da294a113f6021ece3c331409b631562c08",
    "bytes": 38874,
-   "read_at": "2026-11-10T17:48Z"
+   "read_at": "2026-11-10T18:45Z"
   },
   "https://help.bythelaw.com/novidades/pesquisa-web-para-todos-e-novo-perfil/": {
    "sha256": "2ffd847d4ec836ab52db9d73cef42e9232bd26e3fa7329217ab8782819cf0aa1",
    "bytes": 19818,
-   "read_at": "2026-11-10T17:48Z"
+   "read_at": "2026-11-10T18:45Z"
   },
   "https://help.bythelaw.com/novidades/soft-law-financeira-e-controlo-das-respostas/": {
    "sha256": "f54b4fede4d617257f22eb7b58e73253d5596a83cbc11c0e9521eb046e6582ba",
    "bytes": 19994,
-   "read_at": "2026-11-10T17:48Z"
+   "read_at": "2026-11-10T18:45Z"
   }
  }
 }
