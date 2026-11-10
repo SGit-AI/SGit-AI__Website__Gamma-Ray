@@ -126,3 +126,6 @@ td[data-label="Company"]{font-weight:600;white-space:nowrap}
 @media (max-width:600px){td[data-label="Read"],td[data-label="Sources"],td[data-label="Provisions lit"],td[data-label="Company"]{white-space:normal}}
 .sp-cards .sp-card{display:flex;flex-direction:column}.sp-cards .sp-card .sp-foot{margin-top:auto!important}.sp-cards .sp-card .sp-const{flex:none}
 .sp-cards .sp-card p{margin:.25em 0}.sp-cards .sp-card .sp-row{margin:6px 0 4px}
+.sg{display:inline-block;font:700 12px/1 var(--sans);padding:3px 6px;margin:0 1px;border-radius:5px;color:#fff;vertical-align:1px}.sg-A{background:var(--c-mcp)}.sg-R{background:var(--c-sf)}.sg-C{background:var(--accent)}.sg-O{background:var(--c-eaamm)}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .sg{color:#12131a}}
+.nc{color:var(--ink3)}
