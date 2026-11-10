@@ -258,6 +258,62 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "Card unchanged at A4, R2, C1, O1 (sum 8, Building) after the edits; Autonomy 4 now rests on I08, I10 and an I19 whose source shows both autonomy within scope and the customer's view of findings. The lowered answers and announced sources were not part of the findings and were not re-checked here."
+   },
+   {
+    "round": 2,
+    "answer": "I19",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Source replaced with the Test Details page, which carries both halves on one page: the boundaries (the customer's policy, not editable once a pentest has started) and the person monitoring (an activity log of Hackian's actions 'giving clients visibility into what is being tested and how the assessment is progressing'); there is no approval step on the page. The policy-guidelines page corroborates the autonomy half ('an agentic test relies on this policy to make decisions in real time', verified on re-fetch) but an answer takes one source, so the page with the monitoring sentence, the half that distinguishes I19 from I16 to I18, is cited."
+   },
+   {
+    "round": 2,
+    "answer": "I10",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept: the CAEV page says Hackian 'continuously monitors your domains and surface' and runs checks 'across all assets in scope', which is the literal text of I10 (several domains or systems); no claim of coordinating agents is made (I12 stays not credited)."
+   },
+   {
+    "round": 2,
+    "answer": "I57",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note changed to say the Support Portal takes tickets about the Ethiack platform and does not name Hackian or its findings, so a reader sees the credit is platform-wide. I looked for a channel tied to findings: the Updates feed is with hackers and triagers of an engagement and the Invalid status is not shown to be the customer's to set, so both stay not credited. No level uses I57."
+   },
+   {
+    "round": 2,
+    "answer": "I39",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Span extended to 'the header also includes a control to pause or restart the test' (12 words, exact on the re-fetched page) so it shows the claim; the note keeps 'continuous tests only'. No level changes."
+   },
+   {
+    "round": 2,
+    "answer": "I22",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept: the Expert Pentests page names technologies Hackian 'does not currently handle on its own, such as mobile applications', a documented limit of the agent, which I22 covers ('its limits'); the note calls it a scope limit and claims no failure cases. The CAEV 'prioritizing coverage over depth' is a design choice of one mode rather than a limit of the agent, so it is not added."
+   },
+   {
+    "round": 2,
+    "answer": "S1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the reviewer found the answer correct."
+   },
+   {
+    "round": 2,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Autonomy 4: I08 is a product-page statement, documented and graded as such; I10 is answered above (the page's own words are 'your domains' and 'all assets in scope'); I19 now rests on a page that shows a fixed policy and a customer watching an activity log, and the policy page independently says the agent makes its decisions in real time. All three are documented, mode default, and the card says so; the level is held by the rule and I do not lower it, though the evidence is vendor documentation only and nothing is observed. Reach 2 is conceded as a reading, not a level: the rule any(I10, I11) is met by I10 (default) and I11 (Beacon, available), neither is a connector, and this is recorded in not_credited. Control 1 and Openness 1 are not level three or four and stand as the reviewer found them."
+   },
+   {
+    "round": 2,
+    "answer": "I04, I50, I11, I08, I20, I47, S3, I41",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; passed."
    }
   ]
  },
@@ -304,9 +360,9 @@
    "cfg": "beacon"
   },
   "I19": {
-   "e": "https://docs.ethiack.com/docs/portal/tests/continuous-adversarial-exposure-validation",
-   "n": "Once a continuous test is launched, Hackian tests the assets in the customer's scope on its own, and the page says findings appear in real time and alerts are raised so the team can act.",
-   "span": "Hackian will immediately begin testing the assets in scope, continuously",
+   "e": "https://docs.ethiack.com/docs/portal/tests/test-details",
+   "n": "The test page shows the customer's policy, which cannot be edited once a pentest has started, and an activity log of the actions Hackian performs that gives the customer visibility of the test's progress.",
+   "span": "giving clients visibility into what is being tested and how the assessment is progressing",
    "g": "documented",
    "m": "default"
   },
@@ -326,8 +382,8 @@
   },
   "I39": {
    "e": "https://docs.ethiack.com/docs/portal/tests/test-details",
-   "n": "A continuous test page has a control to pause or restart the test.",
-   "span": "tests, the header also includes a control to",
+   "n": "A continuous test page has a control to pause or restart the test; the page gives it for continuous tests only.",
+   "span": "the header also includes a control to pause or restart the test",
    "g": "documented",
    "m": "default"
   },
@@ -354,7 +410,7 @@
   },
   "I57": {
    "e": "https://docs.ethiack.com/docs/general/support-portal",
-   "n": "Customers report problems with the platform as tickets in Ethiack's Support Portal, describing how to reproduce the issue and the unexpected outcome.",
+   "n": "Customers open tickets about the Ethiack platform in its Support Portal, with steps to reproduce and the unexpected outcome; the page does not name Hackian or its findings.",
    "span": "Add a step by step guide of how you reproduce the issue.",
    "g": "documented",
    "m": "default"
@@ -395,6 +451,16 @@
    "what": "I57 through the finding Updates feed",
    "why": "The feed of comments 'between all participants' is described with ethical hackers and triagers of an engagement; the Support Portal is the general channel and is cited instead.",
    "source": "https://docs.ethiack.com/docs/portal/findings/details"
+  },
+  {
+   "what": "I57 through the Invalid finding status",
+   "why": "The status flow page defines Invalid as 'usually assigned to vulnerabilities that are false positives' but does not say the customer can set it or contest a finding with it; it is a status, not a channel.",
+   "source": "https://docs.ethiack.com/docs/portal/findings/vulnerability-status-flow"
+  },
+  {
+   "what": "Reach 2 read as connectors",
+   "why": "Neither credited Reach answer is a connector the agent uses; the Integrations page (Slack, Jira Cloud, Splunk, webhooks, CI/CD) routes the platform's findings and stays not credited to I11. The level is met by the rule any(I10, I11), not by connectors.",
+   "source": "https://docs.ethiack.com/docs/portal/integrations"
   }
  ],
  "announced": [
@@ -441,59 +507,59 @@
  ],
  "captures": {
   "https://docs.ethiack.com/docs/general/support-portal": {
-   "sha256": "bf52434faf8654699d0d87d70e7d6b9b8396df18f70c2e7bd721af74d5c93941",
+   "sha256": "c199055f99dd8d62ecc8fac900199dde84f23a39a0248789d272acb756335fe8",
    "bytes": 230735,
-   "read_at": "2026-11-10T13:48Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://docs.ethiack.com/docs/portal/surface/configuring-your-beacon": {
-   "sha256": "26ae1e8ed8665c46c6a9dda43c6d0e4253630ea3d899559ed3c947edcf399407",
+   "sha256": "34df9f424e208778355b6fa3dc1e1bc11db8318a3b94f765c49cbc0b5879e342",
    "bytes": 343242,
-   "read_at": "2026-11-10T13:48Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://docs.ethiack.com/docs/portal/tests/agentic-pentest-policy-guidelines": {
-   "sha256": "41a24089196b27f2671b35674c66ab2e1abbc0a1f6bd4b589b3273776a64b301",
+   "sha256": "1d0df5bcc3dd0d1dec9324f603c6458ac5462b65b9b95cd89854dfa6ca703990",
    "bytes": 246595,
-   "read_at": "2026-11-10T13:48Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://docs.ethiack.com/docs/portal/tests/agentic-pentests": {
-   "sha256": "3715d729b9f3be0a217e845ac3412add0746edf19e5217453e0ba60a78a17769",
+   "sha256": "944c113087530ea5aabc2b4ed6e0eee9a6af6e5c72cea95af9a18623fc349d8b",
    "bytes": 233529,
-   "read_at": "2026-11-10T13:48Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://docs.ethiack.com/docs/portal/tests/continuous-adversarial-exposure-validation": {
-   "sha256": "e6b6d18084008550d1a6c4835cdd7c304808e69c18c599791a0758c01a2ba32f",
+   "sha256": "cd0ae5a00665f433050c8d2fae97cc441fe1c85d9a8ae22585989f603409c35c",
    "bytes": 230332,
-   "read_at": "2026-11-10T13:48Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://docs.ethiack.com/docs/portal/tests/human-in-the-loop": {
-   "sha256": "aa4e1d768851756948a652c37447b631acb623f4c0d8a00061282efbc00582da",
+   "sha256": "c320a260db041fe7cca2d2c97eff77175fe16ca5b86d8a37011b8e4ddd7e20e0",
    "bytes": 227727,
-   "read_at": "2026-11-10T13:48Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://docs.ethiack.com/docs/portal/tests/test-details": {
-   "sha256": "9c43b07258f39b3a202f09df985c3ef27ccc48a0acb9e79817d8710ae35816f0",
+   "sha256": "83120b4fae441256c74ece2ec35d361687a23782923b95b9dcf0c791bc7b1fb3",
    "bytes": 254499,
-   "read_at": "2026-11-10T13:48Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://docs.ethiack.com/llms.txt": {
    "sha256": "f0f352298b06ae2a1ed034ee626a9d45baa156dd50d44dfba8cfa43006d1b0bb",
    "bytes": 54222,
-   "read_at": "2026-11-10T13:48Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://ethiack.com/hackian": {
-   "sha256": "46201b29e69df78f2d3aac0f2643f5f3d37e642d45b623ab7fc06e675820721a",
+   "sha256": "5f4cecee0abc3d7ac58c29535d3c95b746dd85ceea6b90093944eb9bc9a1a5fe",
    "bytes": 420871,
-   "read_at": "2026-11-10T13:48Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://ethiack.com/info-hub/case-studies/scaling-security-how-uporto-and-ethiack-protected-5000-assets-with-ai-powered-intelligence": {
-   "sha256": "3659d51b77665219982d030ddc4bd2b80f8c90e1559ab271ceb1f9304a1a5cfd",
+   "sha256": "5b34d184cb10e624233d924e435abaee8ea0c60d5f577a8952b56ab05184f3c5",
    "bytes": 286290,
-   "read_at": "2026-11-10T13:48Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://ethiack.com/info-hub/research/ai-pentesting-benchmarks-are-so-bad-we-made-a-new-one": {
-   "sha256": "0cfc742928a6069c1ee5faa7888818072819135c9dfc61e7bbac4889e52d0d60",
+   "sha256": "a80896db5705974ddc4ee66d581bcbc627dd3118949bcfebec066626dc484ea3",
    "bytes": 320186,
-   "read_at": "2026-11-10T13:48Z"
+   "read_at": "2026-11-10T16:45Z"
   }
  }
 }
