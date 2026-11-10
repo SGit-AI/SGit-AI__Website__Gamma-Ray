@@ -279,3 +279,21 @@ export function cardWalk(m, sp, scanId, up = '../../../') {
     const sentence = `${scan.name}: ${c.dims.map(d => `${d.name} ${d.level ? 'level ' + d.level : 'not yet evidenced'}`).join(', ')}. ${c.answers} evidenced indicators, ${c.sources} sources, ${instAll.size} instruments touched. The same walk is listed in text below.`
     return `<svg class="fig walk" style="min-width:0;max-width:520px;margin:0 auto" viewBox="0 0 ${W} ${H}" role="group" aria-label="${esc(sentence)}">${css}${body}</svg><p class="figcap">The walk down from this card: each dimension, the indicators its level stands on (a link to the question), the public source of each answer (a link out; dashed means available, not default) and the instruments its provisions sit in (a link to the instrument). A solid frame is evidenced; a dashed frame is not yet evidenced, which is not a no.</p>`
 }
+
+// 10. The cohort: the published cards side by side, one row per card, one block of four cells per dimension. A card is a link;
+// the cells are filled to the card's level; the level is also written as a number, so colour is never the only signal.
+// Only cards the scorer says are publishable (a level one or more somewhere) are drawn.
+export function cohort(m, sp, up = '') {
+    const rows = m.scans.map(s => ({ s, c: card(s, sp, m) })).filter(x => x.c.publishable)
+    if (!rows.length) return ''
+    const W = 440, x0 = 150, cw = 66, rh = 46, top = 44, H = top + rows.length * rh + 6
+    let o = `<svg class="fig walk cohort" style="min-width:0;max-width:520px;margin:0 auto" viewBox="0 0 ${W} ${H}" role="group" aria-label="${esc(rows.map(({ s, c }) => `${s.name}: ${c.signature}`).join('; '))}"><style>.cohort text{font:12.5px var(--sans);fill:var(--ink)}.cohort .ch{font:600 11.5px var(--sans)}.cohort .sm{font-size:11px;fill:var(--ink3)}.cohort .ce{fill:var(--hair)}.cohort .on{fill:var(--dc)}.cohort .sp-A{--dc:var(--t2)}.cohort .sp-R{--dc:var(--c-sf)}.cohort .sp-C{--dc:var(--accent)}.cohort .sp-O{--dc:var(--c-eaamm)}.cohort .lv{font:700 13px var(--mono)}.cohort a:hover rect.row,.cohort a:focus rect.row{fill:var(--band)}.cohort rect.row{fill:none}</style>`
+    sp.dimensions.forEach((d, i) => { o += `<text class="ch sp-${d.id}" x="${x0 + i * cw + 2}" y="18" style="fill:var(--dc)">${esc(d.name)}</text>` })
+    rows.forEach(({ s, c }, r) => {
+        const y = top + r * rh
+        o += `<a href="${esc(up)}spectrum/cards/${esc(s.id)}/"><title>${esc(s.name)}: ${esc(c.signature)}${c.stage ? ', ' + esc(c.stage) : ''} (the card)</title><rect class="row" x="0" y="${y - 4}" width="${W}" height="${rh - 4}" rx="6"/><text x="2" y="${y + 14}">${esc(short(s.name, 22))}</text><text class="sm" x="2" y="${y + 29}">${esc(c.stage || 'not yet')} · ${c.sum} of 16</text>`
+        c.dims.forEach((d, i) => { o += `<g class="sp-${d.id}">` + [1, 2, 3, 4].map(n => `<rect class="ce${n <= d.level ? ' on' : ''}" x="${x0 + i * cw + 2 + (n - 1) * 11}" y="${y + 4}" width="9" height="9" rx="2"/>`).join('') + `<text class="lv" x="${x0 + i * cw + 2}" y="${y + 29}">${d.level || '·'}</text></g>` })
+        o += `</a>`
+    })
+    return o + `</svg><p class="figcap">The published cards side by side: four dimensions, each filled to its level and written as a number (a dot is not yet evidenced, which is not a no). Each row links to its card.</p>`
+}
