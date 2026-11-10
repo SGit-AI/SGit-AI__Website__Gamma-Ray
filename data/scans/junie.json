@@ -124,6 +124,141 @@
      }
     ]
    }
+  ],
+  "responses": [
+   {
+    "round": 1,
+    "answer": "I25",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Re-anchored on the page's sentence that the user can adapt the templates' permissions, and the note now says the template sets write on three repository scopes (contents, pull requests, issues); the claim that Junie runs with the workflow token is dropped. Mode available and cfg github-action kept."
+   },
+   {
+    "round": 1,
+    "answer": "I23",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Added under the Spectrum card reading: the Action Allowlist page enumerates five action types with allow or ask rules, which are documented permission scopes, default mode. Control 2 now has a second route (I38 plus I23)."
+   },
+   {
+    "round": 1,
+    "answer": "I45",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Added under the Spectrum card reading as mode available with a new configuration 'sandbox': the note names the OS-level sandbox (srt) as what enforces it and says it is Early Access, off by default, and does not isolate MCP servers or hooks. No level change, since Control 3 is not met."
+   },
+   {
+    "round": 1,
+    "answer": "I08",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Dropped 'the default' and the GitHub Action clause, which the cited page does not state; the note now says only what the IDE plugin page says about code mode. Grade, mode and span unchanged."
+   },
+   {
+    "round": 1,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change to the levels' basis beyond the edits listed; A4 stays an available, user-enabled step as the rule text allows, and I12 stays unclaimed. C2 now rests on I38 with I23 and I25."
+   },
+   {
+    "round": 1,
+    "answer": "I10",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "The note now says databases are reached through DataGrip or the JetBrains Database plugin and that reviews from GitHub Actions or GitLab need that integration set up; codebase, terminal and debugger keep mode default."
+   },
+   {
+    "round": 1,
+    "answer": "S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the reviewer confirmed llms.txt and the OpenAPI files resolve, and S4 stays unclaimed."
+   },
+   {
+    "round": 1,
+    "answer": "I50",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the note already says the figures are quoted from the Nebius research lead."
+   },
+   {
+    "round": 1,
+    "answer": "I52",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the note attributes 'independent' to the post, and I63 stays unclaimed."
+   },
+   {
+    "round": 1,
+    "answer": "I56",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Removed: the source describes the product to its user, which is not the agent disclosing to the people it talks to; recorded in not_credited."
+   },
+   {
+    "round": 1,
+    "answer": "I46",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Removed: the page shows the allowlist as a file the user edits and brave mode as a user toggle, not a limit the agent's own account could change; recorded in not_credited."
+   },
+   {
+    "round": 1,
+    "answer": "I47",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Re-anchored on the page's sentence that the global AGENTS.md can hold organization-wide rules for all projects, so the credit rests on rules in prose, not only on context. Mode available kept."
+   },
+   {
+    "round": 1,
+    "answer": "I48",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; it is graded documented and needs operation, so the scorer does not count it, and the card does not use it."
+   },
+   {
+    "round": 1,
+    "answer": "I22",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the headless page documents a limit for users (non-interactive runs load project configuration without a trust prompt)."
+   },
+   {
+    "round": 1,
+    "answer": "I20",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Span extended to include the purpose words 'review, write, and modify code', checked on the page."
+   },
+   {
+    "round": 1,
+    "answer": "I65",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "The note now names JetBrains Air as the product line the strategy is for, and says the post states Air will support Junie; span unchanged."
+   },
+   {
+    "round": 1,
+    "answer": "I61",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the note matches the providers page."
+   },
+   {
+    "round": 1,
+    "answer": "I04, I07, I11, I16, I17, I18, I19, I21, I38, I57, I58",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the reviewer confirmed each source, span and mode."
+   },
+   {
+    "round": 1,
+    "answer": "S1, S4",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; both stay unclaimed and the two set-aside usage figures stay in not_credited."
+   }
   ]
  },
  "assessment": {
@@ -161,14 +296,14 @@
   },
   "I08": {
    "e": "https://junie.jetbrains.com/docs/junie-ide-plugin.html",
-   "n": "In code mode, the default, Junie runs terminal commands, creates and edits files and runs tests itself. The GitHub Action also opens pull requests from issues (available).",
+   "n": "In code mode, Junie breaks a task into a plan and itself runs terminal commands, creates and edits files and runs tests.",
    "span": "it can autonomously run terminal commands, create new files, write or edit code",
    "g": "documented",
    "m": "default"
   },
   "I10": {
    "e": "https://blog.jetbrains.com/junie/2026/06/junie-coding-agent-out-of-beta/",
-   "n": "Junie works across the codebase, the terminal, the IDE debugger, databases configured in the IDE, and reviews triggered from GitHub Actions or GitLab.",
+   "n": "Junie works across the codebase, the terminal and the IDE debugger; it queries databases configured in the IDE through DataGrip or the JetBrains Database plugin, and reviews can be triggered from GitHub Actions or GitLab once that integration is set up.",
    "span": "Junie connects to the databases configured in your IDE",
    "g": "documented",
    "m": "default"
@@ -215,7 +350,7 @@
   "I20": {
    "e": "https://junie.jetbrains.com/docs/junie-cli.html",
    "n": "The documentation states what Junie CLI is for: reviewing, writing and modifying code.",
-   "span": "is the agentic coding tool by JetBrains that provides an interactive terminal interface",
+   "span": "provides an interactive terminal interface for developers to review, write, and modify code",
    "g": "documented",
    "m": "default"
   },
@@ -233,10 +368,17 @@
    "g": "documented",
    "m": "default"
   },
+  "I23": {
+   "e": "https://junie.jetbrains.com/docs/action-allowlist-junie-cli.html",
+   "n": "The Action Allowlist page enumerates five action types (fileEditing, executables, mcpTools, readOutsideProject, readSecretFile), each with rules set to allow or ask.",
+   "span": "Each rule must specify either a prefix or a pattern",
+   "g": "documented",
+   "m": "default"
+  },
   "I25": {
    "e": "https://junie.jetbrains.com/docs/junie-on-github.html",
-   "n": "The GitHub Action template sets the job's permissions to write on contents, pull requests and issues; Junie runs with that workflow token.",
-   "span": "The GitHub token used by the Junie action.",
+   "n": "The workflow template on the page sets the job's permissions to write on three repository scopes (contents, pull requests, issues), and the page says the user can adapt the templates' permissions.",
+   "span": "You can adapt the templates to configure triggers, permissions, branches, or output",
    "g": "documented",
    "m": "available",
    "cfg": "github-action"
@@ -248,17 +390,18 @@
    "g": "documented",
    "m": "default"
   },
-  "I46": {
+  "I45": {
    "e": "https://junie.jetbrains.com/docs/junie-cli.html",
-   "n": "The allowlist is a file in the user's home directory that the user can edit; brave mode is a toggle.",
-   "span": "You can also edit this file manually to add or remove allowed",
+   "n": "Sandbox mode, in the Early Access Program and off unless the user starts it, runs agent terminal commands in an OS-level sandbox (srt) that limits filesystem writes; MCP servers and hooks are not isolated by it.",
+   "span": "wraps every agent-issued terminal command in an OS-level sandbox",
    "g": "documented",
-   "m": "default"
+   "m": "available",
+   "cfg": "sandbox"
   },
   "I47": {
    "e": "https://junie.jetbrains.com/docs/guidelines-and-memory.html",
-   "n": "Project and global AGENTS.md guidelines give the agent written rules it adds to every task.",
-   "span": "Guidelines allow you to provide persistent, reusable context to the agent.",
+   "n": "Project and global AGENTS.md guidelines are added to every task, and the page says the global file can hold organization-wide rules for all projects.",
+   "span": "define personal preferences or organization-wide rules that apply to all your projects",
    "g": "documented",
    "m": "available",
    "cfg": "guidelines"
@@ -285,13 +428,6 @@
    "g": "documented",
    "m": "default"
   },
-  "I56": {
-   "e": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html",
-   "n": "The IDE documentation presents Junie to its users as an AI coding agent. No source shows it disclosing this to others in GitHub or GitLab threads.",
-   "span": "is an AI coding agent developed by JetBrains",
-   "g": "documented",
-   "m": "default"
-  },
   "I57": {
    "e": "https://junie.jetbrains.com/docs/slash-commands.html",
    "n": "A /feedback command sends feedback on the current session, with its logs, to the Junie team.",
@@ -315,7 +451,7 @@
   },
   "I65": {
    "e": "https://blog.jetbrains.com/blog/2026/09/22/introducing-jetbrains-air/",
-   "n": "The CEO's post sets out the company's direction for agentic software development through JetBrains Air.",
+   "n": "The CEO's post sets out the company's direction for agentic software development through JetBrains Air, a product line that the post says will support Junie across all its surfaces.",
    "span": "building for the wider system through which agentic work is initiated, executed",
    "g": "documented",
    "m": "default"
@@ -339,6 +475,16 @@
    "what": "The Junie plugin reports tens of millions of downloads on the JetBrains Marketplace.",
    "why": "Downloads count installs, not what the agent does on its own.",
    "source": "https://plugins.jetbrains.com/api/plugins/26104"
+  },
+  {
+   "what": "The IDE help page describes Junie to its users as an AI coding agent developed by JetBrains.",
+   "why": "A description of the product to its user, not the agent telling the people it talks to (for example in GitHub or GitLab threads) that it is an AI; no source read shows that disclosure.",
+   "source": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html"
+  },
+  {
+   "what": "The Action Allowlist is a file in the user's home directory (~/.junie/allowlist.json) that the user can edit by hand; brave mode is a user toggle.",
+   "why": "The page shows a setting the user changes, not one the agent's own account could change; for the sandbox policy the page says an agent edit needs a fresh Allow once approval.",
+   "source": "https://junie.jetbrains.com/docs/junie-cli.html"
   }
  ],
  "announced": [
@@ -426,83 +572,86 @@
     "guidelines",
     "hooks"
    ]
+  },
+  {
+   "id": "sandbox",
+   "name": "Sandbox mode (Early Access)",
+   "note": "Junie CLI started with --sandbox or /sandbox: agent terminal commands run in an OS-level sandbox; macOS and Linux only.",
+   "on": [
+    "sandbox"
+   ]
   }
  ],
  "captures": {
   "https://blog.jetbrains.com/blog/2026/09/22/introducing-jetbrains-air/": {
    "sha256": "fd6e7c9c18eb17dbc62b36e013a2f870a681c7999b349b8cb960545e35f3d909",
    "bytes": 143939,
-   "read_at": "2026-11-10T05:00Z"
+   "read_at": "2026-11-10T12:48Z"
   },
   "https://blog.jetbrains.com/junie/2026/06/junie-coding-agent-out-of-beta/": {
    "sha256": "ac014f4922751d9ead7592eab04580fe14ee9b7c8ff39b47ec482bc64a755d9d",
    "bytes": 137398,
-   "read_at": "2026-11-10T05:00Z"
+   "read_at": "2026-11-10T12:48Z"
   },
   "https://junie.jetbrains.com/docs/action-allowlist-junie-cli.html": {
-   "sha256": "a6c43c1efe081f491a3bfb7e465a12c3edb56dc75b25c5392d35ceccdbc841bc",
-   "bytes": 15718,
-   "read_at": "2026-11-10T05:00Z"
+   "sha256": "ce31f17094967ff10ff0693ed127c537d65e11462658504452337f95be7fa4fa",
+   "bytes": 15624,
+   "read_at": "2026-11-10T12:48Z"
   },
   "https://junie.jetbrains.com/docs/guidelines-and-memory.html": {
-   "sha256": "32a73cfaee8badc672fcfb259fa389874852c3d4322213845dc1fdacde5485b2",
-   "bytes": 12795,
-   "read_at": "2026-11-10T05:00Z"
+   "sha256": "383c91a53ceaf36e1e3b81027aa24dba3950dd6ec6df9d3cd1df8c81632efef3",
+   "bytes": 12725,
+   "read_at": "2026-11-10T12:48Z"
   },
   "https://junie.jetbrains.com/docs/junie-cli-hooks.html": {
-   "sha256": "56ca1a86e5cdfddd54af8a463f0fba7562a4800ca293e5b645574c4fc5ec4859",
-   "bytes": 71887,
-   "read_at": "2026-11-10T05:00Z"
+   "sha256": "b2b9042613fe2d801f9de60b9fc93a54220f74e3090d50ff54b33fad5b87ab84",
+   "bytes": 71901,
+   "read_at": "2026-11-10T12:48Z"
   },
   "https://junie.jetbrains.com/docs/junie-cli-mcp-configuration.html": {
-   "sha256": "c382fa1c5990403390fa7527138330ca64a8ca1a09824b18a96bbdd329c1e51f",
+   "sha256": "6ee3c2568d54ec5b6a4813b265b98a1b1e5cccc20e6065c1a79913a172b0ff91",
    "bytes": 19644,
-   "read_at": "2026-11-10T05:00Z"
+   "read_at": "2026-11-10T12:48Z"
   },
   "https://junie.jetbrains.com/docs/junie-cli.html": {
-   "sha256": "3c4d259048ef47f2703168484189fd5570b50c6f76fe9f5a331e2502773fe740",
+   "sha256": "b0b650713bc6581d38f8b8dee5bb2127b6aeedd81b91766c7b41dc92c073c750",
    "bytes": 60954,
-   "read_at": "2026-11-10T05:00Z"
+   "read_at": "2026-11-10T12:48Z"
   },
   "https://junie.jetbrains.com/docs/junie-headless.html": {
-   "sha256": "5920a8d35583ad969df0b49b51052361d9815408bf626b5dc16ff0f114e37a9f",
-   "bytes": 8602,
-   "read_at": "2026-11-10T05:00Z"
+   "sha256": "ead8a5d98b378046b480cca4ec55fb56dd945a03cce901a4021e87294c6777f1",
+   "bytes": 8626,
+   "read_at": "2026-11-10T12:48Z"
   },
   "https://junie.jetbrains.com/docs/junie-ide-plugin.html": {
-   "sha256": "9a2fe0e8f2fcd2343fafe0a1c43b75d25da66aac8c33e8596949fa57871cb9a7",
-   "bytes": 42917,
-   "read_at": "2026-11-10T05:00Z"
+   "sha256": "984128be0de34df9cc47125660d23cc3446cfb0cd772733ecd1b9deeaa9eb3f1",
+   "bytes": 42649,
+   "read_at": "2026-11-10T12:48Z"
   },
   "https://junie.jetbrains.com/docs/junie-on-github.html": {
-   "sha256": "8a7522c3cd679d21fd88b6d4db63a28f81496d1652d8ada95c8ea67cbaa69584",
-   "bytes": 28128,
-   "read_at": "2026-11-10T05:00Z"
+   "sha256": "cf442bf79a61c709c17d95d9a30f24b0d403d29fb5b5289a941b877decb77b10",
+   "bytes": 28419,
+   "read_at": "2026-11-10T12:48Z"
   },
   "https://junie.jetbrains.com/docs/slash-commands.html": {
-   "sha256": "5493e3614bfa4e1859f6057bf37aba49680ad95521eb8efd53680e9f0457a1d1",
-   "bytes": 32826,
-   "read_at": "2026-11-10T05:00Z"
+   "sha256": "22503c010b2b1eb3bec8258c0fd5dd5421fd648f76d6b12527d806edb8d81735",
+   "bytes": 35236,
+   "read_at": "2026-11-10T12:48Z"
   },
   "https://junie.jetbrains.com/llms.txt": {
    "sha256": "47614ecd4279c07e29dde74dfd53aa5e25cbb0c7b0560b3cda661fab7255872c",
    "bytes": 1440,
-   "read_at": "2026-11-10T05:00Z"
-  },
-  "https://www.jetbrains.com/help/ai-assistant/junie-agent.html": {
-   "sha256": "1aa95e4448af94e7475f2aaa21b136de28626e4de8c0eb9fbe2607323f8689b3",
-   "bytes": 34746,
-   "read_at": "2026-11-10T05:00Z"
+   "read_at": "2026-11-10T12:48Z"
   },
   "https://www.jetbrains.com/legal/docs/terms/jetbrains-ai-service/": {
    "sha256": "e9d6b9a0881df8bd5f81cec376d5e66b66476d2c88ab392a63849530792e8144",
    "bytes": 93667,
-   "read_at": "2026-11-10T05:00Z"
+   "read_at": "2026-11-10T12:48Z"
   },
   "https://www.jetbrains.com/legal/docs/terms/jetbrains-ai/service-providers/": {
    "sha256": "a9959e75c29f7a7208efb69f2ab6ba605e5c8c559498ff1449bf3ed66ad8cd6f",
    "bytes": 49650,
-   "read_at": "2026-11-10T05:00Z"
+   "read_at": "2026-11-10T12:48Z"
   }
  }
 }
