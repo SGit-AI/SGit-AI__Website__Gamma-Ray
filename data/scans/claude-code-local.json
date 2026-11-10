@@ -130,6 +130,13 @@
    "m": "available",
    "cfg": "mcp"
   },
+  "I12": {
+   "e": "https://code.claude.com/docs/en/agent-teams",
+   "n": "Agent teams coordinate several instances, each in its own context, that message each other. The vendor says they \"are experimental and disabled by default\".",
+   "g": "documented",
+   "m": "available",
+   "cfg": "teams"
+  },
   "I16": {
    "e": "https://code.claude.com/docs/en/permissions",
    "n": "In Manual mode, which the person chooses, shell commands and edits ask before they run; file reads in the working directory do not.",
@@ -197,6 +204,14 @@
    "m": "available",
    "cfg": "managed"
   },
+  "I45": {
+   "e": "https://code.claude.com/docs/en/sandboxing",
+   "n": "Sandboxing restricts shell commands at the operating system level (filesystem and network) on macOS, Linux and WSL2; on native Windows, commands run unsandboxed. The page says it is off by default, that it covers shell commands only while the file tools, MCP servers and hooks run outside it, and that Claude can ask to run a command unsandboxed unless strict sandbox mode is on.",
+   "span": "The sandbox is off by default",
+   "g": "documented",
+   "m": "available",
+   "cfg": "sandbox"
+  },
   "I46": {
    "e": "https://code.claude.com/docs/en/security",
    "n": "\"The boundary is a permission prompt, so a Bash command you approve can still write anywhere your user account can.\"",
@@ -206,10 +221,30 @@
   },
   "I48": {
    "e": "https://code.claude.com/docs/en/settings",
-   "n": "An organisation can deliver managed settings that a user’s own files do not change; hooks run on every tool call and can block it. This is an enforcement mechanism, not a policy It applies only where an organisation deploys managed settings.",
+   "n": "An organisation can deliver managed settings, and nothing in a user's own settings files or the --settings flag overrides a managed key. This is an enforcement mechanism, not a policy. It applies only where an organisation deploys managed settings.",
+   "span": "overrides a managed key",
    "g": "documented",
    "m": "available",
    "cfg": "managed"
+  },
+  "I56": {
+   "e": "https://code.claude.com/docs/en/settings-reference",
+   "n": "By default its commits carry a Co-Authored-By trailer naming the Claude model in use; a setting can change or hide it.",
+   "span": "so Claude Code adds Co-Authored-By: <name>",
+   "g": "documented",
+   "m": "default"
+  },
+  "I57": {
+   "e": "https://code.claude.com/docs/en/data-usage",
+   "n": "A feedback command and a bug command send reports to the vendor.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I58": {
+   "e": "https://code.claude.com/docs/en/data-usage",
+   "n": "A page describes what data is sent, kept and used.",
+   "g": "documented",
+   "m": "default"
   },
   "I61": {
    "e": "https://code.claude.com/docs/en/model-config",
@@ -224,13 +259,6 @@
    "g": "documented",
    "m": "default"
   },
-  "I12": {
-   "e": "https://code.claude.com/docs/en/agent-teams",
-   "n": "Agent teams coordinate several instances, each in its own context, that message each other. The vendor says they \"are experimental and disabled by default\".",
-   "g": "documented",
-   "m": "available",
-   "cfg": "teams"
-  },
   "S2": {
    "e": "https://code.claude.com/docs/en/plugins/anthropic-marketplaces",
    "n": "The vendor’s community marketplace holds third-party plugins their authors submitted, and the page says many plugins sit in their authors’ own marketplaces.",
@@ -244,39 +272,13 @@
    "g": "observed",
    "m": "default",
    "method": "probe"
-  },
-  "I56": {
-   "e": "https://code.claude.com/docs/en/settings-reference",
-   "n": "By default its commits carry a Co-Authored-By trailer naming the Claude model in use; a setting can change or hide it.",
-   "span": "so Claude Code adds Co-Authored-By: <name>",
-   "g": "documented",
-   "m": "default"
-  },
-  "I58": {
-   "e": "https://code.claude.com/docs/en/data-usage",
-   "n": "A page describes what data is sent, kept and used.",
-   "g": "documented",
-   "m": "default"
-  },
-  "I57": {
-   "e": "https://code.claude.com/docs/en/data-usage",
-   "n": "A feedback command and a bug command send reports to the vendor.",
-   "g": "documented",
-   "m": "default"
-  },
-  "I45": {
-   "e": "https://code.claude.com/docs/en/sandboxing",
-   "n": "Sandboxing restricts shell commands at the operating system level (filesystem and network). The page says it is off by default, that it wraps shell commands while the built-in file tools run outside it, and that Claude can ask to run a command unsandboxed unless strict sandbox mode is on.",
-   "g": "documented",
-   "m": "available",
-   "cfg": "sandbox"
   }
  },
  "configurations": [
   {
    "id": "shipped",
    "name": "As shipped",
-   "note": "Auto mode, the built-in starting mode from v2.1.283: a classifier reviews actions instead of the person.",
+   "note": "Auto mode, the built-in starting mode for interactive terminal and VS Code sessions from v2.1.283 (on earlier versions only on Pro, Max, Ultra and Team plans): a classifier reviews actions instead of the person. claude -p and the Agent SDK start in Manual mode; auto mode needs a supported model, and an organisation can turn it off.",
    "on": []
   },
   {
@@ -681,6 +683,55 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "Read; no change needed."
+   },
+   {
+    "round": 3,
+    "answer": "I45",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "The note now carries the Windows line (commands run unsandboxed on native Windows) and names MCP servers and hooks as outside the sandbox, with the span \"The sandbox is off by default\" verified on the page today. The sandboxing page is not yet captured; gamma-ray@ owns the vault and must run tools/capture.mjs claude-code-local before sign-off (proposed under capture_needed)."
+   },
+   {
+    "round": 3,
+    "answer": "I48",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "The hooks clause is cut: the settings page does not say hooks block a call, and the hooks page is not a source of the scan. The note now rests on what the captured settings page says, with the span \"overrides a managed key\" verified today, and the missing full stop is fixed."
+   },
+   {
+    "round": 3,
+    "answer": "I18",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "The As shipped configuration note now says the auto start applies from v2.1.283 (earlier only on Pro, Max, Ultra and Team plans), that claude -p and the Agent SDK start in Manual, and that auto mode needs a supported model and can be turned off by an organisation; all four are on the permission modes page read today. The classifier-first reading of I18 is left to sign-off, as the reviewer says."
+   },
+   {
+    "round": 3,
+    "answer": "I56",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: the reviewer finds it answered. The credit is weak for the indicator, as the reviewer says, and Openness 1 holds on I22 without it; it can be dropped at sign-off with no level change."
+   },
+   {
+    "round": 3,
+    "answer": "I45",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change to mode or grade: documented, available, cfg sandbox, as the reviewer confirms."
+   },
+   {
+    "round": 3,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Conceded that Autonomy 4 and Control 4 are not properties of the product as shipped everywhere: A4 rests on I18, which holds for interactive sessions from v2.1.283 and now says so in the As shipped note, and C4 rests on I45 (cfg sandbox) and I48 (cfg managed), both marked available, so the card shows Control 4 under those configurations, not as shipped. No answer is lowered, because each mode already says which configuration carries it."
+   },
+   {
+    "round": 3,
+    "answer": "S1, I18 and the configurations, I41, I43, I56, S2, I61, I23, I39, not_credited, I04, I08, I10, I11, I16, I20, I21, I22, I38, I46, I57, I58, I63, S3, I12",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the reviewer verified these against the live pages."
    }
   ]
  },
