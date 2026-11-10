@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.120",
+    "date": "2026-11-10",
+    "what": "log and a capture request for the two examples",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "be08c4dd8"
+  },
+  {
     "version": "v0.0.119",
     "date": "2026-11-10",
     "what": "github-copilot-cloud-agent: round 2 answered (I25 and I56 out; I23 in; I18, I10, I45 re-sourced)",
