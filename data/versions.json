@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.27",
+    "date": "2026-11-10",
+    "what": "AISLE: a draft card for the AISLE platform (A4 · R2 · C1 · O0), its vault, report, article and claim note",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "6c670b20f"
+  },
+  {
     "version": "v0.0.26",
     "date": "2026-11-10",
     "what": "I45 restored on the three examples under the Spectrum reading; replit-agent's I18 note trimmed after round two",
