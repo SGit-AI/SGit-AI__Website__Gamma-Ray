@@ -286,13 +286,13 @@ export function cardWalk(m, sp, scanId, up = '../../../') {
 export function cohort(m, sp, up = '') {
     const rows = m.scans.map(s => ({ s, c: card(s, sp, m) })).filter(x => x.c.publishable)
     if (!rows.length) return ''
-    const W = 440, x0 = 150, cw = 66, rh = 46, top = 44, H = top + rows.length * rh + 6
+    const W = 440, x0 = 150, cw = 66, rh = 58, top = 44, H = top + rows.length * rh + 6
     let o = `<svg class="fig walk cohort" style="min-width:0;max-width:520px;margin:0 auto" viewBox="0 0 ${W} ${H}" role="group" aria-label="${esc(rows.map(({ s, c }) => `${s.name}: ${c.signature}`).join('; '))}"><style>.cohort text{font:12.5px var(--sans);fill:var(--ink)}.cohort .ch{font:600 11.5px var(--sans)}.cohort .sm{font-size:11px;fill:var(--ink3)}.cohort .ce{fill:var(--hair)}.cohort .on{fill:var(--dc)}.cohort .sp-A{--dc:var(--t2)}.cohort .sp-R{--dc:var(--c-sf)}.cohort .sp-C{--dc:var(--accent)}.cohort .sp-O{--dc:var(--c-eaamm)}.cohort .lv{font:700 13px var(--mono)}.cohort a:hover rect.row,.cohort a:focus rect.row{fill:var(--band)}.cohort rect.row{fill:none}</style>`
     sp.dimensions.forEach((d, i) => { o += `<text class="ch sp-${d.id}" x="${x0 + i * cw + 2}" y="18" style="fill:var(--dc)">${esc(d.name)}</text>` })
     rows.forEach(({ s, c }, r) => {
         const y = top + r * rh
-        o += `<a href="${esc(up)}spectrum/cards/${esc(s.id)}/"><title>${esc(s.name)}: ${esc(c.signature)}${c.stage ? ', ' + esc(c.stage) : ''} (the card)</title><rect class="row" x="0" y="${y - 4}" width="${W}" height="${rh - 4}" rx="6"/><text x="2" y="${y + 14}">${esc(short(s.name, 22))}</text><text class="sm" x="2" y="${y + 29}">${esc(c.stage || 'not yet')} · ${c.sum} of 16</text>`
-        c.dims.forEach((d, i) => { o += `<g class="sp-${d.id}">` + [1, 2, 3, 4].map(n => `<rect class="ce${n <= d.level ? ' on' : ''}" x="${x0 + i * cw + 2 + (n - 1) * 11}" y="${y + 4}" width="9" height="9" rx="2"/>`).join('') + `<text class="lv" x="${x0 + i * cw + 2}" y="${y + 29}">${d.level || '·'}</text></g>` })
+        o += `<a href="${esc(up)}spectrum/cards/${esc(s.id)}/"><title>${esc(s.name)}: ${esc(c.signature)}${c.stage ? ', ' + esc(c.stage) : ''} (the card)</title><rect class="row" x="0" y="${y - 4}" width="${W}" height="${rh - 4}" rx="6"/>${wrap(s.name, 21).slice(0, 2).map((t, i) => `<text x="2" y="${y + 13 + i * 14}">${esc(t)}</text>`).join('')}<text class="sm" x="2" y="${y + 13 + Math.min(2, wrap(s.name, 21).length) * 14}">${esc(c.stage || 'not yet')} · ${c.sum} of 16</text>`
+        c.dims.forEach((d, i) => { o += `<g class="sp-${d.id}">` + [1, 2, 3, 4].map(n => `<rect class="ce${n <= d.level ? ' on' : ''}" x="${x0 + i * cw + 2 + (n - 1) * 11}" y="${y + 4}" width="9" height="9" rx="2"/>`).join('') + `<text class="lv" x="${x0 + i * cw + 2}" y="${y + 30}">${d.level || '·'}</text></g>` })
         o += `</a>`
     })
     return o + `</svg><p class="figcap">The published cards side by side: four dimensions, each filled to its level and written as a number (a dot is not yet evidenced, which is not a no). Each row links to its card.</p>`
