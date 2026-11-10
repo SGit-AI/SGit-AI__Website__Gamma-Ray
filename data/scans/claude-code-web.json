@@ -126,7 +126,7 @@
   },
   "I18": {
    "e": "https://code.claude.com/docs/en/web-quickstart",
-   "n": "In Accept edits, which the permission modes page says corresponds to the default mode in cloud sessions, Claude makes changes and pushes a branch without stopping for approval; the person reviews the result.",
+   "n": "In Accept edits, which the permission modes page says corresponds to the default mode in cloud sessions, Claude makes changes and pushes a branch without stopping for approval; the person reviews the result The permission modes page adds that Accept edits corresponds to the default mode in cloud sessions.",
    "span": "Claude makes changes and pushes a branch without stopping for approval",
    "g": "documented",
    "m": "default"
@@ -192,8 +192,8 @@
   },
   "I56": {
    "e": "https://code.claude.com/docs/en/settings-reference",
-   "n": "By default it adds a Co-Authored-By trailer naming the Claude model to its commits, including commits from cloud sessions, and a Generated with Claude Code line to pull request descriptions; a setting can change or hide both.",
-   "span": "The name is the model in use when the commit is made",
+   "n": "By default its commits, including commits from cloud sessions, carry a Co-Authored-By trailer naming the Claude model in use; a setting can change or hide it.",
+   "span": "so Claude Code adds Co-Authored-By: <name>",
    "g": "documented",
    "m": "default"
   },
@@ -205,7 +205,7 @@
   },
   "I45": {
    "e": "https://code.claude.com/docs/en/cloud-environments",
-   "n": "With the default (Trusted) network access, sessions reach allowlisted domains \"and nothing else through the session’s network\".",
+   "n": "With the default (Trusted) network access, sessions reach package registries and allowlisted domains \"and nothing else through the session’s network\"; the page describes Anthropic's agent proxy, outside the session's VM, handling the session's outbound requests.",
    "g": "documented",
    "m": "default",
    "span": "and nothing else through the session’s network"
@@ -465,6 +465,34 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "Restored under the Spectrum reading of I45 (gamma-ray@, data/indicators.json): the source documents a limit enforced outside the agent, named in the note. The governance rating still reads I45 from a measured grant only."
+   },
+   {
+    "round": 2,
+    "answer": "I56",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Changed: the span is the start of the commit-trailer sentence (the rest is an address, which this site does not reproduce) and the pull request wording is removed."
+   },
+   {
+    "round": 2,
+    "answer": "I45",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Changed: the note names what enforces the limit, the agent proxy outside the session's VM, as the cloud environments page describes it."
+   },
+   {
+    "round": 2,
+    "answer": "I18",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Changed: the note says the default-mode sentence comes from the permission modes page."
+   },
+   {
+    "round": 2,
+    "answer": "I10, A3 without S1, I38 and I28, I12, I61, I23, I46, levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Read; no change needed. The card names the configurations."
    }
   ]
  }
