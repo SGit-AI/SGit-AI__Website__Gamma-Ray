@@ -90,7 +90,7 @@
   {
    "id": "caev",
    "name": "Continuous Adversarial Exposure Validation",
-   "short": "Continuous Adversarial Exposur",
+   "short": "Continuous Validation",
    "what": "Always-on test mode in which Hackian runs reconnaissance and broad vulnerability checks across the in-scope attack surface.",
    "status": "generally available",
    "url": "https://docs.ethiack.com/docs/portal/tests/continuous-adversarial-exposure-validation"
@@ -162,8 +162,34 @@
    "span": "24/7 automated penetration testing to identify vulnerabilities in ANA’s external attack surface"
   }
  ],
- "analysis": [],
- "article": null,
+ "analysis": [
+  "**The shape.** Hackian, Ethiack's agentic AI pentesting engine, reads {sig:ethiack-hackian} ({stage:ethiack-hackian}), and every level holds as shipped. It runs reconnaissance across a customer's in-scope attack surface, confirms vulnerabilities with non-destructive exploitation routines and reports findings with proof. Once launched, an Agentic Pentest runs on its own, deciding in real time within the policy and scope the customer writes; findings and an activity log show its progress.",
+  "**Where the evidence is strongest.** Named customers on Ethiack's own pages, with the company's figures: Universidade do Porto, where Hackian runs continuously on 1,000 critical assets within 5,000; Jumia, with more than 2,600 assets tested; and CEGID, with more than 2,000. The controls a customer has are documented: guardrails written in prose in the test policy, a control to pause or restart a continuous test, an activity log on each test page, and the right to change the severity of a finding and comment on it.",
+  "**Seen, and not counted yet.** Ethiack publishes benchmark results for Hackian against other agents under its EthiBench protocol, with public targets and ground truth, three runs and statistical tests. That meets the rule for Openness 3, but Openness is cumulative and level 2 is not yet evidenced, so the card reads Openness 1 until it is. The challenger also lowered a grey-box credentials page offered as a description of data, a contract clause offered as incident communication, and a target list offered as narrower access: each is a different thing.",
+  "**What would move it.** Autonomy is at the top of its ladder. Openness 2: a page saying what data Hackian processes, keeps or learns from, and under what rules; the docs already name what it does not yet cover alone, such as mobile applications, and the published evaluations would then count. Control 2: a page stating which actions wait for a person's approval and listing what Hackian may reach. Reach: the next unlock the rules name is level 4, others building on Hackian across organisations; the MCP server Ethiack has announced, for outside agents to query findings and trigger tests, is seen and not counted until it is published.",
+  "**For readers.** Ethiack, S.A. is seated at Instituto Pedro Nunes in Coimbra and dates itself to 2022. The marketing figures on the Hackian page, such as the share of PortSwigger labs solved, carry no method and are not counted; the EthiBench results carry one."
+ ],
+ "article": {
+  "title": "Hackian on the GAMMA-Ray Spectrum: {sig:ethiack-hackian}",
+  "standfirst": "The GAMMA-Ray studio reads Ethiack's Hackian from its public pages: an agent that tests a customer's attack surface on its own within a written policy, with published benchmark results that will count once its data use is documented.",
+  "body": [
+   "Ethiack, founded in Coimbra, Portugal, in 2022, sells an offensive security platform whose AI agent, Hackian, maps an organisation's attack surface and tests it for exploitable vulnerabilities. We read it only from public sources, captured and hashed on 10 November 2026, and the published rules computed the card.",
+   "**Autonomy 4, Orchestrates.** Hackian works across a customer's whole in-scope attack surface and runs exploitation routines itself; an Agentic Pentest decides in real time within the customer's policy. Universidade do Porto, Jumia and CEGID are named customers.",
+   "**Reach 2, Integrated.** Hackian tests across the systems of an attack surface, and with a Beacon the customer deploys it reaches internal networks over a tunnel.",
+   "**Control 1, Stated.** Customers write guardrails in prose in the test policy, and continuous tests have a pause control. A page on which actions need a person's approval, listing what Hackian may reach, would reach level 2.",
+   "**Openness 1, Disclosed.** Ethiack publishes benchmark results for Hackian under its EthiBench protocol. A page on the data Hackian uses would reach level 2 and let those results count.",
+   "The card is beta and Ethiack has not seen it. It can claim the card and add evidence; corrections are dated."
+  ],
+  "pt": {
+   "title": "O Hackian da Ethiack no GAMMA-Ray Spectrum: {sig:ethiack-hackian}",
+   "standfirst": "O estúdio GAMMA-Ray lê o Hackian da Ethiack a partir das suas páginas públicas: um agente que testa sozinho a superfície de ataque de um cliente, dentro de uma política escrita.",
+   "body": [
+    "A Ethiack, fundada em Coimbra em 2022, vende uma plataforma de segurança ofensiva cujo agente de IA, o Hackian, mapeia a superfície de ataque de uma organização e procura vulnerabilidades exploráveis. Lemos apenas fontes públicas, capturadas e com hash a 10 de novembro de 2026.",
+    "**Autonomia 4.** O Hackian trabalha em toda a superfície de ataque definida e executa ele próprio rotinas de exploração; a Universidade do Porto, a Jumia e a CEGID são clientes nomeados. **Alcance 2.** Com um Beacon, chega às redes internas. **Controlo 1.** O cliente escreve guardrails na política de teste e pode pausar os testes contínuos.",
+    "**Abertura 1.** A Ethiack publica resultados de benchmark do Hackian com o protocolo EthiBench; uma página sobre os dados que usa levaria ao nível 2. O cartão é beta e a Ethiack ainda não o viu; pode reclamá-lo e acrescentar evidência, e as correções são datadas."
+   ]
+  }
+ },
  "vault": {
   "id": "1livflie",
   "read_key": "sgit_public_read_d255aac8826ac0704c9059943a1f331cabf3993405f156516329cc8d239d97fd:1livflie",
@@ -240,5 +266,6 @@
    "bytes": 453988,
    "read_at": "2026-11-10T10:40Z"
   }
- }
+ },
+ "method": "A researcher-assessor gathered and captured the sources and mapped the evidence to indicators, without assigning a level. A challenger argued against every level three and four and every doubtful credit."
 }

@@ -140,8 +140,34 @@
    "span": "has 15 staff but 10 are not human"
   }
  ],
- "analysis": [],
- "article": null,
+ "analysis": [
+  "**The shape.** Spinnable AI employees read {sig:spinnable-ai-employees} ({stage:spinnable-ai-employees}), and every level holds as shipped. A business hires a worker for a role; each has its own email address, memory and scheduled tasks, is reached by email, WhatsApp, Slack, meetings and voice, and acts in the tools it is granted, such as sending email and updating databases. When a step needs a decision without explicit rules, the worker may pause and wait for its manager.",
+  "**Where the evidence is strongest.** The documentation describes the controls in working detail. Tools are granted to each worker separately, with capabilities such as read or send; a person can interrupt a running worker from the chat; a recurring task that fails three runs in a row is paused and the manager is emailed with the reason; weekly dated release notes run to 28 October 2026. By default a worker's outbound email carries a footer saying it is an AI worker, which a manager can switch off; no disclosure is documented for WhatsApp, Slack or voice. On the home page Smart Role's CEO says one worker manages his calendar, runs his outreach and keeps his pipeline current: a testimonial, without usage figures.",
+  "**What would move it.** Autonomy 4: workers can already delegate tasks to one another in a team of two or more; a page stating that a worker works on its own and a person approves only critical decisions would complete the rule. Reach 3: a published protocol or interface through which other agents call a worker; a Read connection already narrows access as an option. Control 2: a documented setting that makes high-impact actions wait for a person's approval. Openness 3: published evaluation results with a method; an llms.txt and a channel for reporting problems with a worker are in place.",
+  "**Seen, and not counted.** The home page says anything with external impact waits for a person's sign-off; no documented mechanism matches it yet, so it is not counted as an approval step. The action log is documented, not observed. A data processing clause promising breach notice within 72 hours is a contract term, not a record of telling those affected about an agent's errors, so the challenger lowered it. SOC 2 Type II is stated as in progress.",
+  "**For readers.** Spinnable launched at Web Summit 2025 with a release datelined Lisbon; its co-founders Vasco Pedro, Gil Coelho and Fábio Kepler all came from Unbabel. At launch the company said 10 of its 15 staff were not human, as Essential Business reported."
+ ],
+ "article": {
+  "title": "Spinnable AI employees on the GAMMA-Ray Spectrum: {sig:spinnable-ai-employees}",
+  "standfirst": "The GAMMA-Ray studio reads Spinnable's AI workers from their public documentation: they act in the tools each one is granted, pause for a manager when a step has no rule, and every level holds as shipped.",
+  "body": [
+   "Spinnable, founded in Lisbon and launched at Web Summit 2025, sells AI workers that a business hires for a role, each with its own email address. We read it only from public sources, captured and hashed on 10 November 2026, and the published rules computed the card.",
+   "**Autonomy 3, Acts.** Workers act in connected tools, sending email and updating databases, and may pause for their manager when a step has no explicit rule. In a team, a worker can delegate tasks to the others.",
+   "**Reach 2, Integrated.** Workers connect to more than 35 tools, from email and calendar to GitHub, Notion and Salesforce, each through OAuth or an API key.",
+   "**Control 1, Stated.** Each worker's rules are written in its Worker Policy, and a person can interrupt a run from the chat. A documented setting that makes high-impact actions wait for approval would reach level 2.",
+   "**Openness 2, Documented.** The docs describe failure cases with causes and fixes, and the privacy policy lists the data the workers access. Published evaluation results would reach level 3.",
+   "The card is beta and Spinnable has not seen it. It can claim the card and add evidence; corrections are dated."
+  ],
+  "pt": {
+   "title": "Os AI employees da Spinnable no GAMMA-Ray Spectrum: {sig:spinnable-ai-employees}",
+   "standfirst": "O estúdio GAMMA-Ray lê os trabalhadores de IA da Spinnable a partir da sua documentação pública: agem nas ferramentas que lhes são atribuídas e fazem uma pausa para o gestor quando um passo não tem regra.",
+   "body": [
+    "A Spinnable, fundada em Lisboa e lançada no Web Summit 2025, vende trabalhadores de IA que uma empresa contrata para uma função, cada um com o seu endereço de email. Lemos apenas fontes públicas, capturadas e com hash a 10 de novembro de 2026.",
+    "**Autonomia 3.** Os trabalhadores enviam emails e atualizam bases de dados, e podem esperar pelo gestor quando um passo não tem regra. **Alcance 2.** Ligam-se a mais de 35 ferramentas, do email ao GitHub e ao Salesforce. **Controlo 1.** As regras de cada trabalhador estão escritas na sua Worker Policy, e uma pessoa pode interromper uma execução.",
+    "**Abertura 2.** A documentação descreve casos de falha e a política de privacidade lista os dados a que os trabalhadores acedem. O cartão é beta e a Spinnable ainda não o viu; pode reclamá-lo e acrescentar evidência, e as correções são datadas."
+   ]
+  }
+ },
  "vault": {
   "id": "kghdiwq3",
   "read_key": "sgit_public_read_76f8699d4556bfb03360cbda6e61d0c7f76b07e13444704e4ced072a90a1742c:kghdiwq3",
@@ -193,5 +219,6 @@
    "bytes": 73372,
    "read_at": "2026-11-10T10:38Z"
   }
- }
+ },
+ "method": "A researcher-assessor gathered and captured the sources and mapped the evidence to indicators, without assigning a level. A challenger argued against every level three and four and every doubtful credit."
 }

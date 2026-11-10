@@ -112,7 +112,7 @@
   {
    "id": "mcp-server",
    "name": "Noxus MCP server, Python SDK and REST API",
-   "short": "Noxus MCP server, Python SDK a",
+   "short": "MCP server, SDK and API",
    "what": "A hosted MCP server, SDK and REST API that let external clients and agents drive workflows, agents and conversations.",
    "status": "generally available",
    "url": "https://docs.noxus.ai/sdk/mcp/overview"
@@ -144,8 +144,34 @@
    "span": "They were live in thirty days without touching their SAP core"
   }
  ],
- "analysis": [],
- "article": null,
+ "analysis": [
+  "**The shape.** Noxus AI Workers read {sig:noxus-ai-workers} ({stage:noxus-ai-workers}). A builder configures agents, which the documentation also calls co-workers, that use flows, integration actions, knowledge bases, tables and MCP servers to take actions themselves, and deploys them through the web app, the API, a chat widget or channels such as Slack, Teams and WhatsApp. Each agent reaches only the tools selected for it, an enumerated list.",
+  "**Where the evidence is strongest.** Reach 3 holds as shipped: a hosted MCP server lets external clients and agents call Noxus agents, conversations and workflows, and an OpenAPI 3.1.0 description resolves. Logs record tool calls and reasoning steps, an agent's deployment on a channel can be deactivated through the API, and a public status page posts incidents. Customer stories on Noxus's own pages give the company's figures: at CUF an AI Worker processes over 3,000 patient communications a month and routes complex cases to staff, and LSIG reports 15,000 products a day classified across three retail brands.",
+  "**Two levels hold with options on.** Autonomy 4 and Control 2 rest on the Human in the Loop tool or Require Approval, which are off until turned on; with them, the agent acts on its own and asks a person before critical actions. As shipped, actions run without asking, and the split between routine work and exceptions is shown at CUF, a deployment.",
+  "**What would move it.** Autonomy is at the top of its ladder. Reach 4: agents working across organisations or stacks, with third parties publishing integrations or agents for Noxus. Control 3: a public record of agents' conduct being monitored while they run, such as an alert or a dated review. Openness 3: published evaluation results with a method; Genie evaluations are announced, and an OpenAPI description and a status page are in place.",
+  "**Seen, and not counted.** The challenger lowered monitoring: Agent Insights analyses what users ask and how they feel, not what the agent does, and the Monitoring page covers infrastructure. A sandbox outside the agent that blocks internal network ranges is documented as an option; it cannot lift Control while level 3 is not yet evidenced. Certification claims differ between Noxus pages, and no certificate was read."
+ ],
+ "article": {
+  "title": "Noxus AI Workers on the GAMMA-Ray Spectrum: {sig:noxus-ai-workers}",
+  "standfirst": "The GAMMA-Ray studio reads Noxus AI Workers from their public documentation: agents act through flows and integrations, other agents can call them over MCP, and with approval turned on they ask a person first.",
+  "body": [
+   "Noxus, which Observador describes as a Luso-British startup headquartered in the United Kingdom, sells a platform on which companies build AI agents it calls AI Workers. Observador reported a funding round of 1.5 million US dollars in February 2025. We read it only from public sources, captured and hashed on 10 November 2026, and the published rules computed the card.",
+   "**Autonomy 4, Orchestrates (available).** Agents run flows and take actions themselves; with the Human in the Loop tool on, they ask a person before critical actions. At CUF, Noxus says, an AI Worker processes over 3,000 patient communications a month.",
+   "**Reach 3, Open protocol.** A hosted MCP server lets outside agents call Noxus agents and workflows, and each agent reaches only the tools selected for it.",
+   "**Control 2, Configurable (available).** Require Approval makes the agent ask before actions run. A public record of agents monitored in operation would reach level 3.",
+   "**Openness 2, Documented.** The docs describe the data agents use and list the model providers. Published evaluation results would reach level 3.",
+   "The card is beta and Noxus has not seen it. It can claim the card and add evidence; corrections are dated."
+  ],
+  "pt": {
+   "title": "Os AI Workers da Noxus no GAMMA-Ray Spectrum: {sig:noxus-ai-workers}",
+   "standfirst": "O estúdio GAMMA-Ray lê os AI Workers da Noxus a partir da sua documentação pública: os agentes agem através de flows e integrações, outros agentes podem chamá-los por MCP e, com a aprovação ativa, perguntam primeiro a uma pessoa.",
+   "body": [
+    "A Noxus, que o Observador descreve como uma startup luso-britânica sediada no Reino Unido, vende uma plataforma onde as empresas criam agentes de IA a que chama AI Workers. Lemos apenas fontes públicas, capturadas e com hash a 10 de novembro de 2026.",
+    "**Autonomia 4 (opcional).** Os agentes executam flows e agem sozinhos; com a ferramenta Human in the Loop, pedem aprovação antes de ações críticas. Na CUF, segundo a Noxus, processam mais de 3.000 comunicações de doentes por mês. **Alcance 3.** Um servidor MCP permite que outros agentes os chamem. **Controlo 2 (opcional).** O Require Approval faz o agente perguntar antes de agir.",
+    "**Abertura 2.** A documentação descreve os dados usados e lista os fornecedores de modelos. O cartão é beta e a Noxus ainda não o viu; pode reclamá-lo e acrescentar evidência, e as correções são datadas."
+   ]
+  }
+ },
  "vault": {
   "id": "6n9a4tow",
   "read_key": "sgit_public_read_eafc52a9cbd090f15069febc32ea08d2630b1aa8410e8b8bc4cc5f4b3f197e98:6n9a4tow",
@@ -202,5 +228,6 @@
    "bytes": 342149,
    "read_at": "2026-11-10T10:39Z"
   }
- }
+ },
+ "method": "A researcher-assessor gathered and captured the sources and mapped the evidence to indicators, without assigning a level. A challenger argued against every level three and four and every doubtful credit."
 }

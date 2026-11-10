@@ -144,8 +144,34 @@
    "span": "is working to deploy Agent Workbench to improve the accuracy of loan underwriting"
   }
  ],
- "analysis": [],
- "article": null,
+ "analysis": [
+  "**The shape.** OutSystems Agent Workbench reads {sig:outsystems-agent-workbench} ({stage:outsystems-agent-workbench}). On OutSystems Developer Cloud (ODC) a builder makes agents in a visual builder; each agent calls only the server actions added to it, including tools imported from MCP servers, and chooses the actions itself. The product FAQ says agents connect to APIs, databases, ERP, CRM and legacy systems.",
+  "**Three levels hold with options on.** Autonomy 4, Reach 3 and Control 2 are marked available, because they rest on features a builder or administrator sets up. Placed in an ODC workflow with a human activity, an agent works on its own and stops for a named user or role at a high-stakes step. Chained as automatic activities, several agents pass work from one to the next. With an A2A connection, an agent delegates tasks to agents outside ODC over version 0.3.0 of the Agent2Agent protocol, with ODC as the client only. Openness 2 holds as shipped: the docs list the supported model providers, describe grounding data and say where guardrails do not apply.",
+  "**Where the evidence is strongest.** The controls are documented settings: a call condition stops an agent on token, loop or call counts, logs and traces can be filtered by agent and are kept for four weeks, and guardrail policies are checked on every agent call and can block it. TeamWork, a named customer, runs a Customer Support Agent that classifies and routes support tickets; the 20% of incidents it expects to resolve automatically is an expectation, not a measured figure. The launch release also names early-access participants, among them Axos Bank, Thermo Fisher Scientific and The Arch Company.",
+  "**What would move it.** Autonomy is at the top of its ladder. Reach 4: third parties publishing integrations, skills or agents for Agent Workbench; delegation across stacks over A2A is already documented. Control 3: a public record of agents being monitored while they run, such as an alert or a dated review; logs and a way to pause are documented. Openness 3: published evaluation results with a method; the llms.txt files already resolve.",
+  "**Seen, and not counted.** The challenger lowered monitoring: guardrails filter prompts and responses, which is counted as a limit the platform enforces, not as someone watching what the agent does, so Control rests at level 2. The marketing page's use cases with no human needed, and the agent marketplace, are announced and not counted. The trust page's SOC 2 Type II, ISO 27001 and ISO 22301 cover OutSystems platforms; no public report read names Agent Workbench in scope."
+ ],
+ "article": {
+  "title": "OutSystems Agent Workbench on the GAMMA-Ray Spectrum: {sig:outsystems-agent-workbench}",
+  "standfirst": "The GAMMA-Ray studio reads OutSystems Agent Workbench from its public documentation: agents call the actions a builder gives them, and with workflows and A2A they chain, delegate and stop for a person.",
+  "body": [
+   "OutSystems, founded in 2001 by Paulo Rosado in Lisbon, Portugal, sells a low-code development platform. Its Agent Workbench, generally available since 30 September 2025, builds and runs AI agents on OutSystems Developer Cloud. We read it only from public sources, captured and hashed on 10 November 2026, and the published rules computed the card.",
+   "**Autonomy 4, Orchestrates (available).** Agents choose and call actions in other systems. In a workflow, several agents pass work along, and a person approves or rejects output at high-stakes steps. TeamWork's agent classifies and routes support tickets.",
+   "**Reach 3, Open protocol (available).** With an A2A connection, an agent delegates tasks to agents outside ODC over the Agent2Agent protocol, and each agent reaches only the actions added to it.",
+   "**Control 2, Configurable (available).** A human activity in a workflow holds the agent until an assigned person acts. A public record of agents monitored in operation would reach level 3.",
+   "**Openness 2, Documented.** The docs list the model providers, the grounding data and where guardrails do not apply. Published evaluation results would reach level 3.",
+   "The card is beta and OutSystems has not seen it. It can claim the card and add evidence; corrections are dated."
+  ],
+  "pt": {
+   "title": "O Agent Workbench da OutSystems no GAMMA-Ray Spectrum: {sig:outsystems-agent-workbench}",
+   "standfirst": "O estúdio GAMMA-Ray lê o Agent Workbench da OutSystems a partir da sua documentação pública: os agentes chamam as ações que lhes são dadas e, com workflows e A2A, encadeiam-se, delegam e param para uma pessoa.",
+   "body": [
+    "A OutSystems, fundada em 2001 por Paulo Rosado em Lisboa, vende uma plataforma de desenvolvimento low-code. O Agent Workbench, disponível desde 30 de setembro de 2025, cria e executa agentes de IA. Lemos apenas fontes públicas, capturadas e com hash a 10 de novembro de 2026.",
+    "**Autonomia 4 (opcional).** Num workflow, vários agentes passam o trabalho entre si e uma pessoa aprova ou rejeita nos passos de maior risco. **Alcance 3 (opcional).** Com uma ligação A2A, um agente delega tarefas a agentes fora da plataforma. **Controlo 2 (opcional).** Uma atividade humana retém o agente até a pessoa designada agir.",
+    "**Abertura 2.** A documentação lista os fornecedores de modelos e diz onde as guardrails não se aplicam. O cartão é beta e a OutSystems ainda não o viu; pode reclamá-lo e acrescentar evidência, e as correções são datadas."
+   ]
+  }
+ },
  "vault": {
   "id": "ivinvfhj",
   "read_key": "sgit_public_read_a787d5ebd3b7fca03039c35a5d95311a66cc5581cbc41eec0ad3ab0c46272feb:ivinvfhj",
@@ -197,5 +223,6 @@
    "bytes": 332218,
    "read_at": "2026-11-10T10:39Z"
   }
- }
+ },
+ "method": "A researcher-assessor gathered and captured the sources and mapped the evidence to indicators, without assigning a level. A challenger argued against every level three and four and every doubtful credit."
 }
