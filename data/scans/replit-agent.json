@@ -19,8 +19,82 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "draft",
-  "rounds": []
+  "status": "round-1",
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "S1",
+      "severity": "must-fix",
+      "finding": "This carries Autonomy 3 and 4, so I argued against it. What the page (read 2026-11-10) says: the title says \"Production SLA Dashboard\"; the build was at a hackathon (\"2 hour build-a-thon\"); it is \"Currently serving as an internal dashboard\"; the saving is Natalie Mercuri's estimate (\"could reduce\"); extending it to customers is described as what could happen. Only the page heading names Agent (\"with Replit Agent\"); the body says \"Replit\". Two things follow. (1) The capability that acts here is Agent building software, and the thing in use is the dashboard it built; the scope asks for a customer or usage figures \"for the capability that acts\", and a hackathon prototype in internal use is closer to \"a demonstration\" than to routine production work. (2) A3 is described as completing routine tasks end to end in production; one vendor-published story is the only support. The span is exact and the grade documented is right, and the note already says the savings are the story's estimates. Decision for the studio and Dinis: either keep S1 and say plainly on the card that it is one internal prototype, or find a second source (a usage figure for Agent, a customer in production). Without S1 the scorer gives A2, not A4."
+     },
+     {
+      "answer": "I10",
+      "severity": "should-fix",
+      "finding": "A4 needs I10 and I10 is available, not default (connectors the user adds; the \"As shipped\" configuration says no external connectors). The source and span are right (\"Read and write to external services like BigQuery, Linear, Slack, Notion\"). The issue is how the card reads: with S1, A4 holds only with connectors on; as shipped it is A3. The card should say which configuration its level holds in. See also request to gamma-ray@."
+     },
+     {
+      "answer": "I18",
+      "severity": "should-fix",
+      "finding": "The second load-bearing fact for A3 and A4. The span \"Chat with Agent to refine your project, then publish when you're ready.\" is exact, but it is a how-to step, not a statement that Agent works independently and the person approves critical decisions only. I searched the overview and the other cited Agent pages and found no sentence that says Agent works on its own by default. The nearest is on the App Testing page: \"Extended Autonomy ... work for longer periods without requiring human intervention\", which is I17 and available only with App Testing on (Power or Max mode). The note also folds Plan mode (\"the person approves the plan\") into a default answer; Plan mode is a configuration (I07 is tied to plan-mode). Cite a sentence that states the independence, or mark I18 as holding only with App Testing."
+     },
+     {
+      "answer": "I17",
+      "severity": "note",
+      "finding": "Span \"the Agent will pop up with a button to\" (9 words) is exact on the App Testing page, as is the Power or Max requirement. It is the source for independence that I18 lacks; consider whether I18 should lean on it."
+     },
+     {
+      "answer": "I19",
+      "severity": "note",
+      "finding": "Exact and correctly available: \"By default, background tasks wait for you to review and apply their changes. You can enable Automatically apply changes\". Note that this default is the opposite of I19, so it is a good example of a fact that raises Autonomy only when the person turns it on."
+     },
+     {
+      "answer": "I38",
+      "severity": "note",
+      "finding": "Span is exact. Credit holds as a default, but note it is about changes by background tasks held for review, not about a gate on all high-impact actions (publishing, connectors). It carries Control 1 and 2 with I25."
+     },
+     {
+      "answer": "I25",
+      "severity": "note",
+      "finding": "Exact and correctly available (Enterprise only). It is the second fact of Control 2 (I38 and I23 or I25), so Control 2 holds only on Enterprise. Same remark as I10 on how the card shows it."
+     },
+     {
+      "answer": "I51",
+      "severity": "note",
+      "finding": "\"An internal security harness continuously probes and tests the AI Agent\" is the vendor's own statement and is credited as such. The indicator needs the operation, so documented does not count. Honest as written."
+     },
+     {
+      "answer": "I52",
+      "severity": "pass",
+      "finding": "The note says the external testing covers the platform and does not name Agent. That is what the page says (HackerOne bug bounty, Trail of Bits). Correct and careful."
+     },
+     {
+      "answer": "I61",
+      "severity": "note",
+      "finding": "The subprocessors page names Anthropic and OpenAI as AI models and Google as cloud infrastructure and AI models. It lists providers, not which model Agent uses; the help page says the model behind Agent \"can't be swapped\". The credit as \"models and third-party components listed\" is fair; the note could say it is a list of providers."
+     },
+     {
+      "answer": "I63",
+      "severity": "pass",
+      "finding": "Not credited, and the not_credited entry says why (SOC 2 stated, no report). Correct: Openness 4 is not claimed."
+     },
+     {
+      "answer": "typography",
+      "severity": "note",
+      "finding": "Eight spans differ from the source only in the apostrophe (the pages use a curly one, the scan a straight one: I01, I07, I18, I21, I38, I47, I57, S2). The words are exact. If the gate or a reader compares character by character, normalise one way."
+     },
+     {
+      "answer": "I01, I04, I07, I08, I09, I11, I20, I21, I22, I39, I41, I46, I47, I57, I58, I68, S2, S3",
+      "severity": "pass",
+      "finding": "Opened each source. The note says what the page says; the grade documented is right (S3 observed: llms.txt resolves and lists Agent, MCP, security pages); mode is right (I07 plan-mode, I11 connectors, I47 custom instructions are available; the rest are default). Spans are under fifteen words (the longest, I21, has 14). I39: \"Select Stop in the Agent panel to halt it immediately\" is on the help page. I68: the changelog index lists a dated entry for 6 November 2026. I22: freezing, looping and unrequested features are on the help page."
+     }
+    ]
+   }
+  ]
  },
  "assessment": {
   "by": "gamma.studio@web-summit.dinis",
