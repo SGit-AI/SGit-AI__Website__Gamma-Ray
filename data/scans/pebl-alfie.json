@@ -20,7 +20,7 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "round-1",
+  "status": "round-2",
   "rounds": [
    {
     "round": 1,
@@ -107,6 +107,44 @@
       "answer": "levels",
       "severity": "note",
       "finding": "Card A1 R1 C1 O2. No level 3 or 4 on the card, so no level 3 or 4 argument is needed. A1 rests on I15 (see finding), R1 on I09 or I01, C1 on I47, O2 on I22, I58, I61 (count 2 of 3 needed; all three verified). The next unlock for Autonomy is I17, which the sources do not support. Sources: the product page FAQ is only in the page's embedded JSON in my fetch (the visible text shows the questions as collapsed headings); the spans exist there. All five sources resolved. Not read by the scan or by me: the help-centre articles, which may settle I15 or I16."
+     }
+    ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I15",
+      "severity": "should-fix",
+      "finding": "Round one asked to lower I15 and resolve the open item. Lowering is done: I15 is absent from answers, so Autonomy is 0 and the card does not rest on it. Two leftovers. First, not_credited for I17 still says 'every named action is made at the user's request (I15)', which asserts the very inference that was lowered; the sources show the FAQ line 'take an action that you request' and no more. Reword to what a source says, or drop the clause. Second, not_credited for I15 says Pebl's 'three help-centre articles on Alfie' were read in a browser and do not say whether Alfie confirms before acting. Only two help articles are sources of the scan (What is Alfie, and What can I do with Alfie based on my role); I fetched both and neither mentions confirmation or approval before Alfie acts. The third article is not named, so a reader cannot check that part of the claim. Name its URL and add it as a source somewhere, or say two articles."
+     },
+     {
+      "answer": "I23",
+      "severity": "should-fix",
+      "finding": "New since round one was recorded in the scan (it was already in the file at the round-one commit, but round one has no finding on it, so this is its first review). Source fetched: the article's text is only in the page's embedded articleHtml, as the note says. Span 'What Can I Do With Alfie Based on My Role?' is exact (10 words) but it is the article title, not a statement of the scope; a span from the table or its intro would anchor the credit better. The note says 'a table per platform role'; the article has one table per feature group (Support, Time, Benefits and Payroll, Billing, Reporting, Directory and Permissions, Knowledge) with a column per role, so reword to 'tables of features by role'. The roles named (Company Admin, HR Manager, PTO Manager, Billing Admin, Supported Employee) and the features named (support ticket, time-off requests and approvals, compensation reports, currency conversion) are in the article. The note's claim that rendered text is in the vault under work/rendered/ I could not check. Indicator I23 has needs operation, but its scope allows documented roles and tool lists on a Spectrum card, so documented grade and mode default are acceptable. I23 feeds no level today (Control 2 also needs I38). One more point for the field agent: the article's Time off Approvals row is ticked for some roles only, which is a second public source that Alfie handles approvals and is role-gated; it is stronger than the marketing page and could be cited under I08 or I47."
+     },
+     {
+      "answer": "I40",
+      "severity": "pass",
+      "finding": "Round-one finding (December 2025 release clause, thin credit) answered. Current note cites the What is Alfie help article only. Checked in the embedded article: 'If a request requires human review or cannot be confidently answered, Alfie will automatically offer to open a support inquiry and pass along full conversation context to our Operations team'. Span 'Alfie will automatically offer to open a support inquiry' is exact, 9 words. Note says no more than the page. Grade documented, mode default, indicator right. It feeds no level. Not credited, rightly: the same article says 'For anything complex or high-impact, our Operations team is still directly involved', which is about support questions, not approval of an action, so it does not meet I38."
+     },
+     {
+      "answer": "I08",
+      "severity": "note",
+      "finding": "Round-one should-fix (source and note mismatch) is answered: source is now the product page, span 'Submit and approve time-off requests' is exact (5 words) and the note's clauses are on that page ('Complete everyday workforce tasks directly through Alfie') and in the June 2026 release. 'No page names an opt-in' holds for the five product sources and the two help articles; the help article says 'Do I have to use alfie? No', which is about using Alfie at all, not a switch for the action features. Arguing against once more: the credit is a list item under 'Supporting capabilities' in vendor marketing; the help article says only 'Complete tasks faster by taking action directly within Alfie' and the role table shows time-off approvals for some roles. Grade documented is fair; no level uses it because A3 needs I17, I18 or I19."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card computed: A0 (shown A-), R1, C1, O2. The card clears the one-dimension rule through R, C and O, so no single removal sinks it. What each rests on, all from one vendor page (the Alfie product page) except where stated. R1: I09 and I01, two answers, each a plain statement of fact (embedded in Pebl's platform; built and maintained by Pebl). Artefact of text, not adjective; either alone is enough. Weakest-looking: C1 on I47 alone. The span 'Alfie inherits platform permissions, it does not bypass them' is a statement that the user's role limits Alfie; it does not say how people approve, override or stop it, which is what the level name Stated means. The rule accepts I47, so the credit is by rule, not by the words of the level. Remove I47: Control falls to 0, the card stays A0 R1 C0 O2 and remains valid. O2 rests on I22, I58 and I61 (rule needs two of three); each is a FAQ answer on the same page, verified, so removing one leaves O2; removing two leaves O1 through I20 with I58 or I22. If R's I09 and I01 were both removed the card would sit on C1 and O2 alone, still valid. The Autonomy question for the operator: I08 is documented (product page, and in the help article as taking action directly within Alfie) but no source states Alfie's mode, so A1 (needs I15), A2 (needs I16, or I07 with I02 to I05) and A3 (needs I17 to I19 beside I08) are all unmet; the facts are described here and the decision is left to the operator (decisions entry acts-without-mode). I did not find a source that settles I15, I16 or I17. Sources checked: five scan sources fetched; the FAQ text exists only in the product page's embedded JSON."
+     },
+     {
+      "answer": "I01,I07,I09,I20,I22,I47,I58,I61,I67,I68,S3,I40",
+      "severity": "pass",
+      "finding": "Round-one findings on I07 (note now says the same page also lists actions Alfie takes), I22 (terms-of-use clause gone), I58 (December release clause gone; the FAQ's vetted-documentation and account-data sentences are in the page), I40 (see above), I09 (payroll removed; the note's employment, compensation, time-off and invoice data are on the product page), I68 (note places the structured-program clause on the product page; embedded data holds entries dated 2026-06-04, 06-30, 08-27 twice, 10-27 and 11-05), and the round-one passes on I01, I20, I47, I61, I67, S3 all hold in the scan as it stands. I checked every span against the fetched source with apostrophe style normalised: all 14 are found and all are under fifteen words (I61 is 13, I58 is 11, I22 is 10). Grades and modes are right for statements (documented, default) and for the llms.txt probe (observed, default): I fetched https://hellopebl.com/llms.txt and it lists the Alfie page. Names and figures in notes and not_credited are in a source of the scan or a source listed beside the entry (the December 2025 release says 'two coordinated AI agents'; the privacy policy names Abacus.AI; the June release holds the 83.5% figure, the Myers-Holum quote and 'Dynamic follow-up prompts'). I12 and I17 non-credits are judgments I do not contest; I12 reads 'coordinated' in the release and rejects it for lack of a described handoff, which is a defensible but arguable line."
      }
     ]
    }
