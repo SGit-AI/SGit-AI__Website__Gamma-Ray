@@ -1,0 +1,348 @@
+{
+ "id": "spinnable-ai-employees",
+ "name": "Spinnable AI employees",
+ "operator": "Spinnable (the vendor); each customer is the operator of its own use",
+ "company": "spinnable",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-10",
+ "tier": "public",
+ "basis": "Spinnable's own public pages (product, documentation, blog, customer stories, legal and security pages)",
+ "seen_by_operator": null,
+ "what": "Role-based AI workers with their own email address, memory, scheduled tasks and access to 35+ connected tools, reachable by email, WhatsApp, Slack, meetings and voice.",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. Part of the first Portuguese cohort.",
+ "grant": null,
+ "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
+ "vault": {
+  "id": "kghdiwq3",
+  "read_key": "sgit_public_read_76f8699d4556bfb03360cbda6e61d0c7f76b07e13444704e4ced072a90a1742c:kghdiwq3",
+  "published": "2026-11-10"
+ },
+ "review": {
+  "status": "draft",
+  "rounds": []
+ },
+ "assessment": {
+  "by": "gamma.studio@web-summit.dinis",
+  "researcher_assessor": "a sub-agent of gamma.studio",
+  "challenger": "a sub-agent of gamma.studio",
+  "lowered": [
+   "I54"
+  ],
+  "fixed": [
+   "I12",
+   "I25",
+   "I46",
+   "I56",
+   "S1"
+  ],
+  "added_by_challenger": [],
+  "files": "in the vault: work/assessment.json, work/challenger.json"
+ },
+ "answers": {
+  "I04": {
+   "e": "https://docs.spinnable.ai/guides/worker-vault",
+   "n": "Workers run Python code in a sandbox, where stored credentials are exposed as environment variables for API calls.",
+   "span": "Vault environment variables exist solely inside the sandbox code execution environment.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I08": {
+   "e": "https://docs.spinnable.ai/concepts/ai-workers",
+   "n": "The documentation states workers act in connected tools, such as updating databases and sending emails.",
+   "span": "They can check your calendar, update databases, and send emails.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I10": {
+   "e": "https://docs.spinnable.ai/tools/overview",
+   "n": "Workers connect to many tools across a business, from email and calendar to GitHub, Notion and Salesforce.",
+   "span": "connect to 35+ tools to work across your entire tech stack",
+   "g": "documented",
+   "m": "default"
+  },
+  "I11": {
+   "e": "https://docs.spinnable.ai/tools/overview",
+   "n": "Each tool is connected by authenticating with the outside service through OAuth or an API key.",
+   "span": "Authenticate with the service (OAuth or API key)",
+   "g": "documented",
+   "m": "default"
+  },
+  "I12": {
+   "e": "https://docs.spinnable.ai/release-notes/2026-06-10",
+   "n": "With two or more workers in a team, a worker can delegate tasks to the others; each sub-task shows as its own block in the activity trail (release notes, 10 June 2026). Since 13 May 2026 a worker can also be added as co-manager of another worker.",
+   "span": "When a worker delegates tasks to other workers in your team",
+   "g": "documented",
+   "m": "available",
+   "cfg": "multi-worker"
+  },
+  "I17": {
+   "e": "https://docs.spinnable.ai/troubleshooting/index",
+   "n": "When a step needs a decision without explicit rules, the worker may pause and wait for its manager.",
+   "span": "the worker may pause and wait for manager guidance rather than guessing.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I20": {
+   "e": "https://docs.spinnable.ai/introduction",
+   "n": "The documentation states what the workers are for: joining a team and doing its work, by role or for a specific process.",
+   "span": "AI workers that join your team and help you get work done.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I21": {
+   "e": "https://docs.spinnable.ai/concepts/tool-permissions",
+   "n": "Tools must be granted to each worker separately, with a chosen connection and capabilities such as read or send.",
+   "span": "A connection under Settings > Tools does not grant any worker access by itself.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I22": {
+   "e": "https://docs.spinnable.ai/troubleshooting/index",
+   "n": "The troubleshooting page documents failure cases, such as a worker stopping mid-workflow, with causes and fixes.",
+   "span": "Your worker initiates a task or multi-step workflow, but stops mid-way",
+   "g": "documented",
+   "m": "default"
+  },
+  "I25": {
+   "e": "https://docs.spinnable.ai/release-notes/2026-08-05",
+   "n": "A tool connection can be set to Read, so the workers using it can look things up but not create, change or send; Read is preselected for a new connection, while Full access remains the default and is needed to act.",
+   "span": "When you connect a new account, Read is preselected",
+   "g": "documented",
+   "m": "available",
+   "cfg": "read-only-connection"
+  },
+  "I26": {
+   "e": "https://docs.spinnable.ai/concepts/ai-workers",
+   "n": "Each worker has its own email address, separate from the people it works for.",
+   "span": "They have their own email addresses and can send/receive messages",
+   "g": "documented",
+   "m": "default"
+  },
+  "I30": {
+   "e": "https://docs.spinnable.ai/guides/change-manager",
+   "n": "Each worker has a manager who administers its settings; the role can be handed to another user.",
+   "span": "A worker's manager can administer its settings",
+   "g": "documented",
+   "m": "default"
+  },
+  "I39": {
+   "e": "https://docs.spinnable.ai/concepts/communication-channels",
+   "n": "A person can interrupt a running worker from the chat, which cancels the current run; failing recurring tasks are paused.",
+   "span": "This immediately cancels the current in-flight generation",
+   "g": "documented",
+   "m": "default"
+  },
+  "I40": {
+   "e": "https://docs.spinnable.ai/release-notes/2026-10-28",
+   "n": "A recurring task that fails three runs in a row is paused and the worker's manager is emailed with the reason.",
+   "span": "Spinnable pauses it and emails the worker's manager with the reason.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I41": {
+   "e": "https://docs.spinnable.ai/guides/connecting-tools",
+   "n": "The documentation states every tool action is logged with time, worker, tool, method and outcome; documented, not observed.",
+   "span": "All tool actions are logged with:",
+   "g": "documented",
+   "m": "default"
+  },
+  "I46": {
+   "e": "https://docs.spinnable.ai/guides/worker-communication-restrictions",
+   "n": "Who may message a worker is a per-worker setting in the app that its manager or co-managers change at once.",
+   "span": "Only the worker's manager or co-managers can change these controls.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I47": {
+   "e": "https://docs.spinnable.ai/guides/corporate-email",
+   "n": "Persistent rules for a worker are written in prose in its Worker Policy.",
+   "span": "Worker Policy instructions are treated as the highest-priority rules and apply across all conversations.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I56": {
+   "e": "https://docs.spinnable.ai/guides/corporate-email",
+   "n": "By default, a worker's outbound email carries a signature footer saying it is an AI worker hired through Spinnable; a manager can switch the signature off, and the security guide advises that recipients of a company-address worker need not know. Email only; no disclosure is documented for WhatsApp, Slack or voice.",
+   "span": "is an AI worker hired through Spinnable",
+   "g": "documented",
+   "m": "default"
+  },
+  "I57": {
+   "e": "https://docs.spinnable.ai/support/contact",
+   "n": "A support page gives an email channel for reporting problems with a worker, for managers and for workers themselves.",
+   "span": "How to get help when something goes wrong",
+   "g": "documented",
+   "m": "default"
+  },
+  "I58": {
+   "e": "https://www.spinnable.ai/privacy-policy",
+   "n": "The privacy policy lists what the agents access: email, calendar, documents, messages and data from connected platforms.",
+   "span": "When our AI agents work for you, they access:",
+   "g": "documented",
+   "m": "default"
+  },
+  "I68": {
+   "e": "https://docs.spinnable.ai/llms.txt",
+   "n": "The documentation lists weekly dated release notes; the latest read is dated 28 October 2026.",
+   "span": "October 28, 2026",
+   "g": "documented",
+   "m": "default"
+  },
+  "S1": {
+   "e": "https://www.spinnable.ai/",
+   "n": "The home page quotes Smart Role's CEO: one worker manages his calendar, runs his outreach and keeps his pipeline current. A testimonial; no usage figures for what the workers do.",
+   "span": "Clara manages my calendar, runs my outreach, and keeps my pipeline current.",
+   "g": "documented",
+   "m": "default"
+  },
+  "S3": {
+   "e": "https://www.spinnable.ai/llms.txt",
+   "n": "An llms.txt resolves on the marketing site and on docs.spinnable.ai, fetched on 10 November 2026.",
+   "span": "AI Workforce Fit Guide for AI Agents",
+   "g": "observed",
+   "m": "default",
+   "method": "probe"
+  }
+ },
+ "not_credited": [],
+ "announced": [
+  {
+   "what": "SOC 2 Type II report in progress",
+   "source": "https://www.spinnable.ai/enterprise"
+  },
+  {
+   "what": "Voice calls in beta; an older docs note calls phone-based interactions coming soon",
+   "source": "https://docs.spinnable.ai/concepts/communication-channels"
+  },
+  {
+   "what": "Marketing claim that anything with external impact waits for a person's sign-off (not matched by a documented mechanism)",
+   "source": "https://www.spinnable.ai/"
+  },
+  {
+   "what": "Launch prediction that every company will employ both humans and AI within five years",
+   "source": "https://websummit.com/wp-media/2025/11/SPINNABLE-LAUNCH-RELEASE-1.pdf"
+  }
+ ],
+ "configurations": [
+  {
+   "id": "shipped",
+   "name": "As shipped",
+   "note": "Spinnable AI employees (called AI workers in the documentation) with its documented defaults.",
+   "on": []
+  },
+  {
+   "id": "multi-worker",
+   "name": "Multi worker",
+   "note": "Two or more workers in the same team or workspace, so one can delegate tasks to another.",
+   "on": [
+    "multi-worker"
+   ]
+  },
+  {
+   "id": "read-only-connection",
+   "name": "Read only connection",
+   "note": "A tool connection set to Read: workers using it can search and look up but not create, change or send.",
+   "on": [
+    "read-only-connection"
+   ]
+  }
+ ],
+ "captures": {
+  "https://docs.spinnable.ai/concepts/ai-workers": {
+   "sha256": "9d2680d11239f6d5cc68691a81a34b547d9f74d7c670c91fd52a9fa72cd5ce57",
+   "bytes": 204713,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://docs.spinnable.ai/concepts/communication-channels": {
+   "sha256": "3238e5ebe58318f2c74cd6293835c2536b67f43366b6acd0f98500309316b151",
+   "bytes": 302593,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://docs.spinnable.ai/concepts/tool-permissions": {
+   "sha256": "54facc40f5311df9cc870e87b54e89109ba51f1772835a21be7b3c45c469ef00",
+   "bytes": 190309,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://docs.spinnable.ai/guides/change-manager": {
+   "sha256": "015d7bc82014937aa171c2e91ad81d0fbec2678d5fac503967873cde6ac48b65",
+   "bytes": 147921,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://docs.spinnable.ai/guides/connecting-tools": {
+   "sha256": "4aa99c79cbbd32dec81e17bfc9ff5231f62c7660ff7104b7eb741724b77de69d",
+   "bytes": 224098,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://docs.spinnable.ai/guides/corporate-email": {
+   "sha256": "cb7502b01ed16d98ba55dedce79fa4bd11f7606efe728ef5e0daccd8f1343054",
+   "bytes": 237173,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://docs.spinnable.ai/guides/worker-communication-restrictions": {
+   "sha256": "2f6cfc3d13abe68e5698b346884fc38e473dab4b290c9e8bb8ec019d5c586ca1",
+   "bytes": 167677,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://docs.spinnable.ai/guides/worker-vault": {
+   "sha256": "0cb980961bd96379579b7f9c44e4482f51884ff9b958b2c90303152d1129559e",
+   "bytes": 192088,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://docs.spinnable.ai/introduction": {
+   "sha256": "6be24a237da5989af9d65e4300c0a3b79ce1840d4a0f3a2328dc0a7af1b3c741",
+   "bytes": 200358,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://docs.spinnable.ai/llms.txt": {
+   "sha256": "a017860de55023b0b7bbee5a32ff663c2a59731473b0b9e5484ae16d4496a99c",
+   "bytes": 23038,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://docs.spinnable.ai/release-notes/2026-06-10": {
+   "sha256": "711b6a566750236a47496435793909f6407e128db4795979f98626d1619b46a3",
+   "bytes": 139482,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://docs.spinnable.ai/release-notes/2026-08-05": {
+   "sha256": "4ea7fdba1017416249e5aa88e5852dbaa8837554418f3e8240074d713c50e45c",
+   "bytes": 136790,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://docs.spinnable.ai/release-notes/2026-10-28": {
+   "sha256": "3e1d8435beb22b547cfd1057560f72c94e96aee4a3b3df65e89f7d6fce4b7a88",
+   "bytes": 140766,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://docs.spinnable.ai/support/contact": {
+   "sha256": "3f2ac086be2cb2bcf215c7ab5416551554220786a7cfc5d2213507cc908dcb90",
+   "bytes": 163341,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://docs.spinnable.ai/tools/overview": {
+   "sha256": "98954df3c93aac4508afefc36dac734a5b00103efc8eca9c1363037c84b9ebfd",
+   "bytes": 234728,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://docs.spinnable.ai/troubleshooting/index": {
+   "sha256": "1ffe15fcec195f9f2788464fb0606da6137d9f12ec30908f931cc5b486b551c8",
+   "bytes": 250020,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://www.spinnable.ai/": {
+   "sha256": "e524bed247dadd0eca56b19d8c15d4402114b66f247bd628787d39cb9ce6aada",
+   "bytes": 387013,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://www.spinnable.ai/llms.txt": {
+   "sha256": "c702a4fd1b2a1dcc565ed33c5f2aa79dc56085dabb2b2bb746d2a0e8189bd207",
+   "bytes": 58211,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://www.spinnable.ai/privacy-policy": {
+   "sha256": "7558a1dcef25c8a600513e59be6c15750da4f1f2c2cdd061424988a11ac91b3c",
+   "bytes": 82161,
+   "read_at": "2026-11-10T10:38Z"
+  }
+ }
+}

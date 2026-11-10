@@ -1,0 +1,201 @@
+{
+ "id": "outsystems",
+ "name": "OutSystems",
+ "url": "https://www.outsystems.com/",
+ "country": "Portugal",
+ "sector": "dev tools / enterprise platform",
+ "read": "2026-11-10",
+ "basis": "OutSystems's own public pages and, for company basics only, the news sources named beside each fact",
+ "seen_by_subject": false,
+ "what": "OutSystems sells a low-code development platform on which customers build applications and, through Agent Workbench, AI agents that call tools, other agents and enterprise systems.",
+ "facts": [
+  {
+   "fact": "Founded in 2001 by Paulo Rosado in Lisbon, Portugal (Wikipedia).",
+   "url": "https://en.wikipedia.org/wiki/OutSystems",
+   "span": "OutSystems was founded in 2001 by Paulo Rosado in Lisbon, Portugal."
+  },
+  {
+   "fact": "The company page dates the company to 2001.",
+   "url": "https://www.outsystems.com/company/",
+   "span": "Powering innovation since 2001"
+  },
+  {
+   "fact": "Woodson Martin was appointed CEO in 2025; Paulo Rosado became chairman (Wikipedia).",
+   "url": "https://en.wikipedia.org/wiki/OutSystems",
+   "span": "In 2025, OutSystems appointed Woodson Martin as CEO"
+  },
+  {
+   "fact": "The offices page lists an office in Linda-a-Velha, Portugal.",
+   "url": "https://www.outsystems.com/company/offices/",
+   "span": "Portugal - Linda-a-Velha"
+  },
+  {
+   "fact": "Agent Workbench was announced generally available on 30 September 2025, at the OutSystems ONE conference.",
+   "url": "https://www.outsystems.com/news/agent-workbench-general-availability/",
+   "span": "OutSystems Announces General Availability of Agent Workbench"
+  },
+  {
+   "fact": "The trust page lists SOC 2 Type II, ISO 27001 and ISO 22301 among its audited controls and credentials.",
+   "url": "https://www.outsystems.com/trust/",
+   "span": "SOC 2 Type II, ISO 27001, and ISO 22301"
+  },
+  {
+   "fact": "The New Stack (technology news) reported the Agent Workbench launch on 30 September 2025.",
+   "url": "https://thenewstack.io/outsystems-launches-a-low-code-workbench-for-building-enterprise-ai-agents/",
+   "span": "OutSystems Launches a Low-Code Workbench for Building Enterprise AI Agents"
+  }
+ ],
+ "people": [
+  {
+   "name": "Woodson Martin",
+   "role": "Chief Executive Officer",
+   "url": "https://www.outsystems.com/company/"
+  },
+  {
+   "name": "Paulo Rosado",
+   "role": "Founder and Chairman of the Board",
+   "url": "https://www.outsystems.com/company/"
+  },
+  {
+   "name": "Luis Blando",
+   "role": "Chief Product and Technology Officer",
+   "url": "https://www.outsystems.com/company/"
+  },
+  {
+   "name": "Fay Sien Goon",
+   "role": "Chief Financial Officer",
+   "url": "https://www.outsystems.com/company/"
+  },
+  {
+   "name": "Kim Seabrook",
+   "role": "Chief Revenue Officer",
+   "url": "https://www.outsystems.com/company/"
+  },
+  {
+   "name": "Kris Lande",
+   "role": "Chief Marketing Officer",
+   "url": "https://www.outsystems.com/company/"
+  }
+ ],
+ "solutions": [
+  {
+   "id": "agent-workbench",
+   "name": "OutSystems Agent Workbench",
+   "short": "OutSystems Agent Workbench",
+   "what": "Builds, runs and governs AI agents (agentic apps) on OutSystems Developer Cloud (ODC): agents call server actions, MCP tools and external A2A agents, with guardrails, evaluations, traces and workflow human-in-the-loop steps.",
+   "status": "generally available since 30 September 2025 (vendor news release); the scout's name 'Agentic AI Workbench' is the URL slug, the product page and docs say 'Agent Workbench'",
+   "url": "https://www.outsystems.com/platform/agentic-ai-workbench",
+   "scan": "outsystems-agent-workbench"
+  },
+  {
+   "id": "mentor",
+   "name": "Mentor",
+   "short": "Mentor",
+   "what": "AI-assisted app generation and modification inside ODC (Mentor Web and Mentor Studio), part of Agentic Systems Engineering.",
+   "status": "generally available (vendor pages)",
+   "url": "https://www.outsystems.com/platform/agentic-systems-engineering"
+  },
+  {
+   "id": "agent-experience",
+   "name": "OutSystems Agent Experience (OutSystems MCP)",
+   "short": "OutSystems Agent Experience",
+   "what": "Opens the OutSystems platform to external AI coding agents (Claude Code, Cursor, Codex, Kiro) through an MCP server, to build and deploy apps.",
+   "status": "generally available, announced 7 October 2026 (vendor news release)",
+   "url": "https://www.outsystems.com/platform/agent-experience"
+  },
+  {
+   "id": "odc",
+   "name": "OutSystems Developer Cloud (ODC) and OutSystems 11",
+   "short": "OutSystems Developer Cloud",
+   "what": "The underlying low-code application platforms (cloud-native ODC and the earlier O11).",
+   "status": "generally available",
+   "url": "https://success.outsystems.com/documentation"
+  }
+ ],
+ "stories": [
+  {
+   "customer": "TeamWork",
+   "what": "Built an AI Studio of custom agents; its Customer Support Agent auto-classifies and routes support tickets; the company expects 20% of incidents to be resolved automatically (an expectation, not a measured figure).",
+   "url": "https://www.outsystems.com/case-studies/teamwork-ai-agents/",
+   "span": "auto-classifies and routes support tickets"
+  },
+  {
+   "customer": "The Arch Company",
+   "what": "Early access participant; a content classification agent routes customer service enquiries.",
+   "url": "https://www.outsystems.com/news/agent-workbench-general-availability/",
+   "span": "implemented a content classification agent that intelligently routes customer service enquiries"
+  },
+  {
+   "customer": "Axos Bank",
+   "what": "Early access participant; built a log analysis agent that interprets error logs and recommends actions, and automated document mapping.",
+   "url": "https://www.outsystems.com/news/agent-workbench-general-availability/",
+   "span": "built an intelligent log analysis agent to interpret error logs"
+  },
+  {
+   "customer": "Thermo Fisher Scientific",
+   "what": "Early access participant; built a Customer Escalation Agent that interprets unstructured customer interaction data.",
+   "url": "https://www.outsystems.com/news/agent-workbench-general-availability/",
+   "span": "built an intelligent Customer Escalation Agent"
+  },
+  {
+   "customer": "Grihum Housing Finance",
+   "what": "Working to deploy agents that analyse property evaluation reports and suggest deviations during loan origination (in progress, per the release).",
+   "url": "https://www.outsystems.com/news/agent-workbench-general-availability/",
+   "span": "is working to deploy Agent Workbench to improve the accuracy of loan underwriting"
+  }
+ ],
+ "analysis": [],
+ "article": null,
+ "vault": {
+  "id": "ivinvfhj",
+  "read_key": "sgit_public_read_a787d5ebd3b7fca03039c35a5d95311a66cc5581cbc41eec0ad3ab0c46272feb:ivinvfhj",
+  "published": "2026-11-10"
+ },
+ "team": {
+  "researcher-assessor": "a sub-agent of gamma.studio@web-summit.dinis",
+  "challenger": "a sub-agent",
+  "scorer": "build/spectrum.mjs",
+  "analyst, designer, writer": "gamma.studio@web-summit.dinis",
+  "review": "gamma.review@web-summit.dinis (pending)",
+  "sign-off": "gamma.approve@web-summit.dinis (pending)"
+ },
+ "signoff": null,
+ "corrections": [],
+ "captures": {
+  "https://en.wikipedia.org/wiki/OutSystems": {
+   "sha256": "15331d8c27ad1417506c26cb85c21dd287010e2031b90c2f6d38fda032097890",
+   "bytes": 165893,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://thenewstack.io/outsystems-launches-a-low-code-workbench-for-building-enterprise-ai-agents/": {
+   "sha256": "fb1a8c1da5e2fea56ee04e42d237d4e5b532878190b15d2bedec9788c06dfa2d",
+   "bytes": 1224882,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://www.outsystems.com/case-studies/teamwork-ai-agents/": {
+   "sha256": "632f93d6aa40cf3eacb174fd4630ba1d5a9e4d6daefef474105e18dbe1f8006d",
+   "bytes": 52752,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://www.outsystems.com/company/": {
+   "sha256": "cf2b6903bd19c94394ab39319a8666f706cb0e8aa51d70a51976b8eafc32c400",
+   "bytes": 441044,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://www.outsystems.com/company/offices/": {
+   "sha256": "0b6f5ebcac6fae95538205483fc06468c576a1f3381a4e27e23053e545f5e0dc",
+   "bytes": 406543,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://www.outsystems.com/news/agent-workbench-general-availability/": {
+   "sha256": "18225ae04f19a23868c8193f93785718a108a13bc4a44e07cc7ecddd0a32280a",
+   "bytes": 254232,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://www.outsystems.com/trust/": {
+   "sha256": "6a431ccaa0870c849027aac253ff3ca2e90a9e942bf531a57b37cdf48a0567e0",
+   "bytes": 332218,
+   "read_at": "2026-11-10T10:39Z"
+  }
+ }
+}

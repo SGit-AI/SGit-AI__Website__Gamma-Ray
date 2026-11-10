@@ -1,0 +1,251 @@
+{
+ "id": "ethiack-hackian",
+ "name": "Hackian",
+ "operator": "Ethiack (the vendor); each customer is the operator of its own use",
+ "company": "ethiack",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-10",
+ "tier": "public",
+ "basis": "Ethiack's own public pages (product, documentation, blog, customer stories, legal and security pages)",
+ "seen_by_operator": null,
+ "what": "AI agent that runs reconnaissance, exploits vulnerabilities with non-destructive routines and reports findings with proof of exploitation; used in Continuous Adversarial Exposure Validation and in Agentic Pentests (Swift, Depth).",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. Part of the first Portuguese cohort.",
+ "grant": null,
+ "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
+ "vault": {
+  "id": "1livflie",
+  "read_key": "sgit_public_read_d255aac8826ac0704c9059943a1f331cabf3993405f156516329cc8d239d97fd:1livflie",
+  "published": "2026-11-10"
+ },
+ "review": {
+  "status": "draft",
+  "rounds": []
+ },
+ "assessment": {
+  "by": "gamma.studio@web-summit.dinis",
+  "researcher_assessor": "a sub-agent of gamma.studio",
+  "challenger": "a sub-agent of gamma.studio",
+  "lowered": [
+   "I05",
+   "I25",
+   "I36",
+   "I48",
+   "I54",
+   "I56",
+   "I58"
+  ],
+  "fixed": [
+   "I19"
+  ],
+  "added_by_challenger": [],
+  "files": "in the vault: work/assessment.json, work/challenger.json"
+ },
+ "answers": {
+  "I04": {
+   "e": "https://ethiack.com/info-hub/product/introducing-hackian",
+   "n": "The CTO's post says the agent's tools let it run commands and send requests against targets.",
+   "span": "enable actual testing actions like executing commands or sending requests",
+   "g": "documented",
+   "m": "default"
+  },
+  "I08": {
+   "e": "https://ethiack.com/hackian",
+   "n": "Hackian runs exploitation routines itself to confirm vulnerabilities.",
+   "span": "It autonomously executes benign exploitation routines to confirm vulnerabilities.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I10": {
+   "e": "https://docs.ethiack.com/docs/portal/tests/continuous-adversarial-exposure-validation",
+   "n": "In continuous mode Hackian works across the whole in-scope attack surface, not one system.",
+   "span": "Hackian continuously analyzes your entire attack surface in breadth",
+   "g": "documented",
+   "m": "default"
+  },
+  "I11": {
+   "e": "https://docs.ethiack.com/docs/portal/surface/configuring-your-beacon",
+   "n": "With a Beacon deployed by the customer, Hackian reaches into the customer's internal networks over a tunnel.",
+   "span": "securely extends the Ethiack Hackian Engine testing capabilities into your internal networks",
+   "g": "documented",
+   "m": "available",
+   "cfg": "beacon"
+  },
+  "I19": {
+   "e": "https://docs.ethiack.com/docs/portal/tests/agentic-pentest-policy-guidelines",
+   "n": "An Agentic Pentest runs on its own once launched, deciding in real time within the policy and scope the customer sets; findings and the activity log show its progress.",
+   "span": "an agentic test relies on this policy to make decisions in real time",
+   "g": "documented",
+   "m": "default"
+  },
+  "I20": {
+   "e": "https://docs.ethiack.com/docs/portal/tests/agentic-pentests",
+   "n": "The documentation states what an Agentic Pentest by Hackian is for.",
+   "span": "Hackian performs a focused, in-depth analysis of a defined set of assets",
+   "g": "documented",
+   "m": "default"
+  },
+  "I22": {
+   "e": "https://docs.ethiack.com/docs/portal/tests/human-in-the-loop",
+   "n": "The documentation names scope Hackian does not yet cover alone, such as mobile applications.",
+   "span": "technologies and test types that Hackian does not currently handle on its own",
+   "g": "documented",
+   "m": "default"
+  },
+  "I39": {
+   "e": "https://docs.ethiack.com/docs/portal/tests/test-details",
+   "n": "A continuous test page has a control to pause or restart the test.",
+   "span": "tests, the header also includes a control to",
+   "g": "documented",
+   "m": "default"
+  },
+  "I41": {
+   "e": "https://docs.ethiack.com/docs/portal/tests/test-details",
+   "n": "Each test page carries an activity log of the actions Hackian performs.",
+   "span": "A log of the actions Hackian has been performing during the test",
+   "g": "documented",
+   "m": "default"
+  },
+  "I47": {
+   "e": "https://docs.ethiack.com/docs/portal/tests/agentic-pentest-policy-guidelines",
+   "n": "The customer writes guardrails in the test policy, in prose, stating what the agent must not do.",
+   "span": "Guardrails define what the agent must not do.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I50": {
+   "e": "https://ethiack.com/info-hub/research/ai-pentesting-benchmarks-are-so-bad-we-made-a-new-one",
+   "n": "Ethiack publishes benchmark results for Hackian against other agents under its open EthiBench protocol.",
+   "span": "our own agent Hackian led on both F1 and recall under the same protocol",
+   "g": "documented",
+   "m": "default"
+  },
+  "I57": {
+   "e": "https://docs.ethiack.com/docs/portal/findings/details",
+   "n": "Customers can change the severity and score assigned to a finding and comment in its updates feed.",
+   "span": "adjust the severity or CVSS score assigned to the finding",
+   "g": "documented",
+   "m": "default"
+  },
+  "S1": {
+   "e": "https://ethiack.com/info-hub/case-studies/scaling-security-how-uporto-and-ethiack-protected-5000-assets-with-ai-powered-intelligence",
+   "n": "A named customer, Universidade do Porto, runs Hackian continuously against its exposure; Jumia and CEGID case studies also name Hackian.",
+   "span": "Hackian, our agentic AI pentester, runs against U.Porto's exposure 24/7",
+   "g": "documented",
+   "m": "default"
+  },
+  "S3": {
+   "e": "https://docs.ethiack.com/llms.txt",
+   "n": "The documentation site publishes an llms.txt that resolves and indexes the portal, API and test documentation.",
+   "span": "Ethiack REST API documentation.",
+   "g": "observed",
+   "m": "default",
+   "method": "probe"
+  }
+ },
+ "not_credited": [],
+ "announced": [
+  {
+   "what": "An MCP server that will let external agents query Ethiack findings and trigger tests (forthcoming)",
+   "source": "https://ethiack.com/info-hub/product/spring-release-2026"
+  },
+  {
+   "what": "Step-by-step visibility into Hackian's execution, including sub-agent selection and guardrail validations (announced for Q2 2026)",
+   "source": "https://ethiack.com/info-hub/product/spring-release-2026"
+  },
+  {
+   "what": "Active Directory testing and privilege escalation validation in the Hackian engine",
+   "source": "https://ethiack.com/info-hub/product/spring-release-2026"
+  },
+  {
+   "what": "Integrations with ServiceNow, Wiz, AWS and GCP",
+   "source": "https://ethiack.com/info-hub/product/spring-release-2026"
+  },
+  {
+   "what": "Automatic retesting of findings discovered by the agent (not yet available)",
+   "source": "https://docs.ethiack.com/docs/portal/findings/retesting"
+  },
+  {
+   "what": "Marketing figures: over 75% of PortSwigger labs solved, 99.5%+ accuracy, 30x faster than manual pentests",
+   "source": "https://ethiack.com/hackian"
+  }
+ ],
+ "configurations": [
+  {
+   "id": "shipped",
+   "name": "As shipped",
+   "note": "Hackian (Ethiack's agentic AI pentesting engine) with its documented defaults.",
+   "on": []
+  },
+  {
+   "id": "beacon",
+   "name": "Beacon",
+   "note": "The customer deploys the Ethiack Beacon in its own network so Hackian can test internal assets.",
+   "on": [
+    "beacon"
+   ]
+  }
+ ],
+ "captures": {
+  "https://docs.ethiack.com/docs/portal/findings/details": {
+   "sha256": "2d8e2a7fa51a8dc5065966d608ea68da79ff5e074f80f419f663bf2e56994c56",
+   "bytes": 266280,
+   "read_at": "2026-11-10T10:40Z"
+  },
+  "https://docs.ethiack.com/docs/portal/surface/configuring-your-beacon": {
+   "sha256": "a989474c4a360bff1ffc889325e84548b9f282910ec5751dbd1e60375a36c75d",
+   "bytes": 343242,
+   "read_at": "2026-11-10T10:40Z"
+  },
+  "https://docs.ethiack.com/docs/portal/tests/agentic-pentest-policy-guidelines": {
+   "sha256": "688ad23674c3a5f1fb20c71870a80a59460791899867003c31e7d05f14a90e43",
+   "bytes": 246595,
+   "read_at": "2026-11-10T10:40Z"
+  },
+  "https://docs.ethiack.com/docs/portal/tests/agentic-pentests": {
+   "sha256": "a9a9b6e5162089c7711c311672e3921e002b90a0318ef60f455f3717c74323e6",
+   "bytes": 233529,
+   "read_at": "2026-11-10T10:40Z"
+  },
+  "https://docs.ethiack.com/docs/portal/tests/continuous-adversarial-exposure-validation": {
+   "sha256": "ebc089ee5921d6e0aaa527a7bcc5798d875e8b4565eca5ac3a990eafe54be98f",
+   "bytes": 230332,
+   "read_at": "2026-11-10T10:40Z"
+  },
+  "https://docs.ethiack.com/docs/portal/tests/human-in-the-loop": {
+   "sha256": "d042a27702e3aa1da39189ab60735a65893db47a97a3cd753211e5f4933bf267",
+   "bytes": 227727,
+   "read_at": "2026-11-10T10:40Z"
+  },
+  "https://docs.ethiack.com/docs/portal/tests/test-details": {
+   "sha256": "d088d59e3d43d5b921a8f01a5943e8cbd3d31b050956fd7431ceab82764e07f9",
+   "bytes": 254499,
+   "read_at": "2026-11-10T10:40Z"
+  },
+  "https://docs.ethiack.com/llms.txt": {
+   "sha256": "f0f352298b06ae2a1ed034ee626a9d45baa156dd50d44dfba8cfa43006d1b0bb",
+   "bytes": 54222,
+   "read_at": "2026-11-10T10:40Z"
+  },
+  "https://ethiack.com/hackian": {
+   "sha256": "46201b29e69df78f2d3aac0f2643f5f3d37e642d45b623ab7fc06e675820721a",
+   "bytes": 420871,
+   "read_at": "2026-11-10T10:40Z"
+  },
+  "https://ethiack.com/info-hub/case-studies/scaling-security-how-uporto-and-ethiack-protected-5000-assets-with-ai-powered-intelligence": {
+   "sha256": "3659d51b77665219982d030ddc4bd2b80f8c90e1559ab271ceb1f9304a1a5cfd",
+   "bytes": 286290,
+   "read_at": "2026-11-10T10:40Z"
+  },
+  "https://ethiack.com/info-hub/product/introducing-hackian": {
+   "sha256": "055a9c1133606bb631f18a6aac600c486747d0687d99191fa5af74f235030315",
+   "bytes": 297052,
+   "read_at": "2026-11-10T10:40Z"
+  },
+  "https://ethiack.com/info-hub/research/ai-pentesting-benchmarks-are-so-bad-we-made-a-new-one": {
+   "sha256": "0cfc742928a6069c1ee5faa7888818072819135c9dfc61e7bbac4889e52d0d60",
+   "bytes": 320186,
+   "read_at": "2026-11-10T10:40Z"
+  }
+ }
+}

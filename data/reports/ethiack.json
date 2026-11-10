@@ -1,0 +1,244 @@
+{
+ "id": "ethiack",
+ "name": "Ethiack",
+ "url": "https://ethiack.com/",
+ "country": "Portugal",
+ "sector": "cybersecurity",
+ "read": "2026-11-10",
+ "basis": "Ethiack's own public pages and, for company basics only, the news sources named beside each fact",
+ "seen_by_subject": false,
+ "what": "Ethiack sells an offensive security platform in which its AI agent, Hackian, maps an organisation's attack surface and tests it for exploitable vulnerabilities, alongside pentests that add human ethical hackers.",
+ "facts": [
+  {
+   "fact": "Founding year in the site's structured data",
+   "url": "https://ethiack.com/",
+   "span": "\"foundingDate\":\"2022\""
+  },
+  {
+   "fact": "Founding location in the site's structured data",
+   "url": "https://ethiack.com/",
+   "span": "\"name\":\"Coimbra, Portugal\""
+  },
+  {
+   "fact": "Legal entity and seat named in the Security Policy",
+   "url": "https://ethiack.com/legal/security-policy",
+   "span": "Ethiack, S.A (Instituto Pedro Nunes, Coimbra)"
+  },
+  {
+   "fact": "The About page dates the company to 2022",
+   "url": "https://ethiack.com/about",
+   "span": "In 2022, Ethiack was born to rethink how security is done"
+  },
+  {
+   "fact": "Hackian is the name of the agent and the engine",
+   "url": "https://ethiack.com/",
+   "span": "Hackian, our agentic AI pentesting engine."
+  },
+  {
+   "fact": "The documentation calls it the Ethiack Hackian Engine",
+   "url": "https://docs.ethiack.com/docs/portal/surface/configuring-your-beacon",
+   "span": "The Ethiack Beacon securely extends the Ethiack Hackian Engine testing capabilities"
+  },
+  {
+   "fact": "Three test types are offered; Continuous and Agentic Pentests are run by Hackian",
+   "url": "https://docs.ethiack.com/docs/portal/tests",
+   "span": "Ethiack offers three distinct test types"
+  },
+  {
+   "fact": "Terms of Service state compliance with the EU AI Act where applicable",
+   "url": "https://ethiack.com/legal/terms-of-service",
+   "span": "fully compliant with the provisions of the Artificial Intelligence Act (AI Act)"
+  },
+  {
+   "fact": "Pricing lists on-demand pentests and a continuous plan",
+   "url": "https://ethiack.com/pricing",
+   "span": "Bundles and customized pentests available"
+  }
+ ],
+ "people": [
+  {
+   "name": "Jorge Monteiro",
+   "role": "Co-Founder and CEO",
+   "url": "https://ethiack.com/"
+  },
+  {
+   "name": "André Baptista",
+   "role": "Co-Founder and CTO",
+   "url": "https://ethiack.com/"
+  },
+  {
+   "name": "Vítor Pinho",
+   "role": "CCSO",
+   "url": "https://ethiack.com/"
+  },
+  {
+   "name": "João Ferreira",
+   "role": "Head of Product",
+   "url": "https://ethiack.com/info-hub/product/spring-release-2026"
+  }
+ ],
+ "solutions": [
+  {
+   "id": "hackian",
+   "name": "Hackian (Ethiack's agentic AI pentesting engine)",
+   "short": "Hackian",
+   "what": "AI agent that runs reconnaissance, exploits vulnerabilities with non-destructive routines and reports findings with proof of exploitation; used in Continuous Adversarial Exposure Validation and in Agentic Pentests (Swift, Depth).",
+   "status": "generally available",
+   "url": "https://docs.ethiack.com/docs/portal/tests/agentic-pentests",
+   "scan": "ethiack-hackian"
+  },
+  {
+   "id": "caev",
+   "name": "Continuous Adversarial Exposure Validation",
+   "short": "Continuous Adversarial Exposur",
+   "what": "Always-on test mode in which Hackian runs reconnaissance and broad vulnerability checks across the in-scope attack surface.",
+   "status": "generally available",
+   "url": "https://docs.ethiack.com/docs/portal/tests/continuous-adversarial-exposure-validation"
+  },
+  {
+   "id": "agentic-pentest",
+   "name": "Agentic Pentest (Swift, Depth)",
+   "short": "Agentic Pentest",
+   "what": "On-demand, in-depth test of selected assets by Hackian, governed by a written policy with focus, goals and guardrails.",
+   "status": "generally available",
+   "url": "https://docs.ethiack.com/docs/portal/tests/agentic-pentests"
+  },
+  {
+   "id": "expert-pentest",
+   "name": "Expert Pentest",
+   "short": "Expert Pentest",
+   "what": "Hackian-led pentest with human ethical hackers, scheduled with the Ethiack team.",
+   "status": "generally available",
+   "url": "https://docs.ethiack.com/docs/portal/tests/human-in-the-loop"
+  },
+  {
+   "id": "beacon",
+   "name": "Ethiack Beacon",
+   "short": "Ethiack Beacon",
+   "what": "Customer-deployed tunnel that extends Hackian's testing into internal networks.",
+   "status": "generally available",
+   "url": "https://docs.ethiack.com/docs/portal/surface/configuring-your-beacon"
+  },
+  {
+   "id": "asm",
+   "name": "Attack Surface Management",
+   "short": "Attack Surface Management",
+   "what": "Continuous discovery and mapping of an organisation's assets.",
+   "status": "generally available",
+   "url": "https://ethiack.com/platform/agentic-pentest-as-a-service"
+  },
+  {
+   "id": "zero",
+   "name": "Ethiack Zero",
+   "short": "Ethiack Zero",
+   "what": "Public, read-only feed of new vulnerabilities with Ethiack's check and exploit timings, over a REST API and a public MCP server.",
+   "status": "public, free",
+   "url": "https://docs.ethiack.com/docs/zero"
+  }
+ ],
+ "stories": [
+  {
+   "customer": "Universidade do Porto",
+   "what": "Hackian runs continuous testing against the university's external exposure; 1,000 critical assets within 5,000.",
+   "url": "https://ethiack.com/info-hub/case-studies/scaling-security-how-uporto-and-ethiack-protected-5000-assets-with-ai-powered-intelligence",
+   "span": "Hackian, our agentic AI pentester, runs against U.Porto's exposure 24/7"
+  },
+  {
+   "customer": "Jumia",
+   "what": "Hackian runs autonomous pentesting across Jumia's external attack surface; more than 2,600 assets tested.",
+   "url": "https://ethiack.com/info-hub/case-studies/jumia-continuous-validation",
+   "span": "Today Ethiack tests more than 2,600 of its assets."
+  },
+  {
+   "customer": "CEGID",
+   "what": "Hackian runs continuous pentesting against more than 2,000 exposed assets across the group.",
+   "url": "https://ethiack.com/info-hub/case-studies/from-checklist-based-pentesting-to-autonomous-ethical-hacking-what-changed-for-cegid",
+   "span": "Hackian runs continuous, autonomous pentesting against more than 2,000 exposed assets"
+  },
+  {
+   "customer": "ANA Aeroportos",
+   "what": "Continuous automated penetration testing of ANA's external attack surface, plus human testing of internal systems.",
+   "url": "https://ethiack.com/info-hub/case-studies/strengthening-cybersecurity-at-ana-aeroportos-with-ethiacks-ethical-hacking",
+   "span": "24/7 automated penetration testing to identify vulnerabilities in ANA’s external attack surface"
+  }
+ ],
+ "analysis": [],
+ "article": null,
+ "vault": {
+  "id": "1livflie",
+  "read_key": "sgit_public_read_d255aac8826ac0704c9059943a1f331cabf3993405f156516329cc8d239d97fd:1livflie",
+  "published": "2026-11-10"
+ },
+ "team": {
+  "researcher-assessor": "a sub-agent of gamma.studio@web-summit.dinis",
+  "challenger": "a sub-agent",
+  "scorer": "build/spectrum.mjs",
+  "analyst, designer, writer": "gamma.studio@web-summit.dinis",
+  "review": "gamma.review@web-summit.dinis (pending)",
+  "sign-off": "gamma.approve@web-summit.dinis (pending)"
+ },
+ "signoff": null,
+ "corrections": [],
+ "captures": {
+  "https://docs.ethiack.com/docs/portal/surface/configuring-your-beacon": {
+   "sha256": "fb887bd0313c4707fd5a583d090bbda1f8f6305924ec5c13ac10bedac06eaaf5",
+   "bytes": 343242,
+   "read_at": "2026-11-10T10:40Z"
+  },
+  "https://docs.ethiack.com/docs/portal/tests": {
+   "sha256": "2acbdf55463b1b0f5e66e5a0087c2d03069e1d3d3440f1153e0f98db5c423b6a",
+   "bytes": 242562,
+   "read_at": "2026-11-10T10:40Z"
+  },
+  "https://ethiack.com/": {
+   "sha256": "61691836f51346e6eb5e485b824a20b0c53f367a4002b189c39ab8fb11757b65",
+   "bytes": 516625,
+   "read_at": "2026-11-10T10:40Z"
+  },
+  "https://ethiack.com/about": {
+   "sha256": "a6b212b51f8a2e09d4976a1ea40e6c5eaa90c2566d0166889fe55dcd5ec0589d",
+   "bytes": 330958,
+   "read_at": "2026-11-10T10:40Z"
+  },
+  "https://ethiack.com/info-hub/case-studies/from-checklist-based-pentesting-to-autonomous-ethical-hacking-what-changed-for-cegid": {
+   "sha256": "f67604fe918663c6eb836450ac8aa0d609f824d57f9110daf799e46b61b0f5a5",
+   "bytes": 286647,
+   "read_at": "2026-11-10T10:40Z"
+  },
+  "https://ethiack.com/info-hub/case-studies/jumia-continuous-validation": {
+   "sha256": "9b8276384a32631310dc3aa52f5838ac2a4b76bc695af29932cac0e87d0059a8",
+   "bytes": 293852,
+   "read_at": "2026-11-10T10:40Z"
+  },
+  "https://ethiack.com/info-hub/case-studies/scaling-security-how-uporto-and-ethiack-protected-5000-assets-with-ai-powered-intelligence": {
+   "sha256": "3659d51b77665219982d030ddc4bd2b80f8c90e1559ab271ceb1f9304a1a5cfd",
+   "bytes": 286290,
+   "read_at": "2026-11-10T10:40Z"
+  },
+  "https://ethiack.com/info-hub/case-studies/strengthening-cybersecurity-at-ana-aeroportos-with-ethiacks-ethical-hacking": {
+   "sha256": "88229413807b0fed36edaa03d38559e70003810b959a7d1b37888203c989cedf",
+   "bytes": 290377,
+   "read_at": "2026-11-10T10:40Z"
+  },
+  "https://ethiack.com/info-hub/product/spring-release-2026": {
+   "sha256": "0f29d0bb2dd28ebda064bc7c5d3d88288793e4ec5a0f8715186bd633d150af2f",
+   "bytes": 292752,
+   "read_at": "2026-11-10T10:40Z"
+  },
+  "https://ethiack.com/legal/security-policy": {
+   "sha256": "f0b655c59c8ae51d72e4ca5b4d156dc184215771448c991c6d741e1c50826403",
+   "bytes": 226733,
+   "read_at": "2026-11-10T10:40Z"
+  },
+  "https://ethiack.com/legal/terms-of-service": {
+   "sha256": "0c9e1d67f12a596d64f12a0f0273eae135cf4fd3d43837da2d5665b3b203ec63",
+   "bytes": 279582,
+   "read_at": "2026-11-10T10:40Z"
+  },
+  "https://ethiack.com/pricing": {
+   "sha256": "4ffe2c84147cfcbd4c87b43fcbc57b7611b25ed288fba85fa31be5b50855213e",
+   "bytes": 453988,
+   "read_at": "2026-11-10T10:40Z"
+  }
+ }
+}

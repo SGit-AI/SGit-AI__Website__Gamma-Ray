@@ -1,0 +1,378 @@
+{
+ "id": "noxus-ai-workers",
+ "name": "Noxus AI Workers",
+ "operator": "Noxus (the vendor); each customer is the operator of its own use",
+ "company": "noxus",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-10",
+ "tier": "public",
+ "basis": "Noxus's own public pages (product, documentation, blog, customer stories, legal and security pages)",
+ "seen_by_operator": null,
+ "what": "Configurable agents that use flows, integration actions, knowledge bases, tables, MCP servers, code execution and a sandbox to carry out tasks, deployed through the web app, API, SDK, chat widget, Slack, Teams, Google Chat, WhatsApp or Telegram.",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. Part of the first Portuguese cohort.",
+ "grant": null,
+ "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
+ "vault": {
+  "id": "6n9a4tow",
+  "read_key": "sgit_public_read_eafc52a9cbd090f15069febc32ea08d2630b1aa8410e8b8bc4cc5f4b3f197e98:6n9a4tow",
+  "published": "2026-11-10"
+ },
+ "review": {
+  "status": "draft",
+  "rounds": []
+ },
+ "assessment": {
+  "by": "gamma.studio@web-summit.dinis",
+  "researcher_assessor": "a sub-agent of gamma.studio",
+  "challenger": "a sub-agent of gamma.studio",
+  "lowered": [
+   "I43"
+  ],
+  "fixed": [
+   "I17",
+   "I25",
+   "I23"
+  ],
+  "added_by_challenger": [],
+  "files": "in the vault: work/assessment.json, work/challenger.json"
+ },
+ "answers": {
+  "I03": {
+   "e": "https://docs.noxus.ai/core/what-is-noxus",
+   "n": "Agents and flows are configured in a visual builder and connect to the organisation's own systems and data.",
+   "span": "Build sophisticated automations without writing code.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I04": {
+   "e": "https://docs.noxus.ai/platform/agents/tools",
+   "n": "With the Code Execution tool turned on, the agent writes and runs code.",
+   "span": "The agent writes and executes code",
+   "g": "documented",
+   "m": "available",
+   "cfg": "code-exec"
+  },
+  "I08": {
+   "e": "https://docs.noxus.ai/platform/agents/introduction",
+   "n": "Agents use tools and run flows to take actions themselves.",
+   "span": "take autonomous actions to accomplish goals",
+   "g": "documented",
+   "m": "default"
+  },
+  "I10": {
+   "e": "https://docs.noxus.ai/integrations/catalog",
+   "n": "Integrations cover several suites, including Microsoft 365, Google Workspace and Atlassian.",
+   "span": "Outlook, Teams, SharePoint, Dynamics 365",
+   "g": "documented",
+   "m": "default"
+  },
+  "I11": {
+   "e": "https://docs.noxus.ai/platform/agents/tools",
+   "n": "An agent can be bound to external MCP servers and call their tools.",
+   "span": "Let the agent use tools from external MCP servers",
+   "g": "documented",
+   "m": "default"
+  },
+  "I17": {
+   "e": "https://www.noxus.ai/case-studies/cuf-healthcare",
+   "n": "At CUF the AI Worker processes patient messages and routes complex cases to staff.",
+   "span": "Complex cases are flagged and routed to human staff instantly",
+   "g": "documented",
+   "m": "deployed"
+  },
+  "I18": {
+   "e": "https://docs.noxus.ai/platform/agents/tools",
+   "n": "With the Human in the Loop tool, the agent acts on its own and asks a person before critical actions.",
+   "span": "Use HITL as a safety net for high-stakes decisions.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "hitl"
+  },
+  "I20": {
+   "e": "https://www.noxus.ai/aboutus",
+   "n": "The company states the agents' purpose: handling complaints, documents and tickets.",
+   "span": "where AI Co-workers handle complaints, documents, and tickets end-to-end",
+   "g": "documented",
+   "m": "default"
+  },
+  "I21": {
+   "e": "https://docs.noxus.ai/platform/agents/tools",
+   "n": "The builder selects which actions and flows each agent may call.",
+   "span": "Select which actions the agent can call",
+   "g": "documented",
+   "m": "default"
+  },
+  "I22": {
+   "e": "https://docs.noxus.ai/platform/agents/tools",
+   "n": "The tools page documents limits, such as web research being less reliable than knowledge bases.",
+   "span": "Web research is slower and less reliable than knowledge bases.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I23": {
+   "e": "https://docs.noxus.ai/platform/agents/tools",
+   "n": "Each agent's tools are an enumerated list chosen by the builder: the flows, actions, knowledge bases, database connections and MCP servers it may use.",
+   "span": "Select which flows the agent can access",
+   "g": "documented",
+   "m": "default"
+  },
+  "I25": {
+   "e": "https://docs.noxus.ai/platform/agents/tools",
+   "n": "Each agent reaches only the flows, actions, knowledge bases and database connections selected for it; its SQL is generated read-only, and tables are read-only unless edits are allowed.",
+   "span": "Select which database connection(s) the agent may query",
+   "g": "documented",
+   "m": "default"
+  },
+  "I26": {
+   "e": "https://docs.noxus.ai/platform/agents/deployments/google-chat",
+   "n": "A Google Chat deployment can run under a service account bot identity separate from any person.",
+   "span": "dedicated bot identity (separate from any human user)",
+   "g": "documented",
+   "m": "available",
+   "cfg": "bot-identity"
+  },
+  "I38": {
+   "e": "https://docs.noxus.ai/platform/agents/tools",
+   "n": "The Human in the Loop tool and Require Approval make the agent ask a person before actions run.",
+   "span": "Get approval for critical actions",
+   "g": "documented",
+   "m": "available",
+   "cfg": "hitl"
+  },
+  "I39": {
+   "e": "https://docs.noxus.ai/api-reference/v1--deployments/deactivate-deployment",
+   "n": "An agent's deployment on a channel can be deactivated through the API.",
+   "span": "Deactivate Deployment",
+   "g": "documented",
+   "m": "default"
+  },
+  "I41": {
+   "e": "https://docs.noxus.ai/deployment/operations/logging",
+   "n": "Logs record agent interactions including tool calls and reasoning steps, with run-level logs per run.",
+   "span": "Conversation metadata, tool calls, and model reasoning steps.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I45": {
+   "e": "https://docs.noxus.ai/platform/agents/sandbox",
+   "n": "When the sandbox is on, a Syd sandbox outside the agent blocks internal network ranges and requires the sandboxes:run permission.",
+   "span": "Private/internal network ranges are blocked; the sandbox can't reach internal services.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "sandbox"
+  },
+  "I47": {
+   "e": "https://docs.noxus.ai/core/concepts/agents",
+   "n": "Instructions written in prose set allowed behaviour and restrict access.",
+   "span": "Define system guidance and allowed behaviors to steer responses and restrict access",
+   "g": "documented",
+   "m": "default"
+  },
+  "I54": {
+   "e": "https://status.noxus.ai/",
+   "n": "A public status page posts incidents and offers incident update subscriptions.",
+   "span": "Get incident updates and maintenance status messages in Slack.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I57": {
+   "e": "https://docs.noxus.ai/core/infrastructure/observability-providers",
+   "n": "With a Phoenix or Langfuse provider connected, users can rate agent responses up or down.",
+   "span": "users can submit thumbs-up / thumbs-down feedback on agent responses",
+   "g": "documented",
+   "m": "available",
+   "cfg": "obs-feedback"
+  },
+  "I58": {
+   "e": "https://docs.noxus.ai/platform/concepts/agents",
+   "n": "Agents read from the organisation's knowledge bases, tables and connected databases.",
+   "span": "Search and retrieve information from knowledge bases",
+   "g": "documented",
+   "m": "default"
+  },
+  "I61": {
+   "e": "https://docs.noxus.ai/core/infrastructure/models-providers",
+   "n": "The model providers and model families an agent can use are listed.",
+   "span": "Claude 4.x family",
+   "g": "documented",
+   "m": "default"
+  },
+  "S1": {
+   "e": "https://www.noxus.ai/case-studies/cuf-healthcare",
+   "n": "A named customer, CUF, reports patient communications processed by the AI Worker each month.",
+   "span": "patient communications processed automatically per month",
+   "g": "documented",
+   "m": "default"
+  },
+  "S3": {
+   "e": "https://backend.noxus.ai/openapi.json",
+   "n": "An OpenAPI 3.1.0 description of the backend API resolves; the docs llms.txt also resolves.",
+   "span": "\"title\":\"Noxus Backend\"",
+   "g": "observed",
+   "m": "default",
+   "method": "probe"
+  },
+  "S4": {
+   "e": "https://docs.noxus.ai/sdk/mcp/overview",
+   "n": "A hosted MCP server lets external clients and agents call Noxus agents, conversations and workflows as tools.",
+   "span": "Drive the Noxus platform from any MCP-compatible client",
+   "g": "documented",
+   "m": "default"
+  }
+ },
+ "not_credited": [],
+ "announced": [
+  {
+   "what": "Genie evaluations: Genie will write and run tests for flows and agents (coming soon page)",
+   "source": "https://docs.noxus.ai/platform/genie/coming-soon/evaluations"
+  },
+  {
+   "what": "Full integration catalog under construction",
+   "source": "https://docs.noxus.ai/integrations/catalog"
+  },
+  {
+   "what": "Video tutorials and example templates marked coming soon",
+   "source": "https://docs.noxus.ai/platform/overview"
+  },
+  {
+   "what": "Certification claims differ between pages: homepage footer says SOC 2 Type I and ISO 27001; the security docs say SOC 2 Type II and ISO 27001 in progress; a blog FAQ says SOC 2 Type II. No certificate was read.",
+   "source": "https://docs.noxus.ai/core/infrastructure/security"
+  }
+ ],
+ "configurations": [
+  {
+   "id": "shipped",
+   "name": "As shipped",
+   "note": "Noxus AI Workers (AI Co-workers; 'Agents' in the documentation) with its documented defaults.",
+   "on": []
+  },
+  {
+   "id": "code-exec",
+   "name": "Code exec",
+   "note": "Code Execution tool turned on for the agent",
+   "on": [
+    "code-exec"
+   ]
+  },
+  {
+   "id": "sandbox",
+   "name": "Sandbox",
+   "note": "Sandbox tool turned on for the agent (persistent Syd sandbox)",
+   "on": [
+    "sandbox"
+   ]
+  },
+  {
+   "id": "hitl",
+   "name": "Hitl",
+   "note": "Human in the Loop tool or Require Approval turned on for the agent",
+   "on": [
+    "hitl"
+   ]
+  },
+  {
+   "id": "bot-identity",
+   "name": "Bot identity",
+   "note": "Agent deployed under a service account or app-only identity rather than a user's OAuth",
+   "on": [
+    "bot-identity"
+   ]
+  },
+  {
+   "id": "obs-feedback",
+   "name": "Obs feedback",
+   "note": "Phoenix or Langfuse observability provider connected, enabling user feedback on responses",
+   "on": [
+    "obs-feedback"
+   ]
+  }
+ ],
+ "captures": {
+  "https://backend.noxus.ai/openapi.json": {
+   "sha256": "acf57bee22546b3abc01b8243571ce794f448da20a31ee669930fa00afe100da",
+   "bytes": 909642,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://docs.noxus.ai/api-reference/v1--deployments/deactivate-deployment": {
+   "sha256": "fa8002433ecb7c911f446d1b8ba48f96c05702f7ba85dc8ebf8289af80d6ca3e",
+   "bytes": 482824,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://docs.noxus.ai/core/concepts/agents": {
+   "sha256": "f599b7df7b3a0a20cc3f0b668389de349ca85d6746af0f00a2c961a7d10ab153",
+   "bytes": 188894,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://docs.noxus.ai/core/infrastructure/models-providers": {
+   "sha256": "24dde5bdbb6ca0c12bb7ea4639f26e04ad097eec6a584363b01f4e127e0f6dd2",
+   "bytes": 310274,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://docs.noxus.ai/core/infrastructure/observability-providers": {
+   "sha256": "094f38f0de99a6937af34d0ee677e628fd5de4602b5b63d870144d3046c886eb",
+   "bytes": 184216,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://docs.noxus.ai/core/what-is-noxus": {
+   "sha256": "f67b8a1ef1ce0928ea4a4dc571a1ece984bf6962063202090183b2c050b1b787",
+   "bytes": 242932,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://docs.noxus.ai/deployment/operations/logging": {
+   "sha256": "306501fb79d687043093aa88679629172b1c3b504b546ce7ad3027132c96c0bf",
+   "bytes": 173411,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://docs.noxus.ai/integrations/catalog": {
+   "sha256": "d5316e3291a5b71156a7c9c883c309e9a161bcaf4e37601d51491938afbf6a01",
+   "bytes": 162934,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://docs.noxus.ai/platform/agents/deployments/google-chat": {
+   "sha256": "ddae47a82173403d85f9022e4107b8721897c13071db255fee7ee2a8782f27e2",
+   "bytes": 334538,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://docs.noxus.ai/platform/agents/introduction": {
+   "sha256": "15ba455a7092d468119102a8234bfa7a6d54592f3e41a31973f5955cb4cbfaf9",
+   "bytes": 181762,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://docs.noxus.ai/platform/agents/sandbox": {
+   "sha256": "75c96bd5398f4a78803c7e4b540b1e94193877167be97af45b3c15e187214f1f",
+   "bytes": 201680,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://docs.noxus.ai/platform/agents/tools": {
+   "sha256": "8ad6df315e0abaa7e258f5ee3c50c1a6bed52a6b5a3c6614722003fa946bf2ce",
+   "bytes": 251220,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://docs.noxus.ai/platform/concepts/agents": {
+   "sha256": "d6c4ba1a7f8840b269d3b18df1dbbcc670dbc501b18d7ff37405e0a41aad6b57",
+   "bytes": 227313,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://docs.noxus.ai/sdk/mcp/overview": {
+   "sha256": "4e46018467bf13d3f9cb3340d7dc64d0e33614697bf9f42f9993ee739f670965",
+   "bytes": 185598,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://status.noxus.ai/": {
+   "sha256": "318a9fc1394815c041f960c2bf9ba2e30eecf3ddc4f70c6c655420b2ed0572fe",
+   "bytes": 80478,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://www.noxus.ai/aboutus": {
+   "sha256": "0109bcdc540a1a13b7fc08bd99728557a43a7efe0cbcae128f0b28c9c59e0981",
+   "bytes": 293111,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://www.noxus.ai/case-studies/cuf-healthcare": {
+   "sha256": "278999c51d7a72d791f3425969036e0cddfecee3567f072783a0f37e2f325c0e",
+   "bytes": 294129,
+   "read_at": "2026-11-10T10:39Z"
+  }
+ }
+}

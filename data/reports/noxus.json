@@ -1,0 +1,206 @@
+{
+ "id": "noxus",
+ "name": "Noxus",
+ "url": "https://www.noxus.ai/",
+ "country": "Portugal",
+ "sector": "enterprise operations automation",
+ "read": "2026-11-10",
+ "basis": "Noxus's own public pages and, for company basics only, the news sources named beside each fact",
+ "seen_by_subject": false,
+ "what": "Noxus sells a platform on which companies build AI agents, which it calls AI Workers or Co-workers, and automated flows that carry out back-office processes in the companies' own systems.",
+ "facts": [
+  {
+   "fact": "Observador reported a funding round of 1.5 million US dollars on 11 February 2025.",
+   "url": "https://observador.pt/2025/02/11/noxus-startup-com-adn-portugues-recebe-15-milhoes-para-ajudar-empresas-a-criar-colaboradores-de-ia/",
+   "span": "fechou uma ronda de investimento"
+  },
+  {
+   "fact": "Observador names the CEO and co-founder.",
+   "url": "https://observador.pt/2025/02/11/noxus-startup-com-adn-portugues-recebe-15-milhoes-para-ajudar-empresas-a-criar-colaboradores-de-ia/",
+   "span": "João Pedro Almeida, CEO e cofundador"
+  },
+  {
+   "fact": "Observador names four founders.",
+   "url": "https://observador.pt/2025/02/11/noxus-startup-com-adn-portugues-recebe-15-milhoes-para-ajudar-empresas-a-criar-colaboradores-de-ia/",
+   "span": "startup luso-britânica, fundada por João Pedro Almeida"
+  },
+  {
+   "fact": "Observador says the company is headquartered in the United Kingdom.",
+   "url": "https://observador.pt/2025/02/11/noxus-startup-com-adn-portugues-recebe-15-milhoes-para-ajudar-empresas-a-criar-colaboradores-de-ia/",
+   "span": "que está sediada no Reino Unido"
+  },
+  {
+   "fact": "The homepage title names the product AI Workers.",
+   "url": "https://www.noxus.ai/",
+   "span": "AI Workers for Complex Operations"
+  },
+  {
+   "fact": "The pricing page charges for work completed by AI Workers.",
+   "url": "https://www.noxus.ai/pricing",
+   "span": "Pay for the work your AI Workers complete"
+  },
+  {
+   "fact": "The developer documentation calls the same product agents, also named co-workers.",
+   "url": "https://docs.noxus.ai/sdk/mcp/tools",
+   "span": "Agents (co-workers)"
+  }
+ ],
+ "people": [
+  {
+   "name": "João Pedro Almeida",
+   "role": "CEO and co-founder",
+   "url": "https://observador.pt/2025/02/11/noxus-startup-com-adn-portugues-recebe-15-milhoes-para-ajudar-empresas-a-criar-colaboradores-de-ia/"
+  },
+  {
+   "name": "Jorge Pessoa",
+   "role": "Co-founder",
+   "url": "https://observador.pt/2025/02/11/noxus-startup-com-adn-portugues-recebe-15-milhoes-para-ajudar-empresas-a-criar-colaboradores-de-ia/"
+  },
+  {
+   "name": "Gonçalo Ferreira",
+   "role": "Co-founder",
+   "url": "https://observador.pt/2025/02/11/noxus-startup-com-adn-portugues-recebe-15-milhoes-para-ajudar-empresas-a-criar-colaboradores-de-ia/"
+  },
+  {
+   "name": "Miguel Ribeiro",
+   "role": "Co-founder",
+   "url": "https://observador.pt/2025/02/11/noxus-startup-com-adn-portugues-recebe-15-milhoes-para-ajudar-empresas-a-criar-colaboradores-de-ia/"
+  }
+ ],
+ "solutions": [
+  {
+   "id": "ai-workers",
+   "name": "Noxus AI Workers (AI Co-workers; 'Agents' in the documentation)",
+   "short": "Noxus AI Workers",
+   "what": "Configurable agents that use flows, integration actions, knowledge bases, tables, MCP servers, code execution and a sandbox to carry out tasks, deployed through the web app, API, SDK, chat widget, Slack, Teams, Google Chat, WhatsApp or Telegram.",
+   "status": "generally available",
+   "url": "https://docs.noxus.ai/platform/agents/introduction",
+   "scan": "noxus-ai-workers"
+  },
+  {
+   "id": "flows",
+   "name": "Flows",
+   "short": "Flows",
+   "what": "Visual node-based workflows with triggers, AI nodes and integration nodes.",
+   "status": "generally available",
+   "url": "https://docs.noxus.ai/platform/flows/introduction"
+  },
+  {
+   "id": "knowledge-bases",
+   "name": "Knowledge Bases and Tables",
+   "short": "Knowledge Bases and Tables",
+   "what": "Document stores with semantic search, and structured tables, that agents and flows query.",
+   "status": "generally available",
+   "url": "https://docs.noxus.ai/platform/knowledge-bases/introduction"
+  },
+  {
+   "id": "case-management",
+   "name": "Case management and processes",
+   "short": "Case management and processes",
+   "what": "Processes whose cases are worked by flows and by people through tasks.",
+   "status": "turned on per organization",
+   "url": "https://docs.noxus.ai/platform/genie/cases"
+  },
+  {
+   "id": "genie",
+   "name": "Genie",
+   "short": "Genie",
+   "what": "An assistant inside the platform that builds and changes flows, agents and tables, asking for approval before writes.",
+   "status": "beta, off until an administrator turns it on",
+   "url": "https://docs.noxus.ai/platform/genie/overview"
+  },
+  {
+   "id": "mcp-server",
+   "name": "Noxus MCP server, Python SDK and REST API",
+   "short": "Noxus MCP server, Python SDK a",
+   "what": "A hosted MCP server, SDK and REST API that let external clients and agents drive workflows, agents and conversations.",
+   "status": "generally available",
+   "url": "https://docs.noxus.ai/sdk/mcp/overview"
+  }
+ ],
+ "stories": [
+  {
+   "customer": "CUF (José de Mello Saúde)",
+   "what": "Patient messages categorised, routed and processed by an AI Worker; the page gives 3,000+ communications a month and complex cases routed to staff.",
+   "url": "https://www.noxus.ai/case-studies/cuf-healthcare",
+   "span": "Complex cases are flagged and routed to human staff instantly"
+  },
+  {
+   "customer": "LSIG (360hyper, KuantoKusta, Saibarato)",
+   "what": "Supplier product data classified and enriched by one AI Worker across three retail brands; the page gives 15,000+ products a day.",
+   "url": "https://www.noxus.ai/case-studies/lsig-retail",
+   "span": "LSIG automated 15,000 daily SKUs across three retail brands"
+  },
+  {
+   "customer": "Sandock Austral Shipyards",
+   "what": "Tender documents assembled, stamped, signed and validated by a Noxus workflow.",
+   "url": "https://www.noxus.ai/blog/sandock-austral-achieves-75-faster-tender-submissions-with-noxus-ai",
+   "span": "cutting preparation time by 75%"
+  },
+  {
+   "customer": "Kirchhoff",
+   "what": "Supplier documents processed into SAP after a Noxus workshop.",
+   "url": "https://www.noxus.ai/kirchhoff",
+   "span": "They were live in thirty days without touching their SAP core"
+  }
+ ],
+ "analysis": [],
+ "article": null,
+ "vault": {
+  "id": "6n9a4tow",
+  "read_key": "sgit_public_read_eafc52a9cbd090f15069febc32ea08d2630b1aa8410e8b8bc4cc5f4b3f197e98:6n9a4tow",
+  "published": "2026-11-10"
+ },
+ "team": {
+  "researcher-assessor": "a sub-agent of gamma.studio@web-summit.dinis",
+  "challenger": "a sub-agent",
+  "scorer": "build/spectrum.mjs",
+  "analyst, designer, writer": "gamma.studio@web-summit.dinis",
+  "review": "gamma.review@web-summit.dinis (pending)",
+  "sign-off": "gamma.approve@web-summit.dinis (pending)"
+ },
+ "signoff": null,
+ "corrections": [],
+ "captures": {
+  "https://docs.noxus.ai/sdk/mcp/tools": {
+   "sha256": "bf2ad9c2bb60b44f17d5360c39f3c718e29f9e025fd8cc045bb4edb2bf62ffd3",
+   "bytes": 188429,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://observador.pt/2025/02/11/noxus-startup-com-adn-portugues-recebe-15-milhoes-para-ajudar-empresas-a-criar-colaboradores-de-ia/": {
+   "sha256": "d802e15e98ed9188534b7b489417b0d3dbf44caf1eef50554491f9c21810a5ae",
+   "bytes": 286220,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://www.noxus.ai/": {
+   "sha256": "b3d589bfcdbc84aa3c43c246aa8c6be9f27e91ff6ad0e0f6e45cae49b86d44d2",
+   "bytes": 773342,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://www.noxus.ai/blog/sandock-austral-achieves-75-faster-tender-submissions-with-noxus-ai": {
+   "sha256": "438d25297dfa9617a4bb1ac669b150cf45156f32acd973721a7e71e6b6dc0478",
+   "bytes": 359961,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://www.noxus.ai/case-studies/cuf-healthcare": {
+   "sha256": "278999c51d7a72d791f3425969036e0cddfecee3567f072783a0f37e2f325c0e",
+   "bytes": 294129,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://www.noxus.ai/case-studies/lsig-retail": {
+   "sha256": "e013db9a58df6cfdf94c993f7fbd7d80fb0937b13860fc6417565fcab052fe01",
+   "bytes": 294387,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://www.noxus.ai/kirchhoff": {
+   "sha256": "99b43a7e9770915f98c171a4cc46af2dec26693e668d767140f1212ff0eab6fc",
+   "bytes": 284964,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://www.noxus.ai/pricing": {
+   "sha256": "716e94a62ee89e6d4eecbceae6d1f7a0046caf3f834bf580909f2dbd100ea96a",
+   "bytes": 342149,
+   "read_at": "2026-11-10T10:39Z"
+  }
+ }
+}

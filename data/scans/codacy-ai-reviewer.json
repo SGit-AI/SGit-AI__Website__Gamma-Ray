@@ -1,0 +1,217 @@
+{
+ "id": "codacy-ai-reviewer",
+ "name": "AI Reviewer",
+ "operator": "Codacy (the vendor); each customer is the operator of its own use",
+ "company": "codacy",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-10",
+ "tier": "public",
+ "basis": "Codacy's own public pages (product, documentation, blog, customer stories, legal and security pages)",
+ "seen_by_operator": null,
+ "what": "Opt-in pull request reviewer on GitHub that combines Codacy's static analysis with a language model, reads the PR, linked Jira or Linear tickets and repository instructions, and posts a review with a verdict, a summary, test suggestions and inline comments with suggested fixes. It can run automatically on the first review of a PR or on demand (button or public API).",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. Part of the first Portuguese cohort.",
+ "grant": null,
+ "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
+ "vault": {
+  "id": "u6a01jwq",
+  "read_key": "sgit_public_read_af2cc62b777e2d6af5fdb41b6ec2899e95fe143c11859904fa56fbedea727f2f:u6a01jwq",
+  "published": "2026-11-10"
+ },
+ "review": {
+  "status": "draft",
+  "rounds": []
+ },
+ "assessment": {
+  "by": "gamma.studio@web-summit.dinis",
+  "researcher_assessor": "a sub-agent of gamma.studio",
+  "challenger": "a sub-agent of gamma.studio",
+  "lowered": [
+   "I08",
+   "I17",
+   "S4",
+   "I61",
+   "I63"
+  ],
+  "fixed": [
+   "I25",
+   "I47",
+   "S1"
+  ],
+  "added_by_challenger": [
+   "I15"
+  ],
+  "files": "in the vault: work/assessment.json, work/challenger.json"
+ },
+ "answers": {
+  "I01": {
+   "e": "https://docs.codacy.com/codacy-ai/codacy-ai/",
+   "n": "The AI Reviewer is one of the vendor's optional AI features inside its hosted platform, used as supplied with per-repository instructions.",
+   "span": "Codacy AI is a set of optional features integrated into the Software",
+   "g": "documented",
+   "m": "default"
+  },
+  "I10": {
+   "e": "https://docs.codacy.com/codacy-ai/codacy-ai/",
+   "n": "The reviewer combines GitHub pull request data, Codacy findings and a linked Jira or Linear ticket.",
+   "span": "It then reads the ticket from Jira or Linear:",
+   "g": "documented",
+   "m": "available",
+   "cfg": "ai-reviewer"
+  },
+  "I11": {
+   "e": "https://docs.codacy.com/codacy-ai/codacy-ai/",
+   "n": "The reviewer sends pull request context to OpenAI models through Amazon Bedrock and reads tickets from Jira or Linear, services outside Codacy.",
+   "span": "This feature leverages OpenAI models through Amazon Bedrock",
+   "g": "documented",
+   "m": "available",
+   "cfg": "ai-reviewer"
+  },
+  "I15": {
+   "e": "https://docs.codacy.com/repositories-configure/integrations/github-integration/",
+   "n": "In the Manually mode a person starts each review by clicking Run Reviewer in the pull request summary comment, or by a call to the public API.",
+   "span": "to trigger a review on demand",
+   "g": "documented",
+   "m": "available",
+   "cfg": "manual-review"
+  },
+  "I20": {
+   "e": "https://docs.codacy.com/repositories-configure/integrations/github-integration/",
+   "n": "The docs state what the reviewer does: comment on Codacy issues worth attention, summarise the rest, and check changes against requirements and project logic.",
+   "span": "It comments only on the Codacy issues it judges worth a reviewer",
+   "g": "documented",
+   "m": "default"
+  },
+  "I22": {
+   "e": "https://docs.codacy.com/faq/code-analysis/does-codacy-place-limits-on-the-code-analysis/",
+   "n": "The limits page gives the reviewer's size limit (270,000 tokens or a 1 MB diff) and what it does above it; the docs also say it runs on GitHub only.",
+   "span": "The AI Reviewer doesn't review pull requests whose changes",
+   "g": "documented",
+   "m": "default"
+  },
+  "I25": {
+   "e": "https://docs.codacy.com/getting-started/which-permissions-does-codacy-need-from-my-account/",
+   "n": "The reviewer posts through the Codacy GitHub App; the app's permission table lists access per scope, with repository contents and metadata read-only and pull requests, checks and issues read and write. The access is the platform app's, shared by all Codacy features, not specific to the reviewer.",
+   "span": "Codacy retrieves repository contents to get installation access tokens",
+   "g": "documented",
+   "m": "default"
+  },
+  "I47": {
+   "e": "https://docs.codacy.com/codacy-ai/codacy-ai/",
+   "n": "Teams write instructions for the reviewer in a review.md file in the repository; the docs' template includes an out-of-scope section of what the reviewer should ignore or not enforce. The reviewer also reads the agent guideline files in the repository.",
+   "span": "Anything reviewers should explicitly ignore or not enforce",
+   "g": "documented",
+   "m": "available",
+   "cfg": "ai-reviewer"
+  },
+  "I57": {
+   "e": "https://docs.codacy.com/codacy-ai/codacy-ai/",
+   "n": "People can contest a review comment by replying in the pull request, and the reviewer learns from those replies and reactions.",
+   "span": "reply to the ones that are wrong explaining why",
+   "g": "documented",
+   "m": "available",
+   "cfg": "ai-reviewer"
+  },
+  "I58": {
+   "e": "https://docs.codacy.com/codacy-ai/codacy-ai/",
+   "n": "The docs list the context sent to the model, what Codacy stores and does not store, and that secrets are redacted before sending.",
+   "span": "To enrich the review, Codacy can send this context:",
+   "g": "documented",
+   "m": "default"
+  },
+  "S1": {
+   "e": "https://resources.codacy.com/resources/case-study-bfi-finance",
+   "n": "A vendor-published case study names BFI Finance, which evaluated the AI Reviewer against its previous AI review tool, switched that tool off, and lists the AI reviewer among the Codacy tools in daily work. Its figure of around 170 developers is a headcount, not a count of reviews.",
+   "span": "Codacy's AI Reviewer is better aligned with its workflow",
+   "g": "documented",
+   "m": "default"
+  },
+  "S3": {
+   "e": "https://www.codacy.com/llms.txt",
+   "n": "An llms.txt resolves at codacy.com and an OpenAPI 3.0.1 description resolves at api.codacy.com/api/api-docs/swagger.yaml.",
+   "span": "Key facts for accurate citation:",
+   "g": "observed",
+   "m": "default",
+   "method": "probe"
+  }
+ },
+ "not_credited": [],
+ "announced": [
+  {
+   "what": "Verity: an independent pass-or-block gate for coding agents, in public beta (separate product).",
+   "source": "https://www.codacy.com/shipped-since-you-left"
+  },
+  {
+   "what": "Public roadmap of planned and in-progress work.",
+   "source": "https://roadmap.codacy.com/"
+  },
+  {
+   "what": "App scanning (DAST) available as early access.",
+   "source": "https://www.codacy.com/shipped-since-you-left"
+  }
+ ],
+ "configurations": [
+  {
+   "id": "shipped",
+   "name": "As shipped",
+   "note": "AI Reviewer with its documented defaults.",
+   "on": []
+  },
+  {
+   "id": "ai-reviewer",
+   "name": "Ai reviewer",
+   "note": "An admin has turned on AI Reviewer for the repository or organization; GitHub only, Team and Business plans.",
+   "on": [
+    "ai-reviewer"
+   ]
+  },
+  {
+   "id": "auto-first-review",
+   "name": "Auto first review",
+   "note": "AI Reviewer is on and its Run reviewer setting is Automatically (first review only).",
+   "on": [
+    "auto-first-review"
+   ]
+  },
+  {
+   "id": "manual-review",
+   "name": "Manual review",
+   "note": "AI Reviewer is on and its Run reviewer setting is Manually: each review starts from Run Reviewer or an API call.",
+   "on": [
+    "manual-review"
+   ]
+  }
+ ],
+ "captures": {
+  "https://docs.codacy.com/codacy-ai/codacy-ai/": {
+   "sha256": "1ccd57719e29bac8aedd2695a5a8f5caf9b273a69acace6ab8af27fd4383e579",
+   "bytes": 216811,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://docs.codacy.com/faq/code-analysis/does-codacy-place-limits-on-the-code-analysis/": {
+   "sha256": "70910c14872491868e0e06c5af266abb6cd62f826411d7bf3d65bb55eead34a2",
+   "bytes": 206422,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://docs.codacy.com/getting-started/which-permissions-does-codacy-need-from-my-account/": {
+   "sha256": "86c7dbdcaceb3cdd387457663230cffcf1150e246f3067de0da1adde1273140c",
+   "bytes": 213206,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://docs.codacy.com/repositories-configure/integrations/github-integration/": {
+   "sha256": "1d7691aa3224a7ab92b45da0d0226efb0769f244032bb65832d70f43a13dcfb3",
+   "bytes": 212630,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://resources.codacy.com/resources/case-study-bfi-finance": {
+   "sha256": "563b62540a7f7d7b1589f174808eadf01702defe61972c5a59d757842c5625cc",
+   "bytes": 102820,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://www.codacy.com/llms.txt": {
+   "sha256": "52a0c32c01ff8deaef2556e3aba3b54f9e68c1f3f24907a4ca5f58e6a0ac1e5e",
+   "bytes": 12244,
+   "read_at": "2026-11-10T10:38Z"
+  }
+ }
+}

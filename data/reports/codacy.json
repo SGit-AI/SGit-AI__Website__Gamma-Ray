@@ -1,0 +1,198 @@
+{
+ "id": "codacy",
+ "name": "Codacy",
+ "url": "https://www.codacy.com/",
+ "country": "Portugal",
+ "sector": "dev tools / AppSec",
+ "read": "2026-11-10",
+ "basis": "Codacy's own public pages and, for company basics only, the news sources named beside each fact",
+ "seen_by_subject": false,
+ "what": "A cloud platform that runs code quality, security and coverage checks on repositories, with AI features that review pull requests and tools that feed its findings to coding agents.",
+ "facts": [
+  {
+   "fact": "Founded in 2012 by Jaime Jorge (CEO) and João Caxaria (CTO), headquartered in Lisbon.",
+   "url": "https://www.codacy.com/llms.txt",
+   "span": "headquartered in Lisbon, Portugal."
+  },
+  {
+   "fact": "The about page states the founding year and the founders.",
+   "url": "https://www.codacy.com/about",
+   "span": "Founded in 2012 by developers Jaime Jorge and João Caxaria"
+  },
+  {
+   "fact": "The home page's structured data gives Lisbon as its locality.",
+   "url": "https://www.codacy.com/",
+   "span": "\"addressLocality\": \"Lisbon\""
+  },
+  {
+   "fact": "The company states it holds SOC 2 Type 2 and is GDPR compliant.",
+   "url": "https://www.codacy.com/llms.txt",
+   "span": "Codacy is SOC 2 Type 2 certified and GDPR compliant."
+  },
+  {
+   "fact": "The AI features of the platform are optional and opt-in.",
+   "url": "https://docs.codacy.com/codacy-ai/codacy-ai/",
+   "span": "Codacy AI is a set of optional features integrated into the Software"
+  }
+ ],
+ "people": [
+  {
+   "name": "Jaime Jorge",
+   "role": "Co-founder and CEO",
+   "url": "https://www.codacy.com/about"
+  },
+  {
+   "name": "João Caxaria",
+   "role": "Co-founder; named CTO on the AI Info page",
+   "url": "https://www.codacy.com/ai-info"
+  },
+  {
+   "name": "Emma Hunt",
+   "role": "VP of People Operations",
+   "url": "https://www.codacy.com/about"
+  },
+  {
+   "name": "David Galante",
+   "role": "VP of Operations",
+   "url": "https://www.codacy.com/about"
+  }
+ ],
+ "solutions": [
+  {
+   "id": "ai-reviewer",
+   "name": "AI Reviewer",
+   "short": "AI Reviewer",
+   "what": "Opt-in pull request reviewer on GitHub that combines Codacy's static analysis with a language model, reads the PR, linked Jira or Linear tickets and repository instructions, and posts a review with a verdict, a summary, test suggestions and inline comments with suggested fixes. It can run automatically on the first review of a PR or on demand (button or public API).",
+   "status": "generally available on GitHub for Team and Business plans; opt-in by an admin",
+   "url": "https://docs.codacy.com/codacy-ai/codacy-ai/",
+   "scan": "codacy-ai-reviewer"
+  },
+  {
+   "id": "guardrails",
+   "name": "Codacy Guardrails (AI Guardrails)",
+   "short": "Codacy Guardrails",
+   "what": "IDE extension plus the Codacy MCP server and Codacy CLI that give a user's own coding agent Codacy's scan results so the agent fixes issues; Codacy states it is not a language model itself.",
+   "status": "available; free IDE extension, central configuration on paid plans",
+   "url": "https://docs.codacy.com/codacy-guardrails/codacy-guardrails-getting-started/"
+  },
+  {
+   "id": "mcp-server",
+   "name": "Codacy MCP Server",
+   "short": "Codacy MCP Server",
+   "what": "MCP server for the Codacy API (npm @codacy/codacy-mcp) exposing repositories, issues, security findings, pull requests and local analysis to MCP-compatible agents.",
+   "status": "published, npm latest 0.7.2",
+   "url": "https://registry.npmjs.org/@codacy/codacy-mcp"
+  },
+  {
+   "id": "auto-configure",
+   "name": "Auto-configure repository",
+   "short": "Auto-configure repository",
+   "what": "Paid feature in which an AI coding agent reviews a repository and applies tool and code-pattern settings in Codacy, once per repository per day.",
+   "status": "available, paid",
+   "url": "https://docs.codacy.com/repositories-configure/configuring-code-patterns/"
+  },
+  {
+   "id": "codacy-skills",
+   "name": "Codacy Skills",
+   "short": "Codacy Skills",
+   "what": "Skills for Claude Code, OpenAI Codex, GitHub Copilot and Gemini CLI that drive the Codacy CLIs.",
+   "status": "available, public and free",
+   "url": "https://docs.codacy.com/codacy-skills/"
+  },
+  {
+   "id": "smart-fp-triage",
+   "name": "Smart False Positive Triage",
+   "short": "Smart False Positive Triage",
+   "what": "AI triage that scores issues for likely false positives and surfaces them for manual review.",
+   "status": "Business plan, enabled on request",
+   "url": "https://docs.codacy.com/codacy-ai/codacy-ai/"
+  },
+  {
+   "id": "platform",
+   "name": "Codacy platform (Code Quality, Security, Coverage, AI Risk Hub, AI Inventory)",
+   "short": "Codacy platform",
+   "what": "Static analysis, SAST/SCA/secrets/IaC/DAST, coverage gates and AI-usage inventory across repositories.",
+   "status": "generally available",
+   "url": "https://docs.codacy.com/"
+  }
+ ],
+ "stories": [
+  {
+   "customer": "BFI Finance",
+   "what": "Evaluated the AI Reviewer against an existing AI code review tool and switched that tool off; Codacy says its AI reviewer is part of daily work for around 170 developers.",
+   "url": "https://resources.codacy.com/resources/case-study-bfi-finance",
+   "span": "Codacy's AI Reviewer is better aligned with its workflow"
+  },
+  {
+   "customer": "ihomer",
+   "what": "Uses Codacy Guardrails with GitHub Copilot in VS Code; the agent that fixes code is Copilot, not Codacy.",
+   "url": "https://resources.codacy.com/resources/case-study-ihomer",
+   "span": "50%+ of developers adopting AI guardrails in their daily workflow"
+  },
+  {
+   "customer": "LSports",
+   "what": "Uses quality gates across 800 repositories and the IDE plugin with MCP integration; no AI Reviewer usage stated.",
+   "url": "https://resources.codacy.com/resources/case-study-lsports",
+   "span": "800 Repos, One Standard"
+  }
+ ],
+ "analysis": [],
+ "article": null,
+ "vault": {
+  "id": "u6a01jwq",
+  "read_key": "sgit_public_read_af2cc62b777e2d6af5fdb41b6ec2899e95fe143c11859904fa56fbedea727f2f:u6a01jwq",
+  "published": "2026-11-10"
+ },
+ "team": {
+  "researcher-assessor": "a sub-agent of gamma.studio@web-summit.dinis",
+  "challenger": "a sub-agent",
+  "scorer": "build/spectrum.mjs",
+  "analyst, designer, writer": "gamma.studio@web-summit.dinis",
+  "review": "gamma.review@web-summit.dinis (pending)",
+  "sign-off": "gamma.approve@web-summit.dinis (pending)"
+ },
+ "signoff": null,
+ "corrections": [],
+ "captures": {
+  "https://docs.codacy.com/codacy-ai/codacy-ai/": {
+   "sha256": "1ccd57719e29bac8aedd2695a5a8f5caf9b273a69acace6ab8af27fd4383e579",
+   "bytes": 216811,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://resources.codacy.com/resources/case-study-bfi-finance": {
+   "sha256": "563b62540a7f7d7b1589f174808eadf01702defe61972c5a59d757842c5625cc",
+   "bytes": 102820,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://resources.codacy.com/resources/case-study-ihomer": {
+   "sha256": "cb14cfc515ff60ff406c58925fdc5fafa76bbb2cd06a07cfa1e89091c8f905c6",
+   "bytes": 96553,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://resources.codacy.com/resources/case-study-lsports": {
+   "sha256": "918c2f5d7f8e01b73c710f117eee68366c00e8b7e3eab890f656fcc49095b98a",
+   "bytes": 100864,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://www.codacy.com/": {
+   "sha256": "c3a54543d3844a8969cd6dee99c1e922309126926574f3eec1fce263c3b06f41",
+   "bytes": 359194,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://www.codacy.com/about": {
+   "sha256": "1f4f909fb95ecbfa1f4e482c68fdab01f82a2efa9e344a96266814c9c3b8b7af",
+   "bytes": 140075,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://www.codacy.com/ai-info": {
+   "sha256": "96ccab80dd67b21526311a495772dad5fed703405e8998163347d8e71ea954b7",
+   "bytes": 131700,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://www.codacy.com/llms.txt": {
+   "sha256": "52a0c32c01ff8deaef2556e3aba3b54f9e68c1f3f24907a4ca5f58e6a0ac1e5e",
+   "bytes": 12244,
+   "read_at": "2026-11-10T10:38Z"
+  }
+ }
+}

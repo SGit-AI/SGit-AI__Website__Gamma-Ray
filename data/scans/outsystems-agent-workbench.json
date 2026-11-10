@@ -1,0 +1,341 @@
+{
+ "id": "outsystems-agent-workbench",
+ "name": "OutSystems Agent Workbench",
+ "operator": "OutSystems (the vendor); each customer is the operator of its own use",
+ "company": "outsystems",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-10",
+ "tier": "public",
+ "basis": "OutSystems's own public pages (product, documentation, blog, customer stories, legal and security pages)",
+ "seen_by_operator": null,
+ "what": "Builds, runs and governs AI agents (agentic apps) on OutSystems Developer Cloud (ODC): agents call server actions, MCP tools and external A2A agents, with guardrails, evaluations, traces and workflow human-in-the-loop steps.",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. Part of the first Portuguese cohort.",
+ "grant": null,
+ "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
+ "vault": {
+  "id": "ivinvfhj",
+  "read_key": "sgit_public_read_a787d5ebd3b7fca03039c35a5d95311a66cc5581cbc41eec0ad3ab0c46272feb:ivinvfhj",
+  "published": "2026-11-10"
+ },
+ "review": {
+  "status": "draft",
+  "rounds": []
+ },
+ "assessment": {
+  "by": "gamma.studio@web-summit.dinis",
+  "researcher_assessor": "a sub-agent of gamma.studio",
+  "challenger": "a sub-agent of gamma.studio",
+  "lowered": [
+   "I19",
+   "I43"
+  ],
+  "fixed": [
+   "I12",
+   "I13",
+   "I14",
+   "I25"
+  ],
+  "added_by_challenger": [],
+  "files": "in the vault: work/assessment.json, work/challenger.json"
+ },
+ "answers": {
+  "I03": {
+   "e": "https://www.outsystems.com/platform/agentic-ai-workbench",
+   "n": "Agents are built in a visual drag-and-drop builder on the OutSystems platform and connect to enterprise data such as ERP and CRM systems.",
+   "span": "Using a visual drag-and-drop interface, your existing IT and development team",
+   "g": "documented",
+   "m": "default"
+  },
+  "I08": {
+   "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=24d5a0ea-68c8-4851-b7de-e0908c122862",
+   "n": "Agents call tools that retrieve data or perform operations in other systems, choosing the actions themselves.",
+   "span": "Agents can call external tools to retrieve data or perform operations in other systems.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I10": {
+   "e": "https://www.outsystems.com/platform/agentic-ai-workbench",
+   "n": "The product FAQ says agents connect to APIs, databases, ERP, CRM and legacy systems and orchestrate workflows across platforms.",
+   "span": "Agents orchestrate workflows across platforms while maintaining security and governance.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I11": {
+   "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=7a08a9ca-8a6e-4f48-9079-8f840ce01a7b",
+   "n": "Agents use tools from external MCP servers, imported as server actions, with OAuth, API key or no authentication.",
+   "span": "extend AI agents in OutSystems Developer Cloud (ODC) with external systems",
+   "g": "documented",
+   "m": "default"
+  },
+  "I12": {
+   "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=2d97c9e1-6bd4-48ef-8efc-66b75069eb5f",
+   "n": "Workflows chain several agents, each with its own lifecycle, passing one agent's output to the next.",
+   "span": "With this pattern, you can chain multiple agents together sequentially.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "agent-workflow"
+  },
+  "I13": {
+   "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=6c449182-a1d4-4584-9558-5292f761f97a",
+   "n": "Agentic apps can delegate tasks to external agents, outside ODC, over the A2A protocol.",
+   "span": "allows your ODC agentic apps to interact and collaborate with external agents",
+   "g": "documented",
+   "m": "available",
+   "cfg": "a2a-connection"
+  },
+  "I14": {
+   "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=8764e4f7-25f3-4a21-b6a9-000c59f4a93a",
+   "n": "The A2A connector implements version 0.3.0 of the published Agent2Agent protocol, reading the remote agent card.",
+   "span": "ODC A2A connector supports only A2A 0.3.0 protocol version",
+   "g": "documented",
+   "m": "available",
+   "cfg": "a2a-connection"
+  },
+  "I17": {
+   "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=5332e43d-bd1c-4403-8f46-5cbdaf198318",
+   "n": "In the documented human-in-the-loop pattern the agent works on its own and stops for a person at a low-confidence or high-stakes trigger.",
+   "span": "such as a low confidence score or a high-stakes financial transaction",
+   "g": "documented",
+   "m": "available",
+   "cfg": "hitl-workflow"
+  },
+  "I18": {
+   "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=2d97c9e1-6bd4-48ef-8efc-66b75069eb5f",
+   "n": "A human activity in the workflow lets a person approve or reject the agent's output for high-stakes decisions.",
+   "span": "Agents may require human oversight for high-stakes decisions or when their confidence is low",
+   "g": "documented",
+   "m": "available",
+   "cfg": "hitl-workflow"
+  },
+  "I20": {
+   "e": "https://www.outsystems.com/platform/agentic-ai-workbench",
+   "n": "The product page states what Agent Workbench is for: designing, building, governing and scaling agentic AI systems.",
+   "span": "Agent Workbench empowers enterprises to design, build, govern, and scale agentic AI systems.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I21": {
+   "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=aec0cd3b-dcd4-4077-b0c0-04e987bdb690",
+   "n": "The builder grants each agent a defined set of server actions and can set a call condition that stops it on token, loop or call counts.",
+   "span": "You grant the agent the ability to use these actions to perform its tasks.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I22": {
+   "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=673835c6-c109-4aa2-a3b5-507ab4da8611",
+   "n": "The guardrails page documents where guardrails do not apply: files, some languages in basic-coverage regions, and two unsupported regions.",
+   "span": "Prompts or responses in other languages can bypass safety filters.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I25": {
+   "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=aec0cd3b-dcd4-4077-b0c0-04e987bdb690",
+   "n": "Each agent can call only the set of server actions (including imported MCP tools) the builder adds to it, not every action in the app or tenant.",
+   "span": "You provide the agent with a set of available actions.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I38": {
+   "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=5332e43d-bd1c-4403-8f46-5cbdaf198318",
+   "n": "The human-in-the-loop pattern stops at a high-stakes trigger until a person verifies or decides.",
+   "span": "alerts a human user to provide verification or a decision before proceeding",
+   "g": "documented",
+   "m": "available",
+   "cfg": "hitl-workflow"
+  },
+  "I39": {
+   "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=2d97c9e1-6bd4-48ef-8efc-66b75069eb5f",
+   "n": "A human activity pauses the agent workflow until an assigned person acts; a call condition also stops an agent's action loop.",
+   "span": "pauses the workflow until a specific user or group performs a task",
+   "g": "documented",
+   "m": "available",
+   "cfg": "hitl-workflow"
+  },
+  "I40": {
+   "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=2d97c9e1-6bd4-48ef-8efc-66b75069eb5f",
+   "n": "The human activity is assigned to a named user or role who reviews the agent's output.",
+   "span": "Assign the activity to a user or role",
+   "g": "documented",
+   "m": "available",
+   "cfg": "hitl-workflow"
+  },
+  "I41": {
+   "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=ca7cae65-c466-4d93-bab6-85ac740519c0",
+   "n": "ODC Portal logs and traces can be filtered by agent, showing the requests an agent originated, kept for four weeks.",
+   "span": "you see traces where that agent is the origin of the trace",
+   "g": "documented",
+   "m": "default"
+  },
+  "I47": {
+   "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=24d5a0ea-68c8-4851-b7de-e0908c122862",
+   "n": "Each agent's system prompt sets its role, behaviour and constraints in natural language.",
+   "span": "They define the AI's role, behavior, constraints, and overall objective.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I48": {
+   "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=673835c6-c109-4aa2-a3b5-507ab4da8611",
+   "n": "Guardrail policies (filters, denied topics, word lists, regex PII patterns) are checked on every agent call and can block it.",
+   "span": "Guardrails check each agent call in real time",
+   "g": "documented",
+   "m": "available",
+   "cfg": "guardrails"
+  },
+  "I58": {
+   "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=24d5a0ea-68c8-4851-b7de-e0908c122862",
+   "n": "The docs describe agent grounding data: internal aggregates, search services and external tools.",
+   "span": "Sources can include internal aggregates, search services (RAG), or external tools.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I61": {
+   "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=af45db6e-ac0f-4ab9-8e4a-4ba8fd559812",
+   "n": "The docs list the supported model providers (OpenAI, Anthropic, Azure OpenAI, Amazon Bedrock, Gemini and others) and the trial models.",
+   "span": "ODC supports connections to AI models from multiple providers",
+   "g": "documented",
+   "m": "default"
+  },
+  "S1": {
+   "e": "https://www.outsystems.com/case-studies/teamwork-ai-agents/",
+   "n": "TeamWork, a named customer, runs a Customer Support Agent built on Agent Workbench that classifies and routes support tickets.",
+   "span": "auto-classifies and routes support tickets",
+   "g": "documented",
+   "m": "default"
+  },
+  "S3": {
+   "e": "https://www.outsystems.com/llms.txt",
+   "n": "An llms.txt resolves at the site root, and a documentation llms.txt at success.outsystems.com (both fetched 2026-11-10).",
+   "span": "OutSystems combines low-code simplicity with AI software development",
+   "g": "observed",
+   "m": "default",
+   "method": "probe"
+  }
+ },
+ "not_credited": [],
+ "announced": [
+  {
+   "what": "'Orchestrate your entire AI workforce' and use cases such as delayed-shipment handling 'no human needed' (marketing page, not counted).",
+   "source": "https://www.outsystems.com/platform/agentic-ai-workbench"
+  },
+  {
+   "what": "Agent marketplace with ready-to-use agents (named in the GA release and product page; not examined).",
+   "source": "https://www.outsystems.com/news/agent-workbench-general-availability/"
+  },
+  {
+   "what": "Enterprise Context Graph and Agentic Systems Engineering ('developers will be able to use any agentic tool').",
+   "source": "https://www.outsystems.com/platform/agentic-systems-engineering"
+  },
+  {
+   "what": "Mentor access enforcement is being rolled out in phases.",
+   "source": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=7c3b8a4f-2d1e-4b9a-9e7f-6a5d3c2b1f0e"
+  }
+ ],
+ "configurations": [
+  {
+   "id": "shipped",
+   "name": "As shipped",
+   "note": "OutSystems Agent Workbench with its documented defaults.",
+   "on": []
+  },
+  {
+   "id": "hitl-workflow",
+   "name": "Hitl workflow",
+   "note": "The builder places the agent in an ODC workflow with a Human activity assigned to a user or role; not part of an agent by default.",
+   "on": [
+    "hitl-workflow"
+   ]
+  },
+  {
+   "id": "guardrails",
+   "name": "Guardrails",
+   "note": "Agent guardrails enabled by an administrator (stage baseline) or a developer (per agent) in the ODC Portal; usage is charged through Agent Workbench add-on packs; not enforced in two regions.",
+   "on": [
+    "guardrails"
+   ]
+  },
+  {
+   "id": "agent-workflow",
+   "name": "Agent workflow",
+   "note": "The builder chains several agents as automatic activities in an ODC workflow (sequential, parallel or loop); not part of a single agent by default.",
+   "on": [
+    "agent-workflow"
+   ]
+  },
+  {
+   "id": "a2a-connection",
+   "name": "A2a connection",
+   "note": "An administrator creates an A2A connection to an external agent in the ODC Portal and the builder adds its SendMessage action to the agent; ODC acts as A2A 0.3.0 client only.",
+   "on": [
+    "a2a-connection"
+   ]
+  }
+ ],
+ "captures": {
+  "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=24d5a0ea-68c8-4851-b7de-e0908c122862": {
+   "sha256": "4bebd8d78dce8555d02f587d98acd039138c572867f1833bda8a650f1bb2ee48",
+   "bytes": 10362,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=2d97c9e1-6bd4-48ef-8efc-66b75069eb5f": {
+   "sha256": "409bddbad33512f9612b91dd12f8438d8b80c8f81e0cfc94300491b7b179ce84",
+   "bytes": 5626,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=5332e43d-bd1c-4403-8f46-5cbdaf198318": {
+   "sha256": "ad4921b706fb6cc071f628d46a60e1545d3cfc92b4215f1c3b9de5a0439c65d8",
+   "bytes": 12205,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=673835c6-c109-4aa2-a3b5-507ab4da8611": {
+   "sha256": "adaf537c0b182a67c4332d181c7ba491bb190cf0947f79eb0c05cf849f0a5067",
+   "bytes": 11825,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=6c449182-a1d4-4584-9558-5292f761f97a": {
+   "sha256": "7bc6c8084a21d0cf8c67cb15f758aeadaf07b5f15ab84958bdd002a7264d19e8",
+   "bytes": 5684,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=7a08a9ca-8a6e-4f48-9079-8f840ce01a7b": {
+   "sha256": "097ef201374564258dfc53fee26ed1cd6749d452cd0623471c895b826a9d49da",
+   "bytes": 7806,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=8764e4f7-25f3-4a21-b6a9-000c59f4a93a": {
+   "sha256": "305b5bf8b523b55b31b9924e449c109fd32f00d25882867aad96259fca028538",
+   "bytes": 7966,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=aec0cd3b-dcd4-4077-b0c0-04e987bdb690": {
+   "sha256": "b9307656fbaee2ea2f42753372b4595e709c0be5e7e99f33c626b4825056a05d",
+   "bytes": 8460,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=af45db6e-ac0f-4ab9-8e4a-4ba8fd559812": {
+   "sha256": "0727bf95007ca7984997cf96dc70e716cbd7a39e63d3030efe2b32bec810f20b",
+   "bytes": 22009,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=ca7cae65-c466-4d93-bab6-85ac740519c0": {
+   "sha256": "8c5f5bd38553a3fda940b14cad310d1967e8cead1a90085a12ecf71d26d5ea71",
+   "bytes": 9339,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://www.outsystems.com/case-studies/teamwork-ai-agents/": {
+   "sha256": "632f93d6aa40cf3eacb174fd4630ba1d5a9e4d6daefef474105e18dbe1f8006d",
+   "bytes": 52752,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://www.outsystems.com/llms.txt": {
+   "sha256": "570b2029b8c6dd4d7d5cd145bcc362bda5d069859ed63b9b2575dcf5dcd2d101",
+   "bytes": 11052,
+   "read_at": "2026-11-10T10:39Z"
+  },
+  "https://www.outsystems.com/platform/agentic-ai-workbench": {
+   "sha256": "b8d83b34ccd1be37d4816d5020bb93805fea4cbc6b94eeee99fe0d44385d2920",
+   "bytes": 337100,
+   "read_at": "2026-11-10T10:39Z"
+  }
+ }
+}

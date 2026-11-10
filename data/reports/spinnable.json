@@ -1,0 +1,197 @@
+{
+ "id": "spinnable",
+ "name": "Spinnable",
+ "url": "https://www.spinnable.ai/",
+ "country": "Portugal",
+ "sector": "SMB operations / AI workforce",
+ "read": "2026-11-10",
+ "basis": "Spinnable's own public pages and, for company basics only, the news sources named beside each fact",
+ "seen_by_subject": false,
+ "what": "Spinnable sells AI workers that a business hires for a role; each has its own email address, can be reached on WhatsApp, Slack and voice, and acts in the customer's connected tools.",
+ "facts": [
+  {
+   "fact": "Founded in Lisbon (About page metadata)",
+   "url": "https://www.spinnable.ai/about",
+   "span": "Founded in Lisbon"
+  },
+  {
+   "fact": "Launched at Web Summit 2025 with a release datelined Lisbon, 9 November 2025",
+   "url": "https://websummit.com/wp-media/2025/11/SPINNABLE-LAUNCH-RELEASE-1.pdf",
+   "span": "Lisbon, Portugal [09.11.25]"
+  },
+  {
+   "fact": "Co-founded by Vasco Pedro, Gil Coelho and Fabio Kepler, all formerly of Unbabel",
+   "url": "https://websummit.com/wp-media/2025/11/SPINNABLE-LAUNCH-RELEASE-1.pdf",
+   "span": "Vasco co-founded Spinnable alongside Gil Coelho, former Head of Product at Unbabel,"
+  },
+  {
+   "fact": "Raised about 2 million euros in a pre-seed round led by HeartCore, Florent.vc and Alphagraph (Essential Business, 12 November 2025)",
+   "url": "https://www.essential-business.pt/?p=32959",
+   "span": "raise around €2 million in a pre-seed round"
+  },
+  {
+   "fact": "Plans: Starter at 50 USD a month with 2 AI workers; Business from 150 USD with 5; Enterprise custom",
+   "url": "https://www.spinnable.ai/",
+   "span": "Starter is $50 per month with 2 AI workers"
+  },
+  {
+   "fact": "Application and primary database hosted in the EU",
+   "url": "https://www.spinnable.ai/enterprise",
+   "span": "Our application and primary database are hosted in the EU."
+  },
+  {
+   "fact": "SOC 2 Type II is stated as in progress",
+   "url": "https://www.spinnable.ai/enterprise",
+   "span": "SOC 2 Type II certification in progress."
+  },
+  {
+   "fact": "Publishes a vulnerability disclosure policy (v1.0, effective 13 May 2026) that permits prompt injection testing against a researcher's own workers",
+   "url": "https://www.spinnable.ai/security/vdp",
+   "span": "Permitted exclusively against your own AI workers."
+  }
+ ],
+ "people": [
+  {
+   "name": "Vasco Pedro",
+   "role": "Founder & CEO",
+   "url": "https://www.spinnable.ai/about"
+  },
+  {
+   "name": "Gil Coelho",
+   "role": "Co-Founder & CPO",
+   "url": "https://www.spinnable.ai/about"
+  },
+  {
+   "name": "Fábio Kepler",
+   "role": "Co-Founder & CTO",
+   "url": "https://www.spinnable.ai/about"
+  }
+ ],
+ "solutions": [
+  {
+   "id": "ai-workers",
+   "name": "Spinnable AI employees (called AI workers in the documentation)",
+   "short": "Spinnable AI employees",
+   "what": "Role-based AI workers with their own email address, memory, scheduled tasks and access to 35+ connected tools, reachable by email, WhatsApp, Slack, meetings and voice.",
+   "status": "generally available (voice calls in beta)",
+   "url": "https://docs.spinnable.ai/",
+   "scan": "spinnable-ai-employees"
+  },
+  {
+   "id": "spinnable-id",
+   "name": "Spinnable ID",
+   "short": "Spinnable ID",
+   "what": "Gives a person's Claude or ChatGPT assistant its own WhatsApp number, email and identity, running on the person's own model plan.",
+   "status": "available",
+   "url": "https://www.spinnable.id/"
+  },
+  {
+   "id": "chat-widget",
+   "name": "Website Chat Widget",
+   "short": "Website Chat Widget",
+   "what": "An embeddable widget through which website visitors talk to a Spinnable worker.",
+   "status": "available",
+   "url": "https://docs.spinnable.ai/guides/website-chat-widget"
+  },
+  {
+   "id": "enterprise",
+   "name": "Spinnable Enterprise",
+   "short": "Spinnable Enterprise",
+   "what": "Plan adding SSO, audit logs, EU data residency, workspace roles and onboarding support.",
+   "status": "available on request",
+   "url": "https://www.spinnable.ai/enterprise"
+  }
+ ],
+ "stories": [
+  {
+   "customer": "Smart Role",
+   "what": "CEO testimonial: two workers, one running calendar, outreach and pipeline, one watching a market.",
+   "url": "https://www.spinnable.ai/",
+   "span": "Clara manages my calendar, runs my outreach, and keeps my pipeline current."
+  },
+  {
+   "customer": "MDS Portugal",
+   "what": "Documentation example: a healthcare technology provider refining its customer support worker through feedback.",
+   "url": "https://docs.spinnable.ai/guides/training-feedback",
+   "span": "uses Spinnable's feedback system to continuously refine their customer support worker."
+  },
+  {
+   "customer": "Centry Capital",
+   "what": "Co-founder testimonial: several workers across a family office handling email, travel, outreach and bookings.",
+   "url": "https://www.spinnable.ai/",
+   "span": "I run multiple AI workers across my family office and ventures"
+  },
+  {
+   "customer": "Importrust",
+   "what": "Partner testimonial: workers that act on the company's processes.",
+   "url": "https://www.spinnable.ai/",
+   "span": "Spinnable gave us truly autonomous agents that understand our processes and act independently."
+  },
+  {
+   "customer": "Sifted",
+   "what": "Chief of Staff testimonial on hiring workers and chatting with them on WhatsApp.",
+   "url": "https://www.spinnable.ai/enterprise",
+   "span": "Workers are ridiculously easy to hire"
+  },
+  {
+   "customer": "Spinnable itself",
+   "what": "At launch the company said 10 of its 15 staff were not human (Essential Business).",
+   "url": "https://www.essential-business.pt/?p=32959",
+   "span": "has 15 staff but 10 are not human"
+  }
+ ],
+ "analysis": [],
+ "article": null,
+ "vault": {
+  "id": "kghdiwq3",
+  "read_key": "sgit_public_read_76f8699d4556bfb03360cbda6e61d0c7f76b07e13444704e4ced072a90a1742c:kghdiwq3",
+  "published": "2026-11-10"
+ },
+ "team": {
+  "researcher-assessor": "a sub-agent of gamma.studio@web-summit.dinis",
+  "challenger": "a sub-agent",
+  "scorer": "build/spectrum.mjs",
+  "analyst, designer, writer": "gamma.studio@web-summit.dinis",
+  "review": "gamma.review@web-summit.dinis (pending)",
+  "sign-off": "gamma.approve@web-summit.dinis (pending)"
+ },
+ "signoff": null,
+ "corrections": [],
+ "captures": {
+  "https://docs.spinnable.ai/guides/training-feedback": {
+   "sha256": "76b7484497057bcb9df5a0ddd15d834ebe3433e4eac6ac985dd01d871a3187db",
+   "bytes": 261507,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://websummit.com/wp-media/2025/11/SPINNABLE-LAUNCH-RELEASE-1.pdf": {
+   "sha256": "3e02c19208b7555122295531df5a339a8dde97c0b09a514e26f08784d982a4c5",
+   "bytes": 200055,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://www.essential-business.pt/?p=32959": {
+   "sha256": "10e2511715510777256a701459310286b8ddc937768adc4712f6007b41fa29cf",
+   "bytes": 328166,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://www.spinnable.ai/": {
+   "sha256": "e524bed247dadd0eca56b19d8c15d4402114b66f247bd628787d39cb9ce6aada",
+   "bytes": 387013,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://www.spinnable.ai/about": {
+   "sha256": "59d5a12e194f86efe4d8eb008e6ea341a19eb9cf5095669e75d8ff6b26161d5c",
+   "bytes": 83922,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://www.spinnable.ai/enterprise": {
+   "sha256": "c5c6d62cb2a9878d2b83d403b8721ccd875b6d29af357a46af0d2820ec65fd72",
+   "bytes": 142443,
+   "read_at": "2026-11-10T10:38Z"
+  },
+  "https://www.spinnable.ai/security/vdp": {
+   "sha256": "ee01e69ba168264644fa771f9225031b6bc50c75b0cc107df8e99df58097928c",
+   "bytes": 73372,
+   "read_at": "2026-11-10T10:38Z"
+  }
+ }
+}
