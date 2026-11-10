@@ -19,7 +19,7 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "round-1",
+  "status": "round-2",
   "rounds": [
    {
     "round": 1,
@@ -101,6 +101,54 @@
       "answer": "levels",
       "severity": "note",
       "finding": "Card computed: A4, R2, C1, O1 (sum 8). Level 4 Autonomy rests on I08, I19 and I10: all three are vendor documentation, not observed operation, and the I19 monitoring leg and the I10 'orchestrate' reading are the soft points (see those findings). Reach 2 rests on I10 plus an available-only Beacon (I11). Control and Openness are 1 each; Balanced would not apply (A minus one is 3). The announced-features list (MCP server, execution visibility) is correctly not credited. I did not verify the scan's announced sources or the lowered answers I05, I25, I36, I48, I54, I56, I58. Assessment and not_credited record lowered items; not_credited is empty."
+     }
+    ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I19",
+      "severity": "should-fix",
+      "finding": "Round one: partly answered. The studio swapped the source to the continuous-validation page and the claim now rests on it alone. The span 'Hackian will immediately begin testing the assets in scope, continuously' is present, but it shows a scheduled always-on mode, not an agent deciding anything. The earlier source, the policy-guidelines page, had the decision-making wording ('relies on this policy to make decisions in real time'); this page says only that Hackian 'runs broad checks for common vulnerabilities' and 'prioritizing coverage over depth'. The monitoring half is 'findings ... appear in the Findings section in real time' and 'an alert is raised immediately so your team can act': that is a person acting on results afterwards, which is the closer reading of I18/I19 only if the person watches the run. No sentence says the customer monitors the agent. The note is accurate to the page; the weakness is that the answer now evidences continuous operation more than autonomy with a monitoring person. This answer carries the whole of Autonomy 3 and 4: Autonomy 3 needs I08 plus any of I17, I18, I19, and only I19 is credited. Remove I19 and Autonomy falls to 0 (no I15, I16 or I07 credited), which would void the card under the rule that no card sits below level one in every dimension. Suggest citing the policy-guidelines span as well, or saying in the note that the page shows continuous autonomous testing and alerts, not a person watching the run."
+     },
+     {
+      "answer": "I10",
+      "severity": "note",
+      "finding": "Round one: partly answered. Studio kept it and recorded the Primary Focus 'multiple agents' sentence as not credited under the I12 scope; I verified that sentence is on the policy page and that the not-credited reason is right. The span 'Hackian continuously analyzes your entire attack surface in breadth' is exact and the page also says it monitors 'your domains and surface'. It shows breadth over one customer's assets (wildcard assets, recon), which is a thin reading of 'several domains or systems', and is the second leg of Autonomy 4 ('across systems or coordinates other agents'). Grade documented and mode default are right. Reach 2 does not depend on it alone: I11 (Beacon, available) also satisfies any(I10, I11)."
+     },
+     {
+      "answer": "I57",
+      "severity": "should-fix",
+      "finding": "Round one: partly answered. The new source (Support Portal page) is real and the span 'Add a step by step guide of how you reproduce the issue.' is exact (12 words); the note matches the page's ticket guidance. But the page is the general Ethiack support page: it does not name Hackian, the agent or its findings, and describes tickets 'with Ethiack' about 'the unexpected outcome you are seeing'. The note says 'problems with the platform', which is honest, yet the indicator is a channel to report problems with the agent or contest its output. Either say in the note that the page covers the Ethiack platform and does not name Hackian, or find a page that ties the channel to findings or Hackian. This is the only answer Openness 3 would use (with I50); Openness stays at 1 because Openness 3 needs I50 and any of I57, I54, S3, and the cumulative ladder stops at 1 only if level 2 is missing: level 2 needs two of I22, I58, I61 and only I22 is credited, so O1 holds, but a reader should know the I57 credit is general-platform."
+     },
+     {
+      "answer": "I39",
+      "severity": "note",
+      "finding": "Changed span not in the round-one diff, re-read. The span 'tests, the header also includes a control to' is present on the Test Details page (8 words) but stops before 'pause or restart', so the span alone does not show the claim; the next words on the page are 'pause or restart the test depending on its current status'. The note (continuous tests only) is right. No level uses I39 (Control 3 needs I41, I39 and I43; I41 is operation-scoped and I43 is not claimed)."
+     },
+     {
+      "answer": "I22",
+      "severity": "note",
+      "finding": "Studio response true: the note now says scope limit. Span 'technologies and test types that Hackian does not currently handle on its own' is on the Expert Pentests page (cited as human-in-the-loop); the note matches the sentence. Openness 1 depends on I20 plus I22 alone (I56 and I58 not credited): remove I22 and Openness is 0. The evidence is a routing statement for human-led tests, not a documented failure case. The continuous-validation page's 'prioritizing coverage over depth' is a closer statement of a limit and could be added."
+     },
+     {
+      "answer": "S1",
+      "severity": "note",
+      "finding": "Studio response true: the Jumia and CEGID clause is gone and the note now says only what the U.Porto page says. The span 'Hackian, our agentic AI pentester, runs against U.Porto's exposure 24/7' is exact, 10 words, and the page says 'entire external attack surface'. The studio's response quotes a CEGID sentence from a page that is not a source of this scan; that is in the review record only, not in an answer or note, so no fix is needed. Customer is named for the capability that acts, so In production holds."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card computed: A4, R2, C1, O1 (sum 8, Building). Arguing against Autonomy 4 (Orchestrates, 'runs multi-step workflows across systems or coordinates other agents; a person sets goals and reviews outcomes'): it rests on I08, I10 and I19, all vendor documentation graded documented, mode default, nothing observed. I08 is a product-page sentence ('autonomously executes benign exploitation routines'): marketing wording, an artefact only in the sense that it is a stated claim. I10 is breadth over one customer's attack surface, not workflows across systems or coordinating agents; the page that does speak of multiple agents is correctly not credited. I19 is the single point of failure (see its finding): remove it and Autonomy is 0 and the card cannot be published; remove I10 and Autonomy is 3, Reach still 2 through I11. Mode is honest: only I11 is marked available. Autonomy 4 is therefore a literal pass of the rule on thin evidence, and the label 'Orchestrates' reads stronger than the pages. Argue against Reach 2 (Integrated, 'documented connectors to common tools'): neither credited answer is a connector; the Integrations page (Slack, Jira Cloud, Splunk, webhooks, CI/CD) is correctly not credited to I11 as it is platform routing, so the level name overstates what the rule found, though the rule is met. Control 1 and Openness 1 are single-source (I47; I20 plus I22) and honest. Balanced does not apply. Not re-checked: the lowered answers and the announced sources."
+     },
+     {
+      "answer": "I04, I50, I11, I08, I20, I47, S3, I41",
+      "severity": "pass",
+      "finding": "Verified answered or unchanged and correct against freshly fetched pages: I04 removed and recorded in not_credited with a reason that matches the product page and CTO post; I50 note now says published on arXiv, Ethiack's own run, and the post does say 'Hackian isn't in the paper itself'; the span is 13 words in the page; I11 Beacon page has the span and 'the beacon initiates the tunnel automatically', mode available with cfg beacon is right; I08, I20, I47 spans exact, under fifteen words, right indicator; S3 llms.txt resolves (200) and contains the REST API description; I41 is documented and correctly not counted (needs operation). Note on style: none of the changed notes contain em-dashes, addresses or at-signs. Round-one findings fully answered: 12 of 15; partly answered: I19, I10, I57."
      }
     ]
    }

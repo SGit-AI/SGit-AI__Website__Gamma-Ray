@@ -126,6 +126,34 @@
       "finding": "Re-verified against live fetched sources: spans exact and under fifteen words (longest I58, 14), right indicators, grades and modes consistent. I54: status page shows Sep 28, 2026 incident with timed updates (4:11 PM and 5:04 PM UTC on the page); note supported. I36: llms.txt names GDPR and EU AI Act as alignment, a self-description, documented is acceptable. I03 fits the scope of a no-engineering builder. S3: llms.txt resolves, observed, hash recorded."
      }
     ]
+   },
+   {
+    "round": 3,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "I56 / O1",
+      "severity": "pass",
+      "finding": "Answered. The Glovo sentence is gone from the I56 note and the Glovo entry is gone from not_credited, which now holds only the I39 entry whose source is the captured Control Tower page. The I56 note as it stands names only the captured telecom story and the EU AI Act blog, both sources of the scan; the span is 11 words and exact in the telecom page. The scan note states that O1 stands on I20 and I58."
+     },
+     {
+      "answer": "I08, I40, I48, I39, I41, I48, S1, S4, I10, scan-note wording",
+      "severity": "pass",
+      "finding": "Round-two findings answered and true in the scan as it stands. I checked the spans of all twenty answers against fresh copies of the sources (raw and text, ignoring punctuation style): all are found and all are under fifteen words (longest 14, I58). I08 note: the voice FAQ says agents act through scoped, permissioned integrations and can update a booking or a customer record. I40 and I48 notes match the FAQ texts. I39 is absent from answers and listed in not_credited. S1: the Nicomatic page says Sam logs the event in the ISO database, notifies the supervisor and escalates when required. No S4 answer, and none is supported by the pages. I10 span exact in llms.txt."
+     },
+     {
+      "answer": "I03, I11, I17, I18, I20, I21, I36, I38, I41, I54, I58, I67, I68, S3",
+      "severity": "pass",
+      "finding": "Notes checked again against the pages: I11 (Genesys Cloud CX API v2 and Salesforce Service Cloud REST API over a REST payload), I17 (AI consults a human expert on edge cases), I18 (Control Tower), I21 (each node defines data, logic, outputs and escalation conditions), I38 (Operator View configures which decision nodes need validation), I41 (audit trail with node identifier, data sources, timestamp; operation fact, so uncounted), I54 (28 September 2026 incident, updates at 4:11 PM and 5:04 PM UTC), I36 and S3 (llms.txt), I67 (KPIs, escalation trends, CX quality), I68, I03. Grades documented, observed for S3, and modes are consistent. Changes since round two are the I56 note, the not_credited list and the recapture hashes only; nothing else in the answers moved."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Computed card A4 R2 C1 O1. A4 is I08 plus I10 plus I18 (the card lists I10 and I18 as used, I08 through the A3 rule). I08 is one sentence in a FAQ answer on the voice page, default mode, and is the weakest fact: with I08 removed A3 and A4 both fail and no other Autonomy fact is answered (I15, I07 and I16 are not), so Autonomy would have no level and the card would fall below level one in a dimension. Without I18 (mode available, Control Tower validation) A stays at A3 through I17; without I10 A stays at A3 through I08 and I18. R2 stands on I10 and I11, either enough. C1 stands on I38 alone (llms.txt plus the Operator View sentence, available); without it Control has no level. O1 stands on I58 alone or I20 alone. All of these are vendor statements, none observed apart from S3, and the card marks A and C as available."
+     }
+    ]
    }
   ],
   "responses": [

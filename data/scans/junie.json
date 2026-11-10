@@ -186,6 +186,54 @@
       "finding": "Card A4 R2 C2 O3. A4: A3 rests on I08 (default) plus I19 (available, brave mode On), and A4 adds I10 and I18 or I19. Every step of Autonomy above 2 therefore rests on the user switching brave mode on (CLI page: On executes all potentially sensitive actions without approval). If I19 and I18 are removed, Autonomy falls to 2 (I16, I07 with I04). The card marks A as available, which is honest. I08 and I10 are plain feature statements, not adjectives, but I10 is a vendor release post listing integrations, not a documented multi-system workflow; I12 and I13 are not claimed, so A4 is a user-enabled mode plus a feature list. The A4 label 'runs multi-step workflows across systems' is met by the rule text only. C2: I38 (documented, default, CLI page) plus I23; with I23 removed it rests on the available I25, whose span does not show the scopes, so the C2 evidence is thinner than the label suggests (see I23 and I25). O3: I50 plus S3 or I57. I50 is the vendor's quotation of a third party's benchmark with no link to the results; if I50 goes, Openness is 2. S3 is an artefact (llms.txt resolves) and I57 is a documented command, so the second half is firm. R2: I10 or I11; I11 (MCP, available, documented in a configuration page) holds even if I10 were removed."
      }
     ]
+   },
+   {
+    "round": 3,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I25",
+      "severity": "should-fix",
+      "finding": "Partly answered. The note is now true: the junie.yaml template on the live GitHub page has a permissions block with contents: write, pull-requests: write and issues: write. But the span is only 'contents: write' (2 words), one of the three entries the note counts. Use the contiguous text from the page, 'permissions: contents: write pull-requests: write issues: write' (8 words), so the span shows all three. Also say in the note that it is a template the user copies into the repository (mode available and cfg github-action are right). No level rests on I25 alone: C2 holds through I38 and I23."
+     },
+     {
+      "answer": "I23",
+      "severity": "note",
+      "finding": "Answered in substance. The live allowlist page says 'There are five types of actions that can be allowed with the allowlist.json file' and then lists fileEditing, executables, mcpTools, readOutsideProject and readSecretFile; the example file has defaultBehavior ask and rules with action allow or ask. The note names all five, says it is a documented list in the user's file and not a measured grant. The span stops mid-sentence at 'with the' and does not itself name the types; they follow in the next sentence of the same page, so it is exact and honest, though a span that names two of the types would be stronger. Mode default is defensible. Needs is operation and the grade is documented: the card counts it only under the Spectrum reading, which the indicator scope allows."
+     },
+     {
+      "answer": "I10",
+      "severity": "note",
+      "finding": "Answered. The note now says only what the span shows. The span 'writes, fixes, and validates SQL in the same session that handles your code' is exact in the release post (13 words), and the post says Junie connects to the databases configured in the IDE through DataGrip and the JetBrains Database plugin. The GitHub and GitLab clause is gone. One limit: the indicator reads 'several domains or systems' and the span shows two (a database and the code base). A4 depends on this answer (see levels)."
+     },
+     {
+      "answer": "I45",
+      "severity": "pass",
+      "finding": "Answered. The CLI page says sandbox mode is in the Early Access Program, wraps every agent-issued terminal command in an OS-level sandbox (srt), restricts native edit tools, limits filesystem access, is off unless started with --sandbox or /sandbox, and that MCP servers, hooks and operations done directly by Junie CLI outside those tools are not isolated. The note now says access and native edit tools. Mode available, cfg sandbox right. The note's wording matches the page."
+     },
+     {
+      "answer": "I08",
+      "severity": "pass",
+      "finding": "Answered. The IDE plugin page says in code mode Junie breaks the task into a multistep plan, executes it and can autonomously run terminal commands, create files, edit code and run tests. Note and span match (13 words); the default claim is not made in the note. No change since round two."
+     },
+     {
+      "answer": "I50",
+      "severity": "note",
+      "finding": "New point. The span 'with 61.6% resolved and a 72.7% pass@5' contains an at-sign copied from the source; the style rule is no at-sign characters, so a span without it (for example the first half of the sentence only) is cleaner. Separately, the studio's levels response relies on swe-rebench.com and a vault file 'raw/ans-105.html' to defend O3. I fetched swe-rebench.com and it does list Junie with the line 'Added reference evaluation for Junie CLI', but that URL is not among the scan's sources or captures, so the scan does not carry it. Either add it as a source with a capture and cite it in I50, or leave O3 resting on the vendor post only (documented, quoting a Nebius research lead, no link to the results)."
+     },
+     {
+      "answer": "I56, I46, I47, I20, I65, I48, I22, I61, I52, I57, I58, S3, S1, S4, I04, I07, I11, I16, I17, I18, I19, I21, I38",
+      "severity": "pass",
+      "finding": "Round-two items the studio left unchanged were re-read against the live CLI, allowlist, IDE plugin and post pages: unchanged since the round-two commit apart from the read_at stamps, spans found and under fifteen words, brave mode (Ask, Auto, On) and sandbox text match I16 to I19 and I38. The studio responses for I08, I56, I46, I47, I20, I65 and the grouped item are true. Of the round-two findings, I45, I08, I10 (mostly), I23 (in substance) and the pass items are answered; I25 is only partly answered."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A4 R2 C2 O3 (computed). A4 rests on I08 (default), I18 and I19 (both available, brave mode Auto or On, which the user switches on) and I10 (default, two systems, one vendor post sentence); remove I10 and Autonomy falls to 3, remove I18 and I19 and it falls to 2. C2 rests on I38 (documented, default) plus I23 (a documented list of five action types) and I25 (a template); if I23 is removed, I25 alone carries it and its span covers one scope. O3 rests on I50 (the vendor post quoting a third party's results, no link in the scan) plus S3 (llms.txt resolves, observed) and I57 (a documented slash command); if I50 is removed Openness is 2 (I22, I58 and I61 with I20). R2 holds on I11 (MCP servers the user configures) even without I10. The weakest fact is I10 for A4, then I50 for O3."
+     }
+    ]
    }
   ],
   "responses": [

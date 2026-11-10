@@ -19,7 +19,7 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "round-1",
+  "status": "round-2",
   "rounds": [
    {
     "round": 1,
@@ -71,6 +71,79 @@
       "answer": "levels",
       "severity": "note",
       "finding": "Card computed as A3, R2, C1, O2. Level 3 appears only in Autonomy (I08 plus I17, see the I17 finding); nothing is at level 4. Reach 2 rests on I10 and I11, both documented connectors lists, an artefact. Openness 2 rests on I22 and I58, both public pages (troubleshooting and privacy policy), artefacts and not adjectives. Control 1 rests on one prose rule (I47). The I54 answer the assessment lowered is not on the card and no source I read contradicts that."
+     }
+    ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I17",
+      "severity": "should-fix",
+      "finding": "Re-sourced to the home page; the span 'takes initiative, scheduling tasks, sending follow-ups, flagging issues, and completing workflows' is exact (11 words) and in the page's FAQ answer to 'How autonomous are the workers?', which opens with 'Very.' The span covers only the routine half of the indicator. The exceptions half ('a person approves key actions' in the note) is not in the span: it comes from other parts of the same page ('Approve key actions' beside a UI mockup, and 'it won't take actions with external consequences without your approval. When it's unsure, it asks instead of improvising'). I searched the docs pages in the scan (introduction, ai-workers, tool-permissions, troubleshooting) and found no documented approval mechanism, so the person-handles-exceptions half rests on marketing copy and a mockup. Autonomy 3 turns on this one answer: remove I17 and the card has no Autonomy level. Round one's finding is partly answered (firmer than a hedged troubleshooting sentence, but still one vendor marketing paragraph). Fix: quote a span that carries the exception half, for example the 'asks instead of improvising' sentence, or add a docs page that describes approvals, and say in the note that no docs page describes how approval is configured."
+     },
+     {
+      "answer": "I56",
+      "severity": "note",
+      "finding": "Answered. The note no longer carries the security-guide clause; it now says the footer is on by default and that turning the Email signature setting off removes the footer, which the corporate-email page says in so many words. The clause moved to not_credited with source https://docs.spinnable.ai/guides/security-best-practices; I fetched it and it says recipients of a company-address worker 'don't know (and shouldn't know) it's an AI'. Remaining gap: that page is not among the scan's captures (19 pages hashed), so the not_credited item has no hash. Run tools/capture.mjs after adding it to the sources. No level effect (O1 is met by I22 and I58 as well)."
+     },
+     {
+      "answer": "I12",
+      "severity": "pass",
+      "finding": "Answered. The co-manager sentence is gone; the note now matches the 10 June 2026 page ('When a worker delegates tasks to other workers in your team, each sub-task now appear as their own collapsible block in the activity trail'). Span exact, 11 words, mode available, configuration multi-worker fits. The indicator's scope asks for agents with their own context and authority; the page only shows delegation inside a team, and the AI workers page gives each worker its own email address, so the fit is acceptable. Feeds only Autonomy 4, not reached."
+     },
+     {
+      "answer": "I25",
+      "severity": "pass",
+      "finding": "Answered as 'no change'. 5 August note: Read means look up but not create, change or send; Full access stays the default; Read is preselected for a new connection. Mode available with configuration read-only-connection is the conservative reading and the note states both facts. No level uses I25 on this card."
+     },
+     {
+      "answer": "I46",
+      "severity": "note",
+      "finding": "Answered. The note now states the reading used and that the page does not say the worker itself can change the setting. Page confirms 'Only the worker's manager or co-managers can change these controls' under Security and privacy in worker settings. The phrase 'same workspace account that runs the worker' is the studio's gloss; the page says worker settings and workspace membership, not account. Acceptable, no level effect."
+     },
+     {
+      "answer": "I41",
+      "severity": "pass",
+      "finding": "Answered as no change. Connecting-tools page says 'All tool actions are logged with:'; needs operation with documented grade counts for nothing, and Control 3 is not reached."
+     },
+     {
+      "answer": "S1",
+      "severity": "pass",
+      "finding": "Answered as no change. The home page testimonial from the CEO of Smart Role is exact and the note states it is a vendor-published testimonial with no usage figures."
+     },
+     {
+      "answer": "I39",
+      "severity": "note",
+      "finding": "New, minor. The note says a person can interrupt a running worker, which the communication-channels page supports ('This immediately cancels the current in-flight generation'), and adds 'failing recurring tasks are paused'. That second clause is from the 28 October release note (the I40 source), not the cited page. It is in a source of the scan, so the rule is met, but the note should name the release note. Interrupt is a stop of one reply, not a stop of the worker; the indicator is met only loosely. No level effect."
+     },
+     {
+      "answer": "I68",
+      "severity": "note",
+      "finding": "New, minor. The note says 'weekly dated release notes'. The docs llms.txt lists dated notes from 8 January to 28 October 2026 at mostly weekly intervals but with gaps (for example 24 June to 8 July, 29 April to 13 May, none between 22 January and 5 February). Say 'dated release notes, most weeks'. The span 'October 28, 2026' is exact and appears in the index. No level effect."
+     },
+     {
+      "answer": "I04",
+      "severity": "note",
+      "finding": "New, minor. The span 'Vault environment variables exist solely inside the sandbox code execution environment.' is exact, but it states a restriction on where keys are visible and not that the worker generates and runs code; the code execution claim is in the note and in the vault page's table ('Exposed as VAULT_ environment variables for Python code and custom scripts'). A span from that table row would fit the indicator better. No level effect (I04 is not used on this card)."
+     },
+     {
+      "answer": "levels",
+      "severity": "should-fix",
+      "finding": "Card computed as A3 R2 C1 O2; nothing at level 4. Arguing against Autonomy 3 (the only level three): it rests on I08 and I17. I08 is a documentation statement that workers update databases and send emails (artefact, fine). I17 is one FAQ answer on the home page that begins 'Very.' (an adjective in the source, not credited) and a mockup, with no docs page describing approvals or exception handling; the 'person handles exceptions' half of the level is the note's reading of marketing text. If I17 is removed the card has no Autonomy level (I15, I16 and I07 with I02 to I05 are not answered), so the weakest fact removes a whole dimension. Mode default is honest if approvals are on by default, but no source says that. Autonomy 4 would need I18 or I19 and is correctly not claimed. Against the weakest credited levels elsewhere: Control 1 rests on I47 only (a Worker Policy of 'highest-priority rules'), modest but exact; I41 and I39 exist as documented but I41 is needs operation, so Control 3 is correctly withheld; Control 2 lacks I38. Reach 2 rests on I10 and I11 (a connector list, an artefact); Reach 3 needs a published agent interface, none seen. Openness 2 rests on I22 (troubleshooting page) and I58 (privacy policy), both artefacts. Fix for the card is the I17 span and note above."
+     },
+     {
+      "answer": "I08, I10, I11, I20, I21, I22, I26, I30, I40, I47, I57, I58, S3 and the changed notes of I12 and I46",
+      "severity": "pass",
+      "finding": "Re-fetched all 19 pages fresh and re-checked spans (curly versus straight apostrophes only in I30, I40, I46). I30: change-manager page says a manager can administer settings and 'pass responsibility to another user'. I40: 28 October note, three runs in a row, pause, manager emailed with the reason. S3: both llms.txt files resolve. All spans under fifteen words, no em-dashes, grades and modes fine, none counts an operation answer as documented for a level. Round one's findings: I17 partly, I56 answered (capture gap noted), I12 answered, I25, I46, I41, S1, grouped pass and levels answered or acknowledged; so 8 of 9 fully answered, I17 partly."
+     },
+     {
+      "answer": "I17",
+      "severity": "note",
+      "finding": "Reviewer check against the cited home page: the exceptions half is on the same page. It says \"Approve key actions and set what each teammate can access\" and, in the answer to what workers cannot do, \"it won't take actions with external consequences without your approval. When it's unsure, it asks instead of improvising.\" So the fix for the I17 finding is a second span from those sentences (each under fifteen words), not a new source."
      }
     ]
    }

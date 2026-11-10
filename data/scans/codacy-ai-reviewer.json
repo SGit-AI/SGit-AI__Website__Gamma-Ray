@@ -19,7 +19,7 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "round-1",
+  "status": "round-2",
   "rounds": [
    {
     "round": 1,
@@ -76,6 +76,59 @@
       "answer": "levels",
       "severity": "note",
       "finding": "Card computed with the repository scorer: A1 R2 C1 O2. There is no level 3 or 4 in any dimension, so nothing to argue against at that height. Each level rests on few answers: A1 on I15 only (manual-review configuration), R2 on I10 and I11 (both available, ai-reviewer configuration), C1 on I47 only (see the should-fix above), O2 on I22 and I58 (documentation, robust). Autonomy next unlock is I16, Reach I14, Control I38, Openness I50. The scan correctly does not credit I08, I17, S4 (the lowered list in its assessment); I read nothing in the sources that would support crediting them. The scan has no operation facts, so the observed-or-measured rule is not engaged except S3, which I reproduced by fetching."
+     }
+    ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I47",
+      "severity": "should-fix",
+      "finding": "Round one's I47 finding is only partly answered. The span now is 'These instructions are specified in a review.md file in the .codacy/instructions directory of your repository' (12 words in the scan span, found on the Codacy AI page) and the note no longer calls the template a limit, which is true to the page. But the page says review.md helps the reviewer 'understand the structure of the code, the business logic of the project, and your own preferences': it steers what the reviewer attends to. Neither the span nor the note says a team can state what the reviewer may not do, or how people approve, override or stop it, which is what Control level 1 (Stated) means. The only limit-like text is the Out of scope line of an example prompt for drafting the file, which the note still cites. The studio's response says review.md is a prose rule 'the reviewer is expected to follow'; no fetched page says that. Control 1 rests on this one answer (artefact: a documented file path; not an adjective). If I47 is removed the card falls to C0 in the public layer, and the Spectrum rule says no card below level one in every dimension, so the card would not be publishable. Either supply a page sentence that says the instructions bound or direct what the reviewer does (for example a statement that it follows them), or credit nothing and let Control show as a next unlock, with the consequence for the card put to Dinis."
+     },
+     {
+      "answer": "S1",
+      "severity": "note",
+      "finding": "Round one's S1 finding is answered: the span 'reviewer, quality gates, container scanning and MCP server are now part of daily work' is in the Value box of the BFI Finance case study, the note names the headcount ('Engineering team size: 170' in the page header), and says the closing paragraph lists 'quality gates, per-repo goals and the MCP server' without the reviewer. Remaining thinness, which moves no level (badge only): the page is vendor-published, the only 'usage' is a presence statement and a team headcount, and the same page says BFI evaluated the reviewer alongside an existing tool without saying how many pull requests it reviews. The scope asks for a customer named or usage figures for the capability that acts; the customer is named, so credit is defensible, but the badge should be read as a vendor claim."
+     },
+     {
+      "answer": "I25",
+      "severity": "note",
+      "finding": "Round one's I25 finding is answered. The span 'Codacy might also create comments and suggestions on the pull request' is in the Pull requests row of the permissions page, and the note says the page does not mention the AI Reviewer and the credit is for the platform GitHub App. The page lists permissions per scope but does not say it is narrower than the whole account; the credit is a reading, and mode default is acceptable only as a platform fact. Not used on the card (Reach 3 needs I14, I24 or S4 as well), so no level changes."
+     },
+     {
+      "answer": "I01",
+      "severity": "note",
+      "finding": "New: I01 has mode default, but the Codacy AI page says the AI Reviewer is 'strictly opt-in' and runs only where an admin enabled it. The statement 'used as supplied' is true of the documentation, yet the feature is not in the shipped state until turned on; the scan's own configurations list has it under ai-reviewer. It feeds Reach 1 only and Reach 2 supersedes it (the Reach ladder is highest), so no level moves. Consider mode available with cfg ai-reviewer for consistency with I10 and I11."
+     },
+     {
+      "answer": "I22",
+      "severity": "note",
+      "finding": "New, minor: the I22 note says the docs also say the reviewer runs on GitHub only, but the cited limits page carries the 270,000 tokens or 1 MB diff limit and the short 'too large' review; the GitHub-only line is on the Codacy AI page ('currently only available on GitHub, for all Team and Business plans'). That page is a source of the scan, so the note passes the source rule, but the note should name the page. Openness 2 rests on I22 and I58 together (both documentation facts, default); removing either gives Openness 1."
+     },
+     {
+      "answer": "I15",
+      "severity": "note",
+      "finding": "Round one's I15 note is verified, not changed: the github-integration page lists two Run reviewer modes, Automatically (first review only) and Manually, with 'Click Run Reviewer in the pull request summary comment or call our public API to trigger a review on demand.' No default is stated, so mode available (cfg manual-review) is right. The studio's response restates the credit and adds nothing new: Autonomy 1 (Assists, 'a person does each step') rests on this one answer, and the same page says the review includes inline comments with suggested fixes and a verdict produced without per-action approval. Accepted as the lowest rung."
+     },
+     {
+      "answer": "I57, I11, I10, S3",
+      "severity": "note",
+      "finding": "Round one notes on these four were met with no change, and the answers stand as read now. I57: the Codacy AI page says to react with a thumbs-up and 'reply to the ones that are wrong explaining why' and that it adapts from replies and reactions; this is feedback inside the pull request, not a report channel to the vendor, a lowest reading, and mode available is right. I11: 'through Amazon Bedrock' is in the AI Reviewer section; span repeated elsewhere on the page. I10: ticket reading depends on a Jira or Linear integration, carried by mode available. S3: the llms.txt fetch resolves and the note now says both files are platform-wide; the llms.txt lists the AI Reviewer as one entry. None moves a level (Openness 3 needs I50, absent)."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card computed: A1 R2 C1 O2. There is no level three or four in any dimension, so I argue against the weakest credited level, Control 1. It rests on I47 alone, an artefact (a file path and an example prompt) rather than an adjective, but the fact is about steering the reviewer's focus, not about how people approve, override or stop it; see the should-fix on I47. Remove I47 and Control drops to zero and the card is not publishable. Mode available with cfg ai-reviewer is honest, since review.md is optional and the product is opt-in. Next, Reach 2 rests on I10 or I11, both available under ai-reviewer, and I11 is a stronger fact (OpenAI models through Amazon Bedrock plus Jira and Linear reads) so R2 survives losing I10. Autonomy 1 depends on I15 alone (manual-review configuration), while the other documented mode runs the first review without a click, so the card describes the most restrictive configuration; the scan says so through the cfg. Openness 2 depends on both I22 and I58. The lowered list (I08, I17, S4, I61, I63) is consistent with the sources I read; I found nothing to credit them."
+     },
+     {
+      "answer": "S1, I25, I01, I10, I11, I15, I20, I22, I47, I57, I58, S3",
+      "severity": "pass",
+      "finding": "Verified by fetching the cited pages: every span in the scan is present on its cited page (checked with whitespace and non-breaking-space normalisation) and is under fifteen words (S1 is 14, I47 12, I25 11). Grades documented and observed are right; S3 observed is supported by fetch (llms.txt and swagger.yaml resolve). I20 and I58 match their pages (the reviewer 'comments only on the Codacy issues it judges worth a reviewer's attention'; what is sent, what Codacy stores, redaction before code is sent). Every figure and name in the notes (BFI Finance, 170, 270,000 tokens, 1 MB, OpenAI, Amazon Bedrock, Jira, Linear, review.md, AGENTS.md and the other guideline files) is in a cited page. Round one's S1, I25, S3 and I47-note changes were made as the studio says; round one's no-change responses (I57, I15, I11, I10, I01/I20/I22/I58, levels) are true in the scan as it stands. Round one findings fully answered: all except I47."
      }
     ]
    }
