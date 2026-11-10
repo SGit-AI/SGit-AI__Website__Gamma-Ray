@@ -73,7 +73,7 @@ footer{border-top:1px solid var(--hair);background:var(--band);padding:26px max(
 main.home>h1{max-width:980px;font-size:clamp(30px,4.2vw,46px);line-height:1.12}main.home>.eyebrow{max-width:980px}
 .sp-head{flex-direction:column;align-items:flex-start;gap:8px}.sp-meta{align-self:flex-start;white-space:normal}
 @media (max-width:560px){main .tag{border-radius:10px}}
-main code,main td,main li{overflow-wrap:anywhere}main code{word-break:break-all}
+main code,main td,main li{overflow-wrap:anywhere}main code{word-break:normal;overflow-wrap:anywhere}main li code,main p code{font-size:.82em}
 main table{max-width:100%}.tablewrap,main .wide-table{overflow-x:auto}
 main input,main select,main textarea{max-width:100%;box-sizing:border-box}main label{max-width:100%}
 .fb-form{grid-template-columns:minmax(0,1fr)}.fb-form input,.fb-form select,.fb-form textarea{width:100%;min-width:0}
