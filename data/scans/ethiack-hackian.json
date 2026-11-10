@@ -237,6 +237,44 @@
       "finding": "Card A4, R2, C1, O1 (sum 8). Autonomy 4 rests on I08 (product-page sentence about benign exploitation routines), I10 (breadth over one customer's attack surface in continuous mode) and I19 (policy-guidelines sentence for agentic pentests), all vendor documentation, documented, default, nothing observed; I19 is the weakest, since it is scoped to agentic pentests, does not say 'full', and the monitoring half is by reference. Remove I19 and Autonomy falls to 0; the card still publishes on Reach 2 (I10, I11 available), Control 1 (I47) and Openness 1 (I20, I22), with Autonomy shown as absent, not as no. Reach 2 is met by the rule though neither credited answer is a connector, as the card says."
      }
     ]
+   },
+   {
+    "round": 5,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I19",
+      "severity": "should-fix",
+      "finding": "Partly answered. The note is now honest and the span is exact (an agentic test relies on this policy to make decisions in real time, 9 words) on the captured policy-guidelines page, with guardrails and the activity-log visibility clause confirmed on the live pages. But the note itself now says the page does not say the autonomy is full, and the page also says nothing of a person monitoring: the visibility sentence is about a log shown to clients, not about who watches it. The indicator reads 'The agent has full autonomy within boundaries; the person monitors'. A credit whose own note concedes the key word of the indicator is not met is inconsistent: either the answer is dropped or the indicator is not credited, or the note must show a page that supports both halves. Autonomy 4 depends on this credit."
+     },
+     {
+      "answer": "I04 (not_credited)",
+      "severity": "pass",
+      "finding": "Answered. One I04 entry is now in not_credited, sourced to https://ethiack.com/hackian, a key of captures. Both quoted phrases (Non-destructive exploit generation; builds and executes sophisticated exploit chains) are on the live page. The conclusion fits the indicator's scope (local or cloud privileges). The response says the second source was dropped rather than re-added, and the scan matches that."
+     },
+     {
+      "answer": "not_credited sources",
+      "severity": "pass",
+      "finding": "Answered. not_credited has two entries (I12 and I04), citing the policy-guidelines page and the Hackian product page; both are keys of captures (11 keys compared; capture re-hashed at 19:44Z). The three uncaptured portal pages are no longer cited anywhere in notes or not_credited. Minor: the response says the Reach 2 entry was rewritten and sourced to the Beacon page, but no Reach 2 entry exists now; it was cut. The scan is correct (and the card shows the Reach 2 reason by rule any(I10, I11)); only the wording of the response is off."
+     },
+     {
+      "answer": "I10, I57, I39, I22, S1, I08, I11, I20, I41, I47, I50, S3",
+      "severity": "pass",
+      "finding": "Unchanged since the round four record apart from re-capture hashes. Re-checked on live pages: I08, I10, I19 and I41 spans exact and under fifteen words, grades documented, modes right, I11 available with cfg beacon. All answer sources are keys of captures. No em-dashes in prose; the at-sign appears only in agent identifiers of review records."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A4 R2 C1 O1. Autonomy 4 (Orchestrates) needs level 3 plus I10 and I19; I12 (agents coordinating) is correctly not credited, so Orchestrates rests on one continuous-mode breadth sentence and one agentic-pentest policy sentence, both vendor documentation, neither observed. I19 is the weakest: it does not say full, does not say a person monitors, and covers one test type, so Autonomy 4 is arguable and 3 is the safer reading if I19 is dropped (I08 and I10 still give level 3 only if the rules allow; with I19 gone the level-2 rule also fails, so Autonomy would fall to 0 or 1). The card still publishes on Reach 2, Control 1 and Openness 1, so dropping I19 does not block publication."
+     },
+     {
+      "answer": "announced",
+      "severity": "should-fix",
+      "finding": "Added by the reviewer after the reader reported, from the scan as it stands: five announced entries cite pages that are not keys of captures. Four cite https://ethiack.com/info-hub/product/spring-release-2026 (the MCP server, step-by-step execution visibility, Active Directory testing, the ServiceNow, Wiz, AWS and GCP integrations) and one cites https://docs.ethiack.com/docs/portal/findings/retesting (automatic retesting, not yet available). The reader checked the not_credited entries, which are captured; the announced list is held to the same rule on the other scans (a cited page must be captured and hashed, or the entry cut). Capture the two pages or cut the entries; none carries a level."
+     }
+    ]
    }
   ],
   "responses": [

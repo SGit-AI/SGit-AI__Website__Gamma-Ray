@@ -227,6 +227,29 @@
       "finding": "Card A2 R1 C1 O1, no level three or four. Autonomy 2 rests on I16 (a platform-wide privacy policy sentence that does not name the agent) with I07 as the agent-specific leg; remove I16 and Autonomy falls below the level from this scan, yet Reach, Control and Openness at one keep the card publishable. Control 1 rests on I38 alone, a limit by who submits rather than an approval mode; remove it and Control has no level. Openness 1 needs I20 plus I56 or I58 (a policy label and a vendor quote); Reach 1 rests on I09, a coverage statement. The levels are thin but no credit is unsupported."
      }
     ]
+   },
+   {
+    "round": 5,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "not_credited,announced",
+      "severity": "pass",
+      "finding": "Round-four should-fix answered. The I02 Fidelidade not_credited entry is removed (commit e36c5ea); the two announced items on uncaptured pages (About milestone, home page marketing figures) are removed. Every URL in notes, not_credited and announced entries now is a key of captures (blog, Marinha, Super Bock, privacy policy). The only mentions of uncaptured pages are in review history text, not in the card. The captures were refreshed at 2026-11-10T19:45Z with the same hashes; no later capture commit changed the scan. No level used I02, so the card is unchanged."
+     },
+     {
+      "answer": "I38,S1,I16,I07,I20,I56,I58,I67,I52,I09",
+      "severity": "pass",
+      "finding": "Between the round-four recording commit (4aa12da) and HEAD no answer changed: the diff holds only the removals above, the round-four responses and the capture read_at times. On fresh fetches every span is found in its cited page and under fifteen words (I07 7, I09 12, I16 10, I20 14, I38 11, I52 9, I56 9, I58 9, I67 7, S1 9); notes match the pages; grades are documented and modes default, S1 deployed. I38 and S1 round-four passes still hold. The later edit to the S1 scope text (commit 395959a, not in this file) agrees with the S1 answer: a named customer earns it."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A2 R1 C1 O1. Autonomy 2 depends on I16, a privacy-policy sentence about the whole platform that does not name the agent, with I07 the agent-specific fact; without I16 Autonomy is below the level, and the note already says the policy does not describe step-by-step approval. Control 1 rests on I38 alone, which records who submits, a structural limit and not an approval mode; the note says so, and a reader could argue Control is not earned. Both credits are supported by exact public text and stated candidly, and the card stays publishable on Reach, Openness and the rest even if either were removed."
+     }
+    ]
    }
   ],
   "responses": [

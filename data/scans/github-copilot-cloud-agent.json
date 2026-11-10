@@ -325,6 +325,49 @@
       "finding": "Fetched all four sources fresh today and checked. I04 span 'ephemeral, firewalled environment', I08 sentence, I20 (maintenance, feature development, prototyping all on the page), I21 span 'It can only push to a single branch' (8 words) and secrets sentence, I22 (limited scope, inaccurate or insecure code, security risks, public code matches), I27 (commits signed, Verified), I38 span (10 words), I41 span 'Each commit message includes a link to the agent session logs' (11 words, documented, operation so it does not count), I11 (repository-level MCP; GitHub server read-only token on the current repository, Playwright limited to localhost; MCP policy disabled by default), S2 span (11 words), S3 llms.txt fetched (HTTP 200). Latest-round findings: I56 fully answered (removed, moved to not_credited, Openness 1 stands on I20 and I22); I25 note fully answered (removed, credited as I23); the levels finding answered in part (concession made that as shipped the card is A3, but the I18 weakness remains, see I18). Counts: of the five latest-round findings (I18, I56, I45, I10, I25) plus levels and the pass group, I56, I25 and I10-as-recorded are answered, I18 partly, I45 not, levels partly. No em-dashes, addresses or adjectives found in the scan text I read."
      }
     ]
+   },
+   {
+    "round": 4,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "I18",
+      "severity": "note",
+      "finding": "Answered in the scan text, one residual point. The note now matches the page: the responsible-use page (fetched today) says the agent can push only to the existing pull request branch when triggered by mention, or otherwise to a new copilot/ branch, and the note says the credit rests on the workflow-approval gate plus the pull-request flow and that no sentence states which decisions the person must approve. The span 'require approval from a user with write access before they will run' is in the page and is 12 words (the earlier round counted 10; the count is of words only and 12 is under fifteen). Residual: the studio's round-three response says the note makes visible that removing I18 leaves Autonomy with no level; the note does not say that, and it does not say this is the same sentence credited to I38. Both are disclosures the response claims and the data does not carry. Not blocking: the credit is true and the weakness is named."
+     },
+     {
+      "answer": "I10",
+      "severity": "pass",
+      "finding": "Round-three should-fix answered by removal. I10 is no longer in answers. The new not_credited entry cites the MCP page, which is a key of captures, and its text is true to the pages: the MCP page opening passage covers every Copilot surface, and the responsible-use page says the cloud agent can receive information and context from MCP and from Teams, Linear, Slack and Jira. The card no longer claims Autonomy 4 in any configuration (scorer: A3, next unlock I10)."
+     },
+     {
+      "answer": "I23",
+      "severity": "note",
+      "finding": "Answered. The third not_credited entry is replaced by one about I25 only, so the read-only and one-branch facts are credited once (I23, I21) and no longer also listed as not credited. Span 'Copilot is read-only when a user has read access' (9 words) is exact in the page, as are the single-branch sentence and the secrets sentence. The weak fit remains and is recorded by the studio, not argued: Control 2 is worded as documented settings and scopes, and these are fixed rules. Control 2 still needs I38 and one of I23 or I25, so it rests on that reading plus the same workflow sentence as I18."
+     },
+     {
+      "answer": "I45",
+      "severity": "pass",
+      "finding": "Answered. The firewall page is now a key of captures (sha256 509dba20...) and the note matches it: firewall on by default, applies to processes started through the Bash tool and not directly to MCP server processes or setup steps, and 'should not be considered a comprehensive security solution' (8 words) is in the page. Span 'access to the internet is limited by a firewall' is 9 words and exact; mode default is right. The scorer does not count I45 toward the card (Control 4 also needs I27 and the lower Control levels are cumulative)."
+     },
+     {
+      "answer": "I56, not_credited, moved",
+      "severity": "pass",
+      "finding": "Answered. The moved field now stands alone and names the scanning tools. The CodeQL and commit-authorship entries match the responsible-use page. Every page cited by an answer note, a not_credited source or moved is a key of captures when compared URL by URL: the MCP page, the firewall page, the responsible-use page and llms.txt (HTTP 200 today)."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A3 R2 C2 O1 (scorer output today), the same in both configurations except Reach, which reads from I11 under the mcp configuration. Against level three: it is I08 (solid: the page says the agent can create branches, write code and open pull requests) plus I18, and I18's only span is the workflow-approval sentence that is also all of I38, which describes one gate on one action and not an agent that runs independently while the person approves critical decisions only; the page stating that would be needed for the indicator to be met in its own words. Against any level four: none is claimed, since I10, I12 and I13 are unanswered, and level four would also need a sentence that the person sets goals and reviews outcomes. Autonomy below level three would leave no level in the dimension (I15, I16, I07 unanswered), so the card exists only because of that one sentence. The studio disclosed this in its response, though not in the note itself. The card stands under the rule (level one or more in every shown dimension) with the weakness recorded."
+     },
+     {
+      "answer": "I04, I08, I11, I20, I21, I22, I27, I38, I41, S2, S3",
+      "severity": "pass",
+      "finding": "Re-verified against pages fetched today. The only changes to the scan since the round-three record are: I10 removed, I18 note reworded, two not_credited entries replaced or added, moved reworded and round-three responses added; all are covered above. Spans exact and under fifteen words: I08 sentence (14), I21 (8), I38 (12), I41 (11), I11 (9, the page continues that the configuration applies to the cloud agent and that the GitHub and Playwright servers are configured by default), S2 (11). I27 (signed, shown as Verified), I20 (codebase maintenance, feature development, prototyping), I22 and I04 match the responsible-use page. Note that the responsible-use capture hash in the scan now differs from the one cited in round three (captures change during the day); the scan's current captures key set is complete. No em-dashes, address characters or adjectives about the company found in the answers, not_credited, moved or responses."
+     }
+    ]
    }
   ],
   "note": "Published as an example on 10 November 2026, before the review workflow existed. Mapped by one agent. It goes through two rounds of review next.",
