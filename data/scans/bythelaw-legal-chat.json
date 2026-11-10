@@ -79,6 +79,78 @@
      }
     ]
    }
+  ],
+  "responses": [
+   {
+    "round": 1,
+    "answer": "I57",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "The like and dislike clause is removed from the note; the report-error part, span, grade and mode stay. A current help page (ferramentas-de-resposta, updated 21 October 2026) does list Like / Dislike, but the report-error button alone is the channel the indicator asks for."
+   },
+   {
+    "round": 1,
+    "answer": "I01",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "The word subscription is dropped; the note now says only what the cited help page says (an AI platform built for lawyers and legal teams, used as provided). No level change (R1 also has I09)."
+   },
+   {
+    "round": 1,
+    "answer": "I15",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept for the chat as shipped, with the note now saying it describes the chat and not the scheduled Citius reading. The Citius reads (terms 2.2 b, llms.txt schedule) are recorded in not_credited as not prompted by the person; they are read-only retrieval, so no I08 or I17 is credited, and the llms.txt 'fully autonomous' self-description is recorded as not credited for I19. A1 stands."
+   },
+   {
+    "round": 1,
+    "answer": "I39",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "The note now names the three plans (Free, Pro and Pro Teams) and says it is a release note of 21 December 2025. A current help page (prompts-gratuitos-e-limites, updated 20 August 2026) says stopping an answer midway counts as a used prompt, which is consistent with the button still being there; grade and mode unchanged."
+   },
+   {
+    "round": 1,
+    "answer": "I07",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Removed and recorded in not_credited: the page shows retrieval with a person checking, but not that the product recommends actions, and half an indicator is not credited as the whole. No level used it."
+   },
+   {
+    "round": 1,
+    "answer": "I46",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept: the Sources tab restricts which sources the assistant may consult in a project, a limit on what it reads that the user's own account sets; span, grade and mode are as the reviewer confirmed."
+   },
+   {
+    "round": 1,
+    "answer": "I36",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept as is: the privacy help page names the GDPR as the law under which personal data is processed; documented, tier declared."
+   },
+   {
+    "round": 1,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change to the reading: after these edits the card is still A1, R2, C1, O2. That C1 rests on the optional Citius configuration is as the reviewer describes and is carried by the cfg tags of I38 and I47."
+   },
+   {
+    "round": 1,
+    "answer": "S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept; the 'fully autonomous' wording of llms.txt is now recorded in not_credited against I19 and the scheduled Citius reading against I08 and I17, so the contrast with I15 is stated on the scan."
+   },
+   {
+    "round": 1,
+    "answer": "I09, I11, I20, I21, I22, I38, I47, I54, I58",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: all passed."
+   }
   ]
  },
  "assessment": {
@@ -100,15 +172,8 @@
  "answers": {
   "I01": {
    "e": "https://help.bythelaw.com/en/o-que-e-a-bythelaw/",
-   "n": "ByTheLaw supplies its own assistant, which lawyers use as provided through a subscription.",
+   "n": "ByTheLaw supplies its own assistant, which lawyers and legal teams use as provided.",
    "span": "ByTheLaw is an AI platform built for lawyers and legal teams",
-   "g": "documented",
-   "m": "default"
-  },
-  "I07": {
-   "e": "https://help.bythelaw.com/en/o-que-e-a-bythelaw/",
-   "n": "It answers legal questions from official sources with citations, which the lawyer checks before using.",
-   "span": "Ask legal questions in plain language and get answers grounded in official sources",
    "g": "documented",
    "m": "default"
   },
@@ -129,7 +194,7 @@
   },
   "I15": {
    "e": "https://help.bythelaw.com/en/escrever-o-primeiro-prompt/",
-   "n": "The lawyer writes each request and the assistant returns an answer to it.",
+   "n": "In the chat, the lawyer writes each request and the assistant returns an answer to it; this describes the chat, not the scheduled Citius reading of the optional integration.",
    "span": "ByTheLaw interprets the request and returns an answer grounded in official sources.",
    "g": "documented",
    "m": "default"
@@ -173,7 +238,7 @@
   },
   "I39": {
    "e": "https://help.bythelaw.com/novidades/soft-law-financeira-e-controlo-das-respostas/",
-   "n": "A stop button lets the user interrupt an answer while it is being generated, on all plans.",
+   "n": "A release note of 21 December 2025 announces a stop button that interrupts an answer while it is generated, on the Free, Pro and Pro Teams plans.",
    "span": "Pode interromper a resposta do chatbot a qualquer momento.",
    "g": "documented",
    "m": "default"
@@ -204,7 +269,7 @@
   },
   "I57": {
    "e": "https://help.bythelaw.com/novidades/pesquisa-web-para-todos-e-novo-perfil/",
-   "n": "A report-error button is available from the help icon and on failed messages; answers also carry like and dislike feedback.",
+   "n": "A report-error button is available as a popup over the help icon and on messages that failed.",
    "span": "O botão de reportar erro passa a estar disponível como popup flutuante",
    "g": "documented",
    "m": "default"
@@ -225,7 +290,23 @@
    "method": "probe"
   }
  },
- "not_credited": [],
+ "not_credited": [
+  {
+   "what": "The scheduled Citius reading (I08 executes actions itself; I17 routine tasks, person consulted on exceptions)",
+   "why": "In the Citius configuration ByTheLaw reads Citius automatically at a periodicity it chooses (terms 2.2 b; llms.txt names 11:00, 14:00 and 17:00 Lisbon time), so these reads are not prompted by the person. The terms limit it to consulting and reading with no procedural acts (2.3), and an unread notification is opened only after the user's express action (2.4): automated retrieval, not an action executed for the user, so I08 and I17 are not credited and I15 is read for the chat only.",
+   "source": "https://app.bythelaw.com/pt/termos-citius"
+  },
+  {
+   "what": "The self-description as fully autonomous (I19)",
+   "why": "llms.txt calls the product a fully autonomous Legal AI; a self-description with no described independent actions is not evidence of autonomy, and the actions the same file describes for this product are read-only Citius checks.",
+   "source": "https://bythelaw.com/llms.txt"
+  },
+  {
+   "what": "It recommends actions (I07)",
+   "why": "The help page shows retrieval (answers grounded in official sources, with citations the lawyer verifies before a filing) but no recommendation of actions; half of the indicator is not credited as the whole.",
+   "source": "https://help.bythelaw.com/en/o-que-e-a-bythelaw/"
+  }
+ ],
  "announced": [
   {
    "what": "International expansion beyond Portugal is planned.",
@@ -270,59 +351,59 @@
  ],
  "captures": {
   "https://app.bythelaw.com/pt/termos-citius": {
-   "sha256": "2dcf608cd5e8944b50d53007ae9e286ac821ef86f242ad91a8e120b7971c442d",
+   "sha256": "7bc7739c28f7c8af321cb879bd6752d27c0b24f368b45f3c5c2f3b4f24a2868c",
    "bytes": 55476,
-   "read_at": "2026-11-10T10:44Z"
+   "read_at": "2026-11-10T14:46Z"
   },
   "https://bythelaw.com/en/": {
    "sha256": "c044619bc45781f2ca77896aa771734e09f51236df5bb4e00b6eaab9696e9f8e",
    "bytes": 91724,
-   "read_at": "2026-11-10T10:44Z"
+   "read_at": "2026-11-10T14:46Z"
   },
   "https://bythelaw.com/llms.txt": {
    "sha256": "8d558d4149240db06e57369e23da302a7e5ae99476ab4ba809aa6595ff557451",
    "bytes": 4557,
-   "read_at": "2026-11-10T10:44Z"
+   "read_at": "2026-11-10T14:46Z"
   },
   "https://help.bythelaw.com/en/escolher-as-fontes-de-um-projeto/": {
    "sha256": "65b55689e0a9d696585097139513224ad46a0e3a63231773d83f802a4be4e920",
    "bytes": 38162,
-   "read_at": "2026-11-10T10:44Z"
+   "read_at": "2026-11-10T14:46Z"
   },
   "https://help.bythelaw.com/en/escrever-o-primeiro-prompt/": {
    "sha256": "d975dcaa530f859f27b4503536d6d28dee7c7995bb032c3cb45ef99136632623",
    "bytes": 38633,
-   "read_at": "2026-11-10T10:44Z"
+   "read_at": "2026-11-10T14:46Z"
   },
   "https://help.bythelaw.com/en/fontes-oficiais/": {
    "sha256": "ba9211ba0a9d771ebcdacc40aea1ad6431031b33c081c1b999b5b79085366974",
    "bytes": 41833,
-   "read_at": "2026-11-10T10:44Z"
+   "read_at": "2026-11-10T14:46Z"
   },
   "https://help.bythelaw.com/en/formatos-limites-e-ocr/": {
    "sha256": "1ce90174b97b213cde9226f1871ea348ed620d3c4514a466800b856478cb571d",
    "bytes": 38031,
-   "read_at": "2026-11-10T10:44Z"
+   "read_at": "2026-11-10T14:46Z"
   },
   "https://help.bythelaw.com/en/o-que-e-a-bythelaw/": {
    "sha256": "089820ad43c181f54710ab2cb1db81234bc448d4b5c16909a40f41aac9e7ae54",
    "bytes": 38168,
-   "read_at": "2026-11-10T10:44Z"
+   "read_at": "2026-11-10T14:46Z"
   },
   "https://help.bythelaw.com/en/privacidade-e-dados/": {
-   "sha256": "556e8c8ce695bb828455fa0975337eb83cba28c5f59f8035fc7bfa3d28d0dddb",
+   "sha256": "442260ab4ea43824c738495305bf1dbba0c6c9cacb85de6dcc6dc2d9592ada58",
    "bytes": 38874,
-   "read_at": "2026-11-10T10:44Z"
+   "read_at": "2026-11-10T14:46Z"
   },
   "https://help.bythelaw.com/novidades/pesquisa-web-para-todos-e-novo-perfil/": {
    "sha256": "2ffd847d4ec836ab52db9d73cef42e9232bd26e3fa7329217ab8782819cf0aa1",
    "bytes": 19818,
-   "read_at": "2026-11-10T10:44Z"
+   "read_at": "2026-11-10T14:46Z"
   },
   "https://help.bythelaw.com/novidades/soft-law-financeira-e-controlo-das-respostas/": {
    "sha256": "f54b4fede4d617257f22eb7b58e73253d5596a83cbc11c0e9521eb046e6582ba",
    "bytes": 19994,
-   "read_at": "2026-11-10T10:44Z"
+   "read_at": "2026-11-10T14:46Z"
   }
  }
 }
