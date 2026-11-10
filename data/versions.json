@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.47",
+    "date": "2026-11-10",
+    "what": "the first five Portuguese drafts: Codacy, Spinnable, OutSystems, Noxus, Ethiack",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "7179b3624"
+  },
+  {
     "version": "v0.0.46",
     "date": "2026-11-10",
     "what": "correct the times of today's log and request lines",
