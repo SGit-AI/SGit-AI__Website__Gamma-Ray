@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.53",
+    "date": "2026-11-10",
+    "what": "report prose for Visor.ai, Talkdesk, Granter, ByTheLaw and Automaise; claim notes for all fifteen companies",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "5f94fa6af"
+  },
+  {
     "version": "v0.0.52",
     "date": "2026-11-10",
     "what": "report prose for Codacy, Spinnable, OutSystems, Noxus and Ethiack",
