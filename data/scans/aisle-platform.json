@@ -154,6 +154,34 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "I20 span and I26 source fixed as asked; S4 added lifts Reach (see scoring), Autonomy, Control and Openness unchanged."
+   },
+   {
+    "round": 2,
+    "answer": "S4",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "The 404 sentence is dropped: the announcement post answered 200 when fetched on 10 November 2026 (raw/ans-007.html, published 9 November 2026), so it is now the source, with a 12-word span verified on it and a note limited to what it says (read-only, five tools, OAuth or a personal access token); it must be re-captured with tools/capture.mjs before publication. Grade documented, mode available, cfg mcp unchanged; no level changes."
+   },
+   {
+    "round": 2,
+    "answer": "not_credited",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "The duplicate entry is removed and the remaining entry names OpenSSL only, the one advisory source the scan holds; the mock-up entry is unchanged."
+   },
+   {
+    "round": 2,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Conceded in part: I18's span is moved from the marketing line to the firmer page statement 'Nothing reaches your main branch until someone on your team merges it.' (12 words, exact on the remediation page fetched 10 November 2026), the note now says the customer chooses how far AISLE goes, and I18 stays mode available, so A4 must always be shown with the available flag and read from vendor statements. I08 and I10 are kept: each is a dated documentation statement of what the indicator names (it runs the patch against tests and opens a pull request; it plugs into scanners, repositories and CI), which a Spectrum card counts at grade documented; nothing on the card is observed or measured, and the display should say so."
+   },
+   {
+    "round": 2,
+    "answer": "I20, I26, I18, S1, I41, I04, I08, I10, I11, I21, I22, I38, I57, I58, I67, I68",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change beyond the I18 span and note above; passed by the reviewer."
    }
   ]
  },
@@ -205,8 +233,8 @@
   },
   "I18": {
    "e": "https://aisle.com/platform/autonomous-remediation",
-   "n": "The page states AISLE writes and tests a patch and opens a pull request, and the customer reviews and merges. The triage page says the customer chooses, per severity and repository, whether it stops at triage or goes on to a PR; no default is stated.",
-   "span": "All you do is review and merge.",
+   "n": "The page states AISLE writes and tests a patch and opens a pull request, that the customer decides per severity and repository how far it goes, and that a person on the customer's team merges; no default is stated.",
+   "span": "Nothing reaches your main branch until someone on your team merges it.",
    "g": "documented",
    "m": "available",
    "cfg": "pull-requests"
@@ -289,9 +317,9 @@
    "m": "default"
   },
   "S4": {
-   "e": "https://aisle.com/blog/aisle-october-rollout",
-   "n": "AISLE's October rollout post states it offers an AISLE MCP server that customers' AI coding agents, such as Claude Code and Cursor, connect to and read open issues from; the separate announcement post (aisle.com/blog/announcing-the-aisle-mcp-server, captured earlier) describes it as read-only with five tools and returned 404 on 10 November 2026.",
-   "span": "Developers can connect AISLE to AI agents that support the Model Context Protocol",
+   "e": "https://aisle.com/blog/announcing-the-aisle-mcp-server",
+   "n": "AISLE's announcement post, published 9 November 2026, states its MCP server gives a customer's coding agent, such as Claude Code, OpenAI Codex or Cursor, read-only access to AISLE findings through five tools, with sign-in by OAuth or a personal access token.",
+   "span": "Simply connect AISLE to an AI agent that supports the MCP standard",
    "g": "documented",
    "m": "available",
    "cfg": "mcp"
@@ -299,12 +327,7 @@
  },
  "not_credited": [
   {
-   "what": "OpenSSL, curl and Samba advisories credit vulnerabilities to researchers of Aisle Research.",
-   "why": "The credits name people, so they show AISLE's team at work, not the agent acting on its own.",
-   "source": "https://openssl-library.org/news/vulnerabilities/index.html"
-  },
-  {
-   "what": "OpenSSL, curl and Samba advisories credit vulnerabilities to researchers of Aisle Research.",
+   "what": "OpenSSL advisories credit vulnerabilities to researchers of Aisle Research.",
    "why": "The credits name people, so they show AISLE's team at work, not the agent acting on its own.",
    "source": "https://openssl-library.org/news/vulnerabilities/index.html"
   },
@@ -362,59 +385,59 @@
  ],
  "captures": {
   "https://aisle.com/": {
-   "sha256": "848f8db2f71c80edc24b7abf5c213fae9ae79e8ce0c01ccd027d194f044352f9",
-   "bytes": 319177,
-   "read_at": "2026-11-10T12:47Z"
+   "sha256": "b44da331375d21e2606a8216c8d2d9eba7d517f25ec0f04025358fb97aa8d44c",
+   "bytes": 319247,
+   "read_at": "2026-11-10T15:46Z"
   },
-  "https://aisle.com/blog/aisle-october-rollout": {
-   "sha256": "71974fcd911a9ebf6b882868bd3f594f787b08038a0f8a5798d9b9053613f6b7",
-   "bytes": 233308,
-   "read_at": "2026-11-10T12:47Z"
+  "https://aisle.com/blog/announcing-the-aisle-mcp-server": {
+   "sha256": "8fba9a52b1dcaf4c66a4755221ebdc501fd49ef6d553c4367907f29e8ac685ea",
+   "bytes": 217903,
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://aisle.com/customers/openssl": {
-   "sha256": "fee353514086bdabe947594230fcfccddbddf58fd1467fdf64b2bb352fdd9604",
+   "sha256": "eb1462934ed8c67fddb3108da55f4d8fbcc3c50df0f79149c738c757b86c5685",
    "bytes": 216195,
-   "read_at": "2026-11-10T12:47Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://aisle.com/customers/productboard": {
-   "sha256": "e1aa951fd045202c68a13f1e2aaf3626c396fb801d5eaa4aaac7e5a705df549d",
-   "bytes": 199585,
-   "read_at": "2026-11-10T12:47Z"
+   "sha256": "b90ab4d495f89124d96db51e737fed6edfbc843b1b2955ad6e0ce00c6753d3f5",
+   "bytes": 199629,
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://aisle.com/deployment/managed-saas": {
-   "sha256": "7a9b6a3e62391582d48334c967e0a3c612fce3f65d5e57b8ddf4e2b83fada86f",
+   "sha256": "3a90cd5d7867f1363d5181f4a4f090edfda4d3d9afc1ff6a4f033a32a4c59fd6",
    "bytes": 181971,
-   "read_at": "2026-11-10T12:47Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://aisle.com/enterprise": {
-   "sha256": "108ae2e4849f4306c59755035314d0b441970ba551d832fdfd81a622b223c0ce",
-   "bytes": 290151,
-   "read_at": "2026-11-10T12:47Z"
+   "sha256": "dff44af85ee363547e380dd9a82a6a09890bc2728391d4f20e649c7e04c84402",
+   "bytes": 290108,
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://aisle.com/platform": {
-   "sha256": "6aed356b77deb4bbeacb88fefadb571a14990f69934247d888adfd13837b5084",
-   "bytes": 563214,
-   "read_at": "2026-11-10T12:47Z"
+   "sha256": "9ede4e7781a0a527b9e0edc63a24c5d6842140e6f6a3f7d023f629bb60cd1c0d",
+   "bytes": 563172,
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://aisle.com/platform/autonomous-remediation": {
-   "sha256": "b989d6051a9cb9a74f272f970e566460670b47ea8c9341af66a2a75d2b5b5825",
+   "sha256": "781c682dd9303d6b4db0b7c0a97bd8d512ecf0c9daf0e5965ac9dac1944d0d5e",
    "bytes": 228621,
-   "read_at": "2026-11-10T12:47Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://aisle.com/platform/vulnerability-discovery": {
-   "sha256": "dcfe4a79448567eeffc287f5b1ccd54caa3bda7ed8a0630eb7898913e62db255",
+   "sha256": "56f5b867d7f837df8cdb2f72dc939a58f9545c5908666865401c2306dc1f00ef",
    "bytes": 281630,
-   "read_at": "2026-11-10T12:47Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://aisle.com/platform/vulnerability-triage": {
-   "sha256": "3e6b9fe2b5ce94a497d975ad0406fc57ec9427cf218caa742bb69a072ed72a51",
+   "sha256": "2c835b20038c8e24328809b48533630b6445c22ff1581585eaf2c739bae85a48",
    "bytes": 213445,
-   "read_at": "2026-11-10T12:47Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://aisle.com/privacy-policy": {
-   "sha256": "937e6690d894f36021457775019f45dac76c45124e107711afe11833ed11256e",
-   "bytes": 154606,
-   "read_at": "2026-11-10T12:47Z"
+   "sha256": "13cbb99908547db4f87b1debbba7e3511764524bc0e9286bffcdf4e8a493bd57",
+   "bytes": 154731,
+   "read_at": "2026-11-10T15:46Z"
   }
  }
 }
