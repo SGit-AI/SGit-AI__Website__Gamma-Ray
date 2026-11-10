@@ -305,5 +305,93 @@
    "bytes": 34202,
    "read_at": "2026-11-10T03:32Z"
   }
+ },
+ "review": {
+  "status": "round-1",
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "levels",
+      "severity": "should-fix",
+      "finding": "Autonomy 4 (A4) rests on I08, I18 and I10 or I12, all graded self-reported, and I18 is the single point: remove I18 and the Autonomy ladder falls to 0 (no I15, I16 or I07 answer exists). I18 reads 'The agent works independently; the person approves critical decisions only', but the cited page (team/publisher.html) says the publisher 'publishes what the lead has accepted' and that it must 'Never publish a story or a panel the lead has not accepted by message'. That is a person approving each story, which is closer to a person approving each step than to approval of critical decisions only; the same page also says dev pushes and releases are made by the agent after its own check, with no host rule requiring review. The note answers 'it does not decide', which is not the indicator. Level four (Orchestrates) additionally needs I10 or I12: I12 rests on a vault-mediated hand-off with a ChatGPT agent that the publisher checks, not one that it directs; I10 is a list of three places (repository, vault, live site). Both are statements by the operator about itself in a document dated 26 September 2026 (validity line: 'as at 26 September 2026'), six weeks before the read. Recommend the second round weigh A3 or A4 against the weakest fact (I18) and consider whether I18 should be credited at all."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card: A4 R2 C2 O1 (computed). R2 rests on I10 or I11 (both supported by the page: code host and vault host; the vault host is a separate service, zero-knowledge). C2 rests on I38 plus I23 (see C notes). O1 rests on I20 plus I56. C3 is blocked (I39, I43 not answered), so I45 and I27 do not lift Control to 4 even though both are answered; the cumulative ladder is applied correctly. The card meets the publish rule (level one or more in every dimension, in fact four dimensions with levels)."
+     },
+     {
+      "answer": "I38",
+      "severity": "should-fix",
+      "finding": "I38 'High-impact actions need a person's approval'. The page supports approval only for stories ('Only what the lead has accepted by message goes into a story'). It also says 'everything else on the site is the agent's own work under the rules', and a push to dev is the live site with no approval and no branch rule. The note says 'goes into a story', which is honest, but the credit to I38 (Control 1 and 2) rests on stories only; remove I38 and Control falls to 1 (I47). Say in the note that the approval covers stories and not releases of site changes."
+     },
+     {
+      "answer": "I23",
+      "severity": "should-fix",
+      "finding": "I23 is needs: operation and is graded self-reported, yet it carries Control 2 on the card. Scope allows the Spectrum reading ('documented permission scopes, roles or tool lists count'), and the page does list 17 rows, so the credit is defensible on the public layer; but CLAUDE.md says an operation fact counts only when observed or measured, and the scan's own moved entry applies that to I41. Be consistent: either grade I23 documented (the operator publishes the grant at team/publisher.html and publisher.json) and say the public reading is used, or state in the note that the Spectrum reading is applied and the governance rating does not credit it."
+     },
+     {
+      "answer": "S1",
+      "severity": "should-fix",
+      "finding": "S1 note says 'The public version index lists every release the agent published.' The index (versions/index.json, 155 releases, 35 marked reconstructed, from 2026-06-29 to 2026-11-04) lists releases of the site and does not name the agent as their author; releases before this deployment, and the reconstructed ones carried from an earlier vault, are not the publisher's. The indicator wants a named customer or usage figures for what the agent does on its own. A count of release records is usage figure at best for the site, not attributed to the agent. Reword: the index lists N releases of the site, of which the agent's policy dates its own releases from 26 September (v1.34.19 and v1.34.20 are named on the page as shipped by it), and reconsider the grade. Also method 'probe' is not described: say that the probe is an HTTP GET of the file, the status 200 and the count of releases. S1 earns only the In production badge, not a level."
+     },
+     {
+      "answer": "S3",
+      "severity": "pass",
+      "finding": "S3 llms.txt: fetched, resolves (200, 75591 bytes, hash equals the capture). llms.txt states 'Each is a plain HTML document at its own URL, with a markdown twin at the same path.' I fetched team/publisher.md, team/index.md, agents/index.md and versions.md: all 200. The note's claim 'a markdown twin of every page' rests on llms.txt's statement and four spot checks, not on every page; soften to 'says it has' or list the checked twins. Method 'probe' is reproducible by a GET. Grade observed is right for the llms.txt; the twin claim is documented."
+     },
+     {
+      "answer": "I56",
+      "severity": "should-fix",
+      "finding": "I56 'It tells the people it talks to that it is an AI'. Note 'The site says which agents make it.' The team page says 'This site is made by one person and two agents' and agents/ says the site 'is kept by one person and their agents'. That discloses authorship, but neither page says the agent tells the people it talks to that it is an AI in a conversation (the mailbox replies come from a shared address; the agents page says nothing is answered by an agent without a draft a person can see). Openness 1 rests on I20 plus I56; this is the weakest fact there. Not evidenced rather than no: the answer may stand as a site-level disclosure if the note says so, or I22 or I58 should be sought."
+     },
+     {
+      "answer": "I32",
+      "severity": "should-fix",
+      "finding": "I32 'A named executive or body is accountable'. Note: 'The lead is the accountable person.' The word accountable does not appear on team/. The page says the lead 'Decides' the cast, publication and keys, and is named (Dinis Cruz, co-founder). Decision rights are supported, accountability is the scan's inference. Reword the note to what the page says, or cite the page that says accountable. Not used in any level."
+     },
+     {
+      "answer": "I61",
+      "severity": "should-fix",
+      "finding": "I61 'The models and third-party components it uses are listed'. Note: 'The runtime is named.' The page names the platform (Claude Code on the web) and lists tools (node, python, sgit, Chromium through Playwright) but no model name or version appears (searched for opus, sonnet, haiku, model). The runtime named is a thin credit for a list of models and components. Not used in a level (O2 needs two of I22, I58, I61)."
+     },
+     {
+      "answer": "I12",
+      "severity": "pass",
+      "finding": "I12: team/ says 'one person and two agents' and describes a ChatGPT studio and a Claude Code publisher with the vault as the only channel; scope (own context and authority, pass work) is met. The second clause (the publisher checks what the studio delivers) is on publisher.html, not on team/, which is the cited source; cite publisher.html as well or in place. Minor."
+     },
+     {
+      "answer": "I41",
+      "severity": "should-fix",
+      "finding": "I41 (needs: operation, self-reported): correctly not credited, and the moved entry says so. But the moved entry cites no URL for the version record other than by name and the note names versions.html, which is a key of captures; fine. Note the page also says commits are signed with the session key and every vault commit is named in sgit history log, which is closer to the scope ('tool calls, commands or commits') than release notes; if evidence of that exists it is a different indicator grade question, not asserted here. The answer stays as a claim; no change needed to the level."
+     },
+     {
+      "answer": "I04,I08,I10,I11,I20,I21,I27,I29,I30,I34,I45,I47,I49",
+      "severity": "pass",
+      "finding": "Each is said by the cited source at the cited page: I04 (Claude Code on the web, managed container, root in the container), I08 (publishes a patch release on dev, which deploys), I10 and I11 (repository, vault, live site; code host and vault host), I20 (mandate: wanted, refused, unstated), I21 (skills and tools listed), I27 (lane identity with ECDSA signing key fingerprint on agents/), I29 (team page lists both agents; a list, not a registry, fine at declared tier), I30 (Owner: the lead), I34 (ABP is the policy; the page calls the mandate 'the first draft to argue with', say in the note that it is a draft policy in force on the deployment), I45 (mandatory egress proxy above the process; the note names what enforces it as the scope asks), I47 (prose limits, 'the grant does not know them'), I49 (4 excess, 3 unbounded matches section 04). Modes deployed are right for all. Grades self-reported are conservative: the operator's public page could be argued as documented, but self-reported is the honest reading for an operator describing itself. The answers carry no span field, so there is no quoted span to check (no span over fifteen words, none missing)."
+     },
+     {
+      "answer": "captures",
+      "severity": "should-fix",
+      "finding": "The scan's grant and mandate source, https://riskmandate.ai/team/publisher.json, is not a key of captures. I fetched it (200, 20351 bytes); its grant rows and mandate lists match the scan exactly. Add it to captures with its hash. The page's own source file site/team/publisher.json in the repository and the 'catalogue template measured on 5 September 2026' are cited by the page and not captured. All six captured sources match the live bytes and hashes today. No answer has a not_credited list; the moved entry cites no URL beyond names."
+     },
+     {
+      "answer": "grant",
+      "severity": "should-fix",
+      "finding": "Rows: all 17 rows exist in data/lens.json capabilities (23 listed), barriers are valid (none, setting, boundary), and each row, barrier and evidence tier equals the page and publisher.json. The grant is shown and not scored; the card does not read it. Two honesty issues. (a) create.schedule.host is graded measured, but the page says it comes from 'the template's probe of 5 September' on the catalogue template, not this deployment, and no evidence file is captured; lens defines measured as 'a probe run on an instance, dated, with an evidence file'. Grade it documented or inferred, or capture the file. (b) 'observed' means seen on the thing by the thing itself: the operator agent saw its own container on 26 September. No evidence file, transcript or probe output is in captures or cited, so a reader cannot reproduce it; say so in the profile or in the scan note. Also create.schedule.tenant is a boundary-less setting with 'Not created': listed as a grant row with self-reported evidence, which is honest. The barrier boundary on send.endpoint.allowed and authenticate-as.credential.tenant is per the page (a proxy, a scoped platform token), as the enforcer test says; both are the platform's, not independently verified. grant.statement is null: add a sentence that the grant is counted and shown, never scored."
+     },
+     {
+      "answer": "mandate",
+      "severity": "pass",
+      "finding": "Mandate label, authored date (2026-09-26), 13 wanted and 2 refused capabilities match the page and publisher.json; all are lens capabilities. The two unstated rows (read.record.history, create.schedule.host) are omitted from the scan, which is right. Excess 4 and unbounded 3 stated in I49 match the derivation (read.credential.host, grant.credential.self refused; read.record.history, create.schedule.host unstated). Mandate and grant are the operator's own statements, authored by the agent it binds, which the page says; the scan should keep saying that this is a scan of ourselves. No claim for RiskMandate beyond what the site says was found in the scan."
+     }
+    ]
+   }
+  ]
  }
 }
