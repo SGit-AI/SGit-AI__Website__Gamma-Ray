@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.111",
+    "date": "2026-11-10",
+    "what": "log",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "73ceb1b98"
+  },
+  {
     "version": "v0.0.110",
     "date": "2026-11-10",
     "what": "visor-ai-agents: round 2 answered (S1 and I47 re-spanned; I08 note; I20 conceded as healthcare-only)",
