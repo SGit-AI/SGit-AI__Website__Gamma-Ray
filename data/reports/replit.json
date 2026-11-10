@@ -1,0 +1,359 @@
+{
+ "id": "replit",
+ "name": "Replit",
+ "url": "https://replit.com",
+ "country": "United States",
+ "sector": "software development",
+ "read": "2026-11-10",
+ "basis": "Replit's own public pages (documentation, product, security, subprocessors, customers, newsroom, about) and, for founding facts only, Wikipedia",
+ "seen_by_subject": false,
+ "what": "Replit runs a cloud platform where people describe software in plain language and an AI agent writes, runs, tests and publishes it.",
+ "facts": [
+  {
+   "fact": "Founded in 2016 by Amjad Masad, Faris Masad and Haya Odeh",
+   "url": "https://en.wikipedia.org/wiki/Replit",
+   "span": "Replit was founded in 2016 by"
+  },
+  {
+   "fact": "Headquarters in Foster City, California",
+   "url": "https://en.wikipedia.org/wiki/Replit",
+   "span": "Foster City, California"
+  },
+  {
+   "fact": "Replit states builders at 86% of the Fortune 500 build on Replit",
+   "url": "https://replit.com/customers",
+   "span": "teams at 86% of the Fortune 500 build on Replit"
+  },
+  {
+   "fact": "Replit newswire (Nov 2026) states builders in 85% of the Fortune 500 use it",
+   "url": "https://replit.com/news",
+   "span": "used by builders in 85% of the Fortune 500 companies"
+  },
+  {
+   "fact": "Replit states millions of users, over 500,000 professional users",
+   "url": "https://replit.com/news/funding-announcement",
+   "span": "With millions of users worldwide and over 500,000 professional users"
+  },
+  {
+   "fact": "Funding round of $400 million led by Georgian, valuation $9 billion (Forbes, 11 Mar 2026, on Replit newsroom)",
+   "url": "https://replit.com/news/funding-announcement",
+   "span": "a new fundraising round of $400 million, led by VC firm Georgian"
+  },
+  {
+   "fact": "Earlier $250 million round (Forbes, 10 Sep 2025, listed on Replit newsroom)",
+   "url": "https://replit.com/news",
+   "span": "Replit Closes $250 Million in Funding to Build on Customer Momentum"
+  },
+  {
+   "fact": "Opened first Asia office in Tokyo (4 Nov 2026); London office Sep 2026",
+   "url": "https://replit.com/news",
+   "span": "Replit Opens First Asia Office in Tokyo Expanding Global Footprint"
+  },
+  {
+   "fact": "States SOC 2 Type 2 attestation",
+   "url": "https://docs.replit.com/teams/information-security/overview",
+   "span": "Replit has achieved SOC 2 Type 2 Attestation of Compliance"
+  }
+ ],
+ "people": [
+  {
+   "name": "Amjad Masad",
+   "role": "Co-Founder & CEO",
+   "url": "https://replit.com/about"
+  },
+  {
+   "name": "Haya Odeh",
+   "role": "Co-Founder, VP of Design",
+   "url": "https://replit.com/about"
+  },
+  {
+   "name": "Michele Catasta",
+   "role": "President",
+   "url": "https://replit.com/about"
+  },
+  {
+   "name": "Luis Héctor Chávez",
+   "role": "Chief Technology Officer",
+   "url": "https://replit.com/about"
+  },
+  {
+   "name": "Stacey La Torre",
+   "role": "Chief People Officer",
+   "url": "https://replit.com/about"
+  },
+  {
+   "name": "Michael Greenwald",
+   "role": "Chief Corporate Affairs Officer",
+   "url": "https://replit.com/about"
+  },
+  {
+   "name": "Scott Kennedy",
+   "role": "VP of Engineering",
+   "url": "https://replit.com/about"
+  },
+  {
+   "name": "Jordan Walke",
+   "role": "Head of Product",
+   "url": "https://replit.com/about"
+  },
+  {
+   "name": "Robert Kohse",
+   "role": "General Counsel",
+   "url": "https://replit.com/about"
+  },
+  {
+   "name": "Faris Masad",
+   "role": "Co-founder (per Wikipedia; not on the current leadership page)",
+   "url": "https://en.wikipedia.org/wiki/Replit"
+  }
+ ],
+ "solutions": [
+  {
+   "id": "replit-agent",
+   "name": "Replit Agent (Agent 4)",
+   "what": "Builds apps, designs, slides, data visualisations and files from plain language; writes code, sets up infrastructure, tests and publishes. Modes: Free, Power, Max, Auto (Enterprise: Auto).",
+   "status": "GA",
+   "url": "https://docs.replit.com/features/agent/overview",
+   "scan": "replit-agent",
+   "short": "Replit Agent"
+  },
+  {
+   "id": "general-agent",
+   "name": "General Agent",
+   "what": "Agent without a pre-selected artifact type: research, files, executes code, reads and writes connected services.",
+   "status": "GA",
+   "url": "https://docs.replit.com/features/agent/general-agent",
+   "short": "General Agent"
+  },
+  {
+   "id": "plan-mode",
+   "name": "Plan mode",
+   "what": "Agent plans without changing code or data; the user approves the task plan before building.",
+   "status": "GA",
+   "url": "https://docs.replit.com/features/agent/plan-mode",
+   "short": "Plan mode"
+  },
+  {
+   "id": "background-tasks",
+   "name": "Task system / background tasks and worker chats",
+   "what": "Agent tasks run in isolated copies of the project; Ready tasks are reviewed before being applied to main; a main chat can hand independent tasks to parallel worker chats.",
+   "status": "GA",
+   "url": "https://docs.replit.com/features/agent/task-lifecycle",
+   "short": "Background tasks"
+  },
+  {
+   "id": "app-testing",
+   "name": "App Testing",
+   "what": "Agent tests the app in a real browser, records a replay and fixes issues; user can take over for logins. Toggle in Power/Max.",
+   "status": "GA (Full Stack JavaScript and Streamlit web apps only)",
+   "url": "https://docs.replit.com/features/agent/app-testing",
+   "short": "App Testing"
+  },
+  {
+   "id": "routines",
+   "name": "Routines",
+   "what": "Scheduled recurring runs from a chat that use connected tools, create tasks and send messages; Power or Max only.",
+   "status": "GA",
+   "url": "https://docs.replit.com/chat/routines",
+   "short": "Routines"
+  },
+  {
+   "id": "connectors-mcp-client",
+   "name": "Connectors, custom connectors and MCP servers in Agent",
+   "what": "First-party connectors (BigQuery, Linear, Slack, Notion, etc.), curated third-party MCP servers, custom MCP servers and custom API connectors that Agent can read and write through.",
+   "status": "GA (Databricks/Snowflake Enterprise; Microsoft Fabric preview)",
+   "url": "https://docs.replit.com/features/integrations/overview",
+   "short": "Connectors and MCP in Agent"
+  },
+  {
+   "id": "replit-mcp-server",
+   "name": "Replit MCP Server (Replit in ChatGPT, Claude, Codex, any MCP client)",
+   "what": "Exposes Replit to other AI agents over MCP (Streamable HTTP, OAuth with protected-resource discovery) to create, inspect, update and publish Replit Apps.",
+   "status": "GA",
+   "url": "https://docs.replit.com/platforms/mcp-server",
+   "short": "Replit MCP Server"
+  },
+  {
+   "id": "replit-on-slack",
+   "name": "Replit on Slack",
+   "what": "Agent answers and works on projects from Slack mentions and DMs, using the linked user account permissions.",
+   "status": "GA",
+   "url": "https://docs.replit.com/features/platforms/slack",
+   "short": "Replit on Slack"
+  },
+  {
+   "id": "agent-skills",
+   "name": "Agent Skills, Skills directory and Agent Customization",
+   "what": "SKILL.md skills (project or workspace), Replit and partner skills, workspace custom instructions, replit.md.",
+   "status": "GA",
+   "url": "https://docs.replit.com/features/agent/skills",
+   "short": "Agent Skills"
+  },
+  {
+   "id": "security-agent",
+   "name": "Security Agent (Agent security scans) and Auto-Protect",
+   "what": "Agent-run source code security review with Semgrep and HoundDog.ai plus model analysis; accepted findings become Agent fix tasks. Auto-Protect creates Agent tasks for new dependency CVEs.",
+   "status": "GA (paid plans)",
+   "url": "https://docs.replit.com/features/security/agent-security-scans",
+   "short": "Security Agent"
+  },
+  {
+   "id": "monitoring-agent",
+   "name": "Monitoring Agent",
+   "what": "Investigates production alerts; with Auto-fix attempts fixes; with Auto-republish (experimental) publishes them.",
+   "status": "GA; Auto-republish experimental",
+   "url": "https://docs.replit.com/features/publishing/monitoring-agent",
+   "short": "Monitoring Agent"
+  },
+  {
+   "id": "performance-seo-agents",
+   "name": "Performance Agent, SEO Agent",
+   "what": "Listed in the docs feature index; pages not read for this dossier.",
+   "status": "listed in docs index (not read)",
+   "url": "https://docs.replit.com/features/publishing/performance-agent",
+   "short": "Performance and SEO Agents"
+  }
+ ],
+ "stories": [
+  {
+   "customer": "Plaid",
+   "what": "An operations manager built an SLA dashboard with Replit Agent in a hackathon; it is now in use as an internal dashboard. The time savings are the story's own estimates.",
+   "url": "https://replit.com/customers/plaid",
+   "span": "How Plaid Built a Production SLA Dashboard with Replit Agent",
+   "solution": "replit-agent"
+  },
+  {
+   "customer": "Rokt",
+   "what": "700+ employees built 135 internal applications in a 24-hour hackathon.",
+   "url": "https://replit.com/customers/rokt",
+   "span": "700+ employees globally built 135 fully functional applications"
+  },
+  {
+   "customer": "Leatherman Tool Group",
+   "what": "147 employees published 119+ apps since November 2024.",
+   "url": "https://replit.com/customers/leatherman",
+   "span": "Leatherman: 119 Apps From 147 Employees"
+  },
+  {
+   "customer": "Payouts.com",
+   "what": "A small team rebuilt its payments platform on Replit; processes tens of thousands of live transactions a month.",
+   "url": "https://replit.com/customers/payouts",
+   "span": "rebuilt on Replit with no traditional dev team"
+  },
+  {
+   "customer": "Musixmatch",
+   "what": "Adopted across about 120 people; merch tool from prototype to production in about two months.",
+   "url": "https://replit.com/customers/musixmatch",
+   "span": "Musixmatch adopted Replit across about 120 people"
+  },
+  {
+   "customer": "Zillow",
+   "what": "Forbes, reposted on Replit's newsroom, reports about 600 Replit seats at Zillow and more than 7,000 apps over a year.",
+   "url": "https://replit.com/news/funding-announcement",
+   "span": "Zillow has roughly 600 Replit seats for its employees"
+  }
+ ],
+ "analysis": [
+  "**The shape.** Replit Agent reads A4 · R2 · C2 · O0. Its power is documented in plain terms: Agent builds, runs, tests and publishes on its own, and with connectors it reads and writes to outside services such as BigQuery, Linear and Slack. Its controls are settings a person can see: background work waits for review by default, there is a button to halt it, and Enterprise admins choose the scopes builders can request.",
+  "**Why Openness reads \"not yet evidenced\".** Not for lack of documents. The rule for Documented is met three times over: the limits and failure cases are written down, the data Agent uses is described, and the model providers are listed. The Openness ladder is cumulative, and its first rung asks for one public statement that the agent tells the people it talks to that it is an AI. That one sentence would lift Openness to level 2 at once and move the stage from Building (8) to Scaling (10).",
+  "**Where the evidence is strongest.** The autonomy story is backed by a named customer: Plaid built an SLA dashboard with Replit Agent that is now in use. Replit also publishes an llms.txt for its documentation and a skills directory where partners publish skills for Agent, so other agents and other companies can build on it.",
+  "**What we saw and did not count.** Replit states a SOC 2 Type 2 attestation; without a public report or scope that covers Agent, it is shown and not counted. Two of Autonomy level 4's facts are available rather than default (connectors and automatic apply), and the card marks them so.",
+  "**For readers.** The customer pages tell a consistent story of people outside engineering building internal tools: Rokt's 700 staff building 135 apps in a day, Leatherman's 119 apps from 147 employees. Those are Replit's figures, on Replit's pages, and are reported here as such."
+ ],
+ "article": {
+  "title": "Replit Agent on the GAMMA-Ray Spectrum: A4 · R2 · C2 · O0",
+  "standfirst": "The first company report from the GAMMA-Ray studio reads Replit's agent from its public pages: it builds and publishes on its own, its controls are settings people can see, and one sentence stands between it and the next stage.",
+  "body": [
+   "Replit, an event partner at Web Summit Lisbon 2026, is the first company in the GAMMA-Ray report series. Its agent turns a description in plain language into a running app inside a Replit project. We read it only from public sources, captured and hashed every page on 10 November 2026, and let the published rules compute the card.",
+   "**Autonomy 4, Orchestrates.** Agent takes action rather than only answering. With connectors it reads and writes to outside services, and background tasks can be set to apply their own changes. A named customer, Plaid, built an internal SLA dashboard with it.",
+   "**Reach 2, Integrated.** Connectors and MCP servers link Agent to tools such as BigQuery, Linear and Slack. A published agent interface with documented authorisation would be the next rung.",
+   "**Control 2, Configurable.** Background work waits for a person's review by default; a stop button halts Agent; Enterprise admins set the scopes builders can request. A public page on monitoring Agent in operation would reach level 3.",
+   "**Openness: not yet evidenced, and close.** Replit documents Agent's limits, the data it uses and its model providers, which meets the rule for level 2. The first rung asks for a public statement that the agent tells people it is an AI. One sentence would move the whole card from Building to Scaling.",
+   "The card is beta and Replit has not seen it. Replit can claim it and add evidence; corrections are dated and carried to the card, the report and this article."
+  ],
+  "pt": {
+   "title": "O Replit Agent no GAMMA-Ray Spectrum: A4 · R2 · C2 · O0",
+   "standfirst": "O primeiro relatório do estúdio GAMMA-Ray lê o agente do Replit a partir das suas páginas públicas: constrói e publica sozinho, os controlos são definições visíveis, e uma frase separa-o da fase seguinte.",
+   "body": [
+    "O Replit, parceiro do Web Summit Lisboa 2026, é a primeira empresa da série de relatórios GAMMA-Ray. O seu agente transforma uma descrição em linguagem simples numa aplicação a funcionar. Lemos apenas fontes públicas, capturadas e com hash a 10 de novembro de 2026, e as regras publicadas calcularam o cartão.",
+    "**Autonomia 4.** O Agent age, não apenas responde; com conectores lê e escreve em serviços externos. Um cliente identificado, a Plaid, construiu com ele um painel interno de SLA. **Alcance 2.** Conectores e servidores MCP ligam-no a ferramentas como BigQuery, Linear e Slack. **Controlo 2.** O trabalho em segundo plano aguarda revisão por defeito, há um botão para o parar e os administradores Enterprise definem os âmbitos de acesso.",
+    "**Abertura: ainda sem evidência, e perto.** O Replit documenta os limites do Agent, os dados que usa e os fornecedores de modelos. O primeiro degrau pede uma declaração pública de que o agente diz às pessoas que é uma IA. Uma frase levaria o cartão de Building para Scaling.",
+    "O cartão é beta e o Replit ainda não o viu. Pode reclamá-lo e acrescentar evidência; as correções são datadas."
+   ]
+  }
+ },
+ "vault": {
+  "id": "micbbanr",
+  "read_key": "sgit_public_read_a835cecf0324b1147350caf9a8566f08f8c1c10df7eb007bd866eb156f228154:micbbanr",
+  "published": "2026-11-10"
+ },
+ "team": {
+  "researcher": "a sub-agent of gamma.studio@web-summit.dinis",
+  "assessor A": "a sub-agent, source-first",
+  "assessor B": "a sub-agent on a different model, indicator-first",
+  "challenger": "a sub-agent",
+  "scorer": "build/spectrum.mjs",
+  "analyst, designer, writer": "gamma.studio@web-summit.dinis",
+  "review": "gamma.review@web-summit.dinis (pending)",
+  "sign-off": "gamma.approve@web-summit.dinis (pending)"
+ },
+ "signoff": null,
+ "corrections": [],
+ "captures": {
+  "https://docs.replit.com/teams/information-security/overview": {
+   "sha256": "11f1ecd0a4fc3816980c98c4440525f96997661ced18dec7a27a4b9ba6f857bd",
+   "bytes": 207246,
+   "read_at": "2026-11-10T04:21Z"
+  },
+  "https://en.wikipedia.org/wiki/Replit": {
+   "sha256": "bb945a741529820a4537d2eaac0484727e0d91018aa49a3d094a31a91d623961",
+   "bytes": 157638,
+   "read_at": "2026-11-10T04:21Z"
+  },
+  "https://replit.com/about": {
+   "sha256": "583a3b3f37782d9454e1528a28ecc27c634928e5643a4535c242090d42ffb362",
+   "bytes": 197784,
+   "read_at": "2026-11-10T04:21Z"
+  },
+  "https://replit.com/customers": {
+   "sha256": "1b201e019e7fa43d97f3bfb92b923b75addd8f01c7c07eabb0c521dea78a17e7",
+   "bytes": 49725,
+   "read_at": "2026-11-10T04:21Z"
+  },
+  "https://replit.com/customers/leatherman": {
+   "sha256": "dcecb9e86d11fbc29b959105ebd0cae2a647a54ad272b42a5b6b5ed65868c354",
+   "bytes": 28166,
+   "read_at": "2026-11-10T04:21Z"
+  },
+  "https://replit.com/customers/musixmatch": {
+   "sha256": "1ca29048d44d1f16ad9c977af40a464198e3daae9e18bc7ace2f6e31bf378bcf",
+   "bytes": 30138,
+   "read_at": "2026-11-10T04:21Z"
+  },
+  "https://replit.com/customers/payouts": {
+   "sha256": "ea43865c4b15dbad55cc9fd4f91dc7b094d8c1e66703267ffad3238d4a479c19",
+   "bytes": 26693,
+   "read_at": "2026-11-10T04:21Z"
+  },
+  "https://replit.com/customers/plaid": {
+   "sha256": "e86a15bab48e57daeb40a29861a8390fe4b2af5e29622b63517023bb979cd2b5",
+   "bytes": 21516,
+   "read_at": "2026-11-10T04:21Z"
+  },
+  "https://replit.com/customers/rokt": {
+   "sha256": "969b406cd7a30b471201c3eb245c0ce3f92fd21e5797b0d49e9153880ac62669",
+   "bytes": 20643,
+   "read_at": "2026-11-10T04:21Z"
+  },
+  "https://replit.com/news": {
+   "sha256": "c05cbc6d2030fe20ee7b89ca0c61352b025fc560f36c746cd3d8a8549ce695d4",
+   "bytes": 116405,
+   "read_at": "2026-11-10T04:21Z"
+  },
+  "https://replit.com/news/funding-announcement": {
+   "sha256": "bab2f16819ac17557bee9ac7127c6422552b84f741017692d56a8b18ceddff3b",
+   "bytes": 110099,
+   "read_at": "2026-11-10T04:21Z"
+  }
+ }
+}

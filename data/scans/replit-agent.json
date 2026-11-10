@@ -1,0 +1,465 @@
+{
+ "id": "replit-agent",
+ "name": "Replit Agent",
+ "operator": "Replit (the vendor); each customer is the operator of its own use",
+ "company": "replit",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-10",
+ "tier": "public",
+ "basis": "Replit's own public documentation, product, security, subprocessor and customer pages, and its published llms.txt",
+ "seen_by_operator": null,
+ "what": "Replit's AI agent that builds, runs, tests and publishes software from a description in plain language, inside a Replit project.",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: two assessors working blind, a challenger, then the scorer.",
+ "grant": null,
+ "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
+ "vault": {
+  "id": "micbbanr",
+  "read_key": "sgit_public_read_a835cecf0324b1147350caf9a8566f08f8c1c10df7eb007bd866eb156f228154:micbbanr",
+  "published": "2026-11-10"
+ },
+ "review": {
+  "status": "draft",
+  "rounds": []
+ },
+ "assessment": {
+  "by": "gamma.studio@web-summit.dinis",
+  "researcher": "researcher (a sub-agent of gamma.studio)",
+  "assessors": [
+   "assessor-a (source-first)",
+   "assessor-b (indicator-first, a different model)"
+  ],
+  "blind": true,
+  "agreed": 25,
+  "a_only": 10,
+  "b_only": 0,
+  "challenger": "challenger (a sub-agent of gamma.studio)",
+  "lowered": [
+   "I12",
+   "I63"
+  ],
+  "accepted_from_one_assessor": [
+   "I01",
+   "I07",
+   "I09",
+   "I46",
+   "I68"
+  ],
+  "rejected_from_one_assessor": [
+   "I44",
+   "I48",
+   "I53",
+   "I62",
+   "I65"
+  ],
+  "fixed": [
+   "I18",
+   "I38",
+   "I61",
+   "S1",
+   "I17",
+   "I19"
+  ],
+  "files": "in the vault: work/assessor-a.json, work/assessor-b.json, work/challenger.json"
+ },
+ "answers": {
+  "I01": {
+   "e": "https://docs.replit.com/help/agent-and-ai",
+   "n": "The help page states the model behind Agent runs on Replit's infrastructure and cannot be replaced by the user.",
+   "span": "The model that powers the Agent experience itself runs on Replit's infrastructure",
+   "g": "documented",
+   "m": "default",
+   "agree": "a, accepted by the challenger"
+  },
+  "I04": {
+   "e": "https://docs.replit.com/features/agent/general-agent",
+   "n": "The General Agent page states Agent executes code as part of its work and sets up its own environment.",
+   "span": "execute code as part of its reasoning",
+   "g": "documented",
+   "m": "default",
+   "agree": "both"
+  },
+  "I07": {
+   "e": "https://docs.replit.com/features/agent/plan-mode",
+   "n": "In Plan mode Agent brainstorms and plans without changing code or data; the person then chooses to build.",
+   "span": "ask questions without modifying your project's code or data",
+   "g": "documented",
+   "m": "available",
+   "cfg": "plan-mode",
+   "agree": "a, accepted by the challenger"
+  },
+  "I08": {
+   "e": "https://docs.replit.com/features/agent/overview",
+   "n": "The overview states Agent takes actions such as setting up projects and fixing problems.",
+   "span": "Unlike a chatbot that only answers questions, Agent takes action",
+   "g": "documented",
+   "m": "default",
+   "agree": "both"
+  },
+  "I09": {
+   "e": "https://docs.replit.com/features/agent/general-agent",
+   "n": "The General Agent FAQ states each chat is contained within a single project.",
+   "span": "Each chat is contained within a single project.",
+   "g": "documented",
+   "m": "default",
+   "agree": "a, accepted by the challenger"
+  },
+  "I10": {
+   "e": "https://docs.replit.com/features/agent/general-agent",
+   "n": "With connectors added, Agent reads and writes to several external services such as BigQuery, Linear, Slack and Notion.",
+   "span": "Read and write to external services like BigQuery, Linear, Slack, Notion",
+   "g": "documented",
+   "m": "available",
+   "cfg": "connectors",
+   "agree": "both"
+  },
+  "I11": {
+   "e": "https://docs.replit.com/features/mcp/overview",
+   "n": "The MCP list states Agent connects to external tools and data sources through MCP servers the user installs.",
+   "span": "Replit Agent connects to external tools and data sources through the",
+   "g": "documented",
+   "m": "available",
+   "cfg": "connectors",
+   "agree": "both"
+  },
+  "I17": {
+   "e": "https://docs.replit.com/features/agent/app-testing",
+   "n": "With App Testing on, Agent tests the app on its own and hands over to the person at a roadblock such as a login.",
+   "span": "the Agent will pop up with a button to",
+   "g": "documented",
+   "m": "available",
+   "cfg": "app-testing",
+   "agree": "both"
+  },
+  "I18": {
+   "e": "https://docs.replit.com/features/agent/overview",
+   "n": "Agent builds on its own; the person refines through chat and decides when to publish. In plan mode the person approves the plan before Agent builds.",
+   "span": "Chat with Agent to refine your project, then publish when you're ready.",
+   "g": "documented",
+   "m": "default",
+   "agree": "both"
+  },
+  "I19": {
+   "e": "https://docs.replit.com/features/agent/plan-mode",
+   "n": "Background tasks wait for review by default; the person can switch on automatic apply of their changes.",
+   "span": "You can enable Automatically apply changes in the background build options.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "auto-apply",
+   "agree": "both"
+  },
+  "I20": {
+   "e": "https://docs.replit.com/features/agent/overview",
+   "n": "The overview states what Agent is for: turning plain-language ideas into apps, designs, slides and other outputs.",
+   "span": "Replit Agent turns your ideas into apps, designs, slides, and more",
+   "g": "documented",
+   "m": "default",
+   "agree": "both"
+  },
+  "I21": {
+   "e": "https://docs.replit.com/features/agent/general-agent",
+   "n": "The page defines that Agent reaches external tools only through connectors the user adds and has no access by default.",
+   "span": "Agent can read and write to them, but it doesn't have access by default",
+   "g": "documented",
+   "m": "default",
+   "agree": "both"
+  },
+  "I22": {
+   "e": "https://docs.replit.com/help/agent-and-ai",
+   "n": "The help page documents known failure cases such as Agent freezing, looping and adding unrequested features, with what to do.",
+   "span": "Agent is looping or repeating the same steps",
+   "g": "documented",
+   "m": "default",
+   "agree": "both"
+  },
+  "I25": {
+   "e": "https://docs.replit.com/features/integrations/overview",
+   "n": "On Enterprise an organisation can bring its own OAuth app and set the exact scopes builders can request for a connector.",
+   "span": "control the exact scopes your builders can request",
+   "g": "documented",
+   "m": "available",
+   "cfg": "enterprise",
+   "agree": "both"
+  },
+  "I38": {
+   "e": "https://docs.replit.com/features/agent/task-lifecycle",
+   "n": "Changes made by background tasks are held for the person to review before they are applied to the main version.",
+   "span": "Review the task's work log, test results, and preview before applying changes.",
+   "g": "documented",
+   "m": "default",
+   "agree": "both"
+  },
+  "I39": {
+   "e": "https://docs.replit.com/help/agent-and-ai",
+   "n": "The help page states the person can select Stop in the Agent panel to halt Agent immediately.",
+   "span": "in the Agent panel to halt it immediately",
+   "g": "documented",
+   "m": "default",
+   "agree": "both"
+  },
+  "I41": {
+   "e": "https://docs.replit.com/features/version-control/checkpoints-and-rollbacks",
+   "n": "Each checkpoint Agent makes creates a Git commit, a record of what it changed. Documented, so it does not count where an operation fact must be observed.",
+   "span": "Each checkpoint creates a corresponding Git commit",
+   "g": "documented",
+   "m": "default",
+   "agree": "both"
+  },
+  "I46": {
+   "e": "https://docs.replit.com/features/agent/agent-modes",
+   "n": "Agent settings such as auto-merge for background tasks and auto-approve for plans are the user's own settings.",
+   "span": "Your Agent settings are tied to you, not to the project.",
+   "g": "documented",
+   "m": "default",
+   "agree": "a, accepted by the challenger"
+  },
+  "I47": {
+   "e": "https://docs.replit.com/features/agent/agent-customization",
+   "n": "Workspace custom instructions are guidance in prose that Agent is guided to follow, without a guarantee.",
+   "span": "Agent is guided to follow them, but strict requirements aren't guaranteed.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "custom-instructions",
+   "agree": "both"
+  },
+  "I51": {
+   "e": "https://replit.com/security",
+   "n": "The security page states an internal harness continuously probes and tests the AI Agent for safety and security boundaries.",
+   "span": "continuously probes and tests the AI Agent for safety and security boundaries",
+   "g": "documented",
+   "m": "default",
+   "agree": "both"
+  },
+  "I52": {
+   "e": "https://replit.com/security",
+   "n": "The security page names external testing of the platform: a public HackerOne bug bounty and Trail of Bits penetration testing. The source says this covers the platform; it does not name Agent.",
+   "span": "through a public HackerOne bounty reward program",
+   "g": "documented",
+   "m": "default",
+   "agree": "both"
+  },
+  "I57": {
+   "e": "https://docs.replit.com/help/agent-and-ai",
+   "n": "The Agent help page points users with unresolved Agent problems to Replit Support.",
+   "span": "If your Agent question isn't answered here,",
+   "g": "documented",
+   "m": "default",
+   "agree": "both"
+  },
+  "I58": {
+   "e": "https://docs.replit.com/legal-and-security-info/model-improvement",
+   "n": "The page describes the content used for model improvement: prompts, instructions, context and generated responses.",
+   "span": "including your prompts, instructions, context, and responses generated for you",
+   "g": "documented",
+   "m": "default",
+   "agree": "both"
+  },
+  "I61": {
+   "e": "https://replit.com/subprocessors",
+   "n": "The subprocessor list names Anthropic, OpenAI and Google as providers of AI models.",
+   "g": "documented",
+   "m": "default",
+   "agree": "both"
+  },
+  "I68": {
+   "e": "https://docs.replit.com/_llms/en/features.txt",
+   "n": "The documentation index lists a weekly changelog; the latest entry read is dated 6 November 2026.",
+   "g": "documented",
+   "m": "default",
+   "agree": "a, accepted by the challenger"
+  },
+  "S1": {
+   "e": "https://replit.com/customers/plaid",
+   "n": "A customer story names Plaid as building an SLA dashboard with Replit Agent, now in use as an internal dashboard; its savings figures are the story's estimates.",
+   "span": "How Plaid Built a Production SLA Dashboard with Replit Agent",
+   "g": "documented",
+   "m": "default",
+   "agree": "both"
+  },
+  "S2": {
+   "e": "https://docs.replit.com/features/agent/skills-directory",
+   "n": "The skills directory lists skills published by partners such as Stripe, PayPal and Atlassian for Agent.",
+   "span": "Replit's partners publish skills that teach Agent how to build with their products.",
+   "g": "documented",
+   "m": "default",
+   "agree": "both"
+  },
+  "S3": {
+   "e": "https://docs.replit.com/llms.txt",
+   "n": "The docs llms.txt was fetched and resolves, listing Agent, MCP, security and admin pages.",
+   "span": "Features (241 pages)",
+   "g": "observed",
+   "m": "default",
+   "agree": "both",
+   "method": "probe"
+  }
+ },
+ "not_credited": [
+  {
+   "what": "Replit states a SOC 2 Type 2 attestation.",
+   "why": "No report or scope statement is public, and nothing says it covers Agent rather than the company; the trust centre's content did not load without JavaScript. Not counted as an independent check yet.",
+   "source": "https://docs.replit.com/teams/information-security/overview"
+  },
+  {
+   "what": "The main chat hands tasks to parallel worker chats that report back.",
+   "why": "One agent delegating sub-tasks for the same person and project; the indicator for several agents coordinating asks for more.",
+   "source": "https://docs.replit.com/build/code/coordinate-work"
+  },
+  {
+   "what": "An MCP scanner blocks suspicious tools before they run.",
+   "why": "A gate before a tool runs, not detection of anomalies in operation.",
+   "source": "https://docs.replit.com/features/mcp/overview"
+  }
+ ],
+ "announced": [
+  {
+   "what": "Project containers moving to microVMs.",
+   "source": "https://replit.com/security"
+  },
+  {
+   "what": "Working toward ISO 27001 certification.",
+   "source": "https://replit.com/security"
+  }
+ ],
+ "configurations": [
+  {
+   "id": "shipped",
+   "name": "As shipped",
+   "note": "Agent on a paid plan with its defaults: it builds in the project, background tasks wait for review, no external connectors.",
+   "on": []
+  },
+  {
+   "id": "plan",
+   "name": "Plan mode on",
+   "note": "The person turns on Plan before Agent builds; Agent plans and asks without changing code or data.",
+   "on": [
+    "plan-mode"
+   ]
+  },
+  {
+   "id": "testing",
+   "name": "App Testing on",
+   "note": "The App Testing toggle in Advanced settings, Power or Max mode only.",
+   "on": [
+    "app-testing"
+   ]
+  },
+  {
+   "id": "auto",
+   "name": "Background changes applied automatically",
+   "note": "The person enables automatic apply for background tasks.",
+   "on": [
+    "auto-apply"
+   ]
+  },
+  {
+   "id": "connectors",
+   "name": "With connectors and MCP servers",
+   "note": "External services connected through Connectors or MCP servers.",
+   "on": [
+    "connectors"
+   ]
+  },
+  {
+   "id": "enterprise",
+   "name": "Enterprise workspace",
+   "note": "Enterprise admin controls: connector scopes, model and provider policies, workspace custom instructions.",
+   "on": [
+    "enterprise",
+    "custom-instructions"
+   ]
+  }
+ ],
+ "captures": {
+  "https://docs.replit.com/_llms/en/features.txt": {
+   "sha256": "2e20971e9962f4cae1dead8a12b8f5fb670f59b706b2ca8db4f7630ef97a0adb",
+   "bytes": 14312,
+   "read_at": "2026-11-10T04:20Z"
+  },
+  "https://docs.replit.com/features/agent/agent-customization": {
+   "sha256": "b5b576cc757a6d03c72047eb388a6d890a90b2f2e453601363965474aff73ecf",
+   "bytes": 368535,
+   "read_at": "2026-11-10T04:20Z"
+  },
+  "https://docs.replit.com/features/agent/agent-modes": {
+   "sha256": "d5384b250dce1edd307d44ba9381d88477c2eb2b253f3ae1b2c2879d1c2f05e1",
+   "bytes": 332399,
+   "read_at": "2026-11-10T04:20Z"
+  },
+  "https://docs.replit.com/features/agent/app-testing": {
+   "sha256": "666730392081686eab8af40e52c020b88bd53af00a61ca8607a4de264044280f",
+   "bytes": 342787,
+   "read_at": "2026-11-10T04:20Z"
+  },
+  "https://docs.replit.com/features/agent/general-agent": {
+   "sha256": "7dee387f587385fc9d14cb95b1ea20139a4f2b6ab82a9cad109cdc5615938a0a",
+   "bytes": 320732,
+   "read_at": "2026-11-10T04:20Z"
+  },
+  "https://docs.replit.com/features/agent/overview": {
+   "sha256": "351087bd1f78f8419c49890686821b988591157b85f9ca294ce536d4a90408c7",
+   "bytes": 419582,
+   "read_at": "2026-11-10T04:20Z"
+  },
+  "https://docs.replit.com/features/agent/plan-mode": {
+   "sha256": "1c2834bd959ed8d7c321be2c76d1b1eb8abb1e00ec5afe35cd25744a512a8091",
+   "bytes": 333664,
+   "read_at": "2026-11-10T04:20Z"
+  },
+  "https://docs.replit.com/features/agent/skills-directory": {
+   "sha256": "a8478b581f6046ad94316871dc2350a29401c5cca95d096a152e1f5d7e5b606a",
+   "bytes": 327861,
+   "read_at": "2026-11-10T04:20Z"
+  },
+  "https://docs.replit.com/features/agent/task-lifecycle": {
+   "sha256": "d4df1864788c50698a7f6526574079a859c8150bce10a685f70fc2c5eb5803df",
+   "bytes": 339892,
+   "read_at": "2026-11-10T04:20Z"
+  },
+  "https://docs.replit.com/features/integrations/overview": {
+   "sha256": "29d5d4195ad021ddf1950cac83fe1bc17f5d8d49e76a8e7f8f709c52159394f9",
+   "bytes": 484978,
+   "read_at": "2026-11-10T04:20Z"
+  },
+  "https://docs.replit.com/features/mcp/overview": {
+   "sha256": "8f0d0d44edb190fbdf095fe3733371724786bf8dd64fb9354a5721a98f4d4441",
+   "bytes": 422041,
+   "read_at": "2026-11-10T04:20Z"
+  },
+  "https://docs.replit.com/features/version-control/checkpoints-and-rollbacks": {
+   "sha256": "3a1b8fde4d8a91f3f363593cb0063fc5f6d392c728832b8aa21c3986adbf8567",
+   "bytes": 380724,
+   "read_at": "2026-11-10T04:20Z"
+  },
+  "https://docs.replit.com/help/agent-and-ai": {
+   "sha256": "c787756fd19c0948321c511f36ebf115ee7c76c036ac56036cfe2412c9d6cb42",
+   "bytes": 162629,
+   "read_at": "2026-11-10T04:20Z"
+  },
+  "https://docs.replit.com/legal-and-security-info/model-improvement": {
+   "sha256": "b330256ef72ada5593e09e227ff1b551a01475e5679887ab6b66ea204db0d110",
+   "bytes": 133938,
+   "read_at": "2026-11-10T04:20Z"
+  },
+  "https://docs.replit.com/llms.txt": {
+   "sha256": "d2fa30b48300baaa698d6dc7ee5e471a417c6c0fcad851025650b2089f4036d3",
+   "bytes": 52262,
+   "read_at": "2026-11-10T04:20Z"
+  },
+  "https://replit.com/customers/plaid": {
+   "sha256": "0870b6e534ef22a68d99dbc3eb83ed13dc0a821c3e5e0bb32618b159ae844ed5",
+   "bytes": 21516,
+   "read_at": "2026-11-10T04:20Z"
+  },
+  "https://replit.com/security": {
+   "sha256": "ca159f55c62f57d146722ed37ec99f93594113c0a17bb9475278712d285022db",
+   "bytes": 161305,
+   "read_at": "2026-11-10T04:20Z"
+  },
+  "https://replit.com/subprocessors": {
+   "sha256": "69c65d9cb156577f8e708d0686782b230baaea02a8abf86c7faa47e78652fff9",
+   "bytes": 95057,
+   "read_at": "2026-11-10T04:20Z"
+  }
+ }
+}
