@@ -1,0 +1,17 @@
+{
+ "agent": "gamma.studio@web-summit.dinis",
+ "role": "the GAMMA-Ray report studio",
+ "created": "2026-11-10",
+ "tool": "sgit pki (sgit-ai v0.27.0)",
+ "encryption_fingerprint": "sha256:8b03f559558c72b6",
+ "signing_fingerprint": "sha256:4cb4338c0756c4ae",
+ "use": "The public half of this session's key. Each company vault carries captures.json with a detached signature made with it; verify with sgit pki verify. The private half never leaves the session.",
+ "bundle": {
+  "v": 1,
+  "encrypt": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAz3aNM1zhJ0QWsgeuzoE7\ngMJVGv1+Lbjc0SlIPVLQYs6ldsYfstk7ZboVp2glCTq6jCKyO2FmjI4lc7h0dmaJ\nJWOfxWWx9baqiyk/tZ9lNPOn1FnwWs4UPJf0Q1sXA81IJVmJvCockxBCFKM7EZJt\n7RguO6h6mtdGj3FPN/S9BHfio4r5Ke7+h5ian5rjO051QFAM+kU8WnHvVGm1BGav\nEqN6Nf6gZFh66eRORwuHvhcU91J49xeRMWdrEWaYXv35Rx8X0dT+aDyfvg7gS+ZZ\n/C6Flt97LtbHK8l07gycLqQY+yQB5fhr5dVriDnl2kMK5vQPFl9BwaudBccTsqqu\nqUJNrXsUiKRF7snRKJlPvaIE+MUBygH/v85FGTKC/c+m4/nB99JsKEK8I7HTxBgT\n5DJCWiKLP1G3KetaZFm2n4MfQuSZvOxQCfjJjOPvF285vE8z8l/0zicWY0uadr1T\noISV0HCIV8STpK/vknsmRRgDd/b1rOBFwFwvVau7G/pxTtEtpeRLLkX7nGectI2e\nZJUcXogVXS6LE8LNmX6r61Ci0Igs54rwqnX/sw0Euaktt7xGC5jnFTv40Dz3N8y6\nv889JSnF2N9tbQHTXqf5jcTIE/rPhAjvYuRp5fpJV5CSwtBR+oSaozvmKD9j9qd/\nPukCXcnBbld9cwt4fmVKInkCAwEAAQ==\n-----END PUBLIC KEY-----\n",
+  "sign": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAETNKXaD5bdlk/Qjh5cypEbu/n5c17\nFrQSi7n4julI22JWHkV7R6Tp/zSjptf2Bxo8t4c3SR7WK5aFWcdXLUeGhQ==\n-----END PUBLIC KEY-----\n",
+  "label": "gamma.studio@web-summit.dinis",
+  "fingerprint": "sha256:8b03f559558c72b6",
+  "signing_fingerprint": "sha256:4cb4338c0756c4ae"
+ }
+}
