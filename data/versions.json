@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.63",
+    "date": "2026-11-10",
+    "what": "round one of review on aisle-platform and codacy-ai-reviewer",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "bb1be96f6"
+  },
+  {
     "version": "v0.0.62",
     "date": "2026-11-10",
     "what": "pathGraph, one path of a card's graph drawn with its verbs",
