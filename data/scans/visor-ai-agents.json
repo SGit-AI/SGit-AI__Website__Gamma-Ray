@@ -337,6 +337,27 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "No change; verified by the reviewer. The two partly answered items (S1, I47) are answered above."
+   },
+   {
+    "round": 3,
+    "answer": "I08",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note limited to the one sentence on the page (re-fetched 10 November 2026, raw/ans-r3-001.html): the platform was connected to the insurer's systems through web services, so the four requests run end to end as automated workflows; 'AI agent's self-service channel' and 'without an advisor' are removed. Span unchanged and exact; the credit holds because the page says the platform, which began as the Chat AI Agent and grew into the self-service channel, carries out address changes, vehicle additions and cancellations end to end."
+   },
+   {
+    "round": 3,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Autonomy 3 kept: I08 (the platform runs four requests end to end as automated workflows) and I17 (conversations handled start to finish, an advisor picks up when a person is needed) are both on the Generali page and meet A3 ({all: I08, any I17}); mode deployed records that this is one customer's deployment, and the S1 note keeps the 2022 archive caveat. Reach 2 does not rest on the Generali page alone: the scorer also uses I10 (voice-agent page, mode default: it connects to telephony and to the customer's contact-centre or CCaaS platform). Control 1 and Openness 2 stay mode available under healthcare-deployment as conceded in round 2; the scorer records the configuration per cell (withCfg), and the rendered card must show 'Healthcare deployment' on C1 and O2, to be confirmed when the card page is built. No data change."
+   },
+   {
+    "round": 3,
+    "answer": "S1, O1/O2 (I20), I47, I03, I17, I67, I60, I37, I66, I68",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Accepted; no change."
    }
   ]
  },
@@ -374,7 +395,7 @@
   },
   "I08": {
    "e": "https://www.visor.ai/success-stories/generali/",
-   "n": "At Generali, the AI agent's self-service channel was connected to the insurer's systems through web services, so common requests (duplicate documents, address changes, adding a vehicle, cancellations) run end to end as automated workflows without an advisor.",
+   "n": "At Generali, the platform was connected to the insurer's systems through web services, so four common requests (duplicate documents, address changes, adding a vehicle, cancellations) run end to end as automated workflows.",
    "span": "those requests now run end to end as automated workflows",
    "g": "documented",
    "m": "deployed"
@@ -568,37 +589,37 @@
   "https://www.visor.ai/chat-agent/": {
    "sha256": "25d94e3335f5dc6e9a26d3fbdcff3361e579e21e36a34c19a69e9707447b3971",
    "bytes": 68976,
-   "read_at": "2026-11-10T17:50Z"
+   "read_at": "2026-11-10T18:45Z"
   },
   "https://www.visor.ai/healthcare/": {
    "sha256": "bea305021fe6b3abe0c1ef4bdb2471310777cbe2b81e532d54e697f5563fd8ea",
    "bytes": 56914,
-   "read_at": "2026-11-10T17:50Z"
+   "read_at": "2026-11-10T18:45Z"
   },
   "https://www.visor.ai/llms.txt": {
    "sha256": "35a955f100a9cf4548b06cb9b3bfab5727b4411523eb35eb1baa056d4e2927d5",
    "bytes": 17112,
-   "read_at": "2026-11-10T17:50Z"
+   "read_at": "2026-11-10T18:45Z"
   },
   "https://www.visor.ai/security/": {
    "sha256": "f337c6702211092429dc87e420e6429cc28402a48ebcf0a6b9bca573b5d98f19",
    "bytes": 87679,
-   "read_at": "2026-11-10T17:50Z"
+   "read_at": "2026-11-10T18:45Z"
   },
   "https://www.visor.ai/success-stories/generali/": {
    "sha256": "5ad19f4d69ad64f9da30689ffc891e53374df2e12f3e0bb18579a0f0bea8bf6a",
    "bytes": 53042,
-   "read_at": "2026-11-10T17:50Z"
+   "read_at": "2026-11-10T18:45Z"
   },
   "https://www.visor.ai/success-stories/millennium-bcp/": {
    "sha256": "bf836623286299e00b58a845c4bf060bd04bb9fa52f19c1c2105917cbd8ab0bc",
    "bytes": 53259,
-   "read_at": "2026-11-10T17:50Z"
+   "read_at": "2026-11-10T18:45Z"
   },
   "https://www.visor.ai/voice-agent/": {
    "sha256": "c641b9f6a84c7399c6e44b802dbb23ce9389519834dc661f7d144a473722eba0",
    "bytes": 71850,
-   "read_at": "2026-11-10T17:50Z"
+   "read_at": "2026-11-10T18:45Z"
   }
  }
 }
