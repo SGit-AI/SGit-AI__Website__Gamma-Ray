@@ -382,7 +382,66 @@
  },
  "review": {
   "status": "published-before-review",
-  "rounds": [],
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "S1",
+      "severity": "must-fix",
+      "finding": "The quoted span \"Stripe rolled out Claude Code to 1,370 engineers.\" is not in the source. The page (read 2026-11-10) says \"Deployed Claude Code to 1,370 engineers with a zero-configuration setup\". The fact and the figure are right; the span is a paraphrase presented as a quotation. Quote the page exactly, under fifteen words, or drop the span."
+     },
+     {
+      "answer": "I61",
+      "severity": "should-fix",
+      "finding": "\"The product and its model family are named\" is not what the indicator asks (the models and third-party components it uses are listed). I searched the overview page and found no model named. Either cite a page that lists the models (the model configuration page), or remove the answer."
+     },
+     {
+      "answer": "I23",
+      "severity": "should-fix",
+      "finding": "The note says most rows are \"derived, not measured\". The profile itself says all 22 of its rows are derived and none measured (\"every row is a claim until somebody runs the probes\"). Say none are measured. Grade documented is right for the profile as a document; the scope for I23 says a grant profile only, which the source is."
+     },
+     {
+      "answer": "I39",
+      "severity": "should-fix",
+      "finding": "The source cited (permissions) supports \"a deny rule removes a tool\" and the person can decline a prompt. Neither is a way to pause or stop the agent. I did not find an interrupt or stop statement on that page. Cite a page that says the person can interrupt a running session, or lower the credit."
+     },
+     {
+      "answer": "I18",
+      "severity": "note",
+      "finding": "Credited as available (auto mode). The source says in auto mode \"a classifier reviews actions instead of you\". The indicator is that the person approves critical decisions only; a classifier standing in for the person is a different fact. Round two will argue whether this credit holds."
+     },
+     {
+      "answer": "S2",
+      "severity": "should-fix",
+      "finding": "The page tells an author how to publish a marketplace and says \"anyone with access registers it\". That shows the mechanism, not that any third party has published one. The scope asks for third parties publishing. Cite a page that names third-party plugins or marketplaces, or lower the credit."
+     },
+     {
+      "answer": "I56",
+      "severity": "note",
+      "finding": "The span \"Claude Code is an AI-powered coding assistant\" is in the source and under fifteen words. But it is the documentation describing the product to a reader, not the agent telling the people it talks to that it is an AI. Weak credit for this indicator; consider whether it should stand."
+     },
+     {
+      "answer": "I45",
+      "severity": "note",
+      "finding": "Grade documented, mode available, source the sandbox page. The scope says this indicator is read from a measured grant only, and the grant is derived. The answer is accurate; the credit should come from the grant, not from the page. Check how the scorer treats it."
+     },
+     {
+      "answer": "I04, I08, I10, I11, I12, I16, I20, I21, I22, I38, I41, I43, I46, I48, I57, I58, I63, S3",
+      "severity": "pass",
+      "finding": "Opened each source. The note says what the source says; grade documented is right for each (S3 observed: llms.txt fetched, resolves); mode is right (I11, I12, I18, I21, I41, I43, I45, I48 are available and tied to a configuration; the rest are the default). Spans in I46 (13 words) and I56 (7) are in the source. Quoted text in I04 (12 words) and I12 is in the source. I63 credit is limited, as the note says, to the vendor."
+     },
+     {
+      "answer": "configurations",
+      "severity": "note",
+      "finding": "The \"max\" configuration is \"Auto mode, tools and agent teams\": the three flags it turns on exist (auto, mcp, teams) and each is documented. No finding."
+     }
+    ]
+   }
+  ],
   "note": "Published as an example on 10 November 2026, before the review workflow existed. Mapped by one agent. It goes through two rounds of review next."
  }
 }

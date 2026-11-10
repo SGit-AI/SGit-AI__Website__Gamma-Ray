@@ -289,7 +289,61 @@
  },
  "review": {
   "status": "published-before-review",
-  "rounds": [],
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I61",
+      "severity": "should-fix",
+      "finding": "Same as the local scan: the overview names the product but I found no model listed on it. Cite the page that lists models or remove."
+     },
+     {
+      "answer": "I38",
+      "severity": "should-fix",
+      "finding": "\"Work arrives as a branch for a person to review\" is not a statement that a person must approve a high-impact action. The page (Review changes) shows that review is possible; it does not say a push or any other action waits for approval. Re-read against the indicator and cite the sentence, or lower the credit."
+     },
+     {
+      "answer": "I18",
+      "severity": "should-fix",
+      "finding": "The note says the person starts a task and reviews the result. The page also says the person picks a permission mode for a cloud session, so how independent it is depends on that mode, and the answer names no mode. State which mode the default is, from the page, or mark the mode as chosen by the person."
+     },
+     {
+      "answer": "I28",
+      "severity": "should-fix",
+      "finding": "The source says a network secret is added by the proxy to requests for the hosts the operator lists. That shows a key is attached for listed hosts; it does not show that tokens are bound to the service they were issued for. The indicator needs the operation, so documented does not count, and the claim is a stretch from the sentence. Consider removing."
+     },
+     {
+      "answer": "I12",
+      "severity": "note",
+      "finding": "The cited source is the local product's agent-teams page. The cloud page says in its own words that agent teams are off by default and can be enabled with an environment variable. Cite the cloud page, which also gives the configuration the answer needs."
+     },
+     {
+      "answer": "I23",
+      "severity": "should-fix",
+      "finding": "The profile's description says its grant was measured on this site's own agent environment (\"the mandate hook and the insurance policy\"; signing key \"registered as an agent identity in this site's registry\"). That is one operator's configured session, not the product as shipped. The counts in the note are right (15 rows, 13 observed). Say in the note that the measured shape includes that operator's hooks and identity."
+     },
+     {
+      "answer": "I46",
+      "severity": "note",
+      "finding": "The note is right: two rows have barrier \"setting\" (write.repository.tenant, create.schedule.tenant). The grade could be observed for one of them, which was observed on the thing itself; one is self-reported. Leave as it is or say which."
+     },
+     {
+      "answer": "I45",
+      "severity": "note",
+      "finding": "The span \"and nothing else through the session's network\" (7 words) is in the cloud environments page. The scope says read from a measured grant only; the grant has send.endpoint.allowed as a boundary, observed. The credit should come from the grant. Check how the scorer treats it."
+     },
+     {
+      "answer": "I04, I08, I10, I11, I20, I21, I25, I56, I58, I63, S3",
+      "severity": "pass",
+      "finding": "Opened each source. The note matches the page; grade and mode are right. I25 matches \"your GitHub credentials stay encrypted on Anthropic's servers and never enter a session's VM\". I11 is correctly the default because the Trusted level reaches allowlisted domains."
+     }
+    ]
+   }
+  ],
   "note": "Published as an example on 10 November 2026, before the review workflow existed. Mapped by one agent. It goes through two rounds of review next."
  }
 }

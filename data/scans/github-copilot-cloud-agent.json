@@ -176,7 +176,71 @@
  },
  "review": {
   "status": "published-before-review",
-  "rounds": [],
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I11",
+      "severity": "must-fix",
+      "finding": "The mode may be wrong. The MCP page says \"The GitHub MCP server and Playwright MCP server are configured by default\" for the cloud agent. The answer marks I11 available with an mcp configuration and the \"As shipped\" configuration leaves it out. Decide from the source whether connecting to external services is the default, and fix the mode or say why not."
+     },
+     {
+      "answer": "I14",
+      "severity": "must-fix",
+      "finding": "The span \"provided and maintained by GitHub\" is in the source, but the indicator is a published protocol between agents. MCP, as the page describes it, connects an agent to tools and context, not agent to agent. This is credited to the wrong indicator. Remove, or cite a page that describes agent-to-agent communication."
+     },
+     {
+      "answer": "I10",
+      "severity": "should-fix",
+      "finding": "\"Across one organisation\" comes from the sentence that the agent is \"constrained to data across a single organization in Chat mode\". That is a limit, in one mode, not a statement that it works across several systems. The credit needs a sentence about breadth (repositories, issues, pull requests, external applications). The responsible-use page has the external-integrations sentence naming Teams, Linear, Slack and Jira; consider citing that."
+     },
+     {
+      "answer": "I41",
+      "severity": "should-fix",
+      "finding": "The note cites the co-author line and the public-code matches. The page says more directly \"Each commit message includes a link to the agent session logs\". Cite that sentence: it is what covers what the agent does. The indicator needs the operation, so documented will not count; the note should still be right about what supports it."
+     },
+     {
+      "answer": "I56",
+      "severity": "note",
+      "finding": "Commits and pull requests attributed to Copilot is true (\"authored by Copilot, with the human who started the task marked as the co-author\") but is not the agent telling the people it talks to that it is an AI. Weak credit; consider whether it stands."
+     },
+     {
+      "answer": "I45",
+      "severity": "note",
+      "finding": "Both quotations are in the firewall page (12 and 8 words). The scope says a measured grant only, and this scan has none. The answer is accurate; the scorer should not count it as holding. Check."
+     },
+     {
+      "answer": "I18",
+    "severity": "should-fix",
+    "finding": "The note says the person reviews the pull request before merging. I could not find that sentence in the responsible-use page. Cite the sentence or soften the note."
+   },
+   {
+    "answer": "I21",
+      "severity": "pass",
+      "finding": "The span \"It can only push to a single branch\" (8 words) is in the page. The second half, no access to Actions secrets beyond those configured for it, is the page's: \"only secrets and variables specifically added to the copilot environment are passed to the agent\". Correct."
+     },
+     {
+      "answer": "I38",
+      "severity": "pass",
+      "finding": "The span is in the page and is 12 words. The sentence is about workflows run by its pull requests, which is a real approval gate on a high-impact action."
+     },
+     {
+      "answer": "S2",
+      "severity": "pass",
+      "finding": "The span \"a curated list of MCP servers from partners and the community\" is in the page. 11 words."
+     },
+     {
+      "answer": "I04, I08, I20, I22, I25, I27, S3",
+      "severity": "pass",
+      "finding": "Opened each source. I27: the page says the commits are signed and appear as \"Verified\". I08 quotes 14 words, under the limit. I22 lists limited scope, inaccurate code, security risks, matches with public code, all on the page."
+     }
+    ]
+   }
+  ],
   "note": "Published as an example on 10 November 2026, before the review workflow existed. Mapped by one agent. It goes through two rounds of review next."
  }
 }
