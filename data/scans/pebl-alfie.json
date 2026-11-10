@@ -42,10 +42,24 @@
   ],
   "added_by_challenger": [],
   "open": [
-   "Whether Alfie asks the user to confirm before it submits or approves time off (I15 or I16): the help-centre articles load only in a browser and were not read.",
+   "Whether Alfie asks the user to confirm before it submits or approves time off (I15 or I16): the three help-centre articles on Alfie (read in a browser on 2026-11-10) do not say.",
    "I63: Pebl states ISO 27001 and SOC 2 Type 2 for the company; no report or scope covering Alfie was read; left not credited, as the Replit challenger did."
   ],
-  "files": "in the vault: work/assessment.json, work/challenger.json"
+  "files": "in the vault: work/assessment.json, work/challenger.json, work/rendered/ (help-centre articles as rendered in a browser)",
+  "added_after_challenge": [
+   {
+    "answer": "I23",
+    "by": "gamma.field@web-summit.dinis",
+    "at": "2026-11-10",
+    "why": "The help centre's Alfie articles were read in a headless browser after the challenge; not yet challenged, left for review."
+   },
+   {
+    "answer": "I40",
+    "by": "gamma.field@web-summit.dinis",
+    "at": "2026-11-10",
+    "why": "Re-sourced to the help article, which says it more directly; same credit."
+   }
+  ]
  },
  "answers": {
   "I01": {
@@ -97,10 +111,17 @@
    "g": "documented",
    "m": "default"
   },
+  "I23": {
+   "e": "https://help.hellopebl.com/en-US/pebl/article/97eBwj8y-what-can-i-do-with-alfie-based-on-my-role",
+   "n": "Pebl's help article enumerates, in a table per platform role (Company Admin, HR Manager, PTO Manager, Billing Admin, Supported Employee), which Alfie features each role can use, among them support tickets, time-off requests and approvals, compensation reports and currency conversion. It is a statement of scope; no source shows how it is enforced. The article's text is in the captured page's embedded data and shows only in a browser; the rendered text is in the vault (work/rendered/).",
+   "span": "What Can I Do With Alfie Based on My Role?",
+   "g": "documented",
+   "m": "default"
+  },
   "I40": {
-   "e": "https://hellopebl.com/news/companies-can-now-expand-their-workforce-globally-minutes-pebls-ai-assistant-alfie/",
-   "n": "The launch release says Alfie hands a conversation to a human expert when needed; the December 2025 release says Alfie Support routes such questions to a specialist.",
-   "span": "seamless handoff to a human expert when needed",
+   "e": "https://help.hellopebl.com/en-US/pebl/article/RSvaTfOc-what-is-alfie",
+   "n": "Pebl's help article says that when a request needs human review or cannot be answered with confidence, Alfie offers to open a support inquiry and passes the conversation to Pebl's Operations team; the launch release also states a handoff to a human expert. The article's text is in the captured page's embedded data and shows only in a browser; the rendered text is in the vault (work/rendered/).",
+   "span": "Alfie will automatically offer to open a support inquiry",
    "g": "documented",
    "m": "default"
   },
@@ -245,29 +266,34 @@
  ],
  "captures": {
   "https://hellopebl.com/llms.txt": {
-   "sha256": "b6a3f9ff7d119d125c3ca5265a578a327085a8034e2293f78afa4e7ddde0c320",
-   "bytes": 389782,
-   "read_at": "2026-11-10T13:12Z"
-  },
-  "https://hellopebl.com/news/companies-can-now-expand-their-workforce-globally-minutes-pebls-ai-assistant-alfie/": {
-   "sha256": "5026276e53614ca34b104243417bd752b7d044b8adf0123f7f52907070b3f5ec",
-   "bytes": 198452,
-   "read_at": "2026-11-10T13:12Z"
+   "sha256": "c626544467c0bec5cc218760df416a996381824f0045be2188bd45f9976d9c37",
+   "bytes": 390046,
+   "read_at": "2026-11-10T14:12Z"
   },
   "https://hellopebl.com/news/pebl-says-hr-chatbot-era-ending-alfie-evolves-assistant-workforce-agent/": {
    "sha256": "55efc4a6464633191a2782a40eb94dec294cb987ec5c9091acbdfb6ee8c2a193",
    "bytes": 202126,
-   "read_at": "2026-11-10T13:12Z"
+   "read_at": "2026-11-10T14:12Z"
   },
   "https://hellopebl.com/platform-updates/": {
-   "sha256": "39e66a57dc1c11ba40e06a527242b0cb595f39cf2747998844b40692c9eba329",
-   "bytes": 207601,
-   "read_at": "2026-11-10T13:12Z"
+   "sha256": "e43bd78e7bf3fb1e807b7cfae81c69849b3adc59a8cbbb459985efb7e1c7969e",
+   "bytes": 207558,
+   "read_at": "2026-11-10T14:12Z"
   },
   "https://hellopebl.com/platform/alfie-ai-assistant/": {
-   "sha256": "43cfaa4bd25a2825257b1edb171f8e68131619d1687ace92a25f92060033fb72",
+   "sha256": "2e15381d880aeefdaf2af5eacc043ed8082b8940ff902de6dbf8f1a94efba364",
    "bytes": 238529,
-   "read_at": "2026-11-10T13:12Z"
+   "read_at": "2026-11-10T14:12Z"
+  },
+  "https://help.hellopebl.com/en-US/pebl/article/97eBwj8y-what-can-i-do-with-alfie-based-on-my-role": {
+   "sha256": "f7a9ea25b67b8d7acf454c726e33aa6981c449fa510fc534f2e3e8b155a4299b",
+   "bytes": 837193,
+   "read_at": "2026-11-10T14:12Z"
+  },
+  "https://help.hellopebl.com/en-US/pebl/article/RSvaTfOc-what-is-alfie": {
+   "sha256": "a10c4874d3ead8b5584139d95862caadcec54c9daefde75ac3a0704317537dd4",
+   "bytes": 810125,
+   "read_at": "2026-11-10T14:12Z"
   }
  }
 }
