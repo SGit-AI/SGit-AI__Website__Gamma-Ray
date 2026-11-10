@@ -220,6 +220,76 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "No change expected or found: the card stays A2 R1 C1 O1 after the edits (A2 on I16, R1 on I09, C1 on I38, O1 on I20 with I56 and I58)."
+   },
+   {
+    "round": 2,
+    "answer": "I16,I38,I07",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "I38 now cites the product page FAQ ('The final submission is done by you on the relevant platform'), agent-specific, and I07 cites the product page's Evaluator line with the user selecting and submitting, so neither rests on the policy sentence. I16 keeps the privacy policy (the only source with the review-and-approve wording) and its note now says the policy is platform-wide, does not name the agent and is coarser than per-action approval."
+   },
+   {
+    "round": 2,
+    "answer": "I20",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Re-pointed to the product page: 'It finds the calls you qualify for, drafts the application against the official criteria' (14 words, exact), with the note listing the stated tasks and the FAQ's statement that the agent does not submit."
+   },
+   {
+    "round": 2,
+    "answer": "I56",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept; the note now says it is a label on AI-generated content inside the platform and not disclosure in conversation. O1 does not depend on it (I58 supplies the second half)."
+   },
+   {
+    "round": 2,
+    "answer": "I58",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept with the note corrected: the CTO's quote describes the onboarding step that collects previous applications and institutional data, which the page says the agent then holds as context, marked as the vendor's statement."
+   },
+   {
+    "round": 2,
+    "answer": "S1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "S1 now cites the Super Bock case study, which loads, names the AI Grant Consultant and describes a completed application submitted within 72 hours ('Super Bock's team turned to the AI Grant Consultant', exact), so the badge no longer rests on a pilot; mode deployed. The page must be added to the scan's sources and captured (tools/capture.mjs) before publication, and the Super Bock not_credited entry is withdrawn."
+   },
+   {
+    "round": 2,
+    "answer": "I67",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note now uses the page heading 'Early Results' and quotes the labels '2w to 2h' instead of reading them as two weeks and two hours."
+   },
+   {
+    "round": 2,
+    "answer": "I52",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; reviewer accepts."
+   },
+   {
+    "round": 2,
+    "answer": "not_credited",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "The Super Bock entry is withdrawn because Super Bock now carries S1 from its own page; the announced items' pages (granter.ai, granter.ai/about) should be captured into the vault with the other sources."
+   },
+   {
+    "round": 2,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "A2 stands on I16 with its platform-wide caveat stated; removing it would leave Autonomy with no level, and the product page supports the same pattern (the agent finds and drafts, the user selects, reviews with the Evaluator and submits). C1 now rests on the agent-specific FAQ (I38), separate from the A2 sentence, and O1 on the product page's purpose and tasks (I20) with I58; R1 stands on I09, the agent working in one domain (funding calls and the organisation's own data), and the CORDIS tool is listed as not credited rather than read as Reach 2."
+   },
+   {
+    "round": 2,
+    "answer": "S1,I67,I38,I52,I47,I02,I07,I09,I20,I16,I56,I58",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change to what passed; the scope finding on I38 is answered above."
    }
   ]
  },
@@ -243,9 +313,9 @@
  },
  "answers": {
   "I07": {
-   "e": "https://granter.ai/privacy-policy",
-   "n": "The platform's AI outputs are suggestions that users review and approve before any submission or decision.",
-   "span": "Users review and approve them before any submission or decision",
+   "e": "https://granter.ai/blog/ai-grant-consultant",
+   "n": "The product page says the agent finds calls, checks eligibility and runs an Evaluator that shows what to improve; the user selects the opportunity and makes the submission.",
+   "span": "shows what to improve before you submit",
    "g": "documented",
    "m": "default"
   },
@@ -258,22 +328,22 @@
   },
   "I16": {
    "e": "https://granter.ai/privacy-policy",
-   "n": "The privacy policy says the platform's outputs (drafts, analyses, recommendations) are suggestions, and that users review and approve them before any submission or decision.",
+   "n": "The privacy policy, which covers the whole Granter platform and does not name the agent, says the platform's AI search, drafts, analyses and recommendations are suggestions that users review and approve before any submission or decision; it does not say each step is approved separately.",
    "span": "Users review and approve them before any submission or decision",
    "g": "documented",
    "m": "default"
   },
   "I20": {
-   "e": "https://granter.ai/privacy-policy",
-   "n": "The privacy policy states what the platform is for: finding, preparing and managing grant and funding applications.",
-   "span": "helps organisations find, prepare and manage applications for grants and other funding",
+   "e": "https://granter.ai/blog/ai-grant-consultant",
+   "n": "The product page states the agent's purpose and tasks: find the calls an organisation qualifies for, check eligibility, draft the application against the call's criteria, review it, and manage reporting after approval; its FAQ says the agent does not submit.",
+   "span": "It finds the calls you qualify for, drafts the application against the official criteria",
    "g": "documented",
    "m": "default"
   },
   "I38": {
-   "e": "https://granter.ai/privacy-policy",
-   "n": "The privacy policy says users review and approve the platform's outputs before any submission or decision.",
-   "span": "Users review and approve them before any submission or decision",
+   "e": "https://granter.ai/blog/ai-grant-consultant",
+   "n": "The product page's FAQ says Granter does not submit the application: the user makes the final submission on the funding platform, since Granter has no access to submission-platform accounts.",
+   "span": "The final submission is done by you on the relevant platform",
    "g": "documented",
    "m": "default"
   },
@@ -286,31 +356,31 @@
   },
   "I56": {
    "e": "https://granter.ai/privacy-policy",
-   "n": "The privacy policy states that AI-generated content is labelled as such inside the platform.",
+   "n": "The privacy policy states that AI-generated content is labelled as such inside the platform; it is a label on generated content, not a statement about disclosure in conversation.",
    "span": "AI-generated content is presented as such inside the platform.",
    "g": "documented",
    "m": "default"
   },
   "I58": {
    "e": "https://granter.ai/blog/ai-grant-consultant",
-   "n": "The CTO describes the data the agent uses: the organisation's previous applications and institutional data, checked against requirements extracted from official call documents.",
+   "n": "In a quote on the product page, Granter's CTO says onboarding collects the organisation's information, such as previous applications and institutional data, which the page says the agent then holds as context (vendor's statement).",
    "span": "collect all important information, like previous applications, institutional data",
    "g": "documented",
    "m": "default"
   },
   "I67": {
    "e": "https://granter.ai/case-studies/marinha",
-   "n": "The Navy case study reports two pilot figures, over 200 opportunities added to a defence grants database and first drafts from two weeks to two hours, with no method or baseline stated (vendor-reported).",
+   "n": "Under 'Early Results', the Navy case study reports two pilot figures, over 200 opportunities added to a defence grants database and first drafts labelled 2w to 2h, with no method or baseline stated (vendor-reported).",
    "span": "The pilot has already delivered measurable results:",
    "g": "documented",
    "m": "default"
   },
   "S1": {
-   "e": "https://granter.ai/case-studies/fidelidade",
-   "n": "Fidelidade runs a pilot of the agent, in the initial phase of a planned 12-month cycle: two agents, one per entity, are live and used to find calls and begin drafts; results are due at the 6-month mark.",
-   "span": "the platform is actively being used to identify new opportunities and begin drafting applications",
+   "e": "https://granter.ai/case-studies/superbock",
+   "n": "Granter's case study names the Super Bock Group, whose R&D and innovation department used the AI Grant Consultant to build an FCT doctoral scholarship application and submitted it within 72 hours of onboarding (vendor's account).",
+   "span": "Super Bock's team turned to the AI Grant Consultant",
    "g": "documented",
-   "m": "default"
+   "m": "deployed"
   }
  },
  "not_credited": [
@@ -325,9 +395,14 @@
    "source": "https://granter.ai/case-studies/fidelidade"
   },
   {
-   "what": "Super Bock as a customer for the In production badge",
-   "why": "Not in the scan's sources; the Fidelidade pilot alone carries S1.",
-   "source": "https://granter.ai/case-studies/superbock"
+   "what": "I11 from the CORDIS tool (the agent reads the EU's public database of funded projects through a dedicated tool)",
+   "why": "The page does not say whether this is a live connection across a trust boundary or Granter's own copy of public data; not stretched into Reach 2.",
+   "source": "https://granter.ai/blog/ai-grant-consultant"
+  },
+  {
+   "what": "Fidelidade pilot as the source of S1",
+   "why": "Replaced by the Super Bock case study, a completed use of the agent rather than a pilot in its initial phase; the Fidelidade page remains a source of the scan and names a second customer.",
+   "source": "https://granter.ai/case-studies/fidelidade"
   }
  ],
  "announced": [
@@ -364,22 +439,22 @@
   "https://granter.ai/blog/ai-grant-consultant": {
    "sha256": "939ffa1a99921cebb4dd509822646f9bf524a971fe0d64afd4bbebb4325fbb9c",
    "bytes": 499709,
-   "read_at": "2026-11-10T14:45Z"
-  },
-  "https://granter.ai/case-studies/fidelidade": {
-   "sha256": "5540efe3cdd81e0a93879808808d39a5d3373c021dffd505fc6a9c99bab92685",
-   "bytes": 447459,
-   "read_at": "2026-11-10T14:45Z"
+   "read_at": "2026-11-10T17:50Z"
   },
   "https://granter.ai/case-studies/marinha": {
    "sha256": "a6b46185d03c0012028bb1f68dc469204e30f59eafa4bd303fcfbb3b40b7d8cb",
    "bytes": 487913,
-   "read_at": "2026-11-10T14:45Z"
+   "read_at": "2026-11-10T17:50Z"
+  },
+  "https://granter.ai/case-studies/superbock": {
+   "sha256": "0da57a037f92737bda1d6fe53ad4a9a732fbaad1fa304fa982ccef3c23547047",
+   "bytes": 442114,
+   "read_at": "2026-11-10T17:50Z"
   },
   "https://granter.ai/privacy-policy": {
    "sha256": "278075589d6cb14792578a442545a13411a49d439932973007e07b74a9072c28",
    "bytes": 572845,
-   "read_at": "2026-11-10T14:45Z"
+   "read_at": "2026-11-10T17:50Z"
   }
  }
 }
