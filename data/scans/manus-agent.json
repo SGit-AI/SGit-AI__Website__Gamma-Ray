@@ -189,6 +189,20 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "Read; no change needed."
+   },
+   {
+    "round": 2,
+    "answer": "I18",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Removed: as you argue, the lifecycle page goes no further than 'the agent runs asynchronously', and the confirmation list includes ordinary actions, so it does not show a person approving critical decisions only. Recorded under not credited. Autonomy falls to 3, which rests on I08, S1 and I17 (available, Studio)."
+   },
+   {
+    "round": 2,
+    "answer": "I38",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Changed: mode available under a new 'Through the API' configuration; the note no longer reads a default the page does not state. Control 1 now holds as available."
    }
   ]
  },
@@ -257,13 +271,6 @@
    "m": "available",
    "cfg": "studio"
   },
-  "I18": {
-   "e": "https://open.manus.ai/docs/v2/task-lifecycle.md",
-   "n": "The API's task lifecycle has the agent run asynchronously once a task is created and stop in a waiting status for an action confirmation or a question; which actions wait is listed on the confirmation events page. This is the API surface.",
-   "span": "Poll task status, handle confirmations, and process results",
-   "g": "documented",
-   "m": "default"
-  },
   "I20": {
    "e": "https://manus.im/docs/introduction/welcome.md",
    "n": "The documentation states what the agent is for and describes the kinds of tasks it completes.",
@@ -289,10 +296,11 @@
   },
   "I38": {
    "e": "https://open.manus.ai/docs/v2/task-lifecycle/confirmation-events.md",
-   "n": "The API's confirmation events list actions that wait for the user before they run, among them sending email, deleting calendar events, deploying a service and running a command. This is the API's documented behaviour for people who build their own confirmation interface, and some confirmations accept global_allow, which skips later ones of that kind.",
+   "n": "The API's confirmation events list action types that wait for the user before they run, among them sending email, deleting calendar events, deploying a service and running a command; the page is for integrators who build their own confirmation interface, does not say when the waits occur in the app, and some types accept global_allow, which skips later ones.",
    "span": "Send, save as draft, or cancel",
    "g": "documented",
-   "m": "default"
+   "m": "available",
+   "cfg": "api"
   },
   "I39": {
    "e": "https://open.manus.ai/docs/v2/task.stop.md",
@@ -354,7 +362,13 @@
    "method": "probe"
   }
  },
- "not_credited": [],
+ "not_credited": [
+  {
+   "what": "The API's task lifecycle says the agent runs asynchronously after a task is created, and a list of action types can wait for confirmation.",
+   "why": "The list includes ordinary actions such as running a command, so it does not show an agent that works independently with a person approving only critical decisions.",
+   "source": "https://open.manus.ai/docs/v2/task-lifecycle.md"
+  }
+ ],
  "announced": [
   {
    "what": "Manus to be available with Microsoft Agent 365 as a launch partner ('available soon').",
@@ -415,6 +429,14 @@
    "note": "The extension lets the agent work in the user's own browser.",
    "on": [
     "browser-operator"
+   ]
+  },
+  {
+   "id": "api",
+   "name": "Through the API",
+   "note": "An integrator runs Manus through its API and answers its confirmation events in its own interface.",
+   "on": [
+    "api"
    ]
   }
  ],

@@ -218,29 +218,29 @@
   }
  ],
  "analysis": [
-  "**The shape.** Manus reads A4 · R2 · C1 · O0. Once a task is created the agent runs asynchronously in its own cloud machine, and the API documents the actions it carries out itself: sending email, changing calendar events, running commands, deploying a service. With connectors it acts in apps such as Gmail and Notion.",
-  "**Where the evidence is strongest.** Autonomy is backed by a named customer: k-ID's team runs more than eight thousand Manus sessions, by Manus's own account. The API says where the agent stops and waits: a published list of actions that need the person's confirmation, and an endpoint to stop a running task.",
-  "**Control at level 1, and why not 2.** The confirmations are documented, which is level 1. Level 2 asks for access that is narrower than the whole account, or what it can reach enumerated in a measured profile. Manus Studio's approval modes limit what the agent changes, not what it reads, so the rule is not met yet.",
+  "**The shape.** Manus reads A3 · R2 · C1 · O0. The API documents the actions the agent carries out itself: sending email, changing calendar events, running commands, deploying a service. With connectors it acts in apps such as Gmail and Notion, and in Manus Studio it handles routine local actions and asks the person when a decision is needed.",
+  "**Where the evidence is strongest.** Autonomy is backed by a named customer: k-ID's team runs more than eight thousand Manus sessions, by Manus's own account. The API publishes a list of action types that wait for a person's confirmation, and an endpoint to stop a running task.",
+  "**Control at level 1, and what would lift it.** The confirmations are documented for the API, which is level 1, marked available because the page does not say when they apply in the app. Level 2 asks for access narrower than the whole account; Manus Studio's approval modes limit what the agent changes, not what it reads. Autonomy 4 would need a public statement that the person approves only critical decisions.",
   "**Openness reads \"not yet evidenced\".** The rule for Documented is met (limits and data use are written down), but the ladder starts with a public statement that the agent tells the people it talks to that it is an AI. Manus lists SOC 2 and ISO 27001 on its security page; the certificates sit behind a page we could not read without JavaScript, so they are shown and not counted.",
   "**For readers.** The pages tell their own history: Meta acquired Manus on 29 December 2025, and Manus states it formally resumed independent operations in a post dated 1 September. The customer stories are Manus's own and are reported here as such."
  ],
  "article": {
-  "title": "Manus on the GAMMA-Ray Spectrum: A4 · R2 · C1 · O0",
-  "standfirst": "The GAMMA-Ray studio reads Manus AI's general agent from its public pages: it acts on its own in a cloud machine, its API names every action that waits for a person, and two published pages would move its card.",
+  "title": "Manus on the GAMMA-Ray Spectrum: A3 · R2 · C1 · O0",
+  "standfirst": "The GAMMA-Ray studio reads Manus AI's general agent from its public pages: it acts on its own for a named customer, its API names the actions that wait for a person, and two published pages would move its card.",
   "body": [
    "Manus AI, whose co-founder Tao Zhang speaks at Web Summit Lisbon 2026, makes a general agent that plans and carries out tasks for a user. We read it only from public sources, captured and hashed on 10 November 2026, and the published rules computed the card.",
-   "**Autonomy 4, Orchestrates.** Once a task starts, the agent runs asynchronously in its own virtual machine and carries out actions itself, from running commands to deploying a service. A named customer, k-ID, runs more than eight thousand sessions. With connectors, it reaches apps such as Gmail and Notion.",
+   "**Autonomy 3, Acts.** The agent carries out actions itself, from running commands to deploying a service. A named customer, k-ID, runs more than eight thousand sessions. In Manus Studio it handles routine actions and asks the person when a decision is needed.",
    "**Reach 2, Integrated.** Connectors and MCP servers link the agent to outside services; Manus also publishes an API with an OpenAPI description and an llms.txt.",
-   "**Control 1, Stated.** The API lists the actions that wait for a person's confirmation and offers a way to stop a task. Access narrower than the whole account would reach level 2.",
+   "**Control 1, Stated.** The API lists the action types that wait for a person's confirmation and offers a way to stop a task. Access narrower than the whole account would reach level 2.",
    "**Openness: not yet evidenced.** Limits and data use are documented; the first rung asks for a public statement that the agent tells the people it talks to that it is an AI.",
    "The card is beta and Manus AI has not seen it. It can claim the card and add evidence; corrections are dated."
   ],
   "pt": {
-   "title": "O Manus no GAMMA-Ray Spectrum: A4 · R2 · C1 · O0",
+   "title": "O Manus no GAMMA-Ray Spectrum: A3 · R2 · C1 · O0",
    "standfirst": "O estúdio GAMMA-Ray lê o agente geral da Manus AI a partir das suas páginas públicas: age sozinho numa máquina na nuvem e a sua API diz que ações esperam por uma pessoa.",
    "body": [
     "A Manus AI, cujo cofundador Tao Zhang fala no Web Summit Lisboa 2026, faz um agente geral que planeia e executa tarefas. Lemos apenas fontes públicas, capturadas e com hash a 10 de novembro de 2026.",
-    "**Autonomia 4.** O agente corre de forma assíncrona na sua própria máquina virtual; um cliente identificado, a k-ID, corre mais de oito mil sessões. **Alcance 2.** Conectores e servidores MCP ligam-no a serviços externos. **Controlo 1.** A API lista as ações que esperam confirmação e permite parar uma tarefa.",
+    "**Autonomia 3.** O agente executa ações sozinho; um cliente identificado, a k-ID, corre mais de oito mil sessões. **Alcance 2.** Conectores e servidores MCP ligam-no a serviços externos. **Controlo 1.** A API lista as ações que esperam confirmação e permite parar uma tarefa.",
     "**Abertura: ainda sem evidência.** O primeiro degrau pede uma declaração pública de que o agente diz às pessoas que é uma IA. O cartão é beta e a Manus AI ainda não o viu; pode reclamá-lo e acrescentar evidência."
    ]
   }
