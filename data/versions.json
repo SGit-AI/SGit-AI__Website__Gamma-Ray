@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.116",
+    "date": "2026-11-10",
+    "what": "re-check of claude-code-local (changes)",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "2403bdad8"
+  },
+  {
     "version": "v0.0.115",
     "date": "2026-11-10",
     "what": "re-checks of junie (pass), visor-ai-agents, granter-ai-grant-consultant and ethiack-hackian (changes)",
