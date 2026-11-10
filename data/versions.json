@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.67",
+    "date": "2026-11-10",
+    "what": "claude-code-web: round-two conditions answered (I56 wording and span, I45 names the proxy, I18 cites its second page)",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "fa9f6fd16"
+  },
+  {
     "version": "v0.0.66",
     "date": "2026-11-10",
     "what": "record the one-workflow guidance and name the data files other sites read",
