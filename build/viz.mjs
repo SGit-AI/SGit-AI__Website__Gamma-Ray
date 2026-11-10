@@ -367,3 +367,47 @@ export function paths(g, up = '../../../') {
     })
     return o + '<p class="figcap">Each path has its verbs on the edges; every node is a link, the source opens the page, a dashed box is an open question, not a no.</p>'
 }
+
+// 13. One question and what an answer to it reaches: the question, its indicators, the instruments their provisions sit in and each
+// provision (a link to its own page). The question-led form of the mashup, one column, for a phone. `reaches` makes one fold-out per question.
+export function questionReach(m, qid, up = '../') {
+    const q = m.questions.find(x => x.id === qid); if (!q) return ''
+    const W = 440, LH = 15, wB = W - 24
+    let y = 0, o = ''
+    const link = (href, inner, title) => `<a href="${esc(href)}"><title>${esc(title)}</title>${inner}</a>`
+    const L0 = wrap(q.text, 62)
+    o += link(up + 'questions/#' + slugQ(q), `<rect class="p-n p-card" x="0" y="0" width="${W}" height="${L0.length * LH + 26}" rx="6"/><text class="p-k" x="8" y="14">${q.id.replace('Q', 'QUESTION ')} · ${esc(q.axis.toUpperCase())}</text>` + L0.map((t, i) => `<text x="8" y="${29 + i * LH}">${esc(t)}</text>`).join(''), `${q.id}: ${q.text} (the questions page)`)
+    y = L0.length * LH + 26
+    const spineTop = y
+    let spineEnd = y
+    for (const i of q.ind) {
+        y += 22; o += `<path class="p-e" d="M14 ${y} h14"/><path class="p-ar" d="M22 ${y - 4} l6 4 l-6 4"/><text class="p-v" x="20" y="${y - 6}">asked_as</text>`; spineEnd = y
+        const IL = wrap(i.text, 58), per = new Map()
+        for (const l of i.links) { const P = m.P.get(l.provision); if (P) per.set(P.standard, (per.get(P.standard) || 0) + 1) }
+        const h = IL.length * LH + 26
+        o += link(up + 'questions/#' + i.id, `<rect class="p-n p-ev" x="28" y="${y}" width="${W - 28}" height="${h}" rx="6"/><text class="p-k" x="36" y="${y + 14}">INDICATOR ${i.id} · ${esc(TIER_LABEL[i.tier].toUpperCase())}</text>` + IL.map((t, k) => `<text x="36" y="${y + 29 + k * LH}">${esc(t)}</text>`).join(''), `${i.id}: ${i.text} (its row on the questions page)`)
+        y += h + 8
+        let cx = 36, cy = y
+        for (const [sid, n] of per) {
+            const S = m.S.get(sid), t = `${S.short.replace(' authorization', '')} ${n}`, cw = Math.min(W - 48, t.length * 7.6 + 32)
+            if (cx + cw > W) { cx = 36; cy += 28 }
+            o += link(up + 'instruments/#' + slugQ({ id: 'Q', text: S.name }).replace(/^q-/, ''), `<g class="s-${sid}"><rect class="w-ch" x="${cx}" y="${cy}" width="${cw}" height="22" rx="11"/><circle class="w-dot" cx="${cx + 11}" cy="${cy + 11}" r="4.5"/><text x="${cx + 21}" y="${cy + 15.5}">${esc(t)}</text></g>`, `${n} provision${n > 1 ? 's' : ''} of ${S.name} (the instruments page)`)
+            cx += cw + 6
+        }
+        let px = 36, py = cy + 22 + 18; o += `<text class="p-sm" x="36" y="${py}">provisions:</text>`; px = 36 + 74
+        for (const l of i.links) { const P = m.P.get(l.provision); if (!P) continue
+            const t = l.provision + (l.relation === 'same' ? '' : l.relation === 'part' ? ' (part)' : ' (absence)'), tw = t.length * 6.7 + 10
+            if (px + tw > W) { px = 36; py += 17 }
+            o += link(up + 'provisions/' + l.provision + '/', `<text class="w-pv" x="${px}" y="${py}">${esc(t)}</text>`, `${m.S.get(P.standard).short}, ${P.ref} (its page)`)
+            px += tw }
+        y = py + 12
+    }
+    o = `<path class="p-e" d="M14 ${spineTop} V${spineEnd}"/>` + o
+    const css = `<style>.pg text{font:12.5px var(--sans);fill:var(--ink)}.pg a{cursor:pointer}.pg a:hover rect,.pg a:focus rect{stroke-width:2.5}.pg .p-e,.pg .p-ar{fill:none;stroke:var(--ink3);stroke-width:1.5}.pg .p-v{font:italic 11.5px var(--mono);fill:var(--ink2)}.pg .p-k{font:700 10px var(--mono);letter-spacing:.06em;fill:var(--ink3)}.pg .p-sm{font-size:11.5px;fill:var(--ink3)}.pg .p-n{fill:var(--paper);stroke:var(--ink2);stroke-width:1.3}.pg .p-card{fill:var(--band);stroke:var(--ink);stroke-width:1.8}.pg .p-ev{stroke:var(--accent)}.pg .w-ch{fill:var(--paper);stroke:var(--c);stroke-width:1.5}.pg .w-dot{fill:var(--c)}.pg .w-pv{font:11px var(--mono);fill:var(--ink2);text-decoration:underline}</style>`
+    return `<svg class="fig walk pg" style="min-width:0;max-width:520px;margin:0 auto" viewBox="0 0 ${W} ${Math.ceil(y + 6)}" role="group" aria-label="${esc(`${q.id}: ${q.text} One answer is asked as ${q.ind.length} indicators and reaches ${q.provisions.length} provisions in ${q.standards.length} instruments.`)}">${css}${o}</svg>`
+}
+export function reaches(m, up = '../') {
+    return '<style>.pg-d{border:1px solid var(--hair);border-radius:10px;margin:.6em 0;padding:0 12px}.pg-d>summary{cursor:pointer;padding:10px 0;font-size:15px;line-height:1.35}.pg-d figure{margin:.6em 0 1em}</style>' +
+        m.questions.map((q, k) => `<details class="pg-d"${k === 0 ? ' open' : ''}><summary><b>${q.id.replace('Q', 'Q ')}</b> ${esc(q.text)} <span class="dim">${q.provisions.length} provisions in ${q.standards.length} instruments</span></summary><figure>${questionReach(m, q.id, up)}</figure></details>`).join('') +
+        '<p class="figcap">Open a question to see what one answer to it reaches: its indicators, the instruments their provisions sit in and each provision itself. Every node is a link.</p>'
+}
