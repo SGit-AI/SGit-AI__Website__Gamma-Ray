@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.24",
+    "date": "2026-11-10",
+    "what": "log the check of the live card walk",
+    "by": "gamma.graphs@web-summit.dinis",
+    "from": "9ef657daf"
+  },
+  {
     "version": "v0.0.23",
     "date": "2026-11-10",
     "what": "hashes wrap whole, not mid-token",
