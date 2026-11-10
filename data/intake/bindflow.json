@@ -1,17 +1,54 @@
 {
  "id": "bindflow",
- "company": "Bind Flow",
- "domain": null,
+ "company": "Bind (Bind Technologies)",
+ "domain": "bind.hr",
  "products": [
-  { "name": "Bind Flow", "said": "AI-powered customer engagement platform", "agent_candidate": true }
+  {
+   "name": "Bind Flow",
+   "said": "AI-powered customer engagement platform",
+   "agent_candidate": false
+  }
  ],
- "seen": { "event": "Web Summit 2026", "where": "a hanging banner next to stand E163", "on": "2026-11-10", "by": "Dinis Cruz", "medium": "in the background of a photo of another stand" },
- "photo": { "held_by": "Dinis Cruz", "published": false, "why": "it shows people" },
+ "seen": {
+  "event": "Web Summit 2026",
+  "where": "a hanging banner next to stand E163",
+  "on": "2026-11-10",
+  "by": "Dinis Cruz",
+  "medium": "in the background of a photo of another stand"
+ },
+ "photo": {
+  "held_by": "Dinis Cruz",
+  "published": false,
+  "why": "it shows people"
+ },
  "booth_claims": [
-  { "text": "AI-powered customer engagement platform", "reads": "S2·R3·A0" }
+  {
+   "text": "AI-powered customer engagement platform",
+   "reads": "S2·R3·A0"
+  }
  ],
- "note": "Seen only on a banner; the name's last letters are cut off by the frame. No domain was visible: identify the company before anything else, and drop this intake if it cannot be identified from public sources.",
- "triage": { "agent": null, "why": "Not identified yet." },
+ "note": "Seen only on a banner; the name's last letters are cut off by the frame. Identified from public sources on 2026-11-10 (see identified).",
+ "triage": {
+  "agent": false,
+  "why": "On Bind's own pages the AI in Bind Flow suggests campaign content and a person approves before anything is sent: \"review, approve and send on your terms\" (home page) and \"Review and approve the campaign before it goes live\" (campaign management). Scheduled sends and channel fallback run without a person, but they are described as automation, not as anything that decides. Nothing read says the AI acts on its own. This is not a no: a later public page that shows it acting would reopen the intake.",
+  "sources": [
+   "https://www.bind.hr/",
+   "https://www.bind.hr/campaign-management"
+  ],
+  "read": "2026-11-10",
+  "by": "gamma.field@web-summit.dinis"
+ },
  "scan": null,
- "status": "intake"
+ "status": "no-agent",
+ "identified": {
+  "company": "Bind (Bind Technologies), maker of Bind Flow",
+  "domain": "bind.hr",
+  "how": "The product name matches the banner, and the company's own press release is datelined at Web Summit Lisbon, 9 November 2026: \"announced the launch of Bind Flow at Web Summit 2026\". Its home page title reads \"Customer Engagement Platform for Every Channel\"; the banner's exact tagline was not found on bind.hr, and the stand number is not on any public page read.",
+  "sources": [
+   "https://www.bind.hr/",
+   "https://www.bind.hr/news-and-press/bind-introduces-bind-flow-a-unified-platform-for-smarter-customer-engagement-across-mobile"
+  ],
+  "read": "2026-11-10",
+  "by": "gamma.field@web-summit.dinis"
+ }
 }
