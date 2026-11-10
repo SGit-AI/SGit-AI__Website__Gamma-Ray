@@ -110,6 +110,64 @@
      }
     ]
    }
+  ],
+  "responses": [
+   {
+    "round": 1,
+    "answer": "I15",
+    "by": "gamma.field@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Lowered to not credited, as the finding allows: the sentence is about data sharing and the help-centre articles (read in a browser) do not settle I15 or I16. The card's Autonomy is therefore not yet evidenced, although I08 says Alfie acts; the Autonomy ladder has no rung for an agent that acts with no stated mode (A3 needs I17 to I19 beside I08). That is a rule question, asked of gamma-ray@ in team/requests.md; until it is answered the card stays below level one in Autonomy and must not be published."
+   },
+   {
+    "round": 1,
+    "answer": "I08",
+    "by": "gamma.field@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Source moved to the product page, as suggested: 'Submit and approve time-off requests' (5 words, verified in the capture). The note now says only what that page says, with the June release named as saying the same. Credit, grade and mode unchanged."
+   },
+   {
+    "round": 1,
+    "answer": "I07",
+    "by": "gamma.field@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note corrected: 'that the user then acts on' removed; it now says the same page also lists actions Alfie takes (I08)."
+   },
+   {
+    "round": 1,
+    "answer": "I22",
+    "by": "gamma.field@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Clause about the terms of use removed."
+   },
+   {
+    "round": 1,
+    "answer": "I58",
+    "by": "gamma.field@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Clause citing the December 2025 release removed."
+   },
+   {
+    "round": 1,
+    "answer": "I40",
+    "by": "gamma.field@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Answered before this round arrived, then trimmed: the source is now the help article 'What is Alfie?' (read in a browser; text also in the captured page's embedded data), which says Alfie offers to open a support inquiry and passes the conversation to the Operations team. The December 2025 and launch-release clauses are gone. Still thin, as the reviewer says; it feeds no level."
+   },
+   {
+    "round": 1,
+    "answer": "I09",
+    "by": "gamma.field@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "'payroll' removed from the note; the rest is on the product page."
+   },
+   {
+    "round": 1,
+    "answer": "I68",
+    "by": "gamma.field@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note now says the structured program clause is on the product page's FAQ, not on the updates page, and that most entries sit in the embedded data."
+   }
   ]
  },
  "assessment": {
@@ -148,6 +206,9 @@
     "at": "2026-11-10",
     "why": "Re-sourced to the help article, which says it more directly; same credit."
    }
+  ],
+  "lowered_after_review": [
+   "I15"
   ]
  },
  "answers": {
@@ -160,29 +221,22 @@
   },
   "I07": {
    "e": "https://hellopebl.com/platform/alfie-ai-assistant/",
-   "n": "Alfie gives country-specific guidance, reports and recommended next steps that the user then acts on.",
+   "n": "The product page lists proactive guidance, reports and recommended next steps among what Alfie gives; the same page also lists actions Alfie takes itself (I08).",
    "span": "Proactive guidance and recommended next steps",
    "g": "documented",
    "m": "default"
   },
   "I08": {
-   "e": "https://hellopebl.com/news/pebl-says-hr-chatbot-era-ending-alfie-evolves-assistant-workforce-agent/",
-   "n": "The June 2026 release says Alfie completes approvals and workforce requests inside Pebl; the product page lists submitting and approving time-off requests among Alfie's capabilities.",
-   "span": "Alfie completes approvals, workforce requests, reporting, and global employment workflows directly inside Pebl",
+   "e": "https://hellopebl.com/platform/alfie-ai-assistant/",
+   "n": "The product page lists submitting and approving time-off requests among what Alfie does, and says everyday workforce tasks are completed directly through Alfie. The June 2026 release says the same of approvals and workforce requests. No page names an opt-in for these actions.",
+   "span": "Submit and approve time-off requests",
    "g": "documented",
    "m": "default"
   },
   "I09": {
    "e": "https://hellopebl.com/platform/alfie-ai-assistant/",
-   "n": "Alfie works inside Pebl's global employment platform, on that platform's employment, compensation, time-off, payroll and invoice data.",
+   "n": "Alfie works inside Pebl's global employment platform, on that platform's employment, compensation, time-off and invoice data.",
    "span": "embedded across Pebl’s global employment platform",
-   "g": "documented",
-   "m": "default"
-  },
-  "I15": {
-   "e": "https://hellopebl.com/platform/alfie-ai-assistant/",
-   "n": "The FAQ says Pebl shares data with third parties only when needed to answer or to take an action the user requests; the actions named (submitting and approving time off) are made on the user's request in the conversation. No source says whether Alfie asks the user to confirm before it acts.",
-   "span": "take an action that you request",
    "g": "documented",
    "m": "default"
   },
@@ -195,7 +249,7 @@
   },
   "I22": {
    "e": "https://hellopebl.com/platform/alfie-ai-assistant/",
-   "n": "The FAQ says AI can make mistakes, that users must keep human oversight, and that outputs are not legal, tax or professional advice; the terms of use repeat this for all Pebl AI tools.",
+   "n": "The FAQ says AI can make mistakes, that users must keep human oversight, and that outputs are not legal, tax or professional advice.",
    "span": "AI can make mistakes. Users must ensure appropriate human oversight",
    "g": "documented",
    "m": "default"
@@ -209,7 +263,7 @@
   },
   "I40": {
    "e": "https://help.hellopebl.com/en-US/pebl/article/RSvaTfOc-what-is-alfie",
-   "n": "Pebl's help article says that when a request needs human review or cannot be answered with confidence, Alfie offers to open a support inquiry and passes the conversation to Pebl's Operations team; the launch release also states a handoff to a human expert. The article's text is in the captured page's embedded data and shows only in a browser; the rendered text is in the vault (work/rendered/).",
+   "n": "Pebl's help article says that when a request needs human review or cannot be answered with confidence, Alfie offers to open a support inquiry and passes the conversation to Pebl's Operations team. It does not say who handles it beyond that team, or how. The article's text is in the captured page's embedded data and shows only in a browser; the rendered text is in the vault (work/rendered/).",
    "span": "Alfie will automatically offer to open a support inquiry",
    "g": "documented",
    "m": "default"
@@ -223,7 +277,7 @@
   },
   "I58": {
    "e": "https://hellopebl.com/platform/alfie-ai-assistant/",
-   "n": "The FAQ says Pebl's own models are trained on vetted global hiring documentation and that Alfie may use the customer's Pebl account data; the December 2025 release says Alfie Support draws on Pebl's indexed help centre and global employment database.",
+   "n": "The FAQ says Pebl's own models are trained on vetted global hiring documentation and that Alfie may use the customer's Pebl account data.",
    "span": "Alfie may leverage your Pebl account data to provide contextual answers",
    "g": "documented",
    "m": "default"
@@ -244,7 +298,7 @@
   },
   "I68": {
    "e": "https://hellopebl.com/platform-updates/",
-   "n": "The platform updates page lists dated Alfie changes in 2026: 4 June (benefits), 30 June (prompt cards), two on 27 August (currency conversion, saved reports), 27 October (invoices) and 5 November (payroll calendar). The intervals are not fixed. The Alfie FAQ also states a structured program to improve AI accuracy, with no cycle given.",
+   "n": "The platform updates page lists dated Alfie changes in 2026: 4 June (benefits), 30 June (prompt cards), two on 27 August (currency conversion, saved reports), 27 October (invoices) and 5 November (payroll calendar); most entries sit in the page's embedded data, the rendered page shows three. The intervals are not fixed. A structured program to improve AI accuracy is stated on the Alfie product page's FAQ, not on this page, with no cycle given.",
    "span": "Your payroll calendar, now connected to Alfie",
    "g": "documented",
    "m": "default"
@@ -332,6 +386,11 @@
   {
    "what": "I25: the FAQ says Alfie respects each user's role-level permissions; an employee can ask only about their own data; only account admins can generate reports with Alfie.",
    "why": "Alfie inherits the user's own access, which is the same as the user's account, not narrower. The report restriction is not shown to be narrower than what those roles can do elsewhere in the platform.",
+   "source": "https://hellopebl.com/platform/alfie-ai-assistant/"
+  },
+  {
+   "what": "I15: the FAQ says Pebl shares data only to answer or to \"take an action that you request\".",
+   "why": "Lowered after review round one: the sentence is about data sharing and shows only that an action can follow a request; no source says who controls each action, and the pages also show Alfie prompting the user (recommended next steps, follow-up prompts). Pebl's three help-centre articles on Alfie, read in a browser on 2026-11-10, do not say whether Alfie asks for confirmation before it acts, so I16 is not evidenced either. Not evidenced is not no.",
    "source": "https://hellopebl.com/platform/alfie-ai-assistant/"
   }
  ],
