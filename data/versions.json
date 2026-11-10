@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.57",
+    "date": "2026-11-10",
+    "what": "Manus is live; a report's review and sign-off rows come from its card's review record",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "e730cec9b"
+  },
+  {
     "version": "v0.0.56",
     "date": "2026-11-10",
     "what": "matrix states, long links wrap",
