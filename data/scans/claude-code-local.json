@@ -132,17 +132,17 @@
   },
   "I16": {
    "e": "https://code.claude.com/docs/en/permissions",
-   "n": "In Manual mode shell commands and edits ask before they run; file reads in the working directory do not.",
+   "n": "In Manual mode, which the person chooses, shell commands and edits ask before they run; file reads in the working directory do not.",
    "g": "documented",
-   "m": "default"
+   "m": "available",
+   "cfg": "manual"
   },
   "I18": {
    "e": "https://code.claude.com/docs/en/permission-modes",
-   "n": "In auto mode a classifier reviews actions instead of prompting; an action it blocks is listed, and the person can approve it so Claude may retry.",
+   "n": "From v2.1.283, auto mode is the built-in starting mode for terminal and VS Code sessions: a classifier reviews actions instead of prompting; an action it blocks is listed, and the person can approve it so Claude may retry.",
    "span": "approve the action so Claude may retry",
    "g": "documented",
-   "m": "available",
-   "cfg": "auto"
+   "m": "default"
   },
   "I20": {
    "e": "https://code.claude.com/docs/en/overview",
@@ -171,9 +171,10 @@
   },
   "I38": {
    "e": "https://code.claude.com/docs/en/permissions",
-   "n": "Shell commands (beyond a read-only set) and edits need approval in Manual mode.",
+   "n": "In Manual mode, which the person chooses, shell commands beyond a read-only set and edits need approval.",
    "g": "documented",
-   "m": "default"
+   "m": "available",
+   "cfg": "manual"
   },
   "I39": {
    "e": "https://code.claude.com/docs/en/interactive-mode",
@@ -205,7 +206,7 @@
   },
   "I48": {
    "e": "https://code.claude.com/docs/en/settings",
-   "n": "An organisation can deliver managed settings that a user’s own files do not change; hooks run on every tool call and can block it. This is an enforcement mechanism, not a policy.",
+   "n": "An organisation can deliver managed settings that a user’s own files do not change; hooks run on every tool call and can block it. This is an enforcement mechanism, not a policy It applies only where an organisation deploys managed settings.",
    "g": "documented",
    "m": "available",
    "cfg": "managed"
@@ -230,13 +231,6 @@
    "m": "available",
    "cfg": "teams"
   },
-  "S1": {
-   "e": "https://claude.com/customers/stripe",
-   "n": "A vendor case study names a customer and a figure: Stripe deployed it to 1,370 engineers.",
-   "span": "Deployed Claude Code to 1,370 engineers with a zero-configuration setup",
-   "g": "documented",
-   "m": "default"
-  },
   "S2": {
    "e": "https://code.claude.com/docs/en/plugins/anthropic-marketplaces",
    "n": "The vendor’s community marketplace holds third-party plugins their authors submitted, and the page says many plugins sit in their authors’ own marketplaces.",
@@ -253,8 +247,8 @@
   },
   "I56": {
    "e": "https://code.claude.com/docs/en/settings-reference",
-   "n": "By default it adds a Co-Authored-By trailer naming the Claude model to its commits and a Generated with Claude Code line to pull request descriptions; a setting can change or hide both.",
-   "span": "The name is the model in use when the commit is made",
+   "n": "By default its commits carry a Co-Authored-By trailer naming the Claude model in use; a setting can change or hide it.",
+   "span": "so Claude Code adds Co-Authored-By: <name>",
    "g": "documented",
    "m": "default"
   },
@@ -272,7 +266,7 @@
   },
   "I45": {
    "e": "https://code.claude.com/docs/en/sandboxing",
-   "n": "Sandboxing restricts shell commands at the operating system level (filesystem and network); the operator turns it on.",
+   "n": "Sandboxing restricts shell commands at the operating system level (filesystem and network). The page says it is off by default, that it wraps shell commands while the built-in file tools run outside it, and that Claude can ask to run a command unsandboxed unless strict sandbox mode is on.",
    "g": "documented",
    "m": "available",
    "cfg": "sandbox"
@@ -282,7 +276,7 @@
   {
    "id": "shipped",
    "name": "As shipped",
-   "note": "Manual mode: shell commands and edits ask first.",
+   "note": "Auto mode, the built-in starting mode from v2.1.283: a classifier reviews actions instead of the person.",
    "on": []
   },
   {
@@ -294,11 +288,11 @@
    ]
   },
   {
-   "id": "auto",
-   "name": "Auto mode",
-   "note": "A classifier reviews actions instead of the person.",
+   "id": "manual",
+   "name": "Manual mode",
+   "note": "The person chooses Manual mode: shell commands and edits ask first.",
    "on": [
-    "auto"
+    "manual"
    ]
   },
   {
@@ -312,10 +306,9 @@
   },
   {
    "id": "max",
-   "name": "Auto mode, tools and agent teams",
+   "name": "With tools and agent teams",
    "note": "Everything that widens what it does.",
    "on": [
-    "auto",
     "mcp",
     "teams"
    ]
@@ -603,7 +596,56 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "Restored under the Spectrum reading of I45 (gamma-ray@, data/indicators.json): the source documents a limit enforced outside the agent, named in the note. The governance rating still reads I45 from a measured grant only."
+   },
+   {
+    "round": 2,
+    "answer": "I18 and the configurations",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Changed: the scan now describes a current version (v2.1.283 or later), where auto mode is the starting mode. I18 is default; I16 and I38 are available under a new Manual mode configuration that the person chooses; 'As shipped' now says auto mode. Control 1 and 2 now rest on I38 as available."
+   },
+   {
+    "round": 2,
+    "answer": "S1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Removed, as you argued: a rollout count, and the page says the customer does not treat it as working autonomously. Recorded under not credited. Autonomy falls to the highest level its other facts meet."
+   },
+   {
+    "round": 2,
+    "answer": "I45",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Changed: the note carries the three facts (off by default, shell commands only, unsandboxed retries unless strict mode)."
+   },
+   {
+    "round": 2,
+    "answer": "I48",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Changed: the note says it applies only where an organisation deploys managed settings. With neither managed settings nor the sandbox, Control 4 does not hold; the card names the configuration each level holds in."
+   },
+   {
+    "round": 2,
+    "answer": "I56",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Changed: the span is the start of the trailer sentence (the rest of it is an address, which this site does not reproduce); the pull request wording is removed from the note."
+   },
+   {
+    "round": 2,
+    "answer": "I41, I43, S2, I61, I23, S1 round one, I39",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Read; no change needed."
    }
   ]
- }
+ },
+ "not_credited": [
+  {
+   "what": "A vendor case study states Stripe deployed Claude Code to 1,370 engineers.",
+   "why": "A rollout count, not a figure for work the agent completes on its own; the same page says Stripe treats AI assistants as engineers who need context, not ones who work autonomously.",
+   "source": "https://claude.com/customers/stripe"
+  }
+ ]
 }

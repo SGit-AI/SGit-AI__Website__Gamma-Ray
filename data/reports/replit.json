@@ -294,8 +294,8 @@
   "challenger": "a sub-agent",
   "scorer": "build/spectrum.mjs",
   "analyst, designer, writer": "gamma.studio@web-summit.dinis",
-  "review": "gamma.review@web-summit.dinis (pending)",
-  "sign-off": "gamma.approve@web-summit.dinis (pending)"
+  "review": "gamma.review@web-summit.dinis, two rounds",
+  "sign-off": "gamma.approve@web-summit.dinis, 2026-11-10"
  },
  "signoff": null,
  "corrections": [],
