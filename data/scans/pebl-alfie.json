@@ -252,6 +252,20 @@
     "by": "gamma.field@web-summit.dinis",
     "at": "2026-11-10",
     "response": "Span moved from the title to a row of the Time table: 'Pending approvals queue (view only)' (5 words, verified in the capture). Note reworded to 'tables of features by role', one per feature group with a column per role, and says time-off approvals are ticked for some roles only. The vault's work/rendered/ holds the three articles as rendered (checked by a fresh clone with the public read key). I08 left on the product page: the table row is noted under I23 rather than moving I08 again."
+   },
+   {
+    "round": 3,
+    "answer": "I15",
+    "by": "gamma.field@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Every page a not_credited entry cites is now captured and hashed: the third help article (How can I access Alfie), the October 2025 and December 2025 releases, the security page, the OpenAPI description, the privacy policy, and the September 2025 rebrand release, which the I65 entry named in words and now cites by URL. Fetched once each on 2026-11-10, saved in the vault (captures/x01 to x07) and in the scan's captures with their SHA-256; each entry's claim was checked in its capture (for example 'two coordinated AI agents', ISO 27001, Abacus.AI, 'handoff to a human expert'). No claim was cut."
+   },
+   {
+    "round": 3,
+    "answer": "I12,I17,I57,I63,I43,I51,S4,I61",
+    "by": "gamma.field@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Every page a not_credited entry cites is now captured and hashed: the third help article (How can I access Alfie), the October 2025 and December 2025 releases, the security page, the OpenAPI description, the privacy policy, and the September 2025 rebrand release, which the I65 entry named in words and now cites by URL. Fetched once each on 2026-11-10, saved in the vault (captures/x01 to x07) and in the scan's captures with their SHA-256; each entry's claim was checked in its capture (for example 'two coordinated AI agents', ISO 27001, Abacus.AI, 'handoff to a human expert'). No claim was cut."
    }
   ]
  },
@@ -294,7 +308,8 @@
   ],
   "lowered_after_review": [
    "I15"
-  ]
+  ],
+  "captures_note": "tools/capture.mjs captures the sources of answers; the pages cited only by not_credited entries were captured the same way (fetched once, SHA-256, saved in the vault as captures/x01 to x07, marked cited_by not_credited in the vault's captures.json) and merged into captures. A later run of tools/capture.mjs rewrites captures from answers only and would drop them (asked of gamma-ray@)."
  },
  "answers": {
   "I01": {
@@ -459,7 +474,7 @@
    "source": "https://hellopebl.com/legal/privacy-policy/"
   },
   {
-   "what": "I65: the June 2026 release and the September 2025 rebrand present Pebl as 'AI-first' and Alfie as moving from assistant to workforce agent.",
+   "what": "I65: the June 2026 release and the September 2025 rebrand release (https://hellopebl.com/news/velocity-global-rebrands-as-pebl-introducing-ai-first-global-hiring-platform/) present Pebl as 'AI-first' and Alfie as moving from assistant to workforce agent.",
    "why": "Product positioning in press releases, not a stated strategy for agents.",
    "source": "https://hellopebl.com/news/pebl-says-hr-chatbot-era-ending-alfie-evolves-assistant-workforce-agent/"
   },
@@ -527,6 +542,41 @@
    "sha256": "a10c4874d3ead8b5584139d95862caadcec54c9daefde75ac3a0704317537dd4",
    "bytes": 810125,
    "read_at": "2026-11-10T14:12Z"
+  },
+  "https://developer.hellopebl.com/openapi.yaml": {
+   "sha256": "29fffc2ea9f1e7ecbd47c7b0e7284bafd6aca8669f69de4c5c161fd02a53a6b4",
+   "bytes": 237359,
+   "read_at": "2026-11-10T20:07Z"
+  },
+  "https://hellopebl.com/legal/privacy-policy/": {
+   "sha256": "c02eca3b44345b44ae8f7484e91c3a96782c56db922c95f2dee6e1dd251500e8",
+   "bytes": 284590,
+   "read_at": "2026-11-10T20:07Z"
+  },
+  "https://hellopebl.com/news/companies-can-now-expand-their-workforce-globally-minutes-pebls-ai-assistant-alfie/": {
+   "sha256": "d089cffb220e93db12d4d4a93fd01dd8c097ca91a4fcb242a36a857ef08b7ce5",
+   "bytes": 198452,
+   "read_at": "2026-11-10T20:07Z"
+  },
+  "https://hellopebl.com/news/pebl-introduces-new-ai-agents-redefine-speed-intelligence-and-compliance-global-hiring/": {
+   "sha256": "8584d30292d9d416070a36cae68621cfc24e7bb70a3d04c5f038bb231524bf10",
+   "bytes": 203736,
+   "read_at": "2026-11-10T20:07Z"
+  },
+  "https://hellopebl.com/platform/security/": {
+   "sha256": "c5878e74badee3f75b0600fc114a36397f2688c84c2422365d66b72e2cad8197",
+   "bytes": 212308,
+   "read_at": "2026-11-10T20:07Z"
+  },
+  "https://help.hellopebl.com/en-US/pebl/article/PPx0P6e8-how-can-i-access-alfie-through-global-work-platform": {
+   "sha256": "aa8e99d1e729c6dd94de1e04705cfade01bd16061b2a4a0bf67526a440c8a4f1",
+   "bytes": 807328,
+   "read_at": "2026-11-10T20:07Z"
+  },
+  "https://hellopebl.com/news/velocity-global-rebrands-as-pebl-introducing-ai-first-global-hiring-platform/": {
+   "sha256": "375e2dbb7cf48ce8cfdff019045d72d21c44ff7f4c6da6fc39fc79e2af787354",
+   "bytes": 197164,
+   "read_at": "2026-11-10T20:07Z"
   }
  }
 }
