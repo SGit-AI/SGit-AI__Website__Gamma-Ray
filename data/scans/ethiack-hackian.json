@@ -536,6 +536,34 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "No level change: A4 R2 C1 O1 stands with I19 narrowed to what the page says (agentic pentests, not 'full', visibility through the log); the reviewer's note that Autonomy rests on documented vendor statements, I19 the weakest, is accepted and the card claims nothing observed for Autonomy."
+   },
+   {
+    "round": 5,
+    "answer": "I19",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Conceded: removed and recorded under not credited. No captured page supports both halves (full autonomy, a person monitoring). Autonomy now reads not yet evidenced; the card publishes on Reach 2, Control 1 and Openness 1."
+   },
+   {
+    "round": 5,
+    "answer": "announced",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Changed: the five announced entries citing uncaptured pages (the spring release post and the retesting page) are cut; the one left cites a captured page."
+   },
+   {
+    "round": 5,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Agreed. Without I19, Autonomy has no level: Hackian is documented to act (I08) but nothing public states how a person takes part, which is the open question 'acts-without-mode' in data/decisions.json."
+   },
+   {
+    "round": 5,
+    "answer": "I04 (not_credited), not_credited sources, I10, I57, I39, I22, S1, I08, I11, I20, I41, I47, I50, S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Read; no change needed."
    }
   ]
  },
@@ -580,13 +608,6 @@
    "g": "documented",
    "m": "available",
    "cfg": "beacon"
-  },
-  "I19": {
-   "e": "https://docs.ethiack.com/docs/portal/tests/agentic-pentest-policy-guidelines",
-   "n": "For agentic pentests only, the policy guidelines say the autonomous agent makes its decisions in real time from the customer's written policy, with guardrails on what it must not do; the page does not say the autonomy is full, and the person's view is the test-details activity log (I41), which gives clients visibility into what is being tested.",
-   "span": "an agentic test relies on this policy to make decisions in real time",
-   "g": "documented",
-   "m": "default"
   },
   "I20": {
    "e": "https://docs.ethiack.com/docs/portal/tests/agentic-pentests",
@@ -663,29 +684,14 @@
    "what": "I04 (generates and executes code with privileges)",
    "why": "The product page's 'Non-destructive exploit generation' and 'builds and executes sophisticated exploit chains' describe testing against the customer's targets; they do not show code executed with local or cloud privileges. No level uses it.",
    "source": "https://ethiack.com/hackian"
+  },
+  {
+   "what": "I19 The agent has full autonomy within boundaries; the person monitors",
+   "why": "The policy-guidelines page says an agentic test relies on the customer's policy to make decisions in real time, but it does not say the autonomy is full or that a person monitors; the activity log is shown to clients without saying who watches it.",
+   "source": "https://docs.ethiack.com/docs/portal/tests/agentic-pentest-policy-guidelines"
   }
  ],
  "announced": [
-  {
-   "what": "An MCP server that will let external agents query Ethiack findings and trigger tests (forthcoming)",
-   "source": "https://ethiack.com/info-hub/product/spring-release-2026"
-  },
-  {
-   "what": "Step-by-step visibility into Hackian's execution, including sub-agent selection and guardrail validations (announced for Q2 2026)",
-   "source": "https://ethiack.com/info-hub/product/spring-release-2026"
-  },
-  {
-   "what": "Active Directory testing and privilege escalation validation in the Hackian engine",
-   "source": "https://ethiack.com/info-hub/product/spring-release-2026"
-  },
-  {
-   "what": "Integrations with ServiceNow, Wiz, AWS and GCP",
-   "source": "https://ethiack.com/info-hub/product/spring-release-2026"
-  },
-  {
-   "what": "Automatic retesting of findings discovered by the agent (not yet available)",
-   "source": "https://docs.ethiack.com/docs/portal/findings/retesting"
-  },
   {
    "what": "Marketing figures: over 75% of PortSwigger labs solved, 99.5%+ accuracy, 30x faster than manual pentests",
    "source": "https://ethiack.com/hackian"
