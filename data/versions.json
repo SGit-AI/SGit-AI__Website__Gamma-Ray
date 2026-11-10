@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.100",
+    "date": "2026-11-10",
+    "what": "hourly log",
+    "by": "gamma.field@web-summit.dinis",
+    "from": "d1a621368"
+  },
+  {
     "version": "v0.0.99",
     "date": "2026-11-10",
     "what": "log",
