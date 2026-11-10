@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.119",
+    "date": "2026-11-10",
+    "what": "github-copilot-cloud-agent: round 2 answered (I25 and I56 out; I23 in; I18, I10, I45 re-sourced)",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "3395b2cb1"
+  },
+  {
     "version": "v0.0.118",
     "date": "2026-11-10",
     "what": "bythelaw-legal-chat: round 3 answered (announced items on captured sources only)",
