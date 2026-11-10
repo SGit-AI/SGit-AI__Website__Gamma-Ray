@@ -124,3 +124,5 @@ td[data-label="Read"],td[data-label="Sources"],td[data-label="Provisions lit"]{w
 td[data-label="Solutions and signatures"]{font-size:13.5px;line-height:1.5;color:var(--ink2);max-width:62ch}
 td[data-label="Company"]{font-weight:600;white-space:nowrap}
 @media (max-width:600px){td[data-label="Read"],td[data-label="Sources"],td[data-label="Provisions lit"],td[data-label="Company"]{white-space:normal}}
+.sp-cards .sp-card{display:flex;flex-direction:column}.sp-cards .sp-card .sp-foot{margin-top:auto!important}.sp-cards .sp-card .sp-const{flex:none}
+.sp-cards .sp-card p{margin:.25em 0}.sp-cards .sp-card .sp-row{margin:6px 0 4px}
