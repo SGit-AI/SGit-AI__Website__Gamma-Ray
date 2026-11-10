@@ -1,0 +1,195 @@
+{
+ "id": "bythelaw",
+ "name": "ByTheLaw",
+ "url": "https://bythelaw.com/",
+ "country": "Portugal",
+ "sector": "legal",
+ "read": "2026-11-10",
+ "basis": "ByTheLaw's own public pages and, for company basics only, the news sources named beside each fact",
+ "seen_by_subject": false,
+ "what": "ByTheLaw offers an AI chat for lawyers that answers legal questions from Portuguese and European official sources, analyses uploaded documents and drafts texts, plus separate transcription, anonymisation and reference-checking tools.",
+ "facts": [
+  {
+   "fact": "Operated by Draft of Life, Lda., with its seat in Coimbra.",
+   "url": "https://app.bythelaw.com/pt/termos-citius",
+   "span": "Draft of Life, Lda."
+  },
+  {
+   "fact": "Described as a spin-off from the University of Coimbra.",
+   "url": "https://bythelaw.com/en/about/",
+   "span": "evolved into a Spin-Off from the University of Coimbra"
+  },
+  {
+   "fact": "The system was built from eight months of work at Sérvulo & Associados (ECO/Advocatus, 6 November 2025).",
+   "url": "https://eco.sapo.pt/2025/11/06/startup-portuguesa-lanca-sistema-de-ia-que-poupa-tempo-aos-advogados/",
+   "span": "O sistema nasceu de oito meses de trabalho imersivo na Sérvulo"
+  },
+  {
+   "fact": "ByTheLaw acquired advIA, another Portuguese legal AI platform, in 2026.",
+   "url": "https://bythelaw.com/advia/",
+   "span": "A ByTheLaw adquiriu o advIA"
+  },
+  {
+   "fact": "Two paid plans: Pro at 29 euros plus VAT a month, and Pro Teams on request.",
+   "url": "https://help.bythelaw.com/en/planos-e-precos/",
+   "span": "ByTheLaw offers two paid plans."
+  },
+  {
+   "fact": "Model and infrastructure providers are listed as subprocessors, with Microsoft Azure for language models.",
+   "url": "https://bythelaw.com/en/subprocessors/",
+   "span": "Last updated: October 20, 2026"
+  }
+ ],
+ "people": [
+  {
+   "name": "André Dionísio",
+   "role": "CEO and co-founder",
+   "url": "https://bythelaw.com/en/about/"
+  },
+  {
+   "name": "Totas Rodrigues",
+   "role": "COO/CFO and co-founder",
+   "url": "https://bythelaw.com/en/about/"
+  },
+  {
+   "name": "João Cabral",
+   "role": "CTO and co-founder",
+   "url": "https://bythelaw.com/en/about/"
+  },
+  {
+   "name": "Ana do Mar",
+   "role": "CXO",
+   "url": "https://bythelaw.com/en/about/"
+  },
+  {
+   "name": "Gonçalo Almeida",
+   "role": "CPO",
+   "url": "https://bythelaw.com/en/about/"
+  },
+  {
+   "name": "Dennis Monschauer",
+   "role": "Fractional CMO",
+   "url": "https://bythelaw.com/en/about/"
+  }
+ ],
+ "solutions": [
+  {
+   "id": "bythelaw-legal-chat",
+   "name": "ByTheLaw (Legal Chat)",
+   "short": "ByTheLaw",
+   "what": "Chat assistant that answers legal questions with citations to official Portuguese and EU sources, analyses uploaded documents, drafts contracts, emails and translations, and organises work in projects. The site menu names it 'ByTheLaw: Legal research and knowledge'; the help centre calls it 'Legal Chat'.",
+   "status": "generally available (free prompts, Pro, Pro Teams)",
+   "url": "https://help.bythelaw.com/en/chat/",
+   "scan": "bythelaw-legal-chat"
+  },
+  {
+   "id": "citius-integration",
+   "name": "Citius integration",
+   "short": "Citius integration",
+   "what": "Reads the lawyer's court notifications, hearing schedule and case movements from the Citius courts system with the lawyer's credentials, read-only; files nothing.",
+   "status": "experimental, limited access",
+   "url": "https://app.bythelaw.com/pt/termos-citius"
+  },
+  {
+   "id": "court-transcriber",
+   "name": "Court Transcriber",
+   "short": "Court Transcriber",
+   "what": "Transcribes court-hearing recordings for review and export.",
+   "status": "available, prepaid",
+   "url": "https://bythelaw.com/en/transcription/"
+  },
+  {
+   "id": "anonymizer",
+   "name": "Anonymizer",
+   "short": "Anonymizer",
+   "what": "Suggests replacements for personal data in text and documents for the user to review.",
+   "status": "available",
+   "url": "https://bythelaw.com/en/anonymizer/"
+  },
+  {
+   "id": "refchecker",
+   "name": "RefChecker",
+   "short": "RefChecker",
+   "what": "Checks legal references in AI-generated text against authoritative sources and classifies risk.",
+   "status": "available",
+   "url": "https://bythelaw.com/en/reference-checker/"
+  },
+  {
+   "id": "npl",
+   "name": "NPL decision engine",
+   "short": "NPL decision engine",
+   "what": "Proposed triage, drafting and case scoring for debt-recovery servicers.",
+   "status": "pilot in preparation",
+   "url": "https://bythelaw.com/en/npl/"
+  }
+ ],
+ "stories": [
+  {
+   "customer": "(usage figure)",
+   "what": "ECO/Advocatus reported 1,100 active users in November 2025.",
+   "url": "https://eco.sapo.pt/2025/11/06/startup-portuguesa-lanca-sistema-de-ia-que-poupa-tempo-aos-advogados/",
+   "span": "O projeto conta já com 1.100 utilizadores ativos"
+  },
+  {
+   "customer": "Sérvulo & Associados; P&A Legal",
+   "what": "Named as clients in the same ECO/Advocatus report, with a pilot at CMS.",
+   "url": "https://eco.sapo.pt/2025/11/06/startup-portuguesa-lanca-sistema-de-ia-que-poupa-tempo-aos-advogados/",
+   "span": "tendo como clientes a Sérvulo & Associados, a P&A Legal"
+  },
+  {
+   "customer": "Câmara Municipal de Coimbra",
+   "what": "Reported in use by the Coimbra municipality, and under evaluation by the Regional Government of Madeira.",
+   "url": "https://eco.sapo.pt/2025/11/06/startup-portuguesa-lanca-sistema-de-ia-que-poupa-tempo-aos-advogados/",
+   "span": "está já em utilização pela Câmara Municipal de Coimbra"
+  }
+ ],
+ "analysis": [],
+ "article": null,
+ "vault": {
+  "id": "dllzmbc3",
+  "read_key": "sgit_public_read_7f528ecd6fbd9c2d0f293f8361fd3ad93d4ea63fd8b1f1a70ec77feb04110bb6:dllzmbc3",
+  "published": "2026-11-10"
+ },
+ "team": {
+  "researcher-assessor": "a sub-agent of gamma.studio@web-summit.dinis",
+  "challenger": "a sub-agent",
+  "scorer": "build/spectrum.mjs",
+  "analyst, designer, writer": "gamma.studio@web-summit.dinis",
+  "review": "gamma.review@web-summit.dinis (pending)",
+  "sign-off": "gamma.approve@web-summit.dinis (pending)"
+ },
+ "signoff": null,
+ "corrections": [],
+ "captures": {
+  "https://app.bythelaw.com/pt/termos-citius": {
+   "sha256": "c3e15dc12000fbd11728fa49275ced4da21d37dc6f252c4bbecaf5833dcd5064",
+   "bytes": 55475,
+   "read_at": "2026-11-10T10:44Z"
+  },
+  "https://bythelaw.com/advia/": {
+   "sha256": "7275fe2ab6f12be9297e9c42ea8d207c3d30a99518c401bbd07b30700686f043",
+   "bytes": 52314,
+   "read_at": "2026-11-10T10:44Z"
+  },
+  "https://bythelaw.com/en/about/": {
+   "sha256": "13d88e688fa40d846d65c628312d5aa2cf13cba2aa6d985f755d9a1acc279bb8",
+   "bytes": 53450,
+   "read_at": "2026-11-10T10:44Z"
+  },
+  "https://bythelaw.com/en/subprocessors/": {
+   "sha256": "068a734b2130c56a35928acab676169e6f4757cf288d49b7a00d4bc3a3987f82",
+   "bytes": 50125,
+   "read_at": "2026-11-10T10:44Z"
+  },
+  "https://eco.sapo.pt/2025/11/06/startup-portuguesa-lanca-sistema-de-ia-que-poupa-tempo-aos-advogados/": {
+   "sha256": "54709d1dfd41c8b83f22b71a4f014258ae2d6543469a6e358f8ff822a891457a",
+   "bytes": 404106,
+   "read_at": "2026-11-10T10:44Z"
+  },
+  "https://help.bythelaw.com/en/planos-e-precos/": {
+   "sha256": "ac0e222931977da0b40f2897ed181991b6aa3efb3919e88bb863ac4984f85fc2",
+   "bytes": 40236,
+   "read_at": "2026-11-10T10:44Z"
+  }
+ }
+}
