@@ -19,8 +19,67 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "draft",
-  "rounds": []
+  "status": "round-1",
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "S1",
+      "severity": "should-fix",
+      "finding": "The span 'Codacy's AI Reviewer is better aligned with its workflow' is from the evaluation paragraph of the BFI Finance case study. It is a preference statement and does not show the reviewer in production. The case study does carry the production claim elsewhere: the Value box says the AI reviewer, quality gates, container scanning and the MCP server are 'now part of daily work for around 170 developers'. The closing paragraph lists only 'quality gates, per-repo goals and the MCP server' and leaves the AI reviewer out, so the page is not consistent. Credit stays defensible (customer named, previous AI review tool 'switched off'), but the span should be the daily-work sentence, and the note should say the closing paragraph omits the reviewer. The 170 figure is a team headcount (the page header says 'Engineering team size: 170'), not sessions, tasks or pull requests; the note already says so, which is right. The evidence is a vendor-published case study, not independent. S1 is a badge only and moves no level."
+     },
+     {
+      "answer": "I47",
+      "severity": "should-fix",
+      "finding": "This is the only answer under Control level 1. The source does say that instructions go in a review.md file in the .codacy/instructions directory and that the reviewer also reads AGENTS.md, CLAUDE.md and similar files. The span 'Anything reviewers should explicitly ignore or not enforce' is not a statement of the product: it is one line of an example prompt the page gives for asking an AI coding agent to draft a review.md. The page describes review.md as helping the reviewer 'understand the structure of the code, the business logic of the project, and your own preferences'. That steers focus; it is not stated as a limit on what the reviewer may do. The mode (available, ai-reviewer) is right because review.md is optional. Suggest the note stop calling the template a limit, or the span move to a sentence about the instructions file itself. As it stands, C1 rests on a template line, which is a thin basis; it is not an adjective, it is an artefact (a documented file path), but the fit to 'a limit on it is a rule in prose' is a stretch."
+     },
+     {
+      "answer": "I25",
+      "severity": "should-fix",
+      "finding": "The permissions page lists the GitHub App permissions per scope (checks, issues, pull requests, commit statuses, webhooks read and write; metadata, contents, merge groups read-only), so the table is real and the note's list matches it. Two problems. The span 'Codacy retrieves repository contents to get installation access tokens' is the Contents row, not the narrow-access fact. And the page never mentions the AI Reviewer; the note admits the access is the platform app's. The pull requests row says Codacy 'might also create comments and suggestions on the pull request', which is the nearest line to the reviewer posting a review. Suggest a span from that row and a note that credit is for the platform app. Not used on the card (Reach 3 would need an agent interface plus I25, and none is credited), so no level changes."
+     },
+     {
+      "answer": "I57",
+      "severity": "note",
+      "finding": "The span 'reply to the ones that are wrong explaining why' is in the source, and the page says the reviewer learns from reactions and replies ('react with a 👍 ... reply to the ones that are wrong'). This is a feedback loop inside the pull request, not a channel to report problems to the vendor. It fits 'contest its output' at the lowest reading. Mode available is right. It moves no level here: Openness 3 would also need I50, which is not credited."
+     },
+     {
+      "answer": "I15",
+      "severity": "note",
+      "finding": "The github-integration page says of the Manually mode: 'Click Run Reviewer in the pull request summary comment or call our public API to trigger a review on demand.' The span 'to trigger a review on demand' is in the source and the note matches. Mode available with cfg manual-review is right: Manually is one of two Run reviewer settings, and the other (Automatically, first review only) runs the first review without a click. The page states no default setting, so default would be wrong; available is right. A1 rests on this one answer. The person starts each review, but the content of the review (inline comments, suggested fixes, verdict) is produced without per-action approval, so the fit to 'every action is prompted and controlled' is at the level of the whole review run. Accepted, and level 1 is the lowest rung."
+     },
+     {
+      "answer": "I11",
+      "severity": "note",
+      "finding": "The page says the AI Reviewer 'leverages OpenAI models through Amazon Bedrock' and that Codacy can send the git diff, related files, instructions and linked Jira or Linear tickets. The span 'This feature leverages OpenAI models through Amazon Bedrock' also appears under Smart False Positive Triage on the same page; it appears again under the AI Reviewer heading, so the span is valid but not unique. The page's general paragraph says OpenAI is 'accessed directly or through Amazon Bedrock', so the note could say 'through Amazon Bedrock' for this feature only. Mode available and cfg ai-reviewer are right: the page says it is opt-in and runs only where an admin enabled it."
+     },
+     {
+      "answer": "I10",
+      "severity": "note",
+      "finding": "The span 'It then reads the ticket from Jira or Linear:' is in the source. The reviewer reads the Jira ticket only if the Jira integration is enabled and Linear issues only if the Linear integration for GitHub is used, so the cross-system reading is conditional. Mode available is right. Reach 2 is satisfied by I11 alone, so this answer does not change the level."
+     },
+     {
+      "answer": "S3",
+      "severity": "note",
+      "finding": "Fetched https://www.codacy.com/llms.txt: it resolves (200) and contains 'Key facts for accurate citation:'. Fetched https://api.codacy.com/api/api-docs/swagger.yaml: it resolves (200) and begins 'openapi: 3.0.1', title 'Codacy API'. Grade observed with method probe is right. The llms.txt describes the Codacy platform, not the AI Reviewer in particular (it lists the AI Reviewer as one link); S3 scope asks only that the file resolves, so the credit holds, but the note should say the files are the vendor's, not the reviewer's. S3 is not used on the card (Openness 3 needs I50, absent)."
+     },
+     {
+      "answer": "I01, I20, I22, I58",
+      "severity": "pass",
+      "finding": "I01: the span 'Codacy AI is a set of optional features integrated into the Software' is on the Codacy AI page (12 words); the same page says the AI Reviewer is opt-in and runs only where an admin enabled it. Grade documented, mode default, fine (it feeds Reach 1 only, and Reach 2 supersedes it). I20: the github-integration page says the reviewer 'comments only on the Codacy issues it judges worth a reviewer's attention' and adds checks against 'requirements, business rules, and logic'; documented, default, right indicator. I22: the limits FAQ states 'Size of the pull requests reviewed by the AI Reviewer 270,000 tokens or a 1 MB diff' and that above it the reviewer posts a short review saying the pull request is too large; the GitHub-only restriction is on the Codacy AI page, not the limits page, so the note's 'the docs also say' is accurate but the second claim has a different source. Documented is right. I58: the Codacy AI page lists what is sent, what Codacy stores ('the AI Reviewer's own comments, a summary of your agent guideline files, and the rules it learns') and what it does not store, and says secrets are redacted before code is sent; documented is right. These four are documentation facts true whether or not the feature is switched on, so default is acceptable. Together they give Openness 2 (I22 and I58) and the Openness 1 rung."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card computed with the repository scorer: A1 R2 C1 O2. There is no level 3 or 4 in any dimension, so nothing to argue against at that height. Each level rests on few answers: A1 on I15 only (manual-review configuration), R2 on I10 and I11 (both available, ai-reviewer configuration), C1 on I47 only (see the should-fix above), O2 on I22 and I58 (documentation, robust). Autonomy next unlock is I16, Reach I14, Control I38, Openness I50. The scan correctly does not credit I08, I17, S4 (the lowered list in its assessment); I read nothing in the sources that would support crediting them. The scan has no operation facts, so the observed-or-measured rule is not engaged except S3, which I reproduced by fetching."
+     }
+    ]
+   }
+  ]
  },
  "assessment": {
   "by": "gamma.studio@web-summit.dinis",

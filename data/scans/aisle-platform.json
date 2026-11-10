@@ -19,8 +19,57 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "draft",
-  "rounds": []
+  "status": "round-1",
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I20",
+      "severity": "must-fix",
+      "finding": "The span is not in the source. The span reads 'AISLE finds, fixes, and verifies vulnerabilities autonomously'. The home page reads 'AISLE finds, fixes, and verifies vulnerabilities in your source code, at machine speed and scale.' The word 'autonomously' appears elsewhere on the page in a different sentence ('the sovereign AI platform that finds and fixes vulnerabilities, autonomously'). The span as written joins two sentences. The note ('finding, fixing and verifying vulnerabilities in source code') is supported by the real sentence, so the grade and mode are right; replace the span with the exact words 'finds, fixes, and verifies vulnerabilities in your source code'. I20 is not used for any card level, so the card does not change."
+     },
+     {
+      "answer": "I26",
+      "severity": "should-fix",
+      "finding": "The note says the open-source page shows an 'aisle-security' bot account in a mock-up. That page is not among the scan's sources, and the string aisle-security does not appear in any of the ten fetched AISLE pages. Only the OpenSSL story is supported: it says 'Maintainers can trigger an AISLE review simply by tagging' the handle aisle-analyzer in inline comments. Either add the open-source page as a source with the quote, or drop that half of the note. Grade documented and mode deployed are acceptable as the story describes OpenSSL's real use, and the note already says the accounts were not checked on GitHub. I26 feeds no level on this card."
+     },
+     {
+      "answer": "I18, A4",
+      "severity": "note",
+      "finding": "Arguing against A4. Rule: A4 needs level 3 (I08 plus one of I17, I18, I19), I10 or I12 or I13, and I18 or I19. Only I18 is credited from that set, so I18 carries both A3 and A4; remove it and Autonomy falls well below 3. The span 'All you do is review and merge.' is on the remediation page and is a marketing sentence. The artefacts behind it are firmer: the FAQ on that page says 'Can AISLE merge a fix without us? No.' with 'a human must review and merge', and the page says 'Nothing reaches your main branch until someone on your team merges it'. So 'person approves the critical decision only' holds for the merge step. The real weakness is the default. The triage page says 'AISLE can speed up your remediation flow by fixing every vulnerability, but it doesn't have to', and that the customer chooses per severity and repository 'where to stop at triage and where to speed through to a PR'. No page states which setting is the default for a new customer, so mode available is the cautious and correct choice; default would be overstated. The card shows A4 with avail 'available', which is honest. I10 rests on one statement: 'plugs into the scanners, repos, and CI you already run'. That is a statement of integration, not an artefact, and it names GitHub, GitLab, Bitbucket, so it is acceptable. Overall A4 rests on documented statements from the vendor with no observed operation, and its top step depends on the opt-in mode. Keep as is, but any display of A4 should keep the available flag visible."
+     },
+     {
+      "answer": "S1",
+      "severity": "should-fix",
+      "finding": "The user asked about S1 as the base of A4: since Spectrum 0.2, S1 no longer feeds any Autonomy level (the indicator scope says so), it only earns the In production badge. A4 rests on I10 and I18, not S1. On S1 itself: the Productboard story names the customer and says it rolled out AISLE 'across all 56 repositories'. The span 'Jira ticket creation, Slack notifications, and AI-powered pull requests' is in the page and under fifteen words. But 56 repositories is a rollout scope, not sessions, tasks or pull requests, and the page gives no count of pull requests opened or merged. The only usage-style figures on the page are alert counts (30,000 alerts to 6). The page says the company 'integrated' AI-powered pull requests into its workflow, which names a customer for the acting capability but does not state that Productboard's pull requests were produced in practice. The scope allows a named customer, so the answer passes by the letter; the note should say plainly that no pull request or task count is published and that the named-customer limb is what is used. Grade documented, mode default: acceptable."
+     },
+     {
+      "answer": "S4",
+      "severity": "should-fix",
+      "finding": "S4 is not answered. The scan lists under not_credited a read-only MCP server announced on an AISLE blog post, with the reason that it is an agent-to-tool interface over AISLE's data and not a protocol between agents. The S4 scope says a published MCP server counts, and only an interface the product merely consumes does not count. A server AISLE publishes for a customer's coding agent to call appears to match the scope. I could not read the blog URL (it returned nothing usable through curl, probably script-rendered), and it is not one of the scan's fetched sources, so I cannot confirm the page says it is published and callable. Needed: either add the blog post as a source with an exact span and credit S4 as documented (mode available, configuration mcp), or state why the scope is not met. As written the rejection reason does not match the scope text. This affects Reach, not Autonomy."
+     },
+     {
+      "answer": "I41",
+      "severity": "note",
+      "finding": "The enterprise FAQ says 'every finding and fix is logged from detection to verified fix to human-approved pull request, with timestamps and named approvers', and the remediation page lists 'Every AISLE action is traceable'. I41 needs operation and its scope wants a log of what the agent does; the answer is graded documented, so it does not count toward any level, which is correct. The note already says documented only, not observed. The log described covers findings and fixes, which is close to agent actions but not stated as tool calls or commits."
+     },
+     {
+      "answer": "I04, I08, I10, I11, I21, I22, I38, I57, I58, I67, I68",
+      "severity": "pass",
+      "finding": "Opened the sources and checked each span in the page text and each note against it. I04: the FAQ says AISLE builds the repository in an isolated container, applies the patch and runs the tests. I08: writes a patch, runs the tests and opens a pull request. I10 and I11: integration with scanners, repos and CI, and connection to hosted version control, stated on the platform and discovery pages. I21: 'You decide how far AISLE goes on its own, per severity and per repository' is on the remediation page. I22: guidance instead of a patch for some findings, and a failing fix going back to the team, stated in the FAQ. I38: 'Nothing merges without human approval' and the no-merge FAQ answer. I57: contesting a triage decision is on the triage page. I58: privacy policy lists customer data. I67: enterprise page gives hours-saved figures; the note correctly says no method is published. I68: the deployment page states continuous updates for Managed SaaS and monthly for private cloud and on-prem; the note correctly says this is a cadence, not a process, and the 3-word span is within limits. All are documented, statement-type indicators, so no operation grade is needed; modes default are right as these are page statements of shipped behaviour. Credit to the indicators matches their text."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card computed with node: A4 R2 C1 O2. A4 uses I10 and I18 (I18 flagged available). R2 uses I10 and I11, next unlocks I13 and S2. C1 uses I38 only, next I23. O2 uses I22 and I58, next I50. Levels 3 and 4 appear only in Autonomy. Every item behind them is a vendor statement graded documented; no operation was observed. The grant is stated as not measured, which is correct for a product kind. The scan is still a draft with no review rounds; the I20 span fix and the I26 source fix are needed before it moves on."
+     }
+    ]
+   }
+  ]
  },
  "assessment": {
   "by": "gamma.studio@web-summit.dinis",
