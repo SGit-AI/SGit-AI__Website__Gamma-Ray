@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.9",
+    "date": "2026-11-10",
+    "what": "navigation to five items and a More menu, calmer card header",
+    "by": "gamma.design@web-summit.dinis",
+    "from": "0be9b4bfc"
+  },
+  {
     "version": "v0.0.8",
     "date": "2026-11-10",
     "what": "launch briefing page",
