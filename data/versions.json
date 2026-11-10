@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.55",
+    "date": "2026-11-10",
+    "what": "every published card as a graph, in the grammar of Fractal Semantic Graphs",
+    "by": "gamma-ray@web-summit.dinis",
+    "from": "52ef263be"
+  },
+  {
     "version": "v0.0.54",
     "date": "2026-11-10",
     "what": "the walk links provisions to their own pages; indicator link falls back to the question",
