@@ -183,42 +183,42 @@
   "https://docs.codacy.com/codacy-ai/codacy-ai/": {
    "sha256": "1ccd57719e29bac8aedd2695a5a8f5caf9b273a69acace6ab8af27fd4383e579",
    "bytes": 216811,
-   "read_at": "2026-11-10T10:38Z"
+   "read_at": "2026-11-10T12:47Z"
   },
   "https://resources.codacy.com/resources/case-study-bfi-finance": {
    "sha256": "563b62540a7f7d7b1589f174808eadf01702defe61972c5a59d757842c5625cc",
    "bytes": 102820,
-   "read_at": "2026-11-10T10:38Z"
+   "read_at": "2026-11-10T12:47Z"
   },
   "https://resources.codacy.com/resources/case-study-ihomer": {
    "sha256": "cb14cfc515ff60ff406c58925fdc5fafa76bbb2cd06a07cfa1e89091c8f905c6",
    "bytes": 96553,
-   "read_at": "2026-11-10T10:38Z"
+   "read_at": "2026-11-10T12:47Z"
   },
   "https://resources.codacy.com/resources/case-study-lsports": {
    "sha256": "918c2f5d7f8e01b73c710f117eee68366c00e8b7e3eab890f656fcc49095b98a",
    "bytes": 100864,
-   "read_at": "2026-11-10T10:38Z"
+   "read_at": "2026-11-10T12:47Z"
   },
   "https://www.codacy.com/": {
-   "sha256": "c3a54543d3844a8969cd6dee99c1e922309126926574f3eec1fce263c3b06f41",
-   "bytes": 359194,
-   "read_at": "2026-11-10T10:38Z"
+   "sha256": "3351e5842223d38b36c944f33fa9a761a24b22ff487a436a7db57ae236758cee",
+   "bytes": 359168,
+   "read_at": "2026-11-10T12:47Z"
   },
   "https://www.codacy.com/about": {
-   "sha256": "1f4f909fb95ecbfa1f4e482c68fdab01f82a2efa9e344a96266814c9c3b8b7af",
+   "sha256": "21db0b3236096cbb2db01d774aecbd0aed01c856daa40c78858c54de629e8f1e",
    "bytes": 140075,
-   "read_at": "2026-11-10T10:38Z"
+   "read_at": "2026-11-10T12:47Z"
   },
   "https://www.codacy.com/ai-info": {
-   "sha256": "96ccab80dd67b21526311a495772dad5fed703405e8998163347d8e71ea954b7",
+   "sha256": "a34206341e4a2da7827cbec915b27ded3a1c85c8c505b208fff63c7b6902cb1b",
    "bytes": 131700,
-   "read_at": "2026-11-10T10:38Z"
+   "read_at": "2026-11-10T12:47Z"
   },
   "https://www.codacy.com/llms.txt": {
    "sha256": "52a0c32c01ff8deaef2556e3aba3b54f9e68c1f3f24907a4ca5f58e6a0ac1e5e",
    "bytes": 12244,
-   "read_at": "2026-11-10T10:38Z"
+   "read_at": "2026-11-10T12:47Z"
   }
  },
  "method": "A researcher-assessor gathered and captured the sources and mapped the evidence to indicators, without assigning a level. A challenger argued against every level three and four and every doubtful credit."
