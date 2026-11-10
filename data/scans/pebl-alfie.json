@@ -180,6 +180,44 @@
       "finding": "Round-two findings: the I17 reason is answered (no longer asserts the I15 inference, and its quoted FAQ phrase is on the product page); the I15 reason is answered on truth but not on sourcing (see the I15 finding); I23 is answered. Between the round-two commit and HEAD only the I23 answer and the I15 and I17 not_credited entries changed (git diff 2d33af4..HEAD); all other answers are unchanged, and a fresh fetch of all six captured sources shows every one of the 14 spans found and under fifteen words. Changed text has no em-dash and no at-sign."
      }
     ]
+   },
+   {
+    "round": 4,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I65",
+      "severity": "should-fix",
+      "finding": "The entry now cites the September 2025 rebrand release by URL, and that URL is a key of captures, so the sourcing is answered. But the claim does not hold for that page: the sentence says the June 2026 release and the rebrand release present Pebl as 'AI-first' and Alfie as moving from assistant to workforce agent. The rebrand release (fresh fetch, 9 September 2025) says AI-first and calls Alfie 'Pebl's AI assistant' and 'our AI Assistant Alfie'; it has no word about a workforce agent or a move from assistant. Only the June 2026 release carries 'Alfie Evolves from Assistant to Workforce Agent'. Reword: the rebrand release presents Pebl as AI-first and names Alfie as its AI assistant; the June 2026 release says Alfie evolves from assistant to workforce agent. No level depends on it."
+     },
+     {
+      "answer": "I57",
+      "severity": "should-fix",
+      "finding": "The entry's source is the October 2025 launch release. That page (fresh fetch, captured) says 'seamless handoff to a human expert', so the handoff is supported. 'Smart-routing to specialists' is not on that page: it appears only in the December 2025 release ('Alfie automatically uses smart-routing to connect users to the right global employment specialist'), which is also captured. Either add the December release as a second source in the entry text or cut 'smart-routing' from the October entry. The SpeakUp hotline remark is true (footer link on the captured pages). No level depends on it."
+     },
+     {
+      "answer": "I15",
+      "severity": "pass",
+      "finding": "Round three, I15: answered. The third help article (PPx0P6e8) is now a key of captures (sha256 aa8e99d1..., 807328 bytes; my fetch has the same size and hash). Its text is server-rendered: it says a user must hold a role to log in, that Alfie is embedded in the Global Work Platform, where to find Alfie, and how to start a conversation; nothing about confirmation or approval before Alfie acts, so the I15 reason ('do not say whether Alfie asks for confirmation') is true and I16 stays not evidenced. The I17 reason quotes the FAQ's 'take an action that you request', which is on the product page."
+     },
+     {
+      "answer": "I12,I17,I43,I51,I61,I63,S4",
+      "severity": "pass",
+      "finding": "Round three, the older not_credited entries: answered. Every URL in the answers, not_credited, announced, configurations and notes (compared programmatically against the 13 keys of captures; the earlier 6 plus seven added, all fetched 200) is a key of captures, and no answer source is missing. Checked in fresh fetches: I12 the December release says 'two coordinated AI agents' and names Alfie Reporting and Alfie Support, with no coordination between them described (as the reason says). I17 same release: Support answers questions and routes those needing human expertise to a specialist. I63 the security page says Pebl is ISO/IEC 27001:2022 certified and refers to its SOC 2 Type 2 report; it links to trust.hellopebl.com, and no certificate is read (as the reason says). I43/I51 the security page names automated alerts, 24/7 on-call engineering and continuously scanned repositories, and mentions Alfie only in the navigation menu, so 'platform-wide, not about Alfie' is true. S4 the OpenAPI (237359 bytes, hash matches) is titled Pebl Public API, has tags for time-off ('Submit time off requests on behalf of employees and manage approvals'), offers and compensation, and has no Alfie, MCP or agent mention; 'approved partners' is a paraphrase (the file speaks of partner identifiers and a sandbox), so read it as a loose wording rather than a quote. I61 second source: the privacy policy sentence about sharing chat interactions with Abacus.AI sits under 'AI-powered Chat Assistant' in the site-visitor sections and does not name Alfie (the only hit is the nav menu). Five captured pages hash differently from the recorded sha256 on my fetch (updates page, privacy policy, security page, rebrand, June release) with the same or nearly the same size: pages with changing markup, not a discrepancy of content I could find. The vault copies x01 to x07 were not checked by me."
+     },
+     {
+      "answer": "I01,I07,I08,I09,I20,I22,I23,I40,I47,I58,I61,I67,I68,S3",
+      "severity": "pass",
+      "finding": "Part B, answers: none changed since round three's commit (git diff 4aa12da..HEAD touches only the round-3 responses, captures_note, the I65 text and the seven captures). A fresh fetch of the captured sources shows all 14 spans found (some only in the raw page's embedded data, with curly apostrophes) and each under fifteen words. No em-dash and no at-sign in the changed text. The captures_note and the gamma-ray reply in team/requests.md say tools/capture.mjs now collects not_credited and announced pages and merges, so a later run no longer drops the seven added pages."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "The card reads A- · R1 · C1 · O2 (node card.mjs). Autonomy shows no level because I08 (Alfie submits and approves time off) is documented but no source states Alfie's mode (whether a person confirms each action, or Alfie acts on its own), so I15, I16 and I17 stay unmet and no Autonomy rung is reached; the operator question (decision acts-without-mode) is open and I do not decide it. The card publishes under the rule of level one in at least one dimension through R, C and O. The weakest credited level is C1, which rests on one sentence of the product FAQ, 'Alfie inherits platform permissions, it does not bypass them' (I47), a rule in prose about role limits, not a description of how a person approves, overrides or stops Alfie; without it the card is A0 R1 C0 O2, still publishable."
+     }
+    ]
    }
   ],
   "responses": [
