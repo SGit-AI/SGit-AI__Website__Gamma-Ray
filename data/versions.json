@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.16",
+    "date": "2026-11-10",
+    "what": "home page links the briefing, counts from the data",
+    "by": "gamma.editor@web-summit.dinis",
+    "from": "ce532da07"
+  },
+  {
     "version": "v0.0.15",
     "date": "2026-11-10",
     "what": "Manus AI and JetBrains: draft cards for Manus (A4 · R2 · C1 · O0) and Junie (A2 · R2 · C2 · O3), their vaults, reports, articles and claim notes",
