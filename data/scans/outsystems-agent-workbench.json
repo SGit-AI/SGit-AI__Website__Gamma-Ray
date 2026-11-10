@@ -259,6 +259,97 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "No change: passed."
+   },
+   {
+    "round": 2,
+    "answer": "S1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Took the first option: the note now says the page ties no usage figure or named agent to Agent Workbench, that its count of 4 agents in production is dated from early 2024, and that support results are expectations; grade stays documented on the named customer and its quote about Agent Workbench (re-fetched, raw/ans-014.html). Only the In production badge depends on it."
+   },
+   {
+    "round": 2,
+    "answer": "I25",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note reworded to what the action-calling page says (raw/ans-011.md): the builder grants each agent a set of server actions, and with none the agent uses only the model's knowledge; the tenant claim and the MCP mention are dropped. Kept as I25 on the reading that a granted action set is narrower than all the app's logic; the note claims nothing about the identity the actions run under, which the page does not state."
+   },
+   {
+    "round": 2,
+    "answer": "I08",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Pass acknowledged; no change."
+   },
+   {
+    "round": 2,
+    "answer": "I11",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Pass acknowledged; no change."
+   },
+   {
+    "round": 2,
+    "answer": "I41",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Pass acknowledged; stays removed and listed under not_credited."
+   },
+   {
+    "round": 2,
+    "answer": "I48",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Pass acknowledged; kept, uncounted because it needs operation and is graded documented."
+   },
+   {
+    "round": 2,
+    "answer": "S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Pass acknowledged; no change."
+   },
+   {
+    "round": 2,
+    "answer": "I12, I13, I18, I10 (Autonomy 4)",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "See the levels response: I18 is now cited for the explicit approve-or-reject step, not the permissive 'may' sentence; I12 and I13 carry the 'any' clause, so I10 is kept only for Reach 2 (alongside I11) and Autonomy 4 does not depend on it."
+   },
+   {
+    "round": 2,
+    "answer": "I14, I25 (Reach 3)",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept: I14's text asks for a published protocol between agents, and A2A 0.3.0 is one; we agree the client-only limit must stay visible, and it is in the a2a-connection configuration note shown with the available mark."
+   },
+   {
+    "round": 2,
+    "answer": "I25, I38 (Control 2)",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "I38 unchanged; I25 note reworded as in the I25 response."
+   },
+   {
+    "round": 2,
+    "answer": "I22, I58, I61 (Openness 2)",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the reviewer verified all three, and Openness 2 needs any two of them."
+   },
+   {
+    "round": 2,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Autonomy 4 defended with tighter evidence: I18 now cites the workflow page's Human activity steps (agents run as automatic activities without human intervention; a person assigned to the activity approves or rejects before the workflow resumes, span 'allowing the workflow to resume based on the human's decision'), which matches 'approves critical decisions only'; it stays mode available in hitl-workflow, so the card shows it as an optional configuration. Reach 3 defended: I14 is a published protocol (client-only, shown in the configuration note) and I25 is reworded to the tool set the page documents; no level changes, and we concede no operation or usage fact supports the power side."
+   },
+   {
+    "round": 2,
+    "answer": "I03, I10, I20, I17, I39, I40, I21, I47, I13, I14, I12, I38, I22, I18, I58, I61, S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Pass acknowledged. I18's span changed this round (now 10 words, exact in the workflow page); the others are unchanged."
    }
   ]
  },
@@ -343,8 +434,8 @@
   },
   "I18": {
    "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=2d97c9e1-6bd4-48ef-8efc-66b75069eb5f",
-   "n": "A human activity in the workflow lets a person approve or reject the agent's output for high-stakes decisions.",
-   "span": "Agents may require human oversight for high-stakes decisions or when their confidence is low",
+   "n": "In a workflow, agents run as automatic activities completed without human intervention, and a Human activity assigned to a user or role pauses the workflow until that person approves or rejects the agent's output.",
+   "span": "allowing the workflow to resume based on the human's decision",
    "g": "documented",
    "m": "available",
    "cfg": "hitl-workflow"
@@ -372,7 +463,7 @@
   },
   "I25": {
    "e": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=aec0cd3b-dcd4-4077-b0c0-04e987bdb690",
-   "n": "Each agent can call only the set of server actions (including imported MCP tools) the builder adds to it, not every action in the app or tenant.",
+   "n": "The builder grants each agent a set of server actions it may call; with none granted, the agent relies only on the AI model's knowledge.",
    "span": "You provide the agent with a set of available actions.",
    "g": "documented",
    "m": "default"
@@ -432,7 +523,7 @@
   },
   "S1": {
    "e": "https://www.outsystems.com/case-studies/teamwork-ai-agents/",
-   "n": "TeamWork, a named customer, says Agent Workbench helps it equip its consultants with AI tools and that some of its apps are built with it; the results of its Customer Support Agent are given as expectations.",
+   "n": "TeamWork, a named customer, says Agent Workbench helps it equip its consultants with AI tools and that some of its apps are built with it; the page ties no usage figure or named agent to Agent Workbench, dates its count of 4 agents in production from early 2024, and gives its support results as expectations.",
    "span": "It helps us equip our consultants with innovative AI tools",
    "g": "documented",
    "m": "default"
@@ -449,8 +540,13 @@
  "not_credited": [
   {
    "what": "I41 Its actions are logged",
-   "why": "The monitoring page says logs and traces can be filtered by agent and kept four weeks, showing traces the agent originated, but it does not say the agent's tool or action calls are recorded, and an operation fact needs an observed or measured grade.",
+   "why": "Unchanged from round one: the monitoring page lets logs and traces be filtered by agent and kept four weeks but does not say the agent's action calls are recorded, and an operation fact needs an observed or measured grade.",
    "source": "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=ca7cae65-c466-4d93-bab6-85ac740519c0"
+  },
+  {
+   "what": "S1 usage figures for Agent Workbench",
+   "why": "The TeamWork case study gives '4 AI agents in production since early 2024' and expected support results, but ties neither the count nor any named agent to Agent Workbench; only the customer and its quote are credited.",
+   "source": "https://www.outsystems.com/case-studies/teamwork-ai-agents/"
   }
  ],
  "announced": [
@@ -523,62 +619,62 @@
   "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=24d5a0ea-68c8-4851-b7de-e0908c122862": {
    "sha256": "4bebd8d78dce8555d02f587d98acd039138c572867f1833bda8a650f1bb2ee48",
    "bytes": 10362,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=2d97c9e1-6bd4-48ef-8efc-66b75069eb5f": {
    "sha256": "409bddbad33512f9612b91dd12f8438d8b80c8f81e0cfc94300491b7b179ce84",
    "bytes": 5626,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=5332e43d-bd1c-4403-8f46-5cbdaf198318": {
    "sha256": "ad4921b706fb6cc071f628d46a60e1545d3cfc92b4215f1c3b9de5a0439c65d8",
    "bytes": 12205,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=673835c6-c109-4aa2-a3b5-507ab4da8611": {
    "sha256": "adaf537c0b182a67c4332d181c7ba491bb190cf0947f79eb0c05cf849f0a5067",
    "bytes": 11825,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=6c449182-a1d4-4584-9558-5292f761f97a": {
    "sha256": "7bc6c8084a21d0cf8c67cb15f758aeadaf07b5f15ab84958bdd002a7264d19e8",
    "bytes": 5684,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=7a08a9ca-8a6e-4f48-9079-8f840ce01a7b": {
    "sha256": "097ef201374564258dfc53fee26ed1cd6749d452cd0623471c895b826a9d49da",
    "bytes": 7806,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=8764e4f7-25f3-4a21-b6a9-000c59f4a93a": {
    "sha256": "305b5bf8b523b55b31b9924e449c109fd32f00d25882867aad96259fca028538",
    "bytes": 7966,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=aec0cd3b-dcd4-4077-b0c0-04e987bdb690": {
    "sha256": "b9307656fbaee2ea2f42753372b4595e709c0be5e7e99f33c626b4825056a05d",
    "bytes": 8460,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://extranetprdintegrations.outsystems.net/Documentation_API/rest/getContentMarkdown/doc?Guid=af45db6e-ac0f-4ab9-8e4a-4ba8fd559812": {
    "sha256": "0727bf95007ca7984997cf96dc70e716cbd7a39e63d3030efe2b32bec810f20b",
    "bytes": 22009,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://www.outsystems.com/case-studies/teamwork-ai-agents/": {
    "sha256": "632f93d6aa40cf3eacb174fd4630ba1d5a9e4d6daefef474105e18dbe1f8006d",
    "bytes": 52752,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://www.outsystems.com/llms.txt": {
    "sha256": "570b2029b8c6dd4d7d5cd145bcc362bda5d069859ed63b9b2575dcf5dcd2d101",
    "bytes": 11052,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://www.outsystems.com/platform/agentic-ai-workbench": {
    "sha256": "b8d83b34ccd1be37d4816d5020bb93805fea4cbc6b94eeee99fe0d44385d2920",
    "bytes": 337100,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:46Z"
   }
  }
 }
