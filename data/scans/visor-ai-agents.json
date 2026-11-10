@@ -19,7 +19,7 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "round-1",
+  "status": "round-2",
   "rounds": [
    {
     "round": 1,
@@ -91,6 +91,64 @@
       "answer": "levels",
       "severity": "note",
       "finding": "Card A3 R2 C1 O2. Autonomy 3 rests on I08 and I17 at one customer (Generali) on one vendor-authored page, whose figures date from a 2022 archive; artefacts present (named customer, named request types, a conversation count) but no figure shows how many requests complete without a person, and the 80,000 counts conversations. Level 3 holds on the rule, with I17 span to be corrected. Autonomy 4 is not reached (no I18/I19). No note in the scan cites a page, name or figure absent from its sources; the page, claim and figure checks all matched. The scan's announced items (up to 85% automation, 70% first contact, Nexa 'Agentic Superintelligence') are from pages not in the scan's sources and are correctly kept out of the answers."
+     }
+    ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "S1",
+      "severity": "should-fix",
+      "finding": "Round one asked for the 80,000 figure and the date caveat. The caveat is now in the note and mode is deployed (answered). The figure is still not in the span. The studio says no combined span is literal, but on the fetched page the label element is followed directly by the figure element, and the rendered text reads 'conversations between brokers and the AI agent every month 80,000' (11 words), so a span that carries the figure exists. S1 requires usage figures, and the span as it stands shows only a label. Partly answered."
+     },
+     {
+      "answer": "O1, O2 (via I20)",
+      "severity": "should-fix",
+      "finding": "New problem. Openness is a cumulative ladder and O1 needs I20. I20 is credited only from the healthcare page, mode available under healthcare-deployment ('The agents are set up for administrative contact, and the scope written before work starts says so'). No answer in the default configuration states purpose and permitted tasks in writing. Without I20 the Openness dimension has no level, and O2 (I22, I58, I61, all default) shows as 2 only because of a healthcare-only available fact. The card should say that O1 and O2 rest on a healthcare deployment practice; the note on I20 is accurate but the card signature hides it. Control 1 has the same shape (I47 only under healthcare-deployment)."
+     },
+     {
+      "answer": "I47",
+      "severity": "should-fix",
+      "finding": "Round-one note on I47 is answered in part. The re-source to the Voice AI Agent sentence is true on the page ('Voice AI Agent takes those administrative calls, and it's set up to hand clinical questions to your staff', 10-word span exact). But the sentence describes a hand-over to staff, which is an escalation (I40) more than a limit stated as a rule. The same page has the better prose limit: 'The agents don't give clinical advice, and they're set up to pass a clinical question to a person.' Control 1 rests on this one answer and on a healthcare-only configuration. Suggest re-spanning to the limit sentence, which is under fifteen words in part ('The agents don't give clinical advice')."
+     },
+     {
+      "answer": "I37, I66, I68",
+      "severity": "note",
+      "finding": "Answered. I37 and I66 spans are exact on the voice-agent page ('Tested with your team ... then your team validates it in real conditions before launch'; 'We train your people to run the platform confidently') and are now mode available under the new configuration visor-deployment, whose note matches the page's 'How we deploy' block (a dedicated Visor team, scope, testing, training). I68 stays default: 'Nexa reads real conversations on a schedule ... proposes a fix, and nothing changes until someone on your team accepts it', a proposal cycle, fine. No level uses these."
+     },
+     {
+      "answer": "I03",
+      "severity": "note",
+      "finding": "Changed answer checked. Span (12 words) is exact on the Generali page; the page names no-developer building ('Generali resolves requests faster, builds complex workflows and keeps adding automated services, without needing a developer') and the web-services link to Generali's own systems in another paragraph, so both halves of the indicator are covered by the page. The note says 'own team'; the page says 'the team ... test and launch new services on its own', which supports it. Page calls the tool 'Agent Builder' and 'widget editor' only in captions; no page text says the words low-code or no-code. Grade documented, mode deployed accepted. Answered."
+     },
+     {
+      "answer": "I17",
+      "severity": "note",
+      "finding": "Changed answer checked. Span 'When a conversation does need a person, an advisor picks it up' (12 words) is exact on the Generali page, and the routine half ('handles a wide range of conversations from start to finish') is in the note, with the vendor's 'wide range' dropped. Documented, deployed accepted. Answered. The exception half is shown by the span and the routine half only by the note, which is acceptable under the rules but means the span does not carry the whole indicator."
+     },
+     {
+      "answer": "I67",
+      "severity": "note",
+      "finding": "Changed answer checked. Span exact on the Millennium BCP page (12 words). The note now says 'The Visor success story states', marks 80% as a goal and 65% as the only measured figure, and the page markup does carry a claim-source attribute naming a Wayback copy of 2022-08. Round one answered. Residual: 'Its value is measured' is met by one vendor-stated 2021 starting rate; no method or period is given. Grade documented stands, no level uses it."
+     },
+     {
+      "answer": "I60",
+      "severity": "note",
+      "finding": "Answered. I60 is removed from the answers and listed in not_credited with the reason; the healthcare page text ('we agree with your data protection officer what the agents may ask for, and where conversations and recordings are kept') is a scoping agreement, as the entry says. The claim in not_credited that the security page names an impact assessment only for change management was not re-verified against a specific sentence; the page is a source of the scan."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A3 R2 C1 O2 (card.mjs). The only level three or four is Autonomy 3, rule I08 and (I17). Against it: it rests on one customer deployment (Generali, chat) on one vendor-authored page. The scan rates the product and its shipped configuration is the Voice AI Agent, so the Autonomy level is read from a chat deployment, mode deployed, not from the voice product as shipped. I08 is the weakest fact: 'those requests now run end to end as automated workflows' says the requests run as workflows connected through web services, and the page does not say the AI agent itself takes the action; remove I08 and Autonomy has no level at all, because I15, I16 and I07 are unanswered, so the card would fall below level one in a dimension. I17 is a statement that an advisor takes over, an escalation path, no rate of requests that finish without a person (the 80,000 figure counts conversations, is undated and is attributed in markup to a 2022 archive). Artefact present: named customer and four named request types; adjective content: none in the spans. Mode deployed is honest for what it is. Autonomy 4 is not reached (no I18 or I19). Level three stands on the rule; the Autonomy cell should be read as one customer's deployment."
+     },
+     {
+      "answer": "I08, I10, I11, I20, I22, I36, I40, I58, I61, S3 and the round-one pass items",
+      "severity": "pass",
+      "finding": "Verified by me against the fetched pages: I08 span on Generali page; I10 and I11 sources and spans exact (I10 is thin, telephony and CCaaS being two systems of one domain, but I11 alone holds Reach 2); I20 exact on healthcare page; I22 exact on voice-agent page; I36 span is 14 words and exact, twelve checks against the EU AI Act and the GDPR; I40 and I58 exact on chat-agent page; I61 span exact on the security page and the five providers named in the note (Azure, Vertex AI Gemini, Deepgram, AssemblyAI, ElevenLabs) are all on that page; S3 llms.txt resolves. Every source cited by an answer or by not_credited has a capture hash. No name, page or figure in a note or not_credited is absent from the scan's sources. Round-one findings fully answered: I03, I17, I08, I10 I11, I60, I67, I22 I58 I61, I20 I36 I40, I37 I66 I68, S3, levels (13 of 15); S1 and I47 partly."
      }
     ]
    }

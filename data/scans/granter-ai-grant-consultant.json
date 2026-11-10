@@ -19,7 +19,7 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "round-1",
+  "status": "round-2",
   "rounds": [
    {
     "round": 1,
@@ -81,6 +81,64 @@
       "answer": "levels",
       "severity": "note",
       "finding": "Card A2 R1 C1 O1. No level 3 or 4. A2 rests on I16 (suggest, person approves). R1 on I09. C1 on I47 and I38; if I47 is removed, I38 alone still gives C1. O1 on I20 plus I56 and I58 (I20 and I56 from the privacy policy, I58 from the blog). The levels are consistent with the evidence once the I47 weakness is noted; they do not change if the should-fix items are applied."
+     }
+    ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I16,I38,I07",
+      "severity": "should-fix",
+      "finding": "Scope of the source. The privacy policy (page dated 'Last updated: Nov 9, 2026', the day before the scan) never names the AI Grant Consultant or any agent: it speaks of 'the Granter platform' and 'AI models'. Three answers (I16, I07, I38) cite the one sentence 'Users review and approve them before any submission or decision' (ten words, exact, found on the page). The scan's subject is the AI Grant Consultant; the card's A2 and C1 rest on a company-wide data-protection page, not on a page about the agent. The indicator I16 says the person approves each action; the policy says before any submission or decision, which is coarser. The blog FAQ on the cited agent page says 'The final submission is done by you on the relevant platform', which is the agent-specific, stronger source for I38 and I16 and is not cited in either answer. Cite the blog as the source (or as a second source) for I38 and state in the note that the policy is platform-wide, or lower the answers. I07 and I16 are one fact counted twice; the card shows I07 as used for A2, which suggests independent support it does not have."
+     },
+     {
+      "answer": "I20",
+      "severity": "should-fix",
+      "finding": "Openness level 1 depends on I20 alone (I56 or I58 can supply the other half, but nothing replaces I20). I20 asks that the purpose and permitted tasks are stated in writing. The span is the 'Who we are' line of the privacy policy: 'helps organisations find, prepare and manage applications for grants and other funding'. It is a one-line description of the company platform, in a legal page, with no permitted tasks and no mention of the agent. The AI Grant Consultant's own purpose is stated on the blog page, which would be the better source. Re-point I20 to the blog page or state in the note that only a purpose, not permitted tasks, is given."
+     },
+     {
+      "answer": "I56",
+      "severity": "note",
+      "finding": "Span 'AI-generated content is presented as such inside the platform.' is exact and on the policy page. The indicator is that the agent tells the people it talks to that it is an AI; the policy sentence labels generated content in the platform, a related but different fact. Not decisive, since I58 also supplies the second half of O1, but the note should say 'labels AI-generated content' (it does) and not be read as disclosure in conversation."
+     },
+     {
+      "answer": "I58",
+      "severity": "note",
+      "finding": "Span 'collect all important information, like previous applications, institutional data' is exact (ten words) and in a quote from the CTO on the blog page, who is named there. The quote says 'We onboard the company and collect' the information, which describes Granter's onboarding step, not data the agent reads at run time; the note says 'the data the agent uses', a small stretch. Keep, mark as the vendor's statement."
+     },
+     {
+      "answer": "S1",
+      "severity": "note",
+      "finding": "Verified against the Fidelidade page: the span 'the platform is actively being used to identify new opportunities and begin drafting applications' is exact (fourteen words), and the page title names the AI Grant Consultant, so the product link is sound. The note matches the page (initial phase of a planned 12-month cycle, two agents live, preliminary results at the 6-month mark). Weak points to keep visible: a single named customer, a pilot, no usage counts, and the badge is the customer's pilot described by the vendor. The Super Bock case study (granter.ai/case-studies/superbock, which loads and names the AI Grant Consultant) is the better second source and could be added to the scan's sources and captured instead of being listed only under not_credited."
+     },
+     {
+      "answer": "I67",
+      "severity": "note",
+      "finding": "Studio response is true: the span 'The pilot has already delivered measurable results:' is on the Navy page, seven words, and the note names both figures (+200 opportunities added to a defence grants database; '2w -> 2h' with first drafts) and says no method or baseline is stated. The note's phrase 'from two weeks to two hours' reads the page's '2w' and '2h' labels; reasonable but an interpretation. The page heading is 'Early Results', which the note could use. Q21 is outside the public levels; no card effect. Answered."
+     },
+     {
+      "answer": "I52",
+      "severity": "note",
+      "finding": "Studio response is true: the note now says 'a certification phase for the Navy Tested programme', that certification is not granted, and the span is exact on the Navy page. Remaining nuance: the page also says the Navy 'initiated a formal certification process', so the declared tier is right. Answered."
+     },
+     {
+      "answer": "not_credited",
+      "severity": "note",
+      "finding": "The not_credited entry for Super Bock names a URL that is not a source of the scan and a name that is in none of the four captured pages; the rule allows names from a source listed there, and the listed page does exist and carries the name, so this is within the rule. The I47 entry quotes the blog FAQ ('access to submission-platform accounts is restricted for Granter'), which is on the page. The announced items cite granter.ai and granter.ai/about: I fetched both; the home page has '2x' higher approval rates and '75%' less time, and the About page has the 'Future' entry 'Smarter AI, deeper integrations', so those are supported, though neither page is captured in the scan's vault."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A2 R1 C1 O1; there is no level three or four, so I argued against the weakest credited levels. A2 rests on I16 alone (I07 has no second leg after I02 was removed): a platform-wide policy sentence about review before submission or decision, in prose, not an artefact; if I16 is removed Autonomy drops to none from this scan (I15 is not answered), which breaks the rule of no card below level one in every dimension. C1 rests on I38 alone, the same sentence, so one sentence in one page supports A2 and C1 and, through I07, the 'used' list for A. O1 rests on I20 (a one-line company description) plus I56 or I58; remove I20 and O1 falls. R1 rests on I09, a blog FAQ line on coverage; reach as 'works inside its own product' is not tested by a coverage statement. All modes are default and honest, no adjectives found. The levels are defensible as level one and two claims but each rests on a thin, partly out-of-scope source; strengthening them needs the blog FAQ for I38 and I16 and the blog purpose text for I20."
+     },
+     {
+      "answer": "S1,I67,I38,I52,I47,I02,I07,I09,I20,I16,I56,I58",
+      "severity": "pass",
+      "finding": "Verified by fetching the four pages myself: every span is present verbatim and under fifteen words; the S1 Super Bock sentence is gone; I47 and I02 are removed and explained in not_credited with text that matches the pages; the I38 note no longer carries the blog clause; I52 wording matches the Navy page; the I67 span now covers both figures. Round-one findings fully answered: S1, I67, I47, I02, I52, I16, I58, I07/I09/I20/I56 group, announced, levels note. I38 is answered in the sense asked (second clause dropped) but see the scope finding above."
      }
     ]
    }
