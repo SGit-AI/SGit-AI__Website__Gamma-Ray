@@ -171,6 +171,41 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "Recomputed after the edits: still A4 R3 C2 O2; no level moved."
+   },
+   {
+    "round": 2,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "I18: argument accepted in part; the span is moved from the tip to the use case 'Get approval for critical actions' (exact on platform/agents/tools, fetched 10 November 2026), the note now says it is an option an owner enables and not how any agent is shipped, and mode stays available, so Autonomy 4 is shown only with the available flag. I10: argument conceded; it is re-sourced from the catalog to the agent tools page, which gives one agent actions in several systems (Google Drive, OneDrive, email), with mode available under a new configuration 'actions'. Reach 3 (S4, I25): kept; both are dated documentation statements in default mode, verified again on the fetched pages. That every level three and four fact is vendor documentation, with only I17 and S1 tied to a deployment, is true and should be stated on the card."
+   },
+   {
+    "round": 2,
+    "answer": "I03, I10, I25, I58, S4",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change to I03, I25, I58 or S4 (re-checked and accepted by the reviewer); I10 is re-sourced as described under levels."
+   },
+   {
+    "round": 2,
+    "answer": "I45",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: the span is literal in the page's markdown twin (docs.noxus.ai/platform/agents/sandbox.md, straight apostrophe, fetched 10 November 2026) and its words match the HTML page."
+   },
+   {
+    "round": 2,
+    "answer": "I39, I10, I41, I08, I17, I18",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change to I39, I41, I08 or I17; I10 and I18 changed as described under levels."
+   },
+   {
+    "round": 2,
+    "answer": "I04, I08, I11, I17, I20, I21, I22, I23, I26, I38, I41, I45, I47, I54, I57, I61, S1, S3, S4, I58, I03, I25",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; passed by the reviewer. The pass verdict states no conditions."
    }
   ]
  },
@@ -213,11 +248,12 @@
    "m": "default"
   },
   "I10": {
-   "e": "https://docs.noxus.ai/integrations/catalog",
-   "n": "Integrations cover several suites, including Microsoft 365, Google Workspace and Atlassian.",
-   "span": "Outlook, Teams, SharePoint, Dynamics 365",
+   "e": "https://docs.noxus.ai/platform/agents/tools",
+   "n": "The tools page states one agent can be given integration actions as tools, such as Send Email, Create Google Drive Sharing Link or Delete OneDrive File, alongside flows, knowledge bases and database connections.",
+   "span": "Create Google Drive Sharing Link or Delete OneDrive File",
    "g": "documented",
-   "m": "default"
+   "m": "available",
+   "cfg": "actions"
   },
   "I11": {
    "e": "https://docs.noxus.ai/platform/agents/tools",
@@ -235,8 +271,8 @@
   },
   "I18": {
    "e": "https://docs.noxus.ai/platform/agents/tools",
-   "n": "With the Human in the Loop tool, the agent acts on its own and asks a person before critical actions.",
-   "span": "Use HITL as a safety net for high-stakes decisions.",
+   "n": "The tools page documents a Human in the Loop tool an agent owner may enable, under which the agent escalates to a person to get approval for critical actions; it does not say how any given agent is shipped.",
+   "span": "Get approval for critical actions",
    "g": "documented",
    "m": "available",
    "cfg": "hitl"
@@ -383,6 +419,11 @@
    "what": "I12 or I13 (coordinates other agents) from the multi-agent mention",
    "why": "One sentence on what-is-noxus says the tools can be composed into multi-agent environments; it does not document an agent coordinating other agents.",
    "source": "https://docs.noxus.ai/core/what-is-noxus"
+  },
+  {
+   "what": "The integrations catalog as the source for I10",
+   "why": "It lists connector suites the platform offers, not one agent working across systems; I10 now rests on the agent tools page, where actions from several systems are given to one agent.",
+   "source": "https://docs.noxus.ai/integrations/catalog"
   }
  ],
  "announced": [
@@ -449,88 +490,91 @@
    "on": [
     "obs-feedback"
    ]
+  },
+  {
+   "id": "actions",
+   "name": "Actions",
+   "note": "Integration actions (single integration nodes, such as Send Email or Delete OneDrive File) selected as tools for the agent",
+   "on": [
+    "actions"
+   ]
   }
  ],
  "captures": {
   "https://backend.noxus.ai/openapi.json": {
    "sha256": "acf57bee22546b3abc01b8243571ce794f448da20a31ee669930fa00afe100da",
    "bytes": 909642,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:47Z"
   },
   "https://docs.noxus.ai/api-reference/v1--deployments/deactivate-deployment": {
-   "sha256": "8f3513998ba71ee5458579330cf3e5df11d28e75c552a975765f298d36617aae",
-   "bytes": 482693,
-   "read_at": "2026-11-10T13:47Z"
+   "sha256": "ed6ad19208950bde0ff4c2e0ac1594bda2065f66ac6e95d2df11b3fc4a3a2939",
+   "bytes": 482688,
+   "read_at": "2026-11-10T15:47Z"
   },
   "https://docs.noxus.ai/core/concepts/agents": {
-   "sha256": "7a3cd3a8a80eda871a9e0784a5b8d21fb696181b4dfb836f042da7796104c2ae",
+   "sha256": "274757353a8ab71b66215c872f332e63e2e6b08f04c73740991f9e31c5cc5371",
    "bytes": 188763,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:47Z"
   },
   "https://docs.noxus.ai/core/infrastructure/models-providers": {
-   "sha256": "07871ddc8cdc31c0b1adba7c0dc012b0becd16de3620194505447ec3aeae4b72",
+   "sha256": "d0fe4689f42a1a5b8c1dfb759dcc1366470c4aad3920c95f09b3107b7e2bd0a6",
    "bytes": 310143,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:47Z"
   },
   "https://docs.noxus.ai/core/infrastructure/observability-providers": {
-   "sha256": "c68d9ab6a421ec4f38b227930b0d2b50301fe31c979e4b9f407098edf31e1948",
+   "sha256": "93a416e3707f51cb4c2ee53c6899e3d1f65a7e7425b51769a82025dddce9be5f",
    "bytes": 184085,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:47Z"
   },
   "https://docs.noxus.ai/core/what-is-noxus": {
-   "sha256": "7d7d75d93fa0de0481c0f57e04515fc7e34a672356c40730deeff403e95a203e",
+   "sha256": "fa50eddb7ba2d529170b8bc8148b695ab7ea4d68c1129960d4d388f97afe6989",
    "bytes": 242801,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:47Z"
   },
   "https://docs.noxus.ai/deployment/operations/logging": {
-   "sha256": "1c9046cef2b13f025f52f081549fa484fb2204fde3e7da7f31bc89dd37df6f0a",
+   "sha256": "6170b7205da6babb5ba531d2a1fc373f818e58b8a10b906479c9fc56cdae87d3",
    "bytes": 173280,
-   "read_at": "2026-11-10T13:47Z"
-  },
-  "https://docs.noxus.ai/integrations/catalog": {
-   "sha256": "5d6ac89efdac4b92c705f098f4796b572ad56c5b1eed6f3ace253da0b6a2471a",
-   "bytes": 162803,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:47Z"
   },
   "https://docs.noxus.ai/platform/agents/deployments/google-chat": {
-   "sha256": "7243c4e48d64f8b3d370bdae5d4cf6d132d4eee93e1403eb5fbe3910e2b024d0",
+   "sha256": "450076f7f0a12e45c89999d782d9d23c3459d19d9450a44f097b903e19922acb",
    "bytes": 334407,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:47Z"
   },
   "https://docs.noxus.ai/platform/agents/introduction": {
-   "sha256": "a382e91011b1d938d03eb0417a1e108f54144177a936ce839e29c23b95339163",
+   "sha256": "a775465cbeab0371c206e33b5e725a91cd03eabb0e442c80992d2bab6b7d3d03",
    "bytes": 181631,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:47Z"
   },
   "https://docs.noxus.ai/platform/agents/sandbox": {
-   "sha256": "5406bc8307d96e303062e8359e0c9143b6eb20a5c770483377a7355aa0192e4a",
+   "sha256": "6b0d907e6d65015ca05802536e53f150afabde80e31f04fe0ff2e9ac7b2b0f4a",
    "bytes": 201549,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:47Z"
   },
   "https://docs.noxus.ai/platform/agents/tools": {
-   "sha256": "6284c127b851feea9eb4a902d02935287e98f13819719934e9b981ba2ef84ce1",
+   "sha256": "107a0dcbda4896169021f1725e8d9ee9eb044f6955af06b581a717e298e5d04c",
    "bytes": 251089,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:47Z"
   },
   "https://docs.noxus.ai/sdk/mcp/overview": {
-   "sha256": "1dc092eb19af6d61c83819c82fe056ca5d5ffeb12af04200fabf0df6c47a1bcd",
+   "sha256": "554ecd31cdfb2baf2e710c22017bf8c24f18c76f41a9ecbb8ac2c4c306216842",
    "bytes": 185467,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:47Z"
   },
   "https://status.noxus.ai/": {
-   "sha256": "9f44bf45c44deab40545251de805b8474d136ec5bd8d0b871ef3ef027c542bae",
+   "sha256": "f2d62204052945e4f713ac8cb438954b122091dd3aeb161a56c1edd813efea80",
    "bytes": 80478,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:47Z"
   },
   "https://www.noxus.ai/aboutus": {
    "sha256": "0109bcdc540a1a13b7fc08bd99728557a43a7efe0cbcae128f0b28c9c59e0981",
    "bytes": 293111,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:47Z"
   },
   "https://www.noxus.ai/case-studies/cuf-healthcare": {
    "sha256": "278999c51d7a72d791f3425969036e0cddfecee3567f072783a0f37e2f325c0e",
    "bytes": 294129,
-   "read_at": "2026-11-10T13:47Z"
+   "read_at": "2026-11-10T15:47Z"
   }
  }
 }
