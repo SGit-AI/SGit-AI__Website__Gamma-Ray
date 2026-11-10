@@ -4,1952 +4,2789 @@
   "standard": "sf",
   "ref": "Level 0: Fixed Rules and Repetitive Tasks (Chatbots and Co-pilots)",
   "text": "Automation of repetitive tasks using predefined rules, with no reasoning or learning capabilities. At this level, chatbots and co-pilots are primarily focused on retrieving information (e.g., answering FAQs or handling basic inquiries). They help automate tasks, but do not recommend actions or take further steps. The shift to agentic AI begins when an agent moves beyond simply retrieving information to using reasoning to recommend or take action autonomously, as seen in higher levels of maturity.",
-  "kind": "level"
+  "kind": "level",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a01",
   "standard": "sf",
   "ref": "Level 0, how companies can advance from Level 0 to Level 1",
   "text": "Identify use cases where chatbots and co-pilots are limited by rigid decision trees, and explore opportunities for reasoning capabilities to improve outcomes.",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a02",
   "standard": "sf",
   "ref": "Level 0, how companies can advance from Level 0 to Level 1",
   "text": "Conduct time studies to quantify capacity saved by having agents automate tasks and recommend actions.",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a03",
   "standard": "sf",
   "ref": "Level 0, how companies can advance from Level 0 to Level 1",
   "text": "Select use cases aligned with the organization’s risk tolerance and establish a mitigation strategy (e.g., Employee-facing Agent vs. Customer-facing Agent in regulated industries).",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a04",
   "standard": "sf",
   "ref": "Level 0, how companies can advance from Level 0 to Level 1",
   "text": "Ensure data quality and availability by starting with a harmonized data source (e.g., one CRM Org) and plan for a broader data strategy as maturity increases.",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a05",
   "standard": "sf",
   "ref": "Level 0, how companies can advance from Level 0 to Level 1",
   "text": "Focus not only on time savings but also on value and personalized customer experiences.",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a06",
   "standard": "sf",
   "ref": "Level 0, how companies can advance from Level 0 to Level 1",
   "text": "Quantify time savings and demonstrate early efficiency metrics, such as reduced response times and cost savings from automation.",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.L1",
   "standard": "sf",
   "ref": "Level 1: Information Retrieval Agents",
   "text": "Agents that assist humans by retrieving information and recommending actions.",
-  "kind": "level"
+  "kind": "level",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a07",
   "standard": "sf",
   "ref": "Level 1, how to advance from Level 1 to Level 2",
   "text": "Shift from recommendations to actions, allowing agents to autonomously execute tasks, reducing manual error and speeding up completion.",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a08",
   "standard": "sf",
   "ref": "Level 1, how to advance from Level 1 to Level 2",
   "text": "Harmonize additional data, ensuring it is cleansed, transformed, and pre-processed as new sources are integrated.",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a09",
   "standard": "sf",
   "ref": "Level 1, how to advance from Level 1 to Level 2",
   "text": "Establish a broader governance framework with testing methods, performance metrics, and continuous monitoring.",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a10",
   "standard": "sf",
   "ref": "Level 1, how to advance from Level 1 to Level 2",
   "text": "Consider how user feedback will be gathered and incorporated.",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a11",
   "standard": "sf",
   "ref": "Level 1, how to advance from Level 1 to Level 2",
   "text": "For customer-facing agents, ensure brand consistency is reflected.",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a12",
   "standard": "sf",
   "ref": "Level 1, how to advance from Level 1 to Level 2",
   "text": "Measure ROI based on efficiency and effectiveness metrics like time savings, case deflection rates, and customer satisfaction.",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.L2",
   "standard": "sf",
   "ref": "Level 2: Simple Orchestration, Single Domain",
   "text": "Agents that autonomously orchestrate low complexity tasks in a siloed data environment.",
-  "kind": "level"
+  "kind": "level",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a13",
   "standard": "sf",
   "ref": "Level 2, how to advance from Level 2 to Level 3",
   "text": "Decide whether to build one multi-functional agent or multiple agents working together to achieve common goals. Consider latency impacts when choosing between a mega-agent or specialized agents.",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a14",
   "standard": "sf",
   "ref": "Level 2, how to advance from Level 2 to Level 3",
   "text": "Grant agents access similar to human workers, ensuring separation of duties and applying the principle of least privilege.",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a15",
   "standard": "sf",
   "ref": "Level 2, how to advance from Level 2 to Level 3",
   "text": "Design architecture to support future complexity, incorporating standards and protocols to avoid constant re-architecture.",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a16",
   "standard": "sf",
   "ref": "Level 2, how to advance from Level 2 to Level 3",
   "text": "Use out-of-the-box API connectors to extend agents’ capabilities beyond single domains.",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.L3",
   "standard": "sf",
   "ref": "Level 3: Complex Orchestration, Multiple Domain",
   "text": "Agents that autonomously orchestrate multiple workflows with harmonized data across multiple domains.",
-  "kind": "level"
+  "kind": "level",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a17",
   "standard": "sf",
   "ref": "Level 3, how to advance from Level 3 to Level 4",
   "text": "Focus on use cases that require real-time, cross-domain agent collaboration, optimizing complex workflows with dynamic agent teams.",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a18",
   "standard": "sf",
   "ref": "Level 3, how to advance from Level 3 to Level 4",
   "text": "Develop a universal agent communication layer (APIs, “agent bus”) for seamless collaboration.",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a19",
   "standard": "sf",
   "ref": "Level 3, how to advance from Level 3 to Level 4",
   "text": "Implement dynamic agent discovery (registration, de-registration, and de-duplication) for ongoing maintenance.",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a20",
   "standard": "sf",
   "ref": "Level 3, how to advance from Level 3 to Level 4",
   "text": "Design a scalable architecture that supports any-to-any agent interactions.",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a21",
   "standard": "sf",
   "ref": "Level 3, how to advance from Level 3 to Level 4",
   "text": "Establish fine-grained access control, security policies, and a robust governance framework covering auditability, error handling, and transparency.",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a22",
   "standard": "sf",
   "ref": "Level 3, how to advance from Level 3 to Level 4",
   "text": "Create layered human/AI supervision based on a risk framework.",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a23",
   "standard": "sf",
   "ref": "Level 3, how to advance from Level 3 to Level 4",
   "text": "Develop a sustainable AI Agent Lifecycle Management methodology.",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a24",
   "standard": "sf",
   "ref": "Level 3, how to advance from Level 3 to Level 4",
   "text": "Measure ROI by assessing efficiency, effectiveness, experience, and risk mitigation.",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.L4",
   "standard": "sf",
   "ref": "Level 4: Multi-Agent Orchestration",
   "text": "Any-to-any-agent operability across disparate stacks with agent supervision.",
-  "kind": "level"
+  "kind": "level",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a25",
   "standard": "sf",
   "ref": "Level 4, how to maximize value",
   "text": "Evolve security and governance for ecosystem-wide collaboration",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a26",
   "standard": "sf",
   "ref": "Level 4, how to maximize value",
   "text": "Explore new business models enabled by agent collaboration",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a27",
   "standard": "sf",
   "ref": "Level 4, how to maximize value",
   "text": "Develop metrics to quantify multi-agent system value",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a28",
   "standard": "sf",
   "ref": "Level 4, how to maximize value",
   "text": "Create feedback mechanisms to improve agent interactions",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "sf.a29",
   "standard": "sf",
   "ref": "Level 4, how to maximize value",
   "text": "Measure ROI by tracking overall business impact from multi-agent collaboration (e.g., revenue growth, cost savings, customer retention)",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://www.salesforce.com/news/stories/agentic-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "eaamm.L1",
   "standard": "eaamm",
   "ref": "L1 Assistive (survey item Q9)",
   "text": "AI responds to explicit prompts; human operates and controls all actions.",
-  "kind": "level"
+  "kind": "level",
+  "source_url": "https://www.icaimt.com/2026/agentic-ai.html",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "eaamm.L2",
   "standard": "eaamm",
   "ref": "L2 Collaborative (survey item Q9)",
   "text": "AI suggests actions and drafts; human reviews and approves.",
-  "kind": "level"
+  "kind": "level",
+  "source_url": "https://www.icaimt.com/2026/agentic-ai.html",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "eaamm.L3",
   "standard": "eaamm",
   "ref": "L3 Consultative (survey item Q9)",
   "text": "AI handles routine tasks autonomously; human consulted on exceptions.",
-  "kind": "level"
+  "kind": "level",
+  "source_url": "https://www.icaimt.com/2026/agentic-ai.html",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "eaamm.L4",
   "standard": "eaamm",
   "ref": "L4 Supervisory (survey item Q9)",
   "text": "AI operates independently on complex tasks; human approves critical decisions.",
-  "kind": "level"
+  "kind": "level",
+  "source_url": "https://www.icaimt.com/2026/agentic-ai.html",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "eaamm.L5",
   "standard": "eaamm",
   "ref": "L5 Autonomous (survey item Q9)",
   "text": "AI operates with full autonomy within defined boundaries; human monitors.",
-  "kind": "level"
+  "kind": "level",
+  "source_url": "https://www.icaimt.com/2026/agentic-ai.html",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "eaamm.D1",
   "standard": "eaamm",
   "ref": "Readiness dimension 1",
   "text": "governance infrastructure",
-  "kind": "dimension"
+  "kind": "dimension",
+  "source_url": "https://www.icaimt.com/2026/agentic-ai.html",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "eaamm.D2",
   "standard": "eaamm",
   "ref": "Readiness dimension 2",
   "text": "data architecture",
-  "kind": "dimension"
+  "kind": "dimension",
+  "source_url": "https://www.icaimt.com/2026/agentic-ai.html",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "eaamm.D3",
   "standard": "eaamm",
   "ref": "Readiness dimension 3",
   "text": "workforce adaptation",
-  "kind": "dimension"
+  "kind": "dimension",
+  "source_url": "https://www.icaimt.com/2026/agentic-ai.html",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "eaamm.D4",
   "standard": "eaamm",
   "ref": "Readiness dimension 4",
   "text": "risk management",
-  "kind": "dimension"
+  "kind": "dimension",
+  "source_url": "https://www.icaimt.com/2026/agentic-ai.html",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "eaamm.G1",
   "standard": "eaamm",
   "ref": "Prerequisite, L2 to L3",
   "text": "established data quality protocols",
-  "kind": "gate"
+  "kind": "gate",
+  "source_url": "https://www.icaimt.com/2026/agentic-ai.html",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "eaamm.G2",
   "standard": "eaamm",
   "ref": "Prerequisite, L2 to L3",
   "text": "formal escalation procedures",
-  "kind": "gate"
+  "kind": "gate",
+  "source_url": "https://www.icaimt.com/2026/agentic-ai.html",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "eaamm.G3",
   "standard": "eaamm",
   "ref": "Prerequisite, L2 to L3",
   "text": "demonstrated reliability metrics on routine tasks",
-  "kind": "gate"
+  "kind": "gate",
+  "source_url": "https://www.icaimt.com/2026/agentic-ai.html",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.AT0",
   "standard": "owasp",
   "ref": "AT0 Shadow AI",
   "text": "No organisational awareness or approval. Users self-adopting AI tools outside governance.",
-  "kind": "tier"
+  "kind": "tier",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.AT1",
   "standard": "owasp",
   "ref": "AT1 Vendor Embedded Assistant",
   "text": "Fully vendor-controlled. You consume it, not build it.",
-  "kind": "tier"
+  "kind": "tier",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.AT2",
   "standard": "owasp",
   "ref": "AT2 Platform Integrated",
   "text": "AI-native platform with your data. Cannot execute arbitrary code.",
-  "kind": "tier"
+  "kind": "tier",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.AT3",
   "standard": "owasp",
   "ref": "AT3 Citizen Developer Agent",
   "text": "Low-code/no-code platform. User configures flows and prompts, not code. Actions on real org data.",
-  "kind": "tier"
+  "kind": "tier",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.AT4",
   "standard": "owasp",
   "ref": "AT4 Code Executing Agent",
   "text": "Generates and executes code with local/cloud privileges.",
-  "kind": "tier"
+  "kind": "tier",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.AT5",
   "standard": "owasp",
   "ref": "AT5 Custom In-House Agent",
   "text": "You built it. You control identity, tools, and boundaries.",
-  "kind": "tier"
+  "kind": "tier",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.AT6",
   "standard": "owasp",
   "ref": "AT6 Externally Extended Agent",
   "text": "Connects to external tools/services across trust boundaries.",
-  "kind": "tier"
+  "kind": "tier",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.AT7",
   "standard": "owasp",
   "ref": "AT7 Multi-Agent Orchestration",
   "text": "Multiple agents coordinate within your organization.",
-  "kind": "tier"
+  "kind": "tier",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.AT8",
   "standard": "owasp",
   "ref": "AT8 Federated / Cross Boundary",
   "text": "Agents operate across organizational boundaries.",
-  "kind": "tier"
+  "kind": "tier",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k01",
   "standard": "owasp",
   "ref": "Maturity Level 0 Unaware and Ad Hoc, key enterprise action",
   "text": "Identify/document shadow agentic AI deployments",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k02",
   "standard": "owasp",
   "ref": "Maturity Level 0 Unaware and Ad Hoc, key enterprise action",
   "text": "Establish executive awareness and interim ownership",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k03",
   "standard": "owasp",
   "ref": "Maturity Level 0 Unaware and Ad Hoc, key enterprise action",
   "text": "Introduce baseline logging/data handling",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k04",
   "standard": "owasp",
   "ref": "Maturity Level 0 Unaware and Ad Hoc, key enterprise action",
   "text": "Issue temporary usage guidelines",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k05",
   "standard": "owasp",
   "ref": "Maturity Level 0 Unaware and Ad Hoc, key enterprise action",
   "text": "Initiate preliminary risk assessments",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k06",
   "standard": "owasp",
   "ref": "Maturity Level 1 Experimentation without Guardrails, key enterprise action",
   "text": "Formalize pilot approval/review processes",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k07",
   "standard": "owasp",
   "ref": "Maturity Level 1 Experimentation without Guardrails, key enterprise action",
   "text": "Define initial autonomy limits/tool controls",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k08",
   "standard": "owasp",
   "ref": "Maturity Level 1 Experimentation without Guardrails, key enterprise action",
   "text": "Create centralized agentic systems registry",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k09",
   "standard": "owasp",
   "ref": "Maturity Level 1 Experimentation without Guardrails, key enterprise action",
   "text": "Standardize audit logging/version control",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k10",
   "standard": "owasp",
   "ref": "Maturity Level 1 Experimentation without Guardrails, key enterprise action",
   "text": "Establish regular governance reporting",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k11",
   "standard": "owasp",
   "ref": "Maturity Level 2 Policy-Defined, Human-in-the-Loop, key enterprise action",
   "text": "Publish formal agentic AI governance policies",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k12",
   "standard": "owasp",
   "ref": "Maturity Level 2 Policy-Defined, Human-in-the-Loop, key enterprise action",
   "text": "Implement human-in-the-loop workflows",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k13",
   "standard": "owasp",
   "ref": "Maturity Level 2 Policy-Defined, Human-in-the-Loop, key enterprise action",
   "text": "Designate accountable executives/governance bodies",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k14",
   "standard": "owasp",
   "ref": "Maturity Level 2 Policy-Defined, Human-in-the-Loop, key enterprise action",
   "text": "Deploy AI-SBOM/provenance systems",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k15",
   "standard": "owasp",
   "ref": "Maturity Level 2 Policy-Defined, Human-in-the-Loop, key enterprise action",
   "text": "Establish structured incident/audit processes",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k16",
   "standard": "owasp",
   "ref": "Maturity Level 2 Policy-Defined, Human-in-the-Loop, key enterprise action",
   "text": "Add owners for agents in registry and define transfer protocol",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k17",
   "standard": "owasp",
   "ref": "Maturity Level 3 Integrated, Continuous Oversight, key enterprise action",
   "text": "Deploy real-time monitoring/anomaly detection",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k18",
   "standard": "owasp",
   "ref": "Maturity Level 3 Integrated, Continuous Oversight, key enterprise action",
   "text": "Implement kill switches/autonomy controls",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k19",
   "standard": "owasp",
   "ref": "Maturity Level 3 Integrated, Continuous Oversight, key enterprise action",
   "text": "Enforce governance via machine-readable policies",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k20",
   "standard": "owasp",
   "ref": "Maturity Level 3 Integrated, Continuous Oversight, key enterprise action",
   "text": "Integrate telemetry into observability platforms",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k21",
   "standard": "owasp",
   "ref": "Maturity Level 3 Integrated, Continuous Oversight, key enterprise action",
   "text": "Establish dedicated AI Security Operations",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k22",
   "standard": "owasp",
   "ref": "Maturity Level 4 Adaptive, Self-Regulating Governance, key enterprise action",
   "text": "Implement self-adjusting policy/risk engines",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k23",
   "standard": "owasp",
   "ref": "Maturity Level 4 Adaptive, Self-Regulating Governance, key enterprise action",
   "text": "Deploy cryptographic agent identity/trust",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k24",
   "standard": "owasp",
   "ref": "Maturity Level 4 Adaptive, Self-Regulating Governance, key enterprise action",
   "text": "Operate regulator-ready compliance dashboards",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k25",
   "standard": "owasp",
   "ref": "Maturity Level 4 Adaptive, Self-Regulating Governance, key enterprise action",
   "text": "Automate audit evidence/certification",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "owasp.k26",
   "standard": "owasp",
   "ref": "Maturity Level 4 Adaptive, Self-Regulating Governance, key enterprise action",
   "text": "Institutionalize cross-jurisdictional alignment",
-  "kind": "action"
+  "kind": "action",
+  "source_url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "mcp.01",
   "standard": "mcp",
   "ref": "Authorization (draft)",
   "text": "MCP servers MUST implement OAuth 2.0 Protected Resource Metadata (RFC 9728).",
-  "kind": "requirement"
+  "kind": "requirement",
+  "source_url": "https://modelcontextprotocol.io/specification/draft/basic/authorization#overview",
+  "source_depth": "the section of the specification that holds the requirement (its opening words were found there)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "mcp.02",
   "standard": "mcp",
   "ref": "Authorization (draft)",
   "text": "MCP authorization servers MUST provide at least one discovery mechanism: OAuth 2.0 Authorization Server Metadata (RFC 8414) or OpenID Connect Discovery 1.0.",
-  "kind": "requirement"
+  "kind": "requirement",
+  "source_url": "https://modelcontextprotocol.io/specification/draft/basic/authorization#overview",
+  "source_depth": "the section of the specification that holds the requirement (its opening words were found there)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "mcp.03",
   "standard": "mcp",
   "ref": "Authorization (draft)",
   "text": "Authorization servers MUST implement OAuth 2.1 with appropriate security measures for both confidential and public clients.",
-  "kind": "requirement"
+  "kind": "requirement",
+  "source_url": "https://modelcontextprotocol.io/specification/draft/basic/authorization#overview",
+  "source_depth": "the section of the specification that holds the requirement (its opening words were found there)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "mcp.04",
   "standard": "mcp",
   "ref": "Authorization (draft)",
   "text": "Authorization servers and MCP clients SHOULD support OAuth Client ID Metadata Documents.",
-  "kind": "requirement"
+  "kind": "requirement",
+  "source_url": "https://modelcontextprotocol.io/specification/draft/basic/authorization#overview",
+  "source_depth": "the section of the specification that holds the requirement (its opening words were found there)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "mcp.05",
   "standard": "mcp",
   "ref": "Authorization (draft)",
   "text": "MCP servers SHOULD include a scope parameter in the WWW-Authenticate header to indicate the scopes required for accessing the resource.",
-  "kind": "requirement"
+  "kind": "requirement",
+  "source_url": "https://modelcontextprotocol.io/specification/draft/basic/authorization#scope-selection-strategy",
+  "source_depth": "the section of the specification that holds the requirement (its opening words were found there)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "mcp.06",
   "standard": "mcp",
   "ref": "Authorization (draft)",
   "text": "MCP clients SHOULD follow the principle of least privilege by requesting only the scopes necessary for their intended operations.",
-  "kind": "requirement"
+  "kind": "requirement",
+  "source_url": "https://modelcontextprotocol.io/specification/draft/basic/authorization#scope-selection-strategy",
+  "source_depth": "the section of the specification that holds the requirement (its opening words were found there)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "mcp.07",
   "standard": "mcp",
   "ref": "Authorization (draft)",
   "text": "MCP authorization servers SHOULD include the iss parameter in authorization responses (RFC 9207), advertised in their metadata.",
-  "kind": "requirement"
+  "kind": "requirement",
+  "source_url": "https://modelcontextprotocol.io/specification/draft/basic/authorization#authorization-response-validation",
+  "source_depth": "the section of the specification that holds the requirement (its opening words were found there)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "mcp.08",
   "standard": "mcp",
   "ref": "Authorization (draft)",
   "text": "MCP clients MUST implement Resource Indicators for OAuth 2.0 (RFC 8707).",
-  "kind": "requirement"
+  "kind": "requirement",
+  "source_url": "https://modelcontextprotocol.io/specification/draft/basic/authorization#resource-parameter-implementation",
+  "source_depth": "the section of the specification that holds the requirement (its opening words were found there)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "mcp.09",
   "standard": "mcp",
   "ref": "Authorization (draft)",
   "text": "Authorization MUST be included in every HTTP request from client to server.",
-  "kind": "requirement"
+  "kind": "requirement",
+  "source_url": "https://modelcontextprotocol.io/specification/draft/basic/authorization#token-requirements",
+  "source_depth": "the section of the specification that holds the requirement (its opening words were found there)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "mcp.10",
   "standard": "mcp",
   "ref": "Authorization (draft)",
   "text": "Access tokens MUST NOT be included in the URI query string.",
-  "kind": "requirement"
+  "kind": "requirement",
+  "source_url": "https://modelcontextprotocol.io/specification/draft/basic/authorization#token-requirements",
+  "source_depth": "the section of the specification that holds the requirement (its opening words were found there)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "mcp.11",
   "standard": "mcp",
   "ref": "Authorization (draft)",
   "text": "MCP servers MUST validate that access tokens were issued specifically for them as the intended audience.",
-  "kind": "requirement"
+  "kind": "requirement",
+  "source_url": "https://modelcontextprotocol.io/specification/draft/basic/authorization#token-handling",
+  "source_depth": "the section of the specification that holds the requirement (its opening words were found there)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "mcp.12",
   "standard": "mcp",
   "ref": "Authorization (draft)",
   "text": "MCP servers MUST NOT accept or transit any other tokens.",
-  "kind": "requirement"
+  "kind": "requirement",
+  "source_url": "https://modelcontextprotocol.io/specification/draft/basic/authorization#token-handling",
+  "source_depth": "the section of the specification that holds the requirement (its opening words were found there)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "mcp.13",
   "standard": "mcp",
   "ref": "Authorization (draft)",
   "text": "Invalid or expired tokens MUST receive a HTTP 401 response.",
-  "kind": "requirement"
+  "kind": "requirement",
+  "source_url": "https://modelcontextprotocol.io/specification/draft/basic/authorization#token-handling",
+  "source_depth": "the section of the specification that holds the requirement (its opening words were found there)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "mcp.14",
   "standard": "mcp",
   "ref": "Authorization (draft)",
   "text": "MCP Servers SHOULD NOT include offline_access in WWW-Authenticate scope or Protected Resource Metadata scopes_supported.",
-  "kind": "requirement"
+  "kind": "requirement",
+  "source_url": "https://modelcontextprotocol.io/specification/draft/basic/authorization#refresh-tokens",
+  "source_depth": "the section of the specification whose text holds the requirement (matched by its words)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "mcp.15",
   "standard": "mcp",
   "ref": "Authorization (draft)",
   "text": "Servers MUST account for scope hierarchies, where a broader scope implies narrower ones, when deciding whether a token is sufficient for an operation.",
-  "kind": "requirement"
+  "kind": "requirement",
+  "source_url": "https://modelcontextprotocol.io/specification/draft/basic/authorization#step-up-authorization-flow",
+  "source_depth": "the section of the specification that holds the requirement (its opening words were found there)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "aagmm.GD-01",
   "standard": "aagmm",
   "ref": "GD-01",
   "text": "Agent Lifecycle Management",
-  "kind": "domain"
+  "kind": "domain",
+  "source_url": "https://arxiv.org/abs/2604.16338",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "aagmm.GD-02",
   "standard": "aagmm",
   "ref": "GD-02",
   "text": "Identity & Access Control",
-  "kind": "domain"
+  "kind": "domain",
+  "source_url": "https://arxiv.org/abs/2604.16338",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "aagmm.GD-03",
   "standard": "aagmm",
   "ref": "GD-03",
   "text": "Observability",
-  "kind": "domain"
+  "kind": "domain",
+  "source_url": "https://arxiv.org/abs/2604.16338",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "aagmm.GD-04",
   "standard": "aagmm",
   "ref": "GD-04",
   "text": "Policy Enforcement",
-  "kind": "domain"
+  "kind": "domain",
+  "source_url": "https://arxiv.org/abs/2604.16338",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "aagmm.GD-05",
   "standard": "aagmm",
   "ref": "GD-05",
   "text": "Data Governance",
-  "kind": "domain"
+  "kind": "domain",
+  "source_url": "https://arxiv.org/abs/2604.16338",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "aagmm.GD-06",
   "standard": "aagmm",
   "ref": "GD-06",
   "text": "Human Oversight",
-  "kind": "domain"
+  "kind": "domain",
+  "source_url": "https://arxiv.org/abs/2604.16338",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "aagmm.GD-07",
   "standard": "aagmm",
   "ref": "GD-07",
   "text": "Sprawl Containment",
-  "kind": "domain"
+  "kind": "domain",
+  "source_url": "https://arxiv.org/abs/2604.16338",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "aagmm.GD-08",
   "standard": "aagmm",
   "ref": "GD-08",
   "text": "Audit & Compliance",
-  "kind": "domain"
+  "kind": "domain",
+  "source_url": "https://arxiv.org/abs/2604.16338",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "aagmm.GD-09",
   "standard": "aagmm",
   "ref": "GD-09",
   "text": "Inter-Agent Coordination",
-  "kind": "domain"
+  "kind": "domain",
+  "source_url": "https://arxiv.org/abs/2604.16338",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "aagmm.GD-10",
   "standard": "aagmm",
   "ref": "GD-10",
   "text": "Risk Classification",
-  "kind": "domain"
+  "kind": "domain",
+  "source_url": "https://arxiv.org/abs/2604.16338",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "aagmm.GD-11",
   "standard": "aagmm",
   "ref": "GD-11",
   "text": "Incident Response",
-  "kind": "domain"
+  "kind": "domain",
+  "source_url": "https://arxiv.org/abs/2604.16338",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "aagmm.GD-12",
   "standard": "aagmm",
   "ref": "GD-12",
   "text": "Continuous Improvement",
-  "kind": "domain"
+  "kind": "domain",
+  "source_url": "https://arxiv.org/abs/2604.16338",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.100.1.1",
   "standard": "ms",
   "ref": "100: Initial, AI strategy and experience",
   "text": "No AI agent strategy or vision, no executive sponsor",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.100.1.2",
   "standard": "ms",
   "ref": "100: Initial, AI strategy and experience",
   "text": "Pilots are sporadic or tactical",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.100.1.3",
   "standard": "ms",
   "ref": "100: Initial, AI strategy and experience",
   "text": "Limited AI or business alignment",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.100.1.4",
   "standard": "ms",
   "ref": "100: Initial, AI strategy and experience",
   "text": "No Responsible AI (RAI) awareness",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.100.2.1",
   "standard": "ms",
   "ref": "100: Initial, Business strategy",
   "text": "Human-only workflows",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.100.2.2",
   "standard": "ms",
   "ref": "100: Initial, Business strategy",
   "text": "Work is manually intensive",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.100.2.3",
   "standard": "ms",
   "ref": "100: Initial, Business strategy",
   "text": "No processes designed for automation, orchestration, or agent collaboration",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.100.3.1",
   "standard": "ms",
   "ref": "100: Initial, AI governance and security",
   "text": "No governance",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.100.3.2",
   "standard": "ms",
   "ref": "100: Initial, AI governance and security",
   "text": "Basic information compliance and security",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.100.3.3",
   "standard": "ms",
   "ref": "100: Initial, AI governance and security",
   "text": "No operational model",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.100.3.4",
   "standard": "ms",
   "ref": "100: Initial, AI governance and security",
   "text": "No support model",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.100.4.1",
   "standard": "ms",
   "ref": "100: Initial, Technology and data",
   "text": "Fragmented tooling",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.100.4.2",
   "standard": "ms",
   "ref": "100: Initial, Technology and data",
   "text": "No technical architecture or reference architectures",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.100.4.3",
   "standard": "ms",
   "ref": "100: Initial, Technology and data",
   "text": "Limited infrastructure (outstation agents for adoption at scale)",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.100.5.1",
   "standard": "ms",
   "ref": "100: Initial, Organization and culture",
   "text": "No training or enablement, isolated pilots/training",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.100.5.2",
   "standard": "ms",
   "ref": "100: Initial, Organization and culture",
   "text": "No champions or communities",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.100.5.3",
   "standard": "ms",
   "ref": "100: Initial, Organization and culture",
   "text": "Unclear business value for adoption at scale",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.200.1.1",
   "standard": "ms",
   "ref": "200: Repeatable, AI strategy and experience",
   "text": "Early vision forming",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.200.1.2",
   "standard": "ms",
   "ref": "200: Repeatable, AI strategy and experience",
   "text": "Limited leadership alignment",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.200.1.3",
   "standard": "ms",
   "ref": "200: Repeatable, AI strategy and experience",
   "text": "Informal strategy",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.200.2.1",
   "standard": "ms",
   "ref": "200: Repeatable, Business strategy",
   "text": "Pilots improve single workflow steps",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.200.2.2",
   "standard": "ms",
   "ref": "200: Repeatable, Business strategy",
   "text": "Incremental improvements",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.200.2.3",
   "standard": "ms",
   "ref": "200: Repeatable, Business strategy",
   "text": "No end-to-end process redesign",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.200.2.4",
   "standard": "ms",
   "ref": "200: Repeatable, Business strategy",
   "text": "Early value story forming;",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.200.2.5",
   "standard": "ms",
   "ref": "200: Repeatable, Business strategy",
   "text": "measurement",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.200.3.1",
   "standard": "ms",
   "ref": "200: Repeatable, AI governance and security",
   "text": "Early policies",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.200.3.2",
   "standard": "ms",
   "ref": "200: Repeatable, AI governance and security",
   "text": "Separate development, test, production environments exist for security reviews",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.200.3.3",
   "standard": "ms",
   "ref": "200: Repeatable, AI governance and security",
   "text": "Basic environment separation",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.200.3.4",
   "standard": "ms",
   "ref": "200: Repeatable, AI governance and security",
   "text": "Basic monitoring and maintenance of AI",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.200.4.1",
   "standard": "ms",
   "ref": "200: Repeatable, Technology and data",
   "text": "Basic environment structure",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.200.4.2",
   "standard": "ms",
   "ref": "200: Repeatable, Technology and data",
   "text": "Partial reuse of some connectors",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.200.4.3",
   "standard": "ms",
   "ref": "200: Repeatable, Technology and data",
   "text": "Limited awareness across early adopters",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.200.5.1",
   "standard": "ms",
   "ref": "200: Repeatable, Organization and culture",
   "text": "Sporadic training, informal communities",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.200.5.2",
   "standard": "ms",
   "ref": "200: Repeatable, Organization and culture",
   "text": "Unclear roles and adoption ownership",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.200.5.3",
   "standard": "ms",
   "ref": "200: Repeatable, Organization and culture",
   "text": "Limited awareness across early adopters",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.300.1.1",
   "standard": "ms",
   "ref": "300: Defined, AI strategy and experience",
   "text": "Formal AI/agent strategy",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.300.1.2",
   "standard": "ms",
   "ref": "300: Defined, AI strategy and experience",
   "text": "Cross-functional planning and goals",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.300.1.3",
   "standard": "ms",
   "ref": "300: Defined, AI strategy and experience",
   "text": "Executive sponsor",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.300.1.4",
   "standard": "ms",
   "ref": "300: Defined, AI strategy and experience",
   "text": "KPIs/PIs tracked, regular reporting",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.300.2.1",
   "standard": "ms",
   "ref": "300: Defined, Business strategy",
   "text": "Documented governance model",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.300.2.2",
   "standard": "ms",
   "ref": "300: Defined, Business strategy",
   "text": "Primary business metrics",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.300.2.3",
   "standard": "ms",
   "ref": "300: Defined, Business strategy",
   "text": "Human-agent teaming defined for priority business processes",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.300.2.4",
   "standard": "ms",
   "ref": "300: Defined, Business strategy",
   "text": "KPI guidelines defined; real-risk documented and mitigated",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.300.3.1",
   "standard": "ms",
   "ref": "300: Defined, AI governance and security",
   "text": "Standardized architecture",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.300.3.2",
   "standard": "ms",
   "ref": "300: Defined, AI governance and security",
   "text": "AI practices",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.300.3.3",
   "standard": "ms",
   "ref": "300: Defined, AI governance and security",
   "text": "Reusable components",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.300.3.4",
   "standard": "ms",
   "ref": "300: Defined, AI governance and security",
   "text": "Telemetry and data readiness platforms ensure platform use",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.300.4.1",
   "standard": "ms",
   "ref": "300: Defined, Technology and data",
   "text": "Formal enablement",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.300.4.2",
   "standard": "ms",
   "ref": "300: Defined, Technology and data",
   "text": "Active makers/communities",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.300.4.3",
   "standard": "ms",
   "ref": "300: Defined, Technology and data",
   "text": "Defined enablement models and systems",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.300.4.4",
   "standard": "ms",
   "ref": "300: Defined, Technology and data",
   "text": "Contextual knowledge base with enablement assets",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.300.5.1",
   "standard": "ms",
   "ref": "300: Defined, Organization and culture",
   "text": "Formal onboarding, active maker/community motions",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.300.5.2",
   "standard": "ms",
   "ref": "300: Defined, Organization and culture",
   "text": "Regular knowledge sharing and enablement assets",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.400.1.1",
   "standard": "ms",
   "ref": "400: Capable, AI strategy and experience",
   "text": "AI integrated in enterprise planning",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.400.1.2",
   "standard": "ms",
   "ref": "400: Capable, AI strategy and experience",
   "text": "Cross-department alignment",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.400.1.3",
   "standard": "ms",
   "ref": "400: Capable, AI strategy and experience",
   "text": "Strategic measurement",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.400.1.4",
   "standard": "ms",
   "ref": "400: Capable, AI strategy and experience",
   "text": "RAI guiding design",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.400.2.1",
   "standard": "ms",
   "ref": "400: Capable, Business strategy",
   "text": "Cross-system orchestration",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.400.2.2",
   "standard": "ms",
   "ref": "400: Capable, Business strategy",
   "text": "Domain redesign post agent optimization",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.400.2.3",
   "standard": "ms",
   "ref": "400: Capable, Business strategy",
   "text": "Measurable business value agent and optimization loops",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.400.2.4",
   "standard": "ms",
   "ref": "400: Capable, Business strategy",
   "text": "Strong transformation assessment",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.400.3.1",
   "standard": "ms",
   "ref": "400: Capable, AI governance and security",
   "text": "Proactive governance with automation monitoring and alerts",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.400.3.2",
   "standard": "ms",
   "ref": "400: Capable, AI governance and security",
   "text": "Continuous improvement loop",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.400.3.3",
   "standard": "ms",
   "ref": "400: Capable, AI governance and security",
   "text": "RAI embedded into lifecycle gates",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.400.4.1",
   "standard": "ms",
   "ref": "400: Capable, Technology and data",
   "text": "Scalable enterprise foundations",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.400.4.2",
   "standard": "ms",
   "ref": "400: Capable, Technology and data",
   "text": "Automated deployment and quality assurance guidance",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.400.4.3",
   "standard": "ms",
   "ref": "400: Capable, Technology and data",
   "text": "Shared data management and optimization",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.400.4.4",
   "standard": "ms",
   "ref": "400: Capable, Technology and data",
   "text": "Performance tuning",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.400.5.1",
   "standard": "ms",
   "ref": "400: Capable, Organization and culture",
   "text": "Champions embedded in organization",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.400.5.2",
   "standard": "ms",
   "ref": "400: Capable, Organization and culture",
   "text": "Shared acceleration models",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.400.5.3",
   "standard": "ms",
   "ref": "400: Capable, Organization and culture",
   "text": "Shared center engagement and incentives",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.400.5.4",
   "standard": "ms",
   "ref": "400: Capable, Organization and culture",
   "text": "Culture of optimization",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.500.1.1",
   "standard": "ms",
   "ref": "500: Efficient, AI strategy and experience",
   "text": "AI-first culture",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.500.1.2",
   "standard": "ms",
   "ref": "500: Efficient, AI strategy and experience",
   "text": "Continuous strategic iteration",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.500.1.3",
   "standard": "ms",
   "ref": "500: Efficient, AI strategy and experience",
   "text": "Exec-level accountability",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.500.2.1",
   "standard": "ms",
   "ref": "500: Efficient, Business strategy",
   "text": "Adaptive, autonomous processes",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.500.2.2",
   "standard": "ms",
   "ref": "500: Efficient, Business strategy",
   "text": "Continuous optimization",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.500.2.3",
   "standard": "ms",
   "ref": "500: Efficient, Business strategy",
   "text": "AI-enabled new innovations and investment",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.500.2.4",
   "standard": "ms",
   "ref": "500: Efficient, Business strategy",
   "text": "RAI is part of enterprise culture",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.500.3.1",
   "standard": "ms",
   "ref": "500: Efficient, AI governance and security",
   "text": "Predictive risk management",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.500.3.2",
   "standard": "ms",
   "ref": "500: Efficient, AI governance and security",
   "text": "Real-time compliance monitoring and controls",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.500.3.3",
   "standard": "ms",
   "ref": "500: Efficient, AI governance and security",
   "text": "Automated remediation, always-on improvement loop",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.500.4.1",
   "standard": "ms",
   "ref": "500: Efficient, Technology and data",
   "text": "Advanced multi-agent patterns",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.500.4.2",
   "standard": "ms",
   "ref": "500: Efficient, Technology and data",
   "text": "Self-improving community",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.500.4.3",
   "standard": "ms",
   "ref": "500: Efficient, Technology and data",
   "text": "Emerging innovation agents",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.500.4.4",
   "standard": "ms",
   "ref": "500: Efficient, Technology and data",
   "text": "Predictive agents used to guide reliability and performance",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.500.5.1",
   "standard": "ms",
   "ref": "500: Efficient, Organization and culture",
   "text": "Self-sustaining community, emerging innovation agents",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "ms.500.5.2",
   "standard": "ms",
   "ref": "500: Efficient, Organization and culture",
   "text": "Continuous learning culture with clear incentives",
-  "kind": "characteristic"
+  "kind": "characteristic",
+  "source_url": "https://learn.microsoft.com/en-us/agents/adoption-maturity-model/",
+  "source_depth": "the document: its publisher gives no deeper address for this item",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.GOVERN-1.1",
   "standard": "nist",
   "ref": "GOVERN 1.1",
   "text": "Legal and regulatory requirements involving AI are understood, managed, and documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/govern/#Govern%201.1",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.GOVERN-1.2",
   "standard": "nist",
   "ref": "GOVERN 1.2",
   "text": "The characteristics of trustworthy AI are integrated into organizational policies, processes, and procedures.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/govern/#Govern%201.2",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.GOVERN-1.3",
   "standard": "nist",
   "ref": "GOVERN 1.3",
   "text": "Processes and procedures are in place to determine the needed level of risk management activities based on the organization's risk tolerance.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/govern/#Govern%201.3",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.GOVERN-1.4",
   "standard": "nist",
   "ref": "GOVERN 1.4",
   "text": "The risk management process and its outcomes are established through transparent policies, procedures, and other controls based on organizational risk priorities.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/govern/#Govern%201.4",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.GOVERN-1.5",
   "standard": "nist",
   "ref": "GOVERN 1.5",
   "text": "Ongoing monitoring and periodic review of the risk management process and its outcomes are planned, organizational roles and responsibilities are clearly defined, including determining the frequency of periodic review.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/govern/#Govern%201.5",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.GOVERN-1.6",
   "standard": "nist",
   "ref": "GOVERN 1.6",
   "text": "Mechanisms are in place to inventory AI systems and are resourced according to organizational risk priorities.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/govern/#Govern%201.6",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.GOVERN-1.7",
   "standard": "nist",
   "ref": "GOVERN 1.7",
   "text": "Processes and procedures are in place for decommissioning and phasing out of AI systems safely and in a manner that does not increase risks or decrease the organization’s trustworthiness.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/govern/#Govern%201.7",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.GOVERN-2.1",
   "standard": "nist",
   "ref": "GOVERN 2.1",
   "text": "Roles and responsibilities and lines of communication related to mapping, measuring, and managing AI risks are documented and are clear to individuals and teams throughout the organization.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/govern/#Govern%202.1",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.GOVERN-2.2",
   "standard": "nist",
   "ref": "GOVERN 2.2",
   "text": "The organization’s personnel and partners receive AI risk management training to enable them to perform their duties and responsibilities consistent with related policies, procedures, and agreements.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/govern/#Govern%202.2",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.GOVERN-2.3",
   "standard": "nist",
   "ref": "GOVERN 2.3",
   "text": "Executive leadership of the organization takes responsibility for decisions about risks associated with AI system development and deployment.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/govern/#Govern%202.3",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.GOVERN-3.1",
   "standard": "nist",
   "ref": "GOVERN 3.1",
   "text": "Decision-makings related to mapping, measuring, and managing AI risks throughout the lifecycle is informed by a diverse team (e.g., diversity of demographics, disciplines, experience, expertise, and backgrounds).",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/govern/#Govern%203.1",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.GOVERN-3.2",
   "standard": "nist",
   "ref": "GOVERN 3.2",
   "text": "Policies and procedures are in place to define and differentiate roles and responsibilities for human-AI configurations and oversight of AI systems.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/govern/#Govern%203.2",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.GOVERN-4.1",
   "standard": "nist",
   "ref": "GOVERN 4.1",
   "text": "Organizational policies, and practices are in place to foster a critical thinking and safety-first mindset in the design, development, deployment, and uses of AI systems to minimize negative impacts.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/govern/#Govern%204.1",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.GOVERN-4.2",
   "standard": "nist",
   "ref": "GOVERN 4.2",
   "text": "Organizational teams document the risks and potential impacts of the AI technology they design, develop, deploy, evaluate and use, and communicate about the impacts more broadly.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/govern/#Govern%204.2",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.GOVERN-4.3",
   "standard": "nist",
   "ref": "GOVERN 4.3",
   "text": "Organizational practices are in place to enable AI testing, identification of incidents, and information sharing.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/govern/#Govern%204.3",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.GOVERN-5.1",
   "standard": "nist",
   "ref": "GOVERN 5.1",
   "text": "Organizational policies and practices are in place to collect, consider, prioritize, and integrate feedback from those external to the team that developed or deployed the AI system regarding the potential individual and societal impacts related to AI risks.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/govern/#Govern%205.1",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.GOVERN-5.2",
   "standard": "nist",
   "ref": "GOVERN 5.2",
   "text": "Mechanisms are established to enable AI actors to regularly incorporate adjudicated feedback from relevant AI actors into system design and implementation.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/govern/#Govern%205.2",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.GOVERN-6.1",
   "standard": "nist",
   "ref": "GOVERN 6.1",
   "text": "Policies and procedures are in place that address AI risks associated with third-party entities, including risks of infringement of a third party’s intellectual property or other rights.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/govern/#Govern%206.1",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.GOVERN-6.2",
   "standard": "nist",
   "ref": "GOVERN 6.2",
   "text": "Contingency processes are in place to handle failures or incidents in third-party data or AI systems deemed to be high-risk.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/govern/#Govern%206.2",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MANAGE-1.1",
   "standard": "nist",
   "ref": "MANAGE 1.1",
   "text": "A determination is made as to whether the AI system achieves its intended purpose and stated objectives and whether its development or deployment should proceed.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/manage/#Manage%201.1",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MANAGE-1.2",
   "standard": "nist",
   "ref": "MANAGE 1.2",
   "text": "Treatment of documented AI risks is prioritized based on impact, likelihood, or available resources or methods.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/manage/#Manage%201.2",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MANAGE-1.3",
   "standard": "nist",
   "ref": "MANAGE 1.3",
   "text": "Responses to the AI risks deemed high priority as identified by the Map function, are developed, planned, and documented. Risk response options can include mitigating, transferring, avoiding, or accepting.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/manage/#Manage%201.3",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MANAGE-1.4",
   "standard": "nist",
   "ref": "MANAGE 1.4",
   "text": "Negative residual risks (defined as the sum of all unmitigated risks) to both downstream acquirers of AI systems and end users are documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/manage/#Manage%201.4",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MANAGE-2.1",
   "standard": "nist",
   "ref": "MANAGE 2.1",
   "text": "Resources required to manage AI risks are taken into account, along with viable non-AI alternative systems, approaches, or methods – to reduce the magnitude or likelihood of potential impacts.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/manage/#Manage%202.1",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MANAGE-2.2",
   "standard": "nist",
   "ref": "MANAGE 2.2",
   "text": "Mechanisms are in place and applied to sustain the value of deployed AI systems.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/manage/#Manage%202.2",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MANAGE-2.3",
   "standard": "nist",
   "ref": "MANAGE 2.3",
   "text": "Procedures are followed to respond to and recover from a previously unknown risk when it is identified.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/manage/#Manage%202.3",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MANAGE-2.4",
   "standard": "nist",
   "ref": "MANAGE 2.4",
   "text": "Mechanisms are in place and applied, responsibilities are assigned and understood to supersede, disengage, or deactivate AI systems that demonstrate performance or outcomes inconsistent with intended use.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/manage/#Manage%202.4",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MANAGE-3.1",
   "standard": "nist",
   "ref": "MANAGE 3.1",
   "text": "AI risks and benefits from third-party resources are regularly monitored, and risk controls are applied and documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/manage/#Manage%203.1",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MANAGE-3.2",
   "standard": "nist",
   "ref": "MANAGE 3.2",
   "text": "Pre-trained models which are used for development are monitored as part of AI system regular  monitoring and maintenance.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/manage/#Manage%203.2",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MANAGE-4.1",
   "standard": "nist",
   "ref": "MANAGE 4.1",
   "text": "Post-deployment AI system monitoring plans are implemented, including mechanisms for capturing and evaluating input from users and other relevant AI actors, appeal and override, decommissioning, incident response, recovery, and change management.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/manage/#Manage%204.1",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MANAGE-4.2",
   "standard": "nist",
   "ref": "MANAGE 4.2",
   "text": "Measurable activities for continual improvements are integrated into AI system updates and include regular engagement with interested parties, including relevant AI actors.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/manage/#Manage%204.2",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MANAGE-4.3",
   "standard": "nist",
   "ref": "MANAGE 4.3",
   "text": "Incidents and errors are communicated to relevant AI actors including affected communities. Processes for tracking, responding to, and recovering from incidents and errors are followed and documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/manage/#Manage%204.3",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MAP-1.1",
   "standard": "nist",
   "ref": "MAP 1.1",
   "text": "Intended purpose, potentially beneficial uses, context-specific laws, norms and expectations, and prospective settings in which the AI system will be deployed are understood and documented. Considerations include: specific set or types of users along with their expectations; potential positive and negative impacts of system uses to individuals, communities, organizations, society, and the planet; assumptions and related limitations about AI system purposes; uses and risks across the development or product AI lifecycle; TEVV and system metrics.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/map/#Map%201.1",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MAP-1.2",
   "standard": "nist",
   "ref": "MAP 1.2",
   "text": "Inter-disciplinary AI actors, competencies, skills and capacities for establishing context reflect demographic diversity and broad domain and user experience expertise, and their participation is documented. Opportunities for interdisciplinary collaboration are prioritized.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/map/#Map%201.2",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MAP-1.3",
   "standard": "nist",
   "ref": "MAP 1.3",
   "text": "The organization’s mission and relevant goals for the AI technology are understood and documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/map/#Map%201.3",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MAP-1.4",
   "standard": "nist",
   "ref": "MAP 1.4",
   "text": "The business value or context of business use has been clearly defined or – in the case of assessing existing AI systems – re-evaluated.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/map/#Map%201.4",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MAP-1.5",
   "standard": "nist",
   "ref": "MAP 1.5",
   "text": "Organizational risk tolerances are determined and documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/map/#Map%201.5",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MAP-1.6",
   "standard": "nist",
   "ref": "MAP 1.6",
   "text": "System requirements (e.g., “the system shall respect the privacy of its users”) are elicited from and understood by relevant AI actors.  Design decisions take socio-technical implications into account to address AI risks.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/map/#Map%201.6",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MAP-2.1",
   "standard": "nist",
   "ref": "MAP 2.1",
   "text": "The specific task, and methods used to implement the task, that the AI system will support is defined (e.g., classifiers, generative models, recommenders).",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/map/#Map%202.1",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MAP-2.2",
   "standard": "nist",
   "ref": "MAP 2.2",
   "text": "Information about the AI system’s knowledge limits and how system output may be utilized and overseen by humans is documented. Documentation provides sufficient information to assist relevant AI actors when making informed decisions and taking subsequent actions.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/map/#Map%202.2",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MAP-2.3",
   "standard": "nist",
   "ref": "MAP 2.3",
   "text": "Scientific integrity and TEVV considerations are identified and documented, including those related to experimental design, data collection and selection (e.g., availability, representativeness, suitability), system trustworthiness, and construct validation.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/map/#Map%202.3",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MAP-3.1",
   "standard": "nist",
   "ref": "MAP 3.1",
   "text": "Potential benefits of intended AI system functionality and performance are examined and documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/map/#Map%203.1",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MAP-3.2",
   "standard": "nist",
   "ref": "MAP 3.2",
   "text": "Potential costs, including non-monetary costs, which result from expected or realized AI errors or system functionality and trustworthiness - as connected to organizational risk tolerance - are examined and documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/map/#Map%203.2",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MAP-3.3",
   "standard": "nist",
   "ref": "MAP 3.3",
   "text": "Targeted application scope is specified and documented based on the system’s capability, established context, and AI system categorization.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/map/#Map%203.3",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MAP-3.4",
   "standard": "nist",
   "ref": "MAP 3.4",
   "text": "Processes for operator and practitioner proficiency with AI system performance and trustworthiness – and relevant technical standards and certifications – are defined, assessed and documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/map/#Map%203.4",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MAP-3.5",
   "standard": "nist",
   "ref": "MAP 3.5",
   "text": "Processes for human oversight are defined, assessed, and documented in accordance with organizational policies from GOVERN function.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/map/#Map%203.5",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MAP-4.1",
   "standard": "nist",
   "ref": "MAP 4.1",
   "text": "Approaches for mapping AI technology and legal risks of its components – including the use of third-party data or software – are in place, followed, and documented, as are risks of infringement of a third-party’s intellectual property or other rights.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/map/#Map%204.1",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MAP-4.2",
   "standard": "nist",
   "ref": "MAP 4.2",
   "text": "Internal risk controls for components of the AI system including third-party AI technologies are identified and documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/map/#Map%204.2",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MAP-5.1",
   "standard": "nist",
   "ref": "MAP 5.1",
   "text": "Likelihood and magnitude of each identified impact (both potentially beneficial and harmful) based on expected use, past uses of AI systems in similar contexts, public incident reports, feedback from those external to the team that developed or deployed the AI system, or other data are identified and documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/map/#Map%205.1",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MAP-5.2",
   "standard": "nist",
   "ref": "MAP 5.2",
   "text": "Practices and personnel for supporting regular engagement with relevant AI actors and integrating feedback about positive, negative, and unanticipated impacts are in place and documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/map/#Map%205.2",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MEASURE-1.1",
   "standard": "nist",
   "ref": "MEASURE 1.1",
   "text": "Approaches and metrics for measurement of AI risks enumerated during the Map function are selected for implementation starting with the most significant AI risks. The risks or trustworthiness characteristics that will not – or cannot – be measured are properly documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/measure/#Measure%201.1",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MEASURE-1.2",
   "standard": "nist",
   "ref": "MEASURE 1.2",
   "text": "Appropriateness of AI metrics and effectiveness of existing controls is regularly assessed and updated including reports of errors and impacts on affected communities.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/measure/#Measure%201.2",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MEASURE-1.3",
   "standard": "nist",
   "ref": "MEASURE 1.3",
   "text": "Internal experts who did not serve as front-line developers for the system and/or independent assessors are involved in regular assessments and updates. Domain experts, users, AI actors external to the team that developed or deployed the AI system, and affected communities are consulted in support of assessments as necessary per organizational risk tolerance.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/measure/#Measure%201.3",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MEASURE-2.1",
   "standard": "nist",
   "ref": "MEASURE 2.1",
   "text": "Test sets, metrics, and details about the tools used during test, evaluation, validation, and verification (TEVV) are documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/measure/#Measure%202.1",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MEASURE-2.2",
   "standard": "nist",
   "ref": "MEASURE 2.2",
   "text": "Evaluations involving human subjects meet applicable requirements (including human subject protection) and are representative of the relevant population.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/measure/#Measure%202.2",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MEASURE-2.3",
   "standard": "nist",
   "ref": "MEASURE 2.3",
   "text": "AI system performance or assurance criteria are measured qualitatively or quantitatively and demonstrated for conditions similar to deployment setting(s). Measures are documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/measure/#Measure%202.3",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MEASURE-2.4",
   "standard": "nist",
   "ref": "MEASURE 2.4",
   "text": "The functionality and behavior of the AI system and its components – as identified in the MAP function – are monitored when in production.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/measure/#Measure%202.4",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MEASURE-2.5",
   "standard": "nist",
   "ref": "MEASURE 2.5",
   "text": "The AI system to be deployed is demonstrated to be valid and reliable. Limitations of the generalizability beyond the conditions under which the technology was developed are documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/measure/#Measure%202.5",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MEASURE-2.6",
   "standard": "nist",
   "ref": "MEASURE 2.6",
   "text": "AI system is evaluated regularly for safety risks – as identified in the MAP function. The AI system to be deployed is demonstrated to be safe, its residual negative risk does not exceed the risk tolerance, and can fail safely, particularly if made to operate beyond its knowledge limits. Safety metrics implicate system reliability and robustness, real-time monitoring, and response times for AI system failures.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/measure/#Measure%202.6",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MEASURE-2.7",
   "standard": "nist",
   "ref": "MEASURE 2.7",
   "text": "AI system security and resilience – as identified in the MAP function – are evaluated and documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/measure/#Measure%202.7",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MEASURE-2.8",
   "standard": "nist",
   "ref": "MEASURE 2.8",
   "text": "Risks associated with transparency and accountability – as identified in the MAP function – are examined and documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/measure/#Measure%202.8",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MEASURE-2.9",
   "standard": "nist",
   "ref": "MEASURE 2.9",
   "text": "The AI model is explained, validated, and documented, and  AI system output is interpreted within its context – as identified in the MAP function – and to inform responsible use and governance.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/measure/#Measure%202.9",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MEASURE-2.10",
   "standard": "nist",
   "ref": "MEASURE 2.10",
   "text": "Privacy risk of the AI system – as identified in the MAP function – is examined and documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/measure/#Measure%202.10",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MEASURE-2.11",
   "standard": "nist",
   "ref": "MEASURE 2.11",
   "text": "Fairness and bias – as identified in the MAP function – are evaluated and results are documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/measure/#Measure%202.11",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MEASURE-2.12",
   "standard": "nist",
   "ref": "MEASURE 2.12",
   "text": "Environmental impact and sustainability of AI model training and management activities – as identified in the MAP function – are assessed and documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/measure/#Measure%202.12",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MEASURE-2.13",
   "standard": "nist",
   "ref": "MEASURE 2.13",
   "text": "Effectiveness of the employed TEVV metrics and processes in the MEASURE function are evaluated and documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/measure/#Measure%202.13",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MEASURE-3.1",
   "standard": "nist",
   "ref": "MEASURE 3.1",
   "text": "Approaches, personnel, and documentation are in place to regularly identify and track existing, unanticipated, and emergent AI risks based on factors such as intended and actual performance in deployed contexts.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/measure/#Measure%203.1",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MEASURE-3.2",
   "standard": "nist",
   "ref": "MEASURE 3.2",
   "text": "Risk tracking approaches are considered for settings where AI risks are difficult to assess using currently available measurement techniques or where metrics are not yet available.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/measure/#Measure%203.2",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MEASURE-3.3",
   "standard": "nist",
   "ref": "MEASURE 3.3",
   "text": "Feedback processes for end users and impacted communities to report problems and appeal system outcomes are established and integrated into AI system evaluation metrics.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/measure/#Measure%203.3",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MEASURE-4.1",
   "standard": "nist",
   "ref": "MEASURE 4.1",
   "text": "Measurement approaches for identifying AI risks are connected to deployment context(s) and informed through consultation with domain experts and other end users. Approaches are documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/measure/#Measure%204.1",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MEASURE-4.2",
   "standard": "nist",
   "ref": "MEASURE 4.2",
   "text": "Measurement results regarding AI system trustworthiness in deployment context(s) and across AI lifecycle are informed by input from domain experts and other relevant AI actors to validate whether the system is performing consistently as intended. Results are documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/measure/#Measure%204.2",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "nist.MEASURE-4.3",
   "standard": "nist",
   "ref": "MEASURE 4.3",
   "text": "Measurable performance improvements or declines based on consultations with relevant AI actors including affected communities, and field data about context-relevant risks and trustworthiness characteristics, are identified and documented.",
-  "kind": "subcategory"
+  "kind": "subcategory",
+  "source_url": "https://airc.nist.gov/airmf-resources/playbook/measure/#Measure%204.3",
+  "source_depth": "the subcategory, in the NIST AI RMF Playbook (anchor found in the page)",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "aiact.art-4",
   "standard": "aiact",
   "ref": "Article 4",
   "text": "AI literacy",
-  "kind": "article"
+  "kind": "article",
+  "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj#art_4",
+  "source_depth": "the article, by the anchor EUR-Lex gives articles; not checked by fetch, because EUR-Lex does not answer an automated read",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "aiact.art-9",
   "standard": "aiact",
   "ref": "Article 9",
   "text": "Risk management system",
-  "kind": "article"
+  "kind": "article",
+  "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj#art_9",
+  "source_depth": "the article, by the anchor EUR-Lex gives articles; not checked by fetch, because EUR-Lex does not answer an automated read",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "aiact.art-12",
   "standard": "aiact",
   "ref": "Article 12",
   "text": "Record-keeping",
-  "kind": "article"
+  "kind": "article",
+  "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj#art_12",
+  "source_depth": "the article, by the anchor EUR-Lex gives articles; not checked by fetch, because EUR-Lex does not answer an automated read",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "aiact.art-13",
   "standard": "aiact",
   "ref": "Article 13",
   "text": "Transparency and provision of information to deployers",
-  "kind": "article"
+  "kind": "article",
+  "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj#art_13",
+  "source_depth": "the article, by the anchor EUR-Lex gives articles; not checked by fetch, because EUR-Lex does not answer an automated read",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "aiact.art-14",
   "standard": "aiact",
   "ref": "Article 14",
   "text": "Human oversight",
-  "kind": "article"
+  "kind": "article",
+  "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj#art_14",
+  "source_depth": "the article, by the anchor EUR-Lex gives articles; not checked by fetch, because EUR-Lex does not answer an automated read",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "aiact.art-15",
   "standard": "aiact",
   "ref": "Article 15",
   "text": "Accuracy, robustness and cybersecurity",
-  "kind": "article"
+  "kind": "article",
+  "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj#art_15",
+  "source_depth": "the article, by the anchor EUR-Lex gives articles; not checked by fetch, because EUR-Lex does not answer an automated read",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "aiact.art-26",
   "standard": "aiact",
   "ref": "Article 26",
   "text": "Obligations of deployers of high-risk AI systems",
-  "kind": "article"
+  "kind": "article",
+  "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj#art_26",
+  "source_depth": "the article, by the anchor EUR-Lex gives articles; not checked by fetch, because EUR-Lex does not answer an automated read",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "aiact.art-27",
   "standard": "aiact",
   "ref": "Article 27",
   "text": "Fundamental rights impact assessment for high-risk AI systems",
-  "kind": "article"
+  "kind": "article",
+  "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj#art_27",
+  "source_depth": "the article, by the anchor EUR-Lex gives articles; not checked by fetch, because EUR-Lex does not answer an automated read",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "aiact.art-50",
   "standard": "aiact",
   "ref": "Article 50",
   "text": "Transparency obligations for providers and deployers of certain AI systems",
-  "kind": "article"
+  "kind": "article",
+  "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj#art_50",
+  "source_depth": "the article, by the anchor EUR-Lex gives articles; not checked by fetch, because EUR-Lex does not answer an automated read",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "aiact.art-72",
   "standard": "aiact",
   "ref": "Article 72",
   "text": "Post-market monitoring by providers and post-market monitoring plan for high-risk AI systems",
-  "kind": "article"
+  "kind": "article",
+  "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj#art_72",
+  "source_depth": "the article, by the anchor EUR-Lex gives articles; not checked by fetch, because EUR-Lex does not answer an automated read",
+  "source_linked": "2026-11-10"
  },
  {
   "id": "aiact.art-73",
   "standard": "aiact",
   "ref": "Article 73",
   "text": "Reporting of serious incidents",
-  "kind": "article"
+  "kind": "article",
+  "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj#art_73",
+  "source_depth": "the article, by the anchor EUR-Lex gives articles; not checked by fetch, because EUR-Lex does not answer an automated read",
+  "source_linked": "2026-11-10"
  }
 ]

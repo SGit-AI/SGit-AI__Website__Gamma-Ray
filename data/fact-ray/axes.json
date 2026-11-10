@@ -1,0 +1,138 @@
+{
+ "name": "FACT-Ray",
+ "version": "0.1 beta (provisional)",
+ "dated": "2026-11-10",
+ "symbol": "π",
+ "symbol_reads": "pistis: trust, and proof",
+ "status": "The tables of the brief of 10 November 2026 (briefs/fact-ray-brief.md), implemented exactly as written and marked provisional. FACT-Ray is built inside gamma-ray.sgit.ai first and will move to its own site.",
+ "scores": "How far one fact can be trusted: who says it, how firmly it is recorded and proved, and who stands behind it. It does not score whether the fact is true.",
+ "axes": [
+  {
+   "id": "S",
+   "name": "Source",
+   "question": "Who is saying it?",
+   "defined_by": "the source's relationship to the subject of the fact",
+   "levels": [
+    {
+     "level": 0,
+     "name": "No data",
+     "meaning": "Nothing found. Never read as no.",
+     "spectrum": "No public page on audit logs",
+     "news": "No source on headcount"
+    },
+    {
+     "level": 1,
+     "name": "Discovered",
+     "meaning": "We (an agent or a journalist) found it in public material and interpreted it",
+     "spectrum": "Our agent read the vendor's documents",
+     "news": "A reporter inferred it from a filing"
+    },
+    {
+     "level": 2,
+     "name": "Subject",
+     "meaning": "The party the fact is about says it",
+     "spectrum": "The vendor states it",
+     "news": "The company's spokesperson"
+    },
+    {
+     "level": 3,
+     "name": "Counterparty",
+     "meaning": "Someone on the other side of a relationship with the subject",
+     "spectrum": "A customer",
+     "news": "A client, an employee, an affected party"
+    },
+    {
+     "level": 4,
+     "name": "Authority",
+     "meaning": "An independent body",
+     "spectrum": "An auditor or certification body",
+     "news": "A regulator, a court, a statistics office"
+    }
+   ]
+  },
+  {
+   "id": "R",
+   "name": "Record",
+   "question": "How firmly is it recorded and proved?",
+   "defined_by": "record, attribution and proof, not the medium",
+   "levels": [
+    {
+     "level": 1,
+     "name": "Said",
+     "meaning": "Verbal, nothing recorded"
+    },
+    {
+     "level": 2,
+     "name": "Written",
+     "meaning": "Recorded, but informal or unattributed: a chat, a forum post, an employee's personal blog"
+    },
+    {
+     "level": 3,
+     "name": "On record",
+     "meaning": "Attributable through an accountable channel: a named role, the official domain, a signature"
+    },
+    {
+     "level": 4,
+     "name": "Linked",
+     "meaning": "On record and pointing to an artefact anyone can open: a document page, an endpoint that resolves, data, a certificate"
+    },
+    {
+     "level": 5,
+     "name": "Reviewed",
+     "meaning": "The artefact is captured and hashed (SHA-256, with the read date), and someone other than the claimant has checked that the claim matches it"
+    }
+   ]
+  },
+  {
+   "id": "A",
+   "name": "Accountability",
+   "question": "Who stands behind it?",
+   "defined_by": "every actor in the chain, with kind, identity, capacity and independence",
+   "levels": [
+    {
+     "level": 0,
+     "name": "Unvalidated",
+     "meaning": "Produced; nobody else checked"
+    },
+    {
+     "level": 1,
+     "name": "Agent-checked",
+     "meaning": "One or more identified agents reviewed it"
+    },
+    {
+     "level": 2,
+     "name": "Human-checked",
+     "meaning": "A named human reviewed it; capacity unstated or junior"
+    },
+    {
+     "level": 3,
+     "name": "Practitioner-validated",
+     "meaning": "A human in a relevant role, or with a relevant qualification, signed it"
+    },
+    {
+     "level": 4,
+     "name": "Accountable-signed",
+     "meaning": "The person who answers for it signed on record: owner, officer, licensed professional, the publishing operator"
+    },
+    {
+     "level": 5,
+     "name": "Panel",
+     "meaning": "Two or more independent signers, each at A3 or above"
+    }
+   ]
+  }
+ ],
+ "rules": [
+  "No data is not no.",
+  "Never show a band without its S·R·A coordinates.",
+  "The band matrix and the cap table are published as data; changes are versioned and dated.",
+  "Contested claims are shown side by side, never resolved quietly.",
+  "Every validation states its scope.",
+  "A parent never averages its children.",
+  "Quoted spans are exact and under fifteen words.",
+  "Corrections propagate to every page and every parent node, with a dated changelog entry.",
+  "FACT-Ray scores trust, not truth. A band is never called true or verified.",
+  "The same rules for us: our own publications are scored first."
+ ],
+ "freshness_days": 180
+}

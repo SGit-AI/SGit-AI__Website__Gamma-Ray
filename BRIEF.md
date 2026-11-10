@@ -108,6 +108,18 @@ And while it was being built:
 
 > The graphs have to link all the way to the source. You really need to have a whole team almost just looking at the graphs and the connection of the graphs and how everything maps together, because that's part of the story.
 
+## The second brief, FACT-Ray, and the well-known address (10 November, later still)
+
+Two written briefs, kept whole in `briefs/gamma-ray-brief-2.md` and `briefs/fact-ray-brief.md`: four corrections to the Spectrum rules, an anchor for every line item of every standard, trust on every evidence item (FACT-Ray), and doors for companies and their customers. Then, by voice:
+
+> Can you implement all of this? And can you do the fact website first? And add the fact rate to this website, and then we'll make it separate. And yeah, everything is public because everything starts with self-declared and starts with public information, just like we have today.
+
+> Our workflow with this is that we will do the mapping, and then we'll contact the individuals of the companies, and then we ask them to comment. And if they want to take out, we take out. But I'd be surprised. Again, it's public. But then we can ask them to correct.
+
+> One thing that I feel is very cool to add is we should also add a self-known path to this, so that each company can have a special address. That is the one that is known for providing the evidence, because actually we can say that's the strongest claim is on the website. So we will do the same thing for risk mandate. We'll do the same thing for every agent that we have, and we take it from there.
+
+What this settles: FACT-Ray is built inside this site first and moves to its own later. Everything is public, the Portuguese companies' cards included: a card is published as beta, the company is contacted and asked to comment, and a card is taken down if the company asks. The well-known address (`/.well-known/fact-ray.json`) is how a company, RiskMandate and each of our agents answers for itself.
+
 ## The rules given with the brief
 
 Public sources only. No rating is published without its evidence. (The first brief also said: not without the company having seen it. The operator replaced that on 10 November 2026: a rating made from public data may be published, labelled as beta and as not seen by its subject.) No contact details anywhere. Never push to the main branch. The name and the backronym stay as chosen.

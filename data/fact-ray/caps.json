@@ -1,0 +1,13 @@
+{
+ "version": "0.1 beta (provisional)",
+ "dated": "2026-11-10",
+ "caps": {
+  "A0": "Low",
+  "A1": "Moderate",
+  "A2": "High",
+  "A3": null,
+  "A4": null,
+  "A5": null
+ },
+ "reads": "The band shown is the lower of the matrix band and the cap. Count and independence are shown beside the level and do not change the band in this version."
+}

@@ -1,0 +1,139 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://gamma-ray.sgit.ai/data/fact-ray/schemas/claim.schema.json",
+ "title": "FACT-Ray claim",
+ "type": "object",
+ "required": [
+  "id",
+  "node",
+  "asserts",
+  "source",
+  "record",
+  "accountability"
+ ],
+ "properties": {
+  "id": {
+   "type": "string",
+   "pattern": "^claim:"
+  },
+  "node": {
+   "type": "string",
+   "pattern": "^node:"
+  },
+  "asserts": {
+   "enum": [
+    "yes",
+    "no",
+    "partly"
+   ]
+  },
+  "source": {
+   "type": "object",
+   "required": [
+    "level"
+   ],
+   "properties": {
+    "level": {
+     "enum": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ]
+    },
+    "actor": {
+     "type": "string"
+    },
+    "capacity": {
+     "type": "string"
+    }
+   }
+  },
+  "record": {
+   "type": "object",
+   "required": [
+    "level"
+   ],
+   "properties": {
+    "level": {
+     "enum": [
+      "R1",
+      "R2",
+      "R3",
+      "R4",
+      "R5"
+     ]
+    },
+    "url": {
+     "type": "string",
+     "format": "uri"
+    },
+    "sha256": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "read_at": {
+     "type": "string"
+    },
+    "span": {
+     "type": [
+      "string",
+      "null"
+     ],
+     "description": "exact, under fifteen words"
+    }
+   }
+  },
+  "accountability": {
+   "type": "object",
+   "required": [
+    "level",
+    "scope"
+   ],
+   "properties": {
+    "level": {
+     "enum": [
+      "A0",
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5"
+     ]
+    },
+    "producer": {
+     "type": "string"
+    },
+    "validators": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "count": {
+     "type": "integer"
+    },
+    "independence": {
+     "type": "string"
+    },
+    "scope": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "band": {
+   "enum": [
+    "none",
+    "Low",
+    "Moderate",
+    "High",
+    "Strong"
+   ]
+  }
+ }
+}

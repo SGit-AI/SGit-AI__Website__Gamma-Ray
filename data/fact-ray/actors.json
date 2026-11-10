@@ -1,0 +1,109 @@
+{
+ "version": "0.1 beta (provisional)",
+ "note": "Every agent and human who produces, reports or validates a claim on this site. The track record is recorded, not scored. No contact detail is kept here.",
+ "actors": [
+  {
+   "id": "actor:gamma-ray@web-summit.dinis",
+   "kind": "agent",
+   "identity": {
+    "name": "gamma-ray@web-summit.dinis",
+    "role": "the standard, the scorer, the first scans",
+    "model_family": "Claude (Anthropic); the model that serves a session can change, so no version is recorded here",
+    "key": null
+   },
+   "capacity": "producer of the first five scans; no subject-matter qualification",
+   "org": "sgit.ai (operator: Dinis Cruz)",
+   "independence": "same model family, shared repository",
+   "track_record": {
+    "claims": null,
+    "validations": null,
+    "corrected": null,
+    "contested": null,
+    "confirmed": null,
+    "note": "Recorded from the scans at each build; not scored in this version."
+   }
+  },
+  {
+   "id": "actor:gamma.studio@web-summit.dinis",
+   "kind": "agent",
+   "identity": {
+    "name": "gamma.studio@web-summit.dinis",
+    "role": "the company reports and the scans behind them",
+    "model_family": "Claude (Anthropic); the model that serves a session can change, so no version is recorded here",
+    "key": null
+   },
+   "capacity": "producer of scans; no subject-matter qualification",
+   "org": "sgit.ai (operator: Dinis Cruz)",
+   "independence": "same model family, shared repository",
+   "track_record": {
+    "claims": null,
+    "validations": null,
+    "corrected": null,
+    "contested": null,
+    "confirmed": null,
+    "note": "Recorded from the scans at each build; not scored in this version."
+   }
+  },
+  {
+   "id": "actor:gamma.review@web-summit.dinis",
+   "kind": "agent",
+   "identity": {
+    "name": "gamma.review@web-summit.dinis",
+    "role": "reviewer",
+    "model_family": "Claude (Anthropic); the model that serves a session can change, so no version is recorded here",
+    "key": null
+   },
+   "capacity": "reviewer: reads each source again and argues against each answer; no subject-matter qualification",
+   "org": "sgit.ai (operator: Dinis Cruz)",
+   "independence": "same model family, shared repository",
+   "track_record": {
+    "claims": null,
+    "validations": null,
+    "corrected": null,
+    "contested": null,
+    "confirmed": null,
+    "note": "Recorded from the scans at each build; not scored in this version."
+   }
+  },
+  {
+   "id": "actor:gamma.approve@web-summit.dinis",
+   "kind": "agent",
+   "identity": {
+    "name": "gamma.approve@web-summit.dinis",
+    "role": "sign-off",
+    "model_family": "Claude (Anthropic); the model that serves a session can change, so no version is recorded here",
+    "key": null
+   },
+   "capacity": "signs a card off after two rounds; did not review it; no subject-matter qualification",
+   "org": "sgit.ai (operator: Dinis Cruz)",
+   "independence": "same model family, shared repository",
+   "track_record": {
+    "claims": null,
+    "validations": null,
+    "corrected": null,
+    "contested": null,
+    "confirmed": null,
+    "note": "Recorded from the scans at each build; not scored in this version."
+   }
+  },
+  {
+   "id": "actor:dinis-cruz",
+   "kind": "human",
+   "identity": {
+    "name": "Dinis Cruz",
+    "role": "the publishing operator"
+   },
+   "capacity": "accountable owner: the person who answers for what this site publishes",
+   "org": "sgit.ai",
+   "independence": "the operator of every agent above",
+   "track_record": {
+    "claims": null,
+    "validations": 0,
+    "corrected": null,
+    "contested": null,
+    "confirmed": null,
+    "note": "Has signed no card yet. When he signs one, its evidence moves to A4 for the scope he signs."
+   }
+  }
+ ]
+}

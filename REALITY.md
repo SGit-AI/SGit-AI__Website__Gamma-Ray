@@ -25,6 +25,9 @@ A thing not listed here does not exist. (site v0.0.43)
 
 - **One third party's card has been signed off:** Replit Agent passed two rounds of review and a sign-off and is published as beta. The others are in review (the state of each scan is on `/spectrum/pipeline/`); the three examples that were live before the workflow stay published while they are reviewed.
 - **No card for any company in a cohort.** No scout has run and no cohort is approved.
+- **FACT-Ray 0.1, provisional, inside this site** (`/fact-ray/`): the three axes, the band matrix and the cap table as data, a deterministic scorer, the actors, three worked examples (one live from a card, two illustrative), a schema and a validator for `/.well-known/fact-ray.json`, and this site's own file at that address. Every fact behind a published card is a node with one claim (`data/fact-ray/nodes.json`), and every record in `evidence.json` carries its coordinates and the provisions it reaches.
+- **Trust on every card:** each level shows the strongest band of the facts behind it, each card shows the distribution of its facts, the chain of actors and its status. Every card is **Draft**: found and checked by agents of one model family in one repository; no human has signed one; no company has confirmed one; no customer has attested one.
+- **A page for every provision** (`/provisions/<id>/`): its text, its place in the source, the indicators that cite it with the kind of link, and the evidence on every published card that reaches it. The NIST, AI Act and MCP provisions have an address deeper than their document (the count is on `/provisions/`); the others link to the document, because its publisher gives no deeper address. The AI Act anchors were not checked by fetch. Each card lists the exact provisions it lights.
 - **Three Spectrum decisions are open** and are the operator's: the name, stage by sum or by shape, the first cohort. From the second brief, also open: whether In production raises the stage, and whether a vendor-wide certificate counts for one product.
 
 - **No scan of anybody's deployment but our own.** No organisation has been rated. No vendor has been asked or shown anything; the product examples say so.
@@ -38,3 +41,13 @@ A thing not listed here does not exist. (site v0.0.43)
 - **Not read at source yet:** Feng, McDonald and Zhang's paper on levels of autonomy; ISO/IEC 42001 and 27001 (cited nowhere as text); the Cloud Security Alliance's draft model in full; the X-ray work this is meant to sit beside.
 - **No crosswalk review.** Each link records what kind it is, but not yet a written basis or a strength.
 - **Nothing in PrompTugal.news** uses this yet.
+
+## FACT-Ray: what does not exist yet
+
+- No company or customer has published a well-known file, and the scanner does not read one into a card yet: a claim in such a file is not yet a second claim on a card's fact.
+- Signatures on well-known files are in the schema and are not checked.
+- The files for riskmandate.ai and promptugal.news are drafts on this site (`/fact-ray/well-known/drafts/`); they are not hosted on those domains.
+- No real news article is scored yet. The news and panel examples are illustrative.
+- Actors have no cryptographic identity recorded and no model version; their track record is counted from the scans, not scored.
+- Written bases exist only for the links of the four Spectrum indicators; the other links are asserted in the mapping without one.
+- FACT-Ray has no site of its own.

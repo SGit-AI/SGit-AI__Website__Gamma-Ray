@@ -1,0 +1,43 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://gamma-ray.sgit.ai/data/fact-ray/schemas/actor.schema.json",
+ "title": "FACT-Ray actor",
+ "type": "object",
+ "required": [
+  "id",
+  "kind",
+  "identity",
+  "capacity"
+ ],
+ "properties": {
+  "id": {
+   "type": "string",
+   "pattern": "^actor:"
+  },
+  "kind": {
+   "enum": [
+    "agent",
+    "human"
+   ]
+  },
+  "identity": {
+   "type": "object",
+   "required": [
+    "name",
+    "role"
+   ]
+  },
+  "capacity": {
+   "type": "string"
+  },
+  "org": {
+   "type": "string"
+  },
+  "independence": {
+   "type": "string"
+  },
+  "track_record": {
+   "type": "object"
+  }
+ }
+}

@@ -1,0 +1,65 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://gamma-ray.sgit.ai/data/fact-ray/schemas/node.schema.json",
+ "title": "FACT-Ray fact node",
+ "type": "object",
+ "required": [
+  "id",
+  "kind",
+  "text",
+  "claims"
+ ],
+ "properties": {
+  "id": {
+   "type": "string",
+   "pattern": "^node:"
+  },
+  "parent": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "kind": {
+   "enum": [
+    "statement",
+    "operation"
+   ]
+  },
+  "text": {
+   "type": "string"
+  },
+  "claims": {
+   "type": "array"
+  },
+  "band": {
+   "enum": [
+    null,
+    "none",
+    "Low",
+    "Moderate",
+    "High",
+    "Strong"
+   ]
+  },
+  "marks": {
+   "type": "array",
+   "items": {
+    "enum": [
+     "+",
+     "!",
+     "stale"
+    ]
+   }
+  },
+  "satisfied": {
+   "type": "boolean"
+  },
+  "freshness": {
+   "type": [
+    "string",
+    "null"
+   ]
+  }
+ }
+}

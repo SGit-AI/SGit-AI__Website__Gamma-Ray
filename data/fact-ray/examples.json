@@ -1,0 +1,27 @@
+{
+ "note": "Worked examples scored by the scorer at each build. An example marked illustrative uses no real party; it shows how the tables behave. The Spectrum example is taken live from a published card.",
+ "examples": [
+  { "id": "news", "title": "A paragraph of a news story", "illustrative": true, "domain": "news",
+    "nodes": [
+     { "id": "node:example/news/p3/s1", "parent": "node:example/news/p3", "kind": "statement", "text": "The company employs 40 people.",
+       "claims": [
+        { "asserts": "yes", "source": { "level": "S2", "actor": "actor:example/company", "capacity": "press office" }, "record": { "level": "R3", "read_at": "2026-11-10" }, "accountability": { "level": "A2", "count": 2, "independence": "reporter and desk editor, same newsroom", "scope": ["node:example/news/p3/s1"] } },
+        { "asserts": "yes", "source": { "level": "S4", "actor": "actor:example/registry", "capacity": "company registry filing" }, "record": { "level": "R4", "read_at": "2026-11-10" }, "accountability": { "level": "A2", "count": 2, "independence": "reporter and desk editor, same newsroom", "scope": ["node:example/news/p3/s1"] } } ] },
+     { "id": "node:example/news/p3/s2", "parent": "node:example/news/p3", "kind": "operation", "text": "Its agent approves refunds without a person in the loop.",
+       "claims": [
+        { "asserts": "yes", "source": { "level": "S2", "actor": "actor:example/company", "capacity": "product page" }, "record": { "level": "R4", "read_at": "2026-11-10" }, "accountability": { "level": "A2", "count": 2, "independence": "reporter and desk editor, same newsroom", "scope": ["node:example/news/p3/s2"] } },
+        { "asserts": "no", "source": { "level": "S3", "actor": "actor:example/customer", "capacity": "a customer, operations lead" }, "record": { "level": "R3", "read_at": "2026-11-10" }, "accountability": { "level": "A2", "count": 2, "independence": "reporter and desk editor, same newsroom", "scope": ["node:example/news/p3/s2"] } } ] },
+     { "id": "node:example/news/p3/s3", "parent": "node:example/news/p3", "kind": "statement", "text": "A former employee says the launch was rushed.",
+       "claims": [
+        { "asserts": "yes", "source": { "level": "S3", "actor": "actor:example/newsroom", "capacity": "anonymous source, attributed to the newsroom" }, "record": { "level": "R2", "read_at": "2026-11-10" }, "accountability": { "level": "A2", "count": 2, "independence": "reporter and desk editor, same newsroom", "scope": ["node:example/news/p3/s3"] } } ] },
+     { "id": "node:example/news/p3/s4", "parent": "node:example/news/p3", "kind": "statement", "text": "No figure for its revenue was found.", "claims": [] } ] },
+  { "id": "panel", "title": "A medical-style claim signed by a panel", "illustrative": true, "domain": "panel",
+    "nodes": [
+     { "id": "node:example/panel/guideline/r4", "parent": "node:example/panel/guideline", "kind": "statement", "text": "Recommendation 4 reflects the cited trial.",
+       "claims": [
+        { "asserts": "yes", "source": { "level": "S4", "actor": "actor:example/society", "capacity": "a professional society's guideline panel" }, "record": { "level": "R5", "read_at": "2026-11-10" }, "accountability": { "level": "A5", "count": 5, "independence": "five licensed physicians from five hospitals", "scope": ["node:example/panel/guideline/r4"] } } ] },
+     { "id": "node:example/panel/guideline/r4b", "parent": "node:example/panel/guideline", "kind": "statement", "text": "The same recommendation, before anyone but its author had read it.",
+       "claims": [
+        { "asserts": "yes", "source": { "level": "S4", "actor": "actor:example/society", "capacity": "the drafting author" }, "record": { "level": "R4", "read_at": "2026-11-10" }, "accountability": { "level": "A0", "count": 1, "independence": "nobody but the producer", "scope": ["node:example/panel/guideline/r4b"] } } ] } ] }
+ ]
+}

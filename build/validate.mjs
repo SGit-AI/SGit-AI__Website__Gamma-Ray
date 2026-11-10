@@ -82,8 +82,15 @@ for (const f of walk(OUT).filter(f => /\.(html|md|txt|json)$/.test(f))) {
     if (/[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+\.(com|org|net|io|ai|edu|ru|ae|pt|uk)\b/.test(t.replace(/gamma-ray@web-summit\.dinis/g, ''))) bad('contact', `${path.relative(OUT, f)}: an email address`)
     if (/BEGIN [A-Z ]*PRIVATE KEY|sgit_(?!public_read_)[a-z_]*_[0-9a-f]{32,}|ghp_[A-Za-z0-9]{20,}/.test(t)) bad('secret', `${path.relative(OUT, f)}: looks like a credential`)
 }
+// 4b FACT-Ray: the tables are whole, our own well-known file is valid, and every provision has its place in the source
+{ const B = read('data/fact-ray/bands.json'), C = read('data/fact-ray/caps.json'), { validate: wk } = await import('../tools/fact-ray.mjs')
+  for (const s of ['S1', 'S2', 'S3', 'S4']) if (!Array.isArray(B.matrix[s]) || B.matrix[s].length !== 5 || B.matrix[s].some(x => !B.order.includes(x))) bad('fact-ray', `bands.json: row ${s} is not five known bands`)
+  for (const a of ['A0', 'A1', 'A2', 'A3', 'A4', 'A5']) if (!(a in C.caps) || (C.caps[a] !== null && !B.order.includes(C.caps[a]))) bad('fact-ray', `caps.json: ${a}`)
+  const own = read('data/fact-ray/well-known.json'); for (const p of wk(own, own.issuer.domain)) bad('fact-ray', `well-known.json: ${p}`)
+  for (const p of read('data/provisions.json')) if (!/^https:\/\//.test(p.source_url || '') || !p.source_depth) bad('provisions', `${p.id}: no source_url or source_depth (run tools/source-links.mjs)`)
+  const ev = JSON.parse(fs.readFileSync(path.join(OUT, 'data/evidence.json'), 'utf8')); for (const e of ev) if (e.fact_ray.band && !(e.fact_ray.source && e.fact_ray.record && e.fact_ray.accountability)) bad('fact-ray', `${e.id}: a band without its coordinates`) }
 // 5 the version is CI's: version.txt, if present, is a plain number
 const vf = path.join(ROOT, 'build/version.txt'); if (fs.existsSync(vf) && !/^v\d+\.\d+\.\d+\n?$/.test(fs.readFileSync(vf, 'utf8'))) bad('version', 'build/version.txt is not vX.Y.Z')
 
 if (problems.length) { console.log(problems.join('\n')); console.log(`${problems.length} problem(s); the gate is red`); process.exit(1) }
-console.log(`OK (${gen.version}: ${gen.pages.length} pages, ${gen.totals.provisions} provisions, ${gen.totals.indicators} indicators, ${gen.totals.questions} questions, 5 checks)`)
+console.log(`OK (${gen.version}: ${gen.pages.length} pages, ${gen.totals.provisions} provisions, ${gen.totals.indicators} indicators, ${gen.totals.questions} questions, 6 checks)`)

@@ -1,0 +1,137 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://gamma-ray.sgit.ai/data/fact-ray/schemas/well-known.schema.json",
+ "title": "/.well-known/fact-ray.json",
+ "description": "What a subject says about itself (kind: subject), or what a counterparty says about a subject (kind: counterparty). The file is served from the issuer's own domain: that is the identity check.",
+ "type": "object",
+ "required": [
+  "fact_ray",
+  "kind",
+  "issuer",
+  "subject",
+  "issued",
+  "claims"
+ ],
+ "properties": {
+  "fact_ray": {
+   "const": "0.1"
+  },
+  "kind": {
+   "enum": [
+    "subject",
+    "counterparty"
+   ]
+  },
+  "issuer": {
+   "type": "object",
+   "required": [
+    "name",
+    "domain"
+   ],
+   "properties": {
+    "name": {
+     "type": "string"
+    },
+    "domain": {
+     "type": "string",
+     "description": "the domain this file is served from"
+    }
+   }
+  },
+  "subject": {
+   "type": "object",
+   "required": [
+    "name",
+    "domain"
+   ],
+   "properties": {
+    "name": {
+     "type": "string"
+    },
+    "domain": {
+     "type": "string"
+    },
+    "product": {
+     "type": "string"
+    }
+   }
+  },
+  "issued": {
+   "type": "string",
+   "format": "date"
+  },
+  "claims": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "required": [
+     "node",
+     "asserts",
+     "role"
+    ],
+    "properties": {
+     "node": {
+      "type": "string",
+      "description": "what the claim is about: gamma-ray:indicator/<id>, gamma-ray:provision/<id>, or any node: address of a publication that uses FACT-Ray",
+      "pattern": "^(gamma-ray:(indicator|provision)/[A-Za-z0-9.-]+|node:.+)$"
+     },
+     "about": {
+      "type": "string",
+      "description": "the product or agent, when the subject has several"
+     },
+     "asserts": {
+      "enum": [
+       "yes",
+       "no",
+       "partly"
+      ]
+     },
+     "statement": {
+      "type": "string",
+      "description": "in the issuer's words, short"
+     },
+     "evidence": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "format": "uri"
+      },
+      "description": "pages anyone can open; with at least one, the claim is read at R4"
+     },
+     "role": {
+      "type": "string",
+      "description": "the role that stands behind the claim (for example: CISO, product owner). A role, not a person's contact detail."
+     },
+     "as_of": {
+      "type": "string",
+      "format": "date"
+     },
+     "configuration": {
+      "type": "string",
+      "description": "counterparty: which configuration is in use"
+     },
+     "since": {
+      "type": "string",
+      "description": "counterparty: in use since"
+     }
+    }
+   }
+  },
+  "signature": {
+   "type": "object",
+   "description": "optional: a signature over the file made with a key published through pki.sgit.ai",
+   "properties": {
+    "key": {
+     "type": "string"
+    },
+    "alg": {
+     "type": "string"
+    },
+    "sig": {
+     "type": "string"
+    }
+   }
+  }
+ }
+}

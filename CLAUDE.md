@@ -45,6 +45,17 @@ Numbers on pages come from the data through `{{n:...}}` and `{{gen:...}}`; never
 - The name, stage by sum or by shape, and the first cohort are Dinis's to decide: ask.
 - Dinis, 10 November 2026: it is fine to publish this information and these scores without waiting for a legal read; a team of agents will work on this repository. Write for them: say in `REALITY.md` what exists, and leave nothing in a session that the next agent needs.
 
+## FACT-Ray: how far to trust a fact
+
+Built inside this site first (Dinis, 10 November 2026); it will move to its own site. The brief is `briefs/fact-ray-brief.md`; the pages are `/fact-ray/`.
+
+- `data/fact-ray/`: `axes.json`, `bands.json` (the Source by Record matrix), `caps.json`, `actors.json`, `examples.json`, `well-known.json` (this site's own file, served at `/.well-known/fact-ray.json`) and `schemas/`. The tables are the brief's, exactly, marked provisional. Change a table only with a date and Dinis's word.
+- `build/factray.mjs` is the scorer: claim to band to node, deterministic. `scanClaims` turns each answer of a scan into a fact node with one claim (S1; R5 when captured, hashed and reviewed by another actor, else R4; accountability from the review rounds and the sign-off). `build/factray_pages.mjs` makes the generated blocks, one page per provision (`/provisions/<id>/`) and the well-known files.
+- `tools/fact-ray.mjs validate|read`: the validator and the read-only reader of a well-known file. `tools/source-links.mjs` writes each provision's `source_url`.
+- Trust is shown beside a level and never changes it. Never show a band without its coordinates. A band is never called true or verified. No data is not no.
+- A card's status is Draft until its company confirms it on record (Confirmed) or a customer goes on record (Attested). When Dinis signs a card, record `review.operator_signoff` `{by, at, scope}`: the evidence in scope moves to A4.
+- Everything is public (Dinis, 10 November 2026): a card is published as beta, then the company is contacted and asked to comment and correct; a card is taken down if its company asks.
+
 ## Rules for content
 
 - Read a source yourself before citing it. Quote exactly, with the link and the date read.

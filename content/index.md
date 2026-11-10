@@ -10,7 +10,7 @@ summary: A draft standard that rates an AI agent on two things, its freedom and 
 
 {{gen:spectrum-cards}}
 
-**New here?** [The briefing](briefing/index.md) is two minutes on a phone. · [How the Spectrum card works](spectrum/index.md) · [the evidence map](spectrum/evidence-map/index.md) · [what the rules did on real evidence](spectrum/findings/index.md)
+**New here?** [The briefing](briefing/index.md) is two minutes on a phone. · [FACT-Ray: how far to trust each fact](fact-ray/index.md) · [How the Spectrum card works](spectrum/index.md) · [the evidence map](spectrum/evidence-map/index.md) · [what the rules did on real evidence](spectrum/findings/index.md)
 
 ## Underneath: the rating
 

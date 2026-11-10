@@ -1,0 +1,54 @@
+{
+ "version": "0.1 beta (provisional)",
+ "dated": "2026-11-10",
+ "order": [
+  "none",
+  "Low",
+  "Moderate",
+  "High",
+  "Strong"
+ ],
+ "columns": [
+  "R1",
+  "R2",
+  "R3",
+  "R4",
+  "R5"
+ ],
+ "matrix": {
+  "S1": [
+   "none",
+   "Low",
+   "Moderate",
+   "Moderate",
+   "High"
+  ],
+  "S2": [
+   "Low",
+   "Low",
+   "Moderate",
+   "High",
+   "High"
+  ],
+  "S3": [
+   "Low",
+   "Moderate",
+   "High",
+   "High",
+   "Strong"
+  ],
+  "S4": [
+   "Moderate",
+   "Moderate",
+   "High",
+   "Strong",
+   "Strong"
+  ]
+ },
+ "S0": "no data: no band",
+ "marks": {
+  "+": "Corroborated: at least two claims from independent sources agree, each at Moderate or above",
+  "!": "Contested: a claim at the same band or higher disagrees; both are shown",
+  "stale": "The strongest claim is older than the freshness window"
+ }
+}
