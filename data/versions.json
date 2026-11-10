@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.117",
+    "date": "2026-11-10",
+    "what": "spinnable-ai-employees: round 4 answered (an uncaptured not-credited item removed)",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "9f5f14ab4"
+  },
+  {
     "version": "v0.0.116",
     "date": "2026-11-10",
     "what": "re-check of claude-code-local (changes)",
