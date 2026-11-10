@@ -94,6 +94,99 @@
      }
     ]
    }
+  ],
+  "responses": [
+   {
+    "round": 1,
+    "answer": "I03",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Re-sourced to the Generali page, which says Generali builds complex workflows and adds automated services without needing a developer and connected the platform to its own systems through web services, covering both halves; mode is now deployed (named customer). No level changes."
+   },
+   {
+    "round": 1,
+    "answer": "I17",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Span replaced with the exception half, 'When a conversation does need a person, an advisor picks it up' (12 words, verified on the page), and the vendor wording 'wide range' dropped from the note. Credit and mode deployed unchanged; Autonomy 3 holds."
+   },
+   {
+    "round": 1,
+    "answer": "I08",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: the reviewer passed it."
+   },
+   {
+    "round": 1,
+    "answer": "I10, I11",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: both pass, and Reach 2 rests on I11 alone even if I10 is read narrowly."
+   },
+   {
+    "round": 1,
+    "answer": "S1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Mode changed to deployed and the note now says the 80,000 figure is undated and that the page markup attributes it to an archived copy of 2022-08-20. The span stays on the label because the figure and the label are separate elements on the page, so no combined span is literal; the figure is in the note."
+   },
+   {
+    "round": 1,
+    "answer": "I60",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Removed and listed under not credited: a scoping agreement with the DPO is not an examination of privacy risk, and no impact assessment for privacy is named on any source. No level used it."
+   },
+   {
+    "round": 1,
+    "answer": "I67",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note now says 'The Visor success story states', marks the 80% as a goal and only the 2021 65% as a measured figure, and records the 2022 archive attribution. Span, grade and mode unchanged."
+   },
+   {
+    "round": 1,
+    "answer": "I47",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Re-sourced within the same healthcare page from the Chat AI Agent's Issue Agent to the sentence about Voice AI Agent, 'it's set up to hand clinical questions to your staff', under healthcare-deployment, so the limit is on the product this scan rates; the issue-agent configuration is then used by no answer and can be dropped. Control 1 still rests on one prose limit, which is what I47 states."
+   },
+   {
+    "round": 1,
+    "answer": "I22, I58, I61",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: all three pass."
+   },
+   {
+    "round": 1,
+    "answer": "I20, I36, I40",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: all three pass."
+   },
+   {
+    "round": 1,
+    "answer": "I37, I66, I68",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "I37 and I66 describe Visor's deployment service, so they move to mode available under a new configuration visor-deployment ('How we deploy'). I68 stays default: Nexa reading conversations on a schedule and proposing fixes is a product feature, not the service."
+   },
+   {
+    "round": 1,
+    "answer": "S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: S3 passes; S4 stays unanswered."
+   },
+   {
+    "round": 1,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Card unchanged after the edits (see the score); Autonomy 3 holds on I08 and I17 with the corrected I17 span, and the date caveat on the Generali figures is now in the S1 note."
+   }
   ]
  },
  "assessment": {
@@ -122,11 +215,11 @@
  },
  "answers": {
   "I03": {
-   "e": "https://www.visor.ai/voice-agent/",
-   "n": "Agents are built as flows on a visual canvas, with the model and speech services set on each node.",
-   "span": "Each agent is a flow you can read on a canvas.",
+   "e": "https://www.visor.ai/success-stories/generali/",
+   "n": "Generali's own team builds workflows and automated services on the platform without a developer, connected to the insurer's systems through web services.",
+   "span": "builds complex workflows and keeps adding automated services, without needing a developer",
    "g": "documented",
-   "m": "default"
+   "m": "deployed"
   },
   "I08": {
    "e": "https://www.visor.ai/success-stories/generali/",
@@ -151,8 +244,8 @@
   },
   "I17": {
    "e": "https://www.visor.ai/success-stories/generali/",
-   "n": "At Generali the chat agent handles a wide range of conversations from start to finish; when a conversation needs a person, an advisor picks it up in live chat.",
-   "span": "It handles a wide range of conversations from start to finish",
+   "n": "At Generali the chat agent handles conversations from start to finish; when a conversation needs a person, an advisor picks it up in live chat.",
+   "span": "When a conversation does need a person, an advisor picks it up",
    "g": "documented",
    "m": "deployed"
   },
@@ -180,10 +273,11 @@
   },
   "I37": {
    "e": "https://www.visor.ai/voice-agent/",
-   "n": "Deployments are tested end to end and validated by the customer's team in real conditions before launch.",
+   "n": "In Visor's deployment, the agent is tested end to end and validated by the customer's team in real conditions before launch.",
    "span": "then your team validates it in real conditions before launch",
    "g": "documented",
-   "m": "default"
+   "m": "available",
+   "cfg": "visor-deployment"
   },
   "I40": {
    "e": "https://www.visor.ai/chat-agent/",
@@ -194,11 +288,11 @@
   },
   "I47": {
    "e": "https://www.visor.ai/healthcare/",
-   "n": "Customers write in plain language what the chat agent must not handle; matching conversations are flagged critical for a person.",
-   "span": "you describe, in plain language, what the agent must not handle",
+   "n": "For healthcare, the page says Voice AI Agent takes administrative calls and is set up to hand clinical questions to staff, and that the written scope says the agents are for administrative contact.",
+   "span": "it's set up to hand clinical questions to your staff",
    "g": "documented",
    "m": "available",
-   "cfg": "issue-agent"
+   "cfg": "healthcare-deployment"
   },
   "I58": {
    "e": "https://www.visor.ai/chat-agent/",
@@ -206,14 +300,6 @@
    "span": "The agent answers from a knowledge base built from your own documents",
    "g": "documented",
    "m": "default"
-  },
-  "I60": {
-   "e": "https://www.visor.ai/healthcare/",
-   "n": "For health customers, what the agents may ask for and where data is kept is agreed with the data protection officer before go-live.",
-   "span": "we agree with your data protection officer what the agents may ask for",
-   "g": "documented",
-   "m": "available",
-   "cfg": "healthcare-deployment"
   },
   "I61": {
    "e": "https://www.visor.ai/security/",
@@ -224,14 +310,15 @@
   },
   "I66": {
    "e": "https://www.visor.ai/voice-agent/",
-   "n": "Visor trains the customer's people to run the platform.",
+   "n": "In Visor's deployment, Visor trains the customer's people to run the platform.",
    "span": "We train your people to run the platform confidently",
    "g": "documented",
-   "m": "default"
+   "m": "available",
+   "cfg": "visor-deployment"
   },
   "I67": {
    "e": "https://www.visor.ai/success-stories/millennium-bcp/",
-   "n": "Millennium BCP reports Max's automation at 65% in 2021, with a goal of 80% of questions and processes resolved without a person.",
+   "n": "The Visor success story states that Max started at 65% automation in 2021 and that the goal is 80% of questions and processes resolved without a person; only the 65% is a measured figure, and the page markup attributes the story to an archived copy of 2022-08-20.",
    "span": "Max started at 65% automation in 2021, and the goal is 80%",
    "g": "documented",
    "m": "deployed"
@@ -245,10 +332,10 @@
   },
   "S1": {
    "e": "https://www.visor.ai/success-stories/generali/",
-   "n": "Generali Tranquilidade is named: its common requests run end to end as automated workflows, and it reports 80,000 conversations a month between brokers and the AI agent.",
+   "n": "Generali Tranquilidade is named as a customer; the page gives 80,000 conversations a month between brokers and the AI agent, an undated figure that the page markup attributes to an archived copy of 2022-08-20.",
    "span": "conversations between brokers and the AI agent every month",
    "g": "documented",
-   "m": "default"
+   "m": "deployed"
   },
   "S3": {
    "e": "https://www.visor.ai/llms.txt",
@@ -259,7 +346,13 @@
    "method": "probe"
   }
  },
- "not_credited": [],
+ "not_credited": [
+  {
+   "what": "I60 Its privacy risk has been examined",
+   "why": "The healthcare page states that, before go-live, what the agents may ask for and where conversations and recordings are kept is agreed with the customer's data protection officer. That is a scoping agreement; no privacy risk examination or impact assessment is named. The security page names an impact assessment only for system change management.",
+   "source": "https://www.visor.ai/healthcare/"
+  }
+ ],
  "announced": [
   {
    "what": "Automation rate of up to 85%",
@@ -316,43 +409,51 @@
    "on": [
     "healthcare-deployment"
    ]
+  },
+  {
+   "id": "visor-deployment",
+   "name": "Deployed by Visor",
+   "note": "The deployment service described under 'How we deploy' on the product pages: a Visor team, end-to-end testing, validation by the customer's team before launch, and training of the customer's people.",
+   "on": [
+    "visor-deployment"
+   ]
   }
  ],
  "captures": {
   "https://www.visor.ai/chat-agent/": {
-   "sha256": "421174aab06b0387c3ce1b150a666cc80bc5b7f20f8422b97c01d7ef7326918d",
+   "sha256": "25d94e3335f5dc6e9a26d3fbdcff3361e579e21e36a34c19a69e9707447b3971",
    "bytes": 68976,
-   "read_at": "2026-11-10T10:41Z"
+   "read_at": "2026-11-10T14:46Z"
   },
   "https://www.visor.ai/healthcare/": {
-   "sha256": "110baa28fb29ad457a3674eeeaa924c9ac2a11b2db95a0193db936ed8e875944",
+   "sha256": "bea305021fe6b3abe0c1ef4bdb2471310777cbe2b81e532d54e697f5563fd8ea",
    "bytes": 56914,
-   "read_at": "2026-11-10T10:41Z"
+   "read_at": "2026-11-10T14:46Z"
   },
   "https://www.visor.ai/llms.txt": {
    "sha256": "35a955f100a9cf4548b06cb9b3bfab5727b4411523eb35eb1baa056d4e2927d5",
    "bytes": 17112,
-   "read_at": "2026-11-10T10:41Z"
+   "read_at": "2026-11-10T14:46Z"
   },
   "https://www.visor.ai/security/": {
-   "sha256": "7d21171f11fddd974d5b6a6cb3a9dcc9af93cb7c75d20dec05be2775372bc1a6",
+   "sha256": "f337c6702211092429dc87e420e6429cc28402a48ebcf0a6b9bca573b5d98f19",
    "bytes": 87679,
-   "read_at": "2026-11-10T10:41Z"
+   "read_at": "2026-11-10T14:46Z"
   },
   "https://www.visor.ai/success-stories/generali/": {
-   "sha256": "16b12afe076f384bf0687ae52da52f3389169c732058e06b8026569a3db43ae1",
+   "sha256": "5ad19f4d69ad64f9da30689ffc891e53374df2e12f3e0bb18579a0f0bea8bf6a",
    "bytes": 53042,
-   "read_at": "2026-11-10T10:41Z"
+   "read_at": "2026-11-10T14:46Z"
   },
   "https://www.visor.ai/success-stories/millennium-bcp/": {
-   "sha256": "c89c0b3aa7f3f08221460259d4d71c2399ca815acb85a2e6689ad13e9b39c976",
+   "sha256": "bf836623286299e00b58a845c4bf060bd04bb9fa52f19c1c2105917cbd8ab0bc",
    "bytes": 53259,
-   "read_at": "2026-11-10T10:41Z"
+   "read_at": "2026-11-10T14:46Z"
   },
   "https://www.visor.ai/voice-agent/": {
-   "sha256": "ff227ae19de683cff906164d2eb7943a8c5c31d728446e35b0057ae6b3eea745",
+   "sha256": "c641b9f6a84c7399c6e44b802dbb23ce9389519834dc661f7d144a473722eba0",
    "bytes": 71850,
-   "read_at": "2026-11-10T10:41Z"
+   "read_at": "2026-11-10T14:46Z"
   }
  }
 }
