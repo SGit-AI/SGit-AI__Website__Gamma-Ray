@@ -46,4 +46,4 @@ Maturity standards for agents ask many of the same things in different words. We
 
 ## Where this is
 
-A beta, site {{n:version}}, standard {{n:standardVersion}}. Every rating is experimental. The mapping between instruments is a first pass by one reader and has not been checked by a second. It rates {{n:deployments}} of our own agents, and shows {{n:products}} widely used products as examples from their vendors' documentation. [What exists and what does not](about/reality.md).
+A beta, site {{n:version}}, standard {{n:standardVersion}}. Every rating is experimental. The mapping between instruments is a first pass by one reader and has not been checked by a second. It rates {{n:deployments}} of our own agents, and shows {{n:products}} products as examples from their vendors' documentation. [What exists and what does not](about/reality.md).

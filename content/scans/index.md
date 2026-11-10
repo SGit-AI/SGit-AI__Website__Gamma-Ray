@@ -1,6 +1,6 @@
 ---
 title: Scans
-summary: GAMMA-Ray beta ratings: two of our own deployments, and three widely used agent products rated by configuration, each from public evidence and each in a public vault.
+summary: GAMMA-Ray beta ratings: our own deployments, and agent products rated by configuration, each from public evidence and each in a public vault.
 ---
 # Scans
 

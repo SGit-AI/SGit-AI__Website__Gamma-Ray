@@ -10,7 +10,7 @@ summary: The public front door of GAMMA-Ray: a positive card for an agentic prod
 
 {{gen:spectrum-cards}}
 
-These first {{n:cards}} are our own {{n:deployments}} agents and {{n:products}} widely used products. A standard is tried on its authors first.
+These first {{n:cards}} are our own {{n:deployments}} agents and {{n:products}} products. A standard is tried on its authors first.
 
 ## Four dimensions, four levels
 
