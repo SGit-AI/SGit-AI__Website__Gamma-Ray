@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.122",
+    "date": "2026-11-10",
+    "what": "captures for the newly cited sources of two examples",
+    "by": "gamma-ray@web-summit.dinis",
+    "from": "172d9cffd"
+  },
+  {
     "version": "v0.0.121",
     "date": "2026-11-10",
     "what": "the mashup page starts from one question",
