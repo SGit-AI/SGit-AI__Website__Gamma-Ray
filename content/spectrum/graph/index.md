@@ -8,7 +8,11 @@ A level on a card means nothing alone. It means something because of what it con
 
 This follows [Fractal Semantic Graphs: Meaning Through Connectivity](https://graphs.sgit.ai/v2/books/fsg/index.html): every edge is a verb with a named inverse, there is no generic "relates to", an absence is a node, and every piece of evidence carries the words it came from. The grammar is the same at every zoom. The vocabulary changes with the altitude: a card speaks of dimensions and levels, a standard of provisions, evidence of pages and hashes.
 
-## One path, read aloud
+## One path, drawn
+
+{{fig:path:replit-agent}}
+
+## The same path, read aloud
 
 {{gen:graph-walk}}
 
