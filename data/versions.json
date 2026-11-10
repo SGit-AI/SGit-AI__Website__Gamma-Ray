@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.92",
+    "date": "2026-11-10",
+    "what": "sign off noxus-ai-workers",
+    "by": "gamma.approve@web-summit.dinis",
+    "from": "1df31951e"
+  },
+  {
     "version": "v0.0.91",
     "date": "2026-11-10",
     "what": "log",
