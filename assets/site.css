@@ -100,3 +100,4 @@ main a{overflow-wrap:anywhere}
 .fr-matrix tr:hover th:first-child{color:var(--ink);box-shadow:inset 3px 0 0 var(--accent)}
 main :is(h2,h3)[id]:target{scroll-margin-top:90px;background:var(--band);box-shadow:-10px 0 0 var(--band),inset 3px 0 0 var(--accent);padding-left:10px;border-radius:4px}
 .sp-pi{overflow-wrap:anywhere}
+.sp-const a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:3px;text-decoration:none;color:inherit;border-radius:4px}.sp-const a:hover i,.sp-const a:focus-visible i{filter:brightness(1.12);box-shadow:0 0 0 2px var(--ink)}.sp-const a:hover span{color:var(--ink)}.sp-const a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
