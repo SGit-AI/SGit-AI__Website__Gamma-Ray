@@ -79,6 +79,78 @@
      }
     ]
    }
+  ],
+  "responses": [
+   {
+    "round": 1,
+    "answer": "S1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Span moved to the summary-list sentence that puts the AI reviewer in daily work (14 words, verified on the fetched page, which uses non-breaking spaces there); the note now says the closing paragraph's list omits the reviewer and keeps that 170 is a headcount. Credit and mode unchanged; badge only."
+   },
+   {
+    "round": 1,
+    "answer": "I47",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Span moved to the product statement that instructions go in review.md in .codacy/instructions; the note no longer calls the template a limit and says the out-of-scope line is from the example drafting prompt. Credit kept at mode available (ai-reviewer): the team's review.md is a prose rule the reviewer is expected to follow, nothing enforces it, which is the expectation barrier I47 names; C1 still rests on this one answer."
+   },
+   {
+    "round": 1,
+    "answer": "I25",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Span replaced with the pull requests row ('Codacy might also create comments and suggestions on the pull request'), and the note says the credit is for the platform's GitHub App, whose integration carries the AI Reviewer setting. No level change."
+   },
+   {
+    "round": 1,
+    "answer": "I57",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: in-PR replies and reactions are a way to contest the output at the lowest reading, mode available is right, and no level moves."
+   },
+   {
+    "round": 1,
+    "answer": "I15",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: mode available with cfg manual-review stays, and A1 rests on the whole review run being started by a person."
+   },
+   {
+    "round": 1,
+    "answer": "I11",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: the note already says the reviewer reaches OpenAI models through Amazon Bedrock, which is the AI Reviewer section's wording; the span is valid though repeated on the page."
+   },
+   {
+    "round": 1,
+    "answer": "I10",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: the ticket reading is conditional on the Jira or Linear integration, which mode available already carries; R2 holds through I11 regardless."
+   },
+   {
+    "round": 1,
+    "answer": "S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note now says the llms.txt and OpenAPI files are the vendor's platform-wide files, with the AI Reviewer as one entry; span re-verified on a fresh fetch. Credit unchanged."
+   },
+   {
+    "round": 1,
+    "answer": "I01, I20, I22, I58",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: the reviewer passed all four; I22's note already attributes the GitHub-only fact to 'the docs' rather than the limits page."
+   },
+   {
+    "round": 1,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Agreed: the card stays A1 R2 C1 O2 after these edits; no answer was removed, so no level moves."
+   }
   ]
  },
  "assessment": {
@@ -150,15 +222,15 @@
   },
   "I25": {
    "e": "https://docs.codacy.com/getting-started/which-permissions-does-codacy-need-from-my-account/",
-   "n": "The reviewer posts through the Codacy GitHub App; the app's permission table lists access per scope, with repository contents and metadata read-only and pull requests, checks and issues read and write. The access is the platform app's, shared by all Codacy features, not specific to the reviewer.",
-   "span": "Codacy retrieves repository contents to get installation access tokens",
+   "n": "The AI Reviewer is a setting of Codacy's GitHub integration; the permissions page lists the Codacy GitHub App's access per scope, with repository contents and metadata read-only and pull requests, checks and issues read and write, and its pull requests row covers creating comments and suggestions. The page does not mention the AI Reviewer: the credit is for the platform's GitHub App, shared by all Codacy features.",
+   "span": "Codacy might also create comments and suggestions on the pull request",
    "g": "documented",
    "m": "default"
   },
   "I47": {
    "e": "https://docs.codacy.com/codacy-ai/codacy-ai/",
-   "n": "Teams write instructions for the reviewer in a review.md file in the repository; the docs' template includes an out-of-scope section of what the reviewer should ignore or not enforce. The reviewer also reads the agent guideline files in the repository.",
-   "span": "Anything reviewers should explicitly ignore or not enforce",
+   "n": "Teams can write prose instructions for the reviewer in a review.md file in the repository, which the docs say help it understand the code, the business logic and the team's preferences; the docs' example prompt for drafting that file includes an out-of-scope section of what reviewers should ignore or not enforce, and the reviewer also reads the agent guideline files in the repository.",
+   "span": "These instructions are specified in a review.md file in the .codacy/instructions directory",
    "g": "documented",
    "m": "available",
    "cfg": "ai-reviewer"
@@ -180,14 +252,14 @@
   },
   "S1": {
    "e": "https://resources.codacy.com/resources/case-study-bfi-finance",
-   "n": "A vendor-published case study names BFI Finance, which evaluated the AI Reviewer against its previous AI review tool, switched that tool off, and lists the AI reviewer among the Codacy tools in daily work. Its figure of around 170 developers is a headcount, not a count of reviews.",
-   "span": "Codacy's AI Reviewer is better aligned with its workflow",
+   "n": "A vendor-published case study names BFI Finance, which switched off its previous AI review tool, and its summary list puts the AI reviewer in daily work for around 170 developers (a team headcount, not a count of reviews); the closing paragraph's list of tools in daily work omits the reviewer.",
+   "span": "reviewer, quality gates, container scanning and MCP server are now part of daily work",
    "g": "documented",
    "m": "default"
   },
   "S3": {
    "e": "https://www.codacy.com/llms.txt",
-   "n": "An llms.txt resolves at codacy.com and an OpenAPI 3.0.1 description resolves at api.codacy.com/api/api-docs/swagger.yaml.",
+   "n": "An llms.txt resolves at codacy.com and an OpenAPI 3.0.1 description resolves at api.codacy.com/api/api-docs/swagger.yaml; both are the vendor's platform-wide files, in which the AI Reviewer is one entry.",
    "span": "Key facts for accurate citation:",
    "g": "observed",
    "m": "default",
@@ -245,32 +317,32 @@
   "https://docs.codacy.com/codacy-ai/codacy-ai/": {
    "sha256": "1ccd57719e29bac8aedd2695a5a8f5caf9b273a69acace6ab8af27fd4383e579",
    "bytes": 216811,
-   "read_at": "2026-11-10T10:38Z"
+   "read_at": "2026-11-10T12:47Z"
   },
   "https://docs.codacy.com/faq/code-analysis/does-codacy-place-limits-on-the-code-analysis/": {
    "sha256": "70910c14872491868e0e06c5af266abb6cd62f826411d7bf3d65bb55eead34a2",
    "bytes": 206422,
-   "read_at": "2026-11-10T10:38Z"
+   "read_at": "2026-11-10T12:47Z"
   },
   "https://docs.codacy.com/getting-started/which-permissions-does-codacy-need-from-my-account/": {
    "sha256": "86c7dbdcaceb3cdd387457663230cffcf1150e246f3067de0da1adde1273140c",
    "bytes": 213206,
-   "read_at": "2026-11-10T10:38Z"
+   "read_at": "2026-11-10T12:47Z"
   },
   "https://docs.codacy.com/repositories-configure/integrations/github-integration/": {
    "sha256": "1d7691aa3224a7ab92b45da0d0226efb0769f244032bb65832d70f43a13dcfb3",
    "bytes": 212630,
-   "read_at": "2026-11-10T10:38Z"
+   "read_at": "2026-11-10T12:47Z"
   },
   "https://resources.codacy.com/resources/case-study-bfi-finance": {
    "sha256": "563b62540a7f7d7b1589f174808eadf01702defe61972c5a59d757842c5625cc",
    "bytes": 102820,
-   "read_at": "2026-11-10T10:38Z"
+   "read_at": "2026-11-10T12:47Z"
   },
   "https://www.codacy.com/llms.txt": {
    "sha256": "52a0c32c01ff8deaef2556e3aba3b54f9e68c1f3f24907a4ca5f58e6a0ac1e5e",
    "bytes": 12244,
-   "read_at": "2026-11-10T10:38Z"
+   "read_at": "2026-11-10T12:47Z"
   }
  }
 }
