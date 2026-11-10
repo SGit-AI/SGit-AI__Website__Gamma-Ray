@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.46",
+    "date": "2026-11-10",
+    "what": "correct the times of today's log and request lines",
+    "by": "gamma-ray@web-summit.dinis",
+    "from": "6ffeed1eb"
+  },
+  {
     "version": "v0.0.45",
     "date": "2026-11-10",
     "what": "reports follow Spectrum 0.2 (signatures in prose come from the scorer); claim notes make the company and customer asks",
