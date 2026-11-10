@@ -1,0 +1,101 @@
+{
+ "id": "riskmandate-publisher",
+ "name": "RiskMandate Publisher",
+ "operator": "RiskMandate",
+ "ours": true,
+ "read": "2026-11-10",
+ "tier": "public",
+ "what": "The agent that reads RiskMandate's private stories vault and writes the public site riskmandate.ai.",
+ "note": "Scanned from its own published Agent Behaviour Policy. The publisher of this site is behind RiskMandate: a scan of ourselves.",
+ "vault": {
+  "id": "wkm0whjx",
+  "read_key": "sgit_public_read_08c5b57dfb7a1529422797cc981591e00aa9aea87b04a54486d266e859241bdd:wkm0whjx",
+  "published": "2026-11-10"
+ },
+ "answers": {
+  "I04": {
+   "e": "https://riskmandate.ai/team/publisher.html",
+   "n": "Runs as Claude Code on the web, in a managed container."
+  },
+  "I08": {
+   "e": "https://riskmandate.ai/team/publisher.html",
+   "n": "It publishes releases to the branch the site deploys from."
+  },
+  "I10": {
+   "e": "https://riskmandate.ai/team/publisher.html",
+   "n": "The repository, the stories vault and the live site."
+  },
+  "I11": {
+   "e": "https://riskmandate.ai/team/publisher.html",
+   "n": "The code host and the vault host."
+  },
+  "I12": {
+   "e": "https://riskmandate.ai/team/",
+   "n": "One person and two agents; the publisher checks what the design studio agent delivers."
+  },
+  "I18": {
+   "e": "https://riskmandate.ai/team/publisher.html",
+   "n": "It publishes what the lead has accepted; it does not decide."
+  },
+  "I20": {
+   "e": "https://riskmandate.ai/team/publisher.html",
+   "n": "The mandate is written: wanted, refused and unstated."
+  },
+  "I21": {
+   "e": "https://riskmandate.ai/team/publisher.html",
+   "n": "Its tools and skills are listed."
+  },
+  "I23": {
+   "e": "https://riskmandate.ai/team/publisher.html",
+   "n": "The grant: 17 of the 23 primitives, each with how it is known."
+  },
+  "I27": {
+   "e": "https://riskmandate.ai/agents/",
+   "n": "A lane identity with a public key."
+  },
+  "I29": {
+   "e": "https://riskmandate.ai/team/",
+   "n": "The team page lists the agents."
+  },
+  "I30": {
+   "e": "https://riskmandate.ai/team/publisher.html",
+   "n": "Owner: the lead."
+  },
+  "I32": {
+   "e": "https://riskmandate.ai/team/",
+   "n": "The lead is the accountable person."
+  },
+  "I34": {
+   "e": "https://riskmandate.ai/team/publisher.html",
+   "n": "Its Agent Behaviour Policy is the published policy."
+  },
+  "I38": {
+   "e": "https://riskmandate.ai/team/publisher.html",
+   "n": "Only what the lead has accepted by message goes into a story."
+  },
+  "I41": {
+   "e": "https://riskmandate.ai/versions.html",
+   "n": "Every release is a written note in the version record."
+  },
+  "I45": {
+   "e": "https://riskmandate.ai/team/publisher.html",
+   "n": "Every outside request goes through an egress proxy above the container."
+  },
+  "I47": {
+   "e": "https://riskmandate.ai/team/publisher.html",
+   "n": "Several limits are prose: the page says the grant does not know them."
+  },
+  "I49": {
+   "e": "https://riskmandate.ai/team/publisher.html",
+   "n": "The delta is stated: 4 in excess, 3 unbounded."
+  },
+  "I56": {
+   "e": "https://riskmandate.ai/team/",
+   "n": "The site says which agents make it."
+  },
+  "I61": {
+   "e": "https://riskmandate.ai/team/publisher.html",
+   "n": "The runtime is named."
+  }
+ }
+}

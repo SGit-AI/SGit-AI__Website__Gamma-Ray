@@ -218,3 +218,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# GAMMA-Ray
+_site/
+.generated.json
+.credentials/
+.sg-send/
+.sg_vault/
+!/build/

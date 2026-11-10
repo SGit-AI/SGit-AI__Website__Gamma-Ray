@@ -1,0 +1,218 @@
+[
+ {
+  "id": "Q01",
+  "axis": "freedom",
+  "text": "What is the agent built on?",
+  "indicators": [
+   "I01",
+   "I02",
+   "I03",
+   "I04",
+   "I05"
+  ]
+ },
+ {
+  "id": "Q02",
+  "axis": "freedom",
+  "text": "Does it act, or only answer and recommend?",
+  "indicators": [
+   "I06",
+   "I07",
+   "I08"
+  ]
+ },
+ {
+  "id": "Q03",
+  "axis": "freedom",
+  "text": "How far does it reach?",
+  "indicators": [
+   "I09",
+   "I10",
+   "I11"
+  ]
+ },
+ {
+  "id": "Q04",
+  "axis": "freedom",
+  "text": "Does it work with other agents?",
+  "indicators": [
+   "I12",
+   "I13",
+   "I14"
+  ]
+ },
+ {
+  "id": "Q05",
+  "axis": "freedom",
+  "text": "What is the person's role?",
+  "indicators": [
+   "I15",
+   "I16",
+   "I17",
+   "I18",
+   "I19"
+  ]
+ },
+ {
+  "id": "Q06",
+  "axis": "governance",
+  "text": "Is what it is for written down?",
+  "indicators": [
+   "I20",
+   "I21",
+   "I22"
+  ]
+ },
+ {
+  "id": "Q07",
+  "axis": "governance",
+  "text": "Does it have its own identity and only the access it needs?",
+  "indicators": [
+   "I23",
+   "I24",
+   "I25",
+   "I26",
+   "I27",
+   "I28"
+  ]
+ },
+ {
+  "id": "Q08",
+  "axis": "governance",
+  "text": "Is it in a registry, with an owner?",
+  "indicators": [
+   "I29",
+   "I30",
+   "I31"
+  ]
+ },
+ {
+  "id": "Q09",
+  "axis": "governance",
+  "text": "Who is accountable for it?",
+  "indicators": [
+   "I32",
+   "I33"
+  ]
+ },
+ {
+  "id": "Q10",
+  "axis": "governance",
+  "text": "Is there a policy that governs it?",
+  "indicators": [
+   "I34",
+   "I35",
+   "I36",
+   "I37"
+  ]
+ },
+ {
+  "id": "Q11",
+  "axis": "governance",
+  "text": "Can a person step in or stop it?",
+  "indicators": [
+   "I38",
+   "I39",
+   "I40"
+  ]
+ },
+ {
+  "id": "Q12",
+  "axis": "governance",
+  "text": "Is what it does logged?",
+  "indicators": [
+   "I41",
+   "I42"
+  ]
+ },
+ {
+  "id": "Q13",
+  "axis": "governance",
+  "text": "Is it watched while it runs?",
+  "indicators": [
+   "I43",
+   "I44"
+  ]
+ },
+ {
+  "id": "Q14",
+  "axis": "governance",
+  "text": "What stands between it and what it should not do?",
+  "indicators": [
+   "I45",
+   "I46",
+   "I47",
+   "I48",
+   "I49"
+  ]
+ },
+ {
+  "id": "Q15",
+  "axis": "governance",
+  "text": "Is it tested, and are the results shown?",
+  "indicators": [
+   "I50",
+   "I51",
+   "I52"
+  ]
+ },
+ {
+  "id": "Q16",
+  "axis": "governance",
+  "text": "What happens when it goes wrong?",
+  "indicators": [
+   "I53",
+   "I54",
+   "I55"
+  ]
+ },
+ {
+  "id": "Q17",
+  "axis": "governance",
+  "text": "Do people know it is an AI, and can they answer back?",
+  "indicators": [
+   "I56",
+   "I57"
+  ]
+ },
+ {
+  "id": "Q18",
+  "axis": "governance",
+  "text": "What data does it use, and under what rules?",
+  "indicators": [
+   "I58",
+   "I59",
+   "I60"
+  ]
+ },
+ {
+  "id": "Q19",
+  "axis": "governance",
+  "text": "What does it depend on from others?",
+  "indicators": [
+   "I61",
+   "I62"
+  ]
+ },
+ {
+  "id": "Q20",
+  "axis": "governance",
+  "text": "Has anyone independent checked?",
+  "indicators": [
+   "I63",
+   "I64"
+  ]
+ },
+ {
+  "id": "Q21",
+  "axis": "governance",
+  "text": "Is the organisation behind it ready?",
+  "indicators": [
+   "I65",
+   "I66",
+   "I67",
+   "I68",
+   "I69"
+  ]
+ }
+]

@@ -1,0 +1,137 @@
+{
+ "id": "promptugal-newsroom-team",
+ "name": "The PrompTugal.news agent team",
+ "operator": "Dinis Cruz (The Cyber Boardroom)",
+ "ours": true,
+ "read": "2026-11-10",
+ "tier": "public",
+ "what": "The team of Claude Code sessions that builds and runs promptugal.news: a conductor, a journalist, a developer and others, each with its own key, policy and folder.",
+ "note": "Scanned by one of its own neighbours (the agent that wrote this site works in the same repository), from the team's public pages only. A scan of ourselves, published so that the method can be argued with.",
+ "vault": {
+  "id": "e8jd77mm",
+  "read_key": "sgit_public_read_8dabd64951d4bec9a1667a3a1bd95a596ddf3067945dbf05b193df32300f0488:e8jd77mm",
+  "published": "2026-11-10"
+ },
+ "answers": {
+  "I04": {
+   "e": "https://promptugal.news/CLAUDE.md",
+   "n": "Each agent is a Claude Code session; it runs the build, the gate and the release script."
+  },
+  "I08": {
+   "e": "https://promptugal.news/CLAUDE.md",
+   "n": "Agents commit and release to the branch the site deploys from."
+  },
+  "I10": {
+   "e": "https://promptugal.news/CLAUDE.md",
+   "n": "The repository, the vaults, the inboxes and the live site."
+  },
+  "I11": {
+   "e": "https://promptugal.news/board/abp/README.md",
+   "n": "The policy names the outside hosts and tools an agent may use."
+  },
+  "I12": {
+   "e": "https://promptugal.news/CLAUDE.md",
+   "n": "Sixteen roles, a conductor that routes work, and an inbox per agent."
+  },
+  "I14": {
+   "e": "https://promptugal.news/CLAUDE.md",
+   "n": "Messages between agents are sealed to the receiver's key and signed by the sender."
+  },
+  "I18": {
+   "e": "https://promptugal.news/CLAUDE.md",
+   "n": "Only the operator instructs; decisions that are his alone wait for him; the main branch is his to merge."
+  },
+  "I20": {
+   "e": "https://promptugal.news/CLAUDE.md",
+   "n": "The team table says what each agent owns and what it never does."
+  },
+  "I21": {
+   "e": "https://promptugal.news/board/abp/policies.json",
+   "n": "One grant per agent: paths, hosts, tools."
+  },
+  "I23": {
+   "e": "https://promptugal.news/board/abp/policies.json",
+   "n": "The grants are data."
+  },
+  "I26": {
+   "e": "https://promptugal.news/board/keys.json",
+   "n": "Each agent makes its own session key."
+  },
+  "I27": {
+   "e": "https://promptugal.news/board/keys.json",
+   "n": "Public keys and fingerprints are published; signatures are checked against them."
+  },
+  "I29": {
+   "e": "https://promptugal.news/board/keys.json",
+   "n": "The key list and the team table are the registry."
+  },
+  "I30": {
+   "e": "https://promptugal.news/CLAUDE.md",
+   "n": "Every agent has a named human operator."
+  },
+  "I31": {
+   "e": "https://promptugal.news/CLAUDE.md",
+   "n": "The hand-over of a role to a new session is a written process; old keys are marked superseded."
+  },
+  "I32": {
+   "e": "https://promptugal.news/about/participant.md",
+   "n": "The operator is named."
+  },
+  "I33": {
+   "e": "https://promptugal.news/CLAUDE.md",
+   "n": "The team table."
+  },
+  "I34": {
+   "e": "https://promptugal.news/board/abp/README.md",
+   "n": "The Agent Behaviour Policies and their eleven core rules are published."
+  },
+  "I37": {
+   "e": "https://promptugal.news/board/abp/README.md",
+   "n": "No new session or agent without the operator."
+  },
+  "I38": {
+   "e": "https://promptugal.news/CLAUDE.md",
+   "n": "Decisions on money, the law, the brand and people wait for the operator."
+  },
+  "I39": {
+   "e": "https://promptugal.news/board/guidance/2026-11-09-the-big-stop.md",
+   "n": "A hold file stops every agent; a stop of the whole team was ordered and reported on 9 November 2026."
+  },
+  "I40": {
+   "e": "https://promptugal.news/CLAUDE.md",
+   "n": "An agent that is blocked says so to the operator first."
+  },
+  "I41": {
+   "e": "https://promptugal.news/board/abp/README.md",
+   "n": "Every tool call is logged and every run ends with a run report."
+  },
+  "I43": {
+   "e": "https://promptugal.news/board/abp/README.md",
+   "n": "An hourly review of the run reports and the commit log."
+  },
+  "I46": {
+   "e": "https://promptugal.news/board/abp/README.md",
+   "n": "The hooks live in the repository the agents work in, and run in observe mode: a call outside the grant is logged, not blocked."
+  },
+  "I47": {
+   "e": "https://promptugal.news/CLAUDE.md",
+   "n": "Most rules are prose."
+  },
+  "I48": {
+   "e": "https://promptugal.news/board/abp/policies.json",
+   "n": "The policy is data read by hooks."
+  },
+  "I49": {
+   "e": "https://promptugal.news/board/abp/README.md",
+   "n": "The policy has a section on what the hooks cannot see."
+  },
+  "I56": {
+   "e": "https://promptugal.news/about/participant.md",
+   "n": "The site says it is built and run by AI agents with a named operator."
+  },
+  "I61": {
+   "e": "https://promptugal.news/CLAUDE.md",
+   "n": "The model family each role runs on is stated."
+  }
+ }
+}

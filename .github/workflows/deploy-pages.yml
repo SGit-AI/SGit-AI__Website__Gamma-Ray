@@ -1,0 +1,59 @@
+name: deploy-pages
+# On every push: the gate, then CI numbers the release (only CI writes the version), builds and deploys.
+# dev is the site. main is touched only by a pull request that the operator merges.
+on:
+  push:
+    branches: [dev, main]
+  pull_request:
+    branches: [dev, main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Build and run the gate (generated output is never committed)
+        run: node build/validate.mjs
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    needs: [validate]
+    if: github.event_name != 'pull_request' && github.ref_name == 'dev'
+    concurrency:
+      group: release
+      cancel-in-progress: false
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Number, build, check, commit and tag this release (CI owns the version)
+        if: github.event_name == 'push'
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: build/tag_release.sh
+      - name: Build (a manual dispatch, no number)
+        if: github.event_name != 'push'
+        run: node build/validate.mjs
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

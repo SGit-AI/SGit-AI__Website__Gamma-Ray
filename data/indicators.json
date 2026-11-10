@@ -1,0 +1,1594 @@
+[
+ {
+  "id": "I01",
+  "question": "Q01",
+  "tier": "public",
+  "text": "It is a vendor's assistant, used as supplied",
+  "links": [
+   {
+    "provision": "owasp.AT1",
+    "relation": "same"
+   }
+  ]
+ },
+ {
+  "id": "I02",
+  "question": "Q01",
+  "tier": "public",
+  "text": "It runs on an AI platform with the organisation's own data, without executing arbitrary code",
+  "links": [
+   {
+    "provision": "owasp.AT2",
+    "relation": "same"
+   }
+  ]
+ },
+ {
+  "id": "I03",
+  "question": "Q01",
+  "tier": "public",
+  "text": "It is configured on a low-code or no-code builder and acts on real organisational data",
+  "links": [
+   {
+    "provision": "owasp.AT3",
+    "relation": "same"
+   }
+  ]
+ },
+ {
+  "id": "I04",
+  "question": "Q01",
+  "tier": "public",
+  "text": "It generates and executes code with local or cloud privileges",
+  "links": [
+   {
+    "provision": "owasp.AT4",
+    "relation": "same"
+   }
+  ]
+ },
+ {
+  "id": "I05",
+  "question": "Q01",
+  "tier": "public",
+  "text": "It is built in-house: the organisation controls its identity, tools and boundaries",
+  "links": [
+   {
+    "provision": "owasp.AT5",
+    "relation": "same"
+   }
+  ]
+ },
+ {
+  "id": "I06",
+  "question": "Q02",
+  "tier": "public",
+  "text": "It follows fixed rules, with no reasoning",
+  "links": [
+   {
+    "provision": "sf.L0",
+    "relation": "same"
+   },
+   {
+    "provision": "ms.100.2.1",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.100.2.2",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.100.2.3",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I07",
+  "question": "Q02",
+  "tier": "public",
+  "text": "It retrieves information and recommends actions; a person acts",
+  "links": [
+   {
+    "provision": "sf.L1",
+    "relation": "same"
+   },
+   {
+    "provision": "sf.a01",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I08",
+  "question": "Q02",
+  "tier": "public",
+  "text": "It executes actions itself",
+  "links": [
+   {
+    "provision": "sf.L2",
+    "relation": "part"
+   },
+   {
+    "provision": "sf.a07",
+    "relation": "same"
+   },
+   {
+    "provision": "ms.200.2.1",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I09",
+  "question": "Q03",
+  "tier": "public",
+  "text": "It works in one domain's data",
+  "links": [
+   {
+    "provision": "sf.L2",
+    "relation": "part"
+   },
+   {
+    "provision": "sf.a04",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I10",
+  "question": "Q03",
+  "tier": "public",
+  "text": "It works across several domains or systems",
+  "links": [
+   {
+    "provision": "sf.L3",
+    "relation": "same"
+   },
+   {
+    "provision": "sf.a16",
+    "relation": "same"
+   },
+   {
+    "provision": "sf.a17",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.400.2.1",
+    "relation": "same"
+   },
+   {
+    "provision": "ms.200.4.2",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I11",
+  "question": "Q03",
+  "tier": "public",
+  "text": "It connects to external tools or services across a trust boundary",
+  "links": [
+   {
+    "provision": "owasp.AT6",
+    "relation": "same"
+   },
+   {
+    "provision": "nist.GOVERN-6.1",
+    "relation": "part"
+   },
+   {
+    "provision": "nist.MAP-4.1",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I12",
+  "question": "Q04",
+  "tier": "public",
+  "text": "Several agents coordinate inside the organisation",
+  "links": [
+   {
+    "provision": "owasp.AT7",
+    "relation": "same"
+   },
+   {
+    "provision": "sf.a13",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.500.4.1",
+    "relation": "same"
+   },
+   {
+    "provision": "aagmm.GD-09",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I13",
+  "question": "Q04",
+  "tier": "public",
+  "text": "Agents operate across organisational boundaries or disparate stacks",
+  "links": [
+   {
+    "provision": "owasp.AT8",
+    "relation": "same"
+   },
+   {
+    "provision": "sf.L4",
+    "relation": "same"
+   },
+   {
+    "provision": "sf.a20",
+    "relation": "same"
+   },
+   {
+    "provision": "sf.a25",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I14",
+  "question": "Q04",
+  "tier": "public",
+  "text": "There is a published protocol or communication layer between agents",
+  "links": [
+   {
+    "provision": "sf.a18",
+    "relation": "same"
+   },
+   {
+    "provision": "sf.a15",
+    "relation": "part"
+   },
+   {
+    "provision": "aagmm.GD-09",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I15",
+  "question": "Q05",
+  "tier": "public",
+  "text": "The person operates: every action is prompted and controlled by them",
+  "links": [
+   {
+    "provision": "eaamm.L1",
+    "relation": "same"
+   }
+  ]
+ },
+ {
+  "id": "I16",
+  "question": "Q05",
+  "tier": "public",
+  "text": "The agent suggests; the person reviews and approves each action",
+  "links": [
+   {
+    "provision": "eaamm.L2",
+    "relation": "same"
+   }
+  ]
+ },
+ {
+  "id": "I17",
+  "question": "Q05",
+  "tier": "public",
+  "text": "The agent handles routine tasks; the person is consulted on exceptions",
+  "links": [
+   {
+    "provision": "eaamm.L3",
+    "relation": "same"
+   }
+  ]
+ },
+ {
+  "id": "I18",
+  "question": "Q05",
+  "tier": "public",
+  "text": "The agent works independently; the person approves critical decisions only",
+  "links": [
+   {
+    "provision": "eaamm.L4",
+    "relation": "same"
+   }
+  ]
+ },
+ {
+  "id": "I19",
+  "question": "Q05",
+  "tier": "public",
+  "text": "The agent has full autonomy within boundaries; the person monitors",
+  "links": [
+   {
+    "provision": "eaamm.L5",
+    "relation": "same"
+   },
+   {
+    "provision": "ms.500.2.1",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I20",
+  "question": "Q06",
+  "tier": "public",
+  "text": "Its purpose and permitted tasks are stated in writing",
+  "links": [
+   {
+    "provision": "rm.mandate",
+    "relation": "same"
+   },
+   {
+    "provision": "nist.MAP-1.1",
+    "relation": "part"
+   },
+   {
+    "provision": "nist.MAP-2.1",
+    "relation": "same"
+   },
+   {
+    "provision": "nist.MAP-3.3",
+    "relation": "same"
+   },
+   {
+    "provision": "nist.MAP-1.3",
+    "relation": "part"
+   },
+   {
+    "provision": "aiact.art-13",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I21",
+  "question": "Q06",
+  "tier": "declared",
+  "text": "Its autonomy limits and the tools it may use are defined",
+  "links": [
+   {
+    "provision": "owasp.k07",
+    "relation": "same"
+   },
+   {
+    "provision": "rm.mandate",
+    "relation": "part"
+   },
+   {
+    "provision": "nist.MAP-2.2",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.300.2.3",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I22",
+  "question": "Q06",
+  "tier": "public",
+  "text": "Its limits and known failure cases are documented for those who use it",
+  "links": [
+   {
+    "provision": "nist.MAP-2.2",
+    "relation": "same"
+   },
+   {
+    "provision": "nist.MEASURE-2.5",
+    "relation": "part"
+   },
+   {
+    "provision": "aiact.art-13",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I23",
+  "question": "Q07",
+  "tier": "public",
+  "text": "What it can reach is enumerated: scopes, permissions, tools",
+  "links": [
+   {
+    "provision": "rm.grant",
+    "relation": "same"
+   },
+   {
+    "provision": "mcp.05",
+    "relation": "part"
+   },
+   {
+    "provision": "mcp.14",
+    "relation": "part"
+   },
+   {
+    "provision": "aagmm.GD-02",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I24",
+  "question": "Q07",
+  "tier": "public",
+  "text": "Its authorisation is published as metadata that anyone can read",
+  "links": [
+   {
+    "provision": "mcp.01",
+    "relation": "same"
+   },
+   {
+    "provision": "mcp.02",
+    "relation": "same"
+   },
+   {
+    "provision": "mcp.04",
+    "relation": "part"
+   },
+   {
+    "provision": "mcp.07",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I25",
+  "question": "Q07",
+  "tier": "public",
+  "text": "It asks for narrower access than the whole account",
+  "links": [
+   {
+    "provision": "mcp.06",
+    "relation": "same"
+   },
+   {
+    "provision": "sf.a14",
+    "relation": "part"
+   },
+   {
+    "provision": "sf.a21",
+    "relation": "part"
+   },
+   {
+    "provision": "aagmm.GD-02",
+    "relation": "part"
+   },
+   {
+    "provision": "mcp.15",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I26",
+  "question": "Q07",
+  "tier": "declared",
+  "text": "It has its own identity, separate from any person's",
+  "links": [
+   {
+    "provision": "aagmm.GD-02",
+    "relation": "part"
+   },
+   {
+    "provision": "sf.a14",
+    "relation": "part"
+   },
+   {
+    "provision": "owasp.k23",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I27",
+  "question": "Q07",
+  "tier": "public",
+  "text": "Its identity is cryptographic and can be checked by others",
+  "links": [
+   {
+    "provision": "owasp.k23",
+    "relation": "same"
+   }
+  ]
+ },
+ {
+  "id": "I28",
+  "question": "Q07",
+  "tier": "evidenced",
+  "text": "Its tokens are bound to the service they were issued for and are not passed on",
+  "links": [
+   {
+    "provision": "mcp.03",
+    "relation": "part"
+   },
+   {
+    "provision": "mcp.08",
+    "relation": "same"
+   },
+   {
+    "provision": "mcp.09",
+    "relation": "part"
+   },
+   {
+    "provision": "mcp.10",
+    "relation": "part"
+   },
+   {
+    "provision": "mcp.11",
+    "relation": "same"
+   },
+   {
+    "provision": "mcp.12",
+    "relation": "same"
+   },
+   {
+    "provision": "mcp.13",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I29",
+  "question": "Q08",
+  "tier": "declared",
+  "text": "The organisation keeps a registry of its agents",
+  "links": [
+   {
+    "provision": "owasp.k08",
+    "relation": "same"
+   },
+   {
+    "provision": "nist.GOVERN-1.6",
+    "relation": "same"
+   },
+   {
+    "provision": "aagmm.GD-01",
+    "relation": "part"
+   },
+   {
+    "provision": "aagmm.GD-07",
+    "relation": "part"
+   },
+   {
+    "provision": "sf.a19",
+    "relation": "part"
+   },
+   {
+    "provision": "owasp.k01",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I30",
+  "question": "Q08",
+  "tier": "declared",
+  "text": "Each agent has a named owner",
+  "links": [
+   {
+    "provision": "owasp.k16",
+    "relation": "same"
+   },
+   {
+    "provision": "owasp.k02",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.200.5.2",
+    "relation": "negation"
+   }
+  ]
+ },
+ {
+  "id": "I31",
+  "question": "Q08",
+  "tier": "declared",
+  "text": "Agents are retired by a defined process",
+  "links": [
+   {
+    "provision": "nist.GOVERN-1.7",
+    "relation": "same"
+   },
+   {
+    "provision": "sf.a23",
+    "relation": "same"
+   },
+   {
+    "provision": "aagmm.GD-01",
+    "relation": "part"
+   },
+   {
+    "provision": "sf.a19",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I32",
+  "question": "Q09",
+  "tier": "public",
+  "text": "A named executive or body is accountable for the organisation's agents",
+  "links": [
+   {
+    "provision": "owasp.k13",
+    "relation": "same"
+   },
+   {
+    "provision": "ms.300.1.3",
+    "relation": "same"
+   },
+   {
+    "provision": "ms.500.1.3",
+    "relation": "same"
+   },
+   {
+    "provision": "nist.GOVERN-2.3",
+    "relation": "same"
+   },
+   {
+    "provision": "ms.100.1.1",
+    "relation": "negation"
+   },
+   {
+    "provision": "owasp.k02",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I33",
+  "question": "Q09",
+  "tier": "declared",
+  "text": "Roles and responsibilities for AI risk are documented",
+  "links": [
+   {
+    "provision": "nist.GOVERN-2.1",
+    "relation": "same"
+   },
+   {
+    "provision": "nist.GOVERN-3.2",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.200.5.2",
+    "relation": "negation"
+   }
+  ]
+ },
+ {
+  "id": "I34",
+  "question": "Q10",
+  "tier": "public",
+  "text": "A governance policy for agents is published",
+  "links": [
+   {
+    "provision": "owasp.k11",
+    "relation": "same"
+   },
+   {
+    "provision": "ms.300.2.1",
+    "relation": "same"
+   },
+   {
+    "provision": "ms.200.3.1",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.100.3.1",
+    "relation": "negation"
+   },
+   {
+    "provision": "nist.GOVERN-1.2",
+    "relation": "part"
+   },
+   {
+    "provision": "nist.GOVERN-1.4",
+    "relation": "same"
+   },
+   {
+    "provision": "aagmm.GD-04",
+    "relation": "part"
+   },
+   {
+    "provision": "sf.a09",
+    "relation": "part"
+   },
+   {
+    "provision": "owasp.k04",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I35",
+  "question": "Q10",
+  "tier": "declared",
+  "text": "Agents and use cases are classed by risk",
+  "links": [
+   {
+    "provision": "aagmm.GD-10",
+    "relation": "same"
+   },
+   {
+    "provision": "owasp.k05",
+    "relation": "part"
+   },
+   {
+    "provision": "nist.GOVERN-1.3",
+    "relation": "same"
+   },
+   {
+    "provision": "nist.MAP-1.5",
+    "relation": "part"
+   },
+   {
+    "provision": "nist.MAP-5.1",
+    "relation": "part"
+   },
+   {
+    "provision": "aiact.art-9",
+    "relation": "part"
+   },
+   {
+    "provision": "sf.a03",
+    "relation": "same"
+   },
+   {
+    "provision": "ms.300.2.4",
+    "relation": "part"
+   },
+   {
+    "provision": "nist.MANAGE-1.2",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I36",
+  "question": "Q10",
+  "tier": "declared",
+  "text": "The laws that apply to it are identified",
+  "links": [
+   {
+    "provision": "nist.GOVERN-1.1",
+    "relation": "same"
+   },
+   {
+    "provision": "owasp.k26",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.100.3.2",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I37",
+  "question": "Q10",
+  "tier": "declared",
+  "text": "New agents pass an approval or review before they run",
+  "links": [
+   {
+    "provision": "owasp.k06",
+    "relation": "same"
+   },
+   {
+    "provision": "ms.400.3.3",
+    "relation": "part"
+   },
+   {
+    "provision": "nist.MANAGE-1.1",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I38",
+  "question": "Q11",
+  "tier": "public",
+  "text": "High-impact actions need a person's approval",
+  "links": [
+   {
+    "provision": "owasp.k12",
+    "relation": "same"
+   },
+   {
+    "provision": "aiact.art-14",
+    "relation": "part"
+   },
+   {
+    "provision": "aagmm.GD-06",
+    "relation": "part"
+   },
+   {
+    "provision": "nist.MAP-3.5",
+    "relation": "part"
+   },
+   {
+    "provision": "sf.a22",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.300.2.3",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I39",
+  "question": "Q11",
+  "tier": "declared",
+  "text": "There is a way to pause or stop it",
+  "links": [
+   {
+    "provision": "owasp.k18",
+    "relation": "same"
+   },
+   {
+    "provision": "nist.MANAGE-2.4",
+    "relation": "same"
+   },
+   {
+    "provision": "aiact.art-14",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I40",
+  "question": "Q11",
+  "tier": "declared",
+  "text": "There is a defined escalation path",
+  "links": [
+   {
+    "provision": "eaamm.G2",
+    "relation": "same"
+   },
+   {
+    "provision": "nist.GOVERN-3.2",
+    "relation": "part"
+   },
+   {
+    "provision": "aagmm.GD-06",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I41",
+  "question": "Q12",
+  "tier": "declared",
+  "text": "Its actions are logged",
+  "links": [
+   {
+    "provision": "owasp.k03",
+    "relation": "part"
+   },
+   {
+    "provision": "owasp.k09",
+    "relation": "same"
+   },
+   {
+    "provision": "aiact.art-12",
+    "relation": "same"
+   },
+   {
+    "provision": "aagmm.GD-03",
+    "relation": "part"
+   },
+   {
+    "provision": "aagmm.GD-08",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I42",
+  "question": "Q12",
+  "tier": "evidenced",
+  "text": "The log is tamper-evident and kept for a stated time",
+  "links": [
+   {
+    "provision": "aiact.art-12",
+    "relation": "part"
+   },
+   {
+    "provision": "aiact.art-26",
+    "relation": "part"
+   },
+   {
+    "provision": "aagmm.GD-08",
+    "relation": "part"
+   },
+   {
+    "provision": "owasp.k25",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I43",
+  "question": "Q13",
+  "tier": "declared",
+  "text": "It is monitored in operation",
+  "links": [
+   {
+    "provision": "ms.200.3.4",
+    "relation": "same"
+   },
+   {
+    "provision": "nist.MANAGE-4.1",
+    "relation": "same"
+   },
+   {
+    "provision": "nist.GOVERN-1.5",
+    "relation": "part"
+   },
+   {
+    "provision": "aiact.art-72",
+    "relation": "part"
+   },
+   {
+    "provision": "aagmm.GD-03",
+    "relation": "part"
+   },
+   {
+    "provision": "sf.a09",
+    "relation": "part"
+   },
+   {
+    "provision": "nist.MEASURE-2.4",
+    "relation": "same"
+   },
+   {
+    "provision": "ms.300.3.4",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I44",
+  "question": "Q13",
+  "tier": "evidenced",
+  "text": "Anomalies are detected in real time and raise alerts",
+  "links": [
+   {
+    "provision": "owasp.k17",
+    "relation": "same"
+   },
+   {
+    "provision": "owasp.k20",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.400.3.1",
+    "relation": "same"
+   },
+   {
+    "provision": "ms.500.3.2",
+    "relation": "part"
+   },
+   {
+    "provision": "owasp.k21",
+    "relation": "part"
+   },
+   {
+    "provision": "aagmm.GD-07",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I45",
+  "question": "Q14",
+  "tier": "public",
+  "text": "A limit on it is enforced by something outside its own reach",
+  "links": [
+   {
+    "provision": "rm.barrier.boundary",
+    "relation": "same"
+   },
+   {
+    "provision": "owasp.k19",
+    "relation": "part"
+   },
+   {
+    "provision": "aagmm.GD-04",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.200.3.2",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.200.3.3",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.500.3.2",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I46",
+  "question": "Q14",
+  "tier": "public",
+  "text": "A limit on it is a setting that its own account could change",
+  "links": [
+   {
+    "provision": "rm.barrier.setting",
+    "relation": "same"
+   }
+  ]
+ },
+ {
+  "id": "I47",
+  "question": "Q14",
+  "tier": "public",
+  "text": "A limit on it is a rule in prose",
+  "links": [
+   {
+    "provision": "rm.barrier.expectation",
+    "relation": "same"
+   },
+   {
+    "provision": "owasp.k04",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I48",
+  "question": "Q14",
+  "tier": "declared",
+  "text": "Policy is enforced as machine-readable rules",
+  "links": [
+   {
+    "provision": "owasp.k19",
+    "relation": "same"
+   },
+   {
+    "provision": "owasp.k22",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.500.3.3",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I49",
+  "question": "Q14",
+  "tier": "public",
+  "text": "The difference between what it can reach and what it is for is stated",
+  "links": [
+   {
+    "provision": "rm.delta",
+    "relation": "same"
+   }
+  ]
+ },
+ {
+  "id": "I50",
+  "question": "Q15",
+  "tier": "public",
+  "text": "Test or evaluation results are published",
+  "links": [
+   {
+    "provision": "nist.MEASURE-2.1",
+    "relation": "part"
+   },
+   {
+    "provision": "nist.MEASURE-2.3",
+    "relation": "same"
+   },
+   {
+    "provision": "nist.MEASURE-2.5",
+    "relation": "part"
+   },
+   {
+    "provision": "eaamm.G3",
+    "relation": "same"
+   },
+   {
+    "provision": "aiact.art-15",
+    "relation": "part"
+   },
+   {
+    "provision": "nist.MEASURE-1.1",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I51",
+  "question": "Q15",
+  "tier": "declared",
+  "text": "It is tested for safety and security, including by attack",
+  "links": [
+   {
+    "provision": "nist.MEASURE-2.6",
+    "relation": "same"
+   },
+   {
+    "provision": "nist.MEASURE-2.7",
+    "relation": "same"
+   },
+   {
+    "provision": "aiact.art-15",
+    "relation": "part"
+   },
+   {
+    "provision": "nist.GOVERN-4.3",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I52",
+  "question": "Q15",
+  "tier": "declared",
+  "text": "People who did not build it take part in assessing it",
+  "links": [
+   {
+    "provision": "nist.MEASURE-1.3",
+    "relation": "same"
+   }
+  ]
+ },
+ {
+  "id": "I53",
+  "question": "Q16",
+  "tier": "declared",
+  "text": "There is an incident process for agents",
+  "links": [
+   {
+    "provision": "owasp.k15",
+    "relation": "same"
+   },
+   {
+    "provision": "aagmm.GD-11",
+    "relation": "same"
+   },
+   {
+    "provision": "nist.MANAGE-2.3",
+    "relation": "same"
+   },
+   {
+    "provision": "nist.GOVERN-4.3",
+    "relation": "part"
+   },
+   {
+    "provision": "nist.MANAGE-1.3",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I54",
+  "question": "Q16",
+  "tier": "public",
+  "text": "Incidents and errors are communicated to those affected",
+  "links": [
+   {
+    "provision": "nist.MANAGE-4.3",
+    "relation": "same"
+   },
+   {
+    "provision": "aiact.art-73",
+    "relation": "part"
+   },
+   {
+    "provision": "aiact.art-26",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I55",
+  "question": "Q16",
+  "tier": "declared",
+  "text": "There is a plan for a failure of a third party it depends on",
+  "links": [
+   {
+    "provision": "nist.GOVERN-6.2",
+    "relation": "same"
+   }
+  ]
+ },
+ {
+  "id": "I56",
+  "question": "Q17",
+  "tier": "public",
+  "text": "It tells the people it talks to that it is an AI",
+  "links": [
+   {
+    "provision": "aiact.art-50",
+    "relation": "same"
+   }
+  ]
+ },
+ {
+  "id": "I57",
+  "question": "Q17",
+  "tier": "public",
+  "text": "There is a channel to report problems with it or contest its output",
+  "links": [
+   {
+    "provision": "nist.MEASURE-3.3",
+    "relation": "same"
+   },
+   {
+    "provision": "nist.GOVERN-5.1",
+    "relation": "part"
+   },
+   {
+    "provision": "sf.a10",
+    "relation": "same"
+   },
+   {
+    "provision": "sf.a28",
+    "relation": "part"
+   },
+   {
+    "provision": "nist.GOVERN-5.2",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I58",
+  "question": "Q18",
+  "tier": "public",
+  "text": "The data it uses is described",
+  "links": [
+   {
+    "provision": "aagmm.GD-05",
+    "relation": "part"
+   },
+   {
+    "provision": "eaamm.D2",
+    "relation": "part"
+   },
+   {
+    "provision": "sf.a04",
+    "relation": "part"
+   },
+   {
+    "provision": "sf.a08",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I59",
+  "question": "Q18",
+  "tier": "declared",
+  "text": "There are data quality rules for what it reads",
+  "links": [
+   {
+    "provision": "eaamm.G1",
+    "relation": "same"
+   },
+   {
+    "provision": "sf.a08",
+    "relation": "same"
+   },
+   {
+    "provision": "aagmm.GD-05",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.400.4.3",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I60",
+  "question": "Q18",
+  "tier": "declared",
+  "text": "Its privacy risk has been examined",
+  "links": [
+   {
+    "provision": "nist.MEASURE-2.10",
+    "relation": "same"
+   },
+   {
+    "provision": "aagmm.GD-05",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I61",
+  "question": "Q19",
+  "tier": "public",
+  "text": "The models and third-party components it uses are listed",
+  "links": [
+   {
+    "provision": "owasp.k14",
+    "relation": "same"
+   },
+   {
+    "provision": "nist.MAP-4.1",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I62",
+  "question": "Q19",
+  "tier": "declared",
+  "text": "Third-party components are monitored and have risk controls",
+  "links": [
+   {
+    "provision": "nist.GOVERN-6.1",
+    "relation": "same"
+   },
+   {
+    "provision": "nist.MANAGE-3.1",
+    "relation": "same"
+   },
+   {
+    "provision": "nist.MANAGE-3.2",
+    "relation": "same"
+   },
+   {
+    "provision": "nist.MAP-4.2",
+    "relation": "same"
+   }
+  ]
+ },
+ {
+  "id": "I63",
+  "question": "Q20",
+  "tier": "public",
+  "text": "A public certificate or audit report covers it",
+  "links": [
+   {
+    "provision": "aagmm.GD-08",
+    "relation": "part"
+   },
+   {
+    "provision": "owasp.k25",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I64",
+  "question": "Q20",
+  "tier": "evidenced",
+  "text": "Compliance evidence is produced continuously, ready for a regulator",
+  "links": [
+   {
+    "provision": "owasp.k24",
+    "relation": "same"
+   },
+   {
+    "provision": "owasp.k25",
+    "relation": "same"
+   },
+   {
+    "provision": "ms.500.3.2",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I65",
+  "question": "Q21",
+  "tier": "public",
+  "text": "There is a stated strategy for agents",
+  "links": [
+   {
+    "provision": "ms.300.1.1",
+    "relation": "same"
+   },
+   {
+    "provision": "ms.200.1.1",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.200.1.3",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.400.1.1",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.100.1.1",
+    "relation": "negation"
+   },
+   {
+    "provision": "nist.MAP-1.3",
+    "relation": "part"
+   },
+   {
+    "provision": "eaamm.D1",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I66",
+  "question": "Q21",
+  "tier": "declared",
+  "text": "The people who work with it are trained",
+  "links": [
+   {
+    "provision": "nist.GOVERN-2.2",
+    "relation": "same"
+   },
+   {
+    "provision": "aiact.art-4",
+    "relation": "same"
+   },
+   {
+    "provision": "eaamm.D3",
+    "relation": "same"
+   },
+   {
+    "provision": "ms.100.5.1",
+    "relation": "negation"
+   },
+   {
+    "provision": "ms.200.5.1",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.300.4.1",
+    "relation": "same"
+   },
+   {
+    "provision": "ms.300.5.1",
+    "relation": "part"
+   },
+   {
+    "provision": "nist.MAP-3.4",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I67",
+  "question": "Q21",
+  "tier": "declared",
+  "text": "Its value is measured",
+  "links": [
+   {
+    "provision": "sf.a02",
+    "relation": "part"
+   },
+   {
+    "provision": "sf.a06",
+    "relation": "same"
+   },
+   {
+    "provision": "sf.a12",
+    "relation": "same"
+   },
+   {
+    "provision": "sf.a24",
+    "relation": "same"
+   },
+   {
+    "provision": "sf.a27",
+    "relation": "part"
+   },
+   {
+    "provision": "sf.a29",
+    "relation": "same"
+   },
+   {
+    "provision": "ms.200.2.5",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.300.1.4",
+    "relation": "same"
+   },
+   {
+    "provision": "ms.300.2.2",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.400.2.3",
+    "relation": "same"
+   },
+   {
+    "provision": "ms.400.1.3",
+    "relation": "part"
+   },
+   {
+    "provision": "nist.MAP-1.4",
+    "relation": "part"
+   },
+   {
+    "provision": "nist.MAP-3.1",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.100.5.3",
+    "relation": "negation"
+   }
+  ]
+ },
+ {
+  "id": "I68",
+  "question": "Q21",
+  "tier": "declared",
+  "text": "It is improved on a regular cycle",
+  "links": [
+   {
+    "provision": "aagmm.GD-12",
+    "relation": "same"
+   },
+   {
+    "provision": "ms.400.3.2",
+    "relation": "same"
+   },
+   {
+    "provision": "ms.500.2.2",
+    "relation": "part"
+   },
+   {
+    "provision": "ms.500.1.2",
+    "relation": "part"
+   },
+   {
+    "provision": "nist.MANAGE-4.2",
+    "relation": "same"
+   },
+   {
+    "provision": "owasp.k10",
+    "relation": "part"
+   },
+   {
+    "provision": "nist.MEASURE-4.3",
+    "relation": "part"
+   }
+  ]
+ },
+ {
+  "id": "I69",
+  "question": "Q21",
+  "tier": "declared",
+  "text": "The organisation's risk management covers agents",
+  "links": [
+   {
+    "provision": "eaamm.D4",
+    "relation": "same"
+   },
+   {
+    "provision": "eaamm.D1",
+    "relation": "part"
+   },
+   {
+    "provision": "aiact.art-9",
+    "relation": "part"
+   },
+   {
+    "provision": "nist.MAP-1.5",
+    "relation": "same"
+   },
+   {
+    "provision": "ms.500.3.1",
+    "relation": "part"
+   }
+  ]
+ }
+]
