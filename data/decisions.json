@@ -1,17 +1,174 @@
 {
  "note": "The questions that are Dinis Cruz's to decide, each with the options, what each does, the recommendation and where it came from. An answered question keeps its answer and date; nothing is deleted.",
  "decisions": [
-  { "id": "spectrum-name", "asked": "2026-11-10", "from": "briefs/spectrum-0.1.md", "question": "The name of the public card.", "options": ["Spectrum (the working name)", "another name"], "recommendation": "Keep Spectrum until the summit; it is on every card.", "answer": null },
-  { "id": "stage-sum-or-shape", "asked": "2026-11-10", "from": "briefs/spectrum-0.1.md", "question": "Is the stage the sum of the four levels, or named from their shape?", "options": ["the sum (today)", "the shape"], "recommendation": "The sum, for the summit: it is simple to explain and to recompute.", "answer": null },
-  { "id": "first-cohort", "asked": "2026-11-10", "from": "briefs/gamma-ray-brief-2.md", "question": "Which first sector cohort for PrompTugal?", "options": ["the Portuguese companies met at the summit", "one sector (for example customer service agents)"], "recommendation": "The companies met at the summit: they are the ones the interviews link to.", "answer": null },
-  { "id": "in-production-stage", "asked": "2026-11-10", "from": "briefs/gamma-ray-brief-2.md", "question": "Should the In production badge also raise the stage?", "options": ["badge only (today)", "badge and one point of stage"], "recommendation": "Badge only: the stage stays a sum of levels.", "answer": null },
-  { "id": "vendor-certificate", "asked": "2026-11-10", "from": "briefs/gamma-ray-brief-2.md and briefs/fact-ray-brief.md", "question": "Does a vendor-wide certificate count for one product?", "options": ["no: only one that names the product", "yes, marked as the vendor's"], "recommendation": "Count it and mark it as the vendor's, at Openness 4 only.", "answer": null },
-  { "id": "orchestrates", "asked": "2026-11-10", "from": "/spectrum/findings/", "question": "Autonomy 4 (Orchestrates) is reached by almost every acting agent with connectors. Tighten it?", "options": ["as it is", "require coordination of other agents or several systems (I12 or I13), not connectors alone"], "recommendation": "Tighten: Autonomy should tell the cards apart at the top.", "answer": null },
-  { "id": "acts-without-mode", "asked": "2026-11-10", "from": "team/requests.md, gamma.field@ on Pebl's Alfie", "question": "An agent documented to act (I08) with no public word on whether it confirms first has no Autonomy level. Close the hole?", "options": ["as it is: Autonomy not yet evidenced", "I08 alone opens Autonomy 2", "Autonomy 2 accepts I08 in place of I07"], "recommendation": "I08 alone opens Autonomy 2: an agent that acts is at least one that suggests.", "answer": null },
-  { "id": "stand-record", "asked": "2026-11-10", "from": "data/flow.json, step 2", "question": "What a company says on its own stand: Record 3 (on record, its own channel) or Record 2 (written, informal)?", "options": ["R3 (today): S2·R3·A0, π Low", "R2: S2·R2·A0, π Low"], "recommendation": "R3; the band is Low either way until someone checks it.", "answer": null },
-  { "id": "own-file-cap", "asked": "2026-11-10", "from": "briefs/fact-ray-brief.md, the cap table", "question": "A company's own /.well-known/fact-ray.json reads π Low until someone checks it (A0 caps it). Keep the cap?", "options": ["keep the cap (the brief's table)", "treat the domain as enough for statement facts"], "recommendation": "Treat the domain as enough for statement facts: it rewards publishing the file at once.", "answer": null },
-  { "id": "letters", "asked": "2026-11-10", "from": "briefs/fact-ray-brief.md and data/spectrum.json", "question": "FACT-Ray's S, R and A sit on the same card as Spectrum's A and R and the indicators S1 to S4. Rename one side?", "options": ["leave it; π always comes before the coordinates", "rename the indicators S1 to S4"], "recommendation": "Rename the indicators (to X1 to X4) before the summit; the cards would not change.", "answer": null },
-  { "id": "second-reviewer", "asked": "2026-11-10", "from": "team/requests.md", "question": "A second reviewer session, for Thursday?", "options": ["no: one reviewer with sub-agents", "yes: a second reviewer session"], "recommendation": "Yes, if Thursday matters more than cost: round two is the bottleneck.", "answer": null },
-  { "id": "first-signature", "asked": "2026-11-10", "from": "CLAUDE.md, FACT-Ray", "question": "Which card do you sign first, and for what scope? Your signature moves its evidence to A4.", "options": ["one of our own cards", "a signed-off third party's card"], "recommendation": "RiskMandate Publisher, whole card: our own first.", "answer": null }
+  {
+   "id": "spectrum-name",
+   "asked": "2026-11-10",
+   "from": "briefs/spectrum-0.1.md",
+   "question": "The name of the public card.",
+   "options": [
+    "Spectrum (the working name)",
+    "another name"
+   ],
+   "recommendation": "Keep Spectrum until the summit; it is on every card.",
+   "answer": null
+  },
+  {
+   "id": "stage-sum-or-shape",
+   "asked": "2026-11-10",
+   "from": "briefs/spectrum-0.1.md",
+   "question": "Is the stage the sum of the four levels, or named from their shape?",
+   "options": [
+    "the sum (today)",
+    "the shape"
+   ],
+   "recommendation": "The sum, for the summit: it is simple to explain and to recompute.",
+   "answer": null
+  },
+  {
+   "id": "first-cohort",
+   "asked": "2026-11-10",
+   "from": "briefs/gamma-ray-brief-2.md",
+   "question": "Which first sector cohort for PrompTugal?",
+   "options": [
+    "the Portuguese companies met at the summit",
+    "one sector (for example customer service agents)"
+   ],
+   "recommendation": "The companies met at the summit: they are the ones the interviews link to.",
+   "answer": null
+  },
+  {
+   "id": "in-production-stage",
+   "asked": "2026-11-10",
+   "from": "briefs/gamma-ray-brief-2.md",
+   "question": "Should the In production badge also raise the stage?",
+   "options": [
+    "badge only (today)",
+    "badge and one point of stage"
+   ],
+   "recommendation": "Badge only: the stage stays a sum of levels.",
+   "answer": null
+  },
+  {
+   "id": "vendor-certificate",
+   "asked": "2026-11-10",
+   "from": "briefs/gamma-ray-brief-2.md and briefs/fact-ray-brief.md",
+   "question": "Does a vendor-wide certificate count for one product?",
+   "options": [
+    "no: only one that names the product",
+    "yes, marked as the vendor's"
+   ],
+   "recommendation": "Count it and mark it as the vendor's, at Openness 4 only.",
+   "answer": null
+  },
+  {
+   "id": "orchestrates",
+   "asked": "2026-11-10",
+   "from": "/spectrum/findings/",
+   "question": "Autonomy 4 (Orchestrates) is reached by almost every acting agent with connectors. Tighten it?",
+   "options": [
+    "as it is",
+    "require coordination of other agents or several systems (I12 or I13), not connectors alone"
+   ],
+   "recommendation": "Tighten: Autonomy should tell the cards apart at the top.",
+   "answer": null
+  },
+  {
+   "id": "acts-without-mode",
+   "asked": "2026-11-10",
+   "from": "team/requests.md, gamma.field@ on Pebl's Alfie",
+   "question": "An agent documented to act (I08) with no public word on whether it confirms first has no Autonomy level. Close the hole?",
+   "options": [
+    "as it is: Autonomy not yet evidenced",
+    "I08 alone opens Autonomy 2",
+    "Autonomy 2 accepts I08 in place of I07"
+   ],
+   "recommendation": "I08 alone opens Autonomy 2: an agent that acts is at least one that suggests.",
+   "answer": null
+  },
+  {
+   "id": "stand-record",
+   "asked": "2026-11-10",
+   "from": "data/flow.json, step 2",
+   "question": "What a company says on its own stand: Record 3 (on record, its own channel) or Record 2 (written, informal)?",
+   "options": [
+    "R3 (today): S2·R3·A0, π Low",
+    "R2: S2·R2·A0, π Low"
+   ],
+   "recommendation": "R3; the band is Low either way until someone checks it.",
+   "answer": null
+  },
+  {
+   "id": "own-file-cap",
+   "asked": "2026-11-10",
+   "from": "briefs/fact-ray-brief.md, the cap table",
+   "question": "A company's own /.well-known/fact-ray.json reads π Low until someone checks it (A0 caps it). Keep the cap?",
+   "options": [
+    "keep the cap (the brief's table)",
+    "treat the domain as enough for statement facts"
+   ],
+   "recommendation": "Treat the domain as enough for statement facts: it rewards publishing the file at once.",
+   "answer": null
+  },
+  {
+   "id": "letters",
+   "asked": "2026-11-10",
+   "from": "briefs/fact-ray-brief.md and data/spectrum.json",
+   "question": "FACT-Ray's S, R and A sit on the same card as Spectrum's A and R and the indicators S1 to S4. Rename one side?",
+   "options": [
+    "leave it; π always comes before the coordinates",
+    "rename the indicators S1 to S4"
+   ],
+   "recommendation": "Rename the indicators (to X1 to X4) before the summit; the cards would not change.",
+   "answer": null
+  },
+  {
+   "id": "second-reviewer",
+   "asked": "2026-11-10",
+   "from": "team/requests.md",
+   "question": "A second reviewer session, for Thursday?",
+   "options": [
+    "no: one reviewer with sub-agents",
+    "yes: a second reviewer session"
+   ],
+   "recommendation": "Yes, if Thursday matters more than cost: round two is the bottleneck.",
+   "answer": null
+  },
+  {
+   "id": "first-signature",
+   "asked": "2026-11-10",
+   "from": "CLAUDE.md, FACT-Ray",
+   "question": "Which card do you sign first, and for what scope? Your signature moves its evidence to A4.",
+   "options": [
+    "one of our own cards",
+    "a signed-off third party's card"
+   ],
+   "recommendation": "RiskMandate Publisher, whole card: our own first.",
+   "answer": null
+  },
+  {
+   "id": "survey-in-production",
+   "asked": "2026-11-10",
+   "from": "gamma.studio@web-summit.dinis (Junie's card; team/requests.md)",
+   "question": "Does a public survey figure (JetBrains Research: 5% of surveyed developers regularly use Junie at work) earn the In production badge, which asks for usage figures for the capability that acts?",
+   "options": [
+    "no: a survey of a whole product, read-only mode included, is not usage of the capability that acts",
+    "yes: a published usage figure for the product is enough"
+   ],
+   "recommendation": "No, as scored today; the figure is shown on the card as seen and not credited.",
+   "answer": null
+  },
+  {
+   "id": "pt-private-preview",
+   "asked": "2026-11-10",
+   "from": "gamma.studio@web-summit.dinis (Brief 2 part 4.4 against the later word in BRIEF.md)",
+   "question": "Brief 2 says the Portuguese companies met at Web Summit see their draft card privately before it is published; the later word says everything is public. Which holds for the Portuguese cohort?",
+   "options": [
+    "public as beta through the usual rounds, then the company is contacted (as done today)",
+    "a private preview first, published after the company has seen it"
+   ],
+   "recommendation": "Public as beta, as the later word says; the claim notes invite the company to correct or ask for removal.",
+   "answer": null
+  }
  ]
 }
