@@ -20,8 +20,97 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "draft",
-  "rounds": []
+  "status": "round-1",
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I15",
+      "severity": "should-fix",
+      "finding": "I15 says the person operates and every action is prompted and controlled by them. The cited FAQ sentence is 'We do not share your data with third parties except when required to generate a response or take an action that you request.' That sentence is about data sharing; it shows that an action can follow a user request, and says nothing about control or about who decides. The same product page lists 'Proactive guidance and recommended next steps' and the June 2026 release lists 'Dynamic follow-up prompts that guide employees toward actions', so the page also shows Alfie prompting the user. The scan's own note admits no source says whether Alfie asks for confirmation. I read this as an inference, not a documented fact, and the Autonomy level of 1 rests on it alone (I07 needs I02 to I05 for level 2, I16 is not credited). Without I15 Autonomy is 0 and the card would not meet the no-card-below-level-one rule, so this credit decides whether a card exists. The better-supported fact on the page is I08, which sits uneasily beside the level name Assists ('a person does each step'). Suggest: lower I15 or keep it with a stated caveat on the card, and resolve the open item (read the help-centre articles in a browser for any confirm step). Mode default is acceptable: the page says 'Alfie usage is optional' for each user and gives no switch for the action features."
+     },
+     {
+      "answer": "I08",
+      "severity": "note",
+      "finding": "Arguing against I08 as asked. Against: every source is the vendor's own marketing (a press release standfirst, a product page, an FAQ); no help-centre or documentation page was read, so how Alfie acts, whether it asks for confirmation and whether an admin must enable the action features are all unknown. The release quote from the CEO says Alfie is 'helping teams actually execute work inside a conversation', which can be read as user-driven. For: the release says 'Alfie completes approvals, workforce requests, reporting, and global employment workflows directly inside Pebl' (13 words, found exactly), and also 'AI that actively completes work'; the product page says 'Complete everyday workforce tasks directly through Alfie. Submit or approve time off' and lists 'Submit and approve time-off requests'; the FAQ list includes 'Submit or approve time-off requests'; and the release says the expanded capabilities 'are available now to Pebl customers'. I08 is 'It executes actions itself', set against I07 where a person acts; a statement that Alfie submits and approves time off meets that at documented grade, mode default (no page names an opt-in). The credit stands. It does not change the card: Autonomy 3 needs I08 plus one of I17, I18, I19, and I17 is not credited. I agree with the challenger dropping I17: no source says Alfie handles routine tasks and consults a person only on exceptions."
+     },
+     {
+      "answer": "I08",
+      "severity": "should-fix",
+      "finding": "Note and source do not match. The note's second clause, 'the product page lists submitting and approving time-off requests', is not on the cited source (the June 2026 release); it is on the product page, which is the source of other answers. The release names 'time-off requests and approvals' but not submitting. Either cite the product page as the source of I08 (it is the stronger one: 'Submit and approve time-off requests') or remove the clause. No effect on the level."
+     },
+     {
+      "answer": "I07",
+      "severity": "should-fix",
+      "finding": "The note says Alfie gives guidance, reports and recommended next steps 'that the user then acts on'. The span 'Proactive guidance and recommended next steps' is on the product page, but no source says the user then acts; the same page says Alfie submits and approves time off (I08). I07 is 'It retrieves information and recommends actions; a person acts', so crediting it beside I08 is a tension the note does not mention. Credit is defensible for the recommending half (the page lists recommended next steps and reporting), but the note should drop 'that the user then acts on' or say the page also lists actions Alfie takes. No effect on the level (I07 is used only with I02 to I05)."
+     },
+     {
+      "answer": "I22",
+      "severity": "should-fix",
+      "finding": "The note says 'the terms of use repeat this for all Pebl AI tools'. The terms of use are not a source of the scan, and the FAQ only links the Terms of Use in a different passage (ownership of outputs about employment law). Nothing on the cited page says the terms repeat the oversight statement. Remove the clause. The rest is exact on the product page (in the embedded FAQ data): 'AI can make mistakes. Users must ensure appropriate human oversight when using AI generated content.' and 'Outputs from Pebl AI are not legal, tax, or other professional advice.' Span of 10 words is in the source. Grade documented, mode default correct."
+     },
+     {
+      "answer": "I58",
+      "severity": "should-fix",
+      "finding": "The note's last clause, 'the December 2025 release says Alfie Support draws on Pebl's indexed help centre and global employment database', cites a page that is not a source of the scan (the December 2025 release appears only under not_credited, and I could not find the words 'indexed' or 'Alfie Support' in any of the five sources). Remove it or add the page as a source. The FAQ part is on the page: 'Our proprietary models are trained on vetted global hiring documentation' and 'Alfie may leverage your Pebl account data to provide contextual answers'. Span of 11 words is in the source. Credit is right for I58."
+     },
+     {
+      "answer": "I40",
+      "severity": "should-fix",
+      "finding": "The note cites a December 2025 release ('Alfie Support routes such questions to a specialist') that is not a source of the scan and whose words are not in the cited launch release. Remove it. The launch release (8 October 2025) does say 'Instant Support: Conversational, context-aware answers with seamless handoff to a human expert when needed.' The span is exact, grade documented, mode default. I40 asks for a defined escalation path; the page states a handoff, with no description of who or how, so the credit is thin. It feeds no level."
+     },
+     {
+      "answer": "I09",
+      "severity": "note",
+      "finding": "The span 'embedded across Pebl's global employment platform' is on the product page and shows Alfie inside one product. The note adds 'payroll and invoice data': invoices are on the product page ('Invoice charge breakdowns'), payroll is not on that page (it is on the platform updates page and in the June release). Minor; either cite or trim. Credit to I09 and R1 is right; I01 also gives R1 alone."
+     },
+     {
+      "answer": "I01",
+      "severity": "pass",
+      "finding": "Span 'Alfie was built and is maintained by Pebl' is in the FAQ ('Yes, Alfie was built and is maintained by Pebl'); the apostrophe style differs only. Credit right, mode default."
+     },
+     {
+      "answer": "I20",
+      "severity": "pass",
+      "finding": "Span 'purpose-built to be used as an HR tool' is in the FAQ answer to 'Did Pebl build Alfie?'. The note's list of uses is in the FAQ answer to 'What can Alfie help me do?' on the same page. Credit right; O1 rests on I20 with I22 and I58, all three verified."
+     },
+     {
+      "answer": "I47",
+      "severity": "pass",
+      "finding": "Span 'Alfie inherits platform permissions, it does not bypass them' is in the FAQ answer on data access, with 'Every interaction with Alfie respects existing role-level based permissions.' The note's 'personal data is processed only as needed' is not quoted in the span and I did not check it; it is harmless. Control 1 rests on this one prose statement, which is an artefact of text, not an adjective, and the scan states that it does not say what enforces the limit."
+     },
+     {
+      "answer": "I61",
+      "severity": "pass",
+      "finding": "FAQ answer to 'Which LLMs power Alfie?' reads 'This includes Claude by Anthropic, ChatGPT by OpenAI, Gemini by Google and Cortex by Snowflake'. Span exact (13 words), no versions, as noted. Grade documented, mode default."
+     },
+     {
+      "answer": "I67",
+      "severity": "pass",
+      "finding": "Figures in the note are all in the June 2026 release (83.5%, 98.2%, more than 60%, 42%, 18%); the release does not say how they were measured, as the note says. Tier declared, grade documented is right for a vendor statement. Feeds no level. Not S1: the figures are deflection rates and ticket reductions, not sessions, tasks or pull requests, so leaving S1 uncredited is correct, and the Myers-Holum quote is about data Alfie provided."
+     },
+     {
+      "answer": "I68",
+      "severity": "pass",
+      "finding": "The platform updates page renders only three entries (5 November, 27 October, 17 September 2026), so the page is paginated and JS-driven. The embedded page data holds the other dated Alfie entries named in the note: 4 June, 30 June (prompt suggestion cards), 27 August (currency conversion and saved reports), 27 October, 5 November. Dates match. Span 'Your payroll calendar, now connected to Alfie' is on the page. The 'structured program' clause is on the FAQ page, not this one; say so in the note. Feeds no level."
+     },
+     {
+      "answer": "S3",
+      "severity": "pass",
+      "finding": "https://hellopebl.com/llms.txt returned 200 for me and lists 'Platform | Pebl Platform | Alfie AI Assistant'. Grade observed, mode default right. It is a site-wide index, not an Alfie-specific file, which the note says. The note also says the OpenAPI at developer.hellopebl.com resolves and has no Alfie endpoint: I fetched it (200, no occurrence of Alfie, time-off endpoints exist), but that page is not a source of the scan. S4 uncredited is right: it is the platform API, not documented for agents. S3 only matters for Openness 3, which also needs I50 (not credited)."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A1 R1 C1 O2. No level 3 or 4 on the card, so no level 3 or 4 argument is needed. A1 rests on I15 (see finding), R1 on I09 or I01, C1 on I47, O2 on I22, I58, I61 (count 2 of 3 needed; all three verified). The next unlock for Autonomy is I17, which the sources do not support. Sources: the product page FAQ is only in the page's embedded JSON in my fetch (the visible text shows the questions as collapsed headings); the spans exist there. All five sources resolved. Not read by the scan or by me: the help-centre articles, which may settle I15 or I16."
+     }
+    ]
+   }
+  ]
  },
  "assessment": {
   "by": "gamma.field@web-summit.dinis",
