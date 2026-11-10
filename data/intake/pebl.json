@@ -62,8 +62,8 @@
   "read": "2026-11-10",
   "by": "gamma.field@web-summit.dinis"
  },
- "scan": null,
- "status": "drafting",
+ "scan": "pebl-alfie",
+ "status": "in-review",
  "identified": {
   "company": "Pebl (the new name of Velocity Global, LLC, per the site's footer and its rebrand news)",
   "domain": "hellopebl.com",

@@ -1,0 +1,273 @@
+{
+ "id": "pebl-alfie",
+ "name": "Pebl Alfie",
+ "operator": "Pebl (the vendor); each customer is the operator of its own use",
+ "company": "pebl",
+ "domain": "hellopebl.com",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-10",
+ "tier": "public",
+ "basis": "Pebl's own public pages (the Alfie product page and its FAQ, news releases, platform updates, llms.txt and API description)",
+ "seen_by_operator": null,
+ "what": "An AI assistant embedded in Pebl's employer-of-record platform that answers global employment questions, builds workforce reports from the customer's Pebl data, and submits or approves time-off requests for the user who asks.",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the field agent from a company met at Web Summit 2026 (stand E163; data/intake/pebl.json): a researcher-assessor, a challenger, then the scorer. Pebl has not seen it.",
+ "grant": null,
+ "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
+ "vault": {
+  "id": "wq0o035c",
+  "read_key": "sgit_public_read_5aa9461f2121ba72b7bce01ae7236bdf7a173e5e8c70886b68082d88ea3ce990:wq0o035c",
+  "published": "2026-11-10"
+ },
+ "review": {
+  "status": "draft",
+  "rounds": []
+ },
+ "assessment": {
+  "by": "gamma.field@web-summit.dinis",
+  "researcher_assessor": "a sub-agent of gamma.field",
+  "challenger": "a sub-agent of gamma.field",
+  "lowered": [
+   "I17",
+   "I25"
+  ],
+  "fixed": [
+   "I08",
+   "I15",
+   "I47",
+   "I58",
+   "I67",
+   "I68",
+   "S3"
+  ],
+  "added_by_challenger": [],
+  "open": [
+   "Whether Alfie asks the user to confirm before it submits or approves time off (I15 or I16): the help-centre articles load only in a browser and were not read.",
+   "I63: Pebl states ISO 27001 and SOC 2 Type 2 for the company; no report or scope covering Alfie was read; left not credited, as the Replit challenger did."
+  ],
+  "files": "in the vault: work/assessment.json, work/challenger.json"
+ },
+ "answers": {
+  "I01": {
+   "e": "https://hellopebl.com/platform/alfie-ai-assistant/",
+   "n": "Pebl's FAQ says Pebl built and maintains Alfie, which customers use inside the Pebl platform as supplied.",
+   "span": "Alfie was built and is maintained by Pebl",
+   "g": "documented",
+   "m": "default"
+  },
+  "I07": {
+   "e": "https://hellopebl.com/platform/alfie-ai-assistant/",
+   "n": "Alfie gives country-specific guidance, reports and recommended next steps that the user then acts on.",
+   "span": "Proactive guidance and recommended next steps",
+   "g": "documented",
+   "m": "default"
+  },
+  "I08": {
+   "e": "https://hellopebl.com/news/pebl-says-hr-chatbot-era-ending-alfie-evolves-assistant-workforce-agent/",
+   "n": "The June 2026 release says Alfie completes approvals and workforce requests inside Pebl; the product page lists submitting and approving time-off requests among Alfie's capabilities.",
+   "span": "Alfie completes approvals, workforce requests, reporting, and global employment workflows directly inside Pebl",
+   "g": "documented",
+   "m": "default"
+  },
+  "I09": {
+   "e": "https://hellopebl.com/platform/alfie-ai-assistant/",
+   "n": "Alfie works inside Pebl's global employment platform, on that platform's employment, compensation, time-off, payroll and invoice data.",
+   "span": "embedded across Pebl’s global employment platform",
+   "g": "documented",
+   "m": "default"
+  },
+  "I15": {
+   "e": "https://hellopebl.com/platform/alfie-ai-assistant/",
+   "n": "The FAQ says Pebl shares data with third parties only when needed to answer or to take an action the user requests; the actions named (submitting and approving time off) are made on the user's request in the conversation. No source says whether Alfie asks the user to confirm before it acts.",
+   "span": "take an action that you request",
+   "g": "documented",
+   "m": "default"
+  },
+  "I20": {
+   "e": "https://hellopebl.com/platform/alfie-ai-assistant/",
+   "n": "The FAQ states Alfie's purpose as an HR tool and lists what customers can use it for, including guidance, reports and submitting or approving time off.",
+   "span": "purpose-built to be used as an HR tool",
+   "g": "documented",
+   "m": "default"
+  },
+  "I22": {
+   "e": "https://hellopebl.com/platform/alfie-ai-assistant/",
+   "n": "The FAQ says AI can make mistakes, that users must keep human oversight, and that outputs are not legal, tax or professional advice; the terms of use repeat this for all Pebl AI tools.",
+   "span": "AI can make mistakes. Users must ensure appropriate human oversight",
+   "g": "documented",
+   "m": "default"
+  },
+  "I40": {
+   "e": "https://hellopebl.com/news/companies-can-now-expand-their-workforce-globally-minutes-pebls-ai-assistant-alfie/",
+   "n": "The launch release says Alfie hands a conversation to a human expert when needed; the December 2025 release says Alfie Support routes such questions to a specialist.",
+   "span": "seamless handoff to a human expert when needed",
+   "g": "documented",
+   "m": "default"
+  },
+  "I47": {
+   "e": "https://hellopebl.com/platform/alfie-ai-assistant/",
+   "n": "The FAQ states in prose that every interaction with Alfie respects the user's role-level permissions and that Alfie does not bypass them; it also says personal data is processed only as needed for a response.",
+   "span": "Alfie inherits platform permissions, it does not bypass them",
+   "g": "documented",
+   "m": "default"
+  },
+  "I58": {
+   "e": "https://hellopebl.com/platform/alfie-ai-assistant/",
+   "n": "The FAQ says Pebl's own models are trained on vetted global hiring documentation and that Alfie may use the customer's Pebl account data; the December 2025 release says Alfie Support draws on Pebl's indexed help centre and global employment database.",
+   "span": "Alfie may leverage your Pebl account data to provide contextual answers",
+   "g": "documented",
+   "m": "default"
+  },
+  "I61": {
+   "e": "https://hellopebl.com/platform/alfie-ai-assistant/",
+   "n": "The FAQ names the model families Alfie uses: Claude (Anthropic), ChatGPT (OpenAI), Gemini (Google) and Cortex (Snowflake), plus Pebl's own models; no versions are given.",
+   "span": "Claude by Anthropic, ChatGPT by OpenAI, Gemini by Google and Cortex by Snowflake",
+   "g": "documented",
+   "m": "default"
+  },
+  "I67": {
+   "e": "https://hellopebl.com/news/pebl-says-hr-chatbot-era-ending-alfie-evolves-assistant-workforce-agent/",
+   "n": "The June 2026 release states figures for Alfie: an 83.5% support ticket deflection rate and 98.2% for global hiring and compliance questions; it says customers cut reporting requests by more than 60%, compensation inquiries by 42% and time-off tickets by 18%. It does not say how they were measured.",
+   "span": "achieving an 83.5% support ticket deflection rate",
+   "g": "documented",
+   "m": "default"
+  },
+  "I68": {
+   "e": "https://hellopebl.com/platform-updates/",
+   "n": "The platform updates page lists dated Alfie changes in 2026: 4 June (benefits), 30 June (prompt cards), two on 27 August (currency conversion, saved reports), 27 October (invoices) and 5 November (payroll calendar). The intervals are not fixed. The Alfie FAQ also states a structured program to improve AI accuracy, with no cycle given.",
+   "span": "Your payroll calendar, now connected to Alfie",
+   "g": "documented",
+   "m": "default"
+  },
+  "S3": {
+   "e": "https://hellopebl.com/llms.txt",
+   "n": "An llms.txt resolves at hellopebl.com (fetched 2026-11-10); it is the platform-wide site index, in which the Alfie page is one entry. An OpenAPI description of the Pebl Public API also resolves at developer.hellopebl.com, without any Alfie endpoint.",
+   "span": "Platform | Pebl Platform | Alfie AI Assistant",
+   "g": "observed",
+   "m": "default",
+   "method": "probe"
+  }
+ },
+ "not_credited": [
+  {
+   "what": "S1: the June 2026 release gives usage figures (83.5% ticket deflection, 98.2% for hiring and compliance questions, reporting requests down more than 60%, time-off tickets down 18%) and quotes a benefits manager at Myers-Holum, Inc; Pebl's product page carries the same quote.",
+   "why": "The figures measure questions deflected and requests avoided, and the quote is about data Alfie provided; none counts tasks Alfie completed (time-off submissions or approvals). The 'thousands of workforce conversations' predate the action features. No source names a customer using Alfie to act.",
+   "source": "https://hellopebl.com/news/pebl-says-hr-chatbot-era-ending-alfie-evolves-assistant-workforce-agent/"
+  },
+  {
+   "what": "I12: the December 2025 release says Alfie became 'two coordinated AI agents', Alfie Reporting and Alfie Support.",
+   "why": "The release names two specialised functions but describes no coordination between them (no handoff or passing of work), and the current product page and June 2026 release present one Alfie. Too thin for several agents coordinating.",
+   "source": "https://hellopebl.com/news/pebl-introduces-new-ai-agents-redefine-speed-intelligence-and-compliance-global-hiring/"
+  },
+  {
+   "what": "I10: Alfie covers compensation, time off, payroll calendars, invoices, benefits and onboarding.",
+   "why": "All of these are data and workflows inside the one Pebl platform; no source says Alfie works across other systems.",
+   "source": "https://hellopebl.com/platform/alfie-ai-assistant/"
+  },
+  {
+   "what": "I11: the FAQ says data is shared with third parties when required to generate a response or take an action the user requests, and Alfie uses third-party models.",
+   "why": "Calling model providers is how it runs, not a connection to external tools; no integration of Alfie with an outside system is described. Pebl's HRIS integrations are the platform's, not Alfie's.",
+   "source": "https://hellopebl.com/platform/alfie-ai-assistant/"
+  },
+  {
+   "what": "I56: Pebl names the product 'Alfie AI Assistant' on its marketing pages, and the help portal greets visitors with an invitation to ask its AI assistant.",
+   "why": "Both are addressed to buyers or portal visitors; no source says the Alfie interface tells employees and managers they are talking to an AI.",
+   "source": "https://hellopebl.com/platform/alfie-ai-assistant/"
+  },
+  {
+   "what": "I57: handoff to a human expert and smart-routing to specialists.",
+   "why": "These route a question Alfie cannot answer to a person; no source describes a channel to report a problem with Alfie or contest its output. The site's SpeakUp! hotline is a company whistleblowing line, not for Alfie.",
+   "source": "https://hellopebl.com/news/companies-can-now-expand-their-workforce-globally-minutes-pebls-ai-assistant-alfie/"
+  },
+  {
+   "what": "I63: the security page states Pebl is ISO/IEC 27001:2022 certified and has a SOC 2 Type 2 report.",
+   "why": "Organisational statements; no certificate or report was read (the Vanta trust centre did not render without JavaScript) and no scope says it covers Alfie. Not counted as an independent check yet.",
+   "source": "https://hellopebl.com/platform/security/"
+  },
+  {
+   "what": "I45: the FAQ says Alfie inherits platform permissions and does not bypass them.",
+   "why": "The Spectrum-card reading of I45 does count a documented limit enforced outside the agent, so 'operation indicator, no artefact' is not the reason. The reason is that the FAQ ('inherits platform permissions, it does not bypass them') does not say what enforces the limit (a data-access layer, scoped tokens, or an instruction to the model). Credited as a rule in prose (I47).",
+   "source": "https://hellopebl.com/platform/alfie-ai-assistant/"
+  },
+  {
+   "what": "I41: the FAQ says Alfie inputs and outputs are stored, encrypted, in an AWS database in the US.",
+   "why": "Storage of conversations, not a log of actions; operation indicator with no artefact.",
+   "source": "https://hellopebl.com/platform/alfie-ai-assistant/"
+  },
+  {
+   "what": "I43, I51: the security page names automated alerts, 24/7 on-call engineering, and continuously scanned repositories with automated security rules.",
+   "why": "Platform-wide claims, not about Alfie; operation indicators with no artefact.",
+   "source": "https://hellopebl.com/platform/security/"
+  },
+  {
+   "what": "S4: the Pebl Public API (OpenAPI at developer.hellopebl.com) lets approved partners submit and review time-off requests, generate offers and read compensation.",
+   "why": "It exposes Pebl's platform, not Alfie, and is not described for agents to call; no MCP server or agent card was found.",
+   "source": "https://developer.hellopebl.com/openapi.yaml"
+  },
+  {
+   "what": "I61 (second source): the privacy policy says chats with Pebl's 'AI-powered chat assistant' may be shared with Abacus.AI.",
+   "why": "The section is in the part about visitors to the site and does not name Alfie; it is not used for I61, which rests on the Alfie FAQ.",
+   "source": "https://hellopebl.com/legal/privacy-policy/"
+  },
+  {
+   "what": "I65: the June 2026 release and the September 2025 rebrand present Pebl as 'AI-first' and Alfie as moving from assistant to workforce agent.",
+   "why": "Product positioning in press releases, not a stated strategy for agents.",
+   "source": "https://hellopebl.com/news/pebl-says-hr-chatbot-era-ending-alfie-evolves-assistant-workforce-agent/"
+  },
+  {
+   "what": "I17: Alfie Support answers routine questions and routes those needing human expertise to a Pebl specialist.",
+   "why": "A handoff of a support conversation (credited as I40), not the agent carrying out routine tasks on its own with a person consulted on exceptions; every named action is made at the user's request (I15).",
+   "source": "https://hellopebl.com/news/pebl-introduces-new-ai-agents-redefine-speed-intelligence-and-compliance-global-hiring/"
+  },
+  {
+   "what": "I25: the FAQ says Alfie respects each user's role-level permissions; an employee can ask only about their own data; only account admins can generate reports with Alfie.",
+   "why": "Alfie inherits the user's own access, which is the same as the user's account, not narrower. The report restriction is not shown to be narrower than what those roles can do elsewhere in the platform.",
+   "source": "https://hellopebl.com/platform/alfie-ai-assistant/"
+  }
+ ],
+ "announced": [
+  {
+   "what": "Proactive compliance: Alfie will alert teams to regulatory changes before they take effect (marked coming soon, October 2025).",
+   "source": "https://hellopebl.com/news/companies-can-now-expand-their-workforce-globally-minutes-pebls-ai-assistant-alfie/"
+  },
+  {
+   "what": "Country-specific benefits answers in Alfie are marked coming soon in the US.",
+   "source": "https://hellopebl.com/platform-updates/"
+  }
+ ],
+ "configurations": [
+  {
+   "id": "shipped",
+   "name": "As shipped",
+   "note": "Alfie as embedded in the Pebl platform for Pebl customers, with what it may read and do set by the user's role (employee, manager, company admin).",
+   "on": []
+  }
+ ],
+ "captures": {
+  "https://hellopebl.com/llms.txt": {
+   "sha256": "b6a3f9ff7d119d125c3ca5265a578a327085a8034e2293f78afa4e7ddde0c320",
+   "bytes": 389782,
+   "read_at": "2026-11-10T13:12Z"
+  },
+  "https://hellopebl.com/news/companies-can-now-expand-their-workforce-globally-minutes-pebls-ai-assistant-alfie/": {
+   "sha256": "5026276e53614ca34b104243417bd752b7d044b8adf0123f7f52907070b3f5ec",
+   "bytes": 198452,
+   "read_at": "2026-11-10T13:12Z"
+  },
+  "https://hellopebl.com/news/pebl-says-hr-chatbot-era-ending-alfie-evolves-assistant-workforce-agent/": {
+   "sha256": "55efc4a6464633191a2782a40eb94dec294cb987ec5c9091acbdfb6ee8c2a193",
+   "bytes": 202126,
+   "read_at": "2026-11-10T13:12Z"
+  },
+  "https://hellopebl.com/platform-updates/": {
+   "sha256": "39e66a57dc1c11ba40e06a527242b0cb595f39cf2747998844b40692c9eba329",
+   "bytes": 207601,
+   "read_at": "2026-11-10T13:12Z"
+  },
+  "https://hellopebl.com/platform/alfie-ai-assistant/": {
+   "sha256": "43cfaa4bd25a2825257b1edb171f8e68131619d1687ace92a25f92060033fb72",
+   "bytes": 238529,
+   "read_at": "2026-11-10T13:12Z"
+  }
+ }
+}
