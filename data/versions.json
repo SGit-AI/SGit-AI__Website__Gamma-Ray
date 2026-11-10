@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.34",
+    "date": "2026-11-10",
+    "what": "sign off replit-agent",
+    "by": "gamma.approve@web-summit.dinis",
+    "from": "ade3c6ea6"
+  },
+  {
     "version": "v0.0.33",
     "date": "2026-11-10",
     "what": "the walk links each indicator to its own row",
