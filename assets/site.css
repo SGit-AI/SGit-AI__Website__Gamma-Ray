@@ -118,3 +118,5 @@ main :is(h2,h3)[id]:target{scroll-margin-top:90px;background:var(--band);box-sha
 .fl-meta{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:13px;color:var(--ink2);margin-top:6px}.fl-meta i{font-style:normal;font-weight:600;color:var(--ink3);margin-right:4px}
 .fl-trust{font:600 12px var(--mono);text-decoration:none;border:1px solid var(--accent);border-radius:999px;padding:2px 9px;color:var(--accent)}.fl-why{font-size:13px;color:var(--ink3)}
 .sp-dim{display:flex;flex-direction:column}.sp-dim .sp-pips{margin-top:auto}.sp-dim em{margin-bottom:8px}
+@media (min-width:701px){.fl-hint{display:none}}
+@media (max-width:700px){.fl-wrap{-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}.fl-wrap+.fl-legend::before{content:"Swipe the picture sideways. The twelve steps are written out below.";flex-basis:100%;font:italic 13px var(--sans);color:var(--ink3)}}
