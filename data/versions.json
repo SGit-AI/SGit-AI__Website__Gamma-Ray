@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.5",
+    "date": "2026-11-10",
+    "what": "the cards without the reddish colours: Autonomy in amber, AAGMM in slate blue",
+    "by": "gamma-ray@web-summit.dinis",
+    "from": "118d4886e"
+  },
+  {
     "version": "v0.0.4",
     "date": "2026-11-10",
     "what": "Spectrum 0.1 beta: the positive public card, its sixteen rules as data, a scorer, five cards, and what broke on real evidence",
