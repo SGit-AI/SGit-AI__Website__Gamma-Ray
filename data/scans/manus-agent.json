@@ -19,7 +19,7 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "round-1",
+  "status": "round-2",
   "rounds": [
    {
     "round": 1,
@@ -86,6 +86,49 @@
       "answer": "I20, I39, I54, I57, I58, S3",
       "severity": "pass",
       "finding": "Opened each source. Notes match; grades are right; I39 matches the stop endpoint and the Studio page (\"You can stop at any time\"); I54 matches the status page text; S3: manus.im/docs/llms.txt, the API llms.txt and the OpenAPI 3.1 file resolve, observed is right. All spans are exact and under fifteen words."
+     }
+    ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I18",
+      "severity": "should-fix",
+      "finding": "Argued against Autonomy 4, which needs A3 and (I18 or I19), and here only I18 is credited. Round one answered with a new span, \"Poll task status, handle confirmations, and process results\" (exact, 8 words). It is the page's subtitle, a description for integrators; it says nothing about the agent working independently or the person approving only critical decisions. The first span (\"the agent runs asynchronously\") was nearer the claim and was replaced. The body of the same page says \"After creating a task ... the agent runs asynchronously\", which is as far as the lifecycle page goes. The confirmation events page then lists what can wait: email send, calendar create, update and delete, \"Run a command\" (the example is `npm install`), deploy, create a Webdev project, map-reduce, video generation, Shopify delete, Instagram publish, selecting a browser. That list is long and includes ordinary actions, so it shows an agent that stops for a good deal, and nearly every entry lets the person skip future confirmations (\"always_allow\", \"global_allow\"). The page does not place Manus on the ladder. A source that does: the Studio page says in Approve for me \"Manus asks you only when an action needs your decision\" and the table calls Full access \"Runs local actions without approval\". Use a sentence like that, with its configuration (studio), or the card's Autonomy 4 has no fact under it that says what the level says. Note A3 stands without I18: I17 (available, studio) satisfies the \"or\"."
+     },
+     {
+      "answer": "I38",
+      "severity": "should-fix",
+      "finding": "Round one answered by adding the API surface and global_allow, which is right. The studio's response says \"the actions listed do wait by default\". The page does not say that. It lists the event types that wait and what answers each; it does not say under which settings or in which product the waits occur, and it says these are for people who build their own confirmation interface. The note's claim \"actions that wait for the user before they run\" is on the page; the mode default is the studio's reading. Either find a sentence that says the default, or mark the mode available (API). Control 1 holds on I38 alone on this card, so it matters."
+     },
+     {
+      "answer": "S1",
+      "severity": "pass",
+      "finding": "Re-read the k-ID story for the argument against Autonomy 3: the span \"k-ID now runs over eight thousand Manus sessions across the team.\" is exact (11 words), and the page describes the agent navigating a website, reviewing legal language and producing a report, then a data team spending about five hundred dollars a day on credits at peak. A named customer, a usage figure in sessions, for what the agent does by itself. It is vendor-published and a single customer; it holds the literal test and is a better figure than a seat count."
+     },
+     {
+      "answer": "I10",
+      "severity": "pass",
+      "finding": "Quickstart: \"A connector lets Manus read data from an app, such as Gmail or Notion, and take actions in it.\" The span is the first half, exact (12 words); the full sentence is 18 words, so the cut is right. Available (connectors), and the card now names the configuration. That is a capability list, not a workflow; it is the same limit as Replit, which the rule allows."
+     },
+     {
+      "answer": "I41",
+      "severity": "pass",
+      "finding": "Re-sourced to the Browser Operator page, mode available. The span \"All actions are logged for complete transparency.\" is exact. The note says the API returns tool_used only with verbose=true. Round one finding answered."
+     },
+     {
+      "answer": "I47, I65, I08, I04",
+      "severity": "pass",
+      "finding": "I47 and I65 removed, as I suggested. I08 now says it is the API's task loop. I04 keeps the short span; the em-dash rule is the reason, which is fair, and the note says writing code. Round one findings answered."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Levels three and four: Autonomy 4 only. Reach 2, Control 1, Openness 0 are below. A3 holds (I08, S1, and I17 available in Studio). A4 holds on the rule through I10 (available) and I18 (default, on the API surface), and I18 is the weak link above. Fix I18 and I38 and I would pass round two."
      }
     ]
    }
