@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.125",
+    "date": "2026-11-10",
+    "what": "granter-ai-grant-consultant: round 4 answered (uncaptured not-credited and announced items removed)",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "e36c5ea43"
+  },
+  {
     "version": "v0.0.124",
     "date": "2026-11-10",
     "what": "re-checks of claude-code-local (pass) and github-copilot-cloud-agent (changes)",
