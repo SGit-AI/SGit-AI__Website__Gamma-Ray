@@ -134,8 +134,34 @@
    "span": "In grants submitted"
   }
  ],
- "analysis": [],
- "article": null,
+ "analysis": [
+  "**The shape.** Granter's AI Grant Consultant reads {sig:granter-ai-grant-consultant} ({stage:granter-ai-grant-consultant}). It is a chat-based agent, onboarded with an organisation's details and past applications, that matches funding calls, checks eligibility, drafts applications section by section and scores drafts with an Evaluator. Its outputs are suggestions: users review and approve them before any submission or decision, and the user submits the application. It works in one domain, public and private funding at regional, national and EU level.",
+  "**Where the evidence is strongest.** The privacy policy, last updated on 9 November 2026, carries much of the card: it states what the platform is for, says AI-generated content is presented as such inside the platform, and says the platform does not take decisions about a person on its own. Named pilots show the agent in use: at Fidelidade two agents, one per entity, are live and used to find calls and start drafts, and Super Bock Group prepared and submitted an FCT application with it. Three Portuguese Navy units are evaluating it; the Navy figures (over 200 opportunities added to a defence grants database, first drafts from two weeks to two hours) are Granter's own.",
+  "**A balanced card.** The card carries the balanced badge: Control and Openness each sit within one level of Autonomy. The agent suggests and a person approves, and the approval is written down in the same policy that states the purpose.",
+  "**What would move it.** Autonomy 3: a page showing the agent executing an action itself, such as submitting through an official channel, with a person consulted on exceptions; older text on the blog marks automated submission as coming soon, and the current FAQ says the user submits. Reach 2: a documented connector to a tool or system outside the platform. Control 2: a public list of what the agent can reach, beside the approval already documented. Openness 2: a page on the agent's limits and known failure cases, or a list of the models it runs on.",
+  "**Seen, and not counted.** The privacy policy names four providers and says the models run on Microsoft Azure in EU regions, but it names no model, so it is not a model list. The caps on applications per plan are commercial limits, not the agent's limits, and the breach-notification clause is a GDPR duty, not a channel for the agent's errors. Marketing figures such as 3000+ companies and EUR 30M in grants submitted are Granter's own and are not counted."
+ ],
+ "article": {
+  "title": "Granter's AI Grant Consultant on the GAMMA-Ray Spectrum: {sig:granter-ai-grant-consultant}",
+  "standfirst": "The GAMMA-Ray studio reads Granter's AI Grant Consultant from its public pages: it finds funding calls and drafts applications, a person approves and submits, and its approval and purpose are written down.",
+  "body": [
+   "Granter, a Portuguese company founded in 2023 by Bernardo Seixas and Bernardo Tavares and first named Lever Tax, won the Web Summit 2025 pitch competition, the third UPTEC startup to do so. It sells the AI Grant Consultant, a chat-based agent for grant applications. We read it only from public sources, captured and hashed on 10 November 2026, and the published rules computed the card.",
+   "**Autonomy 2, Suggests.** The agent matches calls, checks eligibility, drafts and scores applications; its outputs are suggestions that users review and approve before any submission or decision. A page showing the agent carrying out an action itself, with a person handling exceptions, would reach level 3.",
+   "**Reach 1, Contained.** It works in one domain, public and private funding at regional, national and EU level, on the organisation's own data. A documented connector to a tool outside the platform would reach level 2.",
+   "**Control 1, Stated.** The privacy policy says a person approves outputs before any submission and that the platform does not decide about a person on its own. A public list of what the agent can reach would reach level 2.",
+   "**Openness 1, Disclosed.** The purpose, the data the agent uses and the labelling of AI-generated content are documented. A page on the agent's limits and known failure cases would reach level 2.",
+   "The card is beta and Granter has not seen it. It can claim the card and add evidence; corrections are dated."
+  ],
+  "pt": {
+   "title": "O AI Grant Consultant da Granter no GAMMA-Ray Spectrum: {sig:granter-ai-grant-consultant}",
+   "standfirst": "O estúdio GAMMA-Ray lê o AI Grant Consultant da Granter a partir das suas páginas públicas: encontra concursos e redige candidaturas, e uma pessoa aprova e submete.",
+   "body": [
+    "A Granter, empresa portuguesa fundada em 2023 por Bernardo Seixas e Bernardo Tavares, venceu a competição de pitch do Web Summit 2025. Vende o AI Grant Consultant, um agente de chat para candidaturas a financiamento. Lemos apenas fontes públicas, capturadas e com hash a 10 de novembro de 2026.",
+    "**Autonomia 2.** O agente propõe; os utilizadores revêem e aprovam antes de qualquer submissão ou decisão. **Alcance 1.** Trabalha num só domínio, o financiamento público e privado. **Controlo 1.** A política de privacidade diz que a plataforma não decide sozinha sobre uma pessoa.",
+    "**Abertura 1.** O propósito, os dados e a identificação do conteúdo gerado por IA estão descritos. O cartão é beta e a Granter ainda não o viu; pode reclamá-lo e acrescentar evidência. As correções são datadas."
+   ]
+  }
+ },
  "vault": {
   "id": "8fffssyc",
   "read_key": "sgit_public_read_d27a5608316451eb20fa628b9943960a7bc8a33709127d6c373b26afca8aeb4e:8fffssyc",
@@ -212,5 +238,6 @@
    "bytes": 44044,
    "read_at": "2026-11-10T10:43Z"
   }
- }
+ },
+ "method": "A researcher-assessor gathered and captured the sources and mapped the evidence to indicators, without assigning a level. A challenger argued against every level three and four and every doubtful credit."
 }

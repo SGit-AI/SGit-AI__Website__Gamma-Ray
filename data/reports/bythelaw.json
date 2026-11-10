@@ -143,8 +143,34 @@
    "span": "está já em utilização pela Câmara Municipal de Coimbra"
   }
  ],
- "analysis": [],
- "article": null,
+ "analysis": [
+  "**The shape.** ByTheLaw reads {sig:bythelaw-legal-chat} ({stage:bythelaw-legal-chat}). It is a chat assistant for lawyers: the lawyer writes each request, and it returns an answer grounded in official Portuguese and European sources with citations, analyses uploaded documents or drafts a text. A draft email goes to the lawyer's own mail client, where the person sends it; the assistant has no send path of its own.",
+  "**Where the evidence is strongest.** Openness. The help centre lists what the assistant is for, the legislative, case-law and regulatory databases its answers are drawn from, and limits of use, such as files attached inside an email not being opened. A report-error button and an llms.txt are public, and a stop button lets the user interrupt an answer on every plan. The card carries the balanced badge.",
+  "**The Citius option.** Reach 2 and Control 1 hold only with the Citius integration on, so both are marked available. It is experimental and granted by ByTheLaw to selected users, who enter their own Citius credentials. Its terms limit it to reading and consulting the courts system and state that it performs no procedural acts; an unread notification, which opening marks as read in Citius, is opened only after the user's express action, preceded by a warning. As shipped, the assistant works inside its own product on legal material, and Control is not yet evidenced.",
+  "**What would move it.** Autonomy 2: a documented action the assistant proposes and a person approves, beyond a draft the person then uses. Reach 3: a published agent interface with documented authorisation narrower than the whole account. Control 2: a public list of what the assistant can reach, beside the Citius approval step; a rule in prose on the assistant as shipped would make Control 1 hold without the option. Openness 3: published evaluation results with their method.",
+  "**Seen, and not counted.** The challenger lowered two credits. Drafting an email is assisting, not proposing an action, because the person does the step. The subprocessor page names Microsoft Azure as the provider of language models, with Perplexity and Jina AI, but names no model, so it is not a model list. Marketing calls the product fully autonomous and claims up to 20 hours a week saved; neither is counted. ECO/Advocatus reported 1,100 active users in November 2025; the figure is the press report's, not measured here."
+ ],
+ "article": {
+  "title": "ByTheLaw on the GAMMA-Ray Spectrum: {sig:bythelaw-legal-chat}",
+  "standfirst": "The GAMMA-Ray studio reads ByTheLaw's legal chat from its public pages: the lawyer stays at every step, its sources and limits are documented, and an experimental Citius link adds reach with an approval step.",
+  "body": [
+   "ByTheLaw, operated by Draft of Life, Lda. from Coimbra and described as a spin-off from the University of Coimbra, offers an AI chat for lawyers that answers from Portuguese and European official sources. In 2026 it acquired advIA, another Portuguese legal AI platform. We read it only from public sources, captured and hashed on 10 November 2026, and the published rules computed the card.",
+   "**Autonomy 1, Assists.** The lawyer writes each request and the assistant returns an answer with citations, or a draft the lawyer sends from their own mail client. A documented action the assistant proposes and a person approves would reach level 2.",
+   "**Reach 2, Integrated (available).** With the experimental Citius integration, the platform reads court notifications, hearings and case movements with the lawyer's own credentials. As shipped, it works inside its own product on legal material.",
+   "**Control 1, Stated (available).** The Citius terms limit the integration to reading and consulting, and an unread notification is opened only after the user's express action. A public list of what the assistant can reach would reach level 2.",
+   "**Openness 2, Documented.** The help centre lists the official databases behind the answers and documents limits of use, and a report-error button is public. Published evaluation results would reach level 3.",
+   "The card is beta and ByTheLaw has not seen it. It can claim the card and add evidence; corrections are dated."
+  ],
+  "pt": {
+   "title": "A ByTheLaw no GAMMA-Ray Spectrum: {sig:bythelaw-legal-chat}",
+   "standfirst": "O estúdio GAMMA-Ray lê o chat jurídico da ByTheLaw a partir das suas páginas públicas: o advogado está em cada passo, e as fontes e os limites estão documentados.",
+   "body": [
+    "A ByTheLaw, operada pela Draft of Life, Lda., com sede em Coimbra, e descrita como spin-off da Universidade de Coimbra, oferece um chat de IA para advogados que responde a partir de fontes oficiais portuguesas e europeias. Lemos apenas fontes públicas, capturadas e com hash a 10 de novembro de 2026.",
+    "**Autonomia 1.** O advogado escreve cada pedido e recebe uma resposta com citações. **Alcance 2 (opcional).** A integração experimental com o Citius lê notificações e movimentos processuais com as credenciais do advogado. **Controlo 1 (opcional).** Os termos do Citius limitam a integração à consulta e à leitura.",
+    "**Abertura 2.** O centro de ajuda lista as bases de dados oficiais e documenta limites de utilização. O cartão é beta e a ByTheLaw ainda não o viu; pode reclamá-lo e acrescentar evidência. As correções são datadas."
+   ]
+  }
+ },
  "vault": {
   "id": "dllzmbc3",
   "read_key": "sgit_public_read_7f528ecd6fbd9c2d0f293f8361fd3ad93d4ea63fd8b1f1a70ec77feb04110bb6:dllzmbc3",
@@ -191,5 +217,6 @@
    "bytes": 40236,
    "read_at": "2026-11-10T10:44Z"
   }
- }
+ },
+ "method": "A researcher-assessor gathered and captured the sources and mapped the evidence to indicators, without assigning a level. A challenger argued against every level three and four and every doubtful credit."
 }

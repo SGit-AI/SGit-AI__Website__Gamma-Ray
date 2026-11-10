@@ -139,8 +139,34 @@
    "span": "Interaction Success Rate"
   }
  ],
- "analysis": [],
- "article": null,
+ "analysis": [
+  "**The shape.** Visor.ai's AI agents read {sig:visor-ai-agents} ({stage:visor-ai-agents}). A customer builds each agent as a flow on a visual canvas, with the model and speech services set on each node. The voice agent connects to telephony and to the customer's contact-centre platform; the chat agent answers from a knowledge base built from the customer's own documents and kept in sync with them. Nexa, the platform's own agent, reads real conversations on a schedule and proposes fixes.",
+  "**Where the evidence is strongest.** A named customer shows the agent acting. At Generali Tranquilidade, common requests such as duplicate documents, address changes, adding a vehicle and cancellations run end to end as automated workflows through web services into the insurer's systems, and an advisor picks up in live chat when a person is needed. Visor.ai's customer stories give the figures: 80,000 broker conversations a month with the agent at Generali, and Max at Millennium BCP starting at 65% automation in 2021, with a goal of 80%. They are the customers' figures as Visor.ai publishes them.",
+  "**What holds as shipped, and what with options on.** Acts and Integrated rest on the product pages and the Generali deployment. Control 1 holds only with the Issue Agent on: the customer writes in plain language what the chat agent must not handle, and matching conversations are flagged for a person. Openness 2 rests on a reliability note saying the models can occasionally fail, the knowledge base, and the security page's list of AI providers (Azure, Vertex AI Gemini, Deepgram, AssemblyAI, ElevenLabs). Its first step, a written statement of what the agents are for, is stated for healthcare deployments, so Openness is marked available too; a purpose stated for every deployment would make it hold as shipped.",
+  "**What would move it.** Autonomy 4: a page saying the agent works on its own and a person approves only critical decisions. Reach 3: a published agent interface, such as an MCP server or an agent card, with documented authorisation narrower than the whole account. Control 2: a page saying which high-impact actions of the customer-facing agent need a person's approval, with a list of what it can reach. Openness 3: published evaluation results; the llms.txt at the site root already gives the machine-readable half of the rule.",
+  "**Seen, and not counted.** The challenger lowered several credits a reader may meet on the site. Nexa's approval of the changes it proposes governs edits to an agent, not the actions the customer-facing agent takes. Take moves one live call to a person, which is escalation, not a way to pause or stop the agent. Watchtower monitoring and Nexa's alerts are shown with sample data, not in operation, and the Super Agent routes requests to specialised agents rather than coordinating them. Headline figures such as an automation rate of up to 85% are listed as announced."
+ ],
+ "article": {
+  "title": "Visor.ai agents on the GAMMA-Ray Spectrum: {sig:visor-ai-agents}",
+  "standfirst": "The GAMMA-Ray studio reads Visor.ai's voice and chat agents from their public pages: they complete requests end to end in a named deployment, and a person takes over in live chat when needed.",
+  "body": [
+   "Visor.ai, headquartered in Portugal with offices in Lisbon, Porto, Madrid and Barcelona, sells a platform on which organisations build and run AI agents for customer service by voice and chat. It began in 2016. We read it only from public sources, captured and hashed on 10 November 2026, and the published rules computed the card.",
+   "**Autonomy 3, Acts.** At Generali Tranquilidade, requests such as address changes, adding a vehicle and cancellations run end to end through web services into the insurer's systems, and an advisor takes over in live chat when needed. A page saying a person approves only critical decisions would reach level 4.",
+   "**Reach 2, Integrated.** The voice agent connects to telephony and to the customer's contact-centre platform, and Generali connected its own systems. A published agent interface with documented, narrow authorisation would reach level 3.",
+   "**Control 1, Stated (available).** With the Issue Agent on, the customer writes in plain language what the agent must not handle, and matching conversations go to a person. A page on approval of high-impact actions and on what the agent can reach would reach level 2.",
+   "**Openness 2, Documented (available).** A reliability note on the models, the knowledge base and the list of AI providers are public; what the agents are for is written down for healthcare deployments. Published evaluation results would reach level 3.",
+   "The card is beta and Visor.ai has not seen it. It can claim the card and add evidence; corrections are dated."
+  ],
+  "pt": {
+   "title": "Os agentes da Visor.ai no GAMMA-Ray Spectrum: {sig:visor-ai-agents}",
+   "standfirst": "O estúdio GAMMA-Ray lê os agentes de voz e chat da Visor.ai a partir das suas páginas públicas: concluem pedidos de ponta a ponta numa implementação identificada, e uma pessoa assume no chat ao vivo quando é preciso.",
+   "body": [
+    "A Visor.ai, com sede em Portugal e escritórios em Lisboa, Porto, Madrid e Barcelona, vende uma plataforma para criar e operar agentes de IA de apoio ao cliente por voz e chat. Lemos apenas fontes públicas, capturadas e com hash a 10 de novembro de 2026.",
+    "**Autonomia 3.** Na Generali Tranquilidade, pedidos como alterações de morada e anulações correm de ponta a ponta nos sistemas da seguradora. **Alcance 2.** O agente de voz liga-se à telefonia e à plataforma de contact centre do cliente. **Controlo 1 (opcional).** Com o Issue Agent, o cliente escreve em linguagem simples o que o agente não pode tratar.",
+    "**Abertura 2 (opcional).** Uma nota de fiabilidade, a base de conhecimento e a lista de fornecedores de IA são públicas. O cartão é beta e a Visor.ai ainda não o viu; pode reclamá-lo e acrescentar evidência. As correções são datadas."
+   ]
+  }
+ },
  "vault": {
   "id": "w4byv6dr",
   "read_key": "sgit_public_read_90a76763f617c725a429b7b445125e43a01bf7f880c08904b7803018bc65935b:w4byv6dr",
@@ -192,5 +218,6 @@
    "bytes": 53259,
    "read_at": "2026-11-10T10:41Z"
   }
- }
+ },
+ "method": "A researcher-assessor gathered and captured the sources and mapped the evidence to indicators, without assigning a level. A challenger argued against every level three and four and every doubtful credit."
 }

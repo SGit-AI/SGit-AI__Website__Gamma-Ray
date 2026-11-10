@@ -95,7 +95,7 @@
   {
    "id": "multi-agent-orchestration",
    "name": "Talkdesk CXA multi-agent orchestration",
-   "short": "Talkdesk CXA multi-agent orche",
+   "short": "CXA multi-agent orchestration",
    "what": "Orchestration layer in which an orchestrator agent passes work to specialised sub-agents; MCP is used to reach third-party tools and platforms.",
    "status": "available",
    "url": "https://www.talkdesk.com/customer-experience-automation/multi-agent-orchestration/"
@@ -103,7 +103,7 @@
   {
    "id": "cxa-operations-center",
    "name": "Talkdesk CXA Operations Center",
-   "short": "Talkdesk CXA Operations Center",
+   "short": "CXA Operations Center",
    "what": "Observability, evaluation, simulation and guardrail configuration for AI agents in production.",
    "status": "announced March 2026; product page live",
    "url": "https://www.talkdesk.com/customer-experience-automation/cxa-operations-center/"
@@ -167,8 +167,34 @@
    "span": "A Talkdesk AI agent handling a customer inquiry can instantly tap into UiPath"
   }
  ],
- "analysis": [],
- "article": null,
+ "analysis": [
+  "**The shape.** Talkdesk Autopilot reads {sig:talkdesk-autopilot} ({stage:talkdesk-autopilot}). Autopilot is the customer-facing agent of Talkdesk's contact-centre platform: it resolves requests and completes tasks across voice, digital and email channels, and passes complex cases to a human agent. The product page shows it changing an order's delivery address itself through an integrated order system, and Talkdesk documents refunds and appointment changes through CRM and ERP integrations.",
+  "**Autonomy 4, with an option on.** Acts holds as shipped. In email, an orchestrator agent identifies the customer's intent and passes the work to specialised sub-agents, which meets the cross-system half of level 4. The other half, people monitoring while the agent works on its own, rests on CXA Operations Center, a separate product in which people watch live interactions, inspect session-level execution traces and set guardrails. Level 4 is therefore marked available.",
+  "**Where the evidence is strongest.** Talkdesk names the data Autopilot draws on (Talkdesk Data Cloud interaction history and Knowledge Management content), publishes a vulnerability disclosure channel and an llms.txt, and gives limits to the agent as plain-language instructions, such as when to escalate to a live agent. Reach rests on MCP, which Talkdesk says its agents use to call external tools and services.",
+  "**What would move it.** Reach 3: a published agent interface, such as an agent card, with documented authorisation narrower than the whole account. Control 2: a page saying which of Autopilot's actions need a person's approval, with a list of the scopes and tools it can reach. Openness 2: a page on Autopilot's limits and known failure cases; the data is already described, so that one page would meet the rule. Autonomy is at the top of its ladder with the option on.",
+  "**Seen, and not counted.** The challenger lowered seven credits a reader may meet on Talkdesk's pages. The Novobanco story names Autopilot for redistributing calls, and its figure that AI agents handle 3% of calls is not tied to Autopilot acting, so the card names no customer for the capability that acts. The UiPath integration over MCP is a Talkdesk agent calling UiPath, not others building on Autopilot or agents working across organisations. The ISO/IEC 42001 certification is announced in a press release; no certificate or scope statement was found. A blog's data-protection boundary does not cover actions such as refunds."
+ ],
+ "article": {
+  "title": "Talkdesk Autopilot on the GAMMA-Ray Spectrum: {sig:talkdesk-autopilot}",
+  "standfirst": "The GAMMA-Ray studio reads Talkdesk Autopilot from its public pages: it completes customer tasks through connected systems, hands complex cases to people, and one page on its limits would lift its Openness.",
+  "body": [
+   "Talkdesk was founded in 2011 by two Técnico alumni, Tiago Paiva and Cristina Fonseca, and Técnico described it as the third Portuguese startup valued at over one billion dollars. It is now a US-headquartered company with a Portuguese entity, selling a cloud contact-centre platform. We read Autopilot, its customer-facing AI agent, only from public sources, captured and hashed on 10 November 2026, and the published rules computed the card.",
+   "**Autonomy 4, Orchestrates (available).** Autopilot changes orders and handles refunds and appointments through CRM and ERP integrations, and in email an orchestrator passes work to specialised sub-agents. People monitoring it live is a feature of CXA Operations Center, a separate product, so the level is marked available; Acts holds as shipped.",
+   "**Reach 2, Integrated.** Talkdesk says its agents use MCP to call external tools and services. A published agent interface with documented authorisation would reach level 3.",
+   "**Control 1, Stated.** Limits are given to the agent in plain language, such as escalating to a live agent if a customer mentions a medical emergency. A page on which actions need a person's approval, and on what the agent can reach, would reach level 2.",
+   "**Openness 1, Disclosed.** What Autopilot is for and the data it draws on are documented. A page on its limits and known failure cases would reach level 2.",
+   "The card is beta and Talkdesk has not seen it. It can claim the card and add evidence; corrections are dated."
+  ],
+  "pt": {
+   "title": "O Talkdesk Autopilot no GAMMA-Ray Spectrum: {sig:talkdesk-autopilot}",
+   "standfirst": "O estúdio GAMMA-Ray lê o Talkdesk Autopilot a partir das suas páginas públicas: conclui tarefas de clientes através de sistemas ligados e passa os casos complexos a pessoas.",
+   "body": [
+    "A Talkdesk foi fundada em 2011 por dois antigos alunos do Técnico, Tiago Paiva e Cristina Fonseca, e tem hoje sede nos Estados Unidos e uma entidade portuguesa. Lemos o Autopilot, o seu agente de IA para clientes, apenas a partir de fontes públicas, capturadas e com hash a 10 de novembro de 2026.",
+    "**Autonomia 4 (opcional).** O Autopilot altera encomendas e trata reembolsos e marcações através de integrações com CRM e ERP; a monitorização ao vivo é do CXA Operations Center, um produto à parte. **Alcance 2.** Os agentes usam MCP para chamar ferramentas externas. **Controlo 1.** Os limites são dados ao agente em linguagem simples.",
+    "**Abertura 1.** O propósito e os dados que usa estão descritos. O cartão é beta e a Talkdesk ainda não o viu; pode reclamá-lo e acrescentar evidência. As correções são datadas."
+   ]
+  }
+ },
  "vault": {
   "id": "2y7brc8i",
   "read_key": "sgit_public_read_3d0b44fafd298169b107547dca711422049fe47f11a1f3d00f99b74f7377f6e7:2y7brc8i",
@@ -240,5 +266,6 @@
    "bytes": 393370,
    "read_at": "2026-11-10T10:43Z"
   }
- }
+ },
+ "method": "A researcher-assessor gathered and captured the sources and mapped the evidence to indicators, without assigning a level. A challenger argued against every level three and four and every doubtful credit."
 }

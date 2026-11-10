@@ -142,8 +142,34 @@
    "span": "58% of medical claims fully automated"
   }
  ],
- "analysis": [],
- "article": null,
+ "analysis": [
+  "**The shape.** Automaise Conversational AI reads {sig:automaise-conversational-ai} ({stage:automaise-conversational-ai}). It is a voice and chat assistant for customer service, one of three Automaise agents beside a copilot for human agents and back-office workflows. The product page says data changes, payments, orders and subscriptions are completed end to end by the AI, and its FAQ says a conversation that needs human intervention passes to an available agent with its context.",
+  "**Where the evidence is strongest.** Named customers show the assistant acting. CTT uses it to resolve account access issues itself, such as password recovery and unblocking accounts, and its page gives 93% as the automation rate of all webchat interactions. Leroy Merlin customers manage orders and schedule deliveries through it, and Caravela Seguros policyholders use it for service requests. The figures are Automaise's own, from its customer pages.",
+  "**Options and caveats.** Reach 2 holds as shipped because the assistant works on third-party channels such as WhatsApp and social media. A connection to a customer's own CRM, contact-centre or messaging platform is built per deployment, so that part is an option and the level does not depend on it. The data the service processes is described in the general terms, which still use the older Virtual Employee wording.",
+  "**What would move it.** Autonomy 4: a page saying the assistant works on its own and a person approves only critical decisions. Reach 3: a published agent interface with documented authorisation narrower than the whole account. Control 1: a public page with a rule in prose on the assistant itself, such as how people approve, override or stop it; Control is not yet evidenced. Openness 2: a page on the assistant's limits and known failure cases, beside the purpose and data already described.",
+  "**Seen, and not counted.** The general terms forbid certain uses, but that clause binds the customer, not the agent, so it does not count for Control. ISO/IEC 27001 and SOC 2 Type 2 are listed on the trust centre, with no certificate or audit report published. Homepage claims of improvements within 30 to 60 days are listed as announced."
+ ],
+ "article": {
+  "title": "Automaise Conversational AI on the GAMMA-Ray Spectrum: {sig:automaise-conversational-ai}",
+  "standfirst": "The GAMMA-Ray studio reads Automaise's voice and chat assistant from its public pages: it completes customer transactions end to end for named customers, and one page on how people stay in command would start its Control.",
+  "body": [
+   "Automaise S.A., founded in 2017 and headquartered in Braga, Portugal, sells three AI agents for customer service teams: a voice and chat assistant, a copilot for human agents and back-office workflow automation. We read the assistant, Conversational AI, only from public sources, captured and hashed on 10 November 2026, and the published rules computed the card.",
+   "**Autonomy 3, Acts.** Data changes, payments and orders are completed end to end by the AI, and a conversation that needs a person passes to an available agent with its context. CTT uses it to recover passwords and unblock accounts. A page saying a person approves only critical decisions would reach level 4.",
+   "**Reach 2, Integrated.** The assistant works on WhatsApp and social media; connections to a customer's own CRM or contact-centre platform are built per deployment. A published agent interface with documented authorisation would reach level 3.",
+   "**Control, not yet evidenced.** No public page gives a rule on the assistant itself or says how people approve, override or stop it. One such page would reach level 1.",
+   "**Openness 1, Disclosed.** The types of request it handles and the data the service processes are described. A page on its limits and known failure cases would reach level 2.",
+   "The card is beta and Automaise has not seen it. It can claim the card and add evidence; corrections are dated."
+  ],
+  "pt": {
+   "title": "A Conversational AI da Automaise no GAMMA-Ray Spectrum: {sig:automaise-conversational-ai}",
+   "standfirst": "O estúdio GAMMA-Ray lê o assistente de voz e chat da Automaise a partir das suas páginas públicas: conclui transações de clientes de ponta a ponta, com clientes identificados.",
+   "body": [
+    "A Automaise S.A., fundada em 2017 e com sede em Braga, vende três agentes de IA para equipas de apoio ao cliente. Lemos o assistente de voz e chat, Conversational AI, apenas a partir de fontes públicas, capturadas e com hash a 10 de novembro de 2026.",
+    "**Autonomia 3.** Alterações de dados, pagamentos e encomendas são concluídos pela IA, e uma conversa que precisa de uma pessoa passa a um agente disponível; a CTT usa-o para recuperar palavras-passe e desbloquear contas. **Alcance 2.** Trabalha no WhatsApp e nas redes sociais.",
+    "**Controlo, ainda sem evidência. Abertura 1.** Uma página sobre como as pessoas aprovam, corrigem ou param o assistente faria o Controlo chegar ao nível 1. O cartão é beta e a Automaise ainda não o viu; pode reclamá-lo e acrescentar evidência. As correções são datadas."
+   ]
+  }
+ },
  "vault": {
   "id": "gn938lnr",
   "read_key": "sgit_public_read_ac0df2472fde834f3552fd90441fa936ba011f083701d052d32d69a8b44ef30d:gn938lnr",
@@ -225,5 +251,6 @@
    "bytes": 396861,
    "read_at": "2026-11-10T10:44Z"
   }
- }
+ },
+ "method": "A researcher-assessor gathered and captured the sources and mapped the evidence to indicators, without assigning a level. A challenger argued against every level three and four and every doubtful credit."
 }
