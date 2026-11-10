@@ -19,8 +19,112 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "draft",
-  "rounds": []
+  "status": "round-1",
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I25",
+      "severity": "should-fix",
+      "finding": "The span, 'The GitHub token used by the Junie action.', is the description of an output parameter on the GitHub page. It does not show narrower access. The fact is in the workflow template on the same page, where the job lists 'permissions: contents: write pull-requests: write issues: write'. The note also says Junie runs with that workflow token. The page does not say that; it lists an optional custom_github_token input and an output named github_token. Re-anchor the span on the permissions block, and word the note as a template that sets three repository scopes, which the user can adapt. This matters: Control level 2 rests on I38 plus I25. Mode available is right, since the template is something the user adds to a repository."
+     },
+     {
+      "answer": "I23",
+      "severity": "note",
+      "finding": "Not answered. The scope of I23 on a Spectrum card says documented permission scopes, roles or tool lists count. The Action Allowlist page defines five action types (fileEditing, executables, mcpTools, readOutsideProject, readSecretFile) with allow or ask rules. That would give Control level 2 a second route (I38 plus I23) that does not depend on the weak I25 span. A scorer decision for the next round, not a change made here."
+     },
+     {
+      "answer": "I45",
+      "severity": "note",
+      "finding": "Not answered. The CLI page describes sandbox mode: it wraps every agent-issued terminal command in an OS-level sandbox. It is marked Early Access, is off unless the user passes --sandbox or runs /sandbox, and the page says MCP servers and hooks are not isolated by it. The I45 scope for a Spectrum card says a documented sandbox counts. It would be mode available and EAP. No level change: Control is cumulative and level 3 (I41, I39, I43) is not met."
+     },
+     {
+      "answer": "I08",
+      "severity": "should-fix",
+      "finding": "The note says 'In code mode, the default'. The cited IDE plugin page does not say code mode is the default; it describes Code and Ask modes and an Auto option that picks a mode. The default is stated on a different page that is not listed as the source: the AI Assistant help page says 'Default mode: Junie plans and implements changes as requested' and 'By default, Junie requests your permission'. Either cite that page for the mode or drop 'the default' from the note. The grade and mode default look right, and the span (autonomously run terminal commands, create files, edit code) is on the page. A3 and A4 depend on this answer."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card computed by node: A4 R2 C2 O3. A4 rests on I08 (default, documented), I10 (default, documented) and I19 (available, brave mode On). The A4 step is reached only when the user turns approvals off: the CLI page says On executes all potentially sensitive actions without user approval, and sandbox is off by default. The card marks it available, which matches the rule text. The evidence is documentation of a toggle and a feature list, not an adjective, but there is no evidence of one agent coordinating others (I12 is not claimed, and the scope of I12 excludes an agent delegating inside its own session). Subagents appear on the CLI page only as a menu entry. So A4 is a user-enabled mode plus a multi-system feature list. R2 rests on I10 and I11 (MCP servers the user configures, available). C2 rests on I38 (default, documented, matches the CLI and IDE pages) and I25 (see that finding). O3 rests on I50 (a benchmark result in the vendor's release post) and S3 plus I57; S3 is an artefact and resolves."
+     },
+     {
+      "answer": "I10",
+      "severity": "note",
+      "finding": "Span 'Junie connects to the databases configured in your IDE' is in the release post. The source says this works through DataGrip or the JetBrains Database plugin, and that reviews can be triggered from GitLab as well as GitHub Actions; so part of the list needs a plugin or an integration to be set up. The debugger and project tools are in the IDE as shipped. Mode default is defensible for the IDE, but the note could say which parts need a plugin. The source is a vendor release post: the cited facts are feature statements, and the note rightly leaves out the surrounding adjectives. A4 and R2 both use this answer."
+     },
+     {
+      "answer": "S3",
+      "severity": "pass",
+      "finding": "Fetched llms.txt on 10 November 2026: it resolves (HTTP 200) and has a section headed 'Machine-readable endpoints' that links openapi.json and api/openapi.yaml; both also resolve and are OpenAPI 3.1. Grade observed is right. For S4: the OpenAPI file covers the website's public endpoints (health, sitemap, update info, extension registry), not an interface for other agents to call Junie, so S4 is rightly not claimed and Reach 3 is not reached."
+     },
+     {
+      "answer": "I50",
+      "severity": "pass",
+      "finding": "The release post says Junie placed first on the latest SWE-Rebench run and quotes a Nebius research lead with 61.6% resolved and 72.7% on the pass-at-5 measure; the span is in the post and under fifteen words. Grade documented is right. The post does not link the benchmark's own results page, so the figures are the vendor's quotation of a third party; the note already says quoted from the research lead."
+     },
+     {
+      "answer": "I52",
+      "severity": "note",
+      "finding": "Span 'an independent agent benchmark' is the vendor's own description in its post. The post names Nebius as the source of the quote. 'Independent' is the vendor's word; the note says the post describes it so, which is accurate. Whether a benchmark run by a third party counts as people who did not build it taking part in assessing it is a stretch, even for tier declared; keep it out of the Verified step (I63 is not claimed, correctly). No level uses it."
+     },
+     {
+      "answer": "I56",
+      "severity": "should-fix",
+      "finding": "Mis-credited. I56 is that the agent tells the people it talks to that it is an AI. The span 'is an AI coding agent developed by JetBrains' is the help page describing the product to its user. The note admits no source shows disclosure to others in GitHub or GitLab threads. That is a statement about the product, not a disclosure by the agent. Remove the answer or change it to not evidenced. No level uses it, because Openness level 1 is also met through I22 and I58."
+     },
+     {
+      "answer": "I46",
+      "severity": "should-fix",
+      "finding": "The indicator is that a limit is a setting its own account could change. The note says the allowlist is a file in the user's home directory that the user can edit and brave mode is a toggle. The CLI page says 'You can also edit this file manually to add or remove allowed' and that is the user editing, not the agent's account. The same page says that with sandbox mode on, the policy file is protected from the agent and an edit needs a fresh Allow once approval. So the source shows a user setting, not that the agent can change its own limit. Either narrow the note to what the page says or remove the answer. No level uses it."
+     },
+     {
+      "answer": "I47",
+      "severity": "note",
+      "finding": "Span 'Guidelines allow you to provide persistent, reusable context to the agent.' is on the page. The page calls guidelines context added to every task; it does not say they are limits or rules about what the agent may do. Credit as I47 (a limit is a rule in prose) is a little generous. Mode available is right (the user adds an AGENTS.md). Control level 1 is also met by I38, so no level depends on it."
+     },
+     {
+      "answer": "I48",
+      "severity": "note",
+      "finding": "Span 'inspect or block a tool call before it runs' is in the hooks page, which says the feature is in the Early Access Program. I48 is needs: operation, and the answer is graded documented, so it must not count. The card does not use it (Control 4 would also need I45 and Control 3). The note says documented only, which is honest. Check that the gate treats a documented operation answer as not counted."
+     },
+     {
+      "answer": "I22",
+      "severity": "note",
+      "finding": "The headless page says non-interactive runs cannot ask for a trust decision and load project configuration without prompting, and 'Only run Junie non-interactively in projects you trust.' That is a documented limit for users, so the credit holds, though it is a security caution rather than a list of known failure cases. The page also says Junie CLI is in an Early Access Program. No level depends on it alone (Openness 1 also has I58)."
+     },
+     {
+      "answer": "I20",
+      "severity": "note",
+      "finding": "The span 'is the agentic coding tool by JetBrains that provides an interactive terminal interface' names the tool; the purpose words 'review, write, and modify code' follow in the same sentence on the page but are outside the span. The note quotes the purpose accurately. Consider extending the span to include them."
+     },
+     {
+      "answer": "I65",
+      "severity": "note",
+      "finding": "The span is in the CEO's post and states a direction for JetBrains Air (the wider system through which agentic work is initiated, executed, coordinated, reviewed and governed). It is a company strategy for a different product line (Air), credited on a scan of the Junie product shape. It supports I65 as a stated strategy for agents at company level; the note should say Air, not Junie."
+     },
+     {
+      "answer": "I61",
+      "severity": "note",
+      "finding": "The span is in the providers page and the table row for Junie lists OpenAI, Google, Anthropic, SpaceXAI with GPT, Gemini, Claude and Grok families. The same page lists models the JetBrains AI platform hosts (Mellum and others), so the note is right. Junie's own row is a family list, not model versions."
+     },
+     {
+      "answer": "I04, I07, I11, I16, I17, I18, I19, I21, I38, I57, I58",
+      "severity": "pass",
+      "finding": "Opened each source. I04: the code mode text is on the IDE plugin page and the span matches. I07: ask mode 'operates in read-only capacity', mode available is right. I11: the MCP page says 'You can connect Junie CLI to external tools via Model Context Protocol (MCP).' and servers are user-configured, so available is right. I16: the allowlist page says that if brave mode is not explicitly enabled, the CLI asks before terminal commands, MCP tools and other sensitive actions; default is right. I17: allowlist entries run without user approval in future; available is right. I18: brave Auto classifies commands and approves safe ones, asking for the rest; available is right (the user cycles the level). I19: brave On executes all sensitive actions without approval; available is right. The CLI page says brave On is the default only when sandbox mode is first enabled, which is itself opt-in. I21: the allowlist has five action types with allow or ask rules. I38: the CLI page says the CLI asks before most terminal commands, edits outside the project and MCP tools; the IDE page says approval is the default. I57: /feedback sends session feedback and attaches a ZIP of session logs. I58: the AI terms define Your Data as source code processed, derived information and usage information. All spans were found in the sources and are under fifteen words."
+     },
+     {
+      "answer": "S1, S4",
+      "severity": "pass",
+      "finding": "Neither is claimed, correctly. S1: the two sources set aside (a 5% developer survey figure and Marketplace downloads) are not sessions, tasks or pull requests, so not crediting them is right and the In production badge stays off. S4: nothing found shows Junie exposing an interface for agents to call. The site OpenAPI covers website endpoints. Junie CLI supports ACP (a protocol where editors drive the agent) and the scan lists remote ACP as announced; ACP is not an MCP server, agent card or API documented for agent use, so a person could decide whether it counts, but the pages read do not evidence it as such."
+     }
+    ]
+   }
+  ]
  },
  "assessment": {
   "by": "gamma.studio@web-summit.dinis",
