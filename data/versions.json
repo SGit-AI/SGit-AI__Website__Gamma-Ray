@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.21",
+    "date": "2026-11-10",
+    "what": "the three examples: round one answered; Control and Reach lowered where the sources do not hold",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "c8424a8f2"
+  },
+  {
     "version": "v0.0.20",
     "date": "2026-11-10",
     "what": "replit-agent: round one answered (S1 to Zillow with Plaid second, I18 re-sourced, I61 note, apostrophes)",
