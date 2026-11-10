@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.77",
+    "date": "2026-11-10",
+    "what": "round one of review on outsystems-agent-workbench and noxus-ai-workers",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "fa0fd71ce"
+  },
+  {
     "version": "v0.0.76",
     "date": "2026-11-10",
     "what": "Pebl Alfie draft scan: 14 answers, captured, public vault, in the review queue",
