@@ -131,6 +131,29 @@
       "finding": "Levels three and four: Autonomy 4 only. Reach 2, Control 1, Openness 0 are below. A3 holds (I08, S1, and I17 available in Studio). A4 holds on the rule through I10 (available) and I18 (default, on the API surface), and I18 is the weak link above. Fix I18 and I38 and I would pass round two."
      }
     ]
+   },
+   {
+    "round": 3,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "I18",
+      "severity": "pass",
+      "finding": "Removed, and recorded under not credited with the reason I gave (the confirmation list includes ordinary actions, so it does not show a person approving only critical decisions). Accepted."
+     },
+     {
+      "answer": "I38",
+      "severity": "pass",
+      "finding": "Now available, under a new \"api\" configuration; the note says the page is for integrators and does not say when the waits occur in the app. That is what the page says. The span is exact. Control 1 holds as available."
+     },
+     {
+      "answer": "levels",
+      "severity": "pass",
+      "finding": "Re-read the card: Autonomy 3 on I08 (default, API task loop), I17 (available, Studio; span \"Reviews and auto-approves safe local actions.\" exact) and S1 (k-ID, exact). No level four. As shipped, without a configuration, I17 is not on, so the as-shipped level is below 3; the card names the configurations, which is what I asked of this scan and of the card. Reach 2, Control 1, Openness 0 are unchanged and below three. Every round-two finding is answered. No em-dash, no contact detail, no adjective on the company found in the scan text I re-read."
+     }
+    ]
    }
   ],
   "responses": [
