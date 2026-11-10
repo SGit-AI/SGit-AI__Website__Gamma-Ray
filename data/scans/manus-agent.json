@@ -89,6 +89,64 @@
      }
     ]
    }
+  ],
+  "responses": [
+   {
+    "round": 1,
+    "answer": "I41",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Changed: mode available (Browser Operator), cited to its page; the note says the API returns tool_used only with verbose=true. Still documented only, so it does not count where an operation fact must be observed."
+   },
+   {
+    "round": 1,
+    "answer": "I38",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Changed: the note now says it is the API surface and that global_allow can skip later confirmations of a kind. Credit kept: the actions listed do wait by default."
+   },
+   {
+    "round": 1,
+    "answer": "I18",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Changed: the span is the task lifecycle page's own summary (status, confirmations, results) and the note keeps to that page, pointing to the confirmation events page for the list. Ready to be argued in round two."
+   },
+   {
+    "round": 1,
+    "answer": "I47",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Removed: the span was an example prompt, not a statement that a written limit is how Manus is held. Control 1 stands on I38."
+   },
+   {
+    "round": 1,
+    "answer": "I65",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Removed: an aim on the about page, not a strategy for agents."
+   },
+   {
+    "round": 1,
+    "answer": "I08",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Changed: the note says the source is the API's documentation of the task loop."
+   },
+   {
+    "round": 1,
+    "answer": "I04",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept as is: the page continues with an em-dash before 'writing code', and this repository's gate refuses an em-dash in a scan, so the span stops before it; the note says writing code."
+   },
+   {
+    "round": 1,
+    "answer": "S1, I10, I11, I16, I17, I21, I46, I22, I20, I39, I54, I57, I58, S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Read; no change needed."
+   }
   ]
  },
  "assessment": {
@@ -120,7 +178,7 @@
   },
   "I08": {
    "e": "https://open.manus.ai/docs/v2/task-lifecycle/confirmation-events.md",
-   "n": "The API docs list actions the agent carries out in its task loop, such as sending email, changing calendar events, running terminal commands and deploying a service.",
+   "n": "The API docs list actions the agent carries out in its task loop, such as sending email, changing calendar events, running terminal commands and deploying a service. This is the API's documentation of the task loop.",
    "span": "tools that the current Manus agent runs in the main task loop",
    "g": "documented",
    "m": "default"
@@ -158,8 +216,8 @@
   },
   "I18": {
    "e": "https://open.manus.ai/docs/v2/task-lifecycle.md",
-   "n": "The API docs say the agent runs asynchronously once a task is created and waits for the user at listed actions, such as sending email, deleting calendar events or deploying a service.",
-   "span": "the agent runs asynchronously",
+   "n": "The API's task lifecycle has the agent run asynchronously once a task is created and stop in a waiting status for an action confirmation or a question; which actions wait is listed on the confirmation events page. This is the API surface.",
+   "span": "Poll task status, handle confirmations, and process results",
    "g": "documented",
    "m": "default"
   },
@@ -188,7 +246,7 @@
   },
   "I38": {
    "e": "https://open.manus.ai/docs/v2/task-lifecycle/confirmation-events.md",
-   "n": "The API docs list actions that wait for a confirmation, including sending email, deleting calendar events and deploying a service.",
+   "n": "The API's confirmation events list actions that wait for the user before they run, among them sending email, deleting calendar events, deploying a service and running a command. This is the API's documented behaviour for people who build their own confirmation interface, and some confirmations accept global_allow, which skips later ones of that kind.",
    "span": "Send, save as draft, or cancel",
    "g": "documented",
    "m": "default"
@@ -201,24 +259,17 @@
    "m": "default"
   },
   "I41": {
-   "e": "https://open.manus.ai/docs/v2/openapi_v2.json",
-   "n": "The API's message list returns, with verbose on, tool_used events recording the tools the agent invoked; the Browser Operator page also states its actions are logged.",
-   "span": "`tool_used` (tools the agent invoked)",
+   "e": "https://manus.im/docs/features/browser-operator.md",
+   "n": "With the Browser Operator extension, the page states all of the agent's actions in the browser are logged; through the API, the tools the agent used come back only with verbose=true.",
+   "span": "All actions are logged for complete transparency.",
    "g": "documented",
-   "m": "default"
+   "m": "available",
+   "cfg": "browser-operator"
   },
   "I46": {
    "e": "https://manus.im/docs/features/desktop.md",
    "n": "Studio's permission mode is a setting the task owner changes, including to Full access.",
    "span": "Only the task owner can change the mode.",
-   "g": "documented",
-   "m": "available",
-   "cfg": "studio"
-  },
-  "I47": {
-   "e": "https://manus.im/docs/features/desktop.md",
-   "n": "The Studio page shows limits given to the agent as written instructions in the prompt.",
-   "span": "Do not change files outside the src folder.",
    "g": "documented",
    "m": "available",
    "cfg": "studio"
@@ -241,13 +292,6 @@
    "e": "https://manus.im/blog/manus-sandbox",
    "n": "The sandbox post lists what the task sandbox stores, and the Studio page says what is sent to the cloud.",
    "span": "Your Manus Sandbox stores the files needed during task execution, including",
-   "g": "documented",
-   "m": "default"
-  },
-  "I65": {
-   "e": "https://manus.im/about",
-   "n": "The about page states the company builds general AI agents.",
-   "span": "We build general AI agents as the Action Engine for life.",
    "g": "documented",
    "m": "default"
   },
