@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.10",
+    "date": "2026-11-10",
+    "what": "the graph examples from the other sites, passed to gamma.graphs@",
+    "by": "gamma-ray@web-summit.dinis",
+    "from": "382468b9c"
+  },
+  {
     "version": "v0.0.9",
     "date": "2026-11-10",
     "what": "navigation to five items and a More menu, calmer card header",
