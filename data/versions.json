@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.41",
+    "date": "2026-11-10",
+    "what": "the walk links every provision to its own row",
+    "by": "gamma.graphs@web-summit.dinis",
+    "from": "a9f74ac98"
+  },
+  {
     "version": "v0.0.40",
     "date": "2026-11-10",
     "what": "manus-agent: round two answered (I18 removed, Autonomy 3; I38 available through the API)",
