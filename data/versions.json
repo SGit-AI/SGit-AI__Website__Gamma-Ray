@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.56",
+    "date": "2026-11-10",
+    "what": "matrix states, long links wrap",
+    "by": "gamma.design@web-summit.dinis",
+    "from": "4f3151cd1"
+  },
+  {
     "version": "v0.0.55",
     "date": "2026-11-10",
     "what": "every published card as a graph, in the grammar of Fractal Semantic Graphs",
