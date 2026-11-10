@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.49",
+    "date": "2026-11-10",
+    "what": "Granter: a Portuguese draft card for its AI Grant Consultant",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "51efbd390"
+  },
+  {
     "version": "v0.0.48",
     "date": "2026-11-10",
     "what": "Visor.ai: a Portuguese draft card for Visor.ai AI agents (voice and chat)",
