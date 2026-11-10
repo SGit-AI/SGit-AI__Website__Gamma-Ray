@@ -1,7 +1,9 @@
 // FACT-Ray well-known files: a validator and a read-only reader. No dependencies.
 //   node tools/fact-ray.mjs validate <file or https URL>     checks a fact-ray.json against schema 0.1
-//   node tools/fact-ray.mjs read <domain>                    fetches https://<domain>/.well-known/fact-ray.json, validates it,
+//   node tools/fact-ray.mjs read <domain> [--save]           fetches https://<domain>/.well-known/fact-ray.json, validates it,
 //                                                            and prints each claim with the coordinates it is read at
+// With --save the file is kept, with its hash and read time, in data/fact-ray/read/<domain>.json; the build then adds its
+// claims to the facts of every scan whose `domain` is that domain.
 // The reader sends no credentials and tests nothing: it fetches one public file.
 import fs from 'node:fs'
 const isUrl = s => typeof s === 'string' && /^https:\/\/[^\s]+$/.test(s), isDate = s => typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s)
@@ -42,5 +44,7 @@ if (process.argv[1] && process.argv[1].endsWith('fact-ray.mjs')) {
     const bad = validate(o, url ? new URL(url).hostname : null)
     if (bad.length) { console.log('NOT VALID\n' + bad.map(b => '- ' + b).join('\n')); process.exit(1) }
     console.log(`OK: ${o.kind} file of ${o.issuer.name} about ${o.subject.name}, ${o.claims.length} claims`)
+    if (cmd === 'read' && process.argv.includes('--save')) { const { createHash } = await import('node:crypto'), dir = new URL('../data/fact-ray/read/', import.meta.url).pathname
+        fs.mkdirSync(dir, { recursive: true }); fs.writeFileSync(dir + arg + '.json', JSON.stringify({ url, domain: arg, read_at: new Date().toISOString().slice(0, 16) + 'Z', sha256: createHash('sha256').update(text).digest('hex'), file: o }, null, 1) + '\n'); console.log('saved data/fact-ray/read/' + arg + '.json') }
     if (cmd === 'read') for (const c of o.claims) { const r = readAs(o, c); console.log(`${c.node}  ${c.asserts}  ${r.source}·${r.record}·${r.accountability}  (${c.role})`) }
 }

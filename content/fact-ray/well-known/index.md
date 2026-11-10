@@ -51,7 +51,7 @@ Also at [well-known.schema.json](@@/data/fact-ray/schemas/well-known.schema.json
 
 ## Not built yet
 
-A signature over the file (through pki.sgit.ai) is in the schema and is not checked yet. The scanner does not yet read these files into the cards: a claim found in one is not yet a second claim on a card's fact.
+A signature over the file (through pki.sgit.ai) is in the schema and is not checked yet. The reader can keep a company's file (`read <domain> --save`), and the build then puts each of its claims beside the card's own fact, as a second claim. No company has published a file yet, so no card carries one. A claim about a line item of a standard (`gamma-ray:provision/...`) is accepted by the schema and is not yet rolled up to an indicator or a level. A customer's file is not read into a card yet.
 
 
 [The standard](@@/fact-ray/standard/index.md) · [The matrix](@@/fact-ray/matrix/index.md) · [The actors](@@/fact-ray/actors/index.md) · [Well-known files](@@/fact-ray/well-known/index.md) · [Examples](@@/fact-ray/examples/index.md) · [Where it is applied](@@/fact-ray/applied/index.md)

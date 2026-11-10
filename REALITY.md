@@ -44,7 +44,7 @@ A thing not listed here does not exist. (site v0.0.44)
 
 ## FACT-Ray: what does not exist yet
 
-- No company or customer has published a well-known file, and the scanner does not read one into a card yet: a claim in such a file is not yet a second claim on a card's fact.
+- No company or customer has published a well-known file. The reader (`tools/fact-ray.mjs read <domain> --save`) and the build can put a company's claims beside a card's facts as second claims (a scan names its `domain`); it has run only on a test. Claims about provisions are not rolled up to indicators, and a customer's file is not read into a card.
 - Signatures on well-known files are in the schema and are not checked.
 - The files for riskmandate.ai and promptugal.news are drafts on this site (`/fact-ray/well-known/drafts/`); they are not hosted on those domains.
 - No real news article is scored yet. The news and panel examples are illustrative.

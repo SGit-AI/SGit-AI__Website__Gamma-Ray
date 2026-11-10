@@ -100,7 +100,8 @@ const gen = {
 }
 m.spectrumBefore = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/history/spectrum-0.1.json'), 'utf8'))
 const sp = loadSpectrum(ROOT), fr = loadFactRay(ROOT), TODAY = new Date().toISOString().slice(0, 10)
-const TRUST = { fr, of: new Map(m.scans.map(s => [s.id, scanClaims(fr, s, m, TODAY)])) }
+const wkRead = d => { const f = d && path.join(ROOT, 'data/fact-ray/read', d + '.json'); return f && fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : null }
+const TRUST = { fr, of: new Map(m.scans.map(s => [s.id, scanClaims(fr, s, m, TODAY, wkRead(s.domain))])) }
 const SPX = buildSpectrum(m, sp, TRUST)
 Object.assign(gen, SPX.gens)
 const FRX = buildFactRay(ROOT, m, sp, SPX, TRUST, TODAY)

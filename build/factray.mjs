@@ -52,7 +52,10 @@ export function distribution(fr, nodes) {
 // Source: S1, an agent read public material and interpreted it (a subject's own well-known file would be S2).
 // Record: R4 when the answer links a page anyone can open; R5 when that page is captured and hashed and a reviewer
 //         other than the producer has been through the scan. Accountability: from the review rounds and the sign-off.
-export function scanClaims(fr, scan, m, today) {
+export function scanClaims(fr, scan, m, today, read = null) {
+    // what the subject says in its own well-known file (tools/fact-ray.mjs read <domain> --save): S2, R4 with a page, A0 until checked
+    const said = new Map(); if (read && read.file.kind === 'subject') for (const c of read.file.claims) { const k = c.node.startsWith('gamma-ray:indicator/') ? c.node.slice(20) : null; if (k) said.set(k, c) }
+    const own = (ind, id) => { const c = said.get(ind); return c ? [{ id: `claim:well-known/${read.domain}/${ind}`, node: id, asserts: c.asserts, source: { level: 'S2', actor: `actor:domain/${read.domain}`, capacity: c.role }, record: { level: c.evidence?.length ? 'R4' : 'R3', url: c.evidence?.[0] || read.url, sha256: read.sha256, read_at: read.read_at, span: null }, accountability: { level: 'A0', producer: `actor:domain/${read.domain}`, validators: [], count: 1, independence: 'nobody but the subject', scope: [id] } }] : [] }
     const rv = scan.review || {}, rounds = rv.rounds || []
     const producer = 'actor:' + (scan.produced_by || (scan.assessment && scan.assessment.by) || 'gamma-ray@web-summit.dinis')
     const validators = [...new Set([...rounds.map(r => 'actor:' + r.by), ...(rv.signoff ? ['actor:' + rv.signoff.by] : [])])].filter(a => a !== producer)
@@ -67,11 +70,13 @@ export function scanClaims(fr, scan, m, today) {
             source: { level: 'S1', actor: producer, capacity: 'an agent reading public pages' },
             record: { level: R, url: a.e, sha256: cap?.sha256 || null, read_at: cap?.read_at || scan.read, span: a.span || null },
             accountability: { level: signed ? 'A4' : validators.length ? 'A1' : 'A0', producer, validators: signed ? [...validators, 'actor:dinis-cruz'] : validators, count: 1 + validators.length + (signed ? 1 : 0), independence: validators.length ? 'same model family, shared repository' : 'nobody but the producer', scope: [signed ? id : scopeAll] } }
-        return node(fr, { id, parent: scopeAll, kind: I.needs === 'operation' ? 'operation' : 'statement', text: I.text, indicator: ind }, [claim], today)
+        return node(fr, { id, parent: scopeAll, kind: I.needs === 'operation' ? 'operation' : 'statement', text: I.text, indicator: ind }, [claim, ...own(ind, id)], today)
     })
+    // what the subject says and no card fact holds yet: shown, never counted into a level
+    const extra = [...said.keys()].filter(k => !scan.answers[k] && m.I.get(k)).map(k => { const id = `node:gamma-ray/${scan.id}/${k}`, I = m.I.get(k); return node(fr, { id, parent: scopeAll, kind: I.needs === 'operation' ? 'operation' : 'statement', text: I.text, indicator: k }, own(k, id), today) })
     // the status of the card follows trust: Draft (discovered, agent-reviewed), Confirmed (the company, on record), Attested (a customer, on record)
     const status = (scan.attestations || []).length ? 'Attested' : scan.claimed_by_operator || scan.confirmed_by_subject ? 'Confirmed' : 'Draft'
-    return { nodes, byInd: Object.fromEntries(nodes.map(n => [n.indicator, n])), producer, validators, level: A, status, distribution: distribution(fr, nodes), chain: [producer, ...validators] }
+    return { said: extra, wellKnown: read ? { domain: read.domain, read_at: read.read_at, claims: said.size } : null, nodes, byInd: Object.fromEntries(nodes.map(n => [n.indicator, n])), producer, validators, level: A, status, distribution: distribution(fr, nodes), chain: [producer, ...validators] }
 }
 // the strongest band among the facts a level rests on, written with its coordinates
 export function strongest(fr, nodes) {
