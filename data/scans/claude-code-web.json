@@ -125,8 +125,9 @@
    "m": "default"
   },
   "I18": {
-   "e": "https://code.claude.com/docs/en/claude-code-on-the-web",
-   "n": "The person starts a task and reviews the branch or pull request it produces.",
+   "e": "https://code.claude.com/docs/en/web-quickstart",
+   "n": "In Accept edits, which the permission modes page says corresponds to the default mode in cloud sessions, Claude makes changes and pushes a branch without stopping for approval; the person reviews the result.",
+   "span": "Claude makes changes and pushes a branch without stopping for approval",
    "g": "documented",
    "m": "default"
   },
@@ -145,7 +146,7 @@
   },
   "I23": {
    "e": "https://abp.sgit.ai/data/profiles/anthropic/claude-code-remote/ccr-container.json",
-   "n": "A published deployment shape lists 15 capabilities, 13 of them observed on the thing itself.",
+   "n": "A published deployment shape, measured on one operator’s configured session, lists 15 capabilities, 13 of them observed; its rows include that operator’s commit hooks and the session’s registered signing identity.",
    "g": "documented",
    "m": "default"
   },
@@ -155,34 +156,16 @@
    "g": "documented",
    "m": "default"
   },
-  "I28": {
-   "e": "https://code.claude.com/docs/en/cloud-environments",
-   "n": "A stored key is added by the proxy after a request leaves the session, for the hosts listed.",
-   "g": "documented",
-   "m": "default"
-  },
-  "I38": {
-   "e": "https://code.claude.com/docs/en/claude-code-on-the-web",
-   "n": "Work arrives as a branch for a person to review.",
-   "g": "documented",
-   "m": "default"
-  },
-  "I45": {
-   "e": "https://code.claude.com/docs/en/cloud-environments",
-   "n": "With the default (Trusted) network access, sessions reach allowlisted domains \"and nothing else through the session’s network\".",
-   "g": "documented",
-   "m": "default",
-   "span": "and nothing else through the session’s network"
-  },
   "I46": {
    "e": "https://abp.sgit.ai/data/profiles/anthropic/claude-code-remote/ccr-container.json",
-   "n": "Two capabilities in the published shape are limited by a setting.",
+   "n": "Two capabilities in the published shape are limited by a setting: repository writes by the clone’s commit hooks (observed) and scheduled tasks by the operator’s own list (self-reported).",
    "g": "documented",
    "m": "default"
   },
   "I61": {
-   "e": "https://code.claude.com/docs/en/overview",
-   "n": "The product and its model family are named.",
+   "e": "https://code.claude.com/docs/en/model-config",
+   "n": "The model configuration page lists the models Claude Code uses by alias and the version each resolves to per provider; cloud sessions take the same /model command.",
+   "span": "Uses the latest Opus model for complex reasoning tasks",
    "g": "documented",
    "m": "default"
   },
@@ -193,8 +176,9 @@
    "m": "default"
   },
   "I12": {
-   "e": "https://code.claude.com/docs/en/agent-teams",
-   "n": "Agent teams, as in the local product: experimental and disabled by default.",
+   "e": "https://code.claude.com/docs/en/claude-code-on-the-web",
+   "n": "The cloud page says agent teams are off by default and are enabled with an environment variable; the agent teams page describes instances, each in its own context, that message each other.",
+   "span": "Agent teams are off by default but can be enabled",
    "g": "documented",
    "m": "available",
    "cfg": "teams"
@@ -207,9 +191,9 @@
    "method": "probe"
   },
   "I56": {
-   "e": "https://code.claude.com/docs/en/overview",
-   "n": "The vendor describes it as an AI assistant.",
-   "span": "Claude Code is an AI-powered coding assistant",
+   "e": "https://code.claude.com/docs/en/settings-reference",
+   "n": "By default it adds a Co-Authored-By trailer naming the Claude model to its commits, including commits from cloud sessions, and a Generated with Claude Code line to pull request descriptions; a setting can change or hide both.",
+   "span": "The name is the model in use when the commit is made",
    "g": "documented",
    "m": "default"
   },
@@ -345,6 +329,71 @@
    }
   ],
   "note": "Published as an example on 10 November 2026, before the review workflow existed. Mapped by one agent. It goes through two rounds of review next.",
-  "keep_published": true
+  "keep_published": true,
+  "responses": [
+   {
+    "round": 1,
+    "answer": "I61",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Source moved to the model configuration page, which lists the models by alias and per provider; span verified. Same fix as the local scan."
+   },
+   {
+    "round": 1,
+    "answer": "I38",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Removed. The web quickstart says that in Accept edits Claude pushes a branch without stopping for approval, and no cited page says a push or other high-impact action waits for a person in a cloud session; Plan mode waits only for approval of a plan before edits. This drops Control from level two to none."
+   },
+   {
+    "round": 1,
+    "answer": "I18",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Re-sourced to the web quickstart, which names the mode: in Accept edits (the permission modes page says it corresponds to the default mode in cloud sessions) Claude pushes a branch without stopping for approval; span verified."
+   },
+   {
+    "round": 1,
+    "answer": "I28",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Removed. The sentence shows a key added for listed hosts, not tokens bound to the service that issued them, and as an operation fact a documented answer would not count."
+   },
+   {
+    "round": 1,
+    "answer": "I12",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Re-sourced to the cloud page’s own sentence that agent teams are off by default and enabled with an environment variable; span verified; mode available under the teams configuration."
+   },
+   {
+    "round": 1,
+    "answer": "I23",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note now says the measured shape is one operator’s configured session and includes that operator’s commit hooks and signing identity; the counts (15 capabilities, 13 observed) were checked against the profile."
+   },
+   {
+    "round": 1,
+    "answer": "I46",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note now says which row is which: repository writes limited by the clone’s commit hooks (observed), scheduled tasks by the operator’s list (self-reported). Grade left documented, since we read it from the profile."
+   },
+   {
+    "round": 1,
+    "answer": "I45",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Removed. The scope reads I45 from a measured grant only, and in this grant five capabilities whose effect cannot be undone have no barrier, so it does not hold; the page sentence cannot stand in for it."
+   },
+   {
+    "round": 1,
+    "answer": "I04, I08, I10, I11, I20, I21, I25, I56, I58, I63, S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change except I56, re-sourced from the overview’s description to the settings reference (attribution trailer on commits, including cloud commits, by default), to match the local scan’s fix."
+   }
+  ]
  }
 }

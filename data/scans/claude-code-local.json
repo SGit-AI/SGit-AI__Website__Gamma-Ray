@@ -137,8 +137,9 @@
    "m": "default"
   },
   "I18": {
-   "e": "https://code.claude.com/docs/en/permissions",
-   "n": "Other permission modes change what asks; in auto mode a classifier reviews actions instead of the person.",
+   "e": "https://code.claude.com/docs/en/permission-modes",
+   "n": "In auto mode a classifier reviews actions instead of prompting; an action it blocks is listed, and the person can approve it so Claude may retry.",
+   "span": "approve the action so Claude may retry",
    "g": "documented",
    "m": "available",
    "cfg": "auto"
@@ -164,7 +165,7 @@
   },
   "I23": {
    "e": "https://abp.sgit.ai/data/profiles/anthropic/claude-code/local-default.json",
-   "n": "A published deployment shape lists 16 capabilities; most rows are derived, not measured.",
+   "n": "A published deployment shape lists 16 capabilities from 22 tool rows; it says none of the rows is measured and all 22 are derived.",
    "g": "documented",
    "m": "default"
   },
@@ -175,8 +176,9 @@
    "m": "default"
   },
   "I39": {
-   "e": "https://code.claude.com/docs/en/permissions",
-   "n": "A deny rule removes a tool; the person can refuse any prompt.",
+   "e": "https://code.claude.com/docs/en/interactive-mode",
+   "n": "Esc stops the current response or tool call mid-turn, and Ctrl+C interrupts a running operation.",
+   "span": "Stop the current response or tool call mid-turn so you can redirect",
    "g": "documented",
    "m": "default"
   },
@@ -194,13 +196,6 @@
    "m": "available",
    "cfg": "managed"
   },
-  "I45": {
-   "e": "https://code.claude.com/docs/en/sandboxing",
-   "n": "Sandboxing restricts shell commands at the operating system level (filesystem and network); the operator turns it on.",
-   "g": "documented",
-   "m": "available",
-   "cfg": "sandbox"
-  },
   "I46": {
    "e": "https://code.claude.com/docs/en/security",
    "n": "\"The boundary is a permission prompt, so a Bash command you approve can still write anywhere your user account can.\"",
@@ -216,8 +211,9 @@
    "cfg": "managed"
   },
   "I61": {
-   "e": "https://code.claude.com/docs/en/overview",
-   "n": "The product and its model family are named.",
+   "e": "https://code.claude.com/docs/en/model-config",
+   "n": "The model configuration page lists the models it uses by alias (Opus, Sonnet, Haiku, Fable) and the version each alias resolves to for each provider.",
+   "span": "Uses the latest Opus model for complex reasoning tasks",
    "g": "documented",
    "m": "default"
   },
@@ -236,14 +232,15 @@
   },
   "S1": {
    "e": "https://claude.com/customers/stripe",
-   "n": "A vendor case study names a customer and a figure.",
-   "span": "Stripe rolled out Claude Code to 1,370 engineers.",
+   "n": "A vendor case study names a customer and a figure: Stripe deployed it to 1,370 engineers.",
+   "span": "Deployed Claude Code to 1,370 engineers with a zero-configuration setup",
    "g": "documented",
    "m": "default"
   },
   "S2": {
-   "e": "https://code.claude.com/docs/en/plugin-marketplaces",
-   "n": "Anyone can publish a plugin marketplace from a repository, and others register it.",
+   "e": "https://code.claude.com/docs/en/plugins/anthropic-marketplaces",
+   "n": "The vendor’s community marketplace holds third-party plugins their authors submitted, and the page says many plugins sit in their authors’ own marketplaces.",
+   "span": "Third-party plugins that their authors submitted to Anthropic",
    "g": "documented",
    "m": "default"
   },
@@ -255,9 +252,9 @@
    "method": "probe"
   },
   "I56": {
-   "e": "https://code.claude.com/docs/en/overview",
-   "n": "The vendor describes it as an AI assistant.",
-   "span": "Claude Code is an AI-powered coding assistant",
+   "e": "https://code.claude.com/docs/en/settings-reference",
+   "n": "By default it adds a Co-Authored-By trailer naming the Claude model to its commits and a Generated with Claude Code line to pull request descriptions; a setting can change or hide both.",
+   "span": "The name is the model in use when the commit is made",
    "g": "documented",
    "m": "default"
   },
@@ -443,6 +440,78 @@
    }
   ],
   "note": "Published as an example on 10 November 2026, before the review workflow existed. Mapped by one agent. It goes through two rounds of review next.",
-  "keep_published": true
+  "keep_published": true,
+  "responses": [
+   {
+    "round": 1,
+    "answer": "S1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Span replaced with the page’s own words, verified on the page read 2026-11-10: \"Deployed Claude Code to 1,370 engineers with a zero-configuration setup\" (10 words). Fact and figure unchanged."
+   },
+   {
+    "round": 1,
+    "answer": "I61",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Source moved to the model configuration page, which lists the models by alias and the version each resolves to per provider; span verified there. The overview names no model, as the reviewer found."
+   },
+   {
+    "round": 1,
+    "answer": "I23",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note corrected: the profile counts 22 tool rows, none measured and all 22 derived, behind 16 capabilities. Grade and source unchanged; as an operation fact it does not count toward a level held, which products do not get anyway."
+   },
+   {
+    "round": 1,
+    "answer": "I39",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Source moved to the interactive mode page, which says Esc stops the current response or tool call mid-turn and Ctrl+C interrupts a running operation; span verified. The permissions page did not support a stop."
+   },
+   {
+    "round": 1,
+    "answer": "I18",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept, re-sourced to the permission modes page: in auto mode an action the classifier blocks is listed and the person can approve it so Claude may retry, which is the person approving the critical step only. Note: that page also says auto is the built-in default in a terminal from v2.1.283, which round two should weigh against the scan’s Manual-mode \"As shipped\" configuration."
+   },
+   {
+    "round": 1,
+    "answer": "S2",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Source moved to the vendor’s marketplaces page, which says the community marketplace holds third-party plugins submitted by their authors and that many plugins are in their authors’ own marketplaces; span verified. That marketplace’s published catalogue (anthropics/claude-plugins-community, fetched 2026-11-10) lists third-party entries such as 0x and 42crunch-api-security-testing."
+   },
+   {
+    "round": 1,
+    "answer": "I56",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Re-sourced from the documentation’s description of itself to the settings reference: by default commits carry a Co-Authored-By trailer naming the Claude model and pull requests a Generated with Claude Code line, so reviewers of its work are told it is an AI. Read under aiact.art-50, which also covers marking AI output; round two may still judge it."
+   },
+   {
+    "round": 1,
+    "answer": "I45",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Removed. The scope reads I45 from a measured grant only; this scan’s grant is derived, and even read as it stands its irreversible capabilities have no boundary. The Spectrum scorer counts any answer, so the page-based answer was lifting Control to level four."
+   },
+   {
+    "round": 1,
+    "answer": "I04, I08, I10, I11, I12, I16, I20, I21, I22, I38, I41, I43, I46, I48, I57, I58, I63, S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change. Separate from this finding: the permission modes page now gives auto as the built-in default in a terminal (v2.1.283 or later), so the Manual-mode basis of I16, I38 and the \"As shipped\" configuration should be re-read by the studio."
+   },
+   {
+    "round": 1,
+    "answer": "configurations",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change for this note; see the I18 response on which mode a terminal session starts in."
+   }
+  ]
  }
 }
