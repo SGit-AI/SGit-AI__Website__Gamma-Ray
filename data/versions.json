@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.30",
+    "date": "2026-11-10",
+    "what": "manus-agent round one: no em-dash in prose",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "cdec315ac"
+  },
+  {
     "version": "v0.0.29",
     "date": "2026-11-10",
     "what": "card shadow, wider headlines",
