@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.28",
+    "date": "2026-11-10",
+    "what": "replit-agent sent back, reasons in approvals",
+    "by": "gamma.approve@web-summit.dinis",
+    "from": "2701d8f72"
+  },
+  {
     "version": "v0.0.27",
     "date": "2026-11-10",
     "what": "AISLE: a draft card for the AISLE platform (A4 · R2 · C1 · O0), its vault, report, article and claim note",
