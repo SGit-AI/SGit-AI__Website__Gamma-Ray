@@ -454,6 +454,34 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "No answer changes, so the card stays A3 R2 C1 O2. Autonomy 3 rests on I08 and I17, with the I17 note saying no documentation page describes how approval is configured; nothing read contradicts it, and the card keeps level one or more in all four dimensions even if Autonomy fell away."
+   },
+   {
+    "round": 5,
+    "answer": "I56",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Conceded. The SOC 2 announced entry now cites the captured home page, whose footer reads 'SOC 2 Type II in progress' (re-fetched 10 November 2026 as raw/ans-501.html), and the launch prediction entry is cut rather than captured; every announced source is then one of the 19 captures."
+   },
+   {
+    "round": 5,
+    "answer": "I17",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Pass acknowledged; no change."
+   },
+   {
+    "round": 5,
+    "answer": "I04, I12, I25, I39, I41, I46, I68, S1, I08, I10, I11, I20, I21, I22, I26, I30, I40, I47, I57, I58, S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Pass acknowledged; no change. Once the two announced edits above are applied, the enterprise page and the launch release PDF no longer appear as sources anywhere in the scan."
+   },
+   {
+    "round": 5,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No answer changes, so the card stays A3 R2 C1 O2. The fragility of Autonomy 3 on I17 is already disclosed in the I17 note and in not_credited; level one or more holds in four dimensions without it."
    }
   ]
  },
@@ -655,7 +683,7 @@
  "announced": [
   {
    "what": "SOC 2 Type II report in progress",
-   "source": "https://www.spinnable.ai/enterprise"
+   "source": "https://www.spinnable.ai/"
   },
   {
    "what": "Voice calls in beta; an older docs note calls phone-based interactions coming soon",
@@ -664,10 +692,6 @@
   {
    "what": "Marketing claim that anything with external impact waits for a person's sign-off (not matched by a documented mechanism)",
    "source": "https://www.spinnable.ai/"
-  },
-  {
-   "what": "Launch prediction that every company will employ both humans and AI within five years",
-   "source": "https://websummit.com/wp-media/2025/11/SPINNABLE-LAUNCH-RELEASE-1.pdf"
   }
  ],
  "configurations": [
@@ -698,97 +722,97 @@
   "https://docs.spinnable.ai/concepts/ai-workers": {
    "sha256": "9d2680d11239f6d5cc68691a81a34b547d9f74d7c670c91fd52a9fa72cd5ce57",
    "bytes": 204713,
-   "read_at": "2026-11-10T18:44Z"
+   "read_at": "2026-11-10T19:45Z"
   },
   "https://docs.spinnable.ai/concepts/communication-channels": {
-   "sha256": "3238e5ebe58318f2c74cd6293835c2536b67f43366b6acd0f98500309316b151",
-   "bytes": 302593,
-   "read_at": "2026-11-10T18:44Z"
+   "sha256": "1a2e71264a57e7d80061f6fa6dfdde9f4d0504a47e6cde2f662ac68806656f48",
+   "bytes": 297110,
+   "read_at": "2026-11-10T19:45Z"
   },
   "https://docs.spinnable.ai/concepts/tool-permissions": {
-   "sha256": "54facc40f5311df9cc870e87b54e89109ba51f1772835a21be7b3c45c469ef00",
-   "bytes": 190309,
-   "read_at": "2026-11-10T18:44Z"
+   "sha256": "342ec2920305e9c1906c4d8d940feff5034355cc1ace75c03dfd746b3045e62b",
+   "bytes": 184814,
+   "read_at": "2026-11-10T19:45Z"
   },
   "https://docs.spinnable.ai/guides/change-manager": {
-   "sha256": "015d7bc82014937aa171c2e91ad81d0fbec2678d5fac503967873cde6ac48b65",
-   "bytes": 147921,
-   "read_at": "2026-11-10T18:44Z"
+   "sha256": "2d671fed98e821aaa948f92cef391ae00bb72722c936947bb27ded58273d3e19",
+   "bytes": 148307,
+   "read_at": "2026-11-10T19:45Z"
   },
   "https://docs.spinnable.ai/guides/connecting-tools": {
-   "sha256": "4aa99c79cbbd32dec81e17bfc9ff5231f62c7660ff7104b7eb741724b77de69d",
-   "bytes": 224098,
-   "read_at": "2026-11-10T18:44Z"
+   "sha256": "7b74a21879216b40a1bbc295bc44543c0c61b048d4db2ba32d5f60265d950445",
+   "bytes": 224488,
+   "read_at": "2026-11-10T19:45Z"
   },
   "https://docs.spinnable.ai/guides/corporate-email": {
-   "sha256": "cb7502b01ed16d98ba55dedce79fa4bd11f7606efe728ef5e0daccd8f1343054",
-   "bytes": 237173,
-   "read_at": "2026-11-10T18:44Z"
+   "sha256": "a9df835d12dae365516ff7921d9a869d2a61798d7a947c0107bec17adc35abae",
+   "bytes": 237561,
+   "read_at": "2026-11-10T19:45Z"
   },
   "https://docs.spinnable.ai/guides/worker-communication-restrictions": {
-   "sha256": "2f6cfc3d13abe68e5698b346884fc38e473dab4b290c9e8bb8ec019d5c586ca1",
-   "bytes": 167677,
-   "read_at": "2026-11-10T18:44Z"
+   "sha256": "50276fae687884ba7ce4391ec1a74c8fcef53f51886a5a05aaab24bfa815b9ea",
+   "bytes": 168101,
+   "read_at": "2026-11-10T19:45Z"
   },
   "https://docs.spinnable.ai/guides/worker-vault": {
-   "sha256": "0cb980961bd96379579b7f9c44e4482f51884ff9b958b2c90303152d1129559e",
-   "bytes": 192088,
-   "read_at": "2026-11-10T18:44Z"
+   "sha256": "c02c431258de899b1e4dc66a319cc45e24b84d6d90ebf94620d7c6a004f2dfec",
+   "bytes": 192470,
+   "read_at": "2026-11-10T19:45Z"
   },
   "https://docs.spinnable.ai/introduction": {
-   "sha256": "6be24a237da5989af9d65e4300c0a3b79ce1840d4a0f3a2328dc0a7af1b3c741",
-   "bytes": 200358,
-   "read_at": "2026-11-10T18:44Z"
+   "sha256": "78c79870c3a10df4e9e5bb9940e52bc853e86242f967980cdfe097f552881bbc",
+   "bytes": 200726,
+   "read_at": "2026-11-10T19:45Z"
   },
   "https://docs.spinnable.ai/llms.txt": {
    "sha256": "a017860de55023b0b7bbee5a32ff663c2a59731473b0b9e5484ae16d4496a99c",
    "bytes": 23038,
-   "read_at": "2026-11-10T18:44Z"
+   "read_at": "2026-11-10T19:45Z"
   },
   "https://docs.spinnable.ai/release-notes/2026-06-10": {
-   "sha256": "711b6a566750236a47496435793909f6407e128db4795979f98626d1619b46a3",
-   "bytes": 139482,
-   "read_at": "2026-11-10T18:44Z"
+   "sha256": "f3199219bcccd9dfa56bcc0d301d08407deaec55e5bdb62e2798600b6d75a775",
+   "bytes": 133985,
+   "read_at": "2026-11-10T19:45Z"
   },
   "https://docs.spinnable.ai/release-notes/2026-08-05": {
-   "sha256": "4ea7fdba1017416249e5aa88e5852dbaa8837554418f3e8240074d713c50e45c",
-   "bytes": 136790,
-   "read_at": "2026-11-10T18:44Z"
+   "sha256": "2460f07fc54c2741fae814adf6391e7eb41f37c6a8e54877a1b3454294443447",
+   "bytes": 137182,
+   "read_at": "2026-11-10T19:45Z"
   },
   "https://docs.spinnable.ai/release-notes/2026-10-28": {
-   "sha256": "3e1d8435beb22b547cfd1057560f72c94e96aee4a3b3df65e89f7d6fce4b7a88",
-   "bytes": 140766,
-   "read_at": "2026-11-10T18:44Z"
+   "sha256": "66c9eb59e08d910006b63a35fedd5abe1f5de4bfef47a8ff2272f879ccd3a0a7",
+   "bytes": 135269,
+   "read_at": "2026-11-10T19:45Z"
   },
   "https://docs.spinnable.ai/support/contact": {
-   "sha256": "3f2ac086be2cb2bcf215c7ab5416551554220786a7cfc5d2213507cc908dcb90",
-   "bytes": 163341,
-   "read_at": "2026-11-10T18:44Z"
+   "sha256": "85e1b88c1b6fd9a0d155146334004e522d32ff34c444b2d52b64285e57ee350e",
+   "bytes": 163715,
+   "read_at": "2026-11-10T19:45Z"
   },
   "https://docs.spinnable.ai/tools/overview": {
-   "sha256": "98954df3c93aac4508afefc36dac734a5b00103efc8eca9c1363037c84b9ebfd",
-   "bytes": 234728,
-   "read_at": "2026-11-10T18:44Z"
+   "sha256": "e175e5806f7aa1d76a912070440dce68dfdc36fba8693fb712f92f10b7bb4ea9",
+   "bytes": 235100,
+   "read_at": "2026-11-10T19:45Z"
   },
   "https://docs.spinnable.ai/troubleshooting/index": {
-   "sha256": "1ffe15fcec195f9f2788464fb0606da6137d9f12ec30908f931cc5b486b551c8",
-   "bytes": 250020,
-   "read_at": "2026-11-10T18:44Z"
+   "sha256": "dcf489600b0425cf996807f88f12b41d65e1ba10f0a12963af26f029d507c760",
+   "bytes": 250386,
+   "read_at": "2026-11-10T19:45Z"
   },
   "https://www.spinnable.ai/": {
    "sha256": "e524bed247dadd0eca56b19d8c15d4402114b66f247bd628787d39cb9ce6aada",
    "bytes": 387013,
-   "read_at": "2026-11-10T18:44Z"
+   "read_at": "2026-11-10T19:45Z"
   },
   "https://www.spinnable.ai/llms.txt": {
    "sha256": "c702a4fd1b2a1dcc565ed33c5f2aa79dc56085dabb2b2bb746d2a0e8189bd207",
    "bytes": 58211,
-   "read_at": "2026-11-10T18:44Z"
+   "read_at": "2026-11-10T19:45Z"
   },
   "https://www.spinnable.ai/privacy-policy": {
    "sha256": "7558a1dcef25c8a600513e59be6c15750da4f1f2c2cdd061424988a11ac91b3c",
    "bytes": 82161,
-   "read_at": "2026-11-10T18:44Z"
+   "read_at": "2026-11-10T19:45Z"
   }
  }
 }
