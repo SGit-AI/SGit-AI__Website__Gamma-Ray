@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.42",
+    "date": "2026-11-10",
+    "what": "Reports in the nav, tables stack on phones",
+    "by": "gamma.design@web-summit.dinis",
+    "from": "c5d874f7b"
+  },
+  {
     "version": "v0.0.41",
     "date": "2026-11-10",
     "what": "the walk links every provision to its own row",
