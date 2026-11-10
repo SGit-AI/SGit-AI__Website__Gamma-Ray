@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.36",
+    "date": "2026-11-10",
+    "what": "Replit is live; report method text from the data; claude-code-local round two answered (auto as shipped, S1 removed)",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "d4b05f607"
+  },
+  {
     "version": "v0.0.35",
     "date": "2026-11-10",
     "what": "round two of review on claude-code-local",
