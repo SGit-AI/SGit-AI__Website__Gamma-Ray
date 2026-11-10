@@ -126,6 +126,15 @@ What this settles: FACT-Ray is built inside this site first and moves to its own
 
 Read for this: "Introducing Fractal Semantic Graphs" on newsroom.sgit.ai and the reference card of *Fractal Semantic Graphs: Meaning Through Connectivity* on graphs.sgit.ai. A document titled "Trust through meaning" was not found on either site.
 
+## One workflow for the team and for pt.news (10 November, about 12:40 UTC)
+
+Given by voice in the conductor's session and recorded in full in PrompTugal__News__Website, `board/guidance/2026-11-10-pt-news-is-about-agents.md` (read there, not retold here). For this repository it means:
+
+> We are going to use what we created for the GAMMA-Ray workflow and the facts that we have there. What that allows us to do is create a mapping on where the teams are, or a particular product, or a particular agent is.
+
+- Each company the interview team talks to gets a GAMMA-Ray card, made before or after the interview, and the interview links to it. `gamma.studio@` makes it, through the usual rounds.
+- pt.news draws a visual newsroom of every actor and hand-off. FACT-Ray's actors and bands label who stands behind each fact, so these stay machine-readable and stable: `data/fact-ray/actors.json`, `data/fact-ray/nodes.json` (each fact with its claim, producer, validators and band), `data/evidence.json`, `data/cards.json` and `data/graphs/<id>.json`.
+
 ## The rules given with the brief
 
 Public sources only. No rating is published without its evidence. (The first brief also said: not without the company having seen it. The operator replaced that on 10 November 2026: a rating made from public data may be published, labelled as beta and as not seen by its subject.) No contact details anywhere. Never push to the main branch. The name and the backronym stay as chosen.
