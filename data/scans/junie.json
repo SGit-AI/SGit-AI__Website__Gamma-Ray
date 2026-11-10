@@ -321,6 +321,83 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "No change; both stay unclaimed and the two set-aside usage figures stay in not_credited."
+   },
+   {
+    "round": 2,
+    "answer": "I25",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Span re-anchored on the template's permissions block ('contents: write', on the page) and the note now says only what the block shows: three entries, each set to write; the adaptation sentence is dropped. Kept as I25 because the template names three repository scopes rather than all of them; no level rests on I25 alone (C2 holds through I23, R3 is not reached)."
+   },
+   {
+    "round": 2,
+    "answer": "I23",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Span re-anchored on the sentence that introduces the five action types ('There are five types of actions that can be allowed with the', one text node on the page; the full sentence continues 'allowlist.json file'), and the note now says it is a documented list in the user's allowlist file, not a measured grant. Mode default kept: the five types and the ask default exist as shipped."
+   },
+   {
+    "round": 2,
+    "answer": "I45",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note now says the sandbox limits filesystem access and restricts native edit tools, as the page says; span, mode and cfg unchanged."
+   },
+   {
+    "round": 2,
+    "answer": "I08",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the reviewer passes it."
+   },
+   {
+    "round": 2,
+    "answer": "I10",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "The GitHub Actions and GitLab clause is dropped, 'or' corrected to 'and' (DataGrip and the JetBrains Database plugin, as the post says), and the note is narrowed to what the new span shows: database work and code in one session, two systems. New span verified in the post, 13 words."
+   },
+   {
+    "round": 2,
+    "answer": "I56, I46",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; both stay removed and in not_credited from round one."
+   },
+   {
+    "round": 2,
+    "answer": "I47",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the reviewer passes it."
+   },
+   {
+    "round": 2,
+    "answer": "I20",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the reviewer passes it."
+   },
+   {
+    "round": 2,
+    "answer": "I65",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the reviewer passes it."
+   },
+   {
+    "round": 2,
+    "answer": "I48, I22, I61, I50, I52, I57, I58, S3, S1, S4, I04, I07, I11, I16, I17, I18, I19, I21, I38",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the reviewer re-checked these and passes them."
+   },
+   {
+    "round": 2,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "A4 is kept: it is marked available because A3 and A4 rest on I18 and I19, which the CLI page documents as brave mode Auto and On, and I10 now has a span showing database and code work in one session; the card claims the rule text only, and I12 and I13 are not claimed. C2 is kept: I38 (default) plus I23, whose span now names the five action types, with I25 now anchored on the permissions block as a second route. O3 is kept: besides the vendor post (I50), the SWE-rebench leaderboard at swe-rebench.com lists Junie and its notes say 'Added reference evaluation for Junie CLI' (fetched 10 November 2026, raw/ans-105.html), so the results are published by the benchmark itself; S3 and I57 hold the second half. R2 holds on I11 alone."
    }
   ]
  },
@@ -366,8 +443,8 @@
   },
   "I10": {
    "e": "https://blog.jetbrains.com/junie/2026/06/junie-coding-agent-out-of-beta/",
-   "n": "Junie works across the codebase, the terminal and the IDE debugger; it queries databases configured in the IDE through DataGrip or the JetBrains Database plugin, and reviews can be triggered from GitHub Actions or GitLab once that integration is set up.",
-   "span": "Junie connects to the databases configured in your IDE",
+   "n": "The release post says Junie connects to databases configured in the IDE through DataGrip and the JetBrains Database plugin and works on SQL in the same session as the code.",
+   "span": "writes, fixes, and validates SQL in the same session that handles your code",
    "g": "documented",
    "m": "default"
   },
@@ -433,15 +510,15 @@
   },
   "I23": {
    "e": "https://junie.jetbrains.com/docs/action-allowlist-junie-cli.html",
-   "n": "The Action Allowlist page enumerates five action types (fileEditing, executables, mcpTools, readOutsideProject, readSecretFile), each with rules set to allow or ask.",
-   "span": "Each rule must specify either a prefix or a pattern",
+   "n": "The Action Allowlist page documents a list of five action types (fileEditing, executables, mcpTools, readOutsideProject, readSecretFile), each taking allow or ask rules in the user's allowlist file; this is a documented list, not a measured grant.",
+   "span": "There are five types of actions that can be allowed with the",
    "g": "documented",
    "m": "default"
   },
   "I25": {
    "e": "https://junie.jetbrains.com/docs/junie-on-github.html",
-   "n": "The workflow template on the page sets the job's permissions to write on three repository scopes (contents, pull requests, issues), and the page says the user can adapt the templates' permissions.",
-   "span": "You can adapt the templates to configure triggers, permissions, branches, or output",
+   "n": "The page's junie.yaml workflow template declares a job permissions block with three entries, contents, pull-requests and issues, each set to write.",
+   "span": "contents: write",
    "g": "documented",
    "m": "available",
    "cfg": "github-action"
@@ -455,7 +532,7 @@
   },
   "I45": {
    "e": "https://junie.jetbrains.com/docs/junie-cli.html",
-   "n": "Sandbox mode, in the Early Access Program and off unless the user starts it, runs agent terminal commands in an OS-level sandbox (srt) that limits filesystem writes; MCP servers and hooks are not isolated by it.",
+   "n": "Sandbox mode, in the Early Access Program and off unless the user starts it, runs agent terminal commands in an OS-level sandbox (srt) that limits filesystem access and restricts native edit tools; MCP servers and hooks are not isolated by it.",
    "span": "wraps every agent-issued terminal command in an OS-level sandbox",
    "g": "documented",
    "m": "available",
@@ -649,72 +726,72 @@
   "https://blog.jetbrains.com/blog/2026/09/22/introducing-jetbrains-air/": {
    "sha256": "fd6e7c9c18eb17dbc62b36e013a2f870a681c7999b349b8cb960545e35f3d909",
    "bytes": 143939,
-   "read_at": "2026-11-10T12:48Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://blog.jetbrains.com/junie/2026/06/junie-coding-agent-out-of-beta/": {
    "sha256": "ac014f4922751d9ead7592eab04580fe14ee9b7c8ff39b47ec482bc64a755d9d",
    "bytes": 137398,
-   "read_at": "2026-11-10T12:48Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://junie.jetbrains.com/docs/action-allowlist-junie-cli.html": {
    "sha256": "ce31f17094967ff10ff0693ed127c537d65e11462658504452337f95be7fa4fa",
    "bytes": 15624,
-   "read_at": "2026-11-10T12:48Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://junie.jetbrains.com/docs/guidelines-and-memory.html": {
    "sha256": "383c91a53ceaf36e1e3b81027aa24dba3950dd6ec6df9d3cd1df8c81632efef3",
    "bytes": 12725,
-   "read_at": "2026-11-10T12:48Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://junie.jetbrains.com/docs/junie-cli-hooks.html": {
    "sha256": "b2b9042613fe2d801f9de60b9fc93a54220f74e3090d50ff54b33fad5b87ab84",
    "bytes": 71901,
-   "read_at": "2026-11-10T12:48Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://junie.jetbrains.com/docs/junie-cli-mcp-configuration.html": {
    "sha256": "6ee3c2568d54ec5b6a4813b265b98a1b1e5cccc20e6065c1a79913a172b0ff91",
    "bytes": 19644,
-   "read_at": "2026-11-10T12:48Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://junie.jetbrains.com/docs/junie-cli.html": {
    "sha256": "b0b650713bc6581d38f8b8dee5bb2127b6aeedd81b91766c7b41dc92c073c750",
    "bytes": 60954,
-   "read_at": "2026-11-10T12:48Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://junie.jetbrains.com/docs/junie-headless.html": {
    "sha256": "ead8a5d98b378046b480cca4ec55fb56dd945a03cce901a4021e87294c6777f1",
    "bytes": 8626,
-   "read_at": "2026-11-10T12:48Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://junie.jetbrains.com/docs/junie-ide-plugin.html": {
    "sha256": "984128be0de34df9cc47125660d23cc3446cfb0cd772733ecd1b9deeaa9eb3f1",
    "bytes": 42649,
-   "read_at": "2026-11-10T12:48Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://junie.jetbrains.com/docs/junie-on-github.html": {
    "sha256": "cf442bf79a61c709c17d95d9a30f24b0d403d29fb5b5289a941b877decb77b10",
    "bytes": 28419,
-   "read_at": "2026-11-10T12:48Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://junie.jetbrains.com/docs/slash-commands.html": {
    "sha256": "22503c010b2b1eb3bec8258c0fd5dd5421fd648f76d6b12527d806edb8d81735",
    "bytes": 35236,
-   "read_at": "2026-11-10T12:48Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://junie.jetbrains.com/llms.txt": {
    "sha256": "47614ecd4279c07e29dde74dfd53aa5e25cbb0c7b0560b3cda661fab7255872c",
    "bytes": 1440,
-   "read_at": "2026-11-10T12:48Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://www.jetbrains.com/legal/docs/terms/jetbrains-ai-service/": {
    "sha256": "e9d6b9a0881df8bd5f81cec376d5e66b66476d2c88ab392a63849530792e8144",
    "bytes": 93667,
-   "read_at": "2026-11-10T12:48Z"
+   "read_at": "2026-11-10T15:46Z"
   },
   "https://www.jetbrains.com/legal/docs/terms/jetbrains-ai/service-providers/": {
    "sha256": "a9959e75c29f7a7208efb69f2ab6ba605e5c8c559498ff1449bf3ed66ad8cd6f",
    "bytes": 49650,
-   "read_at": "2026-11-10T12:48Z"
+   "read_at": "2026-11-10T15:46Z"
   }
  }
 }
