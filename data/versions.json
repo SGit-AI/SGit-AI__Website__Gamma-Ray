@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.60",
+    "date": "2026-11-10",
+    "what": "FACT-Ray, Draft status and the well-known file on the briefing and method note",
+    "by": "gamma.editor@web-summit.dinis",
+    "from": "cf1bda0a3"
+  },
+  {
     "version": "v0.0.59",
     "date": "2026-11-10",
     "what": "anchors back on /questions/ and /provisions/, gated; the reviewer may run rounds in parallel",
