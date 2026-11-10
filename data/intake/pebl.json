@@ -3,21 +3,72 @@
  "company": "Pebl",
  "domain": "hellopebl.com",
  "products": [
-  { "name": "Alfie", "said": "Your global hiring co-pilot.", "agent_candidate": true }
+  {
+   "name": "Alfie",
+   "said": "Your global hiring co-pilot.",
+   "agent_candidate": true
+  }
  ],
- "seen": { "event": "Web Summit 2026", "where": "stand E163", "on": "2026-11-10", "by": "Dinis Cruz", "medium": "two photos of the stand" },
- "photo": { "held_by": "Dinis Cruz", "published": false, "why": "they show people" },
+ "seen": {
+  "event": "Web Summit 2026",
+  "where": "stand E163",
+  "on": "2026-11-10",
+  "by": "Dinis Cruz",
+  "medium": "two photos of the stand"
+ },
+ "photo": {
+  "held_by": "Dinis Cruz",
+  "published": false,
+  "why": "they show people"
+ },
  "booth_claims": [
-  { "text": "Meet Alfie. Your global hiring co-pilot.", "reads": "S2·R3·A0" },
-  { "text": "Build teams anywhere.", "reads": "S2·R3·A0" },
-  { "text": "Scale your global workforce fast", "reads": "S2·R3·A0" },
-  { "text": "Hire in 185+ countries without entities", "reads": "S2·R3·A0" },
-  { "text": "End-to-end global payroll", "reads": "S2·R3·A0" },
-  { "text": "Built-in compliance with local labor laws", "reads": "S2·R3·A0" },
-  { "text": "Hire in minutes, not months", "reads": "S2·R3·A0" }
+  {
+   "text": "Meet Alfie. Your global hiring co-pilot.",
+   "reads": "S2·R3·A0"
+  },
+  {
+   "text": "Build teams anywhere.",
+   "reads": "S2·R3·A0"
+  },
+  {
+   "text": "Scale your global workforce fast",
+   "reads": "S2·R3·A0"
+  },
+  {
+   "text": "Hire in 185+ countries without entities",
+   "reads": "S2·R3·A0"
+  },
+  {
+   "text": "End-to-end global payroll",
+   "reads": "S2·R3·A0"
+  },
+  {
+   "text": "Built-in compliance with local labor laws",
+   "reads": "S2·R3·A0"
+  },
+  {
+   "text": "Hire in minutes, not months",
+   "reads": "S2·R3·A0"
+  }
  ],
  "note": "One line on the stand is partly hidden behind people (\"Yes... there.\") and is not transcribed. A side panel begins \"Trusted worldwide\" and a ranking (\"#1 Rated\"); the rest is out of frame and is not transcribed.",
- "triage": { "agent": null, "why": "Not read yet. \"Co-pilot\" is a candidate, not evidence: whether Alfie acts on its own is for the public pages to say." },
+ "triage": {
+  "agent": true,
+  "why": "Pebl's own pages say Alfie completes tasks itself inside the platform, not only answers: the Alfie page says to \"Submit or approve time off\" through Alfie, and the release of 17 June 2026 says it \"completes approvals, workforce requests, reporting\". It acts within a conversation a person starts; how far it acts without a person is for the scan.",
+  "sources": [
+   "https://hellopebl.com/platform/alfie-ai-assistant/",
+   "https://hellopebl.com/news/pebl-says-hr-chatbot-era-ending-alfie-evolves-assistant-workforce-agent/"
+  ],
+  "read": "2026-11-10",
+  "by": "gamma.field@web-summit.dinis"
+ },
  "scan": null,
- "status": "intake"
+ "status": "drafting",
+ "identified": {
+  "company": "Pebl (the new name of Velocity Global, LLC, per the site's footer and its rebrand news)",
+  "domain": "hellopebl.com",
+  "agent_part": "Alfie, the assistant embedded in the Pebl platform",
+  "source": "https://hellopebl.com/platform/alfie-ai-assistant/",
+  "read": "2026-11-10"
+ }
 }
