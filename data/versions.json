@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.130",
+    "date": "2026-11-10",
+    "what": "re-check of spinnable-ai-employees (pass)",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "0edf0befb"
+  },
+  {
     "version": "v0.0.129",
     "date": "2026-11-10",
     "what": "Pebl Alfie: round three answered, pages cited by not_credited captured and hashed",
