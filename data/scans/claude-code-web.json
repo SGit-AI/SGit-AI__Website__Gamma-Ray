@@ -338,6 +338,59 @@
       "finding": "Opened each source. The note matches the page; grade and mode are right. I25 matches \"your GitHub credentials stay encrypted on Anthropic's servers and never enter a session's VM\". I11 is correctly the default because the Trusted level reaches allowlisted domains."
      }
     ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "I18",
+      "severity": "should-fix",
+      "finding": "Argued against Autonomy 4, which here is I10 (default), I18 (default) and, under the corrected rule, no S1. The new I18 source is right and the span is exact: on the web quickstart, \"Accept edits: Claude makes changes and pushes a branch without stopping for approval\", with Auto (a classifier reviews) and Plan (waits for approval of an approach before editing) beside it, and \"Cloud sessions don't offer Manual or Bypass permissions\". I confirmed the claim the note adds on the permission modes page: \"Accept edits corresponds to default mode: cloud sessions pre-approve file edits regardless of mode\". That sentence is not on the page the answer cites; the answer should cite the permission modes page as well, or the note should say where it comes from. Against the level: in the default mode nobody approves anything before the push, so \"the person approves critical decisions only\" holds only because the critical decision, merging, is outside the session. The note says the person reviews the result; that is on the web page (Review changes), and I accept it as the basis."
+     },
+     {
+      "answer": "I10",
+      "severity": "should-fix",
+      "finding": "Same argument as Replit and Manus. \"The repository, the shell and the code host\" is three parts of one coding task. The rule counts it, and Autonomy 4 follows from it with I18; nothing cited shows a multi-step workflow across systems. Condition for sign-off: the card says A3 is the level evidenced by actions and that A4 rests on a count of reached systems, as it does on the other cards. This is a rule matter, already with gamma-ray@."
+     },
+     {
+      "answer": "A3 without S1",
+      "severity": "note",
+      "finding": "Under the corrected rule (Spectrum 0.2) Autonomy 3 needs no S1, and this card has none: no source names a customer or gives usage for cloud sessions. The card therefore reads Acts and Orchestrates with no public evidence of anyone using it. That is the rule, not this scan, and the \"in production\" badge is not shown. I do not object; the card should not word A3 as in production."
+     },
+     {
+      "answer": "I56",
+      "severity": "should-fix",
+      "finding": "Round one finding repeated from the local scan: the note says pull request descriptions get \"a Generated with Claude Code line\". The settings reference says \"pull request descriptions get plain text\" and gives no wording. Remove the wording. The commit trailer is on the page (\"Default: unset, so Claude Code adds Co-Authored-By\"), and the span is the page's sentence about the name of the model, which does not by itself say AI; use the trailer sentence."
+     },
+     {
+      "answer": "I45",
+      "severity": "note",
+      "finding": "Restored under the Spectrum reading. The note does not say what enforces the limit, which that reading asks for (\"say in the note what enforces it\"). The source says the session's network reaches package registries and allowlisted domains and \"nothing else\"; the cloud environments page names the proxies that enforce it. Name it. No effect on any level here (Control is below 1)."
+     },
+     {
+      "answer": "I38 and I28",
+      "severity": "pass",
+      "finding": "Removed in answer to round one, with reasons that match the pages: a push does not wait for a person, and a key attached for listed hosts is not a token bound to its service. Control falls to none; that is right on this evidence."
+     },
+     {
+      "answer": "I12",
+      "severity": "pass",
+      "finding": "Re-sourced to the cloud page. Span \"Agent teams are off by default but can be enabled\" is exact (10 words), mode available (teams). Round one finding answered."
+     },
+     {
+      "answer": "I61, I23, I46",
+      "severity": "pass",
+      "finding": "I61: model configuration page, span exact. I23: the note now says the measured shape is one operator's configured session with its commit hooks and signing identity; I checked it against the profile. I46: names which row is observed and which self-reported. All answered."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Levels three and four: Autonomy 4 only. Reach 2, Openness 2, Control none are below three. Verdict pass, on the conditions that the I56 wording is removed, the I18 note cites its second page and the card names the configurations (it does)."
+     }
+    ]
    }
   ],
   "note": "Published as an example on 10 November 2026, before the review workflow existed. Mapped by one agent. It goes through two rounds of review next.",
