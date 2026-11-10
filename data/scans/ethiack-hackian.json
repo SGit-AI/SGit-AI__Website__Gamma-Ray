@@ -463,6 +463,41 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "No change; all re-verified by the reviewer as exact and correctly graded."
+   },
+   {
+    "round": 4,
+    "answer": "I19",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Narrowed, not re-argued: the note now says the statement is for agentic pentests only, that the page does not say the autonomy is full, and puts the visibility clause of the test-details activity log on the answer itself instead of by reference. Span unchanged and re-verified on a fresh fetch (raw/ans-r4-003.txt; the visibility clause on raw/ans-r4-002.txt)."
+   },
+   {
+    "round": 4,
+    "answer": "I04 (not_credited)",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Conceded: the round 3 response overstated what was done. One I04 entry is re-added, sourced to the captured product page ethiack.com/hackian, whose two phrases were re-verified on a fresh fetch (raw/ans-r4-001.txt); the Introducing Hackian post is not captured, so its entry is dropped rather than re-added."
+   },
+   {
+    "round": 4,
+    "answer": "not_credited sources",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Conceded by cutting: the three entries that quoted uncaptured pages (I11 through Integrations, I57 through the Updates feed, I57 through the Invalid status) are removed, and the Reach 2 entry is rewritten without the Integrations page and sourced to the captured Beacon page. No not_credited entry now cites an uncaptured page."
+   },
+   {
+    "round": 4,
+    "answer": "I10, I57, I39, I22, S1, I08, I11, I20, I41, I47, I50, S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; the reviewer re-verified all spans, grades and modes."
+   },
+   {
+    "round": 4,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No level change: A4 R2 C1 O1 stands with I19 narrowed to what the page says (agentic pentests, not 'full', visibility through the log); the reviewer's note that Autonomy rests on documented vendor statements, I19 the weakest, is accepted and the card claims nothing observed for Autonomy."
    }
   ]
  },
@@ -510,7 +545,7 @@
   },
   "I19": {
    "e": "https://docs.ethiack.com/docs/portal/tests/agentic-pentest-policy-guidelines",
-   "n": "For agentic pentests, the policy guidelines say the autonomous agent relies on the customer's written policy, with guardrails on what it must not do, to make its decisions in real time; the monitoring half is the activity log cited for I41.",
+   "n": "For agentic pentests only, the policy guidelines say the autonomous agent makes its decisions in real time from the customer's written policy, with guardrails on what it must not do; the page does not say the autonomy is full, and the person's view is the test-details activity log (I41), which gives clients visibility into what is being tested.",
    "span": "an agentic test relies on this policy to make decisions in real time",
    "g": "documented",
    "m": "default"
@@ -587,24 +622,9 @@
    "source": "https://docs.ethiack.com/docs/portal/tests/agentic-pentest-policy-guidelines"
   },
   {
-   "what": "I11 through the Integrations page (Slack, Jira Cloud, Splunk, webhooks, CI/CD)",
-   "why": "These are integrations of the Ethiack platform that route findings and alerts into the customer's tools, not tools the agent uses across a trust boundary.",
-   "source": "https://docs.ethiack.com/docs/portal/integrations"
-  },
-  {
-   "what": "I57 through the finding Updates feed",
-   "why": "The feed of comments 'between all participants' is described with ethical hackers and triagers of an engagement; the Support Portal is the general channel and is cited instead.",
-   "source": "https://docs.ethiack.com/docs/portal/findings/details"
-  },
-  {
-   "what": "I57 through the Invalid finding status",
-   "why": "The status flow page defines Invalid as 'usually assigned to vulnerabilities that are false positives' but does not say the customer can set it or contest a finding with it; it is a status, not a channel.",
-   "source": "https://docs.ethiack.com/docs/portal/findings/vulnerability-status-flow"
-  },
-  {
-   "what": "Reach 2 read as connectors",
-   "why": "Neither credited Reach answer is a connector the agent uses; the Integrations page (Slack, Jira Cloud, Splunk, webhooks, CI/CD) routes the platform's findings and stays not credited to I11. The level is met by the rule any(I10, I11), not by connectors.",
-   "source": "https://docs.ethiack.com/docs/portal/integrations"
+   "what": "I04 (generates and executes code with privileges)",
+   "why": "The product page's 'Non-destructive exploit generation' and 'builds and executes sophisticated exploit chains' describe testing against the customer's targets; they do not show code executed with local or cloud privileges. No level uses it.",
+   "source": "https://ethiack.com/hackian"
   }
  ],
  "announced": [
@@ -651,59 +671,59 @@
  ],
  "captures": {
   "https://docs.ethiack.com/docs/general/support-portal": {
-   "sha256": "64c2744300c3c844a49ea680a03132de538886b95aeaef716fec2b6ca7583bdd",
+   "sha256": "96be5f44d0d7b2bf6b0c406812b22279133e0c9fe9104462458920450321507a",
    "bytes": 230735,
-   "read_at": "2026-11-10T18:46Z"
+   "read_at": "2026-11-10T19:44Z"
   },
   "https://docs.ethiack.com/docs/portal/surface/configuring-your-beacon": {
-   "sha256": "42e46ff48d128a6b639f83859143f64d5391eeeee4d941bd4b19880c54c50a03",
+   "sha256": "84c79566bf725c0148adf2f4f5f26f0dec4c732e56c80d9ef0ef5028e8e43857",
    "bytes": 343242,
-   "read_at": "2026-11-10T18:46Z"
+   "read_at": "2026-11-10T19:44Z"
   },
   "https://docs.ethiack.com/docs/portal/tests/agentic-pentest-policy-guidelines": {
-   "sha256": "5c1fef33a54a2908fa3550b4aaf1a77b976455813ee083284ff78718cbfd57e2",
+   "sha256": "544cfd92b23d9220e14ba206fffbb89e3d141c86fb1916915c2e845c753c6979",
    "bytes": 246595,
-   "read_at": "2026-11-10T18:46Z"
+   "read_at": "2026-11-10T19:44Z"
   },
   "https://docs.ethiack.com/docs/portal/tests/agentic-pentests": {
-   "sha256": "0cb62d70e5725a9b7169b5ef71eb592c7c4dee8cfd3bbcbb31eea0a210649d16",
+   "sha256": "fcb64787931f25ed2bc023a2ac8844756c216437b4b94489394eb15141c20114",
    "bytes": 233529,
-   "read_at": "2026-11-10T18:46Z"
+   "read_at": "2026-11-10T19:44Z"
   },
   "https://docs.ethiack.com/docs/portal/tests/continuous-adversarial-exposure-validation": {
-   "sha256": "5a17e7ce54dd7b455d16745609b2de35d5717a51588af5918b9d46050d0194c4",
+   "sha256": "ee80814e6e113dc508fe5828bc6030c04b3c00fd57a370ee316a00fa440f5269",
    "bytes": 230332,
-   "read_at": "2026-11-10T18:46Z"
+   "read_at": "2026-11-10T19:44Z"
   },
   "https://docs.ethiack.com/docs/portal/tests/human-in-the-loop": {
-   "sha256": "af014a8ffe6dd86b82d0d799068960a59677df1ac002e33ce845d506dbb7ef2f",
+   "sha256": "73a997c1b8b3e142d80e45117af9dcd57d8dd50a45c5f53011a4f00c5bbf3d95",
    "bytes": 227727,
-   "read_at": "2026-11-10T18:46Z"
+   "read_at": "2026-11-10T19:44Z"
   },
   "https://docs.ethiack.com/docs/portal/tests/test-details": {
-   "sha256": "8f5b86d1a387db7ac18ab5f96fd4fb86be7f5951d2f0c56004d6b4438cb06d80",
+   "sha256": "ae280c9d1654ffba3f78f1ddbdd0d3d52882712e36db12d8feeb5004bb57c1e5",
    "bytes": 254499,
-   "read_at": "2026-11-10T18:46Z"
+   "read_at": "2026-11-10T19:44Z"
   },
   "https://docs.ethiack.com/llms.txt": {
    "sha256": "f0f352298b06ae2a1ed034ee626a9d45baa156dd50d44dfba8cfa43006d1b0bb",
    "bytes": 54222,
-   "read_at": "2026-11-10T18:46Z"
+   "read_at": "2026-11-10T19:44Z"
   },
   "https://ethiack.com/hackian": {
    "sha256": "5f4cecee0abc3d7ac58c29535d3c95b746dd85ceea6b90093944eb9bc9a1a5fe",
    "bytes": 420871,
-   "read_at": "2026-11-10T18:46Z"
+   "read_at": "2026-11-10T19:44Z"
   },
   "https://ethiack.com/info-hub/case-studies/scaling-security-how-uporto-and-ethiack-protected-5000-assets-with-ai-powered-intelligence": {
    "sha256": "5b34d184cb10e624233d924e435abaee8ea0c60d5f577a8952b56ab05184f3c5",
    "bytes": 286290,
-   "read_at": "2026-11-10T18:46Z"
+   "read_at": "2026-11-10T19:44Z"
   },
   "https://ethiack.com/info-hub/research/ai-pentesting-benchmarks-are-so-bad-we-made-a-new-one": {
    "sha256": "a80896db5705974ddc4ee66d581bcbc627dd3118949bcfebec066626dc484ea3",
    "bytes": 320186,
-   "read_at": "2026-11-10T18:46Z"
+   "read_at": "2026-11-10T19:44Z"
   }
  }
 }
