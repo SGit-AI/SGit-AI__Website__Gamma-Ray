@@ -117,3 +117,4 @@ main :is(h2,h3)[id]:target{scroll-margin-top:90px;background:var(--band);box-sha
 .fl-kind{font:600 10.5px var(--sans);text-transform:uppercase;letter-spacing:.08em;color:var(--ink3)}.fl-actor{font:500 12.5px var(--mono);color:var(--ink2);margin-top:2px;overflow-wrap:anywhere}
 .fl-meta{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:13px;color:var(--ink2);margin-top:6px}.fl-meta i{font-style:normal;font-weight:600;color:var(--ink3);margin-right:4px}
 .fl-trust{font:600 12px var(--mono);text-decoration:none;border:1px solid var(--accent);border-radius:999px;padding:2px 9px;color:var(--accent)}.fl-why{font-size:13px;color:var(--ink3)}
+.sp-dim{display:flex;flex-direction:column}.sp-dim .sp-pips{margin-top:auto}.sp-dim em{margin-bottom:8px}
