@@ -69,6 +69,64 @@
      }
     ]
    }
+  ],
+  "responses": [
+   {
+    "round": 1,
+    "answer": "I20",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Span replaced with the exact words 'finds, fixes, and verifies vulnerabilities in your source code', verified on the home page fetched 10 November 2026; note, grade and mode unchanged."
+   },
+   {
+    "round": 1,
+    "answer": "I26",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Dropped the aisle-security half of the note: the string is only in a mock-up graphic on the open-source page, which is not a statement, so it moves to not_credited. I26 now rests on the OpenSSL story span, re-verified."
+   },
+   {
+    "round": 1,
+    "answer": "I18, A4",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: I18 stays documented, mode available, cfg pull-requests, and its note already says no default is stated; the available flag on A4 must stay visible on any display."
+   },
+   {
+    "round": 1,
+    "answer": "S1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note rewritten to say plainly that the named-customer limb is what is counted and that the page publishes no pull request or task count; span re-verified, grade documented and mode default unchanged."
+   },
+   {
+    "round": 1,
+    "answer": "S4",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Credited S4 documented, mode available, cfg mcp: the scope counts a published MCP server, and AISLE publishes one for customers' coding agents to call. The announcement post now returns 404, so the source is the October rollout post (200 on 10 November 2026) with a verified span; the MCP entry leaves not_credited."
+   },
+   {
+    "round": 1,
+    "answer": "I41",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: graded documented, counts toward no level, and the note already says documented only, not observed."
+   },
+   {
+    "round": 1,
+    "answer": "I04, I08, I10, I11, I21, I22, I38, I57, I58, I67, I68",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; passed by the reviewer."
+   },
+   {
+    "round": 1,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "I20 span and I26 source fixed as asked; S4 added lifts Reach (see scoring), Autonomy, Control and Openness unchanged."
+   }
   ]
  },
  "assessment": {
@@ -128,7 +186,7 @@
   "I20": {
    "e": "https://aisle.com/",
    "n": "The home page states what the system is for: finding, fixing and verifying vulnerabilities in source code.",
-   "span": "AISLE finds, fixes, and verifies vulnerabilities autonomously",
+   "span": "finds, fixes, and verifies vulnerabilities in your source code",
    "g": "documented",
    "m": "default"
   },
@@ -148,7 +206,7 @@
   },
   "I26": {
    "e": "https://aisle.com/customers/openssl",
-   "n": "AISLE's OpenSSL story states maintainers invoke it by tagging the GitHub handle @aisle-analyzer, and the open-source page shows an 'aisle-security' bot account in a mock-up. Stated by AISLE; the accounts were not checked on GitHub.",
+   "n": "AISLE's OpenSSL story states maintainers invoke it by tagging the GitHub handle @aisle-analyzer. Stated by AISLE; the account was not checked on GitHub.",
    "span": "Maintainers can trigger an AISLE review simply by tagging @aisle-analyzer",
    "g": "documented",
    "m": "deployed"
@@ -197,10 +255,18 @@
   },
   "S1": {
    "e": "https://aisle.com/customers/productboard",
-   "n": "A customer story names Productboard, rolled out across all 56 repositories, as using AISLE's automated triage and AI-powered pull requests in its workflow. CVE credits to Aisle Research name staff researchers and are not counted here.",
+   "n": "A customer story names Productboard, which rolled AISLE out across all 56 repositories and integrated its AI-powered pull requests into its workflow; the named customer is what is counted, as the page publishes no count of pull requests or tasks. CVE credits to Aisle Research name staff researchers and are not counted here.",
    "span": "Jira ticket creation, Slack notifications, and AI-powered pull requests",
    "g": "documented",
    "m": "default"
+  },
+  "S4": {
+   "e": "https://aisle.com/blog/aisle-october-rollout",
+   "n": "AISLE's October rollout post states it offers an AISLE MCP server that customers' AI coding agents, such as Claude Code and Cursor, connect to and read open issues from; the separate announcement post (aisle.com/blog/announcing-the-aisle-mcp-server, captured earlier) describes it as read-only with five tools and returned 404 on 10 November 2026.",
+   "span": "Developers can connect AISLE to AI agents that support the Model Context Protocol",
+   "g": "documented",
+   "m": "available",
+   "cfg": "mcp"
   }
  },
  "not_credited": [
@@ -210,9 +276,14 @@
    "source": "https://openssl-library.org/news/vulnerabilities/index.html"
   },
   {
-   "what": "A read-only MCP server lets a customer's coding agent read AISLE's findings.",
-   "why": "An agent-to-tool interface over AISLE's data, not a protocol between agents; its read-only limit is the channel's, not AISLE's own access.",
-   "source": "https://aisle.com/blog/announcing-the-aisle-mcp-server"
+   "what": "OpenSSL, curl and Samba advisories credit vulnerabilities to researchers of Aisle Research.",
+   "why": "The credits name people, so they show AISLE's team at work, not the agent acting on its own.",
+   "source": "https://openssl-library.org/news/vulnerabilities/index.html"
+  },
+  {
+   "what": "The open-source page shows an 'aisle-security' bot account inside a styled mock-up of a GitHub thread.",
+   "why": "A mock-up graphic, not a statement that the account exists; I26 rests on the OpenSSL story alone.",
+   "source": "https://aisle.com/open-source"
   }
  ],
  "announced": [
@@ -263,54 +334,59 @@
  ],
  "captures": {
   "https://aisle.com/": {
-   "sha256": "18dd9a5b479ea1fa4089d07ddd95b031cba422e7464c46a7f3a8a4a90e7679e8",
-   "bytes": 319332,
-   "read_at": "2026-11-10T06:54Z"
+   "sha256": "848f8db2f71c80edc24b7abf5c213fae9ae79e8ce0c01ccd027d194f044352f9",
+   "bytes": 319177,
+   "read_at": "2026-11-10T12:47Z"
+  },
+  "https://aisle.com/blog/aisle-october-rollout": {
+   "sha256": "71974fcd911a9ebf6b882868bd3f594f787b08038a0f8a5798d9b9053613f6b7",
+   "bytes": 233308,
+   "read_at": "2026-11-10T12:47Z"
   },
   "https://aisle.com/customers/openssl": {
-   "sha256": "3795f9e564eed2bd476b68799785a7335223291d854cff7b8a600f58059eec11",
-   "bytes": 216193,
-   "read_at": "2026-11-10T06:54Z"
+   "sha256": "fee353514086bdabe947594230fcfccddbddf58fd1467fdf64b2bb352fdd9604",
+   "bytes": 216195,
+   "read_at": "2026-11-10T12:47Z"
   },
   "https://aisle.com/customers/productboard": {
-   "sha256": "ffe473f71f837ca35a0fee742d7808eccbaf67a3f042360cda286a9878598245",
-   "bytes": 199492,
-   "read_at": "2026-11-10T06:54Z"
+   "sha256": "e1aa951fd045202c68a13f1e2aaf3626c396fb801d5eaa4aaac7e5a705df549d",
+   "bytes": 199585,
+   "read_at": "2026-11-10T12:47Z"
   },
   "https://aisle.com/deployment/managed-saas": {
-   "sha256": "7b2be1d709d597eb1245b870cf4685f3121b4b7df1a114c4551e5431c1d2fd2d",
-   "bytes": 181969,
-   "read_at": "2026-11-10T06:54Z"
+   "sha256": "7a9b6a3e62391582d48334c967e0a3c612fce3f65d5e57b8ddf4e2b83fada86f",
+   "bytes": 181971,
+   "read_at": "2026-11-10T12:47Z"
   },
   "https://aisle.com/enterprise": {
-   "sha256": "a76a27c511d6ed26c5958496d73f1191bb3520b53fdd7d26e1d405c947c97725",
-   "bytes": 290149,
-   "read_at": "2026-11-10T06:54Z"
+   "sha256": "108ae2e4849f4306c59755035314d0b441970ba551d832fdfd81a622b223c0ce",
+   "bytes": 290151,
+   "read_at": "2026-11-10T12:47Z"
   },
   "https://aisle.com/platform": {
-   "sha256": "c58814093dde44535c4320baaf1f7199e8bcc980229778a3d0b1d15e347940f2",
-   "bytes": 563256,
-   "read_at": "2026-11-10T06:54Z"
+   "sha256": "6aed356b77deb4bbeacb88fefadb571a14990f69934247d888adfd13837b5084",
+   "bytes": 563214,
+   "read_at": "2026-11-10T12:47Z"
   },
   "https://aisle.com/platform/autonomous-remediation": {
-   "sha256": "f23f884729842a5412ec2bddfe08980c42e615a17ac4b3bcff69d109b8542cc2",
-   "bytes": 228619,
-   "read_at": "2026-11-10T06:54Z"
+   "sha256": "b989d6051a9cb9a74f272f970e566460670b47ea8c9341af66a2a75d2b5b5825",
+   "bytes": 228621,
+   "read_at": "2026-11-10T12:47Z"
   },
   "https://aisle.com/platform/vulnerability-discovery": {
-   "sha256": "b7d3a3e66a43acfe58a05fd33f23dc438580fbdae92abf6d2bd1a24b9f1caf12",
-   "bytes": 281628,
-   "read_at": "2026-11-10T06:54Z"
+   "sha256": "dcfe4a79448567eeffc287f5b1ccd54caa3bda7ed8a0630eb7898913e62db255",
+   "bytes": 281630,
+   "read_at": "2026-11-10T12:47Z"
   },
   "https://aisle.com/platform/vulnerability-triage": {
-   "sha256": "ef7b92d02f624f06d1e0341acd336808aba08400b3484c5eec035d7f2128acad",
-   "bytes": 213443,
-   "read_at": "2026-11-10T06:54Z"
+   "sha256": "3e6b9fe2b5ce94a497d975ad0406fc57ec9427cf218caa742bb69a072ed72a51",
+   "bytes": 213445,
+   "read_at": "2026-11-10T12:47Z"
   },
   "https://aisle.com/privacy-policy": {
-   "sha256": "2ee691b4babcf83f80b72eff57e7fcf4bf3376d889b9b24461ccdd96d75fe641",
-   "bytes": 154604,
-   "read_at": "2026-11-10T06:54Z"
+   "sha256": "937e6690d894f36021457775019f45dac76c45124e107711afe11833ed11256e",
+   "bytes": 154606,
+   "read_at": "2026-11-10T12:47Z"
   }
  }
 }
