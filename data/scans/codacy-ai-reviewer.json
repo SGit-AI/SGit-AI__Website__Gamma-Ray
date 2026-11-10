@@ -169,6 +169,29 @@
       "finding": "Correction to the round-two finding on I47: it said that without I47 the card is not publishable because no card goes below level one in every dimension. That was wrong. The rule needs level one or more in at least one dimension, and this card has Autonomy 1, Reach 2 and Openness 2. Without I47 the Control dimension shows no level and the card still publishes."
      }
     ]
+   },
+   {
+    "round": 4,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "I47",
+      "severity": "pass",
+      "finding": "The latest-round should-fix on I47 is fully answered. I47 is removed from answers, so no credit rests on a stretched span. A new not_credited entry records the review.md sentence for the Dinis decision. Fetched the Codacy AI page: 'These instructions are specified in a review.md file' and 'help the AI Reviewer understand the structure of the code, the business logic of the project, and your own preferences' are both present and exact; the out-of-scope line is part of the example prompt for drafting the file; the learning section describes adapting from replies and reactions. The studio response is true of the scan as it stands. Control now reads not yet evidenced, next unlock I47, which matches the card computation."
+     },
+     {
+      "answer": "I01, I22, S1, I25, I15, I57, I11, I10, S3, I20, I58",
+      "severity": "pass",
+      "finding": "Re-fetched all six sources (all 200). The only change in the scan since the round three commit is the removal of I47, the new not_credited entry, the round three responses and refreshed read dates and hashes. Every remaining span is exact in its source and under fifteen words (6 to 14 words). Grades and modes are unchanged (S3 observed; all others documented), and the studio's 'pass acknowledged' responses are true. The not_credited quotes are exact and the names in them are on the cited page. No em-dash in the scan. Round three: 6 of 6 findings fully answered (I47, I01, I22, the grouped pass, levels note, round two record correction)."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card computed: A1 R2 C- O2, stage Exploring. The weakest credited level is Autonomy 1, which rests on I15 alone (a review triggered on demand, mode available in the manual-review configuration); if I15 is removed Autonomy reads not yet evidenced with I15 shown as the next unlock and the card still publishes on Reach 2 and Openness 2. Reach 2 survives losing I10 because I11 stands alone; Openness 2 needs both I22 and I58. Control is empty, and the page notes the reviewer also reads agent guideline files (AGENTS.md, CLAUDE.md and others) and a review.md; whether those count as a limit in prose is Dinis's question, not a credit."
+     }
+    ]
    }
   ],
   "responses": [

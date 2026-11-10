@@ -121,6 +121,44 @@
       "finding": "Card (repo scorer): A1, R2, C1, O2; no level three or four, so I argued against the weakest credited levels. A1: one indicator, I15, an artefact (a help page) but of a single sentence; if it is removed the card has no Autonomy level and no card can be published (no card below level one in every dimension), so the whole card hangs on it; see I15. R2: I11 alone, mode available. The fact is real (terms 2.2 and 3.4, read by me) but the Citius integration is experimental and, under terms 3.1 and 3.2, given only to users ByTheLaw chooses and provided 'as is'; remove I11 and Reach drops to the level I09 gives. C1: I47 and I38 are both prose in one document, the Citius terms version 1.2 in force since 6 November 2026, four days before the read, and terms 3.2 and 13.1 let ByTheLaw change them; both are mode available and describe the optional integration, so the Control level says nothing about the chat everyone gets (I39 is not credited and has no current page). If I38 is removed C1 still holds on I47. O2: I22 and I58 are two help pages, artefacts not adjectives, default mode; sturdy. Modes are honest on all four. Reviewer correction: the rule that no card goes below level one means level one or more in at least one dimension; this card also has Reach 2 and Openness 2, so it would still publish without I15. The argument stands only as a statement that Autonomy 1 rests on I15 alone."
      }
     ]
+   },
+   {
+    "round": 3,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "announced",
+      "severity": "should-fix",
+      "finding": "Partly answered. The 63-hour and ECO clause is gone and the remaining items are true on the live pages (I fetched them on 10 November 2026): 'Reduce up to 20 weekly hours', 'fully autonomous' and 'service-as-a-software' on the product page, the paid pilot with an Iberian NPL servicer on the NPL page, and 'International expansion is planned' on the home page (captured). But the second half of the round 2 finding is not done: the product page (bythelaw.com/en/product/) and the NPL page (bythelaw.com/en/npl/) are still cited by three announced items and are still absent from `captures`, so no hash is recorded for them. The studio's reply says they are 'proposed in announced_edits', but the scan has no such field (it is null). Run tools/capture.mjs for the two pages, or cite the captured home page and llms.txt where they say the same, before publication."
+     },
+     {
+      "answer": "I15",
+      "severity": "pass",
+      "finding": "Answered. The note now says the credit is for the chat as shipped only and that in the Citius configuration ByTheLaw reads Citius on its own schedule without a prompt, pointing to not_credited. Span (12 words) is exact on the help page (updated 20 August 2026); not_credited names terms 2.2 b, 2.3, 2.4 and the llms.txt times, all in captured sources. Grade documented and mode default hold for the chat. A reader of the card sees the limit in the note."
+     },
+     {
+      "answer": "I57",
+      "severity": "pass",
+      "finding": "Answered. The note says 'A release note of 21 May 2026 announces' a report-error button, popup over the help icon and on failed messages, 'on all plans'. The page is dated 21 de maio de 2026 and its availability line reads 'Todos os planos'. Span exact, 12 words, grade documented, mode default."
+     },
+     {
+      "answer": "I01",
+      "severity": "note",
+      "finding": "Answered. The note now says the help centre describes ByTheLaw as an AI platform built for lawyers and legal teams and marks 'used as supplied' as the scan's reading. The span is exact and on the page (updated 3 August 2026). The indicator text is 'a vendor's assistant, used as supplied'; the credit rests on the scan's own reading for its second half, which the note now says. No level depends on it (R1 also has I09)."
+     },
+     {
+      "answer": "I39, I07, I46, I36, S3, not_credited",
+      "severity": "pass",
+      "finding": "Accepted items unchanged since the recorded round; I re-read the not_credited entries (Citius scheduled reading, fully autonomous self-description, I07) against llms.txt, the Citius terms and the help page: every name, clause number and time in them is in a captured source. Captures were refreshed at 17:48Z; hashes and byte counts of the home page, llms.txt and the three help pages I re-fetched match (4557 bytes llms.txt, 91735 home, 38168 and 38633 help). No em-dashes or address characters in the changed text; the gate prints OK."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card (repo scorer): A1, R2, C1, O2. A1 rests on I15 alone, a single help-page sentence read for the chat only; remove it and Autonomy has no level, but the card still publishes on R2 and O2 (rule: level one or more in at least one dimension). R2 rests on I11, mode available, an experimental integration given to selected users under terms 3.1 and 3.4; without it Reach falls to the level I09 gives. C1 rests on I47 and I38, both Citius terms of version 1.2 in force since 6 November 2026, mode available, so Control describes the optional integration and not the chat; removing I38 leaves C1 on I47. O2 rests on I22 and I58, two help pages, default mode, and is the sturdiest level."
+     }
+    ]
    }
   ],
   "responses": [

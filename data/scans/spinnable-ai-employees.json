@@ -179,6 +179,34 @@
       "finding": "Card A3 R2 C1 O2; no level four. Autonomy 3 rests on I08 (docs: workers update databases and send emails) and I17 (one home page FAQ answer, vendor copy, documented, default); with I17 removed the card has no Autonomy level, so the weakest fact removes the dimension, and no documentation page describes how approval is configured, as the note itself says. Control 1 rests only on I47 (Worker Policy prose rule), Reach 2 on I10 and I11 (connector lists), Openness 2 on I22 and I58 (troubleshooting and privacy pages); none of these is contradicted by anything read. The disclosure of the approval gap in the note and not_credited is adequate for beta."
      }
     ]
+   },
+   {
+    "round": 4,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I56",
+      "severity": "should-fix",
+      "finding": "Partly answered. The I56 answer itself is now sound: span 'is an AI worker hired through Spinnable' is exact on the captured corporate-email page (7 words), documented, default, and the note (footer in the default signature card, removed when Email signature is turned off, email only) matches the live page, including its troubleshooting line. The new not_credited entry on the footer being off is true and sourced to that captured page. But the studio response says no uncaptured page remains, and that is not so: the first not_credited item (AI disclosure for a worker that sends from a company email address) still names https://docs.spinnable.ai/guides/security-best-practices as its source and still says to add the URL and run tools/capture.mjs. That page is in none of the 19 captures and is not an answer source. The sentence it paraphrases is on the live page (recipients do not know, and should not know, it is an AI), so the content is accurate, but a name or page in not_credited must be in a captured source. Fix: capture the page by adding it as a source and running tools/capture.mjs, or cut that item or move its claim onto a captured page."
+     },
+     {
+      "answer": "I17",
+      "severity": "pass",
+      "finding": "Answered. The note no longer cites the security guide; it rests on the home page FAQ. Span 'it won't take actions with external consequences without your approval' is exact on the live home page (10 words), the note's 'asks when unsure' is the next sentence ('When it is unsure, it asks instead of improvising'), grade documented, mode default. The statement that no documentation page describes how approval is configured is consistent with the captured pages; the corporate-email troubleshooting line on send approvals is a Worker Policy prose rule, as the new not_credited item says (quote of 10 words is exact)."
+     },
+     {
+      "answer": "I04, I12, I25, I39, I41, I46, I68, S1, I08, I10, I11, I20, I21, I22, I26, I30, I40, I47, I57, I58, S3",
+      "severity": "pass",
+      "finding": "No answer other than I17 changed since the round-three commit; the scan diff is the I17 note, two not_credited edits, new responses and capture dates (hashes unchanged, 19 captures, every answer source captured). Re-fetched fresh: the pages were reachable and the earlier checked spans remain. No em-dashes in the scan. Gate prints OK (v0.0.112). Round-three findings: I17 answered; I56 partly answered (the I56 answer and its not_credited approval item are fixed; the security-page source in the other not_credited item remains); other round-three items were passes."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A3 R2 C1 O2 (no level four). Autonomy 3 rests on I08 (documented workers act on connected tools) and I17 (one home page FAQ sentence, vendor copy, default, no documentation of how approval is set); removing I17 leaves Autonomy with no level, so the dimension depends on one marketing sentence, which the note discloses. Control 1 rests on I47 alone, Reach 2 on I10 and I11, Openness 2 on I22 and I58; removing any single fact there drops that dimension by one or to none. The card keeps level one or more in four dimensions, so the publication rule holds even if Autonomy falls away. Nothing read contradicts any level."
+     }
+    ]
    }
   ],
   "responses": [

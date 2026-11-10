@@ -131,6 +131,44 @@
       "finding": "Verified answered: round-one I08 mode (now available), I10 source and note (product page, categories only), I11 re-source to terms (partly: see I11), the I20, I58 and I17 notes (kept and flagged honestly), S1 pass, and the sources pass. All spans checked in the fresh fetches: I08 11 words, I10 11, I11 12, I17 10, I20 9, I58 8, S1 10, all exact and under fifteen words. No em-dashes, no email addresses or at-signs, no private persons in the notes."
      }
     ]
+   },
+   {
+    "round": 3,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "I08, I11",
+      "severity": "pass",
+      "finding": "Both round-two should-fixes answered and true in the scan as it stands. I08: the clause about the operator's own systems is gone; the note now says one vendor sentence, no named customer, the page does not say through which systems, and the connected-systems configuration is the scan's inference. Fresh page text: 'Data changes, payments, orders, and service subscriptions are completed end-to-end by the AI, with no need for an agent to step in at any point in the process.' Span exact, 11 words, grade documented, mode available with connected-systems. I11: removed from answers and recorded in not_credited with the reason (a channel it answers on is its interface, not a tool it calls; the terms text is about the Virtual Employee platform, not tied to Conversational AI) and the open list ('etc.'), source is a scan source. The terms page does say 'WhatsApp, etc.' as the entry states."
+     },
+     {
+      "answer": "I10, I17, I20, I58, S1",
+      "severity": "pass",
+      "finding": "Notes and answers unchanged since round two and verified again on fresh fetches. I10 span 'Conversational AI connects with every major CRM, CCaaS, and messaging platform' exact (11 words), categories only, no connector list in the four sources. I17 span exact (10 words) in the script file; its 'predictable flow' half is in the FAQ text of the product page. I20 span exact (9 words), I58 span exact (8 words, curly apostrophe as on the page), S1 span exact (10 words) with CTT, 93% automation rate of webchat interactions and no date or volume. The earlier hash doubt is closed: my fresh curl fetches of all four sources give SHA-256 values equal to the captures (script 38255827, product 890debfa, CTT eb046774, terms 3b0ce570) and byte counts 256091, 481638, 396043, 351114; the lower counts seen in round two came from the fetch tool, not the sources. Every name, page and figure in the notes and in not_credited is in a captured source. No em-dashes, no email addresses, no private persons in answers or not_credited."
+     },
+     {
+      "answer": "I17, I20",
+      "severity": "note",
+      "finding": "Carried forward, no change needed: I17 and I20 draw on the same FAQ passages (I20 on the list of request types, I17 on the predictable-flow sentence and the escalation sentence), so the product page's FAQ feeds two indicators. I17 cites the escalation sentence, which is a person taking over; it supports 'person consulted on exceptions' and the note says so, with I18 correctly in not_credited."
+     },
+     {
+      "answer": "I58",
+      "severity": "note",
+      "finding": "Carried forward: Customer Data in the terms is what a customer gives the service, not what the agent draws on to answer; the note says this. Openness 1 rests on I20 plus I58 as worded, and falls to none if the narrower reading of I58 is applied (no I56 or I22 in the scan)."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A3 R2 C- O1 (from card.mjs; Autonomy 3 and Reach 2 shown as available, next unlocks I18, I13, S2, I47, I22). Only Autonomy 3 is level three or four. It rests on I08 (one vendor sentence on the product page, no artefact and no named customer for payments or orders) and I17 (FAQ text, predictable flow and escalation); remove I08 and Autonomy falls to none, as I17 alone cannot hold a level and no I15, I16 or I07 is credited. Reach 2 rests on I10 alone, one vendor sentence naming categories; without it Reach is none. With Autonomy 3 gone the card would still publish only through Reach 2 or Openness 1, so the rule that a card needs level one in at least one dimension is met by three dimensions, and the card survives the loss of its weakest fact; the level is honestly shown as available, not as shipped."
+     },
+     {
+      "answer": "D-new",
+      "severity": "note",
+      "finding": "No new problem found. Sources in captures are the four cited; the dropped home page is cited nowhere. The I11 removal did not change any level (Reach 2 held by I10). No S4, agent-callable interface or I13 evidence appears on the product page. Round-two review responses all address the right answers."
+     }
+    ]
    }
   ],
   "responses": [
