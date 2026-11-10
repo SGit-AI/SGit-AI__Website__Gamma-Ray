@@ -96,6 +96,29 @@
       "finding": "Verified against freshly fetched sources. I20: new span 'finds, fixes, and verifies vulnerabilities in your source code' is 10 words and exact on the home page (finding answered). I26: the note now has only the OpenSSL story claim; span 'Maintainers can trigger an AISLE review simply by tagging the aisle-analyzer handle' is exact on the OpenSSL customer page, grade documented, mode deployed, note says the account was not checked (answered). I18 and A4: no change, accepted; the available flag is kept and the response is true, span exact on the remediation page (answered). S1: note now says the named customer limb is what is counted and that no pull request or task count is published; Productboard, 56 repositories and the span 'Jira ticket creation, Slack notifications, and AI-powered pull requests' are exact on the customer page; scope fits by the named-customer limb (answered). I41: documented, counts toward no level, note says documented only (answered). The eleven passed statements (I04, I08, I10, I11, I21, I22, I38, I57, I58, I67, I68) were unchanged since round one; the show check finds every span in its source and under fifteen words. Part D: every page, figure and name in the notes (Productboard, 56 repositories, Claude Code, Cursor, OpenSSL, aisle-analyzer) is in a source of the scan, except curl and Samba as listed above. Round-one findings: 8 in total, 6 fully answered (I20, I26, I18/A4, S1, I41, the grouped pass), levels answered as a note; S4 answered in substance but with a false statement in the note."
      }
     ]
+   },
+   {
+    "round": 3,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A4 R2 C1 O2. Autonomy level four rests on I08 (the page says AISLE writes a patch, runs the customer's tests and opens a pull request), I10 (one integration sentence naming scanners, repositories and CI) and I18 (the remediation page says nothing reaches the main branch until a person on the customer's team merges, and that the customer sets how far AISLE goes per severity and repository). Removing I18 leaves Autonomy with no level, because I15, I16 and I07 are not credited; removing I10 gives A3; removing S4 changes nothing, since Reach three also needs I25. Everything is documented from vendor pages and mode available for I18, so the display should say A4 is read from vendor statements and is opt-in, with no default stated; nothing on the card is observed or measured."
+     },
+     {
+      "answer": "S4, I18, not_credited, I20, I26, S1, I41, I04, I08, I10, I11, I21, I22, I38, I57, I58, I67, I68",
+      "severity": "pass",
+      "finding": "Round-two findings: S4 answered (fetched fresh: the announcement post answers 200, published 2026-11-09 in its metadata; span 'Simply connect AISLE to an AI agent that supports the MCP standard' is 12 words and exact; read-only, five tools, OAuth or personal access token, Claude Code, OpenAI Codex and Cursor are all on the page; the 404 sentence is gone; the post is in the captures). not_credited answered (duplicate removed; entry says OpenSSL only; the OpenSSL vulnerabilities page has 40 mentions of Aisle Research and no mention of curl or Samba; the open-source page does show the aisle-security handle inside a graphic as the second entry says). Levels note answered in part by the studio as it said: I18 span 'Nothing reaches your main branch until someone on your team merges it.' is 12 words and exact on the remediation page, and the same page says 'You decide how far AISLE goes on its own, per severity and per repository', so the new note is true; grade documented, mode available, indicator I18 fit. The unchanged answers were re-found in their sources by the show check, spans under fifteen words. The gate prints OK (v0.0.92). Fully answered: 3 of 3 round-two findings (S4, not_credited, levels as a note), plus the grouped pass."
+     },
+     {
+      "answer": "S4",
+      "severity": "note",
+      "finding": "Process only, not a defect in the answer: the studio response says S4 must be re-captured with tools/capture.mjs before publication; the captures list now holds the announcement post, but the two not_credited sources (openssl-library.org vulnerabilities page and aisle.com/open-source) are not captured, which is acceptable as they credit nothing."
+     }
+    ]
    }
   ],
   "responses": [

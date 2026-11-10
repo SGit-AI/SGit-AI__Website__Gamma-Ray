@@ -166,6 +166,44 @@
       "finding": "Checked all 22 answers plus S3 for span presence (all exact in their cited source, none over fifteen words; longest are 14: I18 and I21), mode and grade against the pages: A2A connection, hitl-workflow, agent-workflow, mcp-connection and guardrails modes are available and match the configurations. No note names a page, figure or name absent from the sources; the announced item about Mentor access enforcement was checked against its page (it says 'OutSystems is rolling out Mentor access enforcement in phases') though that page is not in the captures. No em-dash found in the scan. Card signature A4 R3 C2 O2 reproduced with node."
      }
     ]
+   },
+   {
+    "round": 3,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "S1",
+      "severity": "pass",
+      "finding": "Round two finding answered. The note now says the page ties no usage figure or named agent to Agent Workbench, dates its count of 4 agents in production from early 2024 and gives support results as expectations. I fetched the case study: the quote 'It helps us equip our consultants with innovative AI tools' is exact (10 words) and names Agent Workbench; the sentence 'Some of the applications are augmented with AI capabilities and built using Agent Workbench' is on the page; the metric '4 AI agents in production since early 2024 with new AI capabilities expected' is in the page's embedded data, and the new not_credited entry quotes it correctly. Grade documented still rests on a named customer speaking of tools for consultants, not of an agent acting alone; the note is honest about this and only the In production badge depends on it."
+     },
+     {
+      "answer": "I25",
+      "severity": "note",
+      "finding": "Round two finding answered on wording. The span 'You provide the agent with a set of available actions' is exact on the action-calling page and the new note ('with none granted, the agent relies only on the AI model's knowledge') matches the page sentence that providing actions is optional and that without them the agent relies on the model's internal knowledge. The tenant and MCP claims are gone. Remaining weakness, not a wording defect: the page says nothing about identity or account scope, so the fit to 'narrower access than the whole account' is an inference, and I25 carries Reach 3 (with I14) and Control 2 (with I38). The studio's response states this reading openly."
+     },
+     {
+      "answer": "I18",
+      "severity": "note",
+      "finding": "Changed answer re-checked. Source is the workflows page (same page as I12), span 'allowing the workflow to resume based on the human's decision' is exact, 10 words. The note is supported: the page says automatic activities are completed by the system without human intervention, that a Human activity is assigned to a user or role who reviews the output and clicks Approve or Reject, and that this closes the activity so the workflow resumes. Grade documented, mode available, configuration hitl-workflow (note says not part of an agent by default) fit. The span itself speaks of the human decision, not of high-stakes only; the high-stakes wording is in a 'may require' sentence no longer cited, so the note no longer claims it. Right indicator on the text, but the pattern is a builder option, not a statement that people approve critical decisions only."
+     },
+     {
+      "answer": "not_credited",
+      "severity": "pass",
+      "finding": "I41 entry: reason matches the monitoring page (filter by agent, logs and traces back up to four weeks, agent filter shows traces where the agent is the origin; no statement that action calls are recorded); its source URL is the monitoring page and is a source named in the scan. The new S1 not_credited entry quotes the figure exactly as the case study states it and cites the case study, which is an answer source. No page, name or figure in a changed note is outside the sources."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card computed: A4 R3 C2 O2. Autonomy 4 needs I18 (explicit) with I08 and any of I10, I12, I13; I18 rests on one documentation passage about an optional builder step (Human activity), mode available, with no deployment evidence; remove I18 and Autonomy falls to 3 (I17 from the patterns page still meets level 3 with I08), I12 and I13 would not rescue level 4. Reach 3 rests on I14 (A2A 0.3.0 connector, available, client side only, a precise artefact) and I25 (an inferred fit); remove either and Reach is 2 (I10, I11). The card shows available marks and the client-only note, so the claim is honest, but no usage, operation or customer fact supports the power side."
+     },
+     {
+      "answer": "S1, I25, I18, I08, I11, I41, I48, S3, I03, I10, I20, I17, I39, I40, I21, I47, I12, I13, I14, I38, I22, I58, I61",
+      "severity": "pass",
+      "finding": "All round two findings are answered in the scan as it stands: S1 and I25 fixed, I08, I11, I41, I48, S3 passes confirmed unchanged, the Autonomy 4, Reach 3, Control 2 and Openness 2 notes carry the studio's replies. Every answer's span is present in its source (show.py: all FOUND), all under fifteen words (longest 14), modes and grades consistent with the configurations (hitl-workflow, agent-workflow, a2a-connection, mcp-connection, guardrails). I48 needs operation at documented grade and stays uncounted. Only I18, I25, S1 and the not_credited entries changed since the round two commit; the rest changed only in read_at dates. No em-dash in any note."
+     }
+    ]
    }
   ],
   "responses": [

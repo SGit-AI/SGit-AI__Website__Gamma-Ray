@@ -131,6 +131,39 @@
       "finding": "Style: no em-dashes, no at-signs, no contact details in the scan data I read. Part D: notes name pages and facts present in sources, except the S1 not_credited reason (Novobanco, Quadient story contents, calls), reported above."
      }
     ]
+   },
+   {
+    "round": 3,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "I19",
+      "severity": "note",
+      "finding": "Round-two finding answered by the remedy offered: the note now names the page heading Resolve requests autonomously with Talkdesk Autopilot, which I fetched and found verbatim at the top of the Autopilot page, and the span (9 words) is exact. Two caveats for the reader: that heading is the page title, while the monitoring sentence sits under a nearer subheading about human oversight, so the note's under is true of the page and not of the section; and the autonomy half is a marketing heading, with no statement of what the agent may do unapproved. Autonomy 4 stays documented and available (Operations Center)."
+     },
+     {
+      "answer": "S1",
+      "severity": "note",
+      "finding": "Round-two finding answered: I fetched the Quadient story (status 200). It names Talkdesk Copilot, Knowledge Management and automated AI summaries and quotes a bot using integrations with a web application; Autopilot appears only in the site navigation. The Autopilot page quote (60% containment, Director of Global Operations at Quadient, READ STORY link) matches. The Novobanco wording is gone. Small point: the Quadient story, like the Operations Center and security pages cited in not_credited, has no entry in captures, so a reader cannot check its hash; no level depends on it."
+     },
+     {
+      "answer": "I58",
+      "severity": "pass",
+      "finding": "Round-two note answered: the note now names Talkdesk Data Cloud and history, intent and sentiment, which is what the span says (13 words, exact on the Autopilot page). Openness 1 still rests on I20 plus I58 only."
+     },
+     {
+      "answer": "I08, I10, I11, I47, I67, S3, I03, I17, I20, I65, I12, I41, I57",
+      "severity": "pass",
+      "finding": "Changed answers since the round-two commit are I08 (note), I19, I58 and the S1 reason, plus recapture hashes. I08: span exact (7 words); the new note clause that the page says Autopilot completes tasks across channels is true (hero text: resolves customer requests and completes tasks across voice and digital channels); the Frank scenario is a worked example. I10 blog says refunds, re-routing shipments and appointments through CRM and ERP, matching the note. The other spans all check as found in their pages, each under fifteen words, grades and modes unchanged and defensible (nothing in the pages states an opt-in except Operations Center for I19). Indicator fit read against each text. Names in notes and not_credited (Quadient, Copilot, Knowledge Management, CXA Operations Center, Data Cloud) are in the cited pages. No em-dash, at-sign or contact detail found."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A4 R2 C1 O1. A3 rests on I08 (vendor scenario plus the hero line) and I17 (a feature sentence); removing I08 drops Autonomy to 2 at most. A4 needs I19, available only with Operations Center, with the autonomy half carried by a page heading; without I19 the card reads A3, and I10 covers only the email channel. C1 rests on I47 alone, a sample prompt in a press release; remove it and Control has no level. All are documented vendor statements, none observed, which the card shows."
+     }
+    ]
    }
   ],
   "responses": [
