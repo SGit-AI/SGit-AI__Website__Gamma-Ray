@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.135",
+    "date": "2026-11-10",
+    "what": "round one of review on promptugal-newsroom-team (our own scan)",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "999906a62"
+  },
+  {
     "version": "v0.0.134",
     "date": "2026-11-10",
     "what": "re-check of pebl-alfie (changes)",
