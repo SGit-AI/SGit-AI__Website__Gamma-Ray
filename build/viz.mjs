@@ -1,5 +1,6 @@
 // Figures, drawn at build time as inline SVG from the model. No library; colours come from CSS classes.
 import { TIERS, TIER_LABEL } from './model.mjs'
+import { card } from './spectrum.mjs'
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 const short = (s, n) => s.length > n ? s.slice(0, n - 1).trimEnd() + '…' : s
 
@@ -210,4 +211,71 @@ export function configs(m, id) {
         for (let f = 1; f <= 5; f++) o += `<rect class="${f <= c.freedom ? 'f-on' : 'f-off'}" x="${x0 + (f - 1) * cw + 2}" y="${y + 6}" width="${cw - 4}" height="${rh - 14}" rx="4"/>`
         o += `<text class="cn2" x="${x0 + 5 * cw + 14}" y="${y + 18}">${c.controls.length} controls</text><text class="dim" x="${x0 + 5 * cw + 14}" y="${y + 33}">${c.added.length ? c.added.length + ' turned on by the operator' : 'all as shipped'}</text>` })
     return o + '</svg>'
+}
+
+// 9. The walk of a Spectrum card: card -> four dimensions -> the indicators each level stands on -> the evidence (a link to its
+// public source) -> the instruments its provisions sit in. Every node is a link. One column, so it reads on a phone.
+// It draws the answer to one question ("what is each level standing on?"), never the whole graph.
+const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+const wrap = (s, n) => { const out = []; let l = ''; for (const w of String(s).split(/\s+/)) { if (l && (l + ' ' + w).length > n) { out.push(l); l = w } else l = l ? l + ' ' + w : w } if (l) out.push(l); return out }
+const hostPath = u => { try { const x = new URL(u); return x.host.replace(/^www\./, '') + (x.pathname === '/' ? '' : x.pathname) } catch { return u } }
+export function cardWalk(m, sp, scanId, up = '../../../') {
+    const scan = m.scans.find(x => x.id === scanId); if (!scan) return ''
+    const c = card(scan, sp, m)
+    const W = 440, xS = 14, xD = 30, wD = 72, xI = 124, wI = W - xI - 2, LH = 16
+    const link = (href, inner, title, ext) => `<a href="${esc(href)}"${ext ? ' target="_blank" rel="noopener"' : ''}><title>${esc(title)}</title>${inner}</a>`
+    let y = 0, body = '', spine = [], k = 0
+    // the root: the card itself
+    const rootT = `${scan.name}: ${c.signature}${c.stage ? ', ' + c.stage : ''}`
+    const rl = wrap(rootT, 60)
+    body += link(up + 'spectrum/cards/' + scan.id + '/', `<rect class="w-root" x="0" y="0" width="${W}" height="${rl.length * LH + 14}" rx="8"/>` + rl.map((t, i) => `<text class="w-rt" x="12" y="${20 + i * LH}">${esc(t)}</text>`).join(''), `The card: ${scan.name}`)
+    y = rl.length * LH + 14 + 18
+    const instAll = new Set()
+    for (const d of c.dims) {
+        const D = sp.dimensions.find(x => x.id === d.id), top = y
+        let blocks = '', yy = y
+        const anchor = '#' + slug(`${d.name}: ${d.level ? `level ${d.level}, ${d.levelName}` : 'not yet evidenced'}`)
+        const ys = []
+        for (const id of d.used) {
+            const ind = m.I.get(id), a = scan.answers[id], cap = scan.captures?.[a.e], q = m.questions.find(x => x.id === ind.question)
+            const il = wrap(ind.text, 41), bh = il.length * LH + 10
+            ys.push(yy + bh / 2)
+            const qHref = q ? up + 'questions/#' + slug(`${q.id.replace('Q', 'Q ')}. ${q.text}`) : up + 'questions/'
+            blocks += link(qHref, `<rect class="w-ind" x="${xI}" y="${yy}" width="${wI}" height="${bh}" rx="6"/><text class="w-id" x="${xI + 8}" y="${yy + 17}">${id}</text>` + il.map((t, i) => `<text x="${xI + 38}" y="${yy + 17 + i * LH}">${esc(t)}</text>`).join(''), `${id}, answers ${q ? q.id + ': ' + q.text : 'a question'} (the questions page)`)
+            yy += bh
+            // evidence: a link to the public source, with its grade, its mode and the hash of what was captured
+            const lab = hostPath(a.e), ev1 = short(lab, 37), ev2 = `${a.g} · ${a.m}${cap?.sha256 ? ' · sha256 ' + cap.sha256.slice(0, 8) : ''}`
+            blocks += `<path class="w-edge" d="M${xI + 16} ${yy} v10"/>` + link(a.e, `<rect class="w-ev ${a.m === 'available' ? 'w-av' : ''}" x="${xI + 6}" y="${yy + 10}" width="${wI - 6}" height="40" rx="6"/><text class="w-evt" x="${xI + 16}" y="${yy + 27}">${esc(ev1)} ↗</text><text class="w-sm" x="${xI + 16}" y="${yy + 43}">${esc(ev2)}</text>`, `Evidence: ${a.e} (opens the public source; ${a.g}, ${a.m}${cap?.read_at ? ', captured ' + cap.read_at : ''})`, true)
+            yy += 50
+            // across to the provisions it touches, grouped by instrument; each chip is a link to the instrument
+            const per = new Map(); for (const l of ind.links) { const p = m.P.get(l.provision); if (p) per.set(p.standard, (per.get(p.standard) || 0) + 1) }
+            let cx = xI + 16, cy = yy + 10; blocks += `<path class="w-edge" d="M${xI + 16} ${yy} v10"/>`
+            if (!per.size) { blocks += `<text class="w-sm" x="${xI + 16}" y="${cy + 15}">touches no provision yet</text>`; cy += 24 }
+            for (const [sid, n] of per) {
+                const S = m.S.get(sid), t = `${S.short.replace(' authorization', '')} ${n}`, cw = Math.min(wI - 16, t.length * 7.6 + 32)
+                if (cx + cw > W) { cx = xI + 16; cy += 28 }
+                instAll.add(sid)
+                blocks += link(up + 'instruments/#' + slug(S.name), `<g class="s-${sid}"><rect class="w-ch" x="${cx}" y="${cy}" width="${cw}" height="22" rx="11"/><circle class="w-dot" cx="${cx + 11}" cy="${cy + 11}" r="4.5"/><text x="${cx + 21}" y="${cy + 15.5}">${esc(t)}</text></g>`, `${n} provision${n > 1 ? 's' : ''} of ${S.name} (the instruments page)`)
+                cx += cw + 6
+            }
+            yy = cy + 22 + 16
+        }
+        if (!d.used.length) { ys.push(yy + 14); blocks += `<text class="w-sm" x="${xI}" y="${yy + 18}">Nothing public found yet. Not a no.</text>`; yy += 34 }
+        const mid = (ys[0] + ys[ys.length - 1]) / 2
+        const nh = Math.max(64, Math.min(yy - top - 8, 96)), ny = top + 4
+        let node = `<path class="w-edge" d="M${xS} ${spine.length ? spine[spine.length - 1] : 0} V${ny + 22} h${xD - xS}"/>`
+        spine.push(ny + 22)
+        node += link(up + 'spectrum/cards/' + scan.id + '/' + anchor, `<g class="sp-${d.id}${d.level ? '' : ' sp-none'}"><rect class="w-dim" x="${xD}" y="${ny}" width="${wD}" height="${nh}" rx="8"/><text class="w-lv" x="${xD + wD / 2}" y="${ny + 30}" text-anchor="middle">${d.id}${d.level || '·'}</text><text class="w-sm" x="${xD + wD / 2}" y="${ny + 47}" text-anchor="middle">${esc(d.name)}</text>${[1, 2, 3, 4].map(n => `<rect class="w-pip${n <= d.level ? ' on' : ''}" x="${xD + 8 + (n - 1) * 15}" y="${ny + 56}" width="12" height="5" rx="2"/>`).join('')}</g>`, `${d.name}: ${d.level ? 'level ' + d.level + ', ' + d.levelName : 'not yet evidenced'} (this card's section)`)
+        // elbows from the dimension to each indicator
+        const ex = xD + wD + 11
+        let edges = `<path class="w-edge" d="M${xD + wD} ${ny + nh / 2} H${ex}${ys.length ? ` M${ex} ${ys[0]} V${ys[ys.length - 1]}` : ''}"/>` + ys.map((v, i) => d.used.length ? `<path class="w-edge" d="M${ex} ${v} H${xI}"/>` : '').join('')
+        body += node + edges + blocks
+        y = Math.max(yy, top + nh + 8) + 8
+    }
+    // the spine closes at the last dimension; the root's drop line
+    body += `<path class="w-edge" d="M${xS} ${rl.length * LH + 14} V${spine[0]}"/>`
+    const H = Math.ceil(y)
+    const css = `<style>.walk{--dc:var(--ink3)}.walk text{font:12.5px var(--sans);fill:var(--ink)}.walk a{cursor:pointer}.walk a:hover rect,.walk a:focus rect{stroke:var(--ink);stroke-width:2}.walk .w-edge{fill:none;stroke:var(--ink3);stroke-width:1.5}.walk .w-root{fill:var(--band);stroke:var(--ink);stroke-width:1.5}.walk .w-rt{font:600 13px var(--sans)}.walk .w-dim{fill:var(--band);stroke:var(--dc);stroke-width:2}.walk .w-lv{font:700 22px var(--mono);fill:var(--dc)}.walk .w-sm{font-size:11.5px;fill:var(--ink3)}.walk .sp-A{--dc:var(--t2)}.walk .sp-R{--dc:var(--c-sf)}.walk .sp-C{--dc:var(--accent)}.walk .sp-O{--dc:var(--c-eaamm)}.walk .sp-none{--dc:var(--ink3)}.walk .w-dim{stroke-dasharray:none}.walk .sp-none .w-dim{stroke-dasharray:4 3}.walk .w-pip{fill:var(--hair)}.walk .w-pip.on{fill:var(--dc)}.walk .w-ind{fill:var(--paper);stroke:var(--ink2);stroke-width:1.2}.walk .w-id{font:600 12px var(--mono);fill:var(--ink2)}.walk .w-ev{fill:var(--paper);stroke:var(--accent);stroke-width:1.5}.walk .w-av{stroke-dasharray:5 3}.walk .w-evt{font:12px var(--mono);fill:var(--accent)}.walk .w-ch{fill:var(--paper);stroke:var(--c);stroke-width:1.5}.walk .w-dot{fill:var(--c)}</style>`
+    const sentence = `${scan.name}: ${c.dims.map(d => `${d.name} ${d.level ? 'level ' + d.level : 'not yet evidenced'}`).join(', ')}. ${c.answers} evidenced indicators, ${c.sources} sources, ${instAll.size} instruments touched. The same walk is listed in text below.`
+    return `<svg class="fig walk" style="min-width:0;max-width:520px;margin:0 auto" viewBox="0 0 ${W} ${H}" role="group" aria-label="${esc(sentence)}">${css}${body}</svg><p class="figcap">The walk down from this card: each dimension, the indicators its level stands on (a link to the question), the public source of each answer (a link out; dashed means available, not default) and the instruments its provisions sit in (a link to the instrument). A solid frame is evidenced; a dashed frame is not yet evidenced, which is not a no.</p>`
 }
