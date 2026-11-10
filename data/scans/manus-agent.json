@@ -50,7 +50,7 @@
      {
       "answer": "I04",
       "severity": "note",
-      "finding": "The span ends before the claim: \"the AI can solve problems through what it does best\" and the page continues \"writing code\". \"...through what it does best—writing code\" is 11 words and says what the note says. Extend it."
+      "finding": "The span ends before the claim: \"the AI can solve problems through what it does best\" and the page continues \"writing code\". \"...through what it does best, writing code\" is 11 words and says what the note says. Extend it."
      },
      {
       "answer": "I65",
