@@ -19,8 +19,77 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "draft",
-  "rounds": []
+  "status": "round-1",
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I41",
+      "severity": "should-fix",
+      "finding": "Mode. The span is exact, but the page says tool_used events come back only with verbose=true (\"`true` also tool_used (tools the agent invoked)\"). The default response carries user_message, assistant_message, error_message, status_update and user_stop only. A fact that needs a flag is available, not default. The second source in the note (Browser Operator: \"All actions are logged for complete transparency\") is on the page and is fine, but it covers that extension only. Needs the operation, so documented does not count in any case; the mode and the note should still be right."
+     },
+     {
+      "answer": "I38",
+      "severity": "should-fix",
+      "finding": "The span \"Send, save as draft, or cancel\" is exact (a table cell) and the page does list email send, calendar delete, deploy service, run a command, Shopify delete and Instagram publish as waiting events. Three cautions the note does not carry: (1) this page is for people who build their own confirmation UI against the API (\"Use it when you render your own confirmation UI\"), so it is the API's documented behaviour, not a statement about the app; (2) some entries accept \"global_allow\": true, which skips future confirmations of that kind, so the gate can be turned off; (3) the page says some events \"ran on an earlier agent loop\". Say in the note which surface it is, and that a person can switch a confirmation off. Credit as default can stand if the API and the app are the same agent; the page says \"tools that the current Manus agent runs in the main task loop\", which suggests it is."
+     },
+     {
+      "answer": "I18",
+      "severity": "should-fix",
+      "finding": "The span \"the agent runs asynchronously\" (4 words) shows the agent runs without the caller waiting; it does not show that the person approves only critical decisions. The second half of the note (it waits at sending email, deleting calendar events, deploying a service) is on the confirmation events page, not the task lifecycle page the answer cites. Cite the sentence that carries the claim, or cite both pages. This is the second load-bearing fact for A3 and A4 on this card; I will argue it in round two."
+     },
+     {
+      "answer": "I47",
+      "severity": "should-fix",
+      "finding": "The span \"Do not change files outside the src folder.\" is inside an example task prompt on the Studio page, a sample of what a user might type. It shows that a person can write a limit; it does not say Manus treats it as a rule, or that it is not guaranteed, which is the fact the indicator is about (a limit that is prose). The page does say Manus works inside the task workspace in the two approval modes, which is a setting. Re-read the page and quote the sentence about what the prompt does, or remove I47. Control 1 stands on I38 either way."
+     },
+     {
+      "answer": "I04",
+      "severity": "note",
+      "finding": "The span ends before the claim: \"the AI can solve problems through what it does best\" and the page continues \"writing code\". \"...through what it does best—writing code\" is 11 words and says what the note says. Extend it."
+     },
+     {
+      "answer": "I65",
+      "severity": "note",
+      "finding": "\"We build general AI agents as the Action Engine for life.\" is a line on the about page, an aim, not a stated strategy for agents. Weak credit; it feeds no level here, but consider removing it."
+     },
+     {
+      "answer": "I08",
+      "severity": "note",
+      "finding": "Span exact. It comes from the API documentation of the task loop; the same remark as I38 about the surface applies. Fine as default if the app uses the same agent loop."
+     },
+     {
+      "answer": "S1",
+      "severity": "pass",
+      "finding": "Opened the customer story. The span \"k-ID now runs over eight thousand Manus sessions across the team.\" is exact (11 words). The page also says the US data team spends about five hundred dollars a day on credits at peak (85 percent of the company's total) and that k-ID built a dashboard. It names a customer and a usage figure for what the agent does, over a team. It is vendor-published (Customer Stories, dated 29 May, \"Introducing Manus 2.0\" in the page). Stronger than a hackathon story. The usage figure is sessions, not completed tasks; the note says sessions. Round two argues whether Autonomy 3 and 4 hold."
+     },
+     {
+      "answer": "I10",
+      "severity": "pass",
+      "finding": "Exact and available (connectors the user connects). Note it is the quickstart page, not an agent-run workflow."
+     },
+     {
+      "answer": "I11",
+      "severity": "pass",
+      "finding": "The Similarweb post says \"There's no setup required\" and that \"Manus automatically connects to Similarweb\". Default is right. It is a partner marketing page, so the fact is that one integration works without setup."
+     },
+     {
+      "answer": "I16, I17, I21, I46, I22",
+      "severity": "pass",
+      "finding": "Studio permission modes: Ask for approval (\"Always asks for approval before local actions.\"), Approve for me, the default (\"Reviews and auto-approves safe local actions.\"), Full access. Modes are right as available and tied to the studio configurations. I46: \"Only the task owner can change the mode.\" is exact and the table shows Full access. I22: Browser Operator limitations are on the page, as available."
+     },
+     {
+      "answer": "I20, I39, I54, I57, I58, S3",
+      "severity": "pass",
+      "finding": "Opened each source. Notes match; grades are right; I39 matches the stop endpoint and the Studio page (\"You can stop at any time\"); I54 matches the status page text; S3: manus.im/docs/llms.txt, the API llms.txt and the OpenAPI 3.1 file resolve, observed is right. All spans are exact and under fifteen words."
+     }
+    ]
+   }
+  ]
  },
  "assessment": {
   "by": "gamma.studio@web-summit.dinis",
