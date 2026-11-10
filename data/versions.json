@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.31",
+    "date": "2026-11-10",
+    "what": "manus-agent: round one answered (I47 and I65 removed, I41 to available, API surface named in I38, I18, I08)",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "59396b0c0"
+  },
+  {
     "version": "v0.0.30",
     "date": "2026-11-10",
     "what": "manus-agent round one: no em-dash in prose",
