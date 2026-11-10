@@ -1,0 +1,4 @@
+# every agent appends to these; keep both sides instead of conflicting
+team/log.md merge=union
+team/requests.md merge=union
+team/approvals.md merge=union
