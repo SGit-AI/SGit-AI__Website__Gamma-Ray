@@ -19,7 +19,7 @@
   "published": "2026-11-10"
  },
  "review": {
-  "status": "round-1",
+  "status": "round-2",
   "rounds": [
    {
     "round": 1,
@@ -76,6 +76,49 @@
       "answer": "I09, I11, I20, I21, I22, I38, I47, I54, I58",
       "severity": "pass",
       "finding": "Each source opened and read in full (home page en, five help pages, the Citius terms version 1.2 of 6 November 2026, two news pages, llms.txt). I09: span is on the home page; the note's case law and uploaded documents appear in its FAQ. I11: Citius terms 2.2 b and 3.4; span exact; the 'selected users' claim is in 3.1. I20: span on the 'What ByTheLaw is' page, with the listed tasks (questions, analysis, translation, drafting, reading legislation, organising work). I21: terms 2.3 say consultation and reading only and no procedural acts; span exact (Portuguese, 11 words). I22: formats page, span exact, upload limits (10 documents per message, 50 MB) present. I38: terms 2.4, unread notifications opened only after prior express user action with an irreversible-read warning; span exact. I47: terms 2.3, span exact. I54: terms 5.4, span exact. I58: sources page, span exact. All grades documented and modes right (Citius items available, the rest default). Spans all under fifteen words."
+     }
+    ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "announced",
+      "severity": "should-fix",
+      "finding": "The fourth announced item says ECO reports a claim of about 63 hours per user per year. I fetched the cited page (bythelaw.com/en/product/) and searched its text, the home page, llms.txt and every capture of the scan: the product page gives only 'up to 20 weekly hours'; the figure 63 and the name ECO appear nowhere. The cited product and NPL pages are also not among the scan's captures, so their hashes are not recorded (the NPL and 'service-as-a-software' items are true on the live pages, read by me). Remove the 63-hour clause or cite and capture the source that has it, and run tools/capture.mjs for the two pages the announced list cites. The item is marked not counted, so no level changes."
+     },
+     {
+      "answer": "I15",
+      "severity": "should-fix",
+      "finding": "Round one's finding is partly answered. The note now says it describes the chat only, and not_credited records the Citius reads (terms 2.2 b, 2.3, 2.4 and llms.txt 11:00, 14:00, 17:00 all verified by me). What remains: Autonomy 1 rests on I15 alone, whose text is 'every action is prompted and controlled by them', and the scan itself says that in the Citius configuration some actions are not prompted. The cited span ('ByTheLaw interprets the request and returns an answer grounded in official sources') shows a request and an answer, not that the person controls every action. The credit is default mode but the product the card describes also includes the Citius reading. Either tag the note on the card so a reader sees A1 is for the chat as shipped and not the Citius configuration, or state it in the answer as a limit of the indicator; do not let the card read as if the product as a whole is operated only on prompts."
+     },
+     {
+      "answer": "I57",
+      "severity": "note",
+      "finding": "Answered: the like and dislike clause is gone; span exact (read in the raw page, 21 May 2026, availability 'Todos os planos'). The note says the button 'is available' from a release note of May 2026, a dated announcement; say 'a release note of 21 May 2026 announces' as the I39 note does. Not a level fact."
+     },
+     {
+      "answer": "I01",
+      "severity": "note",
+      "finding": "Answered: 'subscription' is gone and the span is exact on the page (updated 3 August 2026). The words 'use as provided' are the scan's reading; the page does not say them, though it describes a platform lawyers use. R1 also has I09, so no level depends on it."
+     },
+     {
+      "answer": "I39, I07, I46, I36, S3",
+      "severity": "pass",
+      "finding": "I39: note now names Free, Pro and Pro Teams and the date 21 December 2025; both are on the page (read raw); span exact, 9 words. It is a launch note, not a current page; the studio's reply cites a help page (prompts-gratuitos-e-limites) that is not in the scan's sources, so that support is not on the record, but no level uses I39. I07 removed and recorded in not_credited, with the page's retrieval-only content as stated. I46 kept; the Sources page says what the note says; mode available with the project-sources configuration is right. I36 kept, span exact. S3 kept; llms.txt resolves (200, 4.5 KB, read 10 November 2026); the 'fully autonomous' wording is now recorded in not_credited for I19, which answers the contrast."
+     },
+     {
+      "answer": "changed answers: I01, I15, I39, I57 and not_credited",
+      "severity": "pass",
+      "finding": "Re-checked in full the four changed answers and the new not_credited entries against the live pages: spans are exact and under fifteen words (I01 10, I15 12, I39 9, I57 9 words), grades documented, modes default, indicators match their text (I15 is Q05 level 1; I08, I17 and I19 are rightly not credited, I08 and I17 describe actions executed for the person, and the terms 2.3 say no procedural acts). Every name and figure in the three not_credited entries (terms 2.2 b, 2.3, 2.4; llms.txt times; 'fully autonomous') is in a captured source. No em-dashes, addresses or at-signs found in the changed text."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card (repo scorer): A1, R2, C1, O2; no level three or four, so I argued against the weakest credited levels. A1: one indicator, I15, an artefact (a help page) but of a single sentence; if it is removed the card has no Autonomy level and no card can be published (no card below level one in every dimension), so the whole card hangs on it; see I15. R2: I11 alone, mode available. The fact is real (terms 2.2 and 3.4, read by me) but the Citius integration is experimental and, under terms 3.1 and 3.2, given only to users ByTheLaw chooses and provided 'as is'; remove I11 and Reach drops to the level I09 gives. C1: I47 and I38 are both prose in one document, the Citius terms version 1.2 in force since 6 November 2026, four days before the read, and terms 3.2 and 13.1 let ByTheLaw change them; both are mode available and describe the optional integration, so the Control level says nothing about the chat everyone gets (I39 is not credited and has no current page). If I38 is removed C1 still holds on I47. O2: I22 and I58 are two help pages, artefacts not adjectives, default mode; sturdy. Modes are honest on all four. Reviewer correction: the rule that no card goes below level one means level one or more in at least one dimension; this card also has Reach 2 and Openness 2, so it would still publish without I15. The argument stands only as a statement that Autonomy 1 rests on I15 alone."
      }
     ]
    }
