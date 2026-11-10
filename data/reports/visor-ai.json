@@ -1,0 +1,196 @@
+{
+ "id": "visor-ai",
+ "name": "Visor.ai",
+ "url": "https://www.visor.ai/",
+ "country": "Portugal",
+ "sector": "customer service",
+ "read": "2026-11-10",
+ "basis": "Visor.ai's own public pages and, for company basics only, the news sources named beside each fact",
+ "seen_by_subject": false,
+ "what": "Visor.ai sells a platform on which organisations build and run AI agents for customer service by voice and chat, plus an agent that scores call recordings.",
+ "facts": [
+  {
+   "fact": "Site footer names Portugal as headquarters",
+   "url": "https://www.visor.ai/",
+   "span": "Portugal – Headquarters"
+  },
+  {
+   "fact": "Started in 2016",
+   "url": "https://www.visor.ai/company/",
+   "span": "Visor.ai began its journey in 2016"
+  },
+  {
+   "fact": "Describes itself as an agentic AI platform across voice, chat and quality",
+   "url": "https://www.visor.ai/company/",
+   "span": "Today, Visor.ai is an agentic AI platform"
+  },
+  {
+   "fact": "Offices listed include Lisbon, Porto, Madrid and Barcelona",
+   "url": "https://www.visor.ai/company/",
+   "span": "Global Presence, Local Expertise"
+  },
+  {
+   "fact": "Legal entity named in the privacy policy",
+   "url": "https://www.visor.ai/privacy-policy/",
+   "span": "Legal Name PT:** Visor.ai, Portugal S.A."
+  },
+  {
+   "fact": "States ISO/IEC 27001:2022 certification; certificate available on request",
+   "url": "https://www.visor.ai/security/",
+   "span": "Visor is certified to ISO/IEC 27001:2022"
+  },
+  {
+   "fact": "Lists ten subprocessors, all in the EU",
+   "url": "https://www.visor.ai/security/",
+   "span": "Ten subprocessors handle data for Visor. All ten are in the EU."
+  },
+  {
+   "fact": "Partner in the PRR-funded Center for Responsible AI agenda led by Unbabel",
+   "url": "https://www.visor.ai/pt/prr/",
+   "span": "LÍDER DO CONSÓRCIO | Unbabel, Lda."
+  }
+ ],
+ "people": [
+  {
+   "name": "Gonçalo Consiglieri",
+   "role": "Co-founder & CEO",
+   "url": "https://www.visor.ai/company/"
+  },
+  {
+   "name": "Bruno Matias",
+   "role": "Co-founder & CTO",
+   "url": "https://www.visor.ai/company/"
+  },
+  {
+   "name": "Afonso Fonseca",
+   "role": "Engineering Director",
+   "url": "https://www.visor.ai/company/"
+  },
+  {
+   "name": "Rita Anjo",
+   "role": "Customer Success Director",
+   "url": "https://www.visor.ai/company/"
+  }
+ ],
+ "solutions": [
+  {
+   "id": "voice-agent",
+   "name": "Visor.ai AI agents (voice and chat)",
+   "short": "Voice and chat agents",
+   "what": "AI agents that answer customer phone calls, built as flows on the platform, with test suites, live supervision and EU AI Act checks.",
+   "status": "generally available",
+   "url": "https://www.visor.ai/voice-agent/",
+   "scan": "visor-ai-agents"
+  },
+  {
+   "id": "chat-agent",
+   "name": "Chat AI Agent",
+   "short": "Chat AI Agent",
+   "what": "AI agents on WhatsApp, websites and messaging channels that answer from a synced knowledge base and hand over to live chat.",
+   "status": "generally available",
+   "url": "https://www.visor.ai/chat-agent/"
+  },
+  {
+   "id": "nexa",
+   "name": "Nexa",
+   "short": "Nexa",
+   "what": "The platform's built-in agent that helps build, test and review agents, and proposes fixes that a person accepts.",
+   "status": "live (announced as new on the home page)",
+   "url": "https://www.visor.ai/nexa/"
+  },
+  {
+   "id": "quality",
+   "name": "Quality & Insights AI Agent",
+   "short": "Quality & Insights AI Agent",
+   "what": "Scores call recordings against a customer's own scorecard and turns the scores into coaching and contact-reason reports.",
+   "status": "generally available",
+   "url": "https://www.visor.ai/quality/"
+  }
+ ],
+ "stories": [
+  {
+   "customer": "Generali Tranquilidade",
+   "what": "Chat AI agent for customers and brokers; common requests (duplicate documents, address changes, adding a vehicle, cancellations) run end to end through web services; 80,000 broker conversations a month.",
+   "url": "https://www.visor.ai/success-stories/generali/",
+   "span": "conversations between brokers and the AI agent every month"
+  },
+  {
+   "customer": "Generali Tranquilidade",
+   "what": "Requests run as automated workflows connected to the insurer's systems.",
+   "url": "https://www.visor.ai/success-stories/generali/",
+   "span": "those requests now run end to end as automated workflows"
+  },
+  {
+   "customer": "Millennium BCP",
+   "what": "Max, a Chat AI Agent for the bank's sales network of more than 5,000 people, with live-chat handover to advisors.",
+   "url": "https://www.visor.ai/success-stories/millennium-bcp/",
+   "span": "Max, an AI agent built on Visor"
+  },
+  {
+   "customer": "Millennium BCP",
+   "what": "Automation of Max's questions started at 65% in 2021, with a goal of 80%.",
+   "url": "https://www.visor.ai/success-stories/millennium-bcp/",
+   "span": "Max started at 65% automation in 2021, and the goal is 80%"
+  },
+  {
+   "customer": "Farmácia Sá da Bandeira",
+   "what": "Home page figure of 77% interaction success rate attributed to this customer.",
+   "url": "https://www.visor.ai/",
+   "span": "Interaction Success Rate"
+  }
+ ],
+ "analysis": [],
+ "article": null,
+ "vault": {
+  "id": "w4byv6dr",
+  "read_key": "sgit_public_read_90a76763f617c725a429b7b445125e43a01bf7f880c08904b7803018bc65935b:w4byv6dr",
+  "published": "2026-11-10"
+ },
+ "team": {
+  "researcher-assessor": "a sub-agent of gamma.studio@web-summit.dinis",
+  "challenger": "a sub-agent",
+  "scorer": "build/spectrum.mjs",
+  "analyst, designer, writer": "gamma.studio@web-summit.dinis",
+  "review": "gamma.review@web-summit.dinis (pending)",
+  "sign-off": "gamma.approve@web-summit.dinis (pending)"
+ },
+ "signoff": null,
+ "corrections": [],
+ "captures": {
+  "https://www.visor.ai/": {
+   "sha256": "03497c0c550e4bc73a003c16c77930f0639a5a1b6ec40bbe6e011572aa24a9b9",
+   "bytes": 127853,
+   "read_at": "2026-11-10T10:41Z"
+  },
+  "https://www.visor.ai/company/": {
+   "sha256": "f4592014a8d289e865c97459d70de628053bc1fc9a0a39b959b7bba3f3b688ef",
+   "bytes": 72728,
+   "read_at": "2026-11-10T10:41Z"
+  },
+  "https://www.visor.ai/privacy-policy/": {
+   "sha256": "0055c5fcebc30d78fd774a6b9c7a2fae6990a8e5f3166005c842460e17cc1cc7",
+   "bytes": 75759,
+   "read_at": "2026-11-10T10:41Z"
+  },
+  "https://www.visor.ai/pt/prr/": {
+   "sha256": "52a248dec2398accf6b27681320b0bb80a0088dad33926bbf602f987dcf26640",
+   "bytes": 40299,
+   "read_at": "2026-11-10T10:41Z"
+  },
+  "https://www.visor.ai/security/": {
+   "sha256": "7d21171f11fddd974d5b6a6cb3a9dcc9af93cb7c75d20dec05be2775372bc1a6",
+   "bytes": 87679,
+   "read_at": "2026-11-10T10:41Z"
+  },
+  "https://www.visor.ai/success-stories/generali/": {
+   "sha256": "16b12afe076f384bf0687ae52da52f3389169c732058e06b8026569a3db43ae1",
+   "bytes": 53042,
+   "read_at": "2026-11-10T10:41Z"
+  },
+  "https://www.visor.ai/success-stories/millennium-bcp/": {
+   "sha256": "c89c0b3aa7f3f08221460259d4d71c2399ca815acb85a2e6689ad13e9b39c976",
+   "bytes": 53259,
+   "read_at": "2026-11-10T10:41Z"
+  }
+ }
+}

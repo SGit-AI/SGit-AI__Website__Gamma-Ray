@@ -1,0 +1,284 @@
+{
+ "id": "visor-ai-agents",
+ "name": "Visor.ai AI agents",
+ "operator": "Visor.ai (the vendor); each customer is the operator of its own use",
+ "company": "visor-ai",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-10",
+ "tier": "public",
+ "basis": "Visor.ai's own public pages (product, documentation, blog, customer stories, legal and security pages)",
+ "seen_by_operator": null,
+ "what": "Visor.ai's voice and chat AI agents for customer service, with Nexa, the agent that builds, tests and proposes fixes to them.",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. Part of the first Portuguese cohort.",
+ "grant": null,
+ "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
+ "vault": {
+  "id": "w4byv6dr",
+  "read_key": "sgit_public_read_90a76763f617c725a429b7b445125e43a01bf7f880c08904b7803018bc65935b:w4byv6dr",
+  "published": "2026-11-10"
+ },
+ "review": {
+  "status": "draft",
+  "rounds": []
+ },
+ "assessment": {
+  "by": "gamma.studio@web-summit.dinis",
+  "researcher_assessor": "a sub-agent of gamma.studio",
+  "challenger": "a sub-agent of gamma.studio",
+  "lowered": [
+   "I12",
+   "I16",
+   "I38",
+   "I39",
+   "I43",
+   "I44",
+   "I62"
+  ],
+  "fixed": [
+   "I08",
+   "I11",
+   "I17",
+   "I20",
+   "I67",
+   "S1"
+  ],
+  "added_by_challenger": [],
+  "files": "in the vault: work/assessment.json, work/challenger.json"
+ },
+ "answers": {
+  "I03": {
+   "e": "https://www.visor.ai/voice-agent/",
+   "n": "Agents are built as flows on a visual canvas, with the model and speech services set on each node.",
+   "span": "Each agent is a flow you can read on a canvas.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I08": {
+   "e": "https://www.visor.ai/success-stories/generali/",
+   "n": "At Generali, common requests run end to end as automated workflows connected to the insurer's systems.",
+   "span": "those requests now run end to end as automated workflows",
+   "g": "documented",
+   "m": "deployed"
+  },
+  "I10": {
+   "e": "https://www.visor.ai/voice-agent/",
+   "n": "The voice agent connects to telephony and to the customer's contact-centre or CCaaS platform.",
+   "span": "It connects to your telephony and to your contact-centre or CCaaS platform",
+   "g": "documented",
+   "m": "default"
+  },
+  "I11": {
+   "e": "https://www.visor.ai/success-stories/generali/",
+   "n": "Generali connected the platform to its own systems through web services.",
+   "span": "connected the platform to its own systems through web services",
+   "g": "documented",
+   "m": "deployed"
+  },
+  "I17": {
+   "e": "https://www.visor.ai/success-stories/generali/",
+   "n": "At Generali the chat agent handles a wide range of conversations from start to finish; when a conversation needs a person, an advisor picks it up in live chat.",
+   "span": "It handles a wide range of conversations from start to finish",
+   "g": "documented",
+   "m": "deployed"
+  },
+  "I20": {
+   "e": "https://www.visor.ai/healthcare/",
+   "n": "For healthcare, the agents' scope is administrative contact, written down before work starts.",
+   "span": "The agents are set up for administrative contact",
+   "g": "documented",
+   "m": "available",
+   "cfg": "healthcare-deployment"
+  },
+  "I22": {
+   "e": "https://www.visor.ai/voice-agent/",
+   "n": "A reliability note states that the models can occasionally fail and that providers do not guarantee total availability.",
+   "span": "The models generate each answer in the moment and can occasionally fail.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I36": {
+   "e": "https://www.visor.ai/voice-agent/",
+   "n": "Each agent runs twelve automatic checks against the EU AI Act and the GDPR, each citing its article.",
+   "span": "Each agent runs twelve automatic checks against the EU AI Act and the GDPR.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I37": {
+   "e": "https://www.visor.ai/voice-agent/",
+   "n": "Deployments are tested end to end and validated by the customer's team in real conditions before launch.",
+   "span": "then your team validates it in real conditions before launch",
+   "g": "documented",
+   "m": "default"
+  },
+  "I40": {
+   "e": "https://www.visor.ai/chat-agent/",
+   "n": "A chat that needs a person moves to live chat and is routed to the right department with its history.",
+   "span": "When a chat needs a human, it moves to live chat",
+   "g": "documented",
+   "m": "default"
+  },
+  "I47": {
+   "e": "https://www.visor.ai/healthcare/",
+   "n": "Customers write in plain language what the chat agent must not handle; matching conversations are flagged critical for a person.",
+   "span": "you describe, in plain language, what the agent must not handle",
+   "g": "documented",
+   "m": "available",
+   "cfg": "issue-agent"
+  },
+  "I58": {
+   "e": "https://www.visor.ai/chat-agent/",
+   "n": "The chat agent answers from a knowledge base built from the customer's documents and kept in sync with them.",
+   "span": "The agent answers from a knowledge base built from your own documents",
+   "g": "documented",
+   "m": "default"
+  },
+  "I60": {
+   "e": "https://www.visor.ai/healthcare/",
+   "n": "For health customers, what the agents may ask for and where data is kept is agreed with the data protection officer before go-live.",
+   "span": "we agree with your data protection officer what the agents may ask for",
+   "g": "documented",
+   "m": "available",
+   "cfg": "healthcare-deployment"
+  },
+  "I61": {
+   "e": "https://www.visor.ai/security/",
+   "n": "The security page lists the AI providers in the voice and chat path (Azure, Vertex AI Gemini, Deepgram, AssemblyAI, ElevenLabs) and what each processes.",
+   "span": "Gemini large language models used by the AI agents to process conversations",
+   "g": "documented",
+   "m": "default"
+  },
+  "I66": {
+   "e": "https://www.visor.ai/voice-agent/",
+   "n": "Visor trains the customer's people to run the platform.",
+   "span": "We train your people to run the platform confidently",
+   "g": "documented",
+   "m": "default"
+  },
+  "I67": {
+   "e": "https://www.visor.ai/success-stories/millennium-bcp/",
+   "n": "Millennium BCP reports Max's automation at 65% in 2021, with a goal of 80% of questions and processes resolved without a person.",
+   "span": "Max started at 65% automation in 2021, and the goal is 80%",
+   "g": "documented",
+   "m": "deployed"
+  },
+  "I68": {
+   "e": "https://www.visor.ai/voice-agent/",
+   "n": "Nexa reads real conversations on a schedule, spots patterns and proposes fixes.",
+   "span": "Nexa reads real conversations on a schedule",
+   "g": "documented",
+   "m": "default"
+  },
+  "S1": {
+   "e": "https://www.visor.ai/success-stories/generali/",
+   "n": "Generali Tranquilidade is named: its common requests run end to end as automated workflows, and it reports 80,000 conversations a month between brokers and the AI agent.",
+   "span": "conversations between brokers and the AI agent every month",
+   "g": "documented",
+   "m": "default"
+  },
+  "S3": {
+   "e": "https://www.visor.ai/llms.txt",
+   "n": "An llms.txt file resolves at the site root and indexes the product pages with markdown twins.",
+   "span": "Build AI Agents that learn from your business",
+   "g": "observed",
+   "m": "default",
+   "method": "probe"
+  }
+ },
+ "not_credited": [],
+ "announced": [
+  {
+   "what": "Automation rate of up to 85%",
+   "source": "https://www.visor.ai/"
+  },
+  {
+   "what": "Voice AI Agent resolving up to 70% of requests on first contact",
+   "source": "https://www.visor.ai/"
+  },
+  {
+   "what": "Chat AI Agent automating up to 80% of customer requests",
+   "source": "https://www.visor.ai/"
+  },
+  {
+   "what": "Nexa described as 'Agentic Superintelligence' that acts on its own without constant supervision",
+   "source": "https://www.visor.ai/nexa/"
+  },
+  {
+   "what": "Voice demos: 100+ languages, 30% CSAT increase, 40% cost reduction",
+   "source": "https://www.visor.ai/demos/"
+  },
+  {
+   "what": "Millennium BCP goal of 80% automation for Max",
+   "source": "https://www.visor.ai/success-stories/millennium-bcp/"
+  }
+ ],
+ "configurations": [
+  {
+   "id": "shipped",
+   "name": "As shipped",
+   "note": "Voice AI Agent with its documented defaults.",
+   "on": []
+  },
+  {
+   "id": "super-agent",
+   "name": "Super agent",
+   "note": "The customer chooses, when creating an agent with Nexa, a Super Agent that routes requests to specialised agents.",
+   "on": [
+    "super-agent"
+   ]
+  },
+  {
+   "id": "issue-agent",
+   "name": "Issue agent",
+   "note": "The customer writes plain-language criteria for an Issue Agent that flags conversations by severity, including what the agent must not handle.",
+   "on": [
+    "issue-agent"
+   ]
+  },
+  {
+   "id": "healthcare-deployment",
+   "name": "Healthcare deployment",
+   "note": "Deployment practice stated for healthcare customers: scope and data agreed with the customer's DPO before go-live.",
+   "on": [
+    "healthcare-deployment"
+   ]
+  }
+ ],
+ "captures": {
+  "https://www.visor.ai/chat-agent/": {
+   "sha256": "421174aab06b0387c3ce1b150a666cc80bc5b7f20f8422b97c01d7ef7326918d",
+   "bytes": 68976,
+   "read_at": "2026-11-10T10:41Z"
+  },
+  "https://www.visor.ai/healthcare/": {
+   "sha256": "110baa28fb29ad457a3674eeeaa924c9ac2a11b2db95a0193db936ed8e875944",
+   "bytes": 56914,
+   "read_at": "2026-11-10T10:41Z"
+  },
+  "https://www.visor.ai/llms.txt": {
+   "sha256": "35a955f100a9cf4548b06cb9b3bfab5727b4411523eb35eb1baa056d4e2927d5",
+   "bytes": 17112,
+   "read_at": "2026-11-10T10:41Z"
+  },
+  "https://www.visor.ai/security/": {
+   "sha256": "7d21171f11fddd974d5b6a6cb3a9dcc9af93cb7c75d20dec05be2775372bc1a6",
+   "bytes": 87679,
+   "read_at": "2026-11-10T10:41Z"
+  },
+  "https://www.visor.ai/success-stories/generali/": {
+   "sha256": "16b12afe076f384bf0687ae52da52f3389169c732058e06b8026569a3db43ae1",
+   "bytes": 53042,
+   "read_at": "2026-11-10T10:41Z"
+  },
+  "https://www.visor.ai/success-stories/millennium-bcp/": {
+   "sha256": "c89c0b3aa7f3f08221460259d4d71c2399ca815acb85a2e6689ad13e9b39c976",
+   "bytes": 53259,
+   "read_at": "2026-11-10T10:41Z"
+  },
+  "https://www.visor.ai/voice-agent/": {
+   "sha256": "ff227ae19de683cff906164d2eb7943a8c5c31d728446e35b0057ae6b3eea745",
+   "bytes": 71850,
+   "read_at": "2026-11-10T10:41Z"
+  }
+ }
+}
