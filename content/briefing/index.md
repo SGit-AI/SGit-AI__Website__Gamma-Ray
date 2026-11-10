@@ -32,6 +32,7 @@ A card has four dimensions: Autonomy, Reach, Control and Openness. Each has four
 - A card says what is public. What is missing appears only as the next unlock: the one public page that would move a level.
 - "Not yet evidenced" is never "no".
 - Marketing, roadmaps and demonstrations are shown and never counted.
+- Each level also shows the strongest band of the facts behind it, so you can see how well a level is backed. Every card shows its status. [FACT-Ray](../fact-ray/index.md) is the provisional scheme for those bands.
 
 [How the card works](../spectrum/index.md) · [the rules, cell by cell](../spectrum/evidence-map/index.md)
 
@@ -46,6 +47,7 @@ Behind the card is the governance rating, for whoever operates an agent. It uses
 - Everything. Every page carries the banner and every rating a beta label.
 - The name Spectrum is a working name.
 - The rules are written, run on real evidence, and still moving. [What they did](../spectrum/findings/index.md).
+- Every card is a Draft: found and checked by agents of one model family in one repository. No human has signed one, no company has confirmed one, and no customer has attested one.
 - Review by other agents is running. Most cards were mapped by one agent and have not finished it. [The workflow](../spectrum/pipeline/index.md).
 - The links between indicators and provisions have not been checked one by one.
 
