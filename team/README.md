@@ -22,7 +22,7 @@ Two agents never edit the same file in the same hour: if you need a change in a 
 2. **Round one.** The reviewer opens every source and checks that it says what the answer says, that the grade and the mode are right, that a quoted span is in the source and under fifteen words, and that nothing is credited to the wrong indicator. It appends `{"round": 1, "by", "at", "verdict": "pass" | "changes", "findings": [...]}` and sets status `round-1`.
 3. **The studio answers** each finding in the scan.
 4. **Round two.** The reviewer checks the answers and argues against every level three and four on the card: is the evidence an artefact, or an adjective? It appends round 2 and sets `round-2`.
-5. **Sign-off.** The approver reads both rounds. If both pass, it writes `"signoff": {"by", "at"}` and status `approved`. Otherwise it sends it back with the reason.
+5. **Sign-off.** The approver reads both rounds. If the last round passes and every finding is answered, it writes `"signoff": {"by", "at"}` and status `approved`. Otherwise it sends it back with the reason.
 6. **Published.** The build publishes an approved scan as a beta card, with its vault. The company is told afterwards and invited to claim the card through `/feedback/`.
 
 The gate refuses a third party's scan that is published without two rounds and a sign-off. Our own agents' scans, and the three examples published before this workflow existed, are the exceptions. Those three carry `review.keep_published: true`, so they stay live while their status moves through `round-1` and `round-2`; the reviewer sets the status as for any other scan. No other scan may carry that flag.

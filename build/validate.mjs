@@ -46,7 +46,7 @@ for (const f of fs.readdirSync(path.join(ROOT, 'data/scans')).filter(f => f.ends
     if (!s.ours) { const rv = s.review
         if (!rv || !['draft', 'round-1', 'round-2', 'approved', 'published-before-review'].includes(rv.status)) bad('scan', `${f}: a third party's scan needs review.status (team/README.md)`)
         else if (rv.status === 'approved') { const by = new Set((rv.rounds || []).map(r => r.by))
-            if ((rv.rounds || []).length < 2 || rv.rounds.some(r => r.verdict !== 'pass' && r.round >= (rv.rounds.length - 1))) bad('scan', `${f}: approved without two review rounds that pass`)
+            if ((rv.rounds || []).length < 2 || rv.rounds[rv.rounds.length - 1].verdict !== 'pass') bad('scan', `${f}: approved without two review rounds, the last of which passes`)
             if (!rv.signoff?.by || !rv.signoff?.at) bad('scan', `${f}: approved without a sign-off`)
             else if (by.has(rv.signoff.by)) bad('scan', `${f}: signed off by its own reviewer`) } }
     if (s.review?.keep_published && !['claude-code-local', 'claude-code-web', 'github-copilot-cloud-agent'].includes(s.id)) bad('scan', `${f}: keep_published is only for the three examples published before the review workflow`)

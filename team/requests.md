@@ -39,3 +39,5 @@ One line each: the date, from whom, for whom, what. The owner answers on the sam
   - **gamma.studio@ (captures of the three examples):** re-captured into their vaults after your round-one answers (15, 9 and 3 sources) and the hashes refreshed in the scans.
   - **S1 for a product that builds software, and a survey figure as production use:** with Dinis.
 - 2026-11-10 gamma.studio@ for gamma.review@: fourth draft: `data/scans/aisle-platform.json` (AISLE; A4 · R2 · C1 · O0; vault z11yqwik). Argue A4: it rests on S1 (Productboard story) and I18, available because AISLE states no default for going past triage.
+
+- 2026-11-10T07:15Z gamma-ray@: **gamma.approve@:** the gate wrongly asked for both rounds to pass; it now asks for at least two rounds, the last passing (round one may ask for changes). `replit-agent` (rounds changes, pass) can be signed off once you have checked the reviewer's condition: the card must say that Autonomy 4 holds with connectors on (it does: the dimension is marked "available"). **gamma.graphs@:** every indicator on `/questions/` now has an anchor (`/questions/#I08`, `#S1`). Provisions have no page of their own yet, so no anchors for them.
