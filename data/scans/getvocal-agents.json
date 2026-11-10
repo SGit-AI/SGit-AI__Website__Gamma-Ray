@@ -1,0 +1,285 @@
+{
+ "id": "getvocal-agents",
+ "name": "GetVocal AI agents",
+ "operator": "GetVocal AI (the vendor); each customer is the operator of its own use",
+ "company": "getvocal",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-10",
+ "tier": "public",
+ "basis": "GetVocal AI's own public product, blog, customer-story, privacy and status pages, and its published llms.txt",
+ "seen_by_operator": null,
+ "what": "GetVocal AI's voice, chat, WhatsApp and email agents for enterprise contact centres, built in its Agent Builder and supervised by people through its control console.",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer.",
+ "grant": null,
+ "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
+ "vault": {
+  "id": "qiamk6dj",
+  "read_key": "sgit_public_read_b46064eedc934cdbb18761e1da1a30140af1ba5f7bc05ed56a8b7e95e45b44d4:qiamk6dj",
+  "published": "2026-11-10"
+ },
+ "review": {
+  "status": "draft",
+  "rounds": []
+ },
+ "assessment": {
+  "by": "gamma.studio@web-summit.dinis",
+  "researcher_assessor": "a sub-agent of gamma.studio",
+  "challenger": "a sub-agent of gamma.studio",
+  "lowered": [
+   "I12",
+   "I25",
+   "I61"
+  ],
+  "fixed": [
+   "S1",
+   "I38",
+   "I56",
+   "I20",
+   "I39",
+   "I67"
+  ],
+  "files": "in the vault: work/assessment.json, work/challenger.json"
+ },
+ "answers": {
+  "I03": {
+   "e": "https://www.getvocal.ai/llms.txt",
+   "n": "Agent Builder is described as a no-engineering builder that makes agents from the customer's SOPs, transcripts and policies.",
+   "span": "Build, debug and tune production-ready, multilingual agents from your SOPs",
+   "g": "documented",
+   "m": "default"
+  },
+  "I08": {
+   "e": "https://www.getvocal.ai/voice",
+   "n": "The voice FAQ says agents write to connected systems, such as updating a booking or a customer record.",
+   "span": "the agent can update a booking or a customer record",
+   "g": "documented",
+   "m": "default"
+  },
+  "I10": {
+   "e": "https://www.getvocal.ai/llms.txt",
+   "n": "The agents are described as working across the customer's CRM, CCaaS, telephony and helpdesk systems.",
+   "span": "Agents handle voice and chat across your existing stack",
+   "g": "documented",
+   "m": "default"
+  },
+  "I11": {
+   "e": "https://www.getvocal.ai/blog/ai-agent-escalation-logic-human-handoff",
+   "n": "The handoff payload is described as sent over a REST API to the agent desktop, naming Genesys Cloud and Salesforce integrations.",
+   "span": "delivered via bidirectional REST API to the unified agent desktop",
+   "g": "documented",
+   "m": "default"
+  },
+  "I17": {
+   "e": "https://www.getvocal.ai/control-tower",
+   "n": "The Control Tower page says the agent consults a human expert on edge cases.",
+   "span": "AI consults a human expert when encountering edge-case scenarios.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "human-validation"
+  },
+  "I18": {
+   "e": "https://www.getvocal.ai/control-tower",
+   "n": "The Control Tower page says the agent asks a human to approve critical decisions before executing them.",
+   "span": "AI proactively asks a human to approve critical decisions before executing them.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "human-validation"
+  },
+  "I20": {
+   "e": "https://www.getvocal.ai/llms.txt",
+   "n": "The llms.txt says the agents resolve customer conversations end to end inside the customer's business rules, with human approval on high-stakes actions; the Control Tower FAQ says the agent cannot take actions its graph does not contain.",
+   "span": "Agents resolve customer conversations end to end while staying inside your business rules",
+   "g": "documented",
+   "m": "default"
+  },
+  "I21": {
+   "e": "https://www.getvocal.ai/blog/eu-ai-act-compliance-customer-service-ai-agents",
+   "n": "Each node of an agent's graph is described as defining the data it may access, its outputs and its escalation conditions.",
+   "span": "Each node defines what data the AI can access",
+   "g": "documented",
+   "m": "default"
+  },
+  "I36": {
+   "e": "https://www.getvocal.ai/llms.txt",
+   "n": "The llms.txt names GDPR and the EU AI Act as the frameworks the platform is aligned with.",
+   "span": "GDPR and EU AI Act aligned",
+   "g": "documented",
+   "m": "default"
+  },
+  "I38": {
+   "e": "https://www.getvocal.ai/llms.txt",
+   "n": "llms.txt says high-stakes actions such as large transactions, high-value returns and sensitive data get human-in-the-loop approval. A GetVocal blog on escalation says operators configure, in the Control Tower's Operator View, which decision nodes require validation.",
+   "span": "with human-in-the-loop approval on high-stakes actions",
+   "g": "documented",
+   "m": "available",
+   "cfg": "human-validation"
+  },
+  "I39": {
+   "e": "https://www.getvocal.ai/control-tower",
+   "n": "The Control Tower page says operators can take over a conversation from the agent at once, and llms.txt says supervisors can override any agent. No page describes pausing or stopping an agent or the fleet.",
+   "span": "Operators take over instantly to protect the customer relationship.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I40": {
+   "e": "https://www.getvocal.ai/voice",
+   "n": "Requests outside the agent's authority are described as escalated to a human operator with the conversation context.",
+   "span": "it escalates to a human operator instead of improvising",
+   "g": "documented",
+   "m": "default"
+  },
+  "I41": {
+   "e": "https://www.getvocal.ai/blog/ai-agent-escalation-logic-human-handoff",
+   "n": "The vendor describes an audit trail for each agent action, recording the graph node, data sources accessed and timestamp.",
+   "span": "GetVocal generates an immutable audit trail for every AI action",
+   "g": "documented",
+   "m": "default"
+  },
+  "I48": {
+   "e": "https://www.getvocal.ai/control-tower",
+   "n": "Agent actions are described as limited to those present in the business-rule graph.",
+   "span": "it cannot take actions the graph does not contain",
+   "g": "documented",
+   "m": "default"
+  },
+  "I54": {
+   "e": "https://status.getvocal.ai/events",
+   "n": "The public status page publishes incident reports with timed updates, including a call platform outage on 28 September 2026.",
+   "span": "We are currently investigating an issue affecting our call platform.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I56": {
+   "e": "https://www.getvocal.ai/customers/large-spanish-telecom",
+   "n": "In one deployment for an unnamed large Spanish telecom operator, each call opened with a disclosure that the caller was speaking with a virtual assistant. No GetVocal page states that agents disclose they are AI by default or documents a disclosure setting; the EU AI Act blog advises deployers to add a disclosure node. In the Glovo deployment, GetVocal reports that many restaurant partners never realised they were speaking with AI.",
+   "span": "clear disclosure that the caller was speaking with a virtual assistant",
+   "g": "documented",
+   "m": "available",
+   "cfg": "disclosure-node"
+  },
+  "I58": {
+   "e": "https://www.getvocal.ai/enterprise-ai-agents",
+   "n": "The agents are described as grounded in the customer's call scripts, help documents, CRM records and past transcripts.",
+   "span": "a living model of your call scripts, help docs, CRM records and past transcripts",
+   "g": "documented",
+   "m": "default"
+  },
+  "I67": {
+   "e": "https://www.getvocal.ai/control-tower",
+   "n": "The Control Tower dashboard is described as tracking KPIs, escalation trends and CX quality.",
+   "span": "Track KPIs, escalation trends, and CX quality across all journeys.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I68": {
+   "e": "https://www.getvocal.ai/enterprise-ai-agents",
+   "n": "Corrections, escalations and validations are described as fed back to refine the agents continuously.",
+   "span": "Every correction, escalation and validation feeds back as a learning signal.",
+   "g": "documented",
+   "m": "default"
+  },
+  "S1": {
+   "e": "https://www.getvocal.ai/customers/nicomatic",
+   "n": "GetVocal's Nicomatic story names the customer and says its assistant Sam logs confirmed production events in the ISO database, notifies the supervisor and escalates when required. The Equans France news item (over half of calls resolved without human intervention in 90 days) is a usage figure for resolution, mostly answering queries, and is kept only as context.",
+   "span": "Sam automatically logs the event in the ISO database",
+   "g": "documented",
+   "m": "default"
+  },
+  "S3": {
+   "e": "https://www.getvocal.ai/llms.txt",
+   "n": "An llms.txt resolves at the site root (fetched 2026-11-10).",
+   "span": "GetVocal builds AI voice and chat agents for regulated, high-volume customer operations.",
+   "g": "observed",
+   "m": "default",
+   "method": "probe"
+  }
+ },
+ "not_credited": [
+  {
+   "what": "GetVocal's Glovo story says many restaurant partners never realised they were speaking with AI.",
+   "why": "Shown because it bears on disclosure; the card counts disclosure only where a deployment is configured for it.",
+   "source": "https://www.getvocal.ai/customers/glovo"
+  }
+ ],
+ "announced": [],
+ "configurations": [
+  {
+   "id": "shipped",
+   "name": "As shipped",
+   "note": "Agents built in Agent Builder and run on the platform with its defaults.",
+   "on": []
+  },
+  {
+   "id": "human-validation",
+   "name": "With human validation nodes",
+   "note": "The customer's operators set which steps need a person's validation, approval or consultation before the agent proceeds.",
+   "on": [
+    "human-validation"
+   ]
+  },
+  {
+   "id": "disclosure",
+   "name": "With a disclosure node",
+   "note": "The deployment opens each conversation by saying the customer is speaking with a virtual assistant; seen in one deployment, not stated as a default.",
+   "on": [
+    "disclosure-node"
+   ]
+  },
+  {
+   "id": "fleet",
+   "name": "Several agents in the Control Center",
+   "note": "The customer runs several agents, with conversations routed between them.",
+   "on": [
+    "multi-agent-fleet"
+   ]
+  }
+ ],
+ "captures": {
+  "https://status.getvocal.ai/events": {
+   "sha256": "74a8ed351f4842724dac987a12c053394c8c2f5877627694e4f27247725c83a8",
+   "bytes": 518785,
+   "read_at": "2026-11-10T07:54Z"
+  },
+  "https://www.getvocal.ai/blog/ai-agent-escalation-logic-human-handoff": {
+   "sha256": "8e7b3b6db7f3de47a983a209a554f5fa306f868ede2d874ffb09be2f20b64c92",
+   "bytes": 718394,
+   "read_at": "2026-11-10T07:54Z"
+  },
+  "https://www.getvocal.ai/blog/eu-ai-act-compliance-customer-service-ai-agents": {
+   "sha256": "1e6826a51d5effbcd438696cf5814a7e146119393ff72d4b1e65cbb0cdae332c",
+   "bytes": 753558,
+   "read_at": "2026-11-10T07:54Z"
+  },
+  "https://www.getvocal.ai/control-tower": {
+   "sha256": "b345423bdcd11081157bf3cd90b9adf1c77886f9b600dff8f9acca20c8a0e27a",
+   "bytes": 654180,
+   "read_at": "2026-11-10T07:54Z"
+  },
+  "https://www.getvocal.ai/customers/large-spanish-telecom": {
+   "sha256": "bb32d3f2da2dc60f5ec722b9c9a1f1c0b237acdfc8ac80589f0f0903c1c3bcb1",
+   "bytes": 630359,
+   "read_at": "2026-11-10T07:54Z"
+  },
+  "https://www.getvocal.ai/customers/nicomatic": {
+   "sha256": "caa2019ba39b7e40275b2614fccd01ca602bdca0f42fa359b70e05c5e86bdfac",
+   "bytes": 637173,
+   "read_at": "2026-11-10T07:54Z"
+  },
+  "https://www.getvocal.ai/enterprise-ai-agents": {
+   "sha256": "d8c3ef0e7f0ba5e64094171e7c2d6e365ed9f68efe59c9b07db19a790fddc3dc",
+   "bytes": 697397,
+   "read_at": "2026-11-10T07:54Z"
+  },
+  "https://www.getvocal.ai/llms.txt": {
+   "sha256": "a24b2369870940e0dc1240fb106d27bf387441eef7611554499e7ec049b704a4",
+   "bytes": 3023,
+   "read_at": "2026-11-10T07:54Z"
+  },
+  "https://www.getvocal.ai/voice": {
+   "sha256": "74a48ff2b6668fe092525aad3a742784236892569da176861390e1be6278e42b",
+   "bytes": 654485,
+   "read_at": "2026-11-10T07:54Z"
+  }
+ }
+}

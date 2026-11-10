@@ -1,0 +1,251 @@
+{
+ "id": "getvocal",
+ "name": "GetVocal AI",
+ "url": "https://www.getvocal.ai",
+ "country": "France",
+ "sector": "customer service",
+ "read": "2026-11-10",
+ "basis": "GetVocal AI's own public pages (product, blog, customer stories, privacy, status, about) and, for funding only, tech.eu",
+ "seen_by_subject": false,
+ "what": "GetVocal sells a platform for building and running AI voice and chat agents for enterprise contact centres, with a supervisor console for human oversight.",
+ "facts": [
+  {
+   "fact": "About page: founded in Paris by Roy Moussa and Antonin Bertin, dated 2024",
+   "url": "https://www.getvocal.ai/about",
+   "span": "GetVocal is founded in Paris by Roy Moussa and Antonin Bertin."
+  },
+  {
+   "fact": "Series A post: founded in 2023, headquartered in Paris, team of sixty",
+   "url": "https://www.getvocal.ai/blog/getvocal-raises-26-million-series-a-funding",
+   "span": "GetVocal was founded in 2023 and is headquartered in Paris"
+  },
+  {
+   "fact": "Series A of 26 million dollars led by Creandum, with Elaia and Speedinvest",
+   "url": "https://www.getvocal.ai/blog/getvocal-raises-26-million-series-a-funding",
+   "span": "led by Creandum with participation from Elaia and Speedinvest"
+  },
+  {
+   "fact": "Independent news (tech.eu, 18 Nov 2025) reports the round and a Paris HQ",
+   "url": "https://tech.eu/2025/11/18/ai-customer-support-agent-startup-getvocal-raises-26m/",
+   "span": "The Series A funding round in GetVocal was led by Creandum"
+  },
+  {
+   "fact": "About page states 90+ enterprise teams and an average deployment time of six weeks",
+   "url": "https://www.getvocal.ai/about",
+   "span": "90+ enterprise teams across Europe trust GetVocal"
+  },
+  {
+   "fact": "Privacy policy says the service is hosted in the EU on Google Cloud Platform",
+   "url": "https://www.getvocal.ai/privacy-policy",
+   "span": "Our service is hosted in the European Union on the Google Cloud Platform"
+  }
+ ],
+ "people": [
+  {
+   "name": "Roy Moussa",
+   "role": "CEO and co-founder",
+   "url": "https://www.getvocal.ai/about"
+  },
+  {
+   "name": "Antonin Bertin",
+   "role": "CTO and co-founder",
+   "url": "https://www.getvocal.ai/about"
+  },
+  {
+   "name": "Florian Auban",
+   "role": "COO",
+   "url": "https://www.getvocal.ai/about"
+  },
+  {
+   "name": "Khue Le",
+   "role": "Head of R&D",
+   "url": "https://www.getvocal.ai/about"
+  },
+  {
+   "name": "Rabie el Hassani",
+   "role": "VP Revenue",
+   "url": "https://www.getvocal.ai/about"
+  },
+  {
+   "name": "Ana Banta",
+   "role": "VP Marketing",
+   "url": "https://www.getvocal.ai/about"
+  }
+ ],
+ "solutions": [
+  {
+   "id": "agents",
+   "name": "GetVocal AI agents (Enterprise AI Agents: voice, chat, WhatsApp, email)",
+   "short": "GetVocal AI agents",
+   "what": "Customer-facing agents grounded in a graph of the customer's processes (ContextGraphOS) that converse and act in connected systems.",
+   "status": "generally available",
+   "url": "https://www.getvocal.ai/enterprise-ai-agents",
+   "scan": "getvocal-agents"
+  },
+  {
+   "id": "control-tower",
+   "name": "Agent Control Tower",
+   "short": "Agent Control Tower",
+   "what": "Supervisor console to monitor live conversations, validate actions, take over and audit.",
+   "status": "generally available",
+   "url": "https://www.getvocal.ai/control-tower"
+  },
+  {
+   "id": "agent-builder",
+   "name": "Agent Builder / Studio (and GetVocal Assist copilot)",
+   "short": "Agent Builder",
+   "what": "No-code builder for agent graphs; Assist is an in-platform copilot described as rolling out.",
+   "status": "builder available; Assist rolling out (July 2026 post)",
+   "url": "https://www.getvocal.ai/agent-builder"
+  },
+  {
+   "id": "hybrid",
+   "name": "Hybrid Workplace Platform / Agent Control Center",
+   "short": "Agent Control Center",
+   "what": "Runs GetVocal agents, customer bots, third-party agents and human agents in one workspace.",
+   "status": "marketed",
+   "url": "https://www.getvocal.ai/hybrid-workplace-platform"
+  },
+  {
+   "id": "contextgraphos",
+   "name": "ContextGraphOS",
+   "short": "ContextGraphOS",
+   "what": "The graph model of business rules on which agent decisions run.",
+   "status": "underlying platform",
+   "url": "https://www.getvocal.ai/blog/eu-ai-act-compliance-customer-service-ai-agents"
+  }
+ ],
+ "stories": [
+  {
+   "customer": "Equans France",
+   "what": "Three French-speaking voice agents for payroll, HR and supplier queries; over half of calls resolved by the agents in the first 90 days.",
+   "url": "https://www.getvocal.ai/news/equans-france-scales-shared-services-operations-with-getvocal-ai-voice-agents",
+   "span": "over half of all calls were fully resolved by AI agents"
+  },
+  {
+   "customer": "Vodafone",
+   "what": "Multichannel assistant for eSIM and roaming; 45% of those queries resolved through self-service. (figure 45% shown beside the span)",
+   "url": "https://www.getvocal.ai/customers/vodafone",
+   "span": "of roaming and eSIM queries resolved fully through self-service"
+  },
+  {
+   "customer": "Glovo",
+   "what": "WhatsApp and voice agents for restaurant partner check-in, uptime and onboarding; 80 agents across 20+ markets.",
+   "url": "https://www.getvocal.ai/customers/glovo",
+   "span": "Glovo scaled to 80 AI agents across 20+ markets"
+  },
+  {
+   "customer": "A large Spanish telecom operator (unnamed)",
+   "what": "Spanish-language voice assistant handling first-level support, with AI disclosure at call start and transfer to humans.",
+   "url": "https://www.getvocal.ai/customers/large-spanish-telecom",
+   "span": "42% of eligible calls through self-service"
+  },
+  {
+   "customer": "Terrapinn",
+   "what": "Outbound multilingual voice agent calling past event attendees; 1,000+ calls.",
+   "url": "https://www.getvocal.ai/customers/terrapinn",
+   "span": "Weeks to roll out: 4"
+  },
+  {
+   "customer": "Nicomatic",
+   "what": "Voice and chat assistant 'Sam' guiding factory operators through ISO root-cause workflows and logging events.",
+   "url": "https://www.getvocal.ai/customers/nicomatic",
+   "span": "Sam automatically logs the event in the ISO database"
+  }
+ ],
+ "analysis": [
+  "**The shape.** GetVocal AI agents read A4 · R2 · C1 · O1. The agents write to the systems they are connected to, such as updating a booking or a customer record, across a customer's CRM, contact-centre, telephony and helpdesk tools. Each step of an agent's graph defines the data it may use and when it escalates; requests outside its authority go to a human operator with the conversation's context.",
+  "**The first card with Openness at level 1.** GetVocal's agents talk to the public, and one deployment shows the rung the other cards are missing: for a large Spanish telecom operator, each call opened by saying the caller was speaking with a virtual assistant. It is marked available, because no page states it as the default, and the Glovo story says many restaurant partners never realised they were speaking with AI. A page stating disclosure as a setting or a default would make it hold everywhere.",
+  "**Where the evidence is strongest.** Named customers with figures: Equans France (over half of calls resolved by the agents in the first 90 days), Vodafone, Glovo (80 agents across more than 20 markets) and Nicomatic, whose assistant logs confirmed production events in an ISO database on its own. A public status page reports incidents with timed updates.",
+  "**Control and Openness, what would move them.** Human validation of high-stakes actions is documented as a choice the customer configures, which is Control 1. A page naming the access the agents are granted in a customer's systems would reach level 2. For Openness 2, a page on the agents' limits and known failure cases, or a list of the models they run on, would meet the rule; the privacy policy names companies that receive data, not the models used.",
+  "**For readers.** GetVocal's own pages give two founding years: the About page says 2024 and the Series A post says 2023. The company raised a 26 million dollar Series A led by Creandum, as its post and tech.eu report."
+ ],
+ "article": {
+  "title": "GetVocal AI agents on the GAMMA-Ray Spectrum: A4 · R2 · C1 · O1",
+  "standfirst": "The GAMMA-Ray studio reads GetVocal's contact-centre agents from their public pages: they act in a customer's systems, people step in on high-stakes actions, and one deployment shows the AI disclosure the other cards lack.",
+  "body": [
+   "GetVocal AI, a featured startup at Web Summit Lisbon 2026, sells voice, chat, WhatsApp and email agents for enterprise contact centres. We read it only from public sources, captured and hashed on 10 November 2026, and the published rules computed the card.",
+   "**Autonomy 4, Orchestrates.** The agents work across a customer's CRM, telephony and helpdesk systems and write to them; Nicomatic's assistant logs production events on its own. With human validation configured, the agent asks a person before critical decisions.",
+   "**Reach 2, Integrated.** Handoffs reach agent desktops such as Genesys Cloud and Salesforce.",
+   "**Control 1, Stated.** Approval of high-stakes actions is documented as a setting the customer chooses. A page on the access the agents are granted would reach level 2.",
+   "**Openness 1, Disclosed.** In one deployment each call opens by saying the caller is speaking with a virtual assistant. A page making that the default would make the level hold for every deployment; a page on the agents' limits would reach level 2.",
+   "The card is beta and GetVocal AI has not seen it. It can claim the card and add evidence; corrections are dated."
+  ],
+  "pt": {
+   "title": "Os agentes da GetVocal AI no GAMMA-Ray Spectrum: A4 · R2 · C1 · O1",
+   "standfirst": "O estúdio GAMMA-Ray lê os agentes de contact centre da GetVocal a partir das suas páginas públicas: agem nos sistemas do cliente, pessoas intervêm em ações críticas, e uma implementação mostra a divulgação de IA que falta aos outros cartões.",
+   "body": [
+    "A GetVocal AI, startup em destaque no Web Summit Lisboa 2026, vende agentes de voz, chat, WhatsApp e email para contact centres. Lemos apenas fontes públicas, capturadas e com hash a 10 de novembro de 2026.",
+    "**Autonomia 4.** Os agentes trabalham no CRM, na telefonia e no helpdesk do cliente e escrevem neles. **Alcance 2.** As passagens chegam a Genesys Cloud e Salesforce. **Controlo 1.** A aprovação humana de ações críticas é uma definição do cliente.",
+    "**Abertura 1.** Numa implementação, cada chamada começa por dizer que é um assistente virtual. O cartão é beta e a GetVocal AI ainda não o viu; pode reclamá-lo e acrescentar evidência."
+   ]
+  }
+ },
+ "vault": {
+  "id": "qiamk6dj",
+  "read_key": "sgit_public_read_b46064eedc934cdbb18761e1da1a30140af1ba5f7bc05ed56a8b7e95e45b44d4:qiamk6dj",
+  "published": "2026-11-10"
+ },
+ "team": {
+  "researcher-assessor": "a sub-agent of gamma.studio@web-summit.dinis",
+  "challenger": "a sub-agent",
+  "scorer": "build/spectrum.mjs",
+  "analyst, designer, writer": "gamma.studio@web-summit.dinis",
+  "review": "gamma.review@web-summit.dinis (pending)",
+  "sign-off": "gamma.approve@web-summit.dinis (pending)"
+ },
+ "signoff": null,
+ "corrections": [],
+ "captures": {
+  "https://tech.eu/2025/11/18/ai-customer-support-agent-startup-getvocal-raises-26m/": {
+   "sha256": "5f2463f96c854e6dc1bf557e8ff1d8ce966e2cec220acf28320d90c9b09a8c40",
+   "bytes": 76405,
+   "read_at": "2026-11-10T07:54Z"
+  },
+  "https://www.getvocal.ai/about": {
+   "sha256": "7acdd924fcc21c13b037f8f6d97f98d04449f1107a46fc4f0cab4bd0e38a6277",
+   "bytes": 729101,
+   "read_at": "2026-11-10T07:54Z"
+  },
+  "https://www.getvocal.ai/blog/getvocal-raises-26-million-series-a-funding": {
+   "sha256": "1e15a4fda67c39e85826319df113e1ad11ef1d7e8a07d46a213a147d6a53dd6e",
+   "bytes": 629439,
+   "read_at": "2026-11-10T07:54Z"
+  },
+  "https://www.getvocal.ai/customers/glovo": {
+   "sha256": "13533474bec152b8f5f53ac2d124276da15bdd86484814620d963fbef84a01d9",
+   "bytes": 635006,
+   "read_at": "2026-11-10T07:54Z"
+  },
+  "https://www.getvocal.ai/customers/large-spanish-telecom": {
+   "sha256": "bb32d3f2da2dc60f5ec722b9c9a1f1c0b237acdfc8ac80589f0f0903c1c3bcb1",
+   "bytes": 630359,
+   "read_at": "2026-11-10T07:55Z"
+  },
+  "https://www.getvocal.ai/customers/nicomatic": {
+   "sha256": "caa2019ba39b7e40275b2614fccd01ca602bdca0f42fa359b70e05c5e86bdfac",
+   "bytes": 637173,
+   "read_at": "2026-11-10T07:55Z"
+  },
+  "https://www.getvocal.ai/customers/terrapinn": {
+   "sha256": "c55aeb490b0c81c433915b7da58ad14a770b859afdcc1fdd53ea45e2b518a7a7",
+   "bytes": 638322,
+   "read_at": "2026-11-10T07:55Z"
+  },
+  "https://www.getvocal.ai/customers/vodafone": {
+   "sha256": "03da1f13124f56e69ce8783aa0b430740fe347b456ad2c346b3ff82fde434f6e",
+   "bytes": 628478,
+   "read_at": "2026-11-10T07:55Z"
+  },
+  "https://www.getvocal.ai/news/equans-france-scales-shared-services-operations-with-getvocal-ai-voice-agents": {
+   "sha256": "d17abc182c2181d0a72b50dd11e2d5a03acdbcb8e8a04d4a7bd5461d44699a17",
+   "bytes": 606737,
+   "read_at": "2026-11-10T07:55Z"
+  },
+  "https://www.getvocal.ai/privacy-policy": {
+   "sha256": "4bf851501f7e94137f05d3a0ed2d92bd74b3b61f2887b37053c685f4bdefae42",
+   "bytes": 688380,
+   "read_at": "2026-11-10T07:55Z"
+  }
+ }
+}
