@@ -15,7 +15,7 @@ summary: What GAMMA-Ray is, the name, how it sits beside RiskMandate and X-ray, 
 
 ## The family
 
-- **RiskMandate** supplies the lens: what an agent can reach, what it was authorised to do, the difference, and what stands in the way.
+- **RiskMandate** supplies [the lens](../lens/index.md): what an agent was authorised to do, what it can reach, the difference, and what stands in the way. It measures the grant; it is not one of the mapped instruments.
 - **X-ray** is the quick live scan of one agent with its operator present. It answers the same questions at the Evidenced tier.
 - **GAMMA-Ray Public** is the scan from public evidence alone.
 - Scans compose into the **map**: many agents on the quadrant.

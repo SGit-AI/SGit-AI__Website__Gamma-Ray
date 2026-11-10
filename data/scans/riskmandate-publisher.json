@@ -15,87 +15,248 @@
  "answers": {
   "I04": {
    "e": "https://riskmandate.ai/team/publisher.html",
-   "n": "Runs as Claude Code on the web, in a managed container."
+   "n": "Runs as Claude Code on the web, in a managed container.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I08": {
    "e": "https://riskmandate.ai/team/publisher.html",
-   "n": "It publishes releases to the branch the site deploys from."
+   "n": "It publishes releases to the branch the site deploys from.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I10": {
    "e": "https://riskmandate.ai/team/publisher.html",
-   "n": "The repository, the stories vault and the live site."
+   "n": "The repository, the stories vault and the live site.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I11": {
    "e": "https://riskmandate.ai/team/publisher.html",
-   "n": "The code host and the vault host."
+   "n": "The code host and the vault host.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I12": {
    "e": "https://riskmandate.ai/team/",
-   "n": "One person and two agents; the publisher checks what the design studio agent delivers."
+   "n": "One person and two agents; the publisher checks what the design studio agent delivers.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I18": {
    "e": "https://riskmandate.ai/team/publisher.html",
-   "n": "It publishes what the lead has accepted; it does not decide."
+   "n": "It publishes what the lead has accepted; it does not decide.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I20": {
    "e": "https://riskmandate.ai/team/publisher.html",
-   "n": "The mandate is written: wanted, refused and unstated."
+   "n": "The mandate is written: wanted, refused and unstated.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I21": {
    "e": "https://riskmandate.ai/team/publisher.html",
-   "n": "Its tools and skills are listed."
+   "n": "Its tools and skills are listed.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I23": {
    "e": "https://riskmandate.ai/team/publisher.html",
-   "n": "The grant: 17 of the 23 primitives, each with how it is known."
+   "n": "The grant: 17 of the 23 primitives, each with how it is known.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I27": {
    "e": "https://riskmandate.ai/agents/",
-   "n": "A lane identity with a public key."
+   "n": "A lane identity with a public key.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I29": {
    "e": "https://riskmandate.ai/team/",
-   "n": "The team page lists the agents."
+   "n": "The team page lists the agents.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I30": {
    "e": "https://riskmandate.ai/team/publisher.html",
-   "n": "Owner: the lead."
+   "n": "Owner: the lead.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I32": {
    "e": "https://riskmandate.ai/team/",
-   "n": "The lead is the accountable person."
+   "n": "The lead is the accountable person.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I34": {
    "e": "https://riskmandate.ai/team/publisher.html",
-   "n": "Its Agent Behaviour Policy is the published policy."
+   "n": "Its Agent Behaviour Policy is the published policy.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I38": {
    "e": "https://riskmandate.ai/team/publisher.html",
-   "n": "Only what the lead has accepted by message goes into a story."
+   "n": "Only what the lead has accepted by message goes into a story.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I41": {
    "e": "https://riskmandate.ai/versions.html",
-   "n": "Every release is a written note in the version record."
+   "n": "Every release is a written note in the version record.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I45": {
    "e": "https://riskmandate.ai/team/publisher.html",
-   "n": "Every outside request goes through an egress proxy above the container."
+   "n": "Every outside request goes through an egress proxy above the container.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I47": {
    "e": "https://riskmandate.ai/team/publisher.html",
-   "n": "Several limits are prose: the page says the grant does not know them."
+   "n": "Several limits are prose: the page says the grant does not know them.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I49": {
    "e": "https://riskmandate.ai/team/publisher.html",
-   "n": "The delta is stated: 4 in excess, 3 unbounded."
+   "n": "The delta is stated: 4 in excess, 3 unbounded.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I56": {
    "e": "https://riskmandate.ai/team/",
-   "n": "The site says which agents make it."
+   "n": "The site says which agents make it.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I61": {
    "e": "https://riskmandate.ai/team/publisher.html",
-   "n": "The runtime is named."
+   "n": "The runtime is named.",
+   "g": "self-reported",
+   "m": "deployed"
   }
+ },
+ "kind": "deployment",
+ "grant": {
+  "profile": "riskmandate/team/publisher",
+  "profile_version": "2026-09-26",
+  "source": "https://riskmandate.ai/team/publisher.json",
+  "product": "RiskMandate Publisher",
+  "statement": null,
+  "rows": [
+   {
+    "capability": "read.file.project",
+    "barrier": "none",
+    "evidence": "observed"
+   },
+   {
+    "capability": "write.file.project",
+    "barrier": "none",
+    "evidence": "observed"
+   },
+   {
+    "capability": "write.repository.project",
+    "barrier": "none",
+    "evidence": "observed"
+   },
+   {
+    "capability": "write.repository.tenant",
+    "barrier": "setting",
+    "evidence": "observed"
+   },
+   {
+    "capability": "create.record.world",
+    "barrier": "setting",
+    "evidence": "observed"
+   },
+   {
+    "capability": "send.endpoint.allowed",
+    "barrier": "boundary",
+    "evidence": "observed"
+   },
+   {
+    "capability": "authenticate-as.credential.tenant",
+    "barrier": "boundary",
+    "evidence": "observed"
+   },
+   {
+    "capability": "authenticate-as.credential.signing",
+    "barrier": "none",
+    "evidence": "observed"
+   },
+   {
+    "capability": "read.credential.host",
+    "barrier": "none",
+    "evidence": "observed"
+   },
+   {
+    "capability": "grant.credential.self",
+    "barrier": "none",
+    "evidence": "documented"
+   },
+   {
+    "capability": "execute.process.host",
+    "barrier": "none",
+    "evidence": "observed"
+   },
+   {
+    "capability": "write.file.host",
+    "barrier": "none",
+    "evidence": "observed"
+   },
+   {
+    "capability": "read.file.host",
+    "barrier": "none",
+    "evidence": "observed"
+   },
+   {
+    "capability": "delete.file.host",
+    "barrier": "none",
+    "evidence": "observed"
+   },
+   {
+    "capability": "read.record.history",
+    "barrier": "none",
+    "evidence": "observed"
+   },
+   {
+    "capability": "create.schedule.tenant",
+    "barrier": "setting",
+    "evidence": "self-reported"
+   },
+   {
+    "capability": "create.schedule.host",
+    "barrier": "boundary",
+    "evidence": "measured"
+   }
+  ]
+ },
+ "mandate": {
+  "source": "https://riskmandate.ai/team/publisher.json",
+  "label": "Build and publish riskmandate.ai; connect the stories vault to it; never decide, never hold a secret in a file",
+  "authored": "2026-09-26",
+  "want": [
+   "read.file.project",
+   "write.file.project",
+   "write.repository.project",
+   "write.repository.tenant",
+   "create.record.world",
+   "send.endpoint.allowed",
+   "authenticate-as.credential.tenant",
+   "authenticate-as.credential.signing",
+   "execute.process.host",
+   "write.file.host",
+   "read.file.host",
+   "delete.file.host",
+   "create.schedule.tenant"
+  ],
+  "do_not_want": [
+   "grant.credential.self",
+   "read.credential.host"
+  ]
  }
 }

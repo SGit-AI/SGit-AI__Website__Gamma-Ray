@@ -322,10 +322,6 @@
   "text": "Its purpose and permitted tasks are stated in writing",
   "links": [
    {
-    "provision": "rm.mandate",
-    "relation": "same"
-   },
-   {
     "provision": "nist.MAP-1.1",
     "relation": "part"
    },
@@ -345,7 +341,8 @@
     "provision": "aiact.art-13",
     "relation": "part"
    }
-  ]
+  ],
+  "lens": "the mandate"
  },
  {
   "id": "I21",
@@ -356,10 +353,6 @@
    {
     "provision": "owasp.k07",
     "relation": "same"
-   },
-   {
-    "provision": "rm.mandate",
-    "relation": "part"
    },
    {
     "provision": "nist.MAP-2.2",
@@ -398,10 +391,6 @@
   "text": "What it can reach is enumerated: scopes, permissions, tools",
   "links": [
    {
-    "provision": "rm.grant",
-    "relation": "same"
-   },
-   {
     "provision": "mcp.05",
     "relation": "part"
    },
@@ -413,7 +402,8 @@
     "provision": "aagmm.GD-02",
     "relation": "part"
    }
-  ]
+  ],
+  "lens": "the grant"
  },
  {
   "id": "I24",
@@ -994,10 +984,6 @@
   "text": "A limit on it is enforced by something outside its own reach",
   "links": [
    {
-    "provision": "rm.barrier.boundary",
-    "relation": "same"
-   },
-   {
     "provision": "owasp.k19",
     "relation": "part"
    },
@@ -1017,19 +1003,16 @@
     "provision": "ms.500.3.2",
     "relation": "part"
    }
-  ]
+  ],
+  "lens": "a barrier of the kind boundary"
  },
  {
   "id": "I46",
   "question": "Q14",
   "tier": "public",
   "text": "A limit on it is a setting that its own account could change",
-  "links": [
-   {
-    "provision": "rm.barrier.setting",
-    "relation": "same"
-   }
-  ]
+  "links": [],
+  "lens": "a barrier of the kind setting"
  },
  {
   "id": "I47",
@@ -1038,14 +1021,11 @@
   "text": "A limit on it is a rule in prose",
   "links": [
    {
-    "provision": "rm.barrier.expectation",
-    "relation": "same"
-   },
-   {
     "provision": "owasp.k04",
     "relation": "part"
    }
-  ]
+  ],
+  "lens": "a barrier of the kind expectation"
  },
  {
   "id": "I48",
@@ -1072,12 +1052,8 @@
   "question": "Q14",
   "tier": "public",
   "text": "The difference between what it can reach and what it is for is stated",
-  "links": [
-   {
-    "provision": "rm.delta",
-    "relation": "same"
-   }
-  ]
+  "links": [],
+  "lens": "the delta"
  },
  {
   "id": "I50",

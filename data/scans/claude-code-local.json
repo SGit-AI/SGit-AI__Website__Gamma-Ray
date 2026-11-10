@@ -1,0 +1,241 @@
+{
+ "id": "claude-code-local",
+ "name": "Claude Code, on your own machine",
+ "operator": "Anthropic (the vendor); each user is the operator of their own deployment",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-10",
+ "tier": "public",
+ "basis": "the vendor’s own documentation and a published deployment shape",
+ "seen_by_operator": null,
+ "what": "The command-line coding agent, running as the user’s own account on their machine, with the settings it ships with.",
+ "note": "An example scan of a product as its vendor documents it, not of any one deployment. Disclosure: the agent that wrote this scan runs on this product.",
+ "grant": {
+  "profile": "anthropic/claude-code/local-default",
+  "profile_version": "2026-09-05",
+  "source": "https://abp.sgit.ai/data/profiles/anthropic/claude-code/local-default.json",
+  "product": "Claude Code (the CLI, on your own machine)",
+  "statement": "This describes a published deployment shape. It is not an assessment, an audit, a certification or a security review of any named product, and it carries no adjective and no score.",
+  "rows": [
+   {
+    "capability": "authenticate-as.credential.signing",
+    "barrier": "none",
+    "evidence": "documented"
+   },
+   {
+    "capability": "authenticate-as.credential.tenant",
+    "barrier": "none",
+    "evidence": "derived"
+   },
+   {
+    "capability": "create.record.world",
+    "barrier": "none",
+    "evidence": "documented"
+   },
+   {
+    "capability": "delete.file.host",
+    "barrier": "none",
+    "evidence": "derived"
+   },
+   {
+    "capability": "read.credential.host",
+    "barrier": "none",
+    "evidence": "documented"
+   },
+   {
+    "capability": "read.file.host",
+    "barrier": "none",
+    "evidence": "derived"
+   },
+   {
+    "capability": "read.record.history",
+    "barrier": "none",
+    "evidence": "documented"
+   },
+   {
+    "capability": "send.endpoint.world",
+    "barrier": "none",
+    "evidence": "derived"
+   },
+   {
+    "capability": "write.file.host",
+    "barrier": "none",
+    "evidence": "derived"
+   },
+   {
+    "capability": "write.file.project",
+    "barrier": "none",
+    "evidence": "derived"
+   },
+   {
+    "capability": "write.repository.project",
+    "barrier": "none",
+    "evidence": "derived"
+   },
+   {
+    "capability": "write.repository.tenant",
+    "barrier": "expectation",
+    "evidence": "derived"
+   },
+   {
+    "capability": "execute.process.host",
+    "barrier": "setting",
+    "evidence": "derived"
+   },
+   {
+    "capability": "create.schedule.host",
+    "barrier": "none",
+    "evidence": "derived"
+   },
+   {
+    "capability": "read.file.project",
+    "barrier": "none",
+    "evidence": "derived"
+   },
+   {
+    "capability": "grant.credential.self",
+    "barrier": "setting",
+    "evidence": "derived"
+   }
+  ]
+ },
+ "vault": {
+  "id": "08k79drk",
+  "read_key": "sgit_public_read_04133526e7f502cb0c0a0e18705b0b34195413427a40eb785512bd74df17b880:08k79drk",
+  "published": "2026-11-10"
+ },
+ "answers": {
+  "I04": {
+   "e": "https://code.claude.com/docs/en/overview",
+   "n": "The vendor calls it \"an agentic coding tool that reads your codebase, edits files, runs commands\".",
+   "g": "documented",
+   "m": "default"
+  },
+  "I08": {
+   "e": "https://code.claude.com/docs/en/overview",
+   "n": "It edits files, runs commands, stages changes, commits and opens pull requests.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I10": {
+   "e": "https://code.claude.com/docs/en/overview",
+   "n": "The codebase, the shell, git and the development tools it integrates with.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I11": {
+   "e": "https://code.claude.com/docs/en/security",
+   "n": "It can connect to Model Context Protocol servers; a project’s servers have their own approval prompt.",
+   "g": "documented",
+   "m": "available"
+  },
+  "I12": {
+   "e": "https://code.claude.com/docs/en/sub-agents",
+   "n": "Subagents do side tasks in their own context and return a summary.",
+   "g": "documented",
+   "m": "available"
+  },
+  "I16": {
+   "e": "https://code.claude.com/docs/en/permissions",
+   "n": "In Manual mode shell commands and edits ask before they run; file reads in the working directory do not.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I18": {
+   "e": "https://code.claude.com/docs/en/permissions",
+   "n": "Other permission modes change what asks; in auto mode a classifier reviews actions instead of the person.",
+   "g": "documented",
+   "m": "available"
+  },
+  "I20": {
+   "e": "https://code.claude.com/docs/en/overview",
+   "n": "The vendor states what the product is for.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I21": {
+   "e": "https://code.claude.com/docs/en/permissions",
+   "n": "Allow, ask and deny rules per tool and pattern.",
+   "g": "documented",
+   "m": "available"
+  },
+  "I22": {
+   "e": "https://code.claude.com/docs/en/security",
+   "n": "The security page states limits, for example that an approved shell command can write anywhere the account can.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I23": {
+   "e": "https://abp.sgit.ai/data/profiles/anthropic/claude-code/local-default.json",
+   "n": "A published deployment shape lists 16 capabilities; most rows are derived, not measured.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I34": {
+   "e": "https://code.claude.com/docs/en/settings",
+   "n": "An organisation can deliver managed settings that a user’s own files do not change.",
+   "g": "documented",
+   "m": "available"
+  },
+  "I38": {
+   "e": "https://code.claude.com/docs/en/permissions",
+   "n": "Shell commands (beyond a read-only set) and edits need approval in Manual mode.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I39": {
+   "e": "https://code.claude.com/docs/en/permissions",
+   "n": "A deny rule removes a tool; the person can refuse any prompt.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I41": {
+   "e": "https://code.claude.com/docs/en/monitoring-usage",
+   "n": "Tool activity can be exported as OpenTelemetry events; it is configured by the operator.",
+   "g": "documented",
+   "m": "available"
+  },
+  "I43": {
+   "e": "https://code.claude.com/docs/en/monitoring-usage",
+   "n": "Usage, cost and tool activity across an organisation, through OpenTelemetry.",
+   "g": "documented",
+   "m": "available"
+  },
+  "I45": {
+   "e": "https://code.claude.com/docs/en/sandboxing",
+   "n": "Sandboxing restricts shell commands at the operating system level (filesystem and network); the operator turns it on.",
+   "g": "documented",
+   "m": "available"
+  },
+  "I46": {
+   "e": "https://code.claude.com/docs/en/security",
+   "n": "\"The boundary is a permission prompt, so a Bash command you approve can still write anywhere your user account can.\"",
+   "g": "documented",
+   "m": "default"
+  },
+  "I48": {
+   "e": "https://code.claude.com/docs/en/hooks",
+   "n": "Hooks run on every tool call and can block it; permission rules are data.",
+   "g": "documented",
+   "m": "available"
+  },
+  "I49": {
+   "e": "https://abp.sgit.ai/data/profiles/anthropic/claude-code/local-default.json",
+   "n": "The published shape names which capabilities are unbounded.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I61": {
+   "e": "https://code.claude.com/docs/en/overview",
+   "n": "The product and its model family are named.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I63": {
+   "e": "https://code.claude.com/docs/en/security",
+   "n": "The vendor points to a SOC 2 Type 2 report and an ISO 27001 certificate at its trust centre; they cover the vendor, not a user’s deployment.",
+   "g": "documented",
+   "m": "default"
+  }
+ }
+}

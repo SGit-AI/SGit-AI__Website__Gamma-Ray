@@ -18,7 +18,7 @@ for (const p of P) { if (!sid.has(p.standard)) bad('data', `provision ${p.id}: u
 for (const i of I) {
     if (!qid.has(i.question)) bad('data', `indicator ${i.id}: unknown question`)
     if (!['public', 'declared', 'evidenced'].includes(i.tier)) bad('data', `indicator ${i.id}: tier`)
-    if (!i.links.length) bad('data', `indicator ${i.id}: cites nothing`)
+    if (!i.links.length && !i.lens) bad('data', `indicator ${i.id}: cites nothing`)
     for (const l of i.links) { if (!pid.has(l.provision)) bad('data', `indicator ${i.id}: unknown provision ${l.provision}`); if (!['same', 'part', 'negation'].includes(l.relation)) bad('data', `indicator ${i.id}: relation`) }
 }
 for (const q of Q) { for (const id of q.indicators) if (!iid.has(id)) bad('data', `question ${q.id}: unknown indicator ${id}`); if (!['freedom', 'governance'].includes(q.axis)) bad('data', `question ${q.id}: axis`) }
@@ -32,8 +32,13 @@ for (const f of fs.readdirSync(path.join(ROOT, 'data/scans')).filter(f => f.ends
     const s = read('data/scans/' + f)
     if (s.id + '.json' !== f) bad('scan', `${f}: id does not match the file`)
     if (!s.vault || !/^sgit_public_read_[0-9a-f]{32,}:[a-z0-9]+$/.test(s.vault.read_key || '')) bad('scan', `${f}: no public vault read key (every assessment lives in a vault)`)
-    if (!s.ours && !s.seen_by_operator) bad('scan', `${f}: a third party's scan needs seen_by_operator (a date) before it is published`)
-    for (const [id, a] of Object.entries(s.answers)) { if (!iid.has(id)) bad('scan', `${f}: unknown indicator ${id}`); if (!/^https:\/\//.test(a.e || '')) bad('scan', `${f}: ${id} has no https source`); if (!a.n) bad('scan', `${f}: ${id} has no note`) }
+    // a third party: only a product as its vendor documents it, labelled as an example, or a scan its operator has seen
+    if (!s.ours && !s.seen_by_operator && !(s.kind === 'product-shape' && s.basis)) bad('scan', `${f}: a third party's deployment needs seen_by_operator; a product example needs kind product-shape and a basis`)
+    if (!s.ours) for (const [id, a] of Object.entries(s.answers)) if (!['documented', 'observed', 'measured'].includes(a.g)) bad('scan', `${f}: ${id}: a third party's answer must be documented by the vendor or measured`)
+    const caps = new Set(read('data/lens.json').capabilities.map(c => c.id)), bars = new Set(read('data/lens.json').barriers.map(b => b.id))
+    if (s.grant) for (const r of s.grant.rows) { if (!caps.has(r.capability)) bad('scan', `${f}: unknown capability ${r.capability}`); if (!bars.has(r.barrier)) bad('scan', `${f}: unknown barrier ${r.barrier}`) }
+    if (s.grant === undefined) bad('scan', `${f}: say whether the grant is measured (a grant, or null with a grant_note)`)
+    for (const [id, a] of Object.entries(s.answers)) { if (!iid.has(id)) bad('scan', `${f}: unknown indicator ${id}`); if (!/^https:\/\//.test(a.e || '')) bad('scan', `${f}: ${id} has no https source`); if (!a.n) bad('scan', `${f}: ${id} has no note`); if (!['deployed', 'default', 'available'].includes(a.m)) bad('scan', `${f}: ${id} has no mode`) }
 }
 
 // 3 the built site: a twin for every page, the version on every page, llms.txt lists every page, local links resolve

@@ -16,7 +16,7 @@ summary: A draft standard that rates an AI agent on two things, its freedom and 
 
 {{fig:quadrant}}
 
-This is [RiskMandate](https://riskmandate.ai/)'s lens, measured: freedom is the agent's reach, governance is its mandate and what stands in the way, and the distance between the level reached and the level held is the gap.
+The questions measure what is said about an agent. What its permissions actually let it do, its **grant**, is measured separately, with [RiskMandate](https://riskmandate.ai/)'s lens: mandate, grant, and the delta between them. [How the two halves meet](lens/index.md).
 
 ## One short list, many standards
 
@@ -28,8 +28,9 @@ Maturity standards for agents ask many of the same things in different words. We
 - [The questions](questions/index.md): all {{n:questions}}, with every citation.
 - [The mashup](mashup/index.md): the graph, and what would not compress.
 - [Coverage](coverage/index.md): how much of each instrument can be read from outside.
-- [Scans](scans/index.md): our own agents first.
+- [The lens](lens/index.md): mandate, grant and delta, and how the grant changes a level.
+- [Scans](scans/index.md): our own agents, and three products as examples.
 
 ## Where this is
 
-A draft, {{n:version}}. The mapping between instruments is a first pass by one reader and has not been checked by a second. So far it rates nobody but ourselves. [What exists and what does not](about/reality.md).
+A draft, {{n:version}}. The mapping between instruments is a first pass by one reader and has not been checked by a second. It rates our own agents, and shows three widely used products as examples from their vendors' documentation. [What exists and what does not](about/reality.md).

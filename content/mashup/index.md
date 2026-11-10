@@ -14,6 +14,18 @@ summary: The graph that joins the instruments: provisions, indicators and questi
 
 {{fig:graph}}
 
+## How the instruments connect
+
+Two instruments are connected when one indicator cites both. {{n:pairs}} pairs of instruments are connected this way.
+
+{{fig:ring}}
+
+{{fig:pairs}}
+
+The ten strongest connections:
+
+{{gen:pairs-top}}
+
 ## One answer, many needles
 
 Each cell is the number of provisions of that instrument that one question reaches.
@@ -23,6 +35,10 @@ Each cell is the number of provisions of that instrument that one question reach
 {{n:shared}} of the {{n:indicators}} indicators are asked for by three or more instruments. These are the facts asked for by four or more:
 
 {{gen:shared}}
+
+## Every scan against every question
+
+{{fig:scans}}
 
 ## What would not compress
 

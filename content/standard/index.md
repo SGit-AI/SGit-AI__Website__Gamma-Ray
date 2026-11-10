@@ -12,7 +12,13 @@ The more constrained, controlled and governed an agent is, the more it can be tr
 
 ## What is rated
 
-One **agent in one deployment**: a product, a team of agents or a workflow, as it runs for somebody. Not a company. A company's picture is the set of its agents.
+One **agent in one deployment**: a team of agents or a workflow, as it runs for somebody. Not a company. A company's picture is the set of its agents.
+
+A **product** can be scanned too, as its vendor documents it, but a product is not a deployment: it has no owner, no policy and no mandate until somebody runs it. A product scan shows a starting point, what the product does and controls as shipped and what it can when its options are on, and is labelled as an example.
+
+## What is said, and what it can do
+
+The questions measure what is said about an agent. Its **grant**, what its permissions let it do, is measured separately, in RiskMandate's terms, and the difference between the two is the **delta**. [The lens](../lens/index.md) says how the two halves meet.
 
 ## The three layers
 
@@ -44,7 +50,11 @@ The level names are ours. The questions behind them cite Salesforce's five level
 
 {{gen:governance-table}}
 
-The ladder follows RiskMandate's four kinds of barrier: nothing, a rule in prose, a setting, and a boundary enforced outside the agent's own reach. Only the last is a control, so level 3 asks for it.
+The ladder follows RiskMandate's four kinds of barrier: nothing, a rule in prose, a setting, and a boundary enforced outside the agent's own reach. Only the last is a control, so level 3 asks for it. Where a grant has been measured, level 3 reads it from the grant and not from words.
+
+## As shipped, and available
+
+Each answer says how it holds: **in this deployment**, **as shipped** (true of a product out of the box), or **available** (a control or a mode the operator can turn on). The level held counts the first two. What the third would add is shown beside it, as the level the agent could be held at.
 
 ## The level held
 
@@ -58,16 +68,17 @@ Two instruments say the same in their own terms. EAAMM states that its level 3 c
 
 ## The rules
 
-1. **No answer without evidence.** Each yes links to its source, with the date it was read.
+1. **No answer without evidence.** Each yes links to its source, with the date it was read and how it is known.
 2. **Not evidenced is not no.** An indicator with no evidence is reported as such and never lowers a level by itself; it only fails to raise one.
 3. **Levels are computed.** A level is a stated pattern over indicators. Two readers with the same evidence get the same level.
 4. **Never one number alone.** The level held is always shown with the level reached, the governance level and the evidence.
 5. **Reading only.** A Public scan reads what an operator has published. It sends no credentials and tests nothing.
-6. **The operator sees it first.** A scan of a named third party is provisional and is not published before its operator has seen it and been invited to correct it.
+6. **Deployments are shown to their operator first; products are examples.** A scan of a named organisation's deployment is not published before that organisation has seen it and been invited to correct it. A product may be scanned as an example, from its vendor's own documentation and published profiles only, labelled as not seen by the vendor, and corrected on request.
 7. **Every bridge is signed.** A link between an indicator and a provision records what it is, who asserted it and when.
 
 ## Open
 
 - The level rules are a first draft and coarse: an agent built on a code-executing assistant that works with other agents reaches level 5 quickly.
 - The links have been made by one reader. A second reader, and a second model, have not checked them.
-- Evidence is not yet graded beyond its tier.
+- Each answer carries a grade (documented, self-reported, observed and so on), but the grade does not yet change a level.
+- How much of the governance ladder should be read from the measured grant is open; today it is two indicators.

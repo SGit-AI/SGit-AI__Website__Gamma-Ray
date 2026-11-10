@@ -1,0 +1,118 @@
+{
+ "id": "github-copilot-cloud-agent",
+ "name": "GitHub Copilot cloud agent",
+ "operator": "GitHub (the vendor); each organisation is the operator of its own deployment",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-10",
+ "tier": "public",
+ "basis": "the vendor’s own documentation",
+ "seen_by_operator": null,
+ "what": "The asynchronous agent on GitHub.com that creates branches, writes code and opens pull requests in response to assigned issues.",
+ "note": "An example scan of a product as its vendor documents it, not of any one deployment.",
+ "grant": null,
+ "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar; the closest published shape, a hosted Actions runner with no agent, is not the same thing.",
+ "vault": {
+  "id": "q7vudzvh",
+  "read_key": "sgit_public_read_5681b4b6d6b4524d74282e9e1339326d0663f6d878b790be49cd3b1de028a63e:q7vudzvh",
+  "published": "2026-11-10"
+ },
+ "answers": {
+  "I04": {
+   "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
+   "n": "It writes code in an \"ephemeral, firewalled environment\".",
+   "g": "documented",
+   "m": "default"
+  },
+  "I08": {
+   "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
+   "n": "It \"can create branches, write code, and open pull requests in response to assigned issues\".",
+   "g": "documented",
+   "m": "default"
+  },
+  "I10": {
+   "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
+   "n": "Repositories, issues and pull requests across one organisation.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I11": {
+   "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
+   "n": "It \"can receive information and context from MCP\" and from external applications.",
+   "g": "documented",
+   "m": "available"
+  },
+  "I18": {
+   "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
+   "n": "The person assigns a task and reviews the pull request before merging.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I20": {
+   "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
+   "n": "The vendor states intended uses: maintenance, feature development, prototyping.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I21": {
+   "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
+   "n": "\"It can only push to a single branch\"; it has no access to Actions secrets beyond those configured for it.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I22": {
+   "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
+   "n": "The page lists limitations: limited scope, inaccurate code, security risks, public code matches.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I25": {
+   "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
+   "n": "Read-only where the user has only read access; one branch to push to.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I27": {
+   "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
+   "n": "Its commits are signed and show as Verified.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I38": {
+   "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
+   "n": "Workflows triggered by its pull requests \"require approval from a user with write access before they will run\".",
+   "g": "documented",
+   "m": "default"
+  },
+  "I41": {
+   "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
+   "n": "Commits are authored by Copilot with the person as co-author; matches are shown in the agent session logs.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I45": {
+   "e": "https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/customize-the-agent-firewall",
+   "n": "\"By default, Copilot’s access to the internet is limited by a firewall.\" The vendor adds that it \"should not be considered a comprehensive security solution\".",
+   "g": "documented",
+   "m": "default"
+  },
+  "I51": {
+   "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
+   "n": "New code is analysed with CodeQL, secret scanning and dependency analysis during generation.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I56": {
+   "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
+   "n": "Its commits and pull requests are attributed to Copilot.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I61": {
+   "e": "https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent",
+   "n": "The page describes the models and data flows of each agentic feature.",
+   "g": "documented",
+   "m": "available"
+  }
+ }
+}

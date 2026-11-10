@@ -1,0 +1,229 @@
+{
+ "what": "RiskMandate's measuring lens, as published by the Agent Behaviour Policy project: the capability grammar, the four barriers and the evidence tiers. Copied, not adapted.",
+ "source": "https://abp.sgit.ai/data/index.json",
+ "version": "v0.12.1",
+ "licence": "CC BY 4.0",
+ "read": "2026-11-10",
+ "capabilities": [
+  {
+   "id": "read.file.project",
+   "gloss": "Read the project it is working on",
+   "reach": "project",
+   "undo": "yes",
+   "family": "filesystem"
+  },
+  {
+   "id": "write.file.project",
+   "gloss": "Change the project it is working on",
+   "reach": "project",
+   "undo": "with-effort",
+   "family": "filesystem"
+  },
+  {
+   "id": "read.file.host",
+   "gloss": "Read any file the account can reach",
+   "reach": "host",
+   "undo": "no",
+   "family": "filesystem"
+  },
+  {
+   "id": "write.file.host",
+   "gloss": "Change any file the account can reach",
+   "reach": "host",
+   "undo": "with-effort",
+   "family": "filesystem"
+  },
+  {
+   "id": "delete.file.host",
+   "gloss": "Delete files anywhere the account can reach",
+   "reach": "host",
+   "undo": "no",
+   "family": "filesystem"
+  },
+  {
+   "id": "execute.process.host",
+   "gloss": "Run programs as the account",
+   "reach": "host",
+   "undo": "with-effort",
+   "family": "process"
+  },
+  {
+   "id": "execute.process.self",
+   "gloss": "Run programs inside its own sandbox only",
+   "reach": "self",
+   "undo": "yes",
+   "family": "process"
+  },
+  {
+   "id": "send.endpoint.allowed",
+   "gloss": "Reach a permitted list of hosts",
+   "reach": "tenant",
+   "undo": "no",
+   "family": "network"
+  },
+  {
+   "id": "send.endpoint.world",
+   "gloss": "Reach any host on the internet",
+   "reach": "world",
+   "undo": "no",
+   "family": "network"
+  },
+  {
+   "id": "read.credential.host",
+   "gloss": "Read credentials stored where it runs",
+   "reach": "host",
+   "undo": "no",
+   "family": "identity"
+  },
+  {
+   "id": "authenticate-as.credential.tenant",
+   "gloss": "Act in accounts with the credentials it holds",
+   "reach": "tenant",
+   "undo": "no",
+   "family": "identity"
+  },
+  {
+   "id": "grant.credential.self",
+   "gloss": "Change its own permission settings",
+   "reach": "self",
+   "undo": "yes",
+   "family": "identity"
+  },
+  {
+   "id": "send.message.world",
+   "gloss": "Send a message to anyone",
+   "reach": "world",
+   "undo": "no",
+   "family": "communication"
+  },
+  {
+   "id": "read.message.tenant",
+   "gloss": "Read mail or chat it is connected to",
+   "reach": "tenant",
+   "undo": "no",
+   "family": "communication"
+  },
+  {
+   "id": "write.repository.project",
+   "gloss": "Commit to the repository it was pointed at",
+   "reach": "project",
+   "undo": "with-effort",
+   "family": "code"
+  },
+  {
+   "id": "write.repository.tenant",
+   "gloss": "Push to a code host (any branch it can reach)",
+   "reach": "tenant",
+   "undo": "with-effort",
+   "family": "code"
+  },
+  {
+   "id": "authenticate-as.credential.signing",
+   "gloss": "Sign commits with the key it holds",
+   "reach": "tenant",
+   "undo": "no",
+   "family": "code"
+  },
+  {
+   "id": "create.record.world",
+   "gloss": "Publish packages, images or pages under the name it holds",
+   "reach": "world",
+   "undo": "no",
+   "family": "code"
+  },
+  {
+   "id": "write.budget.tenant",
+   "gloss": "Spend money or tokens against an account it holds",
+   "reach": "tenant",
+   "undo": "no",
+   "family": "money"
+  },
+  {
+   "id": "create.schedule.host",
+   "gloss": "Create something that outlives the turn where it runs (a cron, a service)",
+   "reach": "host",
+   "undo": "yes",
+   "family": "schedule"
+  },
+  {
+   "id": "read.record.history",
+   "gloss": "Read a retained record: shell history, past sessions",
+   "reach": "host",
+   "undo": "no",
+   "family": "filesystem"
+  },
+  {
+   "id": "create.schedule.tenant",
+   "gloss": "Create something that outlives the session, on the platform (a routine, a scheduled trigger, a new session)",
+   "reach": "tenant",
+   "undo": "yes",
+   "family": "schedule"
+  },
+  {
+   "id": "read.record.browsing",
+   "gloss": "Read every page you visit",
+   "reach": "host",
+   "undo": "no",
+   "family": "browser"
+  }
+ ],
+ "barriers": [
+  {
+   "id": "none",
+   "meaning": "nothing in the way",
+   "is_control": false
+  },
+  {
+   "id": "expectation",
+   "meaning": "a rule in prose, enforced by nobody",
+   "is_control": false
+  },
+  {
+   "id": "setting",
+   "meaning": "a switch the agent's own account can flip",
+   "is_control": false
+  },
+  {
+   "id": "boundary",
+   "meaning": "enforced above the grant, out of the agent's reach",
+   "is_control": true
+  }
+ ],
+ "enforcer_test": "A control bounds a grant only if it is enforced by something the grant does not include.",
+ "evidence": {
+  "order": [
+   "derived",
+   "inferred",
+   "self-reported",
+   "documented",
+   "measured",
+   "observed"
+  ],
+  "tiers": [
+   {
+    "id": "derived",
+    "meaning": "from what the thing architecturally is; a claim until somebody runs the probes"
+   },
+   {
+    "id": "inferred",
+    "meaning": "from another row or another profile, by reasoning rather than by observation"
+   },
+   {
+    "id": "self-reported",
+    "meaning": "reported by the operator, the harness or the tool itself, without an independent probe"
+   },
+   {
+    "id": "documented",
+    "meaning": "the vendor, or a published tool, says so"
+   },
+   {
+    "id": "measured",
+    "meaning": "a probe run on an instance, dated, with an evidence file"
+   },
+   {
+    "id": "observed",
+    "meaning": "seen directly, on the thing itself, by the thing itself"
+   }
+  ]
+ }
+}

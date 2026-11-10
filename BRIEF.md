@@ -60,6 +60,14 @@ GAMMA-Ray was briefed by Dinis Cruz in speech, on 9 and 10 November 2026, during
 
 > Remember to use sgit vaults to store any assessment value. These vaults are public because you're going to publish the vault key on the website.
 
+## RiskMandate is the lens, and products as examples (10 November, later)
+
+> Now, one thing I'd be confused is that you actually added risk mandate as one set of the questions that we're mapping. I was thinking of using risk mandate to actually measure the delta and the grant, because remember that a lot of these answers are theoretical answers, or some of them are, it depends on the context. So a lot of these answers, what you're measuring is the mandate and a lot of the behavior, but we still have a lot of the grants to calculate, which depends on what permissions they were given to.
+
+> We need to do a review of the example of multiple agentic solutions out there to start to see kind of how they look like here, as examples of this, big examples that there's quite a bit of data to support, but you need to create a vault for each one, and you need to put the data there.
+
+> Do another pass where you add up all the graphs and all the interconnections.
+
 ## The rules given with the brief
 
 Public sources only. No rating of a named company is published without its evidence and without the company having seen it. No contact details anywhere. Never push to the main branch. The name and the backronym stay as chosen.

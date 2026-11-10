@@ -1,12 +1,16 @@
 ---
 title: The instruments
-summary: The nine instruments GAMMA-Ray reads: what each is, who published it, what it rates, its licence, when it was read and its caveats.
+summary: The instruments GAMMA-Ray reads: what each is, who published it, what it rates, its licence, when it was read and its caveats.
 ---
 # The instruments
 
-Standards, frameworks, a protocol specification, a law and one published model. They are different kinds of thing: a law binds, a framework is adopted by choice, a vendor's article is neither. Each is kept whole and cited; none is merged into another.
+Standards, frameworks, a protocol specification and a law. They are different kinds of thing: a law binds, a framework is adopted by choice, a vendor's article is neither. Each is kept whole and cited; none is merged into another.
 
 {{gen:instruments}}
+
+## Not an instrument: the lens
+
+RiskMandate's Agent Behaviour Policy (mandate, grant, delta, barrier) is how GAMMA-Ray measures, not something it maps. See [the lens](../lens/index.md).
 
 ## Read, and not yet in the graph
 

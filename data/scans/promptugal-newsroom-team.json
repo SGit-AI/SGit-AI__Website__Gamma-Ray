@@ -15,123 +15,186 @@
  "answers": {
   "I04": {
    "e": "https://promptugal.news/CLAUDE.md",
-   "n": "Each agent is a Claude Code session; it runs the build, the gate and the release script."
+   "n": "Each agent is a Claude Code session; it runs the build, the gate and the release script.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I08": {
    "e": "https://promptugal.news/CLAUDE.md",
-   "n": "Agents commit and release to the branch the site deploys from."
+   "n": "Agents commit and release to the branch the site deploys from.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I10": {
    "e": "https://promptugal.news/CLAUDE.md",
-   "n": "The repository, the vaults, the inboxes and the live site."
+   "n": "The repository, the vaults, the inboxes and the live site.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I11": {
    "e": "https://promptugal.news/board/abp/README.md",
-   "n": "The policy names the outside hosts and tools an agent may use."
+   "n": "The policy names the outside hosts and tools an agent may use.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I12": {
    "e": "https://promptugal.news/CLAUDE.md",
-   "n": "Sixteen roles, a conductor that routes work, and an inbox per agent."
+   "n": "Sixteen roles, a conductor that routes work, and an inbox per agent.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I14": {
    "e": "https://promptugal.news/CLAUDE.md",
-   "n": "Messages between agents are sealed to the receiver's key and signed by the sender."
+   "n": "Messages between agents are sealed to the receiver's key and signed by the sender.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I18": {
    "e": "https://promptugal.news/CLAUDE.md",
-   "n": "Only the operator instructs; decisions that are his alone wait for him; the main branch is his to merge."
+   "n": "Only the operator instructs; decisions that are his alone wait for him; the main branch is his to merge.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I20": {
    "e": "https://promptugal.news/CLAUDE.md",
-   "n": "The team table says what each agent owns and what it never does."
+   "n": "The team table says what each agent owns and what it never does.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I21": {
    "e": "https://promptugal.news/board/abp/policies.json",
-   "n": "One grant per agent: paths, hosts, tools."
+   "n": "One grant per agent: paths, hosts, tools.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I23": {
    "e": "https://promptugal.news/board/abp/policies.json",
-   "n": "The grants are data."
+   "n": "The grants are data.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I26": {
    "e": "https://promptugal.news/board/keys.json",
-   "n": "Each agent makes its own session key."
+   "n": "Each agent makes its own session key.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I27": {
    "e": "https://promptugal.news/board/keys.json",
-   "n": "Public keys and fingerprints are published; signatures are checked against them."
+   "n": "Public keys and fingerprints are published; signatures are checked against them.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I29": {
    "e": "https://promptugal.news/board/keys.json",
-   "n": "The key list and the team table are the registry."
+   "n": "The key list and the team table are the registry.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I30": {
    "e": "https://promptugal.news/CLAUDE.md",
-   "n": "Every agent has a named human operator."
+   "n": "Every agent has a named human operator.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I31": {
    "e": "https://promptugal.news/CLAUDE.md",
-   "n": "The hand-over of a role to a new session is a written process; old keys are marked superseded."
+   "n": "The hand-over of a role to a new session is a written process; old keys are marked superseded.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I32": {
    "e": "https://promptugal.news/about/participant.md",
-   "n": "The operator is named."
+   "n": "The operator is named.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I33": {
    "e": "https://promptugal.news/CLAUDE.md",
-   "n": "The team table."
+   "n": "The team table.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I34": {
    "e": "https://promptugal.news/board/abp/README.md",
-   "n": "The Agent Behaviour Policies and their eleven core rules are published."
+   "n": "The Agent Behaviour Policies and their eleven core rules are published.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I37": {
    "e": "https://promptugal.news/board/abp/README.md",
-   "n": "No new session or agent without the operator."
+   "n": "No new session or agent without the operator.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I38": {
    "e": "https://promptugal.news/CLAUDE.md",
-   "n": "Decisions on money, the law, the brand and people wait for the operator."
+   "n": "Decisions on money, the law, the brand and people wait for the operator.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I39": {
    "e": "https://promptugal.news/board/guidance/2026-11-09-the-big-stop.md",
-   "n": "A hold file stops every agent; a stop of the whole team was ordered and reported on 9 November 2026."
+   "n": "A hold file stops every agent; a stop of the whole team was ordered and reported on 9 November 2026.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I40": {
    "e": "https://promptugal.news/CLAUDE.md",
-   "n": "An agent that is blocked says so to the operator first."
+   "n": "An agent that is blocked says so to the operator first.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I41": {
    "e": "https://promptugal.news/board/abp/README.md",
-   "n": "Every tool call is logged and every run ends with a run report."
+   "n": "Every tool call is logged and every run ends with a run report.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I43": {
    "e": "https://promptugal.news/board/abp/README.md",
-   "n": "An hourly review of the run reports and the commit log."
+   "n": "An hourly review of the run reports and the commit log.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I46": {
    "e": "https://promptugal.news/board/abp/README.md",
-   "n": "The hooks live in the repository the agents work in, and run in observe mode: a call outside the grant is logged, not blocked."
+   "n": "The hooks live in the repository the agents work in, and run in observe mode: a call outside the grant is logged, not blocked.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I47": {
    "e": "https://promptugal.news/CLAUDE.md",
-   "n": "Most rules are prose."
+   "n": "Most rules are prose.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I48": {
    "e": "https://promptugal.news/board/abp/policies.json",
-   "n": "The policy is data read by hooks."
+   "n": "The policy is data read by hooks.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I49": {
    "e": "https://promptugal.news/board/abp/README.md",
-   "n": "The policy has a section on what the hooks cannot see."
+   "n": "The policy has a section on what the hooks cannot see.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I56": {
    "e": "https://promptugal.news/about/participant.md",
-   "n": "The site says it is built and run by AI agents with a named operator."
+   "n": "The site says it is built and run by AI agents with a named operator.",
+   "g": "self-reported",
+   "m": "deployed"
   },
   "I61": {
    "e": "https://promptugal.news/CLAUDE.md",
-   "n": "The model family each role runs on is stated."
+   "n": "The model family each role runs on is stated.",
+   "g": "self-reported",
+   "m": "deployed"
   }
- }
+ },
+ "kind": "deployment",
+ "grant": null,
+ "grant_note": "Not measured in the capability grammar. The team publishes one grant per agent as paths, hosts and tools; nobody has translated those into the 23 capabilities or probed them."
 }

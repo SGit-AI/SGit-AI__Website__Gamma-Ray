@@ -1951,54 +1951,5 @@
   "ref": "Article 73",
   "text": "Reporting of serious incidents",
   "kind": "article"
- },
- {
-  "id": "rm.mandate",
-  "standard": "rm",
-  "ref": "The mandate",
-  "text": "What the agent is authorised and expected to do",
-  "kind": "object"
- },
- {
-  "id": "rm.grant",
-  "standard": "rm",
-  "ref": "The grant",
-  "text": "Everything the agent can do",
-  "kind": "object"
- },
- {
-  "id": "rm.delta",
-  "standard": "rm",
-  "ref": "The delta",
-  "text": "Excess where it can and you did not ask; shortfall where you asked and it cannot",
-  "kind": "object"
- },
- {
-  "id": "rm.barrier.none",
-  "standard": "rm",
-  "ref": "Barrier: none",
-  "text": "nothing in the way",
-  "kind": "barrier"
- },
- {
-  "id": "rm.barrier.expectation",
-  "standard": "rm",
-  "ref": "Barrier: expectation",
-  "text": "a rule in prose, enforced by nobody",
-  "kind": "barrier"
- },
- {
-  "id": "rm.barrier.setting",
-  "standard": "rm",
-  "ref": "Barrier: setting",
-  "text": "a switch the agent’s own account can flip",
-  "kind": "barrier"
- },
- {
-  "id": "rm.barrier.boundary",
-  "standard": "rm",
-  "ref": "Barrier: boundary",
-  "text": "enforced above the grant, out of the agent’s reach",
-  "kind": "barrier"
  }
 ]

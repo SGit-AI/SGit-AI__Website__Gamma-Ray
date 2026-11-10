@@ -1,0 +1,206 @@
+{
+ "id": "claude-code-web",
+ "name": "Claude Code on the web",
+ "operator": "Anthropic (the vendor); each user is the operator of their own deployment",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-10",
+ "tier": "public",
+ "basis": "the vendor’s own documentation and a published, measured deployment shape",
+ "seen_by_operator": null,
+ "what": "The same coding agent in a cloud session: a managed container with one repository attached and a proxy above it.",
+ "note": "An example scan of a product as its vendor documents it, not of any one deployment. Disclosure: the agent that wrote this scan runs on this product, in this shape.",
+ "grant": {
+  "profile": "anthropic/claude-code-remote/ccr-container",
+  "profile_version": "2026-09-05.2",
+  "source": "https://abp.sgit.ai/data/profiles/anthropic/claude-code-remote/ccr-container.json",
+  "product": "Claude Code on the web (a remote session container)",
+  "statement": "This describes a published deployment shape. It is not an assessment, an audit, a certification or a security review of any named product, and it carries no adjective and no score.",
+  "rows": [
+   {
+    "capability": "authenticate-as.credential.signing",
+    "barrier": "none",
+    "evidence": "observed"
+   },
+   {
+    "capability": "delete.file.host",
+    "barrier": "none",
+    "evidence": "observed"
+   },
+   {
+    "capability": "read.credential.host",
+    "barrier": "none",
+    "evidence": "observed"
+   },
+   {
+    "capability": "read.file.host",
+    "barrier": "none",
+    "evidence": "observed"
+   },
+   {
+    "capability": "read.record.history",
+    "barrier": "none",
+    "evidence": "observed"
+   },
+   {
+    "capability": "authenticate-as.credential.tenant",
+    "barrier": "boundary",
+    "evidence": "inferred"
+   },
+   {
+    "capability": "send.endpoint.allowed",
+    "barrier": "boundary",
+    "evidence": "observed"
+   },
+   {
+    "capability": "execute.process.host",
+    "barrier": "none",
+    "evidence": "observed"
+   },
+   {
+    "capability": "write.file.host",
+    "barrier": "none",
+    "evidence": "observed"
+   },
+   {
+    "capability": "write.file.project",
+    "barrier": "none",
+    "evidence": "observed"
+   },
+   {
+    "capability": "write.repository.project",
+    "barrier": "none",
+    "evidence": "observed"
+   },
+   {
+    "capability": "write.repository.tenant",
+    "barrier": "setting",
+    "evidence": "observed"
+   },
+   {
+    "capability": "read.file.project",
+    "barrier": "none",
+    "evidence": "observed"
+   },
+   {
+    "capability": "create.schedule.tenant",
+    "barrier": "setting",
+    "evidence": "self-reported"
+   },
+   {
+    "capability": "create.schedule.host",
+    "barrier": "boundary",
+    "evidence": "observed"
+   }
+  ]
+ },
+ "vault": {
+  "id": "kq47p50t",
+  "read_key": "sgit_public_read_8996af6ecc712b76dfb7a34f4b820d2e89d066ade22bf910e02b7a5ea39d9fdc:kq47p50t",
+  "published": "2026-11-10"
+ },
+ "answers": {
+  "I04": {
+   "e": "https://code.claude.com/docs/en/claude-code-on-the-web",
+   "n": "It runs Claude Code sessions in a cloud virtual machine.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I08": {
+   "e": "https://code.claude.com/docs/en/claude-code-on-the-web",
+   "n": "It clones the repository, makes changes and pushes branches.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I10": {
+   "e": "https://code.claude.com/docs/en/claude-code-on-the-web",
+   "n": "The repository, the shell and the code host.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I11": {
+   "e": "https://code.claude.com/docs/en/cloud-environments",
+   "n": "Sessions reach package registries and other allowlisted domains.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I12": {
+   "e": "https://code.claude.com/docs/en/sub-agents",
+   "n": "Subagents, as in the local product.",
+   "g": "documented",
+   "m": "available"
+  },
+  "I18": {
+   "e": "https://code.claude.com/docs/en/claude-code-on-the-web",
+   "n": "The person starts a task and reviews the branch or pull request it produces.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I20": {
+   "e": "https://code.claude.com/docs/en/claude-code-on-the-web",
+   "n": "The vendor states what cloud sessions are for.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I21": {
+   "e": "https://code.claude.com/docs/en/cloud-environments",
+   "n": "A cloud environment sets network access, variables and a setup script.",
+   "g": "documented",
+   "m": "available"
+  },
+  "I23": {
+   "e": "https://abp.sgit.ai/data/profiles/anthropic/claude-code-remote/ccr-container.json",
+   "n": "A published deployment shape lists 15 capabilities, 13 of them observed on the thing itself.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I25": {
+   "e": "https://code.claude.com/docs/en/claude-code-on-the-web",
+   "n": "GitHub credentials never enter the session’s machine; a proxy attaches them on the server.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I28": {
+   "e": "https://code.claude.com/docs/en/cloud-environments",
+   "n": "A stored key is added by the proxy after a request leaves the session, for the hosts listed.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I38": {
+   "e": "https://code.claude.com/docs/en/claude-code-on-the-web",
+   "n": "Work arrives as a branch for a person to review.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I45": {
+   "e": "https://code.claude.com/docs/en/cloud-environments",
+   "n": "With the default (Trusted) network access, sessions reach allowlisted domains \"and nothing else through the session’s network\".",
+   "g": "documented",
+   "m": "default"
+  },
+  "I46": {
+   "e": "https://abp.sgit.ai/data/profiles/anthropic/claude-code-remote/ccr-container.json",
+   "n": "Two capabilities in the published shape are limited by a setting.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I49": {
+   "e": "https://abp.sgit.ai/data/profiles/anthropic/claude-code-remote/ccr-container.json",
+   "n": "The published shape names which capabilities are unbounded.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I61": {
+   "e": "https://code.claude.com/docs/en/overview",
+   "n": "The product and its model family are named.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I63": {
+   "e": "https://code.claude.com/docs/en/security",
+   "n": "The vendor points to a SOC 2 Type 2 report and an ISO 27001 certificate at its trust centre; they cover the vendor, not a user’s deployment.",
+   "g": "documented",
+   "m": "default"
+  }
+ }
+}

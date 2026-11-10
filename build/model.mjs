@@ -11,6 +11,7 @@ export function load(root) {
     const d = f => path.join(root, 'data', f)
     const standards = read(d('standards.json')), provisions = read(d('provisions.json'))
     const indicators = read(d('indicators.json')), questions = read(d('questions.json')), levels = read(d('levels.json'))
+    const lens = read(d('lens.json'))
     const scans = fs.readdirSync(d('scans')).filter(f => f.endsWith('.json')).sort().map(f => read(d('scans/' + f)))
     const P = new Map(provisions.map(p => [p.id, p])), I = new Map(indicators.map(i => [i.id, i])), S = new Map(standards.map(s => [s.id, s]))
 
@@ -39,28 +40,60 @@ export function load(root) {
         byTier: Object.fromEntries(TIERS.map(t => [t, indicators.filter(i => i.tier === t).length])),
         shared: indicators.filter(i => new Set(i.links.map(l => P.get(l.provision).standard)).size >= 3).length
     }
-    for (const sc of scans) Object.assign(sc, score(sc, levels))
-    return { standards, provisions, indicators, questions, levels, scans, P, I, S, totals }
+    // how the instruments connect: for each pair, the indicators that cite both
+    const stdOf = i => [...new Set(i.links.map(l => P.get(l.provision).standard))]
+    const pairs = {}
+    for (const i of indicators) { const ss = stdOf(i); for (const a of ss) for (const b of ss) if (a < b) (pairs[a + '|' + b] = pairs[a + '|' + b] || []).push(i.id) }
+    for (const s of standards) s.indicators = indicators.filter(i => stdOf(i).includes(s.id)).length
+    totals.pairs = Object.keys(pairs).length; totals.lens = indicators.filter(i => i.lens).length
+    for (const sc of scans) Object.assign(sc, score(sc, levels), { g: grant(sc, lens) })
+    scans.sort((a, b) => (b.ours ? 1 : 0) - (a.ours ? 1 : 0) || a.name.localeCompare(b.name))
+    return { standards, provisions, indicators, questions, levels, scans, lens, pairs, stdOf, P, I, S, totals }
+}
+
+// The grant, the mandate and the delta: RiskMandate's measurement, taken from a published profile. Counted, never scored.
+export function grant(scan, lens) {
+    if (!scan.grant) return null
+    const rows = scan.grant.rows, isControl = Object.fromEntries(lens.barriers.map(b => [b.id, b.is_control]))
+    const by = Object.fromEntries(lens.barriers.map(b => [b.id, rows.filter(r => r.barrier === b.id).length]))
+    const measured = rows.filter(r => ['observed', 'measured'].includes(r.evidence)).length
+    const out = { size: rows.length, by, bounded: rows.filter(r => isControl[r.barrier]).length, unbounded: rows.filter(r => !isControl[r.barrier]).length, measured }
+    if (scan.mandate) {
+        const want = new Set(scan.mandate.want), have = new Set(rows.map(r => r.capability))
+        const excess = rows.filter(r => !want.has(r.capability))
+        out.delta = { wanted: want.size, aligned: rows.filter(r => want.has(r.capability)).length, excess: excess.length, unboundedExcess: excess.filter(r => !isControl[r.barrier]).length, shortfall: [...want].filter(c => !have.has(c)).length }
+    }
+    return out
 }
 
 // The levels are patterns over indicators (data/levels.json states them in words; this is the same rule in code).
+// An answer has a mode: deployed (true of this deployment), default (true of the product as shipped) or available
+// (a control the operator can turn on). `held` counts deployed and default only; `potential` counts all three.
+// Where a grant is measured, two indicators are read from it and not from words: I23 (the grant is enumerated)
+// and I45 (a limit is enforced outside the agent's reach: at least one row whose barrier is a boundary).
 export function score(scan, levels) {
-    const y = id => !!scan.answers[id], any = (...ids) => ids.some(y), all = (...ids) => ids.every(y)
-    let f = 1
-    if (y('I16') || (y('I07') && any('I02', 'I03', 'I04', 'I05'))) f = 2
-    if (y('I08') && any('I17', 'I18', 'I19')) f = 3
-    if (f === 3 && any('I04', 'I10', 'I11')) f = 4
-    if (f === 4 && any('I12', 'I13') && any('I18', 'I19')) f = 5
-    let g = 0; const missing = []
-    const step = (lvl, parts) => {          // parts: [label, ok, ids]
-        if (g !== lvl - 1) return
-        const not = parts.filter(p => !p[1])
-        if (not.length === 0) g = lvl; else if (!missing.length) missing.push(...not.map(p => ({ for: lvl, need: p[0], ids: p[2] })))
+    const fromGrant = scan.grant ? { I23: true, I45: scan.grant.rows.some(r => r.barrier === 'boundary') } : {}
+    const run = withAvailable => {
+        const y = id => id in fromGrant ? fromGrant[id] || (withAvailable && scan.answers[id]?.m === 'available') : !!scan.answers[id] && (withAvailable || scan.answers[id].m !== 'available')
+        const any = (...ids) => ids.some(y)
+        let f = 1
+        if (y('I16') || (y('I07') && any('I02', 'I03', 'I04', 'I05'))) f = 2
+        if (y('I08') && any('I17', 'I18', 'I19')) f = 3
+        if (f === 3 && any('I04', 'I10', 'I11')) f = 4
+        if (f === 4 && any('I12', 'I13') && any('I18', 'I19')) f = 5
+        let g = 0; const missing = []
+        const step = (lvl, parts) => {
+            if (g !== lvl - 1) return
+            const not = parts.filter(p => !p[1])
+            if (not.length === 0) g = lvl; else if (!missing.length) missing.push(...not.map(p => ({ for: lvl, need: p[0], ids: p[2] })))
+        }
+        step(1, [['what it is for is written down', y('I20'), ['I20']], ['a policy or written rules', any('I34', 'I47'), ['I34', 'I47']]])
+        step(2, [['a named owner or accountable person', any('I30', 'I32'), ['I30', 'I32']], ['a person can approve or stop', any('I38', 'I39'), ['I38', 'I39']], ['its actions are logged', y('I41'), ['I41']]])
+        step(3, [['what it can reach is enumerated', y('I23'), ['I23']], ['a limit enforced outside its own reach', y('I45'), ['I45']], ['it is monitored in operation', y('I43'), ['I43']]])
+        step(4, [['test or evaluation results are published', y('I50'), ['I50']], ['an independent check', any('I52', 'I63', 'I64'), ['I52', 'I63', 'I64']]])
+        const clears = levels.governance[g].clears
+        return { freedom: f, governance: g, clears, held: Math.min(f, clears), workOrder: missing }
     }
-    step(1, [['what it is for is written down', y('I20'), ['I20']], ['a policy or written rules', any('I34', 'I47'), ['I34', 'I47']]])
-    step(2, [['a named owner or accountable person', any('I30', 'I32'), ['I30', 'I32']], ['a person can approve or stop', any('I38', 'I39'), ['I38', 'I39']], ['its actions are logged', y('I41'), ['I41']]])
-    step(3, [['what it can reach is enumerated', y('I23'), ['I23']], ['a limit enforced outside its own reach', y('I45'), ['I45']], ['it is monitored in operation', y('I43'), ['I43']]])
-    step(4, [['test or evaluation results are published', y('I50'), ['I50']], ['an independent check', any('I52', 'I63', 'I64'), ['I52', 'I63', 'I64']]])
-    const clears = levels.governance[g].clears, held = Math.min(f, clears)
-    return { freedom: f, governance: g, clears, held, gap: f - held, workOrder: missing, evidenced: Object.keys(scan.answers).length }
+    const now = run(false), pot = run(true), n = Object.values(scan.answers)
+    return { ...now, gap: now.freedom - now.held, potential: pot, evidenced: n.filter(a => a.m !== 'available').length, available: n.filter(a => a.m === 'available').length }
 }
