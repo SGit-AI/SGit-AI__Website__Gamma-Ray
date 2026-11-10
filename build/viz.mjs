@@ -314,13 +314,13 @@ export function cohort(m, sp, up = '') {
 // It takes the card's graph (build/graph.mjs), picks the dimension with the highest level, one fact under it and draws that fact's
 // neighbourhood: the level it holds up, the evidence and the page it was read on, who made and checked it, the provisions it speaks to
 // and the open question that would unlock the next level. Every edge carries its verb, every node says what it is, every node is a link.
-export function pathGraph(g, up = '../../../') {
+export function pathGraph(g, up = '../../../', pick = {}) {
     const N = Object.fromEntries(g.nodes.map(n => [n.id, n])), out = id => g.edges.filter(e => e.from === id)
     const card = g.nodes.find(n => n.type === 'card'); if (!card) return ''
     const dims = out(card.id).filter(e => e.verb === 'rated_on').map(e => N[e.to]).map(d => ({ d, st: out(d.id).find(e => e.verb === 'stands_at') })).filter(x => x.st)
     if (!dims.length) return ''
-    const lvlNum = x => +(N[x.st.to].id.match(/(\d)$/)?.[1] || 0), top = dims.sort((a, b) => lvlNum(b) - lvlNum(a))[0]
-    const level = N[top.st.to], factE = out(level.id).find(e => e.verb === 'rests_on'); if (!factE) return ''
+    const lvlNum = x => +(N[x.st.to].id.match(/(\d)$/)?.[1] || 0), top = (pick.dim && dims.find(x => x.d.id.endsWith('/' + pick.dim))) || dims.sort((a, b) => lvlNum(b) - lvlNum(a))[0]
+    const level = N[top.st.to], factEs = out(level.id).filter(e => e.verb === 'rests_on'), factE = (pick.fact && factEs.find(e => e.to.endsWith('/' + pick.fact))) || factEs[0]; if (!factE) return ''
     const fact = N[factE.to], evE = out(fact.id).find(e => e.verb === 'backed_by'), ev = evE && N[evE.to]
     const src = ev && N[out(ev.id).find(e => e.verb === 'observed_on')?.to]
     const actors = ev ? out(ev.id).filter(e => /^(produced|checked)_by$/.test(e.verb)) : []
@@ -351,4 +351,18 @@ export function pathGraph(g, up = '../../../') {
     const css = `<style>.pg text{font:12.5px var(--sans);fill:var(--ink)}.pg a{cursor:pointer}.pg a:hover rect,.pg a:focus rect{stroke-width:2.5}.pg .p-e{fill:none;stroke:var(--ink3);stroke-width:1.5}.pg .p-ar{fill:none;stroke:var(--ink3);stroke-width:1.5}.pg .p-v{font:italic 11.5px var(--mono);fill:var(--ink2)}.pg .p-k{font:700 10px var(--mono);letter-spacing:.06em;fill:var(--ink3)}.pg .p-sm{font-size:11.5px;fill:var(--ink3)}.pg .p-n{fill:var(--paper);stroke:var(--ink2);stroke-width:1.3}.pg .p-card{fill:var(--band);stroke:var(--ink);stroke-width:1.8}.pg .p-fact{stroke:var(--accent);stroke-width:2.2;fill:var(--band)}.pg .p-ev{stroke:var(--accent)}.pg .p-src{stroke:var(--accent);stroke-width:1.6}.pg .p-pv{stroke:var(--c-sf)}.pg .p-q{stroke-dasharray:5 3;stroke:var(--ink3)}</style>`
     const sentence = `One path of the ${card.label} card as a graph: ${card.label} rated_on ${top.d.label}, stands_at ${level.label}, rests_on the fact "${fact.label}"${ev ? ', backed_by evidence' : ''}${src ? ' observed_on ' + hostPath(src.url) : ''}; the fact speaks to ${provs.length} provision${provs.length === 1 ? '' : 's'}${awaits.length ? ' and one open question awaits' : ''}.`
     return `<svg class="fig walk pg" style="min-width:0;max-width:520px;margin:0 auto" viewBox="0 0 ${W} ${H}" role="group" aria-label="${esc(sentence)}">${css}${o}</svg><p class="figcap">One path from the card's graph, with each edge's verb written on it. Every node says what it is and is a link: the card, the question row, the public source (it opens the page), each provision's own page. A dashed box is an open question, not a no.</p>`
+}
+
+// 12. The same path for each dimension of a card, as fold-outs: a reader opens the dimension they ask about ("what does Autonomy rest on?")
+// and sees its path; each fact under the level has its own fold-out. No script. The first dimension is open.
+export function paths(g, up = '../../../') {
+    const N = Object.fromEntries(g.nodes.map(n => [n.id, n])), out = id => g.edges.filter(e => e.from === id)
+    const card = g.nodes.find(n => n.type === 'card'); if (!card) return ''
+    const rows = out(card.id).filter(e => e.verb === 'rated_on').map(e => N[e.to]).map(d => ({ d, st: out(d.id).find(e => e.verb === 'stands_at') })).filter(x => x.st)
+    let o = '<style>.pg-d{border:1px solid var(--hair);border-radius:10px;margin:.6em 0;padding:0 12px}.pg-d>summary{cursor:pointer;padding:10px 0;font-size:15px;line-height:1.35}.pg-f{margin:.4em 0 .8em;background:var(--band)}.pg-f>summary{font-size:14px}.pg-d figure{margin:.6em 0 1em}</style>'
+    rows.forEach(({ d, st }, k) => {
+        const L = N[st.to], dim = d.id.split('/').pop(), facts = out(L.id).filter(e => e.verb === 'rests_on').map(e => N[e.to])
+        o += `<details class="pg-d"${k === 0 ? ' open' : ''}><summary><b>${esc(d.label)}</b>: what does ${esc(L.label)} rest on? <span class="dim">${facts.length} fact${facts.length === 1 ? '' : 's'}</span></summary>` + facts.map(f => `<details class="pg-d pg-f"${k === 0 && f === facts[0] ? ' open' : ''}><summary>${esc(f.indicator || '')} ${esc(short(f.label, 70))}</summary><figure>${pathGraph(g, up, { dim, fact: f.id.split('/').pop() })}</figure></details>`).join('') + `</details>`
+    })
+    return o
 }
