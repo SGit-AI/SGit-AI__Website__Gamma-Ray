@@ -412,7 +412,7 @@
   "question": "Q07",
   "tier": "public",
   "needs": "operation",
-  "scope": "Read from a grant profile only: a description of permissions in prose does not count.",
+  "scope": "Two readings. On a Spectrum card: documented permission scopes, roles or tool lists count. In the governance rating: read from a grant profile only; a description in prose does not count.",
   "text": "What it can reach is enumerated: scopes, permissions, tools",
   "links": [
    {
@@ -1031,7 +1031,7 @@
   "question": "Q14",
   "tier": "public",
   "needs": "operation",
-  "scope": "Read from a measured grant only. It holds when every capability in the grant whose effect cannot be undone sits behind a boundary.",
+  "scope": "Two readings. On a Spectrum card (the public layer): a limit enforced outside the agent that the vendor documents in public counts, for example a sandbox, a proxy or scoped tokens described in a security or architecture page; say in the note what enforces it. In the governance rating (the layer above): read from a measured grant only, and it holds when every capability in the grant whose effect cannot be undone sits behind a boundary.",
   "text": "A limit on it is enforced by something outside its own reach",
   "links": [
    {

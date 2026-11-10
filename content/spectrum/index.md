@@ -40,6 +40,8 @@ Levels three and four need artefacts, not adjectives: a page, an address that re
 
 ## The cards so far
 
+{{fig:cohort}}
+
 {{gen:spectrum-table}}
 
 ## The layers
