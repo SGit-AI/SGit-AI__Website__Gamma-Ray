@@ -203,6 +203,69 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "Agreed: the card stays A1 R2 C1 O2 after these edits; no answer was removed, so no level moves."
+   },
+   {
+    "round": 2,
+    "answer": "I47",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Span replaced with the docs sentence that from people's replies the reviewer 'picks up on what your team cares about and what to stop flagging' (14 words, verified in the fetched HTML), a page statement that written prose directs what it does; the note now names that and the review.md out-of-scope contents, and drops the unsourced 'expected to follow' wording. No page says it is bound by review.md, so the credit is the lowest reading of 'a limit in prose' (an unenforced expectation); if the reviewer still holds this short of Control 1, I47 should go, the card falls to C0 and becomes unpublishable under the no-card-below-one rule, which is Dinis's call. Without I47, Control reads \"not yet evidenced\" and the card is A1 · R2 · C– · O2 (Exploring); it remains publishable, since other dimensions are at level one or above."
+   },
+   {
+    "round": 2,
+    "answer": "S1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: agreed that the badge reads as a vendor claim; the note already says the case study is vendor-published and that 170 is a headcount, not a count of reviews. Badge only."
+   },
+   {
+    "round": 2,
+    "answer": "I25",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: the note already says the credit is for the platform's GitHub App and that the page does not mention the AI Reviewer; it is not used on the card."
+   },
+   {
+    "round": 2,
+    "answer": "I01",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Changed to mode available with cfg ai-reviewer, since the docs say the reviewer is strictly opt-in, and the note now says 'once an admin turns it on'. Reach stays 2 through I10 and I11."
+   },
+   {
+    "round": 2,
+    "answer": "I22",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note now names the Codacy AI docs page (a source of the scan) for the GitHub-only line and the limits page for the size limit. Credit unchanged; Openness 2 still rests on I22 and I58."
+   },
+   {
+    "round": 2,
+    "answer": "I15",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: accepted as the lowest rung; the cfg manual-review says the card describes the most restrictive documented trigger mode."
+   },
+   {
+    "round": 2,
+    "answer": "I57, I11, I10, S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: the reviewer verified all four as they stand and none moves a level."
+   },
+   {
+    "round": 2,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No level three or four exists. Control 1: answered under I47 with a new page sentence that prose replies change what the reviewer flags; if that is still judged short, Control falls to zero and the card is put to Dinis. Reach 2 survives through I11 alone; Autonomy 1 rests on I15 in the manual-review configuration, as the cfg says; Openness 2 rests on I22 and I58, both kept. Card stays A1 R2 C1 O2."
+   },
+   {
+    "round": 2,
+    "answer": "S1, I25, I01, I10, I11, I15, I20, I22, I47, I57, I58, S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Noted the pass. The only span changed this round is I47's, which is on the cited page, 14 words, no em-dash; I01 and I22 changed in mode and note only. Without I47, Control reads \"not yet evidenced\" and the card is A1 · R2 · C– · O2 (Exploring); it remains publishable, since other dimensions are at level one or above."
    }
   ]
  },
@@ -230,10 +293,11 @@
  "answers": {
   "I01": {
    "e": "https://docs.codacy.com/codacy-ai/codacy-ai/",
-   "n": "The AI Reviewer is one of the vendor's optional AI features inside its hosted platform, used as supplied with per-repository instructions.",
+   "n": "The AI Reviewer is one of the vendor's optional AI features inside its hosted platform, used as supplied once an admin turns it on.",
    "span": "Codacy AI is a set of optional features integrated into the Software",
    "g": "documented",
-   "m": "default"
+   "m": "available",
+   "cfg": "ai-reviewer"
   },
   "I10": {
    "e": "https://docs.codacy.com/codacy-ai/codacy-ai/",
@@ -268,7 +332,7 @@
   },
   "I22": {
    "e": "https://docs.codacy.com/faq/code-analysis/does-codacy-place-limits-on-the-code-analysis/",
-   "n": "The limits page gives the reviewer's size limit (270,000 tokens or a 1 MB diff) and what it does above it; the docs also say it runs on GitHub only.",
+   "n": "The limits page gives the reviewer's size limit (270,000 tokens or a 1 MB diff) and what it does above it; the Codacy AI docs page says it runs on GitHub only.",
    "span": "The AI Reviewer doesn't review pull requests whose changes",
    "g": "documented",
    "m": "default"
@@ -282,8 +346,8 @@
   },
   "I47": {
    "e": "https://docs.codacy.com/codacy-ai/codacy-ai/",
-   "n": "Teams can write prose instructions for the reviewer in a review.md file in the repository, which the docs say help it understand the code, the business logic and the team's preferences; the docs' example prompt for drafting that file includes an out-of-scope section of what reviewers should ignore or not enforce, and the reviewer also reads the agent guideline files in the repository.",
-   "span": "These instructions are specified in a review.md file in the .codacy/instructions directory",
+   "n": "The docs say teams can write prose instructions for the reviewer in a review.md file, whose suggested contents include what reviewers should ignore or not enforce, and that from people's written replies to its comments the reviewer picks up what to stop flagging.",
+   "span": "it picks up on what your team cares about and what to stop flagging",
    "g": "documented",
    "m": "available",
    "cfg": "ai-reviewer"
@@ -319,7 +383,13 @@
    "method": "probe"
   }
  },
- "not_credited": [],
+ "not_credited": [
+  {
+   "what": "A page sentence that the reviewer follows review.md",
+   "why": "Re-read the Codacy AI docs page (fetched 2026-11-10, raw/ans-006.html) and the AI Reviewer product page (raw/ans-008.html): neither says the reviewer obeys or is bound by review.md; the docs say the file helps it understand the code, logic and preferences. The I47 credit no longer rests on that claim.",
+   "source": "https://docs.codacy.com/codacy-ai/codacy-ai/"
+  }
+ ],
  "announced": [
   {
    "what": "Verity: an independent pass-or-block gate for coding agents, in public beta (separate product).",
@@ -370,32 +440,32 @@
   "https://docs.codacy.com/codacy-ai/codacy-ai/": {
    "sha256": "1ccd57719e29bac8aedd2695a5a8f5caf9b273a69acace6ab8af27fd4383e579",
    "bytes": 216811,
-   "read_at": "2026-11-10T12:47Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://docs.codacy.com/faq/code-analysis/does-codacy-place-limits-on-the-code-analysis/": {
    "sha256": "70910c14872491868e0e06c5af266abb6cd62f826411d7bf3d65bb55eead34a2",
    "bytes": 206422,
-   "read_at": "2026-11-10T12:47Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://docs.codacy.com/getting-started/which-permissions-does-codacy-need-from-my-account/": {
    "sha256": "86c7dbdcaceb3cdd387457663230cffcf1150e246f3067de0da1adde1273140c",
    "bytes": 213206,
-   "read_at": "2026-11-10T12:47Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://docs.codacy.com/repositories-configure/integrations/github-integration/": {
    "sha256": "1d7691aa3224a7ab92b45da0d0226efb0769f244032bb65832d70f43a13dcfb3",
    "bytes": 212630,
-   "read_at": "2026-11-10T12:47Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://resources.codacy.com/resources/case-study-bfi-finance": {
    "sha256": "563b62540a7f7d7b1589f174808eadf01702defe61972c5a59d757842c5625cc",
    "bytes": 102820,
-   "read_at": "2026-11-10T12:47Z"
+   "read_at": "2026-11-10T16:45Z"
   },
   "https://www.codacy.com/llms.txt": {
    "sha256": "52a0c32c01ff8deaef2556e3aba3b54f9e68c1f3f24907a4ca5f58e6a0ac1e5e",
    "bytes": 12244,
-   "read_at": "2026-11-10T12:47Z"
+   "read_at": "2026-11-10T16:45Z"
   }
  }
 }
