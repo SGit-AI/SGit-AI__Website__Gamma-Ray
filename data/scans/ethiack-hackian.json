@@ -104,6 +104,113 @@
      }
     ]
    }
+  ],
+  "responses": [
+   {
+    "round": 1,
+    "answer": "I19",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Source replaced with the CAEV page, which shows both halves on one page: Hackian tests the scope on its own once launched, and findings appear in real time with alerts so the team can act. The note no longer draws on pages it does not cite; the Agentic Pentest wording (no edits after launch) is not relied on."
+   },
+   {
+    "round": 1,
+    "answer": "I10",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept: the CAEV page shows Hackian working across the whole in-scope attack surface, many domains and assets, which is what I10 states. The multiple-agents sentence is recorded as not credited (I12 scope not met), and the Integrations page is not credited to I11 because it is the platform's, so Reach 2 rests on I10 under the rule any(I10, I11) in data/spectrum.json."
+   },
+   {
+    "round": 1,
+    "answer": "I11",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; passed."
+   },
+   {
+    "round": 1,
+    "answer": "I04",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Removed: the cited span is the CTO's general description of a hackbot's tools, and no page read shows Hackian executing code with local or cloud privileges. No level changes."
+   },
+   {
+    "round": 1,
+    "answer": "I41",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change: documented, so not counted for an operation fact; Control stays 1."
+   },
+   {
+    "round": 1,
+    "answer": "I39",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; passed (applies to continuous tests only, as the note says)."
+   },
+   {
+    "round": 1,
+    "answer": "S1",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "The Jumia and CEGID clause is removed from the note so it says only what the cited U.Porto case study says. For the record, both case studies do name Hackian on re-fetch (CEGID: 'Hackian runs continuous, autonomous pentesting against more than 2,000 exposed assets'); they are in the dossier's stories, not this answer."
+   },
+   {
+    "round": 1,
+    "answer": "S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; passed."
+   },
+   {
+    "round": 1,
+    "answer": "I50",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note changed: 'open' replaced by 'published on arXiv', and it now says the results are Ethiack's own run and that Hackian is not in the paper itself."
+   },
+   {
+    "round": 1,
+    "answer": "I57",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Source replaced with the Support Portal page, a documented channel for customers to report problems with the platform as tickets; the severity edit was the customer's own control and is no longer cited. The Updates feed is recorded as not credited."
+   },
+   {
+    "round": 1,
+    "answer": "I08",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; passed."
+   },
+   {
+    "round": 1,
+    "answer": "I20",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; passed."
+   },
+   {
+    "round": 1,
+    "answer": "I22",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note now says this is a scope limit (test types Hackian does not handle on its own go to human testers); the source and span are unchanged. Openness 1 holds."
+   },
+   {
+    "round": 1,
+    "answer": "I47",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change; passed."
+   },
+   {
+    "round": 1,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Card unchanged at A4, R2, C1, O1 (sum 8, Building) after the edits; Autonomy 4 now rests on I08, I10 and an I19 whose source shows both autonomy within scope and the customer's view of findings. The lowered answers and announced sources were not part of the findings and were not re-checked here."
+   }
   ]
  },
  "assessment": {
@@ -126,13 +233,6 @@
   "files": "in the vault: work/assessment.json, work/challenger.json"
  },
  "answers": {
-  "I04": {
-   "e": "https://ethiack.com/info-hub/product/introducing-hackian",
-   "n": "The CTO's post says the agent's tools let it run commands and send requests against targets.",
-   "span": "enable actual testing actions like executing commands or sending requests",
-   "g": "documented",
-   "m": "default"
-  },
   "I08": {
    "e": "https://ethiack.com/hackian",
    "n": "Hackian runs exploitation routines itself to confirm vulnerabilities.",
@@ -156,9 +256,9 @@
    "cfg": "beacon"
   },
   "I19": {
-   "e": "https://docs.ethiack.com/docs/portal/tests/agentic-pentest-policy-guidelines",
-   "n": "An Agentic Pentest runs on its own once launched, deciding in real time within the policy and scope the customer sets; findings and the activity log show its progress.",
-   "span": "an agentic test relies on this policy to make decisions in real time",
+   "e": "https://docs.ethiack.com/docs/portal/tests/continuous-adversarial-exposure-validation",
+   "n": "Once a continuous test is launched, Hackian tests the assets in the customer's scope on its own, and the page says findings appear in real time and alerts are raised so the team can act.",
+   "span": "Hackian will immediately begin testing the assets in scope, continuously",
    "g": "documented",
    "m": "default"
   },
@@ -171,7 +271,7 @@
   },
   "I22": {
    "e": "https://docs.ethiack.com/docs/portal/tests/human-in-the-loop",
-   "n": "The documentation names scope Hackian does not yet cover alone, such as mobile applications.",
+   "n": "The documentation states a scope limit: test types Hackian does not handle on its own, such as mobile applications, go to human testers.",
    "span": "technologies and test types that Hackian does not currently handle on its own",
    "g": "documented",
    "m": "default"
@@ -199,21 +299,21 @@
   },
   "I50": {
    "e": "https://ethiack.com/info-hub/research/ai-pentesting-benchmarks-are-so-bad-we-made-a-new-one",
-   "n": "Ethiack publishes benchmark results for Hackian against other agents under its open EthiBench protocol.",
+   "n": "Ethiack publishes its own run of Hackian against other agents under EthiBench, a protocol published on arXiv; the post says Hackian is not in the paper itself.",
    "span": "our own agent Hackian led on both F1 and recall under the same protocol",
    "g": "documented",
    "m": "default"
   },
   "I57": {
-   "e": "https://docs.ethiack.com/docs/portal/findings/details",
-   "n": "Customers can change the severity and score assigned to a finding and comment in its updates feed.",
-   "span": "adjust the severity or CVSS score assigned to the finding",
+   "e": "https://docs.ethiack.com/docs/general/support-portal",
+   "n": "Customers report problems with the platform as tickets in Ethiack's Support Portal, describing how to reproduce the issue and the unexpected outcome.",
+   "span": "Add a step by step guide of how you reproduce the issue.",
    "g": "documented",
    "m": "default"
   },
   "S1": {
    "e": "https://ethiack.com/info-hub/case-studies/scaling-security-how-uporto-and-ethiack-protected-5000-assets-with-ai-powered-intelligence",
-   "n": "A named customer, Universidade do Porto, runs Hackian continuously against its exposure; Jumia and CEGID case studies also name Hackian.",
+   "n": "A named customer, Universidade do Porto, runs Hackian continuously against its external exposure.",
    "span": "Hackian, our agentic AI pentester, runs against U.Porto's exposure 24/7",
    "g": "documented",
    "m": "default"
@@ -227,7 +327,28 @@
    "method": "probe"
   }
  },
- "not_credited": [],
+ "not_credited": [
+  {
+   "what": "I04 (generates and executes code with privileges)",
+   "why": "The CTO post describes the tools of a hackbot in general (executing commands, sending requests, a virtual machine), not of Hackian as shipped; the product page's 'exploit generation' and 'builds and executes sophisticated exploit chains' do not show code executed with local or cloud privileges. No level used it.",
+   "source": "https://ethiack.com/info-hub/product/introducing-hackian"
+  },
+  {
+   "what": "I12 (several agents coordinate)",
+   "why": "The policy page says 'Hackian uses Primary Focus to distribute work across multiple agents'; it does not show agents with their own context and authority passing work between them, which the indicator's scope requires.",
+   "source": "https://docs.ethiack.com/docs/portal/tests/agentic-pentest-policy-guidelines"
+  },
+  {
+   "what": "I11 through the Integrations page (Slack, Jira Cloud, Splunk, webhooks, CI/CD)",
+   "why": "These are integrations of the Ethiack platform that route findings and alerts into the customer's tools, not tools the agent uses across a trust boundary.",
+   "source": "https://docs.ethiack.com/docs/portal/integrations"
+  },
+  {
+   "what": "I57 through the finding Updates feed",
+   "why": "The feed of comments 'between all participants' is described with ethical hackers and triagers of an engagement; the Support Portal is the general channel and is cited instead.",
+   "source": "https://docs.ethiack.com/docs/portal/findings/details"
+  }
+ ],
  "announced": [
   {
    "what": "An MCP server that will let external agents query Ethiack findings and trigger tests (forthcoming)",
@@ -271,65 +392,60 @@
   }
  ],
  "captures": {
-  "https://docs.ethiack.com/docs/portal/findings/details": {
-   "sha256": "2d8e2a7fa51a8dc5065966d608ea68da79ff5e074f80f419f663bf2e56994c56",
-   "bytes": 266280,
-   "read_at": "2026-11-10T10:40Z"
+  "https://docs.ethiack.com/docs/general/support-portal": {
+   "sha256": "bf52434faf8654699d0d87d70e7d6b9b8396df18f70c2e7bd721af74d5c93941",
+   "bytes": 230735,
+   "read_at": "2026-11-10T13:48Z"
   },
   "https://docs.ethiack.com/docs/portal/surface/configuring-your-beacon": {
-   "sha256": "a989474c4a360bff1ffc889325e84548b9f282910ec5751dbd1e60375a36c75d",
+   "sha256": "26ae1e8ed8665c46c6a9dda43c6d0e4253630ea3d899559ed3c947edcf399407",
    "bytes": 343242,
-   "read_at": "2026-11-10T10:40Z"
+   "read_at": "2026-11-10T13:48Z"
   },
   "https://docs.ethiack.com/docs/portal/tests/agentic-pentest-policy-guidelines": {
-   "sha256": "688ad23674c3a5f1fb20c71870a80a59460791899867003c31e7d05f14a90e43",
+   "sha256": "41a24089196b27f2671b35674c66ab2e1abbc0a1f6bd4b589b3273776a64b301",
    "bytes": 246595,
-   "read_at": "2026-11-10T10:40Z"
+   "read_at": "2026-11-10T13:48Z"
   },
   "https://docs.ethiack.com/docs/portal/tests/agentic-pentests": {
-   "sha256": "a9a9b6e5162089c7711c311672e3921e002b90a0318ef60f455f3717c74323e6",
+   "sha256": "3715d729b9f3be0a217e845ac3412add0746edf19e5217453e0ba60a78a17769",
    "bytes": 233529,
-   "read_at": "2026-11-10T10:40Z"
+   "read_at": "2026-11-10T13:48Z"
   },
   "https://docs.ethiack.com/docs/portal/tests/continuous-adversarial-exposure-validation": {
-   "sha256": "ebc089ee5921d6e0aaa527a7bcc5798d875e8b4565eca5ac3a990eafe54be98f",
+   "sha256": "e6b6d18084008550d1a6c4835cdd7c304808e69c18c599791a0758c01a2ba32f",
    "bytes": 230332,
-   "read_at": "2026-11-10T10:40Z"
+   "read_at": "2026-11-10T13:48Z"
   },
   "https://docs.ethiack.com/docs/portal/tests/human-in-the-loop": {
-   "sha256": "d042a27702e3aa1da39189ab60735a65893db47a97a3cd753211e5f4933bf267",
+   "sha256": "aa4e1d768851756948a652c37447b631acb623f4c0d8a00061282efbc00582da",
    "bytes": 227727,
-   "read_at": "2026-11-10T10:40Z"
+   "read_at": "2026-11-10T13:48Z"
   },
   "https://docs.ethiack.com/docs/portal/tests/test-details": {
-   "sha256": "d088d59e3d43d5b921a8f01a5943e8cbd3d31b050956fd7431ceab82764e07f9",
+   "sha256": "9c43b07258f39b3a202f09df985c3ef27ccc48a0acb9e79817d8710ae35816f0",
    "bytes": 254499,
-   "read_at": "2026-11-10T10:40Z"
+   "read_at": "2026-11-10T13:48Z"
   },
   "https://docs.ethiack.com/llms.txt": {
    "sha256": "f0f352298b06ae2a1ed034ee626a9d45baa156dd50d44dfba8cfa43006d1b0bb",
    "bytes": 54222,
-   "read_at": "2026-11-10T10:40Z"
+   "read_at": "2026-11-10T13:48Z"
   },
   "https://ethiack.com/hackian": {
    "sha256": "46201b29e69df78f2d3aac0f2643f5f3d37e642d45b623ab7fc06e675820721a",
    "bytes": 420871,
-   "read_at": "2026-11-10T10:40Z"
+   "read_at": "2026-11-10T13:48Z"
   },
   "https://ethiack.com/info-hub/case-studies/scaling-security-how-uporto-and-ethiack-protected-5000-assets-with-ai-powered-intelligence": {
    "sha256": "3659d51b77665219982d030ddc4bd2b80f8c90e1559ab271ceb1f9304a1a5cfd",
    "bytes": 286290,
-   "read_at": "2026-11-10T10:40Z"
-  },
-  "https://ethiack.com/info-hub/product/introducing-hackian": {
-   "sha256": "055a9c1133606bb631f18a6aac600c486747d0687d99191fa5af74f235030315",
-   "bytes": 297052,
-   "read_at": "2026-11-10T10:40Z"
+   "read_at": "2026-11-10T13:48Z"
   },
   "https://ethiack.com/info-hub/research/ai-pentesting-benchmarks-are-so-bad-we-made-a-new-one": {
    "sha256": "0cfc742928a6069c1ee5faa7888818072819135c9dfc61e7bbac4889e52d0d60",
    "bytes": 320186,
-   "read_at": "2026-11-10T10:40Z"
+   "read_at": "2026-11-10T13:48Z"
   }
  }
 }
