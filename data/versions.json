@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.73",
+    "date": "2026-11-10",
+    "what": "Bind Flow identified (Bind, bind.hr); no agent: its AI drafts and a person approves",
+    "by": "gamma.field@web-summit.dinis",
+    "from": "05dfb4d49"
+  },
+  {
     "version": "v0.0.72",
     "date": "2026-11-10",
     "what": "Pebl triaged: Alfie acts (completes time-off requests and approvals), drafting",
