@@ -9,6 +9,7 @@ import * as viz from './viz.mjs'
 import { loadSpectrum } from './spectrum.mjs'
 import { loadFactRay, scanClaims } from './factray.mjs'
 import { build as buildFactRay } from './factray_pages.mjs'
+import { VERBS, cardGraph, walk as graphWalk } from './graph.mjs'
 import { build as buildSpectrum } from './spectrum_pages.mjs'
 import { build as buildReports, loadReports } from '../studio/reports.mjs'
 
@@ -107,6 +108,12 @@ Object.assign(gen, SPX.gens)
 const FRX = buildFactRay(ROOT, m, sp, SPX, TRUST, TODAY)
 Object.assign(gen, FRX.gens)
 Object.assign(vars, FRX.vars)
+const GRAPHS = SPX.cards.filter(x => x.c.publishable).map(({ s, c }) => ({ s, g: cardGraph(m, sp, s, c, TRUST.of.get(s.id)) }))
+Object.assign(gen, {
+    'graph-verbs': () => `| Altitude | From | Verb | To | Reads as | Its inverse |\n|---|---|---|---|---|---|\n` + VERBS.map(v => `| ${v.altitude} | ${v.from} | \`${v.verb}\`${v.in_the_fifteen ? '' : ' (ours)'} | ${v.to} | ${v.reads} | \`${v.inverse}\` |`).join('\n'),
+    'graph-cards': () => `| Card | Nodes | Edges | Open questions drawn | The graph |\n|---|---|---|---|---|\n` + GRAPHS.map(({ s, g }) => `| [${s.name}](@@/spectrum/cards/${s.id}/index.md) | ${g.nodes.length} | ${g.edges.length} | ${g.nodes.filter(n => n.type === 'question').length} | [${s.id}.json](@@/data/graphs/${s.id}.json) |`).join('\n'),
+    'graph-walk': () => { const x = GRAPHS.find(({ s }) => s.review?.status === 'approved') || GRAPHS[0], w = graphWalk(x.g); return `From [${x.s.name}](@@/spectrum/cards/${x.s.id}/index.md), one path down, read as sentences:\n\n` + w.down.map((l, i) => `${i + 1}. ${l}`).join('\n') + `\n\nFrom the same fact, across to the standards:\n\n` + w.across.map(l => `- ${l}`).join('\n') + `\n\nAnd who stands behind that evidence:\n\n` + w.who.map(l => `- ${l}`).join('\n') }
+})
 Object.assign(vars, { spectrumVersion: sp.version, cards: SPX.cards.filter(x => x.c.publishable).length })
 // content pages
 const walk = d => fs.readdirSync(d, { withFileTypes: true }).flatMap(e => e.isDirectory() ? walk(path.join(d, e.name)) : e.name.endsWith('.md') ? [path.join(d, e.name)] : [])
@@ -191,6 +198,8 @@ w('data/spectrum.json', fs.readFileSync(path.join(ROOT, 'data/spectrum.json')))
 w('data/cards.json', JSON.stringify({ spectrum: sp.version, beta: true, note: 'GAMMA-Ray Spectrum cards. Link to a card; do not copy it: a card is corrected in place.', cards: SPX.json }, null, 1))
 w('data/evidence.json', JSON.stringify(SPX.evidence, null, 1))
 for (const [rel, s] of Object.entries(FRX.files)) w(rel, s)
+for (const { s, g } of GRAPHS) w(`data/graphs/${s.id}.json`, JSON.stringify(g, null, 1))
+w('data/graphs/verbs.json', JSON.stringify({ note: 'The verbs of the card graphs. Two are from the fifteen of Fractal Semantic Graphs; the others are ours and are marked.', verbs: VERBS }, null, 1))
 w('data/fact-ray/nodes.json', JSON.stringify({ standard: 'FACT-Ray ' + fr.axes.version, note: 'Every fact behind a published card, as a FACT-Ray node with its claim. Trust, not truth.', nodes: FRX.nodesJson }, null, 1))
 for (const f of ['axes', 'bands', 'caps', 'actors', 'examples']) w(`data/fact-ray/${f}.json`, fs.readFileSync(path.join(ROOT, 'data/fact-ray', f + '.json')))
 for (const f of fs.readdirSync(path.join(ROOT, 'data/fact-ray/schemas'))) w(`data/fact-ray/schemas/${f}`, fs.readFileSync(path.join(ROOT, 'data/fact-ray/schemas', f)))

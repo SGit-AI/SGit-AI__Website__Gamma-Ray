@@ -56,6 +56,10 @@ Built inside this site first (Dinis, 10 November 2026); it will move to its own 
 - A card's status is Draft until its company confirms it on record (Confirmed) or a customer goes on record (Attested). When Dinis signs a card, record `review.operator_signoff` `{by, at, scope}`: the evidence in scope moves to A4.
 - Everything is public (Dinis, 10 November 2026): a card is published as beta, then the company is contacted and asked to comment and correct; a card is taken down if its company asks.
 
+## The graph
+
+Dinis, 10 November 2026: a fact has meaning only through what it connects to, and the whole thing is fractal: the top-level mapping inherits from below, all the way down to specific evidence (graphs.sgit.ai, *Fractal Semantic Graphs: Meaning Through Connectivity*). `build/graph.mjs` makes one graph per published card in that grammar: every edge a directed verb with a named inverse (`VERBS`), no generic association, an absence is a node, evidence carries its words. A new verb needs a sentence, a different sentence for its inverse, and the node types at each end. The graph connects; it never scores.
+
 ## Rules for content
 
 - Read a source yourself before citing it. Quote exactly, with the link and the date read.

@@ -69,3 +69,5 @@ The public card is the front door. Everything that needs the operator sits above
 8. **The same rules for us.** Our own agents get cards first, as participant entries.
 
 Every earlier rule of GAMMA-Ray stays: levels are computed, links are signed, a scan only reads, and everything carries the beta mark.
+
+[Every card is a graph](graph/index.md): from a level down to the sentence on a public page.

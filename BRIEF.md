@@ -120,6 +120,12 @@ Two written briefs, kept whole in `briefs/gamma-ray-brief-2.md` and `briefs/fact
 
 What this settles: FACT-Ray is built inside this site first and moves to its own later. Everything is public, the Portuguese companies' cards included: a card is published as beta, the company is contacted and asked to comment, and a card is taken down if the company asks. The well-known address (`/.well-known/fact-ray.json`) is how a company, RiskMandate and each of our agents answers for itself.
 
+## Meaning through connectivity (10 November, later still)
+
+> One of the key concepts here [...] is meaning through connectivity and trust through meaning. And the idea is that facts and letters and statements only have meaning if they are connected. [...] What we have is fundamentally a fractal element. And also you want to read about fractal semantic graphs, because that's what we have here. [...] The whole thing is fractal, and the whole thing connects the dots, and you can have facts of facts of facts, you can have evidence, so everything inherits from below, so you can have the top level mapping, but then you go all the way down to specific evidence.
+
+Read for this: "Introducing Fractal Semantic Graphs" on newsroom.sgit.ai and the reference card of *Fractal Semantic Graphs: Meaning Through Connectivity* on graphs.sgit.ai. A document titled "Trust through meaning" was not found on either site.
+
 ## The rules given with the brief
 
 Public sources only. No rating is published without its evidence. (The first brief also said: not without the company having seen it. The operator replaced that on 10 November 2026: a rating made from public data may be published, labelled as beta and as not seen by its subject.) No contact details anywhere. Never push to the main branch. The name and the backronym stay as chosen.
