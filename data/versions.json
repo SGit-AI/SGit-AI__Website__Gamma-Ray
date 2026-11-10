@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.45",
+    "date": "2026-11-10",
+    "what": "reports follow Spectrum 0.2 (signatures in prose come from the scorer); claim notes make the company and customer asks",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "293d5a38b"
+  },
+  {
     "version": "v0.0.44",
     "date": "2026-11-10",
     "what": "FACT-Ray inside this site, trust on every card, a page per provision",
