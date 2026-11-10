@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.50",
+    "date": "2026-11-10",
+    "what": "Talkdesk: a Portuguese draft card for Talkdesk Autopilot",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "f3cf2cd62"
+  },
+  {
     "version": "v0.0.49",
     "date": "2026-11-10",
     "what": "Granter: a Portuguese draft card for its AI Grant Consultant",
