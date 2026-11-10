@@ -1,0 +1,182 @@
+{
+ "id": "granter-ai-grant-consultant",
+ "name": "AI Grant Consultant",
+ "operator": "Granter (the vendor); each customer is the operator of its own use",
+ "company": "granter",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-10",
+ "tier": "public",
+ "basis": "Granter's own public pages (product, documentation, blog, customer stories, legal and security pages)",
+ "seen_by_operator": null,
+ "what": "Chat-based agent, onboarded with the organisation's details and past applications, that matches funding calls, checks eligibility and admissibility, drafts applications section by section with playbooks, scores drafts with an Evaluator, and supports post-approval reporting. The user submits the application.",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. Part of the first Portuguese cohort.",
+ "grant": null,
+ "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
+ "vault": {
+  "id": "8fffssyc",
+  "read_key": "sgit_public_read_d27a5608316451eb20fa628b9943960a7bc8a33709127d6c373b26afca8aeb4e:8fffssyc",
+  "published": "2026-11-10"
+ },
+ "review": {
+  "status": "draft",
+  "rounds": []
+ },
+ "assessment": {
+  "by": "gamma.studio@web-summit.dinis",
+  "researcher_assessor": "a sub-agent of gamma.studio",
+  "challenger": "a sub-agent of gamma.studio",
+  "lowered": [
+   "I61",
+   "I22",
+   "I54"
+  ],
+  "fixed": [
+   "S1",
+   "I16",
+   "I02",
+   "I67"
+  ],
+  "added_by_challenger": [],
+  "files": "in the vault: work/assessment.json, work/challenger.json"
+ },
+ "answers": {
+  "I02": {
+   "e": "https://granter.ai/case-studies/fidelidade",
+   "n": "In the Fidelidade pilot, the agents were trained on Fidelidade's business information and past applications, on Granter's platform.",
+   "span": "trained using detailed information about Fidelidade’s business and past applications",
+   "g": "documented",
+   "m": "default"
+  },
+  "I07": {
+   "e": "https://granter.ai/privacy-policy",
+   "n": "The platform's AI outputs are suggestions that users review and approve before any submission or decision.",
+   "span": "Users review and approve them before any submission or decision",
+   "g": "documented",
+   "m": "default"
+  },
+  "I09": {
+   "e": "https://granter.ai/blog/ai-grant-consultant",
+   "n": "The agent works in one domain: public and private funding calls at regional, national and EU level.",
+   "span": "covers both public and private funding, at regional, national and EU level",
+   "g": "documented",
+   "m": "default"
+  },
+  "I16": {
+   "e": "https://granter.ai/privacy-policy",
+   "n": "The privacy policy says the platform's outputs (drafts, analyses, recommendations) are suggestions, and that users review and approve them before any submission or decision.",
+   "span": "Users review and approve them before any submission or decision",
+   "g": "documented",
+   "m": "default"
+  },
+  "I20": {
+   "e": "https://granter.ai/privacy-policy",
+   "n": "The privacy policy states what the platform is for: finding, preparing and managing grant and funding applications.",
+   "span": "helps organisations find, prepare and manage applications for grants and other funding",
+   "g": "documented",
+   "m": "default"
+  },
+  "I38": {
+   "e": "https://granter.ai/privacy-policy",
+   "n": "A user reviews and approves outputs before any submission or decision; the submission itself is made by the user.",
+   "span": "Users review and approve them before any submission or decision",
+   "g": "documented",
+   "m": "default"
+  },
+  "I47": {
+   "e": "https://granter.ai/privacy-policy",
+   "n": "The privacy policy states in prose that the platform does not take decisions about a person on its own.",
+   "span": "the platform does not take decisions about you on its own.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I52": {
+   "e": "https://granter.ai/case-studies/marinha",
+   "n": "Three Portuguese Navy units are evaluating the agent as part of a certification process run by the Navy.",
+   "span": "Granter is being evaluated by three different Navy units",
+   "g": "documented",
+   "m": "default"
+  },
+  "I56": {
+   "e": "https://granter.ai/privacy-policy",
+   "n": "The privacy policy states that AI-generated content is labelled as such inside the platform.",
+   "span": "AI-generated content is presented as such inside the platform.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I58": {
+   "e": "https://granter.ai/blog/ai-grant-consultant",
+   "n": "The CTO describes the data the agent uses: the organisation's previous applications and institutional data, checked against requirements extracted from official call documents.",
+   "span": "collect all important information, like previous applications, institutional data",
+   "g": "documented",
+   "m": "default"
+  },
+  "I67": {
+   "e": "https://granter.ai/case-studies/marinha",
+   "n": "The Navy case study reports pilot figures: over 200 opportunities added to a defence grants database, and first drafts cut from two weeks to two hours (vendor-reported).",
+   "span": "Relevant funding opportunities added to a defence grants database",
+   "g": "documented",
+   "m": "default"
+  },
+  "S1": {
+   "e": "https://granter.ai/case-studies/fidelidade",
+   "n": "Fidelidade runs a pilot of the agent: two agents, one per entity, are live and in use to find calls and start drafts. Super Bock prepared a submitted application with it.",
+   "span": "the platform is actively being used to identify new opportunities and begin drafting applications",
+   "g": "documented",
+   "m": "default"
+  }
+ },
+ "not_credited": [],
+ "announced": [
+  {
+   "what": "Automated submission of applications through official channels, marked coming soon in older text that the blog page still carries; the current FAQ on the same page says the user submits.",
+   "source": "https://granter.ai/blog/ai-grant-consultant"
+  },
+  {
+   "what": "Navy Tested certification, in progress (not yet granted).",
+   "source": "https://granter.ai/case-studies/marinha"
+  },
+  {
+   "what": "Expansion of coverage to more European countries.",
+   "source": "https://granter.ai/blog/ai-grant-consultant"
+  },
+  {
+   "what": "Smarter AI and deeper integrations (About page, Future milestone).",
+   "source": "https://granter.ai/about"
+  },
+  {
+   "what": "Marketing figures: 2x higher approval rates, 75% less time, 3000+ companies (vendor claims, not counted).",
+   "source": "https://granter.ai/"
+  }
+ ],
+ "configurations": [
+  {
+   "id": "shipped",
+   "name": "As shipped",
+   "note": "AI Grant Consultant with its documented defaults.",
+   "on": []
+  }
+ ],
+ "captures": {
+  "https://granter.ai/blog/ai-grant-consultant": {
+   "sha256": "939ffa1a99921cebb4dd509822646f9bf524a971fe0d64afd4bbebb4325fbb9c",
+   "bytes": 499709,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://granter.ai/case-studies/fidelidade": {
+   "sha256": "5540efe3cdd81e0a93879808808d39a5d3373c021dffd505fc6a9c99bab92685",
+   "bytes": 447459,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://granter.ai/case-studies/marinha": {
+   "sha256": "a6b46185d03c0012028bb1f68dc469204e30f59eafa4bd303fcfbb3b40b7d8cb",
+   "bytes": 487913,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://granter.ai/privacy-policy": {
+   "sha256": "278075589d6cb14792578a442545a13411a49d439932973007e07b74a9072c28",
+   "bytes": 572845,
+   "read_at": "2026-11-10T10:43Z"
+  }
+ }
+}

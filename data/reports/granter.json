@@ -1,0 +1,216 @@
+{
+ "id": "granter",
+ "name": "Granter",
+ "url": "https://granter.ai/",
+ "country": "Portugal",
+ "sector": "govtech / public funding",
+ "read": "2026-11-10",
+ "basis": "Granter's own public pages and, for company basics only, the news sources named beside each fact",
+ "seen_by_subject": false,
+ "what": "Granter sells the AI Grant Consultant, a chat-based AI agent that matches an organisation with public and private funding calls, checks eligibility, drafts and scores applications, and supports reporting after approval.",
+ "facts": [
+  {
+   "fact": "Founded in 2023 by Bernardo Seixas and Bernardo Tavares (AICEP/Invest Porto news item, 17 November 2025).",
+   "url": "https://www.portugalglobal.pt/en/news/2025/november/uptec-startup-granter-wins-web-summit-2025-competition/",
+   "span": "Founded in 2023 by Bernardo Seixas and Bernardo Tavares"
+  },
+  {
+   "fact": "Third UPTEC startup to win the Web Summit pitch competition (AICEP/Invest Porto).",
+   "url": "https://www.portugalglobal.pt/en/news/2025/november/uptec-startup-granter-wins-web-summit-2025-competition/",
+   "span": "Granter becomes the third UPTEC startup to win the Web Summit’s pitch competition"
+  },
+  {
+   "fact": "Its About page lists the Web Summit 2025 pitch competition win in November 2025.",
+   "url": "https://granter.ai/about",
+   "span": "Won the Web Summit 2025 pitch competition."
+  },
+  {
+   "fact": "Started in September 2023 under the name Lever Tax.",
+   "url": "https://granter.ai/about",
+   "span": "Granter is born (originally as Lever Tax)"
+  },
+  {
+   "fact": "The product name at source is the AI Grant Consultant; the FAQ says Granter is the company behind it. (homepage FAQ, served from this script module)",
+   "url": "https://framerusercontent.com/sites/Ih0Kv4pT3TC363Nt7lJX0/nhxka8BHi.DNESSsdK.mjs",
+   "span": "the AI agent that helps organisations find, write, and manage grants"
+  },
+  {
+   "fact": "The privacy policy (last updated 9 November 2026) states the purpose of the platform.",
+   "url": "https://granter.ai/privacy-policy",
+   "span": "helps organisations find, prepare and manage applications for grants and other funding"
+  },
+  {
+   "fact": "The platform's AI models run on Microsoft Azure in EU regions.",
+   "url": "https://granter.ai/privacy-policy",
+   "span": "The models run on Microsoft Azure in EU regions"
+  },
+  {
+   "fact": "GEOfundos customers are being moved to Granter (Portuguese-language migration page).",
+   "url": "https://granter.ai/geofundos-migration",
+   "span": "A GEOfundos junta-se à Granter"
+  },
+  {
+   "fact": "ECO (Portuguese business daily) reported the Web Summit 2025 win on 13 November 2025 and quoted Bernardo Seixas as founder and CEO.",
+   "url": "https://eco.sapo.pt/2025/11/13/portuguesa-granter-ai-e-a-startup-vencedora-da-web-summit-2025/",
+   "span": "fundador e CEO da Granter"
+  }
+ ],
+ "people": [
+  {
+   "name": "Bernardo Seixas",
+   "role": "CEO and co-founder",
+   "url": "https://granter.ai/about"
+  },
+  {
+   "name": "Bernardo Tavares",
+   "role": "CTO and co-founder; named Data Protection Officer in the privacy policy",
+   "url": "https://granter.ai/about"
+  },
+  {
+   "name": "Rodrigo Alarcão",
+   "role": "AI Product Manager",
+   "url": "https://granter.ai/about"
+  },
+  {
+   "name": "Bernardo Moutinho",
+   "role": "Head of Operations",
+   "url": "https://granter.ai/about"
+  }
+ ],
+ "solutions": [
+  {
+   "id": "ai-grant-consultant",
+   "name": "AI Grant Consultant",
+   "short": "AI Grant Consultant",
+   "what": "Chat-based agent, onboarded with the organisation's details and past applications, that matches funding calls, checks eligibility and admissibility, drafts applications section by section with playbooks, scores drafts with an Evaluator, and supports post-approval reporting. The user submits the application.",
+   "status": "generally available (free one-week trial, Professional and Enterprise plans); the new version was described on 9 November 2026",
+   "url": "https://granter.ai/blog/ai-grant-consultant",
+   "scan": "granter-ai-grant-consultant"
+  },
+  {
+   "id": "quickmatch",
+   "name": "QuickMatch",
+   "short": "QuickMatch",
+   "what": "Free tool that gives a snapshot of open and upcoming calls relevant to an organisation.",
+   "status": "available (free)",
+   "url": "https://granter.ai/"
+  }
+ ],
+ "stories": [
+  {
+   "customer": "Fidelidade (Fidelidade Companhia de Seguros and FID I&D)",
+   "what": "Pilot with two agents, one per entity, using the Match and Apply modules for SIFIDE and European calls; in the initial phase of a 12-month cycle.",
+   "url": "https://granter.ai/case-studies/fidelidade",
+   "span": "Onboarding is complete, the two agents are live"
+  },
+  {
+   "customer": "Super Bock Group",
+   "what": "Used the agent's scientific paper research and Evaluator to prepare and submit an FCT doctoral scholarship application in under 72 hours; a professor validated the content.",
+   "url": "https://granter.ai/case-studies/superbock",
+   "span": "the team produced a technically rigorous grant proposal and submitted it on time"
+  },
+  {
+   "customer": "Portuguese Navy (Naval Academy, Navy, Hydrographic Institute)",
+   "what": "Pilot with three agents on Match and Apply; a defence grants database of 200+ opportunities; in the certification phase of the Navy Tested programme.",
+   "url": "https://granter.ai/case-studies/marinha",
+   "span": "Granter is being evaluated by three different Navy units"
+  },
+  {
+   "customer": "Católica-Lisbon Entrepreneurship Center (CLEC)",
+   "what": "Six-month pilot of one agent using the Match module for European innovation and entrepreneurship calls.",
+   "url": "https://granter.ai/case-studies/clec",
+   "span": "CLEC implemented a dedicated AI agent, designed specifically for their context"
+  },
+  {
+   "customer": "Câmara Municipal de Montemor-o-Novo",
+   "what": "Municipality integrated the Writing module into its grant workflow; early-stage adoption.",
+   "url": "https://granter.ai/case-studies/montemor-o-novo",
+   "span": "the Writing module integrated into the municipality’s workflow"
+  },
+  {
+   "customer": "(usage figure)",
+   "what": "Homepage figure of EUR 30M in grants submitted through Granter (a vendor figure; not independently verified).",
+   "url": "https://granter.ai/",
+   "span": "In grants submitted"
+  }
+ ],
+ "analysis": [],
+ "article": null,
+ "vault": {
+  "id": "8fffssyc",
+  "read_key": "sgit_public_read_d27a5608316451eb20fa628b9943960a7bc8a33709127d6c373b26afca8aeb4e:8fffssyc",
+  "published": "2026-11-10"
+ },
+ "team": {
+  "researcher-assessor": "a sub-agent of gamma.studio@web-summit.dinis",
+  "challenger": "a sub-agent",
+  "scorer": "build/spectrum.mjs",
+  "analyst, designer, writer": "gamma.studio@web-summit.dinis",
+  "review": "gamma.review@web-summit.dinis (pending)",
+  "sign-off": "gamma.approve@web-summit.dinis (pending)"
+ },
+ "signoff": null,
+ "corrections": [],
+ "captures": {
+  "https://eco.sapo.pt/2025/11/13/portuguesa-granter-ai-e-a-startup-vencedora-da-web-summit-2025/": {
+   "sha256": "0956d2819fc70a8909f3731a6162cf8ddf8b38cd7c64f247f5f7fd7808e779ce",
+   "bytes": 314592,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://framerusercontent.com/sites/Ih0Kv4pT3TC363Nt7lJX0/nhxka8BHi.DNESSsdK.mjs": {
+   "sha256": "31b475a01c4bc7fb5ce7155ca0cb6c62d8c1c52b3dde150f408d388d367e8f45",
+   "bytes": 24485,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://granter.ai/": {
+   "sha256": "496f5c596f5aa81ad1681414af7b23fb1646a0b232df1c129461bacb08467c55",
+   "bytes": 562229,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://granter.ai/about": {
+   "sha256": "f1fc4259db677c74634502f4deaa25e42ee1d432eb0d4048333545feb2d73446",
+   "bytes": 591487,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://granter.ai/case-studies/clec": {
+   "sha256": "930217dbabb636b8aa6d5032b1309a9834c8050d4bfdea73fd90db6cf30ae2d1",
+   "bytes": 455010,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://granter.ai/case-studies/fidelidade": {
+   "sha256": "5540efe3cdd81e0a93879808808d39a5d3373c021dffd505fc6a9c99bab92685",
+   "bytes": 447459,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://granter.ai/case-studies/marinha": {
+   "sha256": "a6b46185d03c0012028bb1f68dc469204e30f59eafa4bd303fcfbb3b40b7d8cb",
+   "bytes": 487913,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://granter.ai/case-studies/montemor-o-novo": {
+   "sha256": "2fcbc37b873a23db4b21f278f1318dde0595d4273a154f899f20cf62929c5306",
+   "bytes": 436656,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://granter.ai/case-studies/superbock": {
+   "sha256": "0da57a037f92737bda1d6fe53ad4a9a732fbaad1fa304fa982ccef3c23547047",
+   "bytes": 442114,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://granter.ai/geofundos-migration": {
+   "sha256": "edd09f8ab4306ebdc337324321640111bcee9efb8fe2aa3c551c45df3a2712d9",
+   "bytes": 322312,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://granter.ai/privacy-policy": {
+   "sha256": "278075589d6cb14792578a442545a13411a49d439932973007e07b74a9072c28",
+   "bytes": 572845,
+   "read_at": "2026-11-10T10:43Z"
+  },
+  "https://www.portugalglobal.pt/en/news/2025/november/uptec-startup-granter-wins-web-summit-2025-competition/": {
+   "sha256": "58aabc2170e98cae0764d5ab30dd3456df1ac7a01573aa0bfff573634c4109ae",
+   "bytes": 44044,
+   "read_at": "2026-11-10T10:43Z"
+  }
+ }
+}
