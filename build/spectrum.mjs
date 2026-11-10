@@ -42,7 +42,18 @@ export function card(scan, sp, m) {
         const next = pick ? pick.l : null, need = pick ? pick.need : null
         const used = L ? ids(L.rule).filter(has) : []
         const beyond = d.levels.filter(l => l.level > level + 1 && met[l.level]).map(l => l.level)
-        return { id: d.id, name: d.name, level, levelName: L ? L.name : null, means: L ? L.means : null, used, available: used.filter(id => A[id].m === 'available'), next: next ? { level: next.level, name: next.name, need } : null, beyond }
+        // which configuration the level holds in: the level with only what holds as shipped (or in the deployment),
+        // and the named configurations of every available fact the level rests on, down the ladder
+        const hasShipped = id => !!A[id] && A[id].m !== 'available', metS = {}
+        for (const l of d.levels) metS[l.level] = test(l.rule, hasShipped, metS)
+        let shipped = 0
+        if (d.ladder === 'cumulative') { for (const l of d.levels) { if (metS[l.level]) shipped = l.level; else break } }
+        else for (const l of d.levels) if (metS[l.level]) shipped = l.level
+        const chain = [...new Set(d.levels.filter(l => l.level <= level && met[l.level]).flatMap(l => ids(l.rule)))].filter(has)
+        const cfgName = tag => { const c = (scan.configurations || []).find(c => (c.on || []).includes(tag)); return c ? c.name : tag }
+        const withCfg = shipped === level ? [] : [...new Set(chain.filter(id => A[id].m === 'available').map(id => cfgName(A[id].cfg || 'an option turned on')))]
+        const SL = d.levels.find(l => l.level === shipped) || null
+        return { id: d.id, name: d.name, level, levelName: L ? L.name : null, means: L ? L.means : null, used, shipped, shippedName: SL ? SL.name : null, withCfg, available: shipped === level ? [] : ['available'], next: next ? { level: next.level, name: next.name, need } : null, beyond }
     })
     const lv = Object.fromEntries(dims.map(d => [d.id, d.level])), sum = dims.reduce((n, d) => n + d.level, 0)
     const stage = sp.stages.find(s => sum >= s.min && sum <= s.max) || null

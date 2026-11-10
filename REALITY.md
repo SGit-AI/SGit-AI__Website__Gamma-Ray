@@ -23,7 +23,7 @@ A thing not listed here does not exist. (site v0.0.34)
 
 ## Does not exist
 
-- **No review has happened yet.** The five cards were mapped by one agent. The three product examples wait in the review queue.
+- **No card has been signed off yet.** Review is running (the state of each scan is on `/spectrum/pipeline/`), but no third party's card has passed two rounds and a sign-off, so none is published beyond the three examples that were live before the workflow.
 - **No card for any company in a cohort.** No scout has run and no cohort is approved.
 - **Three Spectrum decisions are open** and are the operator's: the name, stage by sum or by shape, the first cohort.
 
