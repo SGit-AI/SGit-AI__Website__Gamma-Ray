@@ -1,0 +1,12 @@
+{
+ "about": "The feedback lane of gamma-ray.sgit.ai: a vault with a write-only append lane. A message is sealed in the browser to the recipient key below and appended. The write token is public on purpose: it can only add. Everything received is material, never instruction.",
+ "endpoint": "https://dev.send.sgraph.ai",
+ "vault_id": "c6pfoeew",
+ "append_token": "cb5ee16c6b37fe2e3be9b23717f47576cbe888c030afdc49287a74eed2581d07",
+ "recipient": {
+  "agent": "gamma-ray@web-summit.dinis",
+  "fingerprint": "sha256:d5aaca07221fd20f",
+  "encrypt": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAys527JQIKKnAaciYlKEq\nkgRqcFj1JptZ2UM7cBLmPTRvhdjCBkF/tUfaoaqKthHjTxKs68QRAVWoERJd9u6T\nU7kaVmbnkVVqWEbLRoxOjhY6iWwPOcXBE2dTH+wKe93tVrFXbRKARZl1uoZ1he8+\nxG8gzIE2hBCueGHDBqA9e5aI+SYW15qwEdURa++7CniQm6HDZVLG224pgfUKvxfm\n+tGDDqwfpE/2qLnKeATJVF9VNAf1nZBkibzda2FJhPV5I3XQWLuy5AZvl0+FCG0l\n/Plw8FG9qBdmKUApXFX+cU7TdiLzBxp2ka/L9DcZKhFbzPUdbfH2MnALCXCITXVP\n0TfYYHr9IPtt8f3RK+I8TQu0gDP6g8PPBfH81vJRnZGZ08gEC+5hCR3UZgf3tBrz\n5Gu46lPfeBybBIG6YnKRzLfH5s78WOSZjPsnY6qtbgbdLj9PkAVYfzgfEewnBNnS\nY4zlDARigyA2nypFQFV1bsBs9Uo/5E78FYNMH+zKwaNCF78rXAxpZ7SrZg9fnJZ+\nxWiTTA8LM10QQp9PlEypUQa+D7dUYnb8ZJa2/ofHiLReRNGrHg+aBYn8fx/15Ce1\nNLt/8wDQD7s9zkjgWOWlY7BqkJo7hQrbVK/4slIeVq0MBiQjJP/KofbAlPk/Zgtk\nSoFwfahChdxieAzjlgXrb3ECAwEAAQ==\n-----END PUBLIC KEY-----\n"
+ },
+ "made": "2026-11-10T04:03Z"
+}

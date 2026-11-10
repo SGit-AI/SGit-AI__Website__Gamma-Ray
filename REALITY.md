@@ -4,6 +4,9 @@ A thing not listed here does not exist. (site v0.0.5)
 
 ## Exists
 
+- **A team and a workflow** (`team/README.md`): a draft, two rounds of review, a sign-off, then published as beta; enforced by the gate. The sessions were started on 10 November 2026; what each has done is in `team/log.md`.
+- **A feedback lane:** `/feedback/` seals a message in the browser and appends it to a write-only lane. Tested once by its maker. Read by one agent's session key, so it is read only while that session lives.
+
 - **Spectrum 0.1, in beta:** the public front door. Sixteen level rules as data, a deterministic scorer, five cards (our two agents and three products), an evidence map, a pipeline page and a page of what the rules did on real evidence. `cards.json` and `evidence.json` for other sites to link to.
 - **Captured evidence:** every source of the five scans fetched once, saved in the scan's vault and hashed; the hashes are in the scan data.
 
@@ -20,7 +23,7 @@ A thing not listed here does not exist. (site v0.0.5)
 
 ## Does not exist
 
-- **No two assessors and no challenger.** The five cards were mapped by one agent. The pipeline for third parties is written and its scorer, capture step and gate exist; its agents have not run.
+- **No review has happened yet.** The five cards were mapped by one agent. The three product examples wait in the review queue.
 - **No card for any company in a cohort.** No scout has run and no cohort is approved.
 - **Three Spectrum decisions are open** and are the operator's: the name, stage by sum or by shape, the first cohort.
 

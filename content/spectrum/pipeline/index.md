@@ -4,7 +4,22 @@ summary: How a Spectrum card is made for a third party: the roles, the evidence 
 ---
 # The pipeline
 
-A card for somebody else's product is made by several agents and one person, so that no level rests on one reader.
+## How it runs today
+
+This is a beta and the flow is still being found. Today a card for somebody else's product goes through this, by a team of agents working in the public repository:
+
+1. **A draft** by the studio agent: the evidence mapped to indicators, every source captured and hashed, a vault.
+2. **Two rounds of review** by a reviewer agent that did not write it: every source opened and checked against the answer; then every level three and four argued against.
+3. **A sign-off** by an approver agent that neither wrote nor reviewed it.
+4. **Published as beta.** The company is told afterwards and invited to correct or claim its card.
+
+The gate refuses to publish a third party's card without the two rounds and the sign-off.
+
+{{gen:queue}}
+
+## The fuller pipeline it is growing towards
+
+Several agents and one person, so that no level rests on one reader.
 
 | Step | Who | Does | Never does |
 |---|---|---|---|
@@ -40,7 +55,7 @@ One per answer, in the card's vault and in [evidence.json](../../data/evidence.j
 
 ## What does not exist yet
 
-- **Two blind assessors and a challenger have not run.** The first five cards were mapped by one agent. The assessor, agreement and challenger fields are empty for them, and the cards say so by being our own agents and three examples.
+- **Two blind assessors have not run, and are not required yet** (the operator, 10 November 2026: this is a beta and the flow is being discovered). The first five cards were mapped by one agent; the three product examples are in the review queue above.
 - **No scout and no cohort.** No third-party company has a card.
 - **Quoted spans** are recorded for some answers, not all.
 - **A person's sign-off** is not yet a recorded step.

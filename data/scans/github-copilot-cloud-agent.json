@@ -173,5 +173,10 @@
    "bytes": 28642,
    "read_at": "2026-11-10T03:32Z"
   }
+ },
+ "review": {
+  "status": "published-before-review",
+  "rounds": [],
+  "note": "Published as an example on 10 November 2026, before the review workflow existed. Mapped by one agent. It goes through two rounds of review next."
  }
 }

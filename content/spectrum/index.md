@@ -60,7 +60,7 @@ The public card is the front door. Everything that needs the operator sits above
 1. **Say what is there.** A card lists evidence found. Absence appears only as a next unlock.
 2. **Not evidenced is not no.**
 3. **A card needs something to show.** No card is published unless one dimension reaches level one. Anyone else gets an invitation.
-4. **Right of reply.** A company receives its draft card and can add evidence.
+4. **Published as beta, then the company is told.** A card is published once it has had two rounds of review and a sign-off. The company is told afterwards and invited to [correct or claim it](../feedback/index.md) and add evidence.
 5. **No adjectives, no ranking by number.** Cohorts sort by name; a leader is named per dimension, never overall.
 6. **Announced is shown, not scored.**
 7. **Corrections are dated and propagate.**

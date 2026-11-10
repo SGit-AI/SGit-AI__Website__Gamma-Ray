@@ -11,7 +11,7 @@ export function build(m, sp) {
     const dimOf = id => sp.dimensions.find(d => d.id === id)
     const unlockText = c => c.unlock ? `${c.unlock.name} ${c.unlock.next.level} (${c.unlock.next.name}): public evidence that ${c.unlock.next.need.map(id => lower(m.I.get(id).text)).join(', and that ')} would get there` : 'at the top of every dimension that has a next level'
     const standoutText = (s, c) => { if (!c.standout) return ''; const d = c.standout, id = d.used.find(i => s.answers[i]?.span) || d.used[0], a = s.answers[id]; return `${d.name} ${d.level} (${d.levelName}): ${a.span ? '"' + a.span + '"' : lower(a.n).replace(/\.$/, '')}` }
-    const reviewed = s => s.ours ? 'A participant entry: one of our own agents' : s.claimed_by_operator ? 'Claimed by its operator' : `Not reviewed by its vendor yet · claim this card to add evidence`
+    const reviewed = s => s.ours ? 'A participant entry: one of our own agents' : s.claimed_by_operator ? 'Claimed by its operator' : `Not reviewed by its vendor yet`
 
     // the card, as one line of HTML
     const html = (s, c, up = '') => `<div class="sp-card"><div class="sp-head"><div><b>${esc(s.name)}</b><span>${esc(s.kind === 'product-shape' ? 'a product, as documented' : 'a deployment')}</span></div><div class="sp-meta">SPECTRUM ${esc(sp.version.toUpperCase())} · Public tier · ${s.read}</div></div><div class="sp-sig">` +
@@ -19,7 +19,7 @@ export function build(m, sp) {
         `</div><div class="sp-row"><span class="sp-stage">Stage: <b>${c.stage || 'not yet on the spectrum'}</b> (${c.sum} of 16)</span>${c.badges.map(b => `<span class="sp-badge">${esc(sp.badges.find(x => x.id === b).name)}</span>`).join('')}</div>` +
         (c.standout ? `<p><b>Standout.</b> ${esc(standoutText(s, c))}</p>` : '') + `<p><b>Next unlock.</b> ${esc(unlockText(c)).replace(/`/g, '')}.</p>` +
         `<p><b>Standards constellation.</b> ${c.lit} provisions lit across ${c.instruments} of ${m.standards.length} instruments.</p><div class="sp-const">${c.constellation.map(k => `<div title="${esc(k.name)}: ${k.lit} of ${k.readable} publicly readable provisions"><i style="height:${Math.round(4 + 36 * (k.readable ? k.lit / k.readable : 0))}px" class="s-${k.id}"></i><span>${esc(k.name.replace(' authorization', '').replace('NIST AI RMF', 'NIST').replace('EU AI Act', 'AI Act'))}</span></div>`).join('')}</div>` +
-        `<p class="sp-foot">Evidence: ${c.sources} sources, captured and hashed · <a href="${up}spectrum/cards/${s.id}/">the card's page</a> has the vault's read key · ${reviewed(s)}</p></div>`
+        `<p class="sp-foot">Evidence: ${c.sources} sources, captured and hashed · <a href="${up}spectrum/cards/${s.id}/">the card's page</a> has the vault's read key · ${reviewed(s)} · <a href="${up}feedback/?about=${encodeURIComponent(s.name)}">${s.ours ? 'send a correction' : 'correct or claim this card'}</a></p></div>`
 
     const gens = {
         'spectrum-cards': () => `<div class="sp-cards">` + cards.filter(x => x.c.publishable).map(({ s, c }) => html(s, c, '@@/')).join('') + `</div>`,

@@ -40,7 +40,8 @@ Numbers on pages come from the data through `{{n:...}}` and `{{gen:...}}`; never
 - `data/spectrum.json`: the sixteen level rules, the stages and the badges. `build/spectrum.mjs` is the scorer: deterministic, and the only thing that assigns a level. An agent maps evidence to indicators; it never assigns a level.
 - `tools/capture.mjs <scan id> <vault dir>`: fetches every source of a scan once, saves it in the vault and writes its SHA-256 into the scan. Run it before a card is published.
 - A card says what is there. Absence appears only as a next unlock. No card below level one in every dimension. No adjectives about a company. A quoted span is under fifteen words.
-- A third party's card needs two assessors who do not share context, a challenger on every level three and four, the gate, and a person's sign-off (`/spectrum/pipeline/`). The name, stage by sum or by shape, and the first cohort are Dinis's to decide: ask.
+- **The team and the workflow are in `team/README.md`** (Dinis, 10 November 2026): who owns which files, and how a third party's card goes from a draft through two rounds of review and a sign-off to being published as beta. The gate enforces it. Two blind assessors are not required yet. The company is told after publication and invited to correct or claim its card through `/feedback/`.
+- The name, stage by sum or by shape, and the first cohort are Dinis's to decide: ask.
 - Dinis, 10 November 2026: it is fine to publish this information and these scores without waiting for a legal read; a team of agents will work on this repository. Write for them: say in `REALITY.md` what exists, and leave nothing in a session that the next agent needs.
 
 ## Rules for content

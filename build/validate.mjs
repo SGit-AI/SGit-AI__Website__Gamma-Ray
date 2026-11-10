@@ -43,6 +43,12 @@ for (const f of fs.readdirSync(path.join(ROOT, 'data/scans')).filter(f => f.ends
     if (!s.ours) for (const [id, a] of Object.entries(s.answers)) if (!['documented', 'observed', 'measured'].includes(a.g)) bad('scan', `${f}: ${id}: a third party's answer must be documented or measured`)
     if (s.kind === 'product-shape') { const tags = new Set((s.configurations || []).flatMap(c => c.on)); if (!s.configurations?.length || s.configurations[0].on.length) bad('scan', `${f}: a product needs configurations, the first of them as shipped`)
         for (const [id, a] of Object.entries(s.answers)) if (a.m === 'available' && !tags.has(a.cfg)) bad('scan', `${f}: ${id} is available but no configuration turns it on`) }
+    if (!s.ours) { const rv = s.review
+        if (!rv || !['draft', 'round-1', 'round-2', 'approved', 'published-before-review'].includes(rv.status)) bad('scan', `${f}: a third party's scan needs review.status (team/README.md)`)
+        else if (rv.status === 'approved') { const by = new Set((rv.rounds || []).map(r => r.by))
+            if ((rv.rounds || []).length < 2 || rv.rounds.some(r => r.verdict !== 'pass' && r.round >= (rv.rounds.length - 1))) bad('scan', `${f}: approved without two review rounds that pass`)
+            if (!rv.signoff?.by || !rv.signoff?.at) bad('scan', `${f}: approved without a sign-off`)
+            else if (by.has(rv.signoff.by)) bad('scan', `${f}: signed off by its own reviewer`) } }
     if (s.answers.I49 && !(s.mandate && s.grant)) bad('scan', `${f}: I49 (the delta) needs a mandate and a grant`)
     const caps = new Set(read('data/lens.json').capabilities.map(c => c.id)), bars = new Set(read('data/lens.json').barriers.map(b => b.id))
     if (s.grant) for (const r of s.grant.rows) { if (!caps.has(r.capability)) bad('scan', `${f}: unknown capability ${r.capability}`); if (!bars.has(r.barrier)) bad('scan', `${f}: unknown barrier ${r.barrier}`) }
@@ -59,7 +65,7 @@ for (const p of gen.pages) {
     if (!h.includes(gen.version)) bad('version', `${p.file}: the version is not on the page`)
     if (!llms.includes(`/${p.file}.md`)) bad('llms', `${p.file} is not in llms.txt`)
     if (/\{\{|\?[a-zA-Z]+\?/.test(h.replace(/<svg[\s\S]*?<\/svg>/g, ''))) bad('page', `${p.file}: an unfilled placeholder`)
-    for (const [, href] of h.matchAll(/href="([^"#]+)(?:#[^"]*)?"/g)) {
+    for (const [, href] of h.matchAll(/href="([^"#?]+)(?:[#?][^"]*)?"/g)) {
         if (/^(https?:|mailto:)/.test(href)) continue
         let t = path.join(path.dirname(html), href); if (href.endsWith('/') || href === '.' || href === './') t = path.join(t, 'index.html')
         if (!fs.existsSync(t)) bad('link', `${p.file}: ${href} does not exist`)

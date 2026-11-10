@@ -12,7 +12,10 @@ export function load(root) {
     const standards = read(d('standards.json')), provisions = read(d('provisions.json'))
     const indicators = read(d('indicators.json')), questions = read(d('questions.json')), levels = read(d('levels.json'))
     const lens = read(d('lens.json'))
-    const scans = fs.readdirSync(d('scans')).filter(f => f.endsWith('.json')).sort().map(f => read(d('scans/' + f)))
+    // a third party's scan is published once it is approved (two review rounds and a sign-off: team/README.md)
+    const every = fs.readdirSync(d('scans')).filter(f => f.endsWith('.json')).sort().map(f => read(d('scans/' + f)))
+    const isPublished = s => s.ours || ['approved', 'published-before-review'].includes(s.review?.status)
+    const scans = every.filter(isPublished), drafts = every.filter(s => !isPublished(s))
     const P = new Map(provisions.map(p => [p.id, p])), I = new Map(indicators.map(i => [i.id, i])), S = new Map(standards.map(s => [s.id, s]))
 
     // each provision: the indicators that cite it, and the lowest tier at which it can be answered
@@ -48,7 +51,7 @@ export function load(root) {
     totals.pairs = Object.keys(pairs).length; totals.lens = indicators.filter(i => i.lens).length
     for (const sc of scans) Object.assign(sc, score(sc, levels, I, lens), { g: grant(sc, lens) })
     scans.sort((a, b) => (b.ours ? 1 : 0) - (a.ours ? 1 : 0) || a.name.localeCompare(b.name))
-    return { standards, provisions, indicators, questions, levels, scans, lens, pairs, stdOf, P, I, S, totals }
+    return { standards, provisions, indicators, questions, levels, scans, drafts, lens, pairs, stdOf, P, I, S, totals }
 }
 
 // The grant, the mandate and the delta: RiskMandate's measurement, taken from a published profile. Counted, never scored.

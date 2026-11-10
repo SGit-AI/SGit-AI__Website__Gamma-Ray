@@ -96,6 +96,18 @@ And while it was being built:
 
 > It's okay to publish this information and scores. We don't have to wait for lawyers. We can just publish the summaries tomorrow. And I also want to let a whole agentic team now work on this.
 
+## Publish, a team, and every hour (10 November, later)
+
+> The company is published as beta, and we should allow feedback to be provided from the website, and we will literally email all of them to say, hey, check it out, give us more information, give us some corrections, but we need to publish it.
+
+> No, we don't need two blind assessors. For now, we are still discovering the thing. This is beta. So you can do it, and then we'll do a couple of passes of review. Set up a nice workflow to give at least 2 rounds of this. And then sign off, and you publish it. You should create an agent that will then sign off each card.
+
+> Start a bunch of sessions here: the editors, the designers, and the reviewers, and then the one that approves for publishing. It's very important that now you run it every hour, and every hour you're doing design loops, and you're doing dev loops.
+
+> This website needs to look ridiculously professional. It needs to look like one of those professional rating sites that provides information in a very credible way.
+
+> The graphs have to link all the way to the source. You really need to have a whole team almost just looking at the graphs and the connection of the graphs and how everything maps together, because that's part of the story.
+
 ## The rules given with the brief
 
 Public sources only. No rating is published without its evidence. (The first brief also said: not without the company having seen it. The operator replaced that on 10 November 2026: a rating made from public data may be published, labelled as beta and as not seen by its subject.) No contact details anywhere. Never push to the main branch. The name and the backronym stay as chosen.
