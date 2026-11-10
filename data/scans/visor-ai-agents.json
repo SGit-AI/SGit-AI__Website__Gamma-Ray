@@ -174,6 +174,34 @@
       "finding": "Round 2 findings answered and verified against freshly fetched pages. S1: span 'conversations between brokers and the AI agent every month 80,000' is the rendered text (dt then dd), 10 words, figure now in the span; the note keeps the caveat and the markup does carry the wayback 2022-08-20 attribution; mode deployed. O1/O2 and C1: conceded; I20 and I47 stay available under healthcare-deployment; the new not_credited entries are true (the voice-agent 'How we deploy' block says 'We agree on what's in and what's out before we start' with no word of written; the Issue Agent criteria text says a match is flagged critical and a person steps in). I47: span 'The agents don't give clinical advice' exact on the healthcare page, 6 words, note matches the next clause 'set up to pass a clinical question to a person'. I03, I17, I67, I60, I37, I66, I68: unchanged since round 2 and accepted; spans exact; not_credited I60 claim that the security page names impact assessment only for change management is true ('System changes follow set procedures, with impact assessment, testing and records'). All pages and names in notes are in captured sources. Fully answered of round 2 findings (9 of 9 listed items): all except the I08 note problem found newly; S1 and I47 and the O/C item are now answered."
      }
     ]
+   },
+   {
+    "round": 4,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "I08",
+      "severity": "pass",
+      "finding": "Latest-round should-fix answered. The note now says only what the cited sentence says: the platform was connected to the insurer's systems through web services, so the four requests run end to end as automated workflows. 'AI agent's self-service channel' and 'without an advisor' are gone. Span 'those requests now run end to end as automated workflows' is exact on the freshly fetched Generali page, 10 words; the four requests are listed in the preceding sentence of the same paragraph. Grade documented and mode deployed fit. The page hash matches the capture."
+     },
+     {
+      "answer": "I08",
+      "severity": "note",
+      "finding": "Residual weakness, not blocking: the page attributes the automated workflows to the platform (which began as the Chat AI Agent and grew into a self-service channel), not in so many words to the AI agent acting. The studio's response relies on that reading and the note is honest about it. The credit is a judgement of the indicator 'It executes actions itself'; keep the note as written and do not extend it."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A3 R2 C1 O2 (node card.mjs). Autonomy 3 rests on I08 and I17 at one customer chat deployment on one vendor-authored page; remove I08 and Autonomy has no level (no I15, I16 or I07), so the card falls to Reach 2, Control 1 and Openness 2, and still meets the rule of level one in at least one dimension. Reach 2 rests on I11 (Generali page) and I10 (voice-agent page, default), and the card lists both as used, so losing the weaker one lowers Reach. Control 1 (I47) and Openness 2 (I22, I58, I61) are mode available or default from the healthcare page for I47 and I20; the rendered card must label C1 and O2 as healthcare deployment, which cannot be confirmed until the page is built. Autonomy 4 not reached (no I18 or I19)."
+     },
+     {
+      "answer": "I03, I10, I11, I17, I20, I22, I36, I37, I40, I47, I58, I61, I66, I67, I68, S1, S3, not_credited",
+      "severity": "pass",
+      "finding": "Since the commit that recorded round 3 (96f5683) the only data changes are the I08 note and the read_at of the seven captures; hashes unchanged and the Generali capture hash matches a fresh fetch. All spans in the scan are found and under fifteen words. Every page cited by a note or not_credited entry (generali, millennium-bcp, voice-agent, chat-agent, healthcare, security, llms.txt) is in captures. Round 3 responses on levels and on the grouped pass items are true as the scan stands: Reach 2 does use I10 and I11, and the not_credited entries stay accurate."
+     }
+    ]
    }
   ],
   "responses": [

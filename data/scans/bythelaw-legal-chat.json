@@ -159,6 +159,34 @@
       "finding": "Card (repo scorer): A1, R2, C1, O2. A1 rests on I15 alone, a single help-page sentence read for the chat only; remove it and Autonomy has no level, but the card still publishes on R2 and O2 (rule: level one or more in at least one dimension). R2 rests on I11, mode available, an experimental integration given to selected users under terms 3.1 and 3.4; without it Reach falls to the level I09 gives. C1 rests on I47 and I38, both Citius terms of version 1.2 in force since 6 November 2026, mode available, so Control describes the optional integration and not the chat; removing I38 leaves C1 on I47. O2 rests on I22 and I58, two help pages, default mode, and is the sturdiest level."
      }
     ]
+   },
+   {
+    "round": 4,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "announced",
+      "severity": "pass",
+      "finding": "Answered. The three announced items now cite only captured sources: the home page says 'International expansion is planned' (fetched 10 November 2026), and llms.txt, a captured and hashed source, says 'a fully autonomous Legal AI' and 'up to ~20h/week saved'. The product-page and NPL-page items are cut, so no announced entry cites an uncaptured page. The studio's round 3 reply describes the NPL pilot as removed, which matches the scan."
+     },
+     {
+      "answer": "I15, I57, I01, I39, I07, I46, I36, S3, not_credited",
+      "severity": "pass",
+      "finding": "Answered or accepted unchanged. Every answer's span is exact in a fresh fetch of its cited page and under fifteen words (8 to 13 words). The dates in the I39 note (21 December 2025) and I57 note (21 May 2026) are on the release-note pages; the llms.txt times 11:00, 14:00 and 17:00 are on that file; the experimental, selected-users status in the I11 note is in terms 3.1 of the Citius terms. All not_credited sources are captured. Captures were re-hashed at 18:45Z on all eleven sources and every cited page is a key of captures. The gate prints OK; no em-dash in the scan, and the at-sign characters are only in the reviewer and studio actor names."
+     },
+     {
+      "answer": "captures",
+      "severity": "note",
+      "finding": "The only change since the recorded round is the 18:45Z re-capture of the captures (new hashes for the Citius terms and the privacy page, and 2 byte differences elsewhere) plus the announced edits. The terms and privacy pages are dynamic: my fetch differs by a few bytes from the recorded size, so a hash can drift between captures. The I36 and I11, I21, I38, I47, I54 spans still hold on the fresh text. A reader should treat the hash as the state at the capture time."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A1 R2 C1 O2, no level three or four. The weakest is A1: it rests on I15 alone, one help-page sentence about the chat, while the Citius configuration reads on its own schedule, so it is already limited to the chat. R2 and C1 rest on the experimental, selected-user Citius integration in mode available, and C1 would stand on I47 alone without I38. The card still publishes on R2 and O2, so the rule of one level in one dimension holds."
+     }
+    ]
    }
   ],
   "responses": [

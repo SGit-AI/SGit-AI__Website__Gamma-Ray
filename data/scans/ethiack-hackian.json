@@ -204,6 +204,39 @@
       "finding": "Re-verified against freshly fetched pages: spans exact and under fifteen words for all 13 answers; I08 span on the Hackian product page; I11 Beacon page has the span and 'the beacon initiates the tunnel automatically', mode available with cfg beacon; I20 and I47 spans exact on their pages; I50 note matches the post ('Hackian isn't in the paper itself', EthiBench published on arXiv in May) and the span is on the page; S3 llms.txt resolves and lists the REST API; I41 span exact and documented, so not counted for an operation fact. No em-dashes, addresses or at-signs in the changed notes. Round-two findings fully answered: 6 of 7 (I19 partly)."
      }
     ]
+   },
+   {
+    "round": 4,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I19",
+      "severity": "note",
+      "finding": "Answered, with a residue. The span 'an agentic test relies on this policy to make decisions in real time' is exact (13 words) on the policy-guidelines page, a captured source, and the page also says guardrails define what the agent must not do and that the policy is 'your set of instructions to the autonomous agent'. So the half 'acts within boundaries' is shown, scoped to agentic pentests only (the page says nothing of the continuous mode). The word 'full' is not stated; the page says the agent decides what to prioritise, how deep to go and what to leave alone. The monitoring half is not in I19's own evidence: the note refers to the activity log cited for I41, but the I41 span ('A log of the actions Hackian has been performing during the test') does not carry the visibility clause, which is in the test-details sentence 'giving clients visibility into what is being tested and how the assessment is progressing'. The page shows a log that gives visibility, not that a person monitors. I19 stands as a documented statement; if wanted, quote the visibility clause inside the I19 note so the second half is on the answer itself. Two sources for one credit is not possible in the format, so this is a note."
+     },
+     {
+      "answer": "I04 (not_credited)",
+      "severity": "should-fix",
+      "finding": "The studio's round 3 response is not true of the scan as it stands. It says the I04 entry was 'split into two entries' pointing at the product page and the Introducing Hackian post. The not_credited list now has five entries (I12, I11 via Integrations, I57 via Updates feed, I57 via Invalid status, Reach 2 as connectors) and none for I04; the earlier I04 entry was deleted and nothing was added. The conclusion (I04 not credited) is still right, as no answer uses it, but the reasoning the response promises, and that round one asked to be recorded, is gone. Re-add the two entries with the sources named in the response, or drop the claim from the response."
+     },
+     {
+      "answer": "not_credited sources",
+      "severity": "should-fix",
+      "finding": "Three pages cited as sources of not_credited entries are not in captures: docs.ethiack.com/docs/portal/integrations, /docs/portal/findings/details and /docs/portal/findings/vulnerability-status-flow. Each is a page the note quotes (for example 'between all participants', 'usually assigned to vulnerabilities that are false positives'), and none is an answer source, so none is captured or hashed. Capture and hash them, or cut the quotation and cite the reason without a page. The earlier round tolerated this; the rule for this recheck is that a cited page is captured or cut."
+     },
+     {
+      "answer": "I10, I57, I39, I22, S1, I08, I11, I20, I41, I47, I50, S3",
+      "severity": "pass",
+      "finding": "Unchanged since the round 3 record apart from re-capture; spans re-checked on freshly fetched pages: all exact, 8 to 14 words, grade documented (S3 observed), modes right (I11 available with cfg beacon, others default). I08 span is on the Hackian product page. I39 is continuous-only on the test-details page as the note says. No em-dashes in the scan, no email addresses; the at-sign appears only in the agent identifiers of review records. Every answer source is in captures. The gate prints OK (v0.0.120). Round 3 findings fully answered: I10, I57, I39, I22, S1 and the pass group (7 of 9 entries counting I19 as answered with a residue note); I04 not answered, levels see next."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A4, R2, C1, O1 (sum 8). Autonomy 4 rests on I08 (product-page sentence about benign exploitation routines), I10 (breadth over one customer's attack surface in continuous mode) and I19 (policy-guidelines sentence for agentic pentests), all vendor documentation, documented, default, nothing observed; I19 is the weakest, since it is scoped to agentic pentests, does not say 'full', and the monitoring half is by reference. Remove I19 and Autonomy falls to 0; the card still publishes on Reach 2 (I10, I11 available), Control 1 (I47) and Openness 1 (I20, I22), with Autonomy shown as absent, not as no. Reach 2 is met by the rule though neither credited answer is a connector, as the card says."
+     }
+    ]
    }
   ],
   "responses": [

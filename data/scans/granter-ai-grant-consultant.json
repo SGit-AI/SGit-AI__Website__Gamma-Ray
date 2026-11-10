@@ -189,6 +189,44 @@
       "finding": "Verified myself against fresh fetches of the four captured pages: every span is present verbatim and under fifteen words, grades are documented, modes are default except S1 deployed, each answer is credited to a fitting indicator, and the Super Bock page is captured with its hash. Round-2 findings fully answered: I20, I56, I58, I67, I52, I07, the S1 second-source point, levels. Partly: I16 (caveat added, source unchanged), I38 (source fixed, wording overstates). The gate (node build/validate.mjs) prints OK. No em-dashes in the scan prose; the at-sign appears only in the by fields."
      }
     ]
+   },
+   {
+    "round": 4,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "not_credited",
+      "severity": "should-fix",
+      "finding": "Round-3 finding on the Fidelidade entry is only partly answered. The false clause is gone and the entry's facts hold on a fresh fetch (agents trained using detailed information about the customer's business and past applications; pilot in its initial phase of a planned 12-month cycle). But the I02 not_credited entry still cites https://granter.ai/case-studies/fidelidade as its source, and that page is not in captures (captures hold the blog, Navy, Super Bock and privacy pages) and the studio's response confirms it stays uncaptured. A page a not_credited entry cites has to be a captured and hashed source of the scan, or be cut. Either capture and hash the Fidelidade page, or remove the I02 entry (or reword it without citing a page the scan does not hold)."
+     },
+     {
+      "answer": "announced",
+      "severity": "note",
+      "finding": "The announced list still cites https://granter.ai/ and https://granter.ai/about, which are not captured. They carry no level and are not notes or not_credited entries, and the studio's withdrawal of the capture promise is acceptable, but the 2x, 75% and 3000+ marketing figures and the About milestone rest on pages with no hash."
+     },
+     {
+      "answer": "I38",
+      "severity": "pass",
+      "finding": "Round-3 finding answered. Note now reads 'access to submission-platform accounts is restricted for Granter', matching the blog FAQ word for word, and states it is who submits, a structural limit, not an approval step. Span 'The final submission is done by you on the relevant platform' found, eleven words, documented, default. Scope caveat: the indicator is high-impact actions needing approval; the credit remains a limit by design, which the note says."
+     },
+     {
+      "answer": "S1",
+      "severity": "pass",
+      "finding": "Round-3 finding answered. Note now says one customer, one application, no usage counts, vendor's account, drafted by the agent with the team submitting, and 'from initial draft to submission in under 72 hours' (page: 'From initial draft to successful submission in under 72 Hours'; 'onboarding' dropped). Span 'Super Bock's team turned to the AI Grant Consultant' found, nine words. Page is captured and hashed. Grade documented, mode deployed hold. The page says R&D and innovation department; the note says team, a minor paraphrase."
+     },
+     {
+      "answer": "I16,I07,I20,I56,I58,I67,I52,I09",
+      "severity": "pass",
+      "finding": "Unchanged since round 3, re-verified against fresh fetches: every span found and under fifteen words (I07 7, I09 12, I16 10, I20 14, I52 9, I56 9, I58 9, I67 7); notes match the captured pages; grades documented and modes default. The I47 not_credited entry quotes the privacy sentence 'the platform does not take decisions about you on its own', which is on the page, and the blog restricted-access line, both captured pages. Review responses added after round 3 contain no new answer changes."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A2 R1 C1 O1, no level three or four. Autonomy 2 rests on I16 (a platform-wide privacy policy sentence that does not name the agent) with I07 as the agent-specific leg; remove I16 and Autonomy falls below the level from this scan, yet Reach, Control and Openness at one keep the card publishable. Control 1 rests on I38 alone, a limit by who submits rather than an approval mode; remove it and Control has no level. Openness 1 needs I20 plus I56 or I58 (a policy label and a vendor quote); Reach 1 rests on I09, a coverage statement. The levels are thin but no credit is unsupported."
+     }
+    ]
    }
   ],
   "responses": [

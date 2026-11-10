@@ -147,6 +147,39 @@
       "finding": "Round-one findings on I07 (note now says the same page also lists actions Alfie takes), I22 (terms-of-use clause gone), I58 (December release clause gone; the FAQ's vetted-documentation and account-data sentences are in the page), I40 (see above), I09 (payroll removed; the note's employment, compensation, time-off and invoice data are on the product page), I68 (note places the structured-program clause on the product page; embedded data holds entries dated 2026-06-04, 06-30, 08-27 twice, 10-27 and 11-05), and the round-one passes on I01, I20, I47, I61, I67, S3 all hold in the scan as it stands. I checked every span against the fetched source with apostrophe style normalised: all 14 are found and all are under fifteen words (I61 is 13, I58 is 11, I22 is 10). Grades and modes are right for statements (documented, default) and for the llms.txt probe (observed, default): I fetched https://hellopebl.com/llms.txt and it lists the Alfie page. Names and figures in notes and not_credited are in a source of the scan or a source listed beside the entry (the December 2025 release says 'two coordinated AI agents'; the privacy policy names Abacus.AI; the June release holds the 83.5% figure, the Myers-Holum quote and 'Dynamic follow-up prompts'). I12 and I17 non-credits are judgments I do not contest; I12 reads 'coordinated' in the release and rejects it for lack of a described handoff, which is a defensible but arguable line."
      }
     ]
+   },
+   {
+    "round": 3,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I15",
+      "severity": "should-fix",
+      "finding": "Partly answered. The lowered inference is gone from the I17 reason, which now says only that no source goes beyond the FAQ's 'take an action that you request' (true: the FAQ sentence is in the product page). The I15 reason now names the third help article by its URL (PPx0P6e8, how to access Alfie through the Global Work Platform). I fetched it (200); it is about logging in and roles that may log in, and says nothing about confirmation or approval before Alfie acts, so the claim that it does not mention confirmation is true. But that URL is not a source of the scan and is not in captures (the six captured keys are llms.txt, the June release, the platform updates page, the product page, and the two help articles What is Alfie and What can I do with Alfie based on my role). A page a not_credited entry cites must be captured and hashed or be cut. Either capture it (add it to the scan's sources and run tools/capture.mjs) or drop the URL and say 'a third help article, not a source of this scan'. The vault file work/rendered/how-to-access-alfie.txt was not checked by me."
+     },
+     {
+      "answer": "I12,I17,I57,I63,I43,I51,S4,I61",
+      "severity": "should-fix",
+      "finding": "Same rule, older entries. These not_credited entries cite pages that are not in captures: the October 2025 launch release (I12, and as the source of I17), the December 2025 release (I57), https://hellopebl.com/platform/security/ (I63, I43, I51), the developer.hellopebl.com OpenAPI (S4) and the privacy policy (I61 second source). Round two passed them as pages listed beside the entry, but the rule for this re-check is that a cited page is a captured source or is cut. Capture each, or reword the entry to say it was read but is not a source of the scan, or cut the claims that depend on them. None of them feeds a level."
+     },
+     {
+      "answer": "I23",
+      "severity": "pass",
+      "finding": "Answered. Span 'Pending approvals queue (view only)' is 5 words and is exact in the fresh fetch of the article (it sits in the Time table, ticked for three roles). The note now says tables of features by role, one per feature group with a column per role: the article has Support, Time, Benefits & Payroll, Billing, Reporting, Directory & Permissions and Knowledge tables, each with columns Company Admin, HR Manager, PTO Manager, Billing Admin, Supported Employee. 'Time-off approvals are ticked for some roles only' is true (two of the five columns). Source is captured and hashed. Grade documented, mode default are acceptable under the Spectrum reading of the I23 scope (roles and tool lists). Minor: the span shows one row, not the scope statement as a whole; acceptable. The vault path work/rendered/what-can-i-do-with-alfie-based-on-my-role.txt was not checked by me."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "The card reads A- (Autonomy 0), R1, C1, O2 (node card.mjs: A0 next I17, R1 from I09 and I01, C1 from I47, O2 from I22, I58, I61). Autonomy shows no level because I08 (Alfie submits and approves time off) is documented but no source states Alfie's mode, so I15, I16 and I17 stay unmet and A1 to A3 cannot be reached; the field agent has put that to the operator (decision acts-without-mode), and I describe it without deciding. The card clears the one-dimension rule through R, C and O; the weakest credited level is C1, which rests on the single sentence 'Alfie inherits platform permissions, it does not bypass them' (I47), a prose statement that role permissions limit Alfie, not a description of how a person approves, overrides or stops it. Removing I47 leaves A0 R1 C0 O2, still publishable."
+     },
+     {
+      "answer": "I15,I17,I23 (round 2 findings), I08,I40,I01,I07,I09,I20,I22,I47,I58,I61,I67,I68,S3",
+      "severity": "pass",
+      "finding": "Round-two findings: the I17 reason is answered (no longer asserts the I15 inference, and its quoted FAQ phrase is on the product page); the I15 reason is answered on truth but not on sourcing (see the I15 finding); I23 is answered. Between the round-two commit and HEAD only the I23 answer and the I15 and I17 not_credited entries changed (git diff 2d33af4..HEAD); all other answers are unchanged, and a fresh fetch of all six captured sources shows every one of the 14 spans found and under fifteen words. Changed text has no em-dash and no at-sign."
+     }
+    ]
    }
   ],
   "responses": [

@@ -207,6 +207,34 @@
       "finding": "Card A3 R2 C1 O2 (no level four). Autonomy 3 rests on I08 (documented workers act on connected tools) and I17 (one home page FAQ sentence, vendor copy, default, no documentation of how approval is set); removing I17 leaves Autonomy with no level, so the dimension depends on one marketing sentence, which the note discloses. Control 1 rests on I47 alone, Reach 2 on I10 and I11, Openness 2 on I22 and I58; removing any single fact there drops that dimension by one or to none. The card keeps level one or more in four dimensions, so the publication rule holds even if Autonomy falls away. Nothing read contradicts any level."
      }
     ]
+   },
+   {
+    "round": 5,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I56",
+      "severity": "should-fix",
+      "finding": "The latest-round finding is answered: the not_credited item that cited the security best practices page is cut, and the two remaining not_credited entries cite the captured corporate-email page. I re-fetched that page: the span 'is an AI worker hired through Spinnable' is on it, and its troubleshooting says to turn off Email signature to disable the signature and disclosure footer. But the rule that every page a note, not_credited or announced entry cites must be a captured source still fails in announced: https://www.spinnable.ai/enterprise (SOC 2 Type II in progress) and https://websummit.com/wp-media/2025/11/SPINNABLE-LAUNCH-RELEASE-1.pdf (launch prediction) are in none of the 19 captures. The studio said every not_credited source is now captured, which is true of not_credited, but two announced sources remain uncaptured. Fix: add both as sources and run tools/capture.mjs, or cut the two entries (the home page footer already shows 'SOC 2 Type II in progress', and that page is captured)."
+     },
+     {
+      "answer": "I17",
+      "severity": "pass",
+      "finding": "Unchanged and sound. Re-fetched the home page: 'it won't take actions with external consequences without your approval' is on it (10 words), followed by 'When it's unsure, it asks instead of improvising'. Documented, default. The second not_credited item quotes the corporate-email troubleshooting line on a single point of contact for send approvals, which is on that page and is a Worker Policy prose rule."
+     },
+     {
+      "answer": "I04, I12, I25, I39, I41, I46, I68, S1, I08, I10, I11, I20, I21, I22, I26, I30, I40, I47, I57, I58, S3",
+      "severity": "pass",
+      "finding": "Since the commit that recorded round 4 the scan changed only in review.responses (four round-4 entries), the cut not_credited item and capture read dates; no answer, span, grade or mode changed, and the captures keys are the same 19. The scan has no em-dashes, and every URL in answer notes and not_credited is in captures. The only uncaptured URLs are the two announced sources above and the cut security page, which now appears only inside review text (round 3 and 4 findings and responses), not as a source."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A3 R2 C1 O2, no level four. Autonomy 3 rests on I08 and I17, and I17 is one home page FAQ sentence of vendor copy with no documented approval mechanism, so removing it leaves Autonomy with no level; the note discloses this. Control 1 rests on I47 alone, Reach 2 on I10 and I11, Openness 2 on I22 and I58, each one fact from dropping a level. Level one or more holds in four dimensions, so the publication rule holds even without Autonomy."
+     }
+    ]
    }
   ],
   "responses": [
