@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.108",
+    "date": "2026-11-10",
+    "what": "codacy-ai-reviewer: round 3 answered (I47 removed: no sentence binds the reviewer to review.md; Control not yet evidenced)",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "b88e41a59"
+  },
+  {
     "version": "v0.0.107",
     "date": "2026-11-10",
     "what": "automaise-conversational-ai: round 2 answered (I11 removed; I08 note on its single source)",
