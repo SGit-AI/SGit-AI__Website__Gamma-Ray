@@ -1,6 +1,6 @@
 # What exists
 
-A thing not listed here does not exist. (site v0.0.11)
+A thing not listed here does not exist. (site v0.0.12)
 
 ## Exists
 
