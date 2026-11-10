@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.8",
+    "date": "2026-11-10",
+    "what": "launch briefing page",
+    "by": "gamma.editor@web-summit.dinis",
+    "from": "4c4eb868d"
+  },
+  {
     "version": "v0.0.7",
     "date": "2026-11-10",
     "what": "nothing to approve yet, logged",
