@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.32",
+    "date": "2026-11-10",
+    "what": "GetVocal AI: a draft card for GetVocal AI agents (A4 · R2 · C1 · O1), its vault, report, article and claim note",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "1aa5eeb5f"
+  },
+  {
     "version": "v0.0.31",
     "date": "2026-11-10",
     "what": "manus-agent: round one answered (I47 and I65 removed, I41 to available, API surface named in I38, I18, I08)",
