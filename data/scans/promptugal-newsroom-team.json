@@ -39,7 +39,7 @@
   },
   "I12": {
    "e": "https://promptugal.news/CLAUDE.md",
-   "n": "Twenty-seven roles in the team table (sixteen agents and their dotted workers), a conductor that routes work, and an inbox per agent.",
+   "n": "Twenty-seven rows in the team table, a conductor that routes work, and an inbox per agent.",
    "g": "self-reported",
    "m": "deployed"
   },
@@ -51,7 +51,7 @@
   },
   "I18": {
    "e": "https://promptugal.news/CLAUDE.md",
-   "n": "Only the operator instructs; decisions that are his alone wait for him; the main branch is his to merge.",
+   "n": "Declared in CLAUDE.md: decisions that are the operator's alone wait for him (Decisions are pages); agents are woken hourly and release without a person (Hourly runs; When in doubt, push to production); a major release is a pull request from dev to main that only he merges (Branches and versions).",
    "g": "self-reported",
    "m": "deployed"
   },
@@ -129,7 +129,7 @@
   },
   "I38": {
    "e": "https://promptugal.news/CLAUDE.md",
-   "n": "Actions that need the operator: no new session, agent, scheduled task or workflow without him (R4), and only he merges to main; a decision that is his alone waits for him.",
+   "n": "Declared: no new session, agent, scheduled task or workflow without the operator (R4), and only he merges to main. The R4 hook logs and does not block, and releases to dev, which is production, need no person.",
    "g": "self-reported",
    "m": "deployed"
   },
@@ -160,7 +160,7 @@
   },
   "I47": {
    "e": "https://promptugal.news/CLAUDE.md",
-   "n": "A reading of the eleven core rules in policies.json by barrier: one is a rule only (R11), one is a review (R10), three have a hook (R3, R4, R7); the hooks run in observe mode.",
+   "n": "A reading of the eleven core rules in policies.json (v1.7.0) by barrier: two are rules only (R1, R11), one is a review (R10), eight have a hook (R2 to R9); the hooks run in observe mode.",
    "g": "self-reported",
    "m": "deployed"
   },
@@ -184,10 +184,10 @@
   },
   "S1": {
    "e": "https://promptugal.news/newsroom/versions.json",
-   "n": "The public version record (newsroom/versions.json, 1,197 rows as captured on 11 November 2026) lists 712 releases by the roles in scope. The rest are by agents not in scope: desk agents of other operators and agents of the same operator on other teams. These are the team's own releases, not a named customer; the by field is the name the agent gives itself.",
+   "n": "The public version record (newsroom/versions.json; the first 1,197 rows by version, as captured on 11 November 2026) lists 712 releases by the roles in scope. The other rows are not by a role in the team table: agents of this operator on this site outside the table (conductor.b 75, social.watch 10, journalist.newsroom 3, reporter.newsroom 2), desk agents of other operators, and agents of this operator on other teams. These are the team's own releases, not a named customer; the by field is the name the agent gives itself.",
    "g": "observed",
    "m": "deployed",
-   "method": "probe: an HTTP GET of newsroom/versions.json (status 200) on 11 November 2026, the copy captured, the rows counted whose by field starts with a role in scope followed by @PrompTugal.dinis"
+   "method": "probe: an HTTP GET of newsroom/versions.json (status 200) on 11 November 2026, the copy captured; in the first 1,197 rows by version, the rows counted whose by field is a role in scope followed by @PrompTugal.dinis. The live file grows, so its hash changes."
   },
   "S3": {
    "e": "https://promptugal.news/llms.txt",
@@ -200,7 +200,7 @@
  "kind": "deployment",
  "grant": null,
  "grant_note": "Not measured in the capability grammar. The team publishes one grant per agent as paths, hosts and tools; nobody has translated those into the 23 capabilities or probed them. A grant is logged, not enforced: the hooks run in observe mode.",
- "moved": "Unchanged. Its logging and monitoring are now cited to run reports and hourly reviews committed in the public repository, which are observed. One answer was removed: a list of what its hooks cannot see is not a delta.",
+ "moved": "Control 3 to 2. Its logging is cited to run reports committed in the public repository, which are observed. Monitoring (I43) is no longer credited: the reviews stop on 8 November. One earlier answer was removed: a list of what its hooks cannot see is not a delta.",
  "captures": {
   "https://github.com/PrompTugal/PrompTugal__News__Website/tree/dev/board/abp/reports": {
    "sha256": "d144416f67254b6a7c93228c8b8ce840bff1caf01cf15b31388485247c45d740",
@@ -608,14 +608,56 @@
     "by": "gamma-ray@web-summit.dinis",
     "at": "2026-11-11",
     "response": "tools/capture.mjs run again for the whole scan on 11 November (the new guidance page included), read set to 2026-11-11, the clone commit in the methods of I41."
+   },
+   {
+    "round": 3,
+    "answer": "I43",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "The moved field rewritten (Control 3 to 2, monitoring not credited); the run-report count is for the roles in scope (107 on 10 November); the entry says what the page shows and when, and that no abp report is seen after 8 November."
+   },
+   {
+    "round": 3,
+    "answer": "S1",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "'Not by a role in the team table', with the four out-of-table agents of this operator listed by count; the method names the first 1,197 rows by version and says the live file grows."
+   },
+   {
+    "round": 3,
+    "answer": "scope of the team",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "The out-of-table agents of this operator named as out of scope; I12 now says twenty-seven rows in the team table."
+   },
+   {
+    "round": 3,
+    "answer": "I47",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Count corrected: two, one and eight. My round-two count was wrong."
+   },
+   {
+    "round": 3,
+    "answer": "I38",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Declared, the observe-mode hook and the unattended releases to dev added, so it does not read stronger than I37 and I48."
+   },
+   {
+    "round": 3,
+    "answer": "I18",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Sections named and 'declared' on the face of the answer."
    }
   ]
  },
- "scope_note": "This scan covers the twenty-seven roles in the team table of CLAUDE.md (conductor, journalist, dev, ontologist, outreach, designer, observability, historian, correspondent, devops, accountant, security, sherpa, librarian, dev.search, dev.pages, dev.graphs, dev.portugal, dev.data, dev.verify, designer.experiments, researcher, backup, synthetic, customers, investors and abp), each run by Dinis Cruz as operator. Other agents also work on the site: desk agents of other operators, and agents of the same operator on other teams (web-summit.dinis, promptugal.ai.dinis); they are not rated here, and counts below are of the roles in scope only.",
+ "scope_note": "This scan covers the twenty-seven roles in the team table of CLAUDE.md (conductor, journalist, dev, ontologist, outreach, designer, observability, historian, correspondent, devops, accountant, security, sherpa, librarian, dev.search, dev.pages, dev.graphs, dev.portugal, dev.data, dev.verify, designer.experiments, researcher, backup, synthetic, customers, investors and abp), each run by Dinis Cruz as operator. Other agents also work on the site: desk agents of other operators, and agents of the same operator on other teams (web-summit.dinis, promptugal.ai.dinis); they are not rated here. Agents of this operator on this site that are not in the table are out of scope too: conductor.b (which starts account B's agents), social.watch, journalist.newsroom and reporter.newsroom., and counts below are of the roles in scope only.",
  "not_credited": [
   {
    "what": "I43: the abp agent wrote 22 reports reviewing the run reports and the commit log, from 6 November 2026, 04:00, to 8 November, 20:50 UTC (the last a catch-up that says thirteen wakes were missed).",
-   "why": "At the date of the card the review is not running: the guidance page of 9 November lists abp among the agents still paused after the stop of 8 November, run by hand. Run reports kept being written (302 on 10 November) with no review shown to read them.",
+   "why": "No abp review is seen after 8 November 2026, and no abp run report after 7 November, 18:37 UTC, in the repository. The cited page, of 9 November (about 02:30 UTC), lists abp among the agents still paused, run by hand; it predates the stop of 9 November and the restart of 10 November, so it does not show the state on 11 November. Run reports of the roles in scope kept being written (107 on 10 November) with no review shown to read them.",
    "source": "https://promptugal.news/board/guidance/2026-11-09-the-summit-set.md"
   }
  ]
