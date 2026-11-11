@@ -19,7 +19,7 @@
   "published": "2026-11-11"
  },
  "review": {
-  "status": "round-1",
+  "status": "round-2",
   "rounds": [
    {
     "round": 1,
@@ -86,6 +86,64 @@
       "answer": "I10,I11,I13,I16,I20,I38,I50,I57,S3",
       "severity": "pass",
       "finding": "Spans are exact in the captured text and all under fifteen words (checked programmatically: 6 to 13 words). Notes are supported by the cited pages; I10, I11 and I13 notes add details found elsewhere on the same page. I13 and I16 are available/coding-agent, correct. I50 (33-47% of 43 instances, 28 CVEs, runs) and I22 notes match the benchmark post. I38 note matches the dashboard sentence. I57 (challenge a severity, corrections recorded) matches the product FAQ. S3 is observed by probing llms.txt, correct. No operation-fact indicators are credited as documented. No em-dashes or at-signs observed in the scan fields (the configuration note names the trent plugin as a name with an at-sign in it, which contains an at-sign and will trip the gate: reword)."
+     }
+    ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I25",
+      "severity": "should-fix",
+      "finding": "Partly answered. The span now reads 'The agent loop runs at whatever level of access you choose.' (11 words, exact on the product page FAQ about source access). It is the same FAQ answer as before, with the tail instead of the sentence before it; it says the level is chosen, not that access is narrower than the whole account, nor anything about authorisation or permission scopes. I25 is the second half of R3 (rule: any of I14, I24, S4, and I25) and of C2 (I38 and any of I23, I25). R3's first half is now carried by I24 and S4, but the rule still needs I25, so R3 and C2 each rest on this one sentence. The note names URL-only, repository, agent definitions and design documents, which sit in the preceding FAQ sentences, not in the span. Use a span that reaches 'You can start with a URL-only assessment' through 'You control what level of access to provide' (under fifteen words if cut to the two core clauses), or find a product statement of scoped access (for example the sign-in or MCP scope page). Without I25: R2 and C1."
+     },
+     {
+      "answer": "I58",
+      "severity": "should-fix",
+      "finding": "Partly answered. I58 moved to the captured llm-info page (right page, product level), and the span 'Data is held in the region the team signs in to.' is exact (10 words) under Deployment and data. But the indicator is 'The data it uses is described'; the span carries where data is held, while the note's first half (the list of sources Trent reads) is in a different sentence ('Sources: a GitHub repository, a live web URL, ...') that the span does not reach. I58 is one of the two credits for O2 (with I22) and a route to O1. Change the span to the Sources sentence (cut to under fifteen words) or note that the span carries data location only. If I58 fell, O2 would fall (I22 alone) and so would O3."
+     },
+     {
+      "answer": "report",
+      "severity": "should-fix",
+      "finding": "The report (data/reports/trent-ai.json) contains the at-sign character in a customer name from the funding post: a customer name written with an at-sign appears in stories[].customer, in the story's span and in the analysis text ('Canopy, Commscentre, a customer name written with an at-sign, Qbeast and Weblogic'). Style rule: no at-sign characters. The gate's email regex does not match it (no domain), but it is still an at-sign, and the span would need to stay exact, so either drop that name from the span and write 'ML at Cam' or leave the partner out and cite the others. The the plugin name with an at-sign string from round one is fixed (now 'the Trent plugin'). The report's other facts are captured: report.captures now has asmm, home, about-us, openclaw and the funding post with hashes read 2026-11-11T15:47Z, and the four shared URLs carry the same hashes as the scan."
+     },
+     {
+      "answer": "I08",
+      "severity": "note",
+      "finding": "Partly answered. The note now names the llm-info connectors (Jira, Linear, Slack, Notion), drops 'itself' and says the page calls the path Manual because people make the fix; the span is exact (12 words) and the page sentence is 'Manual: Trent raises a ticket in Linear or Jira with exact remediation instructions.' Mode available and cfg connectors are right. The studio's argument (filing a ticket is an action Trent executes in another system) is defensible, but it is the only I08 credit and the page labels this the lowest-autonomy path. A3 = I08 + I17 depends on reading the ticket as executing an action; the fully automatic path hands the work to the customer's coding agent, so no span shows Trent itself executing. Left as a note, since A3 is shown as available, not shipped."
+     },
+     {
+      "answer": "I21",
+      "severity": "note",
+      "finding": "Kept as documented, note reworded and now says what the post says (span 'access changes and irreversible actions stay in the dashboard.' 9 words, exact). I21 asks for autonomy limits and the tools it may use; the span carries limits only, and the tier is declared. It feeds no level on the card, so no change to the card. Consider grading it as a limit statement only in the note."
+     },
+     {
+      "answer": "I24",
+      "severity": "note",
+      "finding": "New answer, verified. The metadata URL is a key of captures (185 bytes, matching a fresh fetch today: authorization server https://auth.trent.ai/, scopes openid, profile, offline_access, resource https://mcp.trent.ai/mcp). The note's clause 'refuses a call without credentials' is the probe of the endpoint, which a fresh read-only GET confirms (401 with a Bearer challenge naming that metadata URL), but that 401 response is not itself a key of captures (it lives in the vault raw files, per the studio). Grade observed and mode default are right; no span is needed for an observed answer. Fine for the card; keep the 401 headers in the vault before publication."
+     },
+     {
+      "answer": "basis",
+      "severity": "pass",
+      "finding": "Answered. The basis now names the product page, a use-case page, the llm-info page, llms.txt, two blog posts, the plugin README, the MCP Registry listing and the MCP endpoint's OAuth metadata; each is a key of captures. No adjectives, no private names."
+     },
+     {
+      "answer": "captures",
+      "severity": "pass",
+      "finding": "Programmatic check: every URL cited as a source in answers, not_credited and announced (9 distinct) is a key of captures, including the new I24 URL. Other URLs in the scan (mcp.trent.ai/mcp in the I24 method) are probe targets, not sources; asmm, home, about-us, openclaw and the funding post are cited only in the report and are keys of its own captures."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card computed: A3 R3 C2 O3 (node card.mjs). A3 rests on I08 (Manual-path ticket) plus I17 (span 'The findings that need human attention, Trent brings to you proactively' carries the exceptions half; the note's confirm-once clause is in the next sentence of the same page) and both are mode available, so the level is available not shipped. R3 = I24 or S4 plus I25: the interface and its authorisation metadata are observed and captured; the weak link is I25 (see finding). C2 = I38 plus I25: I38 is solid (dashboard-only actions, span exact); the same I25 sentence is the second half. O3 = I50 plus S3, with O1 and O2 below it: S3 observed (llms.txt resolves), I50 benchmark sentence solid; O2 needs two of I22, I58, I61 and rests on I22 (research-post sentence about a Keycloak miss, now stated as such in the note) plus I58 (span carries data location only). Single points: R3 and C2 on I25; O2 and O3 on I22 and I58; A3 on I08. Each of these drops one level if the answer is lost (R2, C1, O1, A2)."
+     },
+     {
+      "answer": "I10,I11,I13,I16,I17,I20,I22,I38,I50,I57,S3,S4",
+      "severity": "pass",
+      "finding": "Checked in full against live pages and the captures: spans exact and 6 to 13 words, graded and moded as the pages present them (I17 available/auto-remediation, I13 and I16 available/coding-agent, I08 available/connectors, S3 and S4 observed/default); I22 note says research post and not a product limits page and matches the Keycloak sentence; no operation-fact indicator is credited as documented; I52 is out of the answers and recorded in not_credited as self-reported; the at-sign in the configuration note is gone; no em-dash characters in the scan or report."
      }
     ]
    }
