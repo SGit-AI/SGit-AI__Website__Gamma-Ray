@@ -6,7 +6,7 @@
  "read": "2026-11-10",
  "tier": "public",
  "what": "The agent that reads RiskMandate's private stories vault and writes the public site riskmandate.ai.",
- "note": "Scanned from its own published Agent Behaviour Policy. The publisher of this site is behind RiskMandate: a scan of ourselves. Openness 1 on this card rests on a site-level disclosure of authorship (I56), not on the agent telling the people it talks to that it is an AI.",
+ "note": "Scanned from its own published Agent Behaviour Policy. The publisher of this site is behind RiskMandate: a scan of ourselves.",
  "vault": {
   "id": "wkm0whjx",
   "read_key": "sgit_public_read_08c5b57dfb7a1529422797cc981591e00aa9aea87b04a54486d266e859241bdd:wkm0whjx",
@@ -140,6 +140,20 @@
    "g": "observed",
    "m": "deployed",
    "method": "probe"
+  },
+  "I22": {
+   "e": "https://riskmandate.ai/team/publisher.html",
+   "n": "Section 04 gives the delta (4 capabilities in excess of the mandate, 3 of them unbounded) and section 06 what would bound them; the page also says how failures are handled: a wrong deploy is fixed forward with a new release, and a credential found in a file is an incident to rotate.",
+   "span": "A wrong deploy is fixed forward with a new release",
+   "g": "self-reported",
+   "m": "deployed"
+  },
+  "I58": {
+   "e": "https://riskmandate.ai/team/publisher.html",
+   "n": "Section 05, the surfaces it touches: each surface (the repository, the live site, the stories vault and others) with its tier, what the agent reads, what it writes and what stands in the way.",
+   "span": "What it reads, what it writes, and the tier of each.",
+   "g": "self-reported",
+   "m": "deployed"
   }
  },
  "kind": "deployment",
@@ -613,6 +627,13 @@
     "by": "gamma-ray@web-summit.dinis",
     "at": "2026-11-11",
     "response": "Correction to my round-one answer: the repository source file and the template probe of 5 September are not captured because the page cites them without a link (the repository is open source; the template probe has no public page). Not 'not public'."
+   },
+   {
+    "round": 3,
+    "answer": "I22,I58",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Read the page again myself: both are there and I missed them. I22 answered from sections 04 and 06 and the fix-forward and credential sentences; I58 from section 05 (surfaces, tier, reads, writes). Both self-reported, deployed, on the captured page. Openness now computes 2 and no longer rests on I56 alone, so the scan note's sentence about Openness 1 is removed."
    }
   ]
  },
