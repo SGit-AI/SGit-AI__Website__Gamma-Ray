@@ -6,7 +6,7 @@
  "read": "2026-11-10",
  "tier": "public",
  "what": "The agent that reads RiskMandate's private stories vault and writes the public site riskmandate.ai.",
- "note": "Scanned from its own published Agent Behaviour Policy. The publisher of this site is behind RiskMandate: a scan of ourselves.",
+ "note": "Scanned from its own published Agent Behaviour Policy. The publisher of this site is behind RiskMandate: a scan of ourselves. Openness 1 on this card rests on a site-level disclosure of authorship (I56), not on the agent telling the people it talks to that it is an AI.",
  "vault": {
   "id": "wkm0whjx",
   "read_key": "sgit_public_read_08c5b57dfb7a1529422797cc981591e00aa9aea87b04a54486d266e859241bdd:wkm0whjx",
@@ -45,7 +45,7 @@
   },
   "I18": {
    "e": "https://riskmandate.ai/team/publisher.html",
-   "n": "Two kinds of work, two rules on the page: a story goes out only when the lead has accepted it by message, and changes to the site are released by the agent after its own check, with no person approving them. The credit rests on the second.",
+   "n": "The page gives two rules: a story goes out only when the lead has accepted it by message, and the rest of the site 'is the agent's own work under the rules'. The role line says it publishes what the lead has accepted as a patch release on dev. No branch rule exists; merge and CI are settings. Read as I18: the person decides what is published, the agent does the rest.",
    "g": "self-reported",
    "m": "deployed"
   },
@@ -63,13 +63,13 @@
   },
   "I23": {
    "e": "https://riskmandate.ai/team/publisher.html",
-   "n": "The grant is published on the agent's page and in publisher.json: 17 of the 23 capabilities, each with how it is known. Read on the Spectrum card as a documented permission list; the governance rating does not credit it, because it is not observed or measured.",
+   "n": "The grant is published on the agent's page and in publisher.json: 17 of the 23 capabilities, each with how it is known. Read on the Spectrum card as a documented permission list; the governance rating does not credit it, because it is not observed or measured. It is graded documented, unlike the other statements on this page, because the grant is published as a machine-readable list (publisher.json) that anyone can read row by row; the other statements are prose about how the agent works.",
    "g": "documented",
    "m": "deployed"
   },
   "I27": {
    "e": "https://riskmandate.ai/agents/",
-   "n": "A lane identity with a public key.",
+   "n": "The site's mailbox identity, shared by six roles including the site editor, has a public key on the agents page; the publisher's own commits are signed with its session key (a grant row).",
    "g": "self-reported",
    "m": "deployed"
   },
@@ -85,21 +85,15 @@
    "g": "self-reported",
    "m": "deployed"
   },
-  "I32": {
-   "e": "https://riskmandate.ai/team/",
-   "n": "The team page names the lead (Dinis Cruz, co-founder), who decides the cast, what is published and the keys. The page does not use the word accountable.",
-   "g": "self-reported",
-   "m": "deployed"
-  },
   "I34": {
    "e": "https://riskmandate.ai/team/publisher.html",
-   "n": "Its Agent Behaviour Policy is the published policy.",
+   "n": "Its Agent Behaviour Policy is published, as 'the first draft to argue with', as at 26 September 2026: a draft in force on this deployment.",
    "g": "self-reported",
    "m": "deployed"
   },
   "I38": {
    "e": "https://riskmandate.ai/team/publisher.html",
-   "n": "The lead accepts each story by message before it goes into a story. The approval covers stories only: releases of the site are not approved by a person.",
+   "n": "The lead accepts each story by message before it goes into a story, and decides what is published. The page states no host rule that requires a review of other site changes (no branch rule; merge and CI are settings).",
    "g": "self-reported",
    "m": "deployed"
   },
@@ -111,7 +105,7 @@
   },
   "I45": {
    "e": "https://riskmandate.ai/team/publisher.html",
-   "n": "Every outside request goes through an egress proxy above the container.",
+   "n": "Every outside request goes through an egress proxy above the container, which the agent cannot change. Self-reported and used in no level; the governance rating does not credit it, because it is not observed or measured.",
    "g": "self-reported",
    "m": "deployed"
   },
@@ -135,7 +129,7 @@
   },
   "S1": {
    "e": "https://riskmandate.ai/versions/index.json",
-   "n": "The site's version index (versions/index.json) lists 155 releases from 29 June to 4 November 2026; 40 of them are dated from 26 September, when the agent's page says it began releasing, and the page names v1.34.19 and v1.34.20 as shipped by it. The index does not name the author of each release.",
+   "n": "The site's version index (versions/index.json) lists 155 releases from 29 June to 4 November 2026; 40 are dated 26 September or later, the date of the agent's page, which names v1.34.19 and v1.34.20 as shipped by it on that day. The index does not name the author of each release, so the 40 are site releases after the page's date, not releases shown to be the agent's.",
    "g": "documented",
    "m": "deployed",
    "method": "probe: an HTTP GET of versions/index.json (status 200), the releases counted and those dated 26 September 2026 or later counted"
@@ -154,7 +148,6 @@
   "profile_version": "2026-09-26",
   "source": "https://riskmandate.ai/team/publisher.json",
   "product": "RiskMandate Publisher",
-  "statement": "The grant is counted and shown, never scored. Rows graded observed were seen by the agent on its own container on 26 September 2026; no evidence file or transcript is published, so a reader cannot reproduce them.",
   "rows": [
    {
     "capability": "read.file.project",
@@ -242,7 +235,9 @@
     "evidence": "documented",
     "note": "From the catalogue template's probe of 5 September 2026, not this deployment; no evidence file is captured."
    }
-  ]
+  ],
+  "caveat": "Rows graded observed were seen by the agent on its own container on 26 September 2026; no evidence file or transcript is published, so a reader cannot reproduce them. The grant is counted and shown, never scored.",
+  "statement": null
  },
  "mandate": {
   "source": "https://riskmandate.ai/team/publisher.json",
@@ -526,6 +521,55 @@
     "by": "gamma-ray@web-summit.dinis",
     "at": "2026-11-11",
     "response": "publisher.json captured and hashed into the scan and the vault. The repository source file and the template measurement the page cites are not public pages and are not captured."
+   },
+   {
+    "round": 2,
+    "answer": "grant",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Our sentence moved from grant.statement to grant.caveat, which the page now prints as 'Our note on this profile', not as the publisher's words; the build now prints each row's note in the table (create.schedule.host shows its reason)."
+   },
+   {
+    "round": 2,
+    "answer": "I18,I38",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Reworded to what the page says: no branch rule and settings, not 'no person approving'; the role line and the lead's decision on what is published are now in the note, and I18 is read as the person deciding publication."
+   },
+   {
+    "round": 2,
+    "answer": "I56",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Kept, and the scan note now says Openness 1 on this card is a site-level disclosure. I22 is not answered: I did not find limits or failure cases written for those who use the agent."
+   },
+   {
+    "round": 2,
+    "answer": "S1",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Reworded to what the page says (its date, and the two releases it names) and the 40 described as site releases after that date, not shown to be the agent's."
+   },
+   {
+    "round": 2,
+    "answer": "I23",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "A one-line reason for documented added; the I45 note says the same about the governance rating."
+   },
+   {
+    "round": 2,
+    "answer": "I32,I34,I27,I12",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "I32 moved to not_credited (no page says accountable); I34 says the policy is a draft in force as at 26 September; I27 says which identity is meant."
+   },
+   {
+    "round": 2,
+    "answer": "captures",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Correction to my round-one answer: the repository source file and the template probe of 5 September are not captured because the page cites them without a link (the repository is open source; the template probe has no public page). Not 'not public'."
    }
   ]
  },
@@ -534,6 +578,11 @@
    "what": "I61: the page names the platform (Claude Code on the web) and lists tools (node, python, sgit, Chromium through Playwright).",
    "why": "No model is named, so the models and components are not listed as the indicator asks.",
    "source": "https://riskmandate.ai/team/publisher.html"
+  },
+  {
+   "what": "I32: the team page names the lead (Dinis Cruz, co-founder), who decides the cast, what is published and the keys.",
+   "why": "The page gives decision rights; it does not say the lead is accountable.",
+   "source": "https://riskmandate.ai/team/"
   }
  ]
 }
