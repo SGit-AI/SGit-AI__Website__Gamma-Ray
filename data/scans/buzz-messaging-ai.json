@@ -9,7 +9,7 @@
  "tier": "public",
  "basis": "Buzz Messaging (BuzzMSG A.I LTD); interviewed as Buzz Messaging AI's own public pages (product, documentation, blog, customer stories, legal and security pages)",
  "seen_by_operator": null,
- "what": "AI agents added to team rooms that read and create in Notion, Google Drive and Google Calendar with the asker's access, and propose tasks that sync to Jira or Linear after confirmation.",
+ "what": "AI agents added to team rooms that read and create in Notion, Google Drive and Google Calendar with the asker's access; anything they would create is made only after the asker confirms, and tasks created that way can sync to Jira or Linear.",
  "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. The company was interviewed on the record by PrompTugal.news; where an answer rests on the interview page, its note says so.",
  "grant": null,
  "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
@@ -191,6 +191,69 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "Card unchanged at A2 R2 C1 O1 after these edits (rescored); no level three or four, so no argue-against round."
+   },
+   {
+    "round": 2,
+    "answer": "basis",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Basis rewritten: the card rests on the company's own public pages as captured on 2026-11-11; the one third-party interview is used only for announced items. 'Interviewed as' removed."
+   },
+   {
+    "round": 2,
+    "answer": "I16",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept: the note already says the gate is stated for creation only, and edits are not claimed as gated. A2 rests on proposed creations needing approval, as the reviewer accepts; the single-fact dependency is shown on the card as is."
+   },
+   {
+    "round": 2,
+    "answer": "I58",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note narrowed to what needs no connection: files shared in the room, read with the asker's own access, so mode default fits; the Notion, Drive and Calendar reads are no longer part of this credit (they are in I10 under the connected configuration)."
+   },
+   {
+    "round": 2,
+    "answer": "I20",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Source moved from the llms.txt product line to the captured agents.md; the span (verified verbatim, 12 words) states the purpose and the note names the tasks listed in its AI agents section."
+   },
+   {
+    "round": 2,
+    "answer": "I10",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Pass noted; no change."
+   },
+   {
+    "round": 2,
+    "answer": "announced",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "The 'more advanced agent control policy' entry is removed: it records a founder remark with no plan or date, not an announcement. The Mistral remark stays attributed to the founder only."
+   },
+   {
+    "round": 2,
+    "answer": "what",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Reworded: creation waits for the asker's confirmation, and tasks created that way can sync to Jira or Linear; no second confirmation for the sync is implied."
+   },
+   {
+    "round": 2,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Rescored after edits: card unchanged at A2 R2 C1 O1, with O1 now on agents.md for I20 plus I58. No level three or four, so no argue-against concessions are needed; C2 (I23) stays a next unlock."
+   },
+   {
+    "round": 2,
+    "answer": "I08,I11,I38,S3,captures",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Pass noted; no change. All cited URLs remain keys of captures (agents.md for I20 and I58)."
    }
   ]
  },
@@ -245,8 +308,8 @@
    "m": "default"
   },
   "I20": {
-   "e": "https://www.buzzmessaging.ai/llms.txt",
-   "n": "The company states what the team agents are for: work in Notion, Google Drive and Google Calendar, with tasks synced to Jira or Linear.",
+   "e": "https://www.buzzmessaging.ai/agents.md",
+   "n": "The feature reference states the agents' purpose (work in Notion, Google Drive and Google Calendar) and, in its AI agents section, the tasks they may do: read and create in those tools, search the web, read room files, with creation only after the asker confirms.",
    "span": "multiplayer AI agents that work in Notion, Google Drive and Google Calendar",
    "g": "documented",
    "m": "default"
@@ -260,7 +323,7 @@
   },
   "I58": {
    "e": "https://www.buzzmessaging.ai/agents.md",
-   "n": "The feature reference says what the agents read: Notion, Google Drive and Google Calendar, the web, and files shared in the room, with the asking person's own access.",
+   "n": "The feature reference says agents read files shared in the room, always with the asking person's own access.",
    "span": "read files shared in the room, always with the asking person's own access",
    "g": "documented",
    "m": "default"
@@ -291,10 +354,6 @@
   {
    "what": "Bring your own model: users bring their own API keys, with Mistral named among the providers Buzz recommends (founder, in the interview)",
    "source": "https://promptugal.news/interviews/buzz-messaging-ai/guy-ben-zvi/"
-  },
-  {
-   "what": "A more advanced agent control policy (founder: not yet as advanced as he would like)",
-   "source": "https://promptugal.news/interviews/buzz-messaging-ai/guy-ben-zvi/"
   }
  ],
  "configurations": [
@@ -315,39 +374,39 @@
  ],
  "captures": {
   "https://promptugal.news/interviews/buzz-messaging-ai/guy-ben-zvi/": {
-   "sha256": "91776ecc4c123170bb5b120481b1a5d022ee4e01758d5d53f288c2d03bad2f85",
-   "bytes": 23871,
-   "read_at": "2026-11-11T03:48Z"
+   "sha256": "2bbb46ab257b1cd421f28c1037f5301cb8d3bcb862f0704c202022358ea0e598",
+   "bytes": 24942,
+   "read_at": "2026-11-11T06:44Z"
   },
   "https://www.buzzmessaging.ai/about": {
    "sha256": "b6d9b03c68f83750d6123fccde29710909f7d22ed970e55228e72503b1117962",
    "bytes": 64019,
-   "read_at": "2026-11-11T03:48Z"
+   "read_at": "2026-11-11T06:44Z"
   },
   "https://www.buzzmessaging.ai/agents.md": {
    "sha256": "9f05b87402e97f71b1dcd8bb12ffab257f320d33325805fcfa112c0ab1060789",
    "bytes": 5633,
-   "read_at": "2026-11-11T03:48Z"
+   "read_at": "2026-11-11T06:44Z"
   },
   "https://www.buzzmessaging.ai/ai-facts": {
    "sha256": "fd1f636cf02dd92d2494ed068d716262267f4862957fc36fef0d2baf3be2b61e",
    "bytes": 52007,
-   "read_at": "2026-11-11T03:48Z"
+   "read_at": "2026-11-11T06:44Z"
   },
   "https://www.buzzmessaging.ai/integrations": {
    "sha256": "02ea082a17809ab0a8a15aaafdc32552be0b286d8e120df90aa08bb0c918d4de",
    "bytes": 64547,
-   "read_at": "2026-11-11T03:48Z"
+   "read_at": "2026-11-11T06:44Z"
   },
   "https://www.buzzmessaging.ai/llms.txt": {
    "sha256": "0f35ce1fc202a5f2e31b841cca940ee45759f4eed94839683ed77f868f1f2ddb",
    "bytes": 10333,
-   "read_at": "2026-11-11T03:48Z"
+   "read_at": "2026-11-11T06:44Z"
   },
   "https://www.buzzmessaging.ai/work": {
-   "sha256": "29e0eb5387e4e51cdead8ea4a938920c9a1775a00a65c1d46ab772967384ffe3",
-   "bytes": 85968,
-   "read_at": "2026-11-11T03:48Z"
+   "sha256": "0b862d25fc1ff925c6d17f1d761773dea16028855aca8b265e0b32b88fefda74",
+   "bytes": 86011,
+   "read_at": "2026-11-11T06:44Z"
   }
  }
 }
