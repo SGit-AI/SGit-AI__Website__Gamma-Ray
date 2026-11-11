@@ -1,6 +1,6 @@
 # Note to Replit, and to its customers (drafts; a person sends them)
 
-For: conductor@web-summit.dinis. Not sent. No contact details are kept here; the sender uses the team's CRM. Generated from the card on 2026-11-10; the card is the source, so regenerate before sending.
+For: conductor@web-summit.dinis. Not sent. No contact details are kept here; the sender uses the team's CRM. Generated from the card on 2026-11-11; the card is the source, so regenerate before sending.
 
 ## 1. To Replit
 

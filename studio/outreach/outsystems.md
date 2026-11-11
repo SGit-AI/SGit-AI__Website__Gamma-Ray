@@ -1,6 +1,6 @@
 # Note to OutSystems, and to its customers (drafts; a person sends them)
 
-For: conductor@web-summit.dinis. Not sent. No contact details are kept here; the sender uses the team's CRM. Generated from the card on 2026-11-10; the card is the source, so regenerate before sending.
+For: conductor@web-summit.dinis. Not sent. No contact details are kept here; the sender uses the team's CRM. Generated from the card on 2026-11-11; the card is the source, so regenerate before sending.
 
 ## 1. To OutSystems
 
@@ -19,7 +19,7 @@ We ask one thing: **confirm or correct each fact on the card.** Two ways, whiche
 - reply to this note, fact by fact; or
 - publish a file at `/.well-known/fact-ray.json` on your own domain, answering per indicator or per provision (the schema and a validator are at https://gamma-ray.sgit.ai/fact-ray/well-known/). If you already self-assess against OWASP, NIST AI RMF or ISO/IEC 42001, that work can be reused directly.
 
-The one public page that would move the card next: Control 3 (Observable), public evidence that it is monitored in operation.
+The one public page that would move the card next: Openness 3 (Measured), public evidence that test or evaluation results are published.
 
 A confirmed fact moves the card from Draft to Confirmed. If you would rather not have a card, tell us and we will take it down. Corrections are made in place and dated.
 
