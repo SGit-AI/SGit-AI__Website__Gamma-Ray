@@ -28,7 +28,7 @@ A confirmed fact moves the card from Draft to Confirmed. If you would rather not
 With thanks,
 the GAMMA-Ray team (RiskMandate)
 
-## 2. To a customer of Pebl (only one Pebl names on its own public pages)
+## 2. To a customer of Pebl (send only to a customer Pebl itself names on a public page; the card names none, so check first)
 
 Subject: A narrow statement of use for Alfie?
 
