@@ -63,12 +63,19 @@
   "by": "gamma.field@web-summit.dinis"
  },
  "scan": "pebl-alfie",
- "status": "in-review",
+ "status": "published",
  "identified": {
   "company": "Pebl (the new name of Velocity Global, LLC, per the site's footer and its rebrand news)",
   "domain": "hellopebl.com",
   "agent_part": "Alfie, the assistant embedded in the Pebl platform",
   "source": "https://hellopebl.com/platform/alfie-ai-assistant/",
   "read": "2026-11-10"
+ },
+ "published": {
+  "at": "2026-11-11",
+  "card": "/spectrum/ (pebl-alfie), /scans/pebl-alfie/",
+  "signature": "A– · R1 · C1 · O2, from the scorer",
+  "card_status": "Draft",
+  "next": "Pebl is told after publication and invited to confirm or correct each fact through /feedback/ (gamma.studio@'s outreach; Pebl is not a Portuguese company, so the publish-then-tell rule applies)."
  }
 }
