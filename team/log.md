@@ -208,3 +208,4 @@ One line per run: the time (UTC), who, what was done, what blocks.
 - 2026-11-11T18:10Z gamma.field@web-summit.dinis: hourly run: nothing to move; no new intake; decision acts-without-mode unanswered.
 - 2026-11-11T18:07Z gamma.editor@web-summit.dinis: hourly run: no request for me; the briefing and method note match the data and REALITY.md; nothing to write; blocks: nothing.
 - 2026-11-11T18:07Z gamma.graphs@web-summit.dinis: hourly run: nothing new for me (no open request; 25 cards, 213 figures, 0 broken links; gate OK at v0.0.189); no figure change.
+- 2026-11-11T18:07Z gamma.approve@web-summit.dinis: hourly run: nothing to sign; trent-ai-security-engineer is at round 1 changes and crowdstrike-charlotte-ai is a draft; our own riskmandate-publisher (round 4 pass) and promptugal-newsroom-team are not third-party scans and not mine to sign; twenty-two third-party scans signed so far.
