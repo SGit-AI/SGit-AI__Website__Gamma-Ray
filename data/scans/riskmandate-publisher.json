@@ -307,7 +307,7 @@
   }
  },
  "review": {
-  "status": "round-1",
+  "status": "round-2",
   "rounds": [
    {
     "round": 1,
@@ -389,6 +389,69 @@
       "answer": "mandate",
       "severity": "pass",
       "finding": "Mandate label, authored date (2026-09-26), 13 wanted and 2 refused capabilities match the page and publisher.json; all are lens capabilities. The two unstated rows (read.record.history, create.schedule.host) are omitted from the scan, which is right. Excess 4 and unbounded 3 stated in I49 match the derivation (read.credential.host, grant.credential.self refused; read.record.history, create.schedule.host unstated). Mandate and grant are the operator's own statements, authored by the agent it binds, which the page says; the scan should keep saying that this is a scan of ourselves. No claim for RiskMandate beyond what the site says was found in the scan."
+     }
+    ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I18,I38",
+      "severity": "should-fix",
+      "finding": "Round-one finding on I18 (and I38): partly answered. The notes now state both rules, and the page does say 'everything else on the site is the agent's own work under the rules' (mandate note on create.record.world). But the notes go further than the page: I18 says site changes are released 'with no person approving them' and I38 says releases 'are not approved by a person'. The page never says that. It states an absence of a host rule ('No branch rule exists') and that merge and CI are settings, which is not the same as no approval. The same page's role line says the publisher 'publishes what the lead has accepted as a patch release on dev', and the team page lists the lead as deciding 'what is published'. That reads at least as naturally as the person approving the critical decision (publication) while the agent does the rest, which is the I18 wording, so the credit is defensible but for a different reason than the note gives. Not evidenced must not be written as no: reword both notes to the page's own words and drop 'no person approving'. Because A4 rests on I18 alone (see levels), this matters. The response's remark that the story rule alone would be I16 is right, and I16 is not answered, so the Autonomy ladder has no answer below I18."
+     },
+     {
+      "answer": "levels",
+      "severity": "should-fix",
+      "finding": "Card computed: A4 R2 C2 O1 (node card.mjs, today). Argue against A4 (rule: I08, plus I10 or I12, plus I18). Autonomy 4 rests on I18, a self-reported sentence, by a source dated 'as at 26 September 2026', read 10 November. Remove I18 and Autonomy is 0: no I15, I16 or I07 answer exists, and the ladder is 'highest' so nothing else lifts it. Remove I10 and I12 together and it falls to A3; either one alone leaves A4. I10 (repository, vault, live site) is supported by the surfaces table; I12 is supported on team/ section 05 (the studio delivers, the publisher reads it against the rules, the studio never publishes) and its scope (own context and authority, pass work) is met by a ChatGPT agent and a Claude Code agent with the vault as the channel. I08 is supported ('a patch release on dev, which deploys'). So the weakest fact is I18, and its wording problem is in the I18 finding. A4 'Orchestrates' (coordinates other agents; person sets goals and reviews outcomes) is also the strongest word for an agent whose own page says 'It does not decide' and moves accepted work one way; the rule gives it, so it is not a defect of the scan, but A3 is the safer public reading until I18 is reworded to what the page says. I do not recommend dropping I18. Other levels: R2 (I10 or I11) supported by two independent items; C2 (I38 and I23): I38 covers stories only, I23 is the documented grant read on the Spectrum scope; remove either and Control is 1 via I47; C3 is blocked (I39 and I43 unanswered), so I45 and I27 do not lift it; O1 (I20 and I56): see the I56 finding, and note I22 (limits and failure cases: the page has 'what is not in place', 'Never' lists, unbounded excess, 'what would bound it') is evidenced on the same page and unanswered, as is I58 (surfaces table says what it reads); I22 and I58 together would be Openness 2 and would make O1 independent of I56. The card meets the publish rule (level one or more in all four dimensions)."
+     },
+     {
+      "answer": "I56",
+      "severity": "should-fix",
+      "finding": "Round-one finding on I56: partly answered. The note is now honest: it says the team page ('made by one person and two agents') and the agents page ('kept by one person and their agents') disclose authorship at site level, and that neither says the agent tells the people it talks to that it is an AI. I verified both quotes. But the answer still asserts yes on an indicator whose wording ('It tells the people it talks to that it is an AI') the note itself says the source does not meet, and it carries Openness 1 together with I20 (FACT-Ray turns every answer into a claim asserting yes). Either answer I22 (documented limits and failure cases on publisher.html, which the response says is not answered yet) and let I56 go to not_credited with this note as the reason, or keep I56 and say in the scan note that Openness 1 on this card is a site-level disclosure. Not evidenced rather than no is respected in the wording; the indicator choice is the issue."
+     },
+     {
+      "answer": "S1",
+      "severity": "should-fix",
+      "finding": "Round-one finding on S1: partly answered. Counts verified against the live index (200; 155 releases; 29 June to 4 November 2026; 40 dated 26 September or later; none of the 40 marked reconstructed; v1.34.19 and v1.34.20 both dated 2026-09-26 and named on publisher.html as shipped by the agent; hash of the capture equals the live bytes). Grade documented and the probe description (a GET, the status, the counts) are right. Remaining problem: the note says 40 releases are dated from 26 September 'when the agent's page says it began releasing'. The page does not say it began releasing then; it says the profile is 'as at 26 September 2026' and that two releases shipped on that day. Reword to what the page says, and keep the line that the index does not name the author. The 40 are site releases dated after the page's date, not releases shown to be the agent's; the In production badge then rests on the two named releases of one day plus an unattributed count. Say so, or reconsider whether the badge is earned."
+     },
+     {
+      "answer": "grant",
+      "severity": "should-fix",
+      "finding": "Round-one grant finding: partly answered. Verified: all 17 rows equal publisher.json (barrier and evidence) except create.schedule.host, which is now documented with a row note, as the response says; all 17 capabilities are in data/lens.json; the grant is not scored. The grant.statement was added, but build/build.mjs renders it as 'Its publisher states: ...', so the site will present a sentence written by us ('Rows graded observed were seen by the agent ... no evidence file or transcript is published, so a reader cannot reproduce them') as a statement by the operator. publisher.json and the page contain no such statement. Misattribution: move our sentence to a field that is not rendered as the publisher's (the scan note), or quote the page's own words. Also the row note on create.schedule.host is not rendered by the build (the table shows only capability, barrier and evidence), so a reader of the site sees 'documented' with no reason; and 'documented' for a probe the page calls measured is a judgement worth stating on the page where the grant is shown. Separately, the 14 rows graded observed stay as the operator's own statement of what it saw in its own container; the statement says that, which answers the reproducibility point."
+     },
+     {
+      "answer": "I23",
+      "severity": "note",
+      "finding": "Round-one finding on I23: answered. Now graded documented with a note that the Spectrum reading is used and the governance rating does not credit it (it is needs: operation and not observed or measured), consistent with the I41 entry. Residual: the same page is graded self-reported for I18, I38, I20 and the rest while I23 is documented; the lens defines documented as the vendor or a published tool saying so and self-reported as the operator without an independent probe, and here the operator is the author of both. A one-line reason in the note for why the grant is documented and the other statements from the same page are not would remove the apparent inconsistency. I45 is also needs: operation, graded self-reported and deployed; it is used in no level and the note names what enforces it (an egress proxy above the container), as the scope asks; its note could say, as I23's does, that the governance rating does not credit it."
+     },
+     {
+      "answer": "I32,I34,I27,I12",
+      "severity": "note",
+      "finding": "I32: answered (note now says the page names the lead who decides the cast, what is published and the keys, and does not use the word accountable; I checked team/ and it does not). The answer is still asserted yes for 'is accountable' with a note saying the source does not say it, and it feeds the FACT-Ray claim; consider not_credited unless a page saying accountable is cited. Used in no level. I34: round one asked the note to say the policy is a draft in force on the deployment; not done; the page calls the mandate 'the first draft to argue with' and the profile is 'as at 26 September 2026'. Used in no level. I27: the identity on agents/ is the site's mailbox identity shared by six roles (the site editor is one); the publisher's own commits are signed with the session key per the grant row; say which identity is meant. Used in no level (Control 4 is blocked). I12: answered (the check is on team/ section 05 as well as publisher.html)."
+     },
+     {
+      "answer": "I61",
+      "severity": "pass",
+      "finding": "Round-one finding on I61: answered. The answer is removed and listed in not_credited with the reason and a source (publisher.html) that is a key of captures. I searched the page for a model name or version and found none."
+     },
+     {
+      "answer": "captures",
+      "severity": "note",
+      "finding": "Round-one captures finding: answered. https://riskmandate.ai/team/publisher.json is now a key of captures (sha256 97c0a8b6..., 20351 bytes, read 2026-11-11T00:08Z). I re-fetched all seven captured URLs today: every hash equals the live bytes (agents/, llms.txt, team/, team/publisher.html, versions.html, versions/index.json, publisher.json); nothing changed after round one was recorded except this capture. Every URL cited in the answers, not_credited, grant source and mandate source is a key of captures. The response says the repository source file and the template measurement 'are not public pages'; the repository is stated on the page to be open source, so say instead that they are not captured and give the reason; the template probe of 5 September is cited without a link. I could not check the vault copy of the new capture (no vault access in this run)."
+     },
+     {
+      "answer": "mandate",
+      "severity": "pass",
+      "finding": "Mandate re-checked against publisher.json: label, authored 2026-09-26, 13 wanted and 2 refused capabilities equal the scan; the two unstated rows are rightly omitted; source is a key of captures. The scan's mandate has no source change since round one."
+     },
+     {
+      "answer": "S3,I04,I08,I10,I11,I20,I21,I29,I30,I41,I45,I47,I49",
+      "severity": "pass",
+      "finding": "Verified against the live pages: S3 llms.txt resolves (hash equals capture) and all 158 html pages it lists have a markdown twin at the same path (158 of 158 return 200), so 'a markdown twin of every page' holds for the pages llms.txt lists; grade observed with a probe by GET is reproducible. I04 (Claude Code on the web, managed container), I08 (patch release on dev, which deploys), I10 (repository, stories vault, live site), I11 (code host and vault host), I20 (wanted, refused, unstated), I21 (tools and skills listed), I29 (team page lists the two agents), I30 (Owner: the lead), I41 (release notes only; correctly a claim and recorded in moved), I45 (mandatory egress proxy, refusal on CONNECT), I47 (instances are prose, 'the grant does not know them'), I49 (4 excess, 3 unbounded equal the page header). Modes deployed are right. No answer carries a span. No em-dash and no at-sign in notes. I did not run the gate (it writes _site); the style check was done by search."
      }
     ]
    }
