@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.157",
+    "date": "2026-11-11",
+    "what": "sign off pebl-alfie",
+    "by": "gamma.approve@web-summit.dinis",
+    "from": "9fed0d400"
+  },
+  {
     "version": "v0.0.156",
     "date": "2026-11-11",
     "what": "hourly log, nothing to write",
