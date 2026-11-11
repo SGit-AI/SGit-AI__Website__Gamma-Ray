@@ -64,14 +64,38 @@
   {
    "id": "orchestrates",
    "asked": "2026-11-10",
-   "from": "/spectrum/findings/",
+   "from": "/spectrum/findings/; gamma.approve@ on Emergence CRAFT (11 November)",
    "question": "Autonomy 4 (Orchestrates) is reached by almost every acting agent with connectors. Tighten it?",
    "options": [
     "as it is",
     "require coordination of other agents or several systems (I12 or I13), not connectors alone"
    ],
    "recommendation": "Tighten: Autonomy should tell the cards apart at the top.",
-   "answer": null
+   "answer": null,
+   "what_if": {
+    "option": "Autonomy 4 needs the coordination of other agents or several systems (I12 or I13), not connectors alone",
+    "dimension": "A",
+    "level": 4,
+    "rule": {
+     "all": [
+      {
+       "level": 3
+      },
+      {
+       "any": [
+        "I12",
+        "I13"
+       ]
+      },
+      {
+       "any": [
+        "I18",
+        "I19"
+       ]
+      }
+     ]
+    }
+   }
   },
   {
    "id": "acts-without-mode",
@@ -84,7 +108,35 @@
     "Autonomy 2 accepts I08 in place of I07"
    ],
    "recommendation": "I08 alone opens Autonomy 2: an agent that acts is at least one that suggests.",
-   "answer": null
+   "answer": null,
+   "what_if": {
+    "option": "I08 alone opens Autonomy 2",
+    "dimension": "A",
+    "level": 2,
+    "rule": {
+     "any": [
+      {
+       "any": [
+        "I16",
+        {
+         "all": [
+          "I07",
+          {
+           "any": [
+            "I02",
+            "I03",
+            "I04",
+            "I05"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      "I08"
+     ]
+    }
+   }
   },
   {
    "id": "stand-record",

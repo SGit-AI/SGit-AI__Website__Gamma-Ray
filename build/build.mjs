@@ -6,7 +6,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { load, TIERS, TIER_LABEL } from './model.mjs'
 import * as viz from './viz.mjs'
-import { loadSpectrum } from './spectrum.mjs'
+import { loadSpectrum, card } from './spectrum.mjs'
 import { loadFactRay, scanClaims } from './factray.mjs'
 import { build as buildFactRay } from './factray_pages.mjs'
 import { VERBS, cardGraph, walk as graphWalk } from './graph.mjs'
@@ -128,9 +128,14 @@ Object.assign(gen, {
     'flow-says': () => FLOW.says,
     'flow-intake': () => { const c = s => INTAKE.filter(i => i.status === s).length; return `${INTAKE.length} compan${INTAKE.length === 1 ? 'y' : 'ies'} met so far: ${c('intake')} at intake, ${c('drafting')} being drafted, ${c('in-review')} in review, ${c('published')} published, ${c('no-agent')} with no agent found` }
 })
+// what an option would do to the published cards: the same scorer run with one rule replaced (data/decisions.json, what_if)
+const whatIf = w => { const sp2 = JSON.parse(JSON.stringify(sp)), L = sp2.dimensions.find(d => d.id === w.dimension).levels.find(l => l.level === w.level); L.rule = w.rule
+    const moved = SPX.cards.filter(x => x.c.publishable).map(({ s, c }) => ({ s, a: c.signature, b: card(s, sp2, m).signature })).filter(x => x.a !== x.b)
+    const n = SPX.cards.filter(x => x.c.publishable).length
+    return `**If "${w.option}":** ${moved.length} of the ${n} published cards would change.` + (moved.length ? `\n\n| Card | Today | With that rule |\n|---|---|---|\n` + moved.map(x => `| [${x.s.name}](../spectrum/cards/${x.s.id}/index.md) | ${x.a} | ${x.b} |`).join('\n') : '') }
 const DEC = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/decisions.json'), 'utf8')).decisions
 Object.assign(gen, {
-    'decisions-open': () => { const o = DEC.filter(d => !d.answer); return o.length ? o.map((d, i) => `### ${i + 1}. ${d.question}\n\n${d.options.map(x => `- ${x}`).join('\n')}\n\n**Recommended:** ${d.recommendation} *Asked ${d.asked}; from ${d.from}.*`).join('\n\n') : 'Nothing is waiting.' },
+    'decisions-open': () => { const o = DEC.filter(d => !d.answer); return o.length ? o.map((d, i) => `### ${i + 1}. ${d.question}\n\n${d.options.map(x => `- ${x}`).join('\n')}\n\n**Recommended:** ${d.recommendation} *Asked ${d.asked}; from ${d.from}.*` + (d.what_if ? `\n\n${whatIf(d.what_if)}` : '')).join('\n\n') : 'Nothing is waiting.' },
     'decisions-answered': () => { const a = DEC.filter(d => d.answer); return a.length ? `| Question | Answer | When |\n|---|---|---|\n` + a.map(d => `| ${d.question} | ${d.answer.text} | ${d.answer.at} |`).join('\n') : 'None yet.' },
     'decisions-count': () => String(DEC.filter(d => !d.answer).length)
 })
