@@ -174,6 +174,39 @@
       "finding": "Verified unchanged since round two and still matching their live pages: spans exact and under fifteen words (validated programmatically), notes consistent with the cited pages, I12 in not_credited with a matching reason, the what line names A2A as between its own agents, S3 observed on llms.txt, I42 does not read as verified, announced entries match the pages marked Planned or target architecture, and the studio's levels response is accurate except for the 2026.03 label noted above."
      }
     ]
+   },
+   {
+    "round": 4,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "I08,I18",
+      "severity": "pass",
+      "finding": "Round-three finding 1 answered TRUE. The workflows page (docs.emergence.ai/data-governance/workflows.md) is now a key of captures; its stored SHA-256 (21f2dfe0...0f7d32, 11232 bytes) equals a fresh fetch today. The page says, under 'Workflow approval and the scorecard', that approving ('Save') a profiling or enrichment run applies tombstoned snapshots and resolves open violations, and its diagram runs the three flows into a User Approval step before the scorecard update. The I18 note now says a person's approval (Save) of a profiling or enrichment run is what applies its changes to the scorecard, and a new not_credited entry ('Fully unattended profiling and enrichment') cites the page and says the same; both are supported by the page. The I08 note no longer says the enrichment runs automatically."
+     },
+     {
+      "answer": "I08",
+      "severity": "pass",
+      "finding": "Round-three finding 2 answered TRUE. Live releases page (stored SHA-256 equals a fresh fetch): the 'Data quality results now apply on completion' bullet and the 'eight-step pipeline runs after profiling' bullet are both in the 2026.04 section; 'ingestion auto-chains into profiling' and the 'no longer require approval' bullet are in 2026.03. The note labels match each. Span 'results are written directly when the workflow finishes' (8 words) is exact in the page; I18 span 'results are available immediately on completion, since these are read-only analyses' (11 words) is exact."
+     },
+     {
+      "answer": "captures",
+      "severity": "note",
+      "finding": "Round-three note not acted on: https://www.emergence.ai/latest-news is still a key of captures (read 2026-11-11T00:58Z) and is cited nowhere in the scan (no answer, not_credited or announced entry). Every URL cited anywhere in the scan is a key of captures, and the gate prints OK, so this is housekeeping only; the studio said it could drop it."
+     },
+     {
+      "answer": "A",
+      "severity": "note",
+      "finding": "Card computed: A4 R3 C2 O2 (Autonomy used I10, I18; Reach I14, S4, I25; Control I38, I23, I25; Openness I22, I58, I61). Autonomy re-argued with the approval step acknowledged. Level 3 needs I08 and one of I17, I18, I19; level 4 needs I10 and I18. I08 stands on the three read-only assessment workflows that write results with no pending approval, plus ingestion chaining into profiling. I18 ('the person approves critical decisions only') stands on the same three workflows needing no approval while tag and rule generation keep approval; the Save approval of profiling and enrichment runs is a further approval point, now disclosed in the note and in not_credited, and it does not make a person approve every step (assessments and ingestion run without it). I think the credited levels follow from the answers as documented, but Autonomy 4 is thin: it rests on one releases-page bullet for I18 and the I10 breadth is by connectors, not by an agent working across them. Dinis or a later reviewer may judge A3 safer; I do not find it unsupported."
+     },
+     {
+      "answer": "I08,I18",
+      "severity": "note",
+      "finding": "Mode and grade: both are documented and default, which fits release notes and a documentation page describing shipped behaviour. The workflows page does not mention approval for the three read-only assessment workflows either way, so it neither contradicts nor confirms the release-note span; the 2026.03 and 2026.04 bullets agree with each other. No new problem found: no em-dashes, no adjectives about the company in the changed fields, no contact details."
+     }
+    ]
    }
   ],
   "responses": [
