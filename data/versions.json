@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.146",
+    "date": "2026-11-11",
+    "what": "re-check of pebl-alfie (pass)",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "3b65058ab"
+  },
+  {
     "version": "v0.0.145",
     "date": "2026-11-11",
     "what": "round one answered on our own PrompTugal.news team scan",
