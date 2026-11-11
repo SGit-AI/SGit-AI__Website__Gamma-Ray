@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.139",
+    "date": "2026-11-11",
+    "what": "re-check of ethiack-hackian (pass)",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "c55b7c82f"
+  },
+  {
     "version": "v0.0.138",
     "date": "2026-11-11",
     "what": "jump bar over the cards, card anchors",
