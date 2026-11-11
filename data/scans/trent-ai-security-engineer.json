@@ -1,0 +1,260 @@
+{
+ "id": "trent-ai-security-engineer",
+ "name": "Trent, the AI Security Engineer",
+ "operator": "Trent AI (the vendor); each customer is the operator of its own use",
+ "company": "trent-ai",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-11",
+ "tier": "public",
+ "basis": "Trent AI's own public pages (product, documentation, blog, customer stories, legal and security pages)",
+ "seen_by_operator": null,
+ "what": "Agent that keeps code, infrastructure, agents and docs in one context, judges exploitable findings as attack chains, hands fixes to the team's coding agents, reviews and re-scans to verify.",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. From the studio's Web Summit 2026 agents list.",
+ "grant": null,
+ "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
+ "vault": {
+  "id": "1jw9xxj4",
+  "read_key": "sgit_public_read_004ec30817d59536c742d58d117d9fff59bc7af4f8a17ee920d5cf910821ef6a:1jw9xxj4",
+  "published": "2026-11-11"
+ },
+ "review": {
+  "status": "draft",
+  "rounds": []
+ },
+ "assessment": {
+  "by": "gamma.studio@web-summit.dinis",
+  "researcher_assessor": "a sub-agent of gamma.studio",
+  "challenger": "a sub-agent of gamma.studio",
+  "lowered": [
+   "I51",
+   "S1"
+  ],
+  "fixed": [
+   "I17"
+  ],
+  "added_by_challenger": [],
+  "files": "in the vault: work/assessment.json, work/challenger.json"
+ },
+ "answers": {
+  "I08": {
+   "e": "https://trent.ai/use-cases/autonomous-remediation/",
+   "n": "Trent files remediation tickets in the team's Linear or Jira itself.",
+   "span": "Trent raises a ticket in Linear or Jira with exact remediation instructions.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "connectors"
+  },
+  "I10": {
+   "e": "https://trent.ai/llm-info/",
+   "n": "Trent works across code, infrastructure, configurations, agents, CI and design documents of one team.",
+   "span": "Trent reviews what a team builds: code, infrastructure-as-code, configurations and scripts",
+   "g": "documented",
+   "m": "default"
+  },
+  "I11": {
+   "e": "https://trent.ai/llm-info/",
+   "n": "Trent connects to third-party security tools (Semgrep, Snyk, Sonar) and team tools (Jira, Linear, Slack, Notion).",
+   "span": "native connectors for Semgrep, Snyk and Sonar",
+   "g": "documented",
+   "m": "available",
+   "cfg": "connectors"
+  },
+  "I13": {
+   "e": "https://trent.ai/use-cases/autonomous-remediation/",
+   "n": "Trent passes fix instructions to the customer's own coding agent (for example Claude) and reviews the pull request it prepares.",
+   "span": "it hands Claude, or the coding agent you use, the exact instructions.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "coding-agent"
+  },
+  "I16": {
+   "e": "https://trent.ai/use-cases/autonomous-remediation/",
+   "n": "In the semi-automatic path the coding agent pulls Trent's tasks and opens pull requests that a person reviews.",
+   "span": "opens pull requests for your review",
+   "g": "documented",
+   "m": "available",
+   "cfg": "coding-agent"
+  },
+  "I17": {
+   "e": "https://trent.ai/use-cases/autonomous-remediation/",
+   "n": "In the fully automatic path Trent hands finding categories cleared once with the team to the customer's coding agent, reviews and verifies the fix, and brings the rest to people with a recommended decision.",
+   "span": "Trent identifies the findings that can be fixed without a person",
+   "g": "documented",
+   "m": "available",
+   "cfg": "auto-remediation"
+  },
+  "I20": {
+   "e": "https://trent.ai/llm-info/",
+   "n": "Its purpose is stated: an AI security engineer that reviews what a team builds, judges exploitability and verifies fixes.",
+   "span": "Trent AI is an AI Security Engineer.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I21": {
+   "e": "https://trent.ai/blog/agent-native-product-surface/",
+   "n": "Actions the agent may not take through MCP are defined: access changes and irreversible actions are kept in the dashboard.",
+   "span": "access changes and irreversible actions stay in the dashboard.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I22": {
+   "e": "https://trent.ai/blog/trent-cursor-grok-vs-cwe-bench-cve/",
+   "n": "A published benchmark describes a failure case where Trent reached the vulnerable code but reported a different issue.",
+   "span": "reaching the right code did not always produce the right diagnosis.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I25": {
+   "e": "https://trent.ai/product/",
+   "n": "The customer chooses the level of access, from a URL-only assessment to repositories, agent definitions or documents.",
+   "span": "You control what level of access to provide.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I38": {
+   "e": "https://trent.ai/blog/agent-native-product-surface/",
+   "n": "Deleting projects, managing keys, inviting members and installing GitHub apps are left to a person in the dashboard.",
+   "span": "Those decisions stay with the human who accepts their consequences.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I50": {
+   "e": "https://trent.ai/blog/trent-cursor-grok-vs-cwe-bench-cve/",
+   "n": "Trent publishes benchmark results on 28 CWE-Bench CVEs against other tools, with method and run counts.",
+   "span": "Trent detected 33–47% of 43 labelled vulnerability instances in 28 CVEs",
+   "g": "documented",
+   "m": "default"
+  },
+  "I52": {
+   "e": "https://trent.ai/llm-info/",
+   "n": "The penetration test is stated to be independent of the builders.",
+   "span": "an independent penetration test report is available on request through the Trust Center.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I57": {
+   "e": "https://trent.ai/product/",
+   "n": "Users can contest a finding's severity and correct requirements; corrections are recorded.",
+   "span": "You can challenge a severity and apply a regrade in place",
+   "g": "documented",
+   "m": "default"
+  },
+  "I58": {
+   "e": "https://raw.githubusercontent.com/trnt-ai/trent-agent-plugin/main/README.md",
+   "n": "The plugin README describes what data is sent where: repository access through a GitHub App, review content, uploaded documents, regional servers.",
+   "span": "Trent reads a repository through the Trent GitHub App",
+   "g": "documented",
+   "m": "default"
+  },
+  "S3": {
+   "e": "https://trent.ai/llms.txt",
+   "n": "An llms.txt resolves at the site root and maps product, research and company pages.",
+   "span": "This file is a map of Trent AI",
+   "g": "observed",
+   "m": "default",
+   "method": "probe"
+  },
+  "S4": {
+   "e": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.trent",
+   "n": "A remote MCP server, ai.trent/trent, is published in the MCP Registry with US and EU endpoints; the US endpoint answers with an OAuth challenge.",
+   "span": "Security reviews, threat models over a repo or website, and remediation tracking",
+   "g": "observed",
+   "m": "default",
+   "method": "probe"
+  }
+ },
+ "not_credited": [],
+ "announced": [
+  {
+   "what": "Fewer approval pauses and more deliberate review triggers 'still ahead' in the remediation flow",
+   "source": "https://trent.ai/blog/agent-native-product-surface/"
+  },
+  {
+   "what": "Expanded benchmark beyond Java, with false-positive measurement",
+   "source": "https://trent.ai/blog/trent-cursor-grok-vs-cwe-bench-cve/"
+  },
+  {
+   "what": "'More sources' and 'more connectors on the way'",
+   "source": "https://trent.ai/product/"
+  },
+  {
+   "what": "Deployment in public cloud, the customer's VPC or on-premises, with frontier, open-source or private models (stated, not detailed)",
+   "source": "https://trent.ai/product/"
+  }
+ ],
+ "configurations": [
+  {
+   "id": "shipped",
+   "name": "As shipped",
+   "note": "Trent, the AI Security Engineer with its documented defaults.",
+   "on": []
+  },
+  {
+   "id": "connectors",
+   "name": "Connectors",
+   "note": "Security connectors (Semgrep, Snyk, Sonar, SARIF) and team connectors (Jira, Linear, Slack, Notion) that the customer connects.",
+   "on": [
+    "connectors"
+   ]
+  },
+  {
+   "id": "coding-agent",
+   "name": "Coding agent",
+   "note": "Trent connected to the customer's coding agent through the trent@trent plugin or the remote MCP server.",
+   "on": [
+    "coding-agent"
+   ]
+  },
+  {
+   "id": "auto-remediation",
+   "name": "Auto remediation",
+   "note": "The fully automatic remediation loop, run only on finding categories the team has confirmed once.",
+   "on": [
+    "auto-remediation"
+   ]
+  }
+ ],
+ "captures": {
+  "https://raw.githubusercontent.com/trnt-ai/trent-agent-plugin/main/README.md": {
+   "sha256": "a056747bba23a8f4f36081326b957518d1536ac35101f67e118867a68ea07d8a",
+   "bytes": 5722,
+   "read_at": "2026-11-11T12:52Z"
+  },
+  "https://registry.modelcontextprotocol.io/v0/servers?search=ai.trent": {
+   "sha256": "0056625dac60bb455d0658719bad6db07fe83f12f9c8d41c3944d67ec284f0c9",
+   "bytes": 2730,
+   "read_at": "2026-11-11T12:52Z"
+  },
+  "https://trent.ai/blog/agent-native-product-surface/": {
+   "sha256": "74f434329547e937e152a7664d40f74743d69383a4a1331e31ff73843c7db116",
+   "bytes": 151012,
+   "read_at": "2026-11-11T12:52Z"
+  },
+  "https://trent.ai/blog/trent-cursor-grok-vs-cwe-bench-cve/": {
+   "sha256": "1dc18b25218f7a1cfd94880c371ede95337d6986ed23c263056b2ad18b364364",
+   "bytes": 176052,
+   "read_at": "2026-11-11T12:52Z"
+  },
+  "https://trent.ai/llm-info/": {
+   "sha256": "6f9f05c7cd3607a7d525eddbf97e23114b49a34a53ecef105228b8df2b5766d5",
+   "bytes": 108621,
+   "read_at": "2026-11-11T12:52Z"
+  },
+  "https://trent.ai/llms.txt": {
+   "sha256": "54c2e280f0fb7400617afcf342f759f7b38d839d8ac1093b4bb9b5e8a3f3d08c",
+   "bytes": 16414,
+   "read_at": "2026-11-11T12:52Z"
+  },
+  "https://trent.ai/product/": {
+   "sha256": "964b83f7004bf487c3da17c1ee1d0f43325841d0eed1e5889fde90aad9d2f427",
+   "bytes": 169660,
+   "read_at": "2026-11-11T12:52Z"
+  },
+  "https://trent.ai/use-cases/autonomous-remediation/": {
+   "sha256": "f5a51c127945d0be8366300bff7f7e0893484d902778b31d1e2945313e263430",
+   "bytes": 78742,
+   "read_at": "2026-11-11T12:52Z"
+  }
+ }
+}

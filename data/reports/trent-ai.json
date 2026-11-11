@@ -1,0 +1,215 @@
+{
+ "id": "trent-ai",
+ "name": "Trent AI",
+ "url": "https://trent.ai/",
+ "country": "United Kingdom",
+ "sector": "AI security",
+ "read": "2026-11-11",
+ "basis": "Trent AI's own public pages and, for company basics only, the news sources named beside each fact",
+ "seen_by_subject": false,
+ "what": "Trent AI Ltd sells Trent, an AI agent that analyses a team's code, infrastructure, agents and documents for security risks, hands fixes to the team's coding agents and re-checks them.",
+ "facts": [
+  {
+   "fact": "Legal entity Trent AI Ltd, headquartered in Cambridge, United Kingdom.",
+   "url": "https://trent.ai/llm-info/",
+   "span": "Headquarters: Cambridge, United Kingdom."
+  },
+  {
+   "fact": "Founded in 2025.",
+   "url": "https://trent.ai/llm-info/",
+   "span": "Founded: 2025"
+  },
+  {
+   "fact": "Team locations London and San Francisco.",
+   "url": "https://trent.ai/about-us/",
+   "span": "London · San Francisco"
+  },
+  {
+   "fact": "$13M seed round announced April 2026, investors LocalGlobe and Cambridge Innovation Capital.",
+   "url": "https://trent.ai/llm-info/",
+   "span": "Investors: LocalGlobe and Cambridge Innovation Capital"
+  },
+  {
+   "fact": "Access is approval-gated; pricing on request.",
+   "url": "https://trent.ai/llm-info/",
+   "span": "Trent is a live product with approval-gated access."
+  },
+  {
+   "fact": "Trent AI is not related to Trent Limited, the Tata Group retailer.",
+   "url": "https://trent.ai/llm-info/",
+   "span": "Trent AI is not related to Trent Limited (trentlimited.com)"
+  }
+ ],
+ "people": [
+  {
+   "name": "Eno Thereska",
+   "role": "Co-founder and CEO",
+   "url": "https://trent.ai/about-us/"
+  },
+  {
+   "name": "Neil Lawrence",
+   "role": "Co-founder and Chief Scientist",
+   "url": "https://trent.ai/about-us/"
+  },
+  {
+   "name": "Zhenwen Dai",
+   "role": "Co-founder and CTO",
+   "url": "https://trent.ai/about-us/"
+  },
+  {
+   "name": "Christoph Bartenstein",
+   "role": "Chief Product Officer",
+   "url": "https://trent.ai/about-us/"
+  },
+  {
+   "name": "Paz Klapztein",
+   "role": "Head of Operations",
+   "url": "https://trent.ai/about-us/"
+  },
+  {
+   "name": "Zack Rossman",
+   "role": "Head of Engineering",
+   "url": "https://trent.ai/about-us/"
+  }
+ ],
+ "solutions": [
+  {
+   "id": "ai-security-engineer",
+   "name": "Trent, the AI Security Engineer",
+   "short": "Trent",
+   "what": "Agent that keeps code, infrastructure, agents and docs in one context, judges exploitable findings as attack chains, hands fixes to the team's coding agents, reviews and re-scans to verify.",
+   "status": "live, approval-gated access",
+   "url": "https://trent.ai/product/",
+   "scan": "trent-ai-security-engineer"
+  },
+  {
+   "id": "trent-agent-plugin",
+   "name": "Trent plugin for Claude Code and Codex (trent@trent) and hosted MCP server ai.trent/trent",
+   "short": "Trent plugin",
+   "what": "Plugin with four skills and the addresses of Trent's remote MCP servers (US and EU); the trent-loop skill runs the fix loop on a branch ending in one pull request.",
+   "status": "live; MCP Registry entry version 0.3.0 published 2026-10-02",
+   "url": "https://raw.githubusercontent.com/trnt-ai/trent-agent-plugin/main/README.md"
+  },
+  {
+   "id": "openclaw",
+   "name": "OpenClaw security",
+   "short": "OpenClaw security",
+   "what": "Assessment of an OpenClaw setup from the GitHub repository that holds it, fixed with the plugin.",
+   "status": "live, part of Trent",
+   "url": "https://trent.ai/openclaw/"
+  },
+  {
+   "id": "asmm",
+   "name": "AI Security Maturity Model (ASMM) self-assessment",
+   "short": "AI Security Maturity Model",
+   "what": "Public self-assessment of AI security maturity.",
+   "status": "live",
+   "url": "https://asmm.trent.ai/"
+  }
+ ],
+ "stories": [
+  {
+   "customer": "Canopy, Commscentre, ML@Cam, Qbeast, Weblogic (design partners)",
+   "what": "Named as design partners with access to Trent, reporting posture visibility, a security audit report and a remediation scope (April 2026 funding post).",
+   "url": "https://trent.ai/blog/trent-ai-raises-13m-to-secure-the-agentic-age/",
+   "span": "including Canopy, Commscentre, ML@Cam, Qbeast, Weblogic and others"
+  },
+  {
+   "customer": "Unnamed software company (use case page)",
+   "what": "Ran the automatic remediation loop on cleared finding types; Trent handed fixes to Claude, reviewed the pull requests and re-ran a full review after merge. Not named, so not used for the In production badge.",
+   "url": "https://trent.ai/use-cases/autonomous-remediation/",
+   "span": "They let Trent run the automatic loop on the finding types"
+  }
+ ],
+ "analysis": [
+  "**The shape.** Trent reads {sig:trent-ai-security-engineer} ({stage:trent-ai-security-engineer}). Trent AI Ltd, founded in 2025 and headquartered in Cambridge, United Kingdom, sells Trent, an AI security engineer: it keeps a team's code, infrastructure, agents, CI and design documents in one context, judges which findings can be exploited, files remediation tickets, hands fixes to the team's own coding agent, reviews the pull request and checks again after the merge. Access is approval-gated.",
+  "**Where the evidence is strongest.** Trent publishes a remote MCP server in the official MCP Registry, with US and EU endpoints; our read-only probe of the US endpoint received a sign-in challenge, so the interface is observed, not only documented. The customer chooses how much Trent can reach, from an assessment that starts from a URL alone to repositories through a GitHub App installed per repository. Deleting projects, managing keys, inviting members and installing apps are kept out of the agent and left to a person in the dashboard. Trent also publishes a benchmark against other tools on 28 CVEs from CWE-Bench, with its method, runs and ranges, and names a case it missed.",
+  "**What holds as shipped, and what with options on.** Reach 3, Control 2 and Openness 3 hold as shipped. Autonomy 3 holds with options on: with team connectors, Trent files tickets in Linear or Jira itself, and in the fully automatic loop, run only on finding categories the team has cleared once, it hands fixes to the customer's coding agent, reviews and verifies them, and brings the rest to a person with a recommended decision. Code changes are made by the customer's coding agent, not by Trent.",
+  "**What would move it.** Autonomy 4: a page saying a person approves only critical decisions while the loop runs. Control 3: a documented log of the agent's actions, a way to pause or stop it, or monitoring in operation. Openness 4: an independent check of the agent, such as an audit or test report that can be read. The In production badge needs a named customer, or usage figures, for the loop that acts.",
+  "**Seen, and not counted.** The challenger lowered two credits. The design partners named in the April 2026 funding post (Canopy, Commscentre, ML@Cam, Qbeast and Weblogic) report posture visibility, an audit report and a remediation scope, which is the analysing capability, and the one story about the remediation loop names no customer; so the card shows no In production badge. A penetration test is listed but available only on request, and is not shown to test the agent itself. The trust centre renders only in a browser, so its SOC 2 and subprocessor details were not captured."
+ ],
+ "article": {
+  "title": "Trent AI on the GAMMA-Ray Spectrum: {sig:trent-ai-security-engineer}",
+  "standfirst": "The GAMMA-Ray studio reads Trent, the AI security engineer, from its public pages: an MCP server other agents can call, access the customer chooses, and published benchmark results with a named miss.",
+  "body": [
+   "Trent AI Ltd, founded in 2025 in Cambridge, United Kingdom, sells Trent, an AI agent that reviews a team's code, infrastructure, agents and documents for security risks, hands fixes to the team's coding agent and checks them. We read it only from public sources, captured and hashed on 11 November 2026, and the published rules computed the card.",
+   "**Autonomy 3, Acts (available).** With connectors on, Trent files tickets in Linear or Jira; in the automatic loop it hands cleared finding types to the team's coding agent and brings the rest to a person. A page saying a person approves only critical decisions would reach level 4.",
+   "**Reach 3, Open protocol.** A remote MCP server is published in the MCP Registry, and the customer chooses how much Trent can reach. A documented exchange with agents run by another organisation would reach level 4.",
+   "**Control 2, Configurable.** Access changes and irreversible actions are kept in the dashboard for a person. A documented log of the agent's actions, or a way to stop it, would reach level 3.",
+   "**Openness 3, Measured.** Benchmark results are published with method and runs, including a case Trent missed. An independent check that can be read would reach level 4.",
+   "The card is beta and Trent AI has not seen it. It can claim the card and add evidence; corrections are dated."
+  ],
+  "pt": {
+   "title": "A Trent AI no GAMMA-Ray Spectrum: {sig:trent-ai-security-engineer}",
+   "standfirst": "O estúdio GAMMA-Ray lê o Trent, o engenheiro de segurança com IA, a partir das suas páginas públicas: um servidor MCP que outros agentes podem chamar, acesso escolhido pelo cliente e resultados de avaliação publicados, incluindo uma falha.",
+   "body": [
+    "A Trent AI Ltd, fundada em 2025 em Cambridge, no Reino Unido, vende o Trent, um agente de IA que revê código, infraestrutura, agentes e documentos de uma equipa à procura de riscos de segurança. Lemos apenas fontes públicas, capturadas e com hash a 11 de novembro de 2026.",
+    "**Autonomia 3 (opcional).** Com os conectores ligados, o Trent abre tickets no Linear ou no Jira e, no ciclo automático, passa correções ao agente de programação da equipa. **Alcance 3.** Um servidor MCP está publicado no MCP Registry. **Controlo 2.** Alterações de acesso e ações irreversíveis ficam para uma pessoa.",
+    "**Abertura 3.** Resultados de avaliação publicados, com método e uma falha identificada. O cartão é beta e a Trent AI ainda não o viu; pode reclamá-lo e acrescentar evidência. As correções são datadas."
+   ]
+  }
+ },
+ "vault": {
+  "id": "1jw9xxj4",
+  "read_key": "sgit_public_read_004ec30817d59536c742d58d117d9fff59bc7af4f8a17ee920d5cf910821ef6a:1jw9xxj4",
+  "published": "2026-11-10"
+ },
+ "team": {
+  "researcher-assessor": "a sub-agent of gamma.studio@web-summit.dinis",
+  "challenger": "a sub-agent",
+  "scorer": "build/spectrum.mjs",
+  "analyst, designer, writer": "gamma.studio@web-summit.dinis",
+  "review": "gamma.review@web-summit.dinis (pending)",
+  "sign-off": "gamma.approve@web-summit.dinis (pending)"
+ },
+ "signoff": null,
+ "corrections": [],
+ "method": "A researcher-assessor gathered and captured the sources and mapped the evidence to indicators, without assigning a level. A challenger argued against every level three and four and every doubtful credit.",
+ "captures": {
+  "https://asmm.trent.ai/": {
+   "sha256": "d544fc097b420820ea4e18d22a7ee110a66467552842bae3f3f4a27011a53fa0",
+   "bytes": 58425,
+   "read_at": "2026-11-11T12:52Z"
+  },
+  "https://raw.githubusercontent.com/trnt-ai/trent-agent-plugin/main/README.md": {
+   "sha256": "a056747bba23a8f4f36081326b957518d1536ac35101f67e118867a68ea07d8a",
+   "bytes": 5722,
+   "read_at": "2026-11-11T12:52Z"
+  },
+  "https://trent.ai/": {
+   "sha256": "7b9f8652997fb986a189e3e3e68ef5b1b12659316214e159ff90bb60aadd47a0",
+   "bytes": 84716,
+   "read_at": "2026-11-11T12:52Z"
+  },
+  "https://trent.ai/about-us/": {
+   "sha256": "7076ecf951297f7a60d04a19d31d924c383684becebd3b396231bbc03b2fc304",
+   "bytes": 104607,
+   "read_at": "2026-11-11T12:52Z"
+  },
+  "https://trent.ai/blog/trent-ai-raises-13m-to-secure-the-agentic-age/": {
+   "sha256": "4ec34c49bc7ad0b4f2364d2a6413a02ddbbc07f813bf7fb8a6444b9e08ef0a39",
+   "bytes": 127200,
+   "read_at": "2026-11-11T12:52Z"
+  },
+  "https://trent.ai/llm-info/": {
+   "sha256": "6f9f05c7cd3607a7d525eddbf97e23114b49a34a53ecef105228b8df2b5766d5",
+   "bytes": 108621,
+   "read_at": "2026-11-11T12:52Z"
+  },
+  "https://trent.ai/openclaw/": {
+   "sha256": "372310642b8c4a0a0e272d2b11c0ce1525a14a4269a3a6a79275eeef6b0eb4c6",
+   "bytes": 137037,
+   "read_at": "2026-11-11T12:52Z"
+  },
+  "https://trent.ai/product/": {
+   "sha256": "964b83f7004bf487c3da17c1ee1d0f43325841d0eed1e5889fde90aad9d2f427",
+   "bytes": 169660,
+   "read_at": "2026-11-11T12:52Z"
+  },
+  "https://trent.ai/use-cases/autonomous-remediation/": {
+   "sha256": "f5a51c127945d0be8366300bff7f7e0893484d902778b31d1e2945313e263430",
+   "bytes": 78742,
+   "read_at": "2026-11-11T12:52Z"
+  }
+ }
+}
