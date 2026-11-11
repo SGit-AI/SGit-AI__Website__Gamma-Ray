@@ -109,10 +109,9 @@
  ],
  "stories": [
   {
-   "customer": "Canopy, Commscentre, ML@Cam, Qbeast, Weblogic (design partners)",
+   "customer": "Canopy, Commscentre, Qbeast, Weblogic and others (design partners)",
    "what": "Named as design partners with access to Trent, reporting posture visibility, a security audit report and a remediation scope (April 2026 funding post).",
-   "url": "https://trent.ai/blog/trent-ai-raises-13m-to-secure-the-agentic-age/",
-   "span": "including Canopy, Commscentre, ML@Cam, Qbeast, Weblogic and others"
+   "url": "https://trent.ai/blog/trent-ai-raises-13m-to-secure-the-agentic-age/"
   },
   {
    "customer": "Unnamed software company (use case page)",
@@ -126,7 +125,7 @@
   "**Where the evidence is strongest.** Trent publishes a remote MCP server in the official MCP Registry, with US and EU endpoints; our read-only probe of the US endpoint received a sign-in challenge, so the interface is observed, not only documented. The customer chooses how much Trent can reach, from an assessment that starts from a URL alone to repositories through a GitHub App installed per repository. Deleting projects, managing keys, inviting members and installing apps are kept out of the agent and left to a person in the dashboard. Trent also publishes a benchmark against other tools on 28 CVEs from CWE-Bench, with its method, runs and ranges, and names a case it missed.",
   "**What holds as shipped, and what with options on.** Reach 3, Control 2 and Openness 3 hold as shipped. Autonomy 3 holds with options on: with team connectors, Trent files tickets in Linear or Jira itself, and in the fully automatic loop, run only on finding categories the team has cleared once, it hands fixes to the customer's coding agent, reviews and verifies them, and brings the rest to a person with a recommended decision. Code changes are made by the customer's coding agent, not by Trent.",
   "**What would move it.** Autonomy 4: a page saying a person approves only critical decisions while the loop runs. Control 3: a documented log of the agent's actions, a way to pause or stop it, or monitoring in operation. Openness 4: an independent check of the agent, such as an audit or test report that can be read. The In production badge needs a named customer, or usage figures, for the loop that acts.",
-  "**Seen, and not counted.** The challenger lowered two credits. The design partners named in the April 2026 funding post (Canopy, Commscentre, ML@Cam, Qbeast and Weblogic) report posture visibility, an audit report and a remediation scope, which is the analysing capability, and the one story about the remediation loop names no customer; so the card shows no In production badge. A penetration test is listed but available only on request, and is not shown to test the agent itself. The trust centre renders only in a browser, so its SOC 2 and subprocessor details were not captured."
+  "**Seen, and not counted.** The challenger lowered two credits. The design partners named in the April 2026 funding post (Canopy, Commscentre, Qbeast, Weblogic and others) report posture visibility, an audit report and a remediation scope, which is the analysing capability, and the one story about the remediation loop names no customer; so the card shows no In production badge. A penetration test is listed but available only on request, and is not shown to test the agent itself. The trust centre renders only in a browser, so its SOC 2 and subprocessor details were not captured."
  ],
  "article": {
   "title": "Trent AI on the GAMMA-Ray Spectrum: {sig:trent-ai-security-engineer}",
