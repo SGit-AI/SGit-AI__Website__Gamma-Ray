@@ -19,8 +19,92 @@
   "published": "2026-11-11"
  },
  "review": {
-  "status": "draft",
-  "rounds": []
+  "status": "round-1",
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card computed with the scorer: A4 R3 C2 O2, shipped levels equal held levels in every dimension (no level rests only on an available-mode answer once I10 and S4 are counted as default). Removal tests on the scorer: without I18, or without I08, Autonomy drops from 4 to no level; without I10 it holds at 4 only through I12 (available, Data Insights deployed), shipped 3; without I25 Reach falls to 2; without S4 Reach is 2 as shipped (I14 is available only); without I38 Control falls to no level. The card still publishes on any single removal (Reach, Control or Observability stay at one or more)."
+     },
+     {
+      "answer": "I08,I18",
+      "severity": "should-fix",
+      "finding": "Autonomy 3 and 4 rest on exactly these two answers and nothing else, both taken from release-note bullets about Data Governance workflows (2026.03 and 2026.04 in the releases page). The I18 span says results apply at once 'since these are read-only analyses', and the same bullet says generated tags and rules still need a reviewer; the I08 span says results are written directly when the workflow finishes. What is documented is that read-only analysis results are stored without approval and that writes of tags and rules wait for a person. No page read shows an agent changing anything in a customer system: execute_query is SELECT only, the MCP tools are read tools, the Operator role cannot create or delete. Whether this is 'works independently, person approves critical decisions only' (I18) or 'agent suggests, person approves each action' (I16) is a reading; the notes should say that the evidence is scoped to the Data Governance workflows and to analysis results, and the card text for Autonomy should not read wider than that. The notes cite the right versions (the 2026.04 and 2026.03 sections match). Quotes are exact in the page."
+     },
+     {
+      "answer": "I10",
+      "severity": "note",
+      "finding": "I10 (default) is what holds Autonomy at 4 as shipped. The span is in the data connections page and the implemented list (PostgreSQL, Redshift, Snowflake, S3, GCS, MinIO, NFS) matches the note; MySQL, BigQuery, Databricks and SMB are marked Planned and are correctly not counted."
+     },
+     {
+      "answer": "I12",
+      "severity": "note",
+      "finding": "Span exact. The page shows Insights, Text2SQL and Coding agents as separate services (own ports) passing work over A2A. The scope of I12 asks for agents with their own context and authority; the Platform Integration section says Data Insights makes no permission checks of its own and calls with the caller's token, so the agents share one authority. Not decisive for the level (I10 alone gives A4) but the note could say the agents are components of one solution."
+     },
+     {
+      "answer": "I14,S4",
+      "severity": "should-fix",
+      "finding": "Reach 3 as shipped rests on S4, not I14. S4 is sourced to the MCP page: a hosted endpoint (craft.emergence.ai/mcp), a section titled 'Calling CRAFT from an external agent' with Pydantic AI, Google ADK and raw HTTP examples, OAuth 2.0 PKCE, tools listed. That is an interface the product exposes for agents to call, documented as current (the page has a verified-on date and no Planned banner; release notes 2026.05/2026.06 list the MCP tools and an OIDC discovery fix for MCP clients). It is agent to tool (MCP), not a protocol between independent agents. I14 is A2A used between the components of Data Insights (Talk2Data service, Insights, Text2SQL, Coding agents) with Agent Cards for discovery; I found no page that documents an A2A endpoint an outside agent can call. The scan's 'what' line says CRAFT 'exposes a hosted MCP server and A2A agents': the MCP half is documented, the A2A half is internal. Change 'what' to say A2A is used between its own agents, and keep I14's note as it is (it already says 'talk to each other'). My own read-only probe of the endpoint did not connect from this environment (no HTTP code), so liveness is not observed here; the scan note says the same. The mode default for S4 is defensible (catalog tools are 'always available'; the Talk2Data tools are only when Data Insights is deployed)."
+     },
+     {
+      "answer": "I25,I21",
+      "severity": "should-fix",
+      "finding": "Reach 3 (and Control 2 through I25, though I23 also gives Control 2) depends on I25 and its evidence is one sentence of the MCP page: 'each project defines which tools each agent identity may call' (the same span is used for I21). The page points to Platform Authorization and Platform Agents for configuration, but neither of those captured pages mentions a tool allowlist; I searched all captures, only the MCP page, the LLM gateway page and llms.txt use the word, so how an operator sets it is not documented in the sources. The LLM gateway page that repeats it (em-runtime-mcp as tool gateway, per-agent tool allowlist, audit events) sits under a page that calls itself target architecture for the LLM gateway; the tool-gateway table is not marked planned, but say in the I25 note that the allowlist is stated on the MCP page only. I25 asks that it takes narrower access than the whole account: the MCP page also documents project scoping through X-Project-ID with membership enforced server side and OAuth scopes of openid profile email only. Naming that in the note would make the credit stronger and less dependent on one sentence. Quote exact (10 words), tool_not_allowed and SELECT-only both found."
+     },
+     {
+      "answer": "I23,I38,I45",
+      "severity": "pass",
+      "finding": "I23 (roles table, span exact in the roles page), I38 (2026.03 release bullet, 'so reviewers approve before commit' exact) and I45 (require_permission on every endpoint, OpenFGA; 'Data Insights never implements its own permission checks' is in the Data Insights page, which is the cited source of that half of the note only in part: the I45 answer cites the authorization page, so say that the Data Insights sentence comes from the overview page) are supported. Note on I45: it is the enforcement in the platform services, a documented limit outside the agent, which the Spectrum scope of I45 accepts."
+     },
+     {
+      "answer": "I41,I42,I48",
+      "severity": "note",
+      "finding": "These three are needs: operation and graded documented. Their Spectrum scope for I41 is met by the agent audit text, but I42 and I48 have no Spectrum reading, and in the governance rating they count only when observed or measured. They do not affect any level now (Control stops at 2 because I43 is absent). If Control 3 or 4 is ever shown, they have to be treated as unevidenced there. I42: the audit log page calls the log tamper-evident and gives 90 days default retention, but names no mechanism; the note should not read as a verified property. I41 mode available (agent audit turned on per project) is right; the MCP page alone says every gateway call writes an audit event, so the default reading is arguable but the scan chose the safer mode."
+     },
+     {
+      "answer": "I04",
+      "severity": "pass",
+      "finding": "Span exact in the Semiconductor overview; mode available with the semiconductor configuration is right (a separate solution). Not used in any level."
+     },
+     {
+      "answer": "I11",
+      "severity": "note",
+      "finding": "Span exact (release 2026.06). The note says the connections page marks OAuth and SSO as planned, which the page does say, while the release bullet is titled 'key-pair and OAuth/SSO authentication'; the two pages disagree and the note takes the narrower reading, which is right. Not used for a level beyond I10 (Reach 2 is also carried by Reach 3)."
+     },
+     {
+      "answer": "I20,I22,I58,I61",
+      "severity": "note",
+      "finding": "Observability 2 rests on I20 with any of I22/I58, then two of I22, I58, I61; all three present, so removing one leaves it at 2. All spans are exact and under fifteen words. I22 is an errors and limits table of the MCP server, not a list of failure cases of the agents; I58 is a classification scheme with examples of data, not a description of what the agents use; I61 span ends 'and more' (not an enumerated model list), the note rests on the component names (Keycloak, OpenFGA, Prefect, LiteLLM) in the platform table. Each counts under the indicator text, but these are the weakest facts on the card for O2, and the note for I61 should say the model list is open."
+     },
+     {
+      "answer": "S3",
+      "severity": "should-fix",
+      "finding": "llms.txt resolved and lists OpenAPI specs (I fetched it, HTTP 200), so observed is right. The span 'Introduction to CRAFT' is only a page title in that file and does not show an llms.txt or an API description; use a span such as the OpenAPI Specs heading line, or one of the lines of the file that names the index. Not used for any level (Observability 3 needs I50)."
+     },
+     {
+      "answer": "I20,I21,I26,I29,I39,I57,I68",
+      "severity": "pass",
+      "finding": "Spans exact in their sources and under fifteen words; notes match the sources. I26 note correctly says the service accounts are for background workers and not for the chat agents. I29 registry marked available now in the page. I39 cancel call exists (same user and project only). I57 is a per-turn rating, which is a feedback channel but not a way to contest output; not used for a level."
+     },
+     {
+      "answer": "captures,announced",
+      "severity": "pass",
+      "finding": "Programmatic check: every answer source, every URL in a note, and every announced source is a key of the scan's captures (0 uncaptured). The announced entries match what I read: Toolkit marked Planned (introduction), Webhooks page titled Planned and says planned but not implemented, LLM gateway page says it describes target architecture and the current charts do not bundle a managed gateway, agent registry enterprise governance has no status, news item of 18 March 2026 on 500 researchers, home page claims of determinism. The India lab hiring item says nothing about the product; consider cutting it. No S1 answer is given and none is needed: no session, task or pull request counts were found on the pages; install or customer counts are not credited."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Style: no em-dashes, at-signs or personal names found in the scan's own text that I read; one caution: the scan's 'what' line is an adjective-free summary but should be corrected as noted under I14. Everything is read as material."
+     }
+    ]
+   }
+  ]
  },
  "assessment": {
   "by": "gamma.studio@web-summit.dinis",
