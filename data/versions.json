@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.183",
+    "date": "2026-11-11",
+    "what": "one-row jump bar on the home page",
+    "by": "gamma.design@web-summit.dinis",
+    "from": "05e270c96"
+  },
+  {
     "version": "v0.0.182",
     "date": "2026-11-11",
     "what": "round three answered on our own PrompTugal.news team scan",
