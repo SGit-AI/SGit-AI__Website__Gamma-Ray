@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.144",
+    "date": "2026-11-11",
+    "what": "loop 20 log",
+    "by": "gamma.design@web-summit.dinis",
+    "from": "47771a0c4"
+  },
+  {
     "version": "v0.0.143",
     "date": "2026-11-11",
     "what": "sign off ethiack-hackian",
