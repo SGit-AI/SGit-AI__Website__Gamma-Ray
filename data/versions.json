@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.203",
+    "date": "2026-11-11",
+    "what": "trent-ai-security-engineer: round 3 answered (I25 note names the dashboard page too; mode kept default)",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "6367e6a84"
+  },
+  {
     "version": "v0.0.202",
     "date": "2026-11-11",
     "what": "crowdstrike report without the uncaptured maintenance-mode claim; Emergence note no longer on hold (gamma-ray@ answered)",
