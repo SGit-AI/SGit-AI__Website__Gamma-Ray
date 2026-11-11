@@ -19,7 +19,7 @@
   "published": "2026-11-11"
  },
  "review": {
-  "status": "round-1",
+  "status": "round-2",
   "rounds": [
    {
     "round": 1,
@@ -61,6 +61,54 @@
       "answer": "S3",
       "severity": "note",
       "finding": "S3 is observed by probe and the llms.txt resolves with status 200 on the live fetch. It does not move a level: Openness 3 needs I50 (published evaluations) as well. The captured byte counts differ by a few bytes from the fetched file (llms.txt 8202 vs 8196, FAQ 63105 vs 63099), which is the capture tool counting differently; the hashes were not recomputed and a change of text in the meantime is not seen in the spans."
+     }
+    ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I09",
+      "severity": "should-fix",
+      "finding": "Round one's note is answered in words (the answer note and the scan note now say the page is the only source for Reach 1 and that PrompTugal.news is of the same operator group), and that is true in the scan. But the disclosure is not the fix: the same card's own FAQ and llms.txt (both captured) already say the scanner reads one kind of page, UK real estate firms' careers pages, and the FAQ says it adds new roles from them. I09 ('works in one domain's data') could be sourced from the company's own FAQ with an exact span, which would remove the dependence on a media page of the operator group and the founder figures the page itself calls unchecked. As it stands the only level one in Reach credits a page from the operator group, and the note's phrase 'the scanner works on job postings only' is the scan's inference: the interview says they collect 'every job they can find' and nowhere says 'only'. Either re-source I09 to the FAQ span, or keep it and word the note as what the page says."
+     },
+     {
+      "answer": "I20,I58",
+      "severity": "should-fix",
+      "finding": "Round-one note kept by the studio ('both meet the rule as written'). Verified: the I20 span (llms.txt) and the I58 span (FAQ) are the same sentence of the same fact in two files: the scanner checks UK real estate firms' careers pages. Rule O1 is I20 plus one of I56, I22, I58, so the whole level rests on one sentence counted twice; remove I58 and Openness is 0, remove I20 and it is 0. I20 is 'purpose and permitted tasks are stated in writing': the cited sentence is under 'How roles are found', it states a method, and no page states permitted tasks. The purpose sentence of llms.txt ('a free app that brings UK real estate careers into one place') describes the app, not the scanner. I58 'the data it uses is described' is met only by naming where roles are read from; nothing describes what is stored, kept or used (members' preferences drive alerts per the FAQ but the data is not described). The credits are defensible only as the minimal reading; the scan should either say in the I58 note that it is the same fact as I20 or accept that Openness 1 is the weakest level on the card. Also not dated by the company: both pages carry no date of their own; the date is the capture."
+     },
+     {
+      "answer": "S1,S4,I22,I57,I05",
+      "severity": "note",
+      "finding": "Round one suggested not_credited entries for I05 and I57; the response says 'Agreed' but the scan still has not_credited [] and announced [] (verified). The assessment block says I05 and I57 were lowered by the challenger and nothing on the card explains why. Not a level change, but a reader of the card cannot see what was considered. Add entries with reasons (I57: the FAQ lists no channel to report a problem with the scanner's output; I05: the interview names the scanner as the founders' own Python scrapers with a model, which suggests in-house but no page says the organisation controls identity, tools and boundaries)."
+     },
+     {
+      "answer": "S3",
+      "severity": "note",
+      "finding": "Response 'the few bytes are a page served dynamically; the spans are in both copies' is partly checked. The captured sizes (llms.txt 8202, FAQ 63105) and hashes for those two match my live fetch byte for byte (same sha256), so the earlier byte difference was the capture tool counting. The interview capture hash changed between round one (6d4647...) and now (fe9fc2...), and a live fetch gives yet another hash each time with the same length 4908: only the site version digits in the footer change between deploys (v0.1.1166 in my fetch). So the interview page's hash cannot be reproduced; the spans and the text are stable. Note for the gate and the reader: the hash pins one build of a moving footer, not the statement."
+     },
+     {
+      "answer": "I08,S3,I09,I20,I58",
+      "severity": "pass",
+      "finding": "Checked in full: every answer unchanged since round one except the I09 note and the scan note (git diff 4613fe6..HEAD). Spans are present verbatim in the current captured text and under fifteen words (I08 11, I09 13, I20 14, I58 12, S3 14). Every URL in answers, notes, not_credited and announced (compared programmatically against captures keys) is a key of captures: the interview index.md, the FAQ and llms.txt; no other URL in the scan. Grades (documented for statements, observed with method probe for S3) and mode default are right. I08 is correctly credited from the FAQ ('adds new graduate schemes ... as they open'). The response to I08 (the report says no public page states the person's role) is true of data/reports/student-property-network.json."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Arguing against Reach 1: R1 is 'Contained' and the rule is any of I09, I01. I09 is credited from a paraphrase by a media page of the same operator group; the card's standing as the only public level in Reach is therefore the least independent. The interview talks about the founders also using an AI coding agent while building the platform; that is not the scanner's reach and is rightly not credited. If I09 is removed (or re-sourced to the FAQ), R1 survives only on a re-source; without it the card is O1 alone, which still publishes. Does I09 show 'works in one domain's data'? Only by inference from 'every job' and careers pages; no page says the scanner is limited to one domain. Arguing against Openness 1: see the I20,I58 finding: one sentence, method not mandate, credited twice."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card recomputed with the helper: A- R1 C- O1; used I09 (R), I20 and I58 (O). Publication rule (level one or more in at least one dimension) is met in both Reach and Openness; if either credit fell, the card would still publish on the other, and if both fell it would not (no card below level one in every dimension), so the card depends on the two weakest credits."
+     },
+     {
+      "answer": "report data/reports/student-property-network.json",
+      "severity": "should-fix",
+      "finding": "New problem, outside the scan file but cited as the card's report: the report fact 'On the day read, the site listed 171 open real estate roles' with span '171 open now' cites llms.txt, but the captured and live llms.txt says '175 open now' for all roles (120 graduate schemes, 5, 19, 30), and the 00:54 and 03:48 captures have the same sha256, so '171 open now' never appears in the captured text. Fix the report (175, read date) or drop the fact. Also the report analysis says 'Disclosed' and 'Contained' carry the card; its 'Contained' sentence says the model decision 'keeps the scanner's work to one domain', which is the studio's reading, not the page's words."
      }
     ]
    }

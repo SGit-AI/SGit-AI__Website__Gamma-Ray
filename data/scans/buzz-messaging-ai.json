@@ -19,7 +19,7 @@
   "published": "2026-11-11"
  },
  "review": {
-  "status": "round-1",
+  "status": "round-2",
   "rounds": [
    {
     "round": 1,
@@ -71,6 +71,59 @@
       "answer": "levels",
       "severity": "note",
       "finding": "Card A2 R2 C1 O1 (node card.mjs). No level three or four, so no argue-against round needed. A2 via I16 alone; R2 via I10 and I11; C1 via I38 alone; O1 via I20 and I58. O2 would need a second of I22, I61 (not claimed). No S1 or S4 claim, so the In production badge and agent-interface checks do not apply. Card publishes (level one or more in every dimension). Product-shape: no governance level, consistent with rules."
+     }
+    ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "basis",
+      "severity": "should-fix",
+      "finding": "The field basis reads 'interviewed as Buzz Messaging AI's own public pages (product, documentation, ...)'. The words 'interviewed as' make no sense there and mix two things: the card rests on the company's own pages (work, integrations, agents.md, llms.txt, about, ai-facts), and the interview is a third-party page used only for the announced entries. State plainly: the company's own public pages as captured on 2026-11-11, plus one third-party interview used only for announced items."
+     },
+     {
+      "answer": "I16",
+      "severity": "note",
+      "finding": "Round one should-fix answered: the note now says the gate is stated for creation only, and the span, grade and mode were re-verified (work page and agents.md both say nothing is created until the asker confirms). Remaining weakness, not a new defect: A2 still rests on I16 alone and the indicator says each action. Agents.md states 'read, create and edit Docs, Sheets and Slides' and web search, and only creation is gated in words. If I16 were read strictly, Autonomy would fall to below one (I15 and I07 not claimed). Booking a meeting is a creation, so the gate arguably covers it; edits are not covered in words."
+     },
+     {
+      "answer": "I58",
+      "severity": "note",
+      "finding": "Round one note on mode: the response says the credit does not depend on a connection, and the span (files shared in the room, with the asker's own access) supports that. But the answer note still lists Notion, Google Drive and Google Calendar as what the agents read under mode default, and those reads exist only after a person connects the tool (the answer has no cfg). Narrow the note to the room files for the default credit, or mark the connected-tool part as available. The level does not change: O1 holds on I20 with I58."
+     },
+     {
+      "answer": "I20",
+      "severity": "note",
+      "finding": "Response is true (agents.md does list read, create, web search and room files for agents), but the cited source is still the llms.txt product line. That sentence is the Buzz work line in a marketing index, so permitted tasks are implied only. Cite the agents.md AI agents section for I20 so that O1 does not rest on a one-line description. O1 falls if I20 falls, since I22 and I56 are not claimed."
+     },
+     {
+      "answer": "I10",
+      "severity": "pass",
+      "finding": "Re-checked after the change: agents.md has the span exactly (14 words), and names three systems plus the web; the Jira or Linear two-way sync is in the same section. Grade documented, mode available, cfg connected fit (Drive, Calendar, Notion by each person, Jira and Linear by an admin). I10 is the right indicator (several systems). R2 also stands on I11."
+     },
+     {
+      "answer": "announced",
+      "severity": "note",
+      "finding": "The bring-your-own-model entry now says only what the captured interview page says (own API keys, Mistral named among recommended providers), so the round one should-fix is answered. Voice and video (early 2027), integrations coming soon (Gmail, Slack, Zapier), and infrastructure phases 2 and 3 are each in their cited captured page. One entry is not an announcement: 'a more advanced agent control policy' records the founder saying the policy is not yet as advanced as he would like, with no plan or date. Consider moving it to a plain note, or reword the entry as a founder remark, not a coming feature. Also the company's own agents.md tells assistants not to name an AI provider; the Mistral remark is the founder's only, which the entry says."
+     },
+     {
+      "answer": "what",
+      "severity": "note",
+      "finding": "The what line says agents 'propose tasks that sync to Jira or Linear after confirmation'. The sources say created tasks can sync two-way with Jira or Linear and that creation waits for confirmation; the sync itself is not said to wait for a second confirmation. Reword to 'tasks created after confirmation can sync'."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A2 R2 C1 O1 (node card.mjs reproduced). No level three or four, so no argue-against of high levels, but the weakest rests are: A2 on I16 alone (remove it: Autonomy 0, card still publishes on R2, C1, O1); C1 on I38 alone, the same sentence as I16 (remove it: Control 0; I47 not claimed since the founder calls the control policy not yet advanced and no rule in prose is cited); O1 on I20 plus I58 (remove either: Openness 0; I22 and I56 not claimed); R2 on I10 and I11, either enough. A3 is not credited: I08 is present but no I17, I18 or I19, which is right since no source says routine tasks run without a person. C2 needs I23 or I25 (a documented scope list or roles); the integrations page and the 'asker's own access' wording may support I23 in time, shown as next unlock. Rule met: level one or more in every dimension."
+     },
+     {
+      "answer": "I08,I11,I38,S3,captures",
+      "severity": "pass",
+      "finding": "Verified against fresh fetches on 2026-11-11 into my own folder: every span is in its cited source (I08 11 words, I10 14, I11 8, I16 7, I20 12, I38 9, I58 13, S3 3), all under fifteen. Every URL cited anywhere in the scan (answers, announced, not_credited, notes) is a key of captures, compared programmatically; no uncited page is relied on (the assistant page is gone from the announced entry). I08 is documented and available, I11 documented and available with cfg connected, I38 documented and default (agents.md says only created once the person confirms), S3 observed (llms.txt and agents.md resolve). Captures were re-read at 03:48 and sha256 values updated, and live byte counts differ by a few bytes on some pages (page build noise), but none of the cited sentences changed. No em-dashes and no at-signs in the scan except the agent names. not_credited is empty, which matches the lowered ids in the assessment."
      }
     ]
    }

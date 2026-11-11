@@ -19,7 +19,7 @@
   "published": "2026-11-11"
  },
  "review": {
-  "status": "round-1",
+  "status": "round-2",
   "rounds": [
    {
     "round": 1,
@@ -86,6 +86,54 @@
       "answer": "announced",
       "severity": "pass",
       "finding": "The four announced items match their sources: Salesforce for other agents 'is planned' (help article), European Commission DG HR 'will be used' (clients page), the Gartner news item and the anonymisation marketing claim (security page, marked not assessed). All four URLs are captured."
+     }
+    ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "levels",
+      "severity": "should-fix",
+      "finding": "The third not_credited entry (I47 and other Control facts, source agentstudio) says no captured page states a log of agent actions, and that the help centre's workflow articles are behind sign-in. The first part is not true of the captured Agent Studio page: under 'Built for regulated enterprises' it says 'Auditable actions: Transparant reasoning, source links and full activity logs' and 'Governed outputs: Playbook enforcement, approvals and role-based access'. The Legal Radar page also says 'keep an audit trail for every compliance action'. I41 needs operation, so a vendor statement cannot earn it and Control stays at 1; the entry should say that (the page claims activity logs, which a statement cannot credit) instead of saying no page states one. The sign-in claim names pages no capture shows (the help centre home capture lists no workflow articles), so it relies on an uncaptured page; cut it or capture the page. The round-one response that this was recorded is therefore only partly true. S1 and S4 entries are correct: the clients page names Nemetschek, Gimpel and others with figures but no tie to Agent Studio workflows, the Commission item reads 'will be used', and Salesforce MCP is consumed."
+     },
+     {
+      "answer": "I07",
+      "severity": "note",
+      "finding": "Response true: the answer now cites Legal Radar, span 'Every update includes a plain-English summary, business impact and recommended next steps' is exact (12 words) and the page continues 'so you know what to do, not just what changed'. Indicator fits. Mode default is asserted but the page does not show whether Legal Radar is included by default or a separate module; it counts only with I02 to I05, none answered, so no level depends on it. Answered."
+     },
+     {
+      "answer": "I08,I17",
+      "severity": "note",
+      "finding": "No change, response argued rather than edited. Its corroboration claim is loose: the template it points to says 'flags the response deadline and drafts a response for attorney review', not that it routes for approval or sets a reminder. The scan does not use that claim, so nothing to fix. See the levels finding."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A3 R2 C1 O2 (card.mjs). Argued against Autonomy 3: it needs I08 and one of I17/I18/I19. I08 rests on one template line from a workflow library, 'redlines related documents and emails you the results'; the email goes to the requester, and the redline is a document edit, so it is a thin reading of 'executes actions itself'. I17 rests on another template, 'with Legal approving anything not clearly covered', which does give an exception path. Remove I08 or I17 and Autonomy falls to 2 (I16, default). Both are mode available, cfg agent-studio, and the card shows 'avail available', so the mode is shown honestly; the card does not say that the evidence is two template descriptions with no customer or usage tied to them. Level 4 is not claimed (needs I18, unanswered). Reach 2 stands on I10 and I11 (either alone); Control 1 stands on I38 alone, a statement that a builder can add approval steps; Openness 2 needs two of I22, I58, I61, each narrow (one integration, one agent, a subprocessor list) but any pair satisfies the rule. The publication rule (level one or more in at least one dimension) is met."
+     },
+     {
+      "answer": "I38",
+      "severity": "note",
+      "finding": "Response true: note now reads 'a workflow builder can add approval and review steps at the points where a decision is needed', span 'Set approval and review steps where a decision is needed' exact (10 words) under 'Human in the loop'. It shows ability, not a rule for high-impact actions; Control 1 reads that way. Mode available is right. Answered."
+     },
+     {
+      "answer": "I10,I22,I16",
+      "severity": "pass",
+      "finding": "Verified against the live pages. I10: clause removed, note now matches 'let Discovery search your folders without moving documents', span exact (12 words), available. I22: anonymisation clause removed, note states only the read-only limit; span 'This integration is currently read-only.' exact on the Salesforce article, which also says 'it cannot create, update, or delete records'. I16: 'each one' removed; span exact (11 words) on the June 2026 post. All three answered."
+     },
+     {
+      "answer": "I57,I36",
+      "severity": "note",
+      "finding": "Both kept as before with weak fit (generic 'Submit a request' form; a request-only document title for EU AI Act Article 50). The responses are accurate, the spans are exact and in range, and neither feeds a level. Not required to change."
+     },
+     {
+      "answer": "captures,announced,spans",
+      "severity": "pass",
+      "finding": "Checked by program: every URL in answers, announced and not_credited is a key of captures (twelve keys, none missing); all fourteen spans are found in their cited source after whitespace and quote normalisation and none exceeds 12 words; no em-dash and no email in the scan (the at-sign appears only in the by fields). Announced items (Salesforce for other agents planned, Commission 'will be used', Gartner news item, anonymisation claim) match their pages. Round one findings I07, I10, I22, I16, I38 and the S1/S4 not_credited entries are answered as stated; only the Control not_credited entry is not."
      }
     ]
    }
