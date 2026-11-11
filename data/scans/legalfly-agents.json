@@ -89,6 +89,92 @@
      }
     ]
    }
+  ],
+  "responses": [
+   {
+    "round": 1,
+    "answer": "I07",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Agreed on both counts: the Salesforce source shows retrieval, not recommendation. I07 now cites the Legal Radar page, which says every update comes with recommended next steps (span verified on the captured page), mode default; no level changes."
+   },
+   {
+    "round": 1,
+    "answer": "I08,I17",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Argument answered, no change: both spans are verbatim, the page says customers start from pre-built workflows or build their own, and the same page corroborates acting with an exception path (a template that drafts responses, routes them for approval and sets a deadline reminder). The mode stays available/agent-studio, so the card shows Acts only in that configuration."
+   },
+   {
+    "round": 1,
+    "answer": "I38",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept at Control 1 in available mode, note softened to what the page says: a builder can add approval and review steps where a decision is needed, which matches Control 1's 'documents say how people approve'. No other indicator fits: no captured page states a prose rule limiting the agents (I47), a pause or stop (I39) or an action log (I41), and the workflow help articles are sign-in only; this is recorded in not_credited."
+   },
+   {
+    "round": 1,
+    "answer": "I10",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Cut 'alongside LEGALFLY's own sources'; the note now follows the page ('let Discovery search your folders without moving documents'). Mode and span unchanged."
+   },
+   {
+    "round": 1,
+    "answer": "I22",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Removed the anonymisation FAQ clause, which came from the security page; the note now states only the Salesforce read-only limit from the cited article. Kept as a documented user-facing limit; Openness 2 does not depend on it."
+   },
+   {
+    "round": 1,
+    "answer": "I57",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept as documented; the fit is weak but the help centre's request form is the only public support channel found, and it feeds no level."
+   },
+   {
+    "round": 1,
+    "answer": "I36",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept; the note already says only the document title was read, and Q10 is outside the public levels."
+   },
+   {
+    "round": 1,
+    "answer": "I16",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Removed 'each one'; the note now says the agent suggests redrafts and a reviewer applies a suggested redraft, as the post says. Autonomy 2 unchanged."
+   },
+   {
+    "round": 1,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Added not_credited entries for S1 (customers named but none tied to Agent Studio workflows; the Commission item is future tense) and S4 (the Salesforce MCP is consumed, not published), plus the absent Control facts."
+   },
+   {
+    "round": 1,
+    "answer": "captures",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Still holds: every source in the edits and not_credited is a key of the scan's captures, and the one new span (Legal Radar) is verbatim, 12 words, no em-dash."
+   },
+   {
+    "round": 1,
+    "answer": "I20,I11,I58,I61,I08,I17",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change."
+   },
+   {
+    "round": 1,
+    "answer": "announced",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "No change."
+   }
   ]
  },
  "assessment": {
@@ -105,9 +191,9 @@
  },
  "answers": {
   "I07": {
-   "e": "https://help.legalfly.com/articles/38318067078162-salesforce",
-   "n": "Discovery retrieves and summarises connected data to answer questions; it does not change the records it reads.",
-   "span": "Discovery can retrieve and summarize Salesforce data",
+   "e": "https://www.legalfly.com/products/legal-radar",
+   "n": "Legal Radar monitors regulatory updates and gives each one a summary, its business impact and recommended next steps for the team to act on.",
+   "span": "Every update includes a plain-English summary, business impact and recommended next steps",
    "g": "documented",
    "m": "default"
   },
@@ -121,7 +207,7 @@
   },
   "I10": {
    "e": "https://www.legalfly.com/platform/integrations",
-   "n": "Discovery can search connected SharePoint and Google Drive folders alongside LEGALFLY's own sources.",
+   "n": "SharePoint and Google Drive can be connected so that Discovery searches the customer's folders without moving the documents.",
    "span": "Connect SharePoint and Google Drive to access your documents directly in LEGALFLY.",
    "g": "documented",
    "m": "available",
@@ -137,7 +223,7 @@
   },
   "I16": {
    "e": "https://www.legalfly.com/post/product-highlights-june-2026",
-   "n": "In Review the agent proposes redrafts and a reviewer chooses to apply each one.",
+   "n": "In Review the agent suggests redrafts during a contract review and a reviewer applies a suggested redraft.",
    "span": "When a reviewer applies a suggested redraft during a contract review",
    "g": "documented",
    "m": "default"
@@ -159,7 +245,7 @@
   },
   "I22": {
    "e": "https://help.legalfly.com/articles/38318067078162-salesforce",
-   "n": "The help centre states a limit for users: Discovery's Salesforce integration reads records and cannot create, update or delete them; the security FAQ also says anonymisation can hide needed context and how to adjust it.",
+   "n": "The help centre states a limit for users: Discovery's Salesforce integration reads records and cannot create, update or delete them.",
    "span": "This integration is currently read-only.",
    "g": "documented",
    "m": "default"
@@ -173,7 +259,7 @@
   },
   "I38": {
    "e": "https://www.legalfly.com/agentstudio",
-   "n": "Workflow builders can place approval and review steps before a workflow continues.",
+   "n": "In Agent Studio a workflow builder can add approval and review steps at the points where a decision is needed.",
    "span": "Set approval and review steps where a decision is needed",
    "g": "documented",
    "m": "available",
@@ -201,7 +287,23 @@
    "m": "default"
   }
  },
- "not_credited": [],
+ "not_credited": [
+  {
+   "what": "S1 (In production)",
+   "why": "The clients page names customers with outcome figures, but none is tied to Agent Studio workflows, the capability that acts; the European Commission item says the technology will be used, which is not use.",
+   "source": "https://www.legalfly.com/clients"
+  },
+  {
+   "what": "S4 (a published agent interface: MCP server, agent card or agent API)",
+   "why": "The Salesforce MCP integration is one the product consumes; no captured page describes an MCP server, agent card or API that LEGALFLY publishes for its agents.",
+   "source": "https://help.legalfly.com/articles/38318067078162-salesforce"
+  },
+  {
+   "what": "I47 and other Control facts (I39 pause or stop, I41 action log)",
+   "why": "No captured page states a written rule limiting what the agents may do, a way to pause or stop a running workflow, or a log of agent actions; the help centre's workflow articles are behind sign-in.",
+   "source": "https://www.legalfly.com/agentstudio"
+  }
+ ],
  "announced": [
   {
    "what": "Salesforce support in agents other than Discovery is planned",
@@ -248,62 +350,62 @@
   "https://help.legalfly.com/": {
    "sha256": "160a0efc5979b01cbca05daffcae6de111d88c21ef0a7edd0e8a13b8cd990d57",
    "bytes": 6986,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T03:49Z"
   },
   "https://help.legalfly.com/articles/38318067078162-salesforce": {
    "sha256": "eab87ef08deef901ace6a30f83c9cc758d842a0ae5bc80bb06a35fa374517306",
    "bytes": 10037,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T03:49Z"
   },
   "https://trust.legalfly.com": {
-   "sha256": "b5c8d2b68a1e704eb52ceb30bebe973098b8490fc739d406d8df3c9e06c41188",
+   "sha256": "d3a6399688e6d3dc1ac1c2e7e9f1e369b91b107674ea9827e535e537b4befa67",
    "bytes": 235282,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T03:49Z"
   },
   "https://www.legalfly.com/": {
-   "sha256": "d00b85ca102296d76791aa86ea667b44cc8d9ef03afa20b47d120f839539038c",
-   "bytes": 632665,
-   "read_at": "2026-11-11T00:54Z"
+   "sha256": "e8128b5f761d3539bd0f7176f8b1466e91d4449451147d633ca487e0cf417e6b",
+   "bytes": 630663,
+   "read_at": "2026-11-11T03:49Z"
   },
   "https://www.legalfly.com/agents": {
    "sha256": "9726e5ff0b49411397aeed59d8f22778fb0faa3d1407f1618767f7f10f70ad11",
    "bytes": 511957,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T03:49Z"
   },
   "https://www.legalfly.com/agentstudio": {
    "sha256": "97595a3901780ca5d5d17f7c6de7059aed5b6e203049ad2a3ee41bbc32beb8ac",
    "bytes": 355485,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T03:49Z"
   },
   "https://www.legalfly.com/clients": {
    "sha256": "e4ceaaf370a1779754420a7481b0f1d5dbe13050143c0bfe33478bdb67c56b55",
    "bytes": 625910,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T03:49Z"
   },
   "https://www.legalfly.com/platform/integrations": {
    "sha256": "6fd75589cc19dc35dee30741b564b67ac9a6f5b9458c126eb2fd2f346587ad9d",
    "bytes": 559821,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T03:49Z"
   },
   "https://www.legalfly.com/post/product-highlights-june-2026": {
    "sha256": "48e410f540545a86c7347303473aa9fa6205a1a24d3059bc2dc55c99d893da5d",
    "bytes": 556059,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T03:49Z"
   },
   "https://www.legalfly.com/products/legal-radar": {
    "sha256": "b0e6d0884dcda6caf4eace341455228cf8f7d45e864724e1bedc273bfd0253d7",
    "bytes": 596204,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T03:49Z"
   },
   "https://www.legalfly.com/products/workflows": {
    "sha256": "709b8bf7f3ec336a229dffdc1c073ab82eab124a8413b54b45bac1d4560176a8",
    "bytes": 697421,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T03:49Z"
   },
   "https://www.legalfly.com/security": {
    "sha256": "44238e5158a9a284fe27a3b292b5b29de9cbfacd6ea663433e556932b00cae0b",
    "bytes": 602177,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T03:49Z"
   }
  }
 }
