@@ -1,0 +1,404 @@
+{
+ "id": "emergence-craft",
+ "name": "CRAFT",
+ "operator": "Emergence AI (the vendor); each customer is the operator of its own use",
+ "company": "emergence",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-11",
+ "tier": "public",
+ "basis": "Emergence AI's own public pages (product, documentation, blog, customer stories, legal and security pages)",
+ "seen_by_operator": null,
+ "what": "Enterprise platform of agents over company data, composed of Assess and Enrich modules (Toolkit planned), with solutions for Data Insights (talk-to-data), Data Governance and Semiconductor analytics; exposes a hosted MCP server and A2A agents.",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. From the studio's Web Summit 2026 agents list. Pages that describe target architecture or planned features are not counted.",
+ "grant": null,
+ "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
+ "vault": {
+  "id": "5761h586",
+  "read_key": "sgit_public_read_138610d4e7b08287ce2775b7cdb5c8f8cff9de7aecc97aed03239e100b10d9fa:5761h586",
+  "published": "2026-11-11"
+ },
+ "review": {
+  "status": "draft",
+  "rounds": []
+ },
+ "assessment": {
+  "by": "gamma.studio@web-summit.dinis",
+  "researcher_assessor": "a sub-agent of gamma.studio",
+  "challenger": "a sub-agent of gamma.studio",
+  "lowered": [],
+  "fixed": [
+   "I08",
+   "I18",
+   "I38",
+   "I10",
+   "I04",
+   "I12",
+   "I14",
+   "I25",
+   "I26",
+   "I45",
+   "I48",
+   "I41",
+   "I11",
+   "I29"
+  ],
+  "added_by_challenger": [],
+  "files": "in the vault: work/assessment.json, work/challenger.json"
+ },
+ "answers": {
+  "I04": {
+   "e": "https://docs.emergence.ai/semiconductor/overview.md",
+   "n": "The documentation says the semiconductor agent writes Python analysis code and runs it in a sandboxed execution service.",
+   "span": "the AI agent generates and executes Python code on behalf of the engineer",
+   "g": "documented",
+   "m": "available",
+   "cfg": "semiconductor"
+  },
+  "I08": {
+   "e": "https://docs.emergence.ai/releases/index.md",
+   "n": "The release notes (2026.04) say data quality execution and assessment workflows write their results directly on completion, and (2026.03) that a new data connection triggers ingestion that chains into profiling with no manual start.",
+   "span": "results are written directly when the workflow finishes",
+   "g": "documented",
+   "m": "default"
+  },
+  "I10": {
+   "e": "https://docs.emergence.ai/platform/data-connections.md",
+   "n": "The data connections page lists implemented connections to PostgreSQL, Redshift and Snowflake databases, S3, GCS and MinIO storage and NFS file systems.",
+   "span": "configured links to external data sources: databases, object storage, and file systems",
+   "g": "documented",
+   "m": "default"
+  },
+  "I11": {
+   "e": "https://docs.emergence.ai/releases/index.md",
+   "n": "The release notes describe Snowflake connectors authenticated without long-lived passwords; the connections page lists key-pair (JWT) authentication as available and marks OAuth and SSO as planned.",
+   "span": "connect to Snowflake without long-lived passwords",
+   "g": "documented",
+   "m": "default"
+  },
+  "I12": {
+   "e": "https://docs.emergence.ai/data-insights/overview.md",
+   "n": "Data Insights coordinates separate agents (Insights, Text2SQL, Coding) that are deployed separately and pass work over A2A.",
+   "span": "Each agent is independently deployable and discoverable via Agent Cards.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "data-insights"
+  },
+  "I14": {
+   "e": "https://docs.emergence.ai/data-insights/overview.md",
+   "n": "The agents talk to each other over the published A2A protocol, with Agent Cards for discovery.",
+   "span": "All inter-agent communication uses the A2A protocol",
+   "g": "documented",
+   "m": "available",
+   "cfg": "data-insights"
+  },
+  "I18": {
+   "e": "https://docs.emergence.ai/releases/index.md",
+   "n": "The release notes (2026.03) say read-only analyses apply without approval, while generated data quality tags and rules still need a reviewer to approve them before they are saved.",
+   "span": "results are available immediately on completion, since these are read-only analyses",
+   "g": "documented",
+   "m": "default"
+  },
+  "I20": {
+   "e": "https://docs.emergence.ai/getting-started/introduction.md",
+   "n": "The introduction states what CRAFT is for and lists its modules and the tasks its agents do.",
+   "span": "Agents reason across your enterprise data to drive day-to-day operational decisions",
+   "g": "documented",
+   "m": "default"
+  },
+  "I21": {
+   "e": "https://docs.emergence.ai/platform/mcp-server.md",
+   "n": "Each project keeps a tool allowlist per agent identity that defines which tools that agent may call.",
+   "span": "each project defines which tools each agent identity may call",
+   "g": "documented",
+   "m": "default"
+  },
+  "I22": {
+   "e": "https://docs.emergence.ai/platform/mcp-server.md",
+   "n": "The MCP page has an errors and limits table, including a 500-row cap on query results and SELECT-only queries.",
+   "span": "server-enforced cap of 500 rows",
+   "g": "documented",
+   "m": "default"
+  },
+  "I23": {
+   "e": "https://docs.emergence.ai/guides/customer-admin/roles-and-permissions.md",
+   "n": "The admin guide lists project roles (Owner, Admin, Developer, Operator, Viewer) and what each may do; the MCP page also lists the tools by name.",
+   "span": "Read resources and trigger workflows. Cannot create or delete resources.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I25": {
+   "e": "https://docs.emergence.ai/platform/mcp-server.md",
+   "n": "The MCP tool gateway holds a per-project allowlist of the tools each agent identity may call, and refuses other calls with tool_not_allowed; execute_query accepts SELECT statements only.",
+   "span": "each project defines which tools each agent identity may call",
+   "g": "documented",
+   "m": "default"
+  },
+  "I26": {
+   "e": "https://docs.emergence.ai/platform/service-accounts.md",
+   "n": "Background workers, schedulers and automated pipelines (such as the data-readiness workflows) authenticate as service accounts with their own machine identity; the page does not say the chat agents do, which call the platform with the user's token.",
+   "span": "authenticate with CRAFT using machine identity",
+   "g": "documented",
+   "m": "default"
+  },
+  "I29": {
+   "e": "https://docs.emergence.ai/platform/agents.md",
+   "n": "The platform includes an agent registry for A2A Agent Cards, marked available now, with create, list, update and delete through its API.",
+   "span": "Unified registry for discovering, managing, and monitoring A2A agents",
+   "g": "documented",
+   "m": "default"
+  },
+  "I38": {
+   "e": "https://docs.emergence.ai/releases/index.md",
+   "n": "The release notes (2026.03) say generated data quality tags and rules are previewed, with their SQL and validation status, and a reviewer approves them before they are persisted.",
+   "span": "so reviewers approve before commit",
+   "g": "documented",
+   "m": "default"
+  },
+  "I39": {
+   "e": "https://docs.emergence.ai/api-reference/chat/post-chat-cancel.md",
+   "n": "The API documents a call that cancels a running agent task by sending A2A tasks/cancel to the orchestrator.",
+   "span": "Cancel an in-progress task.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I41": {
+   "e": "https://docs.emergence.ai/guides/customer-admin/audit-log.md",
+   "n": "The audit log records agent tool calls when agent audit is turned on for a project; the MCP page says every call through its tool gateway, allowed or denied, writes an audit event.",
+   "span": "Agent tool calls (when agent audit is enabled for a project)",
+   "g": "documented",
+   "m": "available",
+   "cfg": "agent-audit"
+  },
+  "I42": {
+   "e": "https://docs.emergence.ai/guides/customer-admin/audit-log.md",
+   "n": "The admin guide describes the audit log as tamper-evident, kept 90 days by default with adjustable retention.",
+   "span": "The audit log is a tamper-evident record of significant actions",
+   "g": "documented",
+   "m": "default"
+  },
+  "I45": {
+   "e": "https://docs.emergence.ai/platform/authorization.md",
+   "n": "Permission checks run in the platform services, against OpenFGA, on every API call; the Data Insights agents call them with the caller's token and do no permission checks of their own. The MCP gateway also rejects non-SELECT SQL.",
+   "span": "All API endpoints use the `require_permission()` dependency to enforce authorization",
+   "g": "documented",
+   "m": "default"
+  },
+  "I48": {
+   "e": "https://docs.emergence.ai/platform/authorization.md",
+   "n": "Authorization is an OpenFGA model, written in its DSL and compiled to JSON that the Governance service reads, with relationship tuples checked on each request.",
+   "span": "Tuples are stored in OpenFGA and queried during permission checks.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I57": {
+   "e": "https://docs.emergence.ai/api-reference/chat-sessions/submit-or-update-feedback.md",
+   "n": "The Talk to Data API takes a user's feedback rating on each answer turn.",
+   "span": "Upsert feedback for a turn.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I58": {
+   "e": "https://docs.emergence.ai/security/data-classification.md",
+   "n": "The security docs describe four classification levels for the data the platform processes and the handling for each.",
+   "span": "CRAFT classifies all data processed by the platform into defined sensitivity levels",
+   "g": "documented",
+   "m": "default"
+  },
+  "I61": {
+   "e": "https://docs.emergence.ai/getting-started/introduction.md",
+   "n": "The introduction names the model families reached through LiteLLM and the third-party components (Keycloak, OpenFGA, Prefect, LiteLLM).",
+   "span": "via LiteLLM (Gemini, GPT, Claude, and more)",
+   "g": "documented",
+   "m": "default"
+  },
+  "I68": {
+   "e": "https://docs.emergence.ai/releases/index.md",
+   "n": "The release notes state a monthly release cycle with calendar versions.",
+   "span": "CRAFT ships on a monthly cadence using",
+   "g": "documented",
+   "m": "default"
+  },
+  "S3": {
+   "e": "https://docs.emergence.ai/llms.txt",
+   "n": "The documentation site serves an llms.txt index and links OpenAPI descriptions; both resolved on a read-only fetch on 2026-11-11.",
+   "span": "Introduction to CRAFT",
+   "g": "observed",
+   "m": "default",
+   "method": "probe"
+  },
+  "S4": {
+   "e": "https://docs.emergence.ai/platform/mcp-server.md",
+   "n": "The documentation publishes a hosted MCP server that outside agents and IDE clients can call, with OAuth 2.0 PKCE; the endpoint did not answer our read-only probe.",
+   "span": "external agents to CRAFT's tool gateway over the Model Context Protocol",
+   "g": "documented",
+   "m": "default"
+  }
+ },
+ "not_credited": [],
+ "announced": [
+  {
+   "what": "CRAFT Toolkit (verification certificates, auto-formalization tools): marked Planned",
+   "source": "https://docs.emergence.ai/getting-started/introduction"
+  },
+  {
+   "what": "Webhooks with HMAC signing: marked Planned",
+   "source": "https://docs.emergence.ai/platform/webhooks"
+  },
+  {
+   "what": "Shared LLM gateway with identity sidecar and scoped tokens: described as target architecture, not bundled in current charts",
+   "source": "https://docs.emergence.ai/platform/llm-gateway"
+  },
+  {
+   "what": "Agent registry enterprise governance (approval workflows, change windows, cross-tenant federation): availability not stated",
+   "source": "https://docs.emergence.ai/platform/agents"
+  },
+  {
+   "what": "India AI lab hiring 500 researchers (news listing, March 2026)",
+   "source": "https://www.emergence.ai/latest-news"
+  },
+  {
+   "what": "Marketing claims of determinism, formal verification and 'governed everywhere' on the home page",
+   "source": "https://www.emergence.ai/"
+  }
+ ],
+ "configurations": [
+  {
+   "id": "shipped",
+   "name": "As shipped",
+   "note": "CRAFT with its documented defaults.",
+   "on": []
+  },
+  {
+   "id": "semiconductor",
+   "name": "Semiconductor",
+   "note": "The Semiconductor solution, a separate set of services deployed on CRAFT",
+   "on": [
+    "semiconductor"
+   ]
+  },
+  {
+   "id": "data-insights",
+   "name": "Data insights",
+   "note": "Deployments that include the Data Insights (Talk2Data) solution, per the MCP page",
+   "on": [
+    "data-insights"
+   ]
+  },
+  {
+   "id": "agent-audit",
+   "name": "Agent audit",
+   "note": "Agent audit turned on for a project, per the audit log page",
+   "on": [
+    "agent-audit"
+   ]
+  }
+ ],
+ "captures": {
+  "https://docs.emergence.ai/api-reference/chat-sessions/submit-or-update-feedback.md": {
+   "sha256": "b15404965c8445111ef7f390ecff29020b9f7230bd3523d084977ae8bdd9b075",
+   "bytes": 4522,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://docs.emergence.ai/api-reference/chat/post-chat-cancel.md": {
+   "sha256": "c924f59709ef74c74a52e6751f3c82704420caba6e63df9f1c1359f4ededf9ce",
+   "bytes": 2764,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://docs.emergence.ai/data-insights/overview.md": {
+   "sha256": "47537dd1204d4d96a82938950d99eaf323a94653b264d7d2578a166345e49407",
+   "bytes": 10626,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://docs.emergence.ai/getting-started/introduction": {
+   "sha256": "dd89d77e5fee19ff93c0af425d4d8fe74d6e299f5e9adf2e764ed590273a24be",
+   "bytes": 175743,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://docs.emergence.ai/getting-started/introduction.md": {
+   "sha256": "7c75b5e7fa0b7c6485744c953b9ff08a09152af513e34fe3b405d7eb4186bf87",
+   "bytes": 7601,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://docs.emergence.ai/guides/customer-admin/audit-log.md": {
+   "sha256": "2d33e4a0c208e504de5a6455cb8ae1bde9be6bac098e1f0af6e8cf8cd19899f8",
+   "bytes": 4484,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://docs.emergence.ai/guides/customer-admin/roles-and-permissions.md": {
+   "sha256": "54b7c787f050b89805fcd15e4eda22f2fc4ddb6ffe504d4ecb92f0b9a94812bd",
+   "bytes": 2795,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://docs.emergence.ai/llms.txt": {
+   "sha256": "49760d7a4068b892f7390b0e43abe7b46255c66a6e07ab59c6e8b81e3b6b5875",
+   "bytes": 63765,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://docs.emergence.ai/platform/agents": {
+   "sha256": "8e351adae1533ac55dbe0c1050d558405405666fdcfdf658a4ea1b97e3371e37",
+   "bytes": 207168,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://docs.emergence.ai/platform/agents.md": {
+   "sha256": "34a564ff2d781fca7fe3437b8f5cbb4c4250c1622bf1713f07a4cdc98b488385",
+   "bytes": 9945,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://docs.emergence.ai/platform/authorization.md": {
+   "sha256": "6252bc5affaf4d9dc7ca2074b3de95317c82c9c37c66da5b346a82a3f9f142dc",
+   "bytes": 13276,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://docs.emergence.ai/platform/data-connections.md": {
+   "sha256": "0c55428908ef82c6754f506d214f0f5042519ea5426a24b510633e16065696c9",
+   "bytes": 11937,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://docs.emergence.ai/platform/llm-gateway": {
+   "sha256": "9b1728608dc38fcbc4c53a4256fcdb585c9b76bf4d1d0305a88914856003a546",
+   "bytes": 379088,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://docs.emergence.ai/platform/mcp-server.md": {
+   "sha256": "d997747df3d570798472c22c95328c7a6534ebefda96d790becdb6e62705e851",
+   "bytes": 19566,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://docs.emergence.ai/platform/service-accounts.md": {
+   "sha256": "aae95a5324d8af9eddb0e321994f4329fcf27357f88abaa002542a05c7111007",
+   "bytes": 5949,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://docs.emergence.ai/platform/webhooks": {
+   "sha256": "1332a2e5758f84a1ae1c6ce1d209bc253247c974865fca52a4b940f8b4af3458",
+   "bytes": 196455,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://docs.emergence.ai/releases/index.md": {
+   "sha256": "b99eeb5b4243edb024a595f42cbd65f60176d321fb6fe9e00c93730a900e0f68",
+   "bytes": 41366,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://docs.emergence.ai/security/data-classification.md": {
+   "sha256": "db26be57de92eb222cb0bb4c41ca87dbe9fbaadcb3189fd8acd531ce9c0f9262",
+   "bytes": 8127,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://docs.emergence.ai/semiconductor/overview.md": {
+   "sha256": "b84b45133aa331b069f0f87653ac80176b37189df7e6642cfaabcc92a675d57a",
+   "bytes": 5732,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://www.emergence.ai/": {
+   "sha256": "9208e3379a2c176fa1710fadc2eaa2b20e559c9dd8d0a1d6edb23e941f3342fb",
+   "bytes": 498301,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://www.emergence.ai/latest-news": {
+   "sha256": "9822c368ab2db547d0f002b623adf13a314c33231fadf12cabfe15f373e0769a",
+   "bytes": 311101,
+   "read_at": "2026-11-11T00:58Z"
+  }
+ }
+}

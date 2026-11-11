@@ -1,0 +1,196 @@
+{
+ "id": "emergence",
+ "name": "Emergence AI",
+ "url": "https://www.emergence.ai/",
+ "country": "United States",
+ "sector": "enterprise AI / agent platforms",
+ "read": "2026-11-11",
+ "basis": "Emergence AI's own public pages and, for company basics only, the news sources named beside each fact",
+ "seen_by_subject": false,
+ "what": "Emergence AI builds CRAFT, a self-hosted enterprise platform on which AI agents query, profile and analyse company data and run analysis workflows, with a semiconductor solution built on it.",
+ "facts": [
+  {
+   "fact": "Headquartered in New York, with offices in California (company boilerplate in a June 2025 press release on PR Newswire).",
+   "url": "https://www.prnewswire.com/news-releases/andela-and-emergence-ai-launch-industry-defining-partnership-to-upskill-engineers-for-the-agentic-ai-era-302490345.html",
+   "span": "Emergence AI is headquartered in New York , with offices in California"
+  },
+  {
+   "fact": "Closed a $97.2 million funding round led by Learn Capital in June 2024 (SiliconANGLE).",
+   "url": "https://siliconangle.com/2024/06/24/ai-startup-emergence-ai-raises-ton-cash-enhance-office-worker-productivity/",
+   "span": "it has closed on a $97.2 million funding round led by Learn Capital"
+  },
+  {
+   "fact": "Began as a division of the education chatbot company Merlyn Mind (SiliconANGLE, 2024).",
+   "url": "https://siliconangle.com/2024/06/24/ai-startup-emergence-ai-raises-ton-cash-enhance-office-worker-productivity/",
+   "span": "is a division of the educational chatbot company"
+  },
+  {
+   "fact": "e& enterprise (UAE) became a distribution and implementation partner for Emergence's agent platform in MENAT (Gulf News, January 2026).",
+   "url": "https://gulfnews.com/business/uae-telco-major-e-partners-with-us-firm-emergence-for-new-ai-deal-1.500418104",
+   "span": "will act as a distribution and implementation partner"
+  },
+  {
+   "fact": "CRAFT is documented as deployable on the customer's own Kubernetes infrastructure.",
+   "url": "https://docs.emergence.ai/getting-started/introduction.md",
+   "span": "CRAFT deploys on **your infrastructure**, in your cloud"
+  },
+  {
+   "fact": "The about page dates the Orchestrator to December 2024 and Agent-E, a web control agent, to May 2024.",
+   "url": "https://www.emergence.ai/about-us",
+   "span": "Emergence released Agent-E, a robust web control agent"
+  }
+ ],
+ "people": [
+  {
+   "name": "Satya Nitta",
+   "role": "Co-founder and Executive Chairman",
+   "url": "https://www.emergence.ai/about-us"
+  },
+  {
+   "name": "Ravi Kokku",
+   "role": "Co-founder and CTO",
+   "url": "https://www.emergence.ai/about-us"
+  },
+  {
+   "name": "Sharad Sundararajan",
+   "role": "Co-founder and CPO",
+   "url": "https://www.emergence.ai/about-us"
+  },
+  {
+   "name": "Ian Eslick",
+   "role": "CEO",
+   "url": "https://www.emergence.ai/about-us"
+  }
+ ],
+ "solutions": [
+  {
+   "id": "craft",
+   "name": "CRAFT",
+   "short": "CRAFT",
+   "what": "Enterprise platform of agents over company data, composed of Assess and Enrich modules (Toolkit planned), with solutions for Data Insights (talk-to-data), Data Governance and Semiconductor analytics; exposes a hosted MCP server and A2A agents.",
+   "status": "shipping (release 2026.06 current in the release notes)",
+   "url": "https://docs.emergence.ai/getting-started/introduction",
+   "scan": "emergence-craft"
+  },
+  {
+   "id": "craft-semiconductor",
+   "name": "CRAFT Semiconductor (Industry Spotlight: Semiconductors)",
+   "short": "CRAFT Semiconductor",
+   "what": "Agents for chip design verification, ramp and production yield: excursion detection, root-cause analysis and report generation, with code executed in a sandbox.",
+   "status": "shipping (Semiconductor v0.3.9 cycle in release notes)",
+   "url": "https://docs.emergence.ai/semiconductor/overview"
+  },
+  {
+   "id": "emergence-agents",
+   "name": "Emergence Agents",
+   "short": "Emergence Agents",
+   "what": "Marketing name for data agents that monitor data quality and generate SQL fixes for review.",
+   "status": "marketed",
+   "url": "https://www.emergence.ai/emergence-agents"
+  },
+  {
+   "id": "emergence-assistant",
+   "name": "Emergence Assistant",
+   "short": "Emergence Assistant",
+   "what": "Conversational data analysis with generated SQL, charts and dashboards.",
+   "status": "marketed",
+   "url": "https://www.emergence.ai/emergence-assistant"
+  },
+  {
+   "id": "semantic-intelligence",
+   "name": "Semantic Intelligence",
+   "short": "Semantic Intelligence",
+   "what": "Semantic layer, business glossary and context packs that ground the agents.",
+   "status": "marketed",
+   "url": "https://www.emergence.ai/emergence-semantic-intelligence"
+  },
+  {
+   "id": "agent-e",
+   "name": "Agent-E",
+   "short": "Agent-E",
+   "what": "Open-source web control agent released May 2024.",
+   "status": "research / open source",
+   "url": "https://www.emergence.ai/about-us"
+  },
+  {
+   "id": "emergence-world",
+   "name": "Emergence World",
+   "short": "Emergence World",
+   "what": "Research platform for evaluating long-horizon multi-agent autonomy.",
+   "status": "research",
+   "url": "https://www.emergence.ai/blog/emergence-world-a-laboratory-for-evaluating-long-horizon-agent-autonomy"
+  }
+ ],
+ "stories": [],
+ "analysis": [
+  "**The shape.** CRAFT reads {sig:emergence-craft} ({stage:emergence-craft}). Emergence AI, headquartered in New York, builds CRAFT, a platform an enterprise deploys on its own Kubernetes infrastructure, on which AI agents query, profile and analyse company data and run analysis workflows. Its documentation is public at docs.emergence.ai, with release notes on a monthly cycle, and the card is read from it rather than from the marketing site.",
+  "**Where the evidence is strongest.** The documentation shows how the agents are bounded. Each project keeps a list of the tools each agent identity may call, and the tool gateway refuses any other call; the query tool accepts SELECT statements only, with a 500-row cap. Permissions are an OpenFGA model, checked by the platform services on every API call. The release notes separate what applies on its own from what waits for a person: read-only analyses are available as soon as they finish, while generated data quality tags and rules are previewed with their SQL and a reviewer approves them before they are saved. A running agent task can be cancelled through the API.",
+  "**Reach 3, an open protocol.** CRAFT documents a hosted MCP server that outside agents and IDE clients can call, with OAuth 2.0 PKCE and examples in several agent frameworks; our read-only probe of the endpoint did not connect, so it is shown as documented. In deployments that include the Data Insights solution, separately deployed agents pass work to each other over the A2A protocol, with Agent Cards for discovery, and that part is marked available.",
+  "**What would move it.** Control 3: a documented way for a person to override a decision the agents made, alongside the approvals and audit log already described. Openness 3: published evaluation results. Reach 4: a documented exchange with agents run by another organisation. The In production badge needs a named customer or usage figures for the agents at work; the partnership with e& enterprise is a distribution agreement, not a deployment.",
+  "**Seen, and not counted.** The challenger moved several credits from marketing pages to the documentation and set others aside. Pages that describe target architecture or planned features are listed as announced, not counted: the shared LLM gateway with scoped tokens, webhooks, the CRAFT Toolkit and parts of the agent registry. The home page's claims of determinism and formal verification are announced too. The audit log records agent tool calls only when agent audit is turned on for a project, so that credit is marked available."
+ ],
+ "article": {
+  "title": "Emergence AI's CRAFT on the GAMMA-Ray Spectrum: {sig:emergence-craft}",
+  "standfirst": "The GAMMA-Ray studio reads CRAFT from its public documentation: agents bounded by per-agent tool lists and checked permissions, a reviewer on what they generate, and an MCP server other agents can call.",
+  "body": [
+   "Emergence AI, headquartered in New York, builds CRAFT, a platform an enterprise runs on its own infrastructure, where AI agents query and analyse company data. We read it only from public sources, mostly its documentation, captured and hashed on 11 November 2026, and the published rules computed the card.",
+   "**Autonomy 4, Orchestrates.** Read-only analyses apply on completion while generated rules wait for a reviewer, and workflows reach databases, object storage and file systems through configured connections. It is at the top of the ladder.",
+   "**Reach 3, Open protocol.** A documented MCP server lets outside agents call CRAFT's tool gateway, and each agent identity may call only the tools its project allows. A documented exchange with another organisation's agents would reach level 4.",
+   "**Control 2, Configurable.** Project roles, per-agent tool lists and reviewer approval before commit are documented. A documented way for a person to override the agents' decisions would reach level 3.",
+   "**Openness 2, Documented.** Limits such as SELECT-only queries and a 500-row cap, the data classification levels and the model families used are public. Published evaluation results would reach level 3.",
+   "The card is beta and Emergence AI has not seen it. It can claim the card and add evidence; corrections are dated."
+  ],
+  "pt": {
+   "title": "O CRAFT da Emergence AI no GAMMA-Ray Spectrum: {sig:emergence-craft}",
+   "standfirst": "O estúdio GAMMA-Ray lê o CRAFT a partir da sua documentação pública: agentes limitados por listas de ferramentas por agente e permissões verificadas, um revisor no que geram e um servidor MCP que outros agentes podem chamar.",
+   "body": [
+    "A Emergence AI, com sede em Nova Iorque, faz o CRAFT, uma plataforma que a empresa corre na sua própria infraestrutura, onde agentes de IA consultam e analisam dados da empresa. Lemos apenas fontes públicas, sobretudo a documentação, capturadas e com hash a 11 de novembro de 2026.",
+    "**Autonomia 4.** As análises só de leitura aplicam-se ao terminar e as regras geradas esperam por um revisor. **Alcance 3.** Um servidor MCP documentado deixa agentes externos chamar o CRAFT. **Controlo 2.** Papéis por projeto, listas de ferramentas por agente e aprovação antes de gravar.",
+    "**Abertura 2.** Limites, níveis de classificação de dados e os modelos usados são públicos. O cartão é beta e a Emergence AI ainda não o viu; pode reclamá-lo e acrescentar evidência. As correções são datadas."
+   ]
+  }
+ },
+ "vault": {
+  "id": "5761h586",
+  "read_key": "sgit_public_read_138610d4e7b08287ce2775b7cdb5c8f8cff9de7aecc97aed03239e100b10d9fa:5761h586",
+  "published": "2026-11-10"
+ },
+ "team": {
+  "researcher-assessor": "a sub-agent of gamma.studio@web-summit.dinis",
+  "challenger": "a sub-agent",
+  "scorer": "build/spectrum.mjs",
+  "analyst, designer, writer": "gamma.studio@web-summit.dinis",
+  "review": "gamma.review@web-summit.dinis (pending)",
+  "sign-off": "gamma.approve@web-summit.dinis (pending)"
+ },
+ "signoff": null,
+ "corrections": [],
+ "method": "A researcher-assessor gathered and captured the sources and mapped the evidence to indicators, without assigning a level. A challenger argued against every level three and four and every doubtful credit.",
+ "captures": {
+  "https://docs.emergence.ai/getting-started/introduction.md": {
+   "sha256": "7c75b5e7fa0b7c6485744c953b9ff08a09152af513e34fe3b405d7eb4186bf87",
+   "bytes": 7601,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://gulfnews.com/business/uae-telco-major-e-partners-with-us-firm-emergence-for-new-ai-deal-1.500418104": {
+   "sha256": "15053a0c788e38885aebf627f31613cc83445f62d9761b9f17b92709eab5a215",
+   "bytes": 1572382,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://siliconangle.com/2024/06/24/ai-startup-emergence-ai-raises-ton-cash-enhance-office-worker-productivity/": {
+   "sha256": "a85d1be8116784a7597a2ea5f951abfac72fd90e08172b71b5b79dfbc99a5113",
+   "bytes": 181439,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://www.emergence.ai/about-us": {
+   "sha256": "d63322eab31adc8d6858aeed83576dfbf822c6d9365fb81ef32ded02d5a121a1",
+   "bytes": 353901,
+   "read_at": "2026-11-11T00:58Z"
+  },
+  "https://www.prnewswire.com/news-releases/andela-and-emergence-ai-launch-industry-defining-partnership-to-upskill-engineers-for-the-agentic-ai-era-302490345.html": {
+   "sha256": "420c802e88fe7142fc702bcd5b6c69b3ec197e034e4a5b43e9af56e9fc651db5",
+   "bytes": 185300,
+   "read_at": "2026-11-11T00:58Z"
+  }
+ }
+}
