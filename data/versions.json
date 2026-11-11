@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.181",
+    "date": "2026-11-11",
+    "what": "one configuration, not one configurations",
+    "by": "gamma.graphs@web-summit.dinis",
+    "from": "e110e17d4"
+  },
+  {
     "version": "v0.0.180",
     "date": "2026-11-11",
     "what": "draft card and report for Trent AI, to review",
