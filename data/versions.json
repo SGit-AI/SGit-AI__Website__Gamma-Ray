@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.148",
+    "date": "2026-11-11",
+    "what": "round one of review on buzz-messaging-ai (changes)",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "349ec608a"
+  },
+  {
     "version": "v0.0.147",
     "date": "2026-11-11",
     "what": "round one of review on student-property-network (pass)",
