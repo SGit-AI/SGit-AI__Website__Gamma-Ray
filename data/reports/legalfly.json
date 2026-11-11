@@ -1,0 +1,257 @@
+{
+ "id": "legalfly",
+ "name": "LEGALFLY",
+ "url": "https://www.legalfly.com/",
+ "country": "Belgium",
+ "sector": "legal tech",
+ "read": "2026-11-11",
+ "basis": "LEGALFLY's own public pages and, for company basics only, the news sources named beside each fact",
+ "seen_by_subject": false,
+ "what": "LEGALFLY sells a legal AI platform for in-house teams, with agents for legal research, contract review, drafting and regulatory monitoring and a builder for multi-step workflows.",
+ "facts": [
+  {
+   "fact": "Founded about a year before July 2024",
+   "url": "https://www.legalfly.com/post/legalfly-secures-eu15-million-to-set-security-standard-in-ai-legal-services",
+   "span": "Founded one year ago"
+  },
+  {
+   "fact": "Founded by four former product people from Tinder",
+   "url": "https://www.legalfly.com/post/legalfly-secures-eu15-million-to-set-security-standard-in-ai-legal-services",
+   "span": "LEGALFLY was founded by a team of former product experts from Tinder"
+  },
+  {
+   "fact": "Series A of over EUR 15 million led by Notion Capital (July 2024)",
+   "url": "https://www.legalfly.com/post/legalfly-secures-eu15-million-to-set-security-standard-in-ai-legal-services",
+   "span": "Series A funding led by Notion Capital"
+  },
+  {
+   "fact": "Office in Ghent, Belgium, listed first on its site",
+   "url": "https://www.legalfly.com/",
+   "span": "Ghent, Belgium"
+  },
+  {
+   "fact": "States ISO 27001 and SOC 2 Type II certification and annual penetration testing",
+   "url": "https://www.legalfly.com/security",
+   "span": "LEGALFLY is ISO 27001 and SOC 2 Type II certified"
+  },
+  {
+   "fact": "States a 2026 contract with the European Commission's HR Directorate-General",
+   "url": "https://www.legalfly.com/clients",
+   "span": "LEGALFLY has partnered with the European Commission's HR Directorate-General"
+  },
+  {
+   "fact": "Lists Anthropic and OpenAI as AI inference subprocessors",
+   "url": "https://trust.legalfly.com",
+   "span": "AI inference provider"
+  }
+ ],
+ "people": [
+  {
+   "name": "Ruben Miessen",
+   "role": "CEO, co-founder",
+   "url": "https://www.legalfly.com/company"
+  },
+  {
+   "name": "Kasper Verbeeck",
+   "role": "CTO, co-founder",
+   "url": "https://www.legalfly.com/company"
+  },
+  {
+   "name": "Dennis Montegnies",
+   "role": "CPO, co-founder (CISO in 2024)",
+   "url": "https://www.legalfly.com/company"
+  },
+  {
+   "name": "Gregory Vekemans",
+   "role": "CDO, co-founder",
+   "url": "https://www.legalfly.com/company"
+  },
+  {
+   "name": "Theodora Georgiou",
+   "role": "VP Customer Success",
+   "url": "https://www.legalfly.com/company"
+  }
+ ],
+ "solutions": [
+  {
+   "id": "legalfly-agents",
+   "name": "LEGALFLY legal AI agents with Agent Studio",
+   "short": "LEGALFLY agents",
+   "what": "Platform of legal agents (Discovery, Review, Draft, Multi Review, Legal Radar, Translation) plus Agent Studio, where customers build multi-step workflows with triggers, conditions, approvals and notifications.",
+   "status": "generally available",
+   "url": "https://www.legalfly.com/agents",
+   "scan": "legalfly-agents"
+  },
+  {
+   "id": "agent-studio",
+   "name": "Agent Studio (Workflows, Custom Agents)",
+   "short": "Agent Studio",
+   "what": "Builder for end-to-end legal workflows triggered from email, Slack, Teams or manually, with approval steps.",
+   "status": "generally available",
+   "url": "https://www.legalfly.com/products/workflows"
+  },
+  {
+   "id": "discovery",
+   "name": "Discovery",
+   "short": "Discovery",
+   "what": "Research and advice agent over legal sources and the customer's documents; can produce Word, Excel and PowerPoint files.",
+   "status": "generally available",
+   "url": "https://www.legalfly.com/products/discovery"
+  },
+  {
+   "id": "review",
+   "name": "Review / Multi Review",
+   "short": "Review",
+   "what": "Contract review against playbooks, with suggested redrafts in Word; bulk review across many documents.",
+   "status": "generally available",
+   "url": "https://www.legalfly.com/products/review"
+  },
+  {
+   "id": "draft",
+   "name": "Draft",
+   "short": "Draft",
+   "what": "Template-based contract drafting in Word.",
+   "status": "generally available",
+   "url": "https://www.legalfly.com/products/drafting"
+  },
+  {
+   "id": "legal-radar",
+   "name": "Legal Radar",
+   "short": "Legal Radar",
+   "what": "Regulatory monitoring with alerts and impact assessments.",
+   "status": "generally available",
+   "url": "https://www.legalfly.com/products/legal-radar"
+  }
+ ],
+ "stories": [
+  {
+   "customer": "Nemetschek Group",
+   "what": "Legal and compliance team uses LEGALFLY regularly; estimate of two to three hours saved per user per week",
+   "url": "https://www.legalfly.com/customer-stories/nemetschek",
+   "span": "2–3 hours saved per user, every week"
+  },
+  {
+   "customer": "MSIG Europe",
+   "what": "Contract review against an outsourcing playbook and cross-jurisdiction research; a day's research cut to about twenty minutes",
+   "url": "https://www.legalfly.com/customer-stories/msigeurope",
+   "span": "Questions that once required a full day of research across multiple countries",
+   "solution": "review"
+  },
+  {
+   "customer": "Duvel Moortgat",
+   "what": "Legal reviews that took over an hour now take as little as five minutes",
+   "url": "https://www.legalfly.com/customer-stories/duvel",
+   "span": "Legal reviews that previously took over an hour now take",
+   "solution": "review"
+  },
+  {
+   "customer": "ECS",
+   "what": "Multi-Document Review used for drivers' insurance policy analysis; 50% less time on document analysis",
+   "url": "https://www.legalfly.com/customer-stories/ecs",
+   "span": "The tool enabled a 50% reduction in time spent on document analysis.",
+   "solution": "review"
+  },
+  {
+   "customer": "European Commission, DG HR",
+   "what": "Contract signed in 2026 for an AI legal operating system to support HR legal workflows",
+   "url": "https://www.legalfly.com/clients",
+   "span": "under a contract signed in 2026"
+  }
+ ],
+ "analysis": [
+  "**The shape.** LEGALFLY's agents read {sig:legalfly-agents} ({stage:legalfly-agents}). LEGALFLY, with its office in Ghent, Belgium, sells a legal AI platform for in-house teams: Discovery for research and advice, Review and Multi Review for contracts, Draft, and Legal Radar for regulatory monitoring, with Agent Studio for building multi-step workflows. The card reads them together, as LEGALFLY presents them.",
+  "**Where the evidence is strongest.** Named customers use the agents that suggest and answer: Nemetschek Group, MSIG Europe, Duvel Moortgat and ECS publish or are quoted on time saved in research and contract review, and LEGALFLY states a 2026 contract with the European Commission's HR Directorate-General. In Review, the agent proposes redrafts and a reviewer chooses to apply each one. The trust centre lists Anthropic and OpenAI as AI inference subprocessors, with data locations, and the Salesforce help page states that integration is read-only.",
+  "**What holds as shipped, and what with options on.** Acts, Integrated and Stated rest on features a customer turns on. Agent Studio's pre-built workflows are described as taking actions, such as redlining related documents and emailing the results, routing documents for signature, and answering legal mailbox questions from approved guidance with Legal approving anything not clearly covered; builders can place approval steps before a workflow continues. The SharePoint, Google Drive, Slack, Teams and Salesforce connectors are activated by LEGALFLY on request. Openness 2 holds as shipped.",
+  "**What would move it.** Autonomy 4: a page saying people monitor workflows that run on their own, or agents coordinating across systems. Reach 3: a published agent interface, such as an MCP server or an agent card, with documented authorisation narrower than the whole account. Control 2: a written statement of the agents' limits of the kind the Spectrum card counts. Openness 3: published evaluation results and a machine-readable description, such as an llms.txt. The In production badge needs a named customer or usage figures for a workflow that acts.",
+  "**Seen, and not counted.** The customer stories are for Review, Discovery and Multi Review, which suggest or answer, so the card names no customer for the capability that acts. The SOC 2 and ISO 27001 reports and an EU AI Act Article 50 transparency document are listed on the trust centre but are request-only, so only their titles were read. Activity logs are documented, and a log counts only when observed in operation. LEGALFLY's documentation and developer sites did not answer from here."
+ ],
+ "article": {
+  "title": "LEGALFLY's agents on the GAMMA-Ray Spectrum: {sig:legalfly-agents}",
+  "standfirst": "The GAMMA-Ray studio reads LEGALFLY's legal AI agents from their public pages: named in-house teams use them for research and review, and Agent Studio workflows take actions once a customer turns them on.",
+  "body": [
+   "LEGALFLY, founded in 2023 with its office in Ghent, Belgium, sells a legal AI platform for in-house legal and compliance teams, with agents for research, contract review, drafting and regulatory monitoring and a builder for workflows. We read it only from public sources, captured and hashed on 11 November 2026, and the published rules computed the card.",
+   "**Autonomy 3, Acts (available).** Agent Studio workflows redline documents and email the results, and one answers routine legal mailbox questions with Legal approving anything not covered. A page on people monitoring workflows that run on their own would reach level 4.",
+   "**Reach 2, Integrated (available).** Discovery searches connected SharePoint and Google Drive folders and reads a customer's Salesforce through MCP after each user signs in. A published agent interface with documented authorisation would reach level 3.",
+   "**Control 1, Stated (available).** Workflow builders can place approval and review steps before a workflow continues. A written statement of the agents' limits would reach level 2.",
+   "**Openness 2, Documented.** Each agent's purpose, the sources Legal Radar monitors, the AI providers and a stated limit of the Salesforce integration are public. Published evaluation results would reach level 3.",
+   "The card is beta and LEGALFLY has not seen it. It can claim the card and add evidence; corrections are dated."
+  ],
+  "pt": {
+   "title": "Os agentes da LEGALFLY no GAMMA-Ray Spectrum: {sig:legalfly-agents}",
+   "standfirst": "O estúdio GAMMA-Ray lê os agentes de IA jurídica da LEGALFLY a partir das suas páginas públicas: equipas jurídicas identificadas usam-nos para pesquisa e revisão, e os fluxos do Agent Studio agem quando o cliente os ativa.",
+   "body": [
+    "A LEGALFLY, fundada em 2023 e com escritório em Gante, na Bélgica, vende uma plataforma de IA jurídica para equipas internas, com agentes de pesquisa, revisão de contratos, redação e monitorização regulatória. Lemos apenas fontes públicas, capturadas e com hash a 11 de novembro de 2026.",
+    "**Autonomia 3 (opcional).** Os fluxos do Agent Studio reveem documentos e enviam os resultados, com o jurídico a aprovar o que não está coberto. **Alcance 2 (opcional).** O Discovery pesquisa SharePoint, Google Drive e Salesforce ligados. **Controlo 1 (opcional).** Quem cria um fluxo pode pôr passos de aprovação.",
+    "**Abertura 2.** O propósito de cada agente, as fontes monitorizadas e os fornecedores de IA são públicos. O cartão é beta e a LEGALFLY ainda não o viu; pode reclamá-lo e acrescentar evidência. As correções são datadas."
+   ]
+  }
+ },
+ "vault": {
+  "id": "6l790mux",
+  "read_key": "sgit_public_read_5214b7932eaf4a06bce6cb28e02c648c71fa0ffdf2de8983da37b8cf74daf13c:6l790mux",
+  "published": "2026-11-10"
+ },
+ "team": {
+  "researcher-assessor": "a sub-agent of gamma.studio@web-summit.dinis",
+  "challenger": "a sub-agent",
+  "scorer": "build/spectrum.mjs",
+  "analyst, designer, writer": "gamma.studio@web-summit.dinis",
+  "review": "gamma.review@web-summit.dinis (pending)",
+  "sign-off": "gamma.approve@web-summit.dinis (pending)"
+ },
+ "signoff": null,
+ "corrections": [],
+ "method": "A researcher-assessor gathered and captured the sources and mapped the evidence to indicators, without assigning a level. A challenger argued against every level three and four and every doubtful credit.",
+ "captures": {
+  "https://trust.legalfly.com": {
+   "sha256": "e70612ecb6f19371f4487633e0510e5dc0e13ab0e7029fc9e1caa1a5b485db4a",
+   "bytes": 235282,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.legalfly.com/": {
+   "sha256": "e8128b5f761d3539bd0f7176f8b1466e91d4449451147d633ca487e0cf417e6b",
+   "bytes": 630663,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.legalfly.com/clients": {
+   "sha256": "e4ceaaf370a1779754420a7481b0f1d5dbe13050143c0bfe33478bdb67c56b55",
+   "bytes": 625910,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.legalfly.com/company": {
+   "sha256": "f728a4ed98a693aecd26c2f01b8486c141feada98b3be4137c3c1effe7f6462e",
+   "bytes": 556188,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.legalfly.com/customer-stories/duvel": {
+   "sha256": "4d9f9207e879800b79708d2967396f045a0c28bf0720ee6e41411ca20572c3d9",
+   "bytes": 508594,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.legalfly.com/customer-stories/ecs": {
+   "sha256": "45fb05bf12df570b4ceb1f33c7011530aa12f5689c1b44716e091ad7b14f6775",
+   "bytes": 503318,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.legalfly.com/customer-stories/msigeurope": {
+   "sha256": "2a5aa03c2a4a876b531379eff808d06acd6a4dcdd6f3f85193e79e1c5549d5d7",
+   "bytes": 506014,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.legalfly.com/customer-stories/nemetschek": {
+   "sha256": "8e846d45a205a99cbac0ead8466402e14945ce26be1fb830ba411ed25dad84e6",
+   "bytes": 509618,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.legalfly.com/post/legalfly-secures-eu15-million-to-set-security-standard-in-ai-legal-services": {
+   "sha256": "f961a6fee32b072720c445fe9ec3ffe5bf660b1eef467c5271275978639a3253",
+   "bytes": 543854,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.legalfly.com/security": {
+   "sha256": "44238e5158a9a284fe27a3b292b5b29de9cbfacd6ea663433e556932b00cae0b",
+   "bytes": 602177,
+   "read_at": "2026-11-11T00:54Z"
+  }
+ }
+}

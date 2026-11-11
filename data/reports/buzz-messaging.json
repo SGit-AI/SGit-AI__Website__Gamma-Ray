@@ -1,0 +1,168 @@
+{
+ "id": "buzz-messaging",
+ "name": "Buzz Messaging AI",
+ "url": "https://www.buzzmessaging.ai",
+ "country": "Cyprus",
+ "sector": "messaging / collaboration",
+ "read": "2026-11-11",
+ "basis": "Buzz Messaging (BuzzMSG A.I LTD); interviewed as Buzz Messaging AI's own public pages and, for company basics only, the news sources named beside each fact",
+ "seen_by_subject": false,
+ "what": "A messaging app with personal chats, a team workspace (Buzz work) and an incognito identity, with a built-in AI assistant and team AI agents that work in connected tools.",
+ "facts": [
+  {
+   "fact": "Made by BuzzMSG A.I LTD, registered in Cyprus and headquartered in Nicosia",
+   "url": "https://www.buzzmessaging.ai/ai-facts",
+   "span": "BuzzMSG A.I LTD, registered in Cyprus (incorporated October 2026)"
+  },
+  {
+   "fact": "Guy Ben Zvi is Co-Founder and CEO",
+   "url": "https://www.buzzmessaging.ai/ai-facts",
+   "span": "Guy Ben Zvi, Co-Founder & CEO"
+  },
+  {
+   "fact": "Hosted on Google Cloud, primary region Germany, second region UK (phase 1 of three)",
+   "url": "https://www.buzzmessaging.ai/llms.txt",
+   "span": "Hosting: Google Cloud, primary region Germany with a second region in the UK."
+  },
+  {
+   "fact": "The privacy policy (1 June 2026) names Anthropic (Claude) as the AI assistant's provider; the company's facts page (reviewed 30 October 2026) says multiple AI providers",
+   "url": "https://www.buzzmessaging.ai/privacy",
+   "span": "Anthropic (Claude)"
+  },
+  {
+   "fact": "PrompTugal.news's interview page reports the founder saying that teams build their own AI agents with a system prompt",
+   "url": "https://promptugal.news/interviews/buzz-messaging-ai/guy-ben-zvi/",
+   "span": "Teams build their own AI agents with a system prompt"
+  },
+  {
+   "fact": "PrompTugal.news's interview page reports the founder saying that the platform has its own control policy for agents",
+   "url": "https://promptugal.news/interviews/buzz-messaging-ai/guy-ben-zvi/",
+   "span": "the platform has its own control policy"
+  },
+  {
+   "fact": "At Web Summit 2026 in the ALPHA startup programme",
+   "url": "https://www.buzzmessaging.ai/blog/buzz-messaging-web-summit-2026",
+   "span": "as part of the ALPHA startup programme"
+  },
+  {
+   "fact": "Apps on iOS, Android, Mac and the web",
+   "url": "https://www.buzzmessaging.ai/llms.txt"
+  }
+ ],
+ "people": [
+  {
+   "name": "Guy Ben Zvi",
+   "role": "Co-Founder & CEO",
+   "url": "https://www.buzzmessaging.ai/ai-facts"
+  },
+  {
+   "name": "Josh (first name only on the company's page)",
+   "role": "Co-Founder & CTO",
+   "url": "https://www.buzzmessaging.ai/about"
+  }
+ ],
+ "solutions": [
+  {
+   "id": "buzz-work-agents",
+   "name": "Buzz work agents (multiplayer AI agents)",
+   "short": "Buzz work agents",
+   "what": "AI agents added to team rooms that read and create in Notion, Google Drive and Google Calendar with the asker's access, and propose tasks that sync to Jira or Linear after confirmation.",
+   "status": "live, teams admitted in batches (waitlist)",
+   "url": "https://www.buzzmessaging.ai/work",
+   "scan": "buzz-messaging-ai"
+  },
+  {
+   "id": "buzz-ai",
+   "name": "Buzz AI assistant",
+   "short": "Buzz AI assistant",
+   "what": "An assistant invoked in a chat with @Buzz to summarise threads, draft replies and find files.",
+   "status": "live",
+   "url": "https://www.buzzmessaging.ai/features/ai-assistant"
+  },
+  {
+   "id": "buzz-messaging",
+   "name": "Buzz Messaging (personal, Buzz work, incognito)",
+   "short": "Buzz Messaging app",
+   "what": "The messaging app itself.",
+   "status": "live",
+   "url": "https://www.buzzmessaging.ai/features"
+  }
+ ],
+ "stories": [],
+ "analysis": [
+  "**The shape.** Buzz work agents read {sig:buzz-messaging-ai} ({stage:buzz-messaging-ai}). Buzz Messaging AI makes a messaging app with personal chats, a team workspace called Buzz work and an incognito identity. In Buzz work, team AI agents sit in the conversation: they read files shared in the room, Notion, Google Drive and Google Calendar, and they propose documents, pages, calendar entries and tasks. The company was registered in Cyprus in October 2026 and was at Web Summit 2026 in the ALPHA startup programme, where PrompTugal.news interviewed its co-founder and CEO, Guy Ben Zvi.",
+  "**Where the evidence is strongest.** The confirmation step is written down in the company's own pages: anything an agent would create appears as a card and is made only once the person who asked confirms it, and the agents read shared files with that person's own access. That one product rule carries Suggests and Stated. The company also publishes an llms.txt and an agents.md feature reference, which say what the agents are for and what they read.",
+  "**What holds as shipped, and what with options on.** Integrated rests on connections: each person connects their own Google Drive, Google Calendar and Notion, and a workspace admin connects Jira or Linear for task sync. It is marked available, because the agents reach those tools only once they are connected.",
+  "**What would move it.** Autonomy 3: a page showing an agent completing routine work on its own, with a person consulted on exceptions. Reach 3: a published agent interface, such as an MCP server or an agent card, with documented authorisation narrower than the whole account. Control 2: a written statement of the agents' limits, of the kind the Spectrum card counts. Openness 2: a page on the team agents' limits and known failure cases, or a current list of the models they use.",
+  "**Seen, and not counted.** The challenger lowered five credits. The terms' note that AI output may be inaccurate, the muting control and the description of what is read cover the Buzz AI assistant, not the team agents. The privacy policy of 1 June 2026 names Anthropic (Claude) as the assistant's provider, while the company's facts page, reviewed on 30 October 2026, says multiple AI providers, so no current model list is credited. That teams build agents with a system prompt is reported on PrompTugal.news's interview page and is not on the company's site, so it is not counted."
+ ],
+ "article": {
+  "title": "Buzz work agents on the GAMMA-Ray Spectrum: {sig:buzz-messaging-ai}",
+  "standfirst": "The GAMMA-Ray studio reads Buzz Messaging AI's team agents from their public pages: they work in the team's connected tools and create nothing until the person who asked confirms.",
+  "body": [
+   "Buzz Messaging AI, registered in Cyprus and headquartered in Nicosia, makes a messaging app whose team workspace, Buzz work, has AI agents in the conversation. Its co-founder and CEO, Guy Ben Zvi, spoke to PrompTugal.news at Web Summit 2026's opening night. We read the agents only from public sources, captured and hashed on 11 November 2026, and the published rules computed the card.",
+   "**Autonomy 2, Suggests.** Anything an agent would create appears as a card and is made once the asker confirms. A page showing an agent completing routine work on its own, with a person on exceptions, would reach level 3.",
+   "**Reach 2, Integrated (available).** Once connected, the agents work in Google Drive, Google Calendar and Notion, and tasks sync with Jira or Linear. A published agent interface with documented authorisation would reach level 3.",
+   "**Control 1, Stated.** Creating anything waits for the confirmation of the person who asked. A written statement of the agents' limits would reach level 2.",
+   "**Openness 1, Disclosed.** An llms.txt and an agents.md reference say what the agents are for and what they read. A page on their limits, or a current list of the models they use, would reach level 2.",
+   "The card is beta and Buzz Messaging AI has not seen it. It can claim the card and add evidence; corrections are dated."
+  ],
+  "pt": {
+   "title": "Os agentes do Buzz work no GAMMA-Ray Spectrum: {sig:buzz-messaging-ai}",
+   "standfirst": "O estúdio GAMMA-Ray lê os agentes de equipa da Buzz Messaging AI a partir das suas páginas públicas: trabalham nas ferramentas ligadas da equipa e não criam nada sem a confirmação de quem pediu.",
+   "body": [
+    "A Buzz Messaging AI, registada em Chipre e com sede em Nicósia, faz uma aplicação de mensagens cujo espaço de equipa, o Buzz work, tem agentes de IA na conversa. O cofundador e CEO, Guy Ben Zvi, falou com o PrompTugal.news na noite de abertura da Web Summit 2026. Lemos apenas fontes públicas, capturadas e com hash a 11 de novembro de 2026.",
+    "**Autonomia 2.** O que um agente criaria aparece como um cartão e só é feito depois de quem pediu confirmar. **Alcance 2 (opcional).** Depois de ligados, os agentes trabalham no Google Drive, Google Calendar e Notion. **Controlo 1.** Criar algo espera pela confirmação.",
+    "**Abertura 1.** Um llms.txt e uma referência agents.md dizem para que servem os agentes e o que leem. O cartão é beta e a Buzz Messaging AI ainda não o viu; pode reclamá-lo e acrescentar evidência. As correções são datadas."
+   ]
+  }
+ },
+ "vault": {
+  "id": "xcqqz6no",
+  "read_key": "sgit_public_read_b36bf59f451883f3a17d835cae1a20d927a8c1feb1b4d06014e59301d3c5d775:xcqqz6no",
+  "published": "2026-11-10"
+ },
+ "team": {
+  "researcher-assessor": "a sub-agent of gamma.studio@web-summit.dinis",
+  "challenger": "a sub-agent",
+  "scorer": "build/spectrum.mjs",
+  "analyst, designer, writer": "gamma.studio@web-summit.dinis",
+  "review": "gamma.review@web-summit.dinis (pending)",
+  "sign-off": "gamma.approve@web-summit.dinis (pending)"
+ },
+ "signoff": null,
+ "corrections": [],
+ "method": "A researcher-assessor gathered and captured the sources and mapped the evidence to indicators, without assigning a level. A challenger argued against every level three and four and every doubtful credit.",
+ "captures": {
+  "https://promptugal.news/interviews/buzz-messaging-ai/guy-ben-zvi/": {
+   "sha256": "1451460cb619b710538b10fa520322c2cfee8576cee4f2ae3d92398cc7eab290",
+   "bytes": 23871,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.buzzmessaging.ai/about": {
+   "sha256": "b6d9b03c68f83750d6123fccde29710909f7d22ed970e55228e72503b1117962",
+   "bytes": 64019,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.buzzmessaging.ai/ai-facts": {
+   "sha256": "fd1f636cf02dd92d2494ed068d716262267f4862957fc36fef0d2baf3be2b61e",
+   "bytes": 52007,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.buzzmessaging.ai/blog/buzz-messaging-web-summit-2026": {
+   "sha256": "c3bd0cf793c98ccfa05172a7ed2d868409faa811972f5e902f0003a2dc66da94",
+   "bytes": 49910,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.buzzmessaging.ai/llms.txt": {
+   "sha256": "0f35ce1fc202a5f2e31b841cca940ee45759f4eed94839683ed77f868f1f2ddb",
+   "bytes": 10333,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.buzzmessaging.ai/privacy": {
+   "sha256": "7324a958777b97b62ccf279700219e7dee2fccbf7f404040187c087ec17aa93e",
+   "bytes": 59740,
+   "read_at": "2026-11-11T00:54Z"
+  }
+ }
+}

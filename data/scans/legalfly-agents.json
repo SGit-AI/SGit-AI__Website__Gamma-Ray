@@ -1,0 +1,240 @@
+{
+ "id": "legalfly-agents",
+ "name": "LEGALFLY agents",
+ "operator": "LEGALFLY (the vendor); each customer is the operator of its own use",
+ "company": "legalfly",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-11",
+ "tier": "public",
+ "basis": "LEGALFLY's own public pages (product, documentation, blog, customer stories, legal and security pages)",
+ "seen_by_operator": null,
+ "what": "Platform of legal agents (Discovery, Review, Draft, Multi Review, Legal Radar, Translation) plus Agent Studio, where customers build multi-step workflows with triggers, conditions, approvals and notifications.",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. From the studio's Web Summit 2026 agents list.",
+ "grant": null,
+ "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
+ "vault": {
+  "id": "6l790mux",
+  "read_key": "sgit_public_read_5214b7932eaf4a06bce6cb28e02c648c71fa0ffdf2de8983da37b8cf74daf13c:6l790mux",
+  "published": "2026-11-11"
+ },
+ "review": {
+  "status": "draft",
+  "rounds": []
+ },
+ "assessment": {
+  "by": "gamma.studio@web-summit.dinis",
+  "researcher_assessor": "a sub-agent of gamma.studio",
+  "challenger": "a sub-agent of gamma.studio",
+  "lowered": [],
+  "fixed": [
+   "I22",
+   "I36"
+  ],
+  "added_by_challenger": [],
+  "files": "in the vault: work/assessment.json, work/challenger.json"
+ },
+ "answers": {
+  "I07": {
+   "e": "https://help.legalfly.com/articles/38318067078162-salesforce",
+   "n": "Discovery retrieves and summarises connected data to answer questions; it does not change the records it reads.",
+   "span": "Discovery can retrieve and summarize Salesforce data",
+   "g": "documented",
+   "m": "default"
+  },
+  "I08": {
+   "e": "https://www.legalfly.com/products/workflows",
+   "n": "Pre-built Agent Studio workflows are described as taking actions, such as redlining related documents and emailing the results.",
+   "span": "redlines related documents and emails you the results",
+   "g": "documented",
+   "m": "available",
+   "cfg": "agent-studio"
+  },
+  "I10": {
+   "e": "https://www.legalfly.com/platform/integrations",
+   "n": "Discovery can search connected SharePoint and Google Drive folders alongside LEGALFLY's own sources.",
+   "span": "Connect SharePoint and Google Drive to access your documents directly in LEGALFLY.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "integrations"
+  },
+  "I11": {
+   "e": "https://help.legalfly.com/articles/38318067078162-salesforce",
+   "n": "Discovery connects to a customer's Salesforce org through an MCP integration after per-user authorisation.",
+   "span": "Through the Discovery agent's Salesforce MCP integration",
+   "g": "documented",
+   "m": "available",
+   "cfg": "integrations"
+  },
+  "I16": {
+   "e": "https://www.legalfly.com/post/product-highlights-june-2026",
+   "n": "In Review the agent proposes redrafts and a reviewer chooses to apply each one.",
+   "span": "When a reviewer applies a suggested redraft during a contract review",
+   "g": "documented",
+   "m": "default"
+  },
+  "I17": {
+   "e": "https://www.legalfly.com/products/workflows",
+   "n": "A pre-built workflow answers routine mailbox questions and sends anything not covered to Legal for approval.",
+   "span": "with Legal approving anything not clearly covered",
+   "g": "documented",
+   "m": "available",
+   "cfg": "agent-studio"
+  },
+  "I20": {
+   "e": "https://www.legalfly.com/agents",
+   "n": "Each agent's purpose is stated on the agents page, for example Discovery for research and advice.",
+   "span": "Legally trained agent for research and advice grounded in verified sources",
+   "g": "documented",
+   "m": "default"
+  },
+  "I22": {
+   "e": "https://help.legalfly.com/articles/38318067078162-salesforce",
+   "n": "The help centre states a limit for users: Discovery's Salesforce integration reads records and cannot create, update or delete them; the security FAQ also says anonymisation can hide needed context and how to adjust it.",
+   "span": "This integration is currently read-only.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I36": {
+   "e": "https://trust.legalfly.com",
+   "n": "The trust centre lists a request-only document titled for EU AI Act Article 50 transparency information, which identifies that provision; the document itself was not read.",
+   "span": "EU AI Act Article 50 - Technical Documentation and Transparency Information",
+   "g": "documented",
+   "m": "default"
+  },
+  "I38": {
+   "e": "https://www.legalfly.com/agentstudio",
+   "n": "Workflow builders can place approval and review steps before a workflow continues.",
+   "span": "Set approval and review steps where a decision is needed",
+   "g": "documented",
+   "m": "available",
+   "cfg": "agent-studio"
+  },
+  "I57": {
+   "e": "https://help.legalfly.com/",
+   "n": "The public help centre offers a way to submit a request to LEGALFLY support.",
+   "span": "Submit a request",
+   "g": "documented",
+   "m": "default"
+  },
+  "I58": {
+   "e": "https://www.legalfly.com/products/legal-radar",
+   "n": "The sources Legal Radar monitors are described by type of institution.",
+   "span": "We monitor the published updates from a jurisdiction's main institutions",
+   "g": "documented",
+   "m": "default"
+  },
+  "I61": {
+   "e": "https://trust.legalfly.com",
+   "n": "The trust centre lists subprocessors, including Anthropic and OpenAI as AI inference providers, with data locations.",
+   "span": "Processes pseudonymised content only, unless a customer explicitly enables",
+   "g": "documented",
+   "m": "default"
+  }
+ },
+ "not_credited": [],
+ "announced": [
+  {
+   "what": "Salesforce support in agents other than Discovery is planned",
+   "source": "https://help.legalfly.com/articles/38318067078162-salesforce"
+  },
+  {
+   "what": "European Commission DG HR deployment: technology 'will be used' for HR legal workflows",
+   "source": "https://www.legalfly.com/clients"
+  },
+  {
+   "what": "Gartner named LEGALFLY a key vendor in agentic AI for legal (company's news item; Gartner report not read)",
+   "source": "https://www.legalfly.com/"
+  },
+  {
+   "what": "Marketing claim of being the only legal AI that anonymises before analysis (not assessed)",
+   "source": "https://www.legalfly.com/security"
+  }
+ ],
+ "configurations": [
+  {
+   "id": "shipped",
+   "name": "As shipped",
+   "note": "LEGALFLY legal AI agents with Agent Studio with its documented defaults.",
+   "on": []
+  },
+  {
+   "id": "agent-studio",
+   "name": "Agent studio",
+   "note": "A workflow or custom agent the customer builds or enables in Agent Studio (triggers, steps, approvals); not active until configured",
+   "on": [
+    "agent-studio"
+   ]
+  },
+  {
+   "id": "integrations",
+   "name": "Integrations",
+   "note": "Connectors (SharePoint, Google Drive, Slack, Teams, Salesforce) that LEGALFLY activates for the organisation on request and each user then connects",
+   "on": [
+    "integrations"
+   ]
+  }
+ ],
+ "captures": {
+  "https://help.legalfly.com/": {
+   "sha256": "160a0efc5979b01cbca05daffcae6de111d88c21ef0a7edd0e8a13b8cd990d57",
+   "bytes": 6986,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://help.legalfly.com/articles/38318067078162-salesforce": {
+   "sha256": "eab87ef08deef901ace6a30f83c9cc758d842a0ae5bc80bb06a35fa374517306",
+   "bytes": 10037,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://trust.legalfly.com": {
+   "sha256": "b5c8d2b68a1e704eb52ceb30bebe973098b8490fc739d406d8df3c9e06c41188",
+   "bytes": 235282,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.legalfly.com/": {
+   "sha256": "d00b85ca102296d76791aa86ea667b44cc8d9ef03afa20b47d120f839539038c",
+   "bytes": 632665,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.legalfly.com/agents": {
+   "sha256": "9726e5ff0b49411397aeed59d8f22778fb0faa3d1407f1618767f7f10f70ad11",
+   "bytes": 511957,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.legalfly.com/agentstudio": {
+   "sha256": "97595a3901780ca5d5d17f7c6de7059aed5b6e203049ad2a3ee41bbc32beb8ac",
+   "bytes": 355485,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.legalfly.com/clients": {
+   "sha256": "e4ceaaf370a1779754420a7481b0f1d5dbe13050143c0bfe33478bdb67c56b55",
+   "bytes": 625910,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.legalfly.com/platform/integrations": {
+   "sha256": "6fd75589cc19dc35dee30741b564b67ac9a6f5b9458c126eb2fd2f346587ad9d",
+   "bytes": 559821,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.legalfly.com/post/product-highlights-june-2026": {
+   "sha256": "48e410f540545a86c7347303473aa9fa6205a1a24d3059bc2dc55c99d893da5d",
+   "bytes": 556059,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.legalfly.com/products/legal-radar": {
+   "sha256": "b0e6d0884dcda6caf4eace341455228cf8f7d45e864724e1bedc273bfd0253d7",
+   "bytes": 596204,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.legalfly.com/products/workflows": {
+   "sha256": "709b8bf7f3ec336a229dffdc1c073ab82eab124a8413b54b45bac1d4560176a8",
+   "bytes": 697421,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.legalfly.com/security": {
+   "sha256": "44238e5158a9a284fe27a3b292b5b29de9cbfacd6ea663433e556932b00cae0b",
+   "bytes": 602177,
+   "read_at": "2026-11-11T00:54Z"
+  }
+ }
+}

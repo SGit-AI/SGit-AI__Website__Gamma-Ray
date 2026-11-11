@@ -1,0 +1,102 @@
+{
+ "id": "student-property-network",
+ "name": "SPN AI job scanner",
+ "operator": "Student Property Network (the vendor, which runs the scanner for its own app)",
+ "company": "student-property-network",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-11",
+ "tier": "public",
+ "basis": "Student Property Network's own public pages (product, documentation, blog, customer stories, legal and security pages)",
+ "seen_by_operator": null,
+ "what": "Python scrapers collect roles from UK real estate firms' careers pages into a database; a large language model decides whether each role is accepted onto the list, and accepted roles appear in the app and site.",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. The company was interviewed on the record by PrompTugal.news; where an answer rests on the interview page, its note says so.",
+ "grant": null,
+ "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
+ "vault": {
+  "id": "augdjly2",
+  "read_key": "sgit_public_read_2200b9a557ab9c53a7af29ebf11410a23e7cfd9ba95ce01119535b06c65fc3a9:augdjly2",
+  "published": "2026-11-11"
+ },
+ "review": {
+  "status": "draft",
+  "rounds": []
+ },
+ "assessment": {
+  "by": "gamma.studio@web-summit.dinis",
+  "researcher_assessor": "a sub-agent of gamma.studio",
+  "challenger": "a sub-agent of gamma.studio",
+  "lowered": [
+   "I05",
+   "I57"
+  ],
+  "fixed": [],
+  "added_by_challenger": [],
+  "files": "in the vault: work/assessment.json, work/challenger.json"
+ },
+ "answers": {
+  "I08": {
+   "e": "https://studentpropertynetwork.com/faq",
+   "n": "The company's FAQ says the scanner adds new roles to the listings as they open.",
+   "span": "adds new graduate schemes, internships, placements and apprenticeships as they open",
+   "g": "documented",
+   "m": "default"
+  },
+  "I09": {
+   "e": "https://promptugal.news/interviews/student-property-network/leo-tashev-and-fraser-lloyd/index.md",
+   "n": "PrompTugal.news's interview page reports the founders saying a language model decides which collected jobs go onto the list; the scanner works on job postings only.",
+   "span": "a large language model decides whether each job is accepted onto the list",
+   "g": "documented",
+   "m": "default"
+  },
+  "I20": {
+   "e": "https://studentpropertynetwork.com/llms.txt",
+   "n": "The company's llms.txt states what the scanner is for: finding roles on UK real estate firms' careers pages.",
+   "span": "an AI job scanner checks UK real estate firms' careers pages around the clock",
+   "g": "documented",
+   "m": "default"
+  },
+  "I58": {
+   "e": "https://studentpropertynetwork.com/faq",
+   "n": "The FAQ describes the data the scanner reads: the careers pages of UK real estate firms.",
+   "span": "checks the careers pages of UK real estate firms around the clock",
+   "g": "documented",
+   "m": "default"
+  },
+  "S3": {
+   "e": "https://studentpropertynetwork.com/llms.txt",
+   "n": "An llms.txt resolves at the company's site and describes the app and how roles are found.",
+   "span": "Student Property Network (SPN) is a free app that brings UK real estate careers",
+   "g": "observed",
+   "m": "default",
+   "method": "probe"
+  }
+ },
+ "not_credited": [],
+ "announced": [],
+ "configurations": [
+  {
+   "id": "shipped",
+   "name": "As shipped",
+   "note": "SPN AI job scanner (in the Student Property Network app) with its documented defaults.",
+   "on": []
+  }
+ ],
+ "captures": {
+  "https://promptugal.news/interviews/student-property-network/leo-tashev-and-fraser-lloyd/index.md": {
+   "sha256": "6d4647e469ef27f66fc3b63731c676d2e4a7f98f6b8ff59a3da3253aea6c1846",
+   "bytes": 4908,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://studentpropertynetwork.com/faq": {
+   "sha256": "6376c3177452b84d562be3834bacfcd1de722af41817373d895553889467c60e",
+   "bytes": 63105,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://studentpropertynetwork.com/llms.txt": {
+   "sha256": "4aca6bfcf273c74584fc8f22d189956aca234890c1f9ff5b026846865d58b5d4",
+   "bytes": 8202,
+   "read_at": "2026-11-11T00:54Z"
+  }
+ }
+}

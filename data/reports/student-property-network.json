@@ -1,0 +1,145 @@
+{
+ "id": "student-property-network",
+ "name": "Student Property Network",
+ "url": "https://studentpropertynetwork.com/",
+ "country": "United Kingdom",
+ "sector": "careers / proptech education",
+ "read": "2026-11-11",
+ "basis": "Student Property Network's own public pages and, for company basics only, the news sources named beside each fact",
+ "seen_by_subject": false,
+ "what": "A free UK app that lists real estate graduate schemes, internships, placements, apprenticeships and events for students, with an AI job scanner that finds and adds roles.",
+ "facts": [
+  {
+   "fact": "Registered company in England and Wales, number 17416353",
+   "url": "https://studentpropertynetwork.com/llms.txt",
+   "span": "Student Property Network Ltd, registered in England & Wales (no. 17416353)"
+  },
+  {
+   "fact": "Incorporated on 24 August 2026; private limited company; SIC 63120 web portals",
+   "url": "https://find-and-update.company-information.service.gov.uk/company/17416353",
+   "span": "24 August 2026"
+  },
+  {
+   "fact": "The app is free for students on iPhone, Android and the web",
+   "url": "https://studentpropertynetwork.com/llms.txt",
+   "span": "The SPN app is free for students on iPhone, Android and the web."
+  },
+  {
+   "fact": "The site states 20+ universities on the network; the founders said 27 in the interview (their figure, unchecked by PrompTugal)",
+   "url": "https://promptugal.news/interviews/student-property-network/leo-tashev-and-fraser-lloyd/index.md",
+   "span": "The founders say they work with 27 universities"
+  },
+  {
+   "fact": "On the day read, the site listed 171 open real estate roles",
+   "url": "https://studentpropertynetwork.com/llms.txt",
+   "span": "171 open now"
+  },
+  {
+   "fact": "App Store listing by STUDENT PROPERTY NETWORK LTD, first released 8 October 2026, version 1.0.1",
+   "url": "https://apps.apple.com/gb/app/student-property-network/id6804379862",
+   "span": "Student Property Network App - App Store"
+  }
+ ],
+ "people": [
+  {
+   "name": "Leo Tashev",
+   "role": "Co-founder, Student Property Network",
+   "url": "https://studentpropertynetwork.com/about"
+  },
+  {
+   "name": "Fraser Lloyd",
+   "role": "Co-founder, Student Property Network (the interview page names Fraser as the technical founder)",
+   "url": "https://studentpropertynetwork.com/about"
+  }
+ ],
+ "solutions": [
+  {
+   "id": "spn-ai-job-scanner",
+   "name": "SPN AI job scanner (in the Student Property Network app)",
+   "short": "SPN AI job scanner",
+   "what": "Python scrapers collect roles from UK real estate firms' careers pages into a database; a large language model decides whether each role is accepted onto the list, and accepted roles appear in the app and site.",
+   "status": "live (per the company's site and the founders' interview)",
+   "url": "https://studentpropertynetwork.com/faq",
+   "scan": "student-property-network"
+  },
+  {
+   "id": "spn-app",
+   "name": "Student Property Network app",
+   "short": "SPN app",
+   "what": "Careers feed, events, learning, a student network and messaging for UK real estate students, on iOS, Android and the web.",
+   "status": "live",
+   "url": "https://studentpropertynetwork.com/download"
+  }
+ ],
+ "stories": [],
+ "analysis": [
+  "**The shape.** The SPN AI job scanner reads {sig:student-property-network} ({stage:student-property-network}). Student Property Network makes a free UK app that lists real estate graduate schemes, internships, placements and events for students. Its AI job scanner reads the careers pages of UK real estate firms and adds new roles to the listings as they open; on the day we read the site it listed 171 open roles. The founders, Leo Tashev and Fraser Lloyd, spoke to PrompTugal.news at Night Summit 2026.",
+  "**Where the evidence is strongest.** What the scanner is for and what it reads are written down twice, in the company's llms.txt and its FAQ: roles on UK real estate firms' careers pages. That carries Disclosed. PrompTugal.news's interview page reports the founders saying that a large language model decides whether each collected job is accepted onto the list, which keeps the scanner's work to one domain, job postings, and carries Contained.",
+  "**What is not yet evidenced.** Autonomy and Control show no level. The FAQ says the scanner adds roles itself, but no public page says what role a person plays around it: whether someone reviews what it adds, is consulted on exceptions, or monitors it. Nor does any page state a rule that limits it. This is a company incorporated in August 2026 with an app first released in October, and both gaps are a page away.",
+  "**What would move it.** Autonomy 3: a page saying the scanner adds roles on its own and naming when a person is consulted. Control 1: one written rule the scanner follows, such as which pages it reads or what it will not list. Reach 2: a documented connection to a named service. Openness 2: a page on the scanner's limits and known failure cases, or the name of the model it uses.",
+  "**Seen, and not counted.** The challenger lowered two credits. The interview page's summary that the scrapers are the founders' own does not say what the agent is or where its boundaries lie, so the in-house build is not counted. The About page's feedback channel covers anything wrong on the site; it names neither the scanner nor AI output, so it is not counted as a way to report the agent's mistakes."
+ ],
+ "article": {
+  "title": "Student Property Network's job scanner on the GAMMA-Ray Spectrum: {sig:student-property-network}",
+  "standfirst": "The GAMMA-Ray studio reads the AI job scanner in Student Property Network's app from its public pages: it finds real estate roles on firms' careers pages and adds them to the listings as they open.",
+  "body": [
+   "Student Property Network Ltd, incorporated in England in August 2026, makes a free app that lists real estate roles and events for UK students. Its founders, Leo Tashev and Fraser Lloyd, spoke to PrompTugal.news at Night Summit 2026. We read the app's AI job scanner only from public sources, captured and hashed on 11 November 2026, and the published rules computed the card.",
+   "**Reach 1, Contained.** The interview page reports a language model deciding which collected jobs go onto the list; the scanner works on job postings only. A documented connection to a named service would reach level 2.",
+   "**Openness 1, Disclosed.** The llms.txt and the FAQ say what the scanner is for and what it reads: UK real estate firms' careers pages. A page on its limits and known failure cases would reach level 2.",
+   "**Autonomy and Control, not yet evidenced.** A page naming when a person is consulted would reach Autonomy 3, and one written rule the scanner follows would reach Control 1.",
+   "The card is beta and Student Property Network has not seen it. It can claim the card and add evidence; corrections are dated."
+  ],
+  "pt": {
+   "title": "O scanner de empregos da Student Property Network no GAMMA-Ray Spectrum: {sig:student-property-network}",
+   "standfirst": "O estúdio GAMMA-Ray lê o scanner de empregos com IA da aplicação Student Property Network a partir das suas páginas públicas: encontra vagas no imobiliário nas páginas de carreiras das empresas e acrescenta-as às listagens.",
+   "body": [
+    "A Student Property Network Ltd, constituída em Inglaterra em agosto de 2026, faz uma aplicação gratuita com vagas e eventos do setor imobiliário para estudantes no Reino Unido. Os fundadores, Leo Tashev e Fraser Lloyd, falaram com o PrompTugal.news na Night Summit 2026. Lemos apenas fontes públicas, capturadas e com hash a 11 de novembro de 2026.",
+    "**Alcance 1.** Um modelo de linguagem decide que vagas entram na lista; o scanner trabalha só com ofertas de emprego. **Abertura 1.** O llms.txt e as perguntas frequentes dizem para que serve e o que lê.",
+    "**Autonomia e Controlo, ainda sem evidência.** Uma página a dizer quando uma pessoa é consultada, e uma regra escrita, fariam subir ambos. O cartão é beta e a Student Property Network ainda não o viu; pode reclamá-lo e acrescentar evidência. As correções são datadas."
+   ]
+  }
+ },
+ "vault": {
+  "id": "augdjly2",
+  "read_key": "sgit_public_read_2200b9a557ab9c53a7af29ebf11410a23e7cfd9ba95ce01119535b06c65fc3a9:augdjly2",
+  "published": "2026-11-10"
+ },
+ "team": {
+  "researcher-assessor": "a sub-agent of gamma.studio@web-summit.dinis",
+  "challenger": "a sub-agent",
+  "scorer": "build/spectrum.mjs",
+  "analyst, designer, writer": "gamma.studio@web-summit.dinis",
+  "review": "gamma.review@web-summit.dinis (pending)",
+  "sign-off": "gamma.approve@web-summit.dinis (pending)"
+ },
+ "signoff": null,
+ "corrections": [],
+ "method": "A researcher-assessor gathered and captured the sources and mapped the evidence to indicators, without assigning a level. A challenger argued against every level three and four and every doubtful credit.",
+ "captures": {
+  "https://apps.apple.com/gb/app/student-property-network/id6804379862": {
+   "sha256": "bcc8e886b5d84c551bdf98abe67474d2960c7b8e342c07267bb13c1944b7d8d3",
+   "bytes": 541528,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://find-and-update.company-information.service.gov.uk/company/17416353": {
+   "sha256": "0f65982a18a7a72a9fa830333c3224846577a57f3c5b29d6d9b43b1675b66583",
+   "bytes": 35345,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://promptugal.news/interviews/student-property-network/leo-tashev-and-fraser-lloyd/index.md": {
+   "sha256": "6d4647e469ef27f66fc3b63731c676d2e4a7f98f6b8ff59a3da3253aea6c1846",
+   "bytes": 4908,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://studentpropertynetwork.com/about": {
+   "sha256": "2a4a3b45f56870f54737892aaab61e3e1aa720d140c6ffee1e31603a4ee3567c",
+   "bytes": 73407,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://studentpropertynetwork.com/llms.txt": {
+   "sha256": "4aca6bfcf273c74584fc8f22d189956aca234890c1f9ff5b026846865d58b5d4",
+   "bytes": 8202,
+   "read_at": "2026-11-11T00:54Z"
+  }
+ }
+}

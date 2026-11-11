@@ -1,0 +1,181 @@
+{
+ "id": "buzz-messaging-ai",
+ "name": "Buzz work agents",
+ "operator": "Buzz Messaging AI (BuzzMSG A.I LTD) (the vendor); each customer is the operator of its own use",
+ "company": "buzz-messaging",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-11",
+ "tier": "public",
+ "basis": "Buzz Messaging (BuzzMSG A.I LTD); interviewed as Buzz Messaging AI's own public pages (product, documentation, blog, customer stories, legal and security pages)",
+ "seen_by_operator": null,
+ "what": "AI agents added to team rooms that read and create in Notion, Google Drive and Google Calendar with the asker's access, and propose tasks that sync to Jira or Linear after confirmation.",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. The company was interviewed on the record by PrompTugal.news; where an answer rests on the interview page, its note says so.",
+ "grant": null,
+ "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
+ "vault": {
+  "id": "xcqqz6no",
+  "read_key": "sgit_public_read_b36bf59f451883f3a17d835cae1a20d927a8c1feb1b4d06014e59301d3c5d775:xcqqz6no",
+  "published": "2026-11-11"
+ },
+ "review": {
+  "status": "draft",
+  "rounds": []
+ },
+ "assessment": {
+  "by": "gamma.studio@web-summit.dinis",
+  "researcher_assessor": "a sub-agent of gamma.studio",
+  "challenger": "a sub-agent of gamma.studio",
+  "lowered": [
+   "I03",
+   "I07",
+   "I22",
+   "I61",
+   "I39"
+  ],
+  "fixed": [
+   "I08",
+   "I58"
+  ],
+  "added_by_challenger": [],
+  "files": "in the vault: work/assessment.json, work/challenger.json"
+ },
+ "answers": {
+  "I08": {
+   "e": "https://www.buzzmessaging.ai/agents.md",
+   "n": "Buzz work agents read and create documents, pages and calendar entries in connected tools.",
+   "span": "Agents read and create in Notion, Google Drive and Google Calendar",
+   "g": "documented",
+   "m": "available",
+   "cfg": "connected"
+  },
+  "I10": {
+   "e": "https://www.buzzmessaging.ai/integrations",
+   "n": "Agents work across Google Drive, Google Calendar and Notion, and tasks sync with Jira or Linear.",
+   "span": "Agents read, create and edit Docs, Sheets and Slides.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "connected"
+  },
+  "I11": {
+   "e": "https://www.buzzmessaging.ai/integrations",
+   "n": "Agents act in third-party services through connections each person or an admin sets up.",
+   "span": "Agents read and create with the asker's connection.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "connected"
+  },
+  "I16": {
+   "e": "https://www.buzzmessaging.ai/work",
+   "n": "Anything an agent would create appears as a card and is made only once the asker confirms.",
+   "span": "Nothing is made until the asker confirms",
+   "g": "documented",
+   "m": "default"
+  },
+  "I20": {
+   "e": "https://www.buzzmessaging.ai/llms.txt",
+   "n": "The company states what the team agents are for: work in Notion, Google Drive and Google Calendar, with tasks synced to Jira or Linear.",
+   "span": "multiplayer AI agents that work in Notion, Google Drive and Google Calendar",
+   "g": "documented",
+   "m": "default"
+  },
+  "I38": {
+   "e": "https://www.buzzmessaging.ai/agents.md",
+   "n": "Creating anything, such as tasks, waits for the confirmation of the person who asked.",
+   "span": "is only created once the person who asked confirms",
+   "g": "documented",
+   "m": "default"
+  },
+  "I58": {
+   "e": "https://www.buzzmessaging.ai/agents.md",
+   "n": "The feature reference says what the agents read: Notion, Google Drive and Google Calendar, the web, and files shared in the room, with the asking person's own access.",
+   "span": "read files shared in the room, always with the asking person's own access",
+   "g": "documented",
+   "m": "default"
+  },
+  "S3": {
+   "e": "https://www.buzzmessaging.ai/llms.txt",
+   "n": "An llms.txt and an agents.md feature reference resolve on the company's site (fetched 2026-11-11).",
+   "span": "# Buzz Messaging",
+   "g": "observed",
+   "m": "default",
+   "method": "probe"
+  }
+ },
+ "not_credited": [],
+ "announced": [
+  {
+   "what": "Voice and video calls, early 2027",
+   "source": "https://www.buzzmessaging.ai/ai-facts"
+  },
+  {
+   "what": "Gmail, Slack and Zapier integrations, coming soon",
+   "source": "https://www.buzzmessaging.ai/integrations"
+  },
+  {
+   "what": "Infrastructure phases 2 (EU-based cloud partner) and 3 (own infrastructure)",
+   "source": "https://www.buzzmessaging.ai/about"
+  },
+  {
+   "what": "Bring your own model / own API keys, Mistral recommended (founder in the interview; not on the company's site, whose assistant page says there are no API keys to manage)",
+   "source": "https://promptugal.news/interviews/buzz-messaging-ai/guy-ben-zvi/"
+  },
+  {
+   "what": "A more advanced agent control policy (founder: not yet as advanced as he would like)",
+   "source": "https://promptugal.news/interviews/buzz-messaging-ai/guy-ben-zvi/"
+  }
+ ],
+ "configurations": [
+  {
+   "id": "shipped",
+   "name": "As shipped",
+   "note": "Buzz work agents (multiplayer AI agents) with its documented defaults.",
+   "on": []
+  },
+  {
+   "id": "connected",
+   "name": "Connected",
+   "note": "The integration is connected: Google Drive, Google Calendar and Notion by each person for themselves; Jira and Linear by a workspace admin.",
+   "on": [
+    "connected"
+   ]
+  }
+ ],
+ "captures": {
+  "https://promptugal.news/interviews/buzz-messaging-ai/guy-ben-zvi/": {
+   "sha256": "1451460cb619b710538b10fa520322c2cfee8576cee4f2ae3d92398cc7eab290",
+   "bytes": 23871,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.buzzmessaging.ai/about": {
+   "sha256": "b6d9b03c68f83750d6123fccde29710909f7d22ed970e55228e72503b1117962",
+   "bytes": 64019,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.buzzmessaging.ai/agents.md": {
+   "sha256": "9f05b87402e97f71b1dcd8bb12ffab257f320d33325805fcfa112c0ab1060789",
+   "bytes": 5633,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.buzzmessaging.ai/ai-facts": {
+   "sha256": "fd1f636cf02dd92d2494ed068d716262267f4862957fc36fef0d2baf3be2b61e",
+   "bytes": 52007,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.buzzmessaging.ai/integrations": {
+   "sha256": "2477a2ee38abf07aa6945afec61430b82df55bf206ea5e911fe27b881c374a09",
+   "bytes": 64504,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.buzzmessaging.ai/llms.txt": {
+   "sha256": "0f35ce1fc202a5f2e31b841cca940ee45759f4eed94839683ed77f868f1f2ddb",
+   "bytes": 10333,
+   "read_at": "2026-11-11T00:54Z"
+  },
+  "https://www.buzzmessaging.ai/work": {
+   "sha256": "05898111121fe43b3298950de3b8607cae2e739c9f4b3142b5ac3b8135a8d6ed",
+   "bytes": 85968,
+   "read_at": "2026-11-11T00:54Z"
+  }
+ }
+}
