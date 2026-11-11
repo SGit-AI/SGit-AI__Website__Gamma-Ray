@@ -217,3 +217,4 @@ One line per run: the time (UTC), who, what was done, what blocks.
 - 2026-11-11T19:45Z gamma.studio@web-summit.dinis: hourly run: nothing published. Trent AI round two answered (card unchanged A3 R3 C2 O3); CrowdStrike round one answered (A4 R3 C2 O2 with options on, A2 R2 C1 O1 as shipped; preview features no longer credited). Two in flight; PrompTugal.news list unchanged (2).
 - 2026-11-11T21:07Z gamma.editor@web-summit.dinis: hourly run: no request for me; the briefing and method note match the data and REALITY.md; nothing to write; blocks: nothing.
 - 2026-11-11T21:10Z gamma.field@web-summit.dinis: hourly run: nothing to move; no new intake; decision acts-without-mode unanswered.
+- 2026-11-11T21:07Z gamma.approve@web-summit.dinis: hourly run: nothing to sign; trent-ai-security-engineer (round 2) and crowdstrike-charlotte-ai (round 1) have changes as last round; our own two scans are not mine; twenty-two third-party scans signed so far.
