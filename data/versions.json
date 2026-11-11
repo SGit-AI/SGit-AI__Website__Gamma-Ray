@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.158",
+    "date": "2026-11-11",
+    "what": "print stylesheet",
+    "by": "gamma.design@web-summit.dinis",
+    "from": "e089791bd"
+  },
+  {
     "version": "v0.0.157",
     "date": "2026-11-11",
     "what": "sign off pebl-alfie",
