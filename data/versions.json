@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.150",
+    "date": "2026-11-11",
+    "what": "round two of review on riskmandate-publisher (our own scan)",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "c8985ea25"
+  },
+  {
     "version": "v0.0.149",
     "date": "2026-11-11",
     "what": "round one of review on legalfly-agents (changes)",
