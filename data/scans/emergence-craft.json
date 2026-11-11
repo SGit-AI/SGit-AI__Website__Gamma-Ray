@@ -19,7 +19,7 @@
   "published": "2026-11-11"
  },
  "review": {
-  "status": "round-1",
+  "status": "round-2",
   "rounds": [
    {
     "round": 1,
@@ -101,6 +101,34 @@
       "answer": "levels",
       "severity": "note",
       "finding": "Style: no em-dashes, at-signs or personal names found in the scan's own text that I read; one caution: the scan's 'what' line is an adjective-free summary but should be corrected as noted under I14. Everything is read as material."
+     }
+    ]
+   },
+   {
+    "round": 2,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I08,I18",
+      "severity": "should-fix",
+      "finding": "Partly answered. The notes now say 'on the Data Governance workflows only' and I18 names the reviewer step for tags and rules; both spans are exact in the releases page (2026.04 and 2026.03 sections) and under fifteen words. Two problems remain. First, the I08 clause 'the actions are the platform's own analyses and writes to its own store, not changes in a customer system' is not on the releases page; the response says it comes from data-governance/workflows, which is not a key of captures and not cited in any note, so the entry relies on a page it does not cite and that is not captured. Capture and cite that page, or cut the clause. Second, I read that page live: it has a 'Workflow approval and the scorecard' section where approving ('Save') a profiling or enrichment run applies the changes, and its diagram has a User Approval step. So approval is kept for more than tags and rules. The release bullet is only about DQ execution, DQ assessment and metadata assessment; the notes should name those three workflows instead of 'Data Governance workflows', because Autonomy 3 and 4 rest on exactly these two answers. Reading I18 and not I16 stays a judgment; the scoping should be as narrow as the three workflows."
+     },
+     {
+      "answer": "I25,I21",
+      "severity": "should-fix",
+      "finding": "Partly answered. Verified on the MCP page: X-Project-ID on all tools except hello_world, membership enforced server side, required scopes 'openid profile email', per-project allowlist, tool_not_allowed, SELECT only; the span 'scoping the request to your CRAFT project' is exact. Problems: (1) the I25 note says the allowlist is stated on 'only that page among those read', but the captured llm-gateway page also lists 'Per-agent tool allowlist, audit events' for em-runtime-mcp (under a page that says it describes target architecture); say 'only the MCP page states it as current'. (2) The page itself says X-Project-ID 'selects a project scope but does not grant access', so the span supports a selector, not narrower access; the narrowing is the membership check and the allowlist, which the span does not contain. Pick a span from the membership sentence or the allowlist sentence for I25. (3) OAuth scopes openid profile email are identity scopes; they do not make access narrower and the note should not offer them as narrowing. I21's note is accurate: the Authorization and Agents pages do not describe the allowlist (I searched both)."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card computed: A4 R3 C2 O2. Autonomy 4 = level 3 (I08 + I18) plus I10 (default, data connections page: PostgreSQL, Redshift, Snowflake, S3, GCS, MinIO, NFS implemented; MySQL, BigQuery, Databricks, SMB planned and not counted). Without I18: no level (I08 alone gives nothing; I17 and I19 are not answered). Without I08: no level. Without I10: A3 (I12 now not credited). So both level 3 and level 4 hang on two release-note bullets about three workflows, and A4 'runs multi-step workflows across systems' leans on I10 being read as the same workflows reaching those sources, which the pages do not state outright (connections page lists sources; ingestion chains into profiling, which is outside the three workflows of I18). The card text for Autonomy should say it is about Data Governance analyses that apply on completion, with tag and rule generation held for review. Reach 3 = S4 (MCP server, default; the endpoint did not answer a probe from here either, so documented not observed, which the note says) plus I25. Without I25: Reach 2 (I10 or I11). Without S4: I14 is mode available (Data Insights), I25 present, so Reach 3 only as available, shipped 2. I14 is A2A between the product's own agents and the scan says so in 'what' and in not_credited, so R3 does not rest on it. Reach 3 'a published agent interface with documented authorisation' is met by the MCP page (OAuth 2.0 PKCE, membership, allowlist), but the I25 evidence is the weak point noted above. Control 2 rests on I38 (2026.03 bullet) with I23 and I25; without I38, no level. Card still publishes on any single removal. Style: no em-dashes, no personal names; the at-sign occurrences are agent identifiers in review fields; gate prints OK."
+     },
+     {
+      "answer": "S4,I14,I10,I12,S3,I23,I38,I45,I41,I42,I48,I04,I11,I20,I22,I26,I29,I39,I57,I58,I61,I68,what,captures,announced,not_credited",
+      "severity": "pass",
+      "finding": "Answered and verified against live pages (every capture sha256 matches a fresh fetch today, so nothing changed under the scan): I12 moved to not_credited with a reason that matches the overview page; the 'what' line now says A2A is between its own agents and the not_credited S4 entry says no outside A2A endpoint is documented (the overview page has A2A and Agent Cards only inside Data Insights); S3 span 'OpenAPI Specs' is the heading in llms.txt and the section links eight .yaml descriptions, observed is right; I42 note no longer reads as verified (page names no mechanism); I45 note attributes each half to its page (authorization page, overview page, MCP page) and the spans are found; I61 note says the list is open; I10, I11, I04, I14 unchanged and still match their pages; all spans found and under fifteen words. Programmatic check: every URL in any answer, note, not_credited or announced entry is a key of captures (0 missing). The India lab hiring item is cut from announced; its capture (www.emergence.ai/latest-news) is now cited nowhere and can be dropped. Note: the response text says the field edit was outside the file's edits, but the cut is present."
      }
     ]
    }
