@@ -270,7 +270,7 @@
   {
    "id": "coding-agent",
    "name": "Coding agent",
-   "note": "Trent connected to the customer's coding agent through the trent@trent plugin or the remote MCP server.",
+   "note": "Trent connected to the customer's coding agent through the Trent plugin or the remote MCP server.",
    "on": [
     "coding-agent"
    ]

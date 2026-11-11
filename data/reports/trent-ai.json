@@ -84,7 +84,7 @@
   },
   {
    "id": "trent-agent-plugin",
-   "name": "Trent plugin for Claude Code and Codex (trent@trent) and hosted MCP server ai.trent/trent",
+   "name": "Trent plugin for Claude Code and Codex (the Trent plugin) and hosted MCP server ai.trent/trent",
    "short": "Trent plugin",
    "what": "Plugin with four skills and the addresses of Trent's remote MCP servers (US and EU); the trent-loop skill runs the fix loop on a branch ending in one pull request.",
    "status": "live; MCP Registry entry version 0.3.0 published 2026-10-02",
