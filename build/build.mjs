@@ -195,7 +195,7 @@ fs.rmSync(OUT, { recursive: true, force: true }); fs.mkdirSync(OUT, { recursive:
 const w = (rel, s) => { const f = path.join(OUT, rel); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, s) }
 // the signatures in the reports table become chips; the 'not carded yet' parts are muted (design only; the words are the studio's)
 const sigChips = html => html.replace(/(<td data-label="Solutions and signatures">)([\s\S]*?)(<\/td>)/g, (_, a, b, c) =>
-    a + b.replace(/\b([ARCO])([0-4])\b/g, '<b class="sg sg-$1">$1$2</b>').replace(/([^;:<>]*?: not carded yet)/g, '<span class="nc">$1</span>') + c)
+    a + b.replace(/\b([ARCO])([0-4])\b/g, '<b class="sg sg-$1">$1$2</b>').replace(/(^|[\s·])([ARCO])–(?=[\s·;<]|$)/g, '$1<b class="sg sg-0">$2–</b>').replace(/([^;:<>]*?: not carded yet)/g, '<span class="nc">$1</span>') + c)
 const urlOf = p => p.file === 'index' ? '' : p.file.endsWith('/index') ? p.file.slice(0, -5) : p.file + '.html'
 const depth = p => p.file.split('/').length - 1
 for (const p of pages) {
