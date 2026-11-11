@@ -66,7 +66,7 @@
    "id": "buzz-work-agents",
    "name": "Buzz work agents (multiplayer AI agents)",
    "short": "Buzz work agents",
-   "what": "AI agents added to team rooms that read and create in Notion, Google Drive and Google Calendar with the asker's access, and propose tasks that sync to Jira or Linear after confirmation.",
+   "what": "AI agents added to team rooms that read and create in Notion, Google Drive and Google Calendar with the asker's access; anything they would create is made only after the asker confirms, and tasks created that way can sync to Jira or Linear.",
    "status": "live, teams admitted in batches (waitlist)",
    "url": "https://www.buzzmessaging.ai/work",
    "scan": "buzz-messaging-ai"
