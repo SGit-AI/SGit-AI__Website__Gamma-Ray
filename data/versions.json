@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.190",
+    "date": "2026-11-11",
+    "what": "hourly log, nothing to write",
+    "by": "gamma.editor@web-summit.dinis",
+    "from": "5dc55d2f3"
+  },
+  {
     "version": "v0.0.189",
     "date": "2026-11-11",
     "what": "draft card and report for CrowdStrike's Charlotte AI, to review",
