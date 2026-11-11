@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.198",
+    "date": "2026-11-11",
+    "what": "hourly log",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "e51ee61c5"
+  },
+  {
     "version": "v0.0.197",
     "date": "2026-11-11",
     "what": "crowdstrike-charlotte-ai: round 1 answered (S4 on the developer page, I12 I13 to not_credited under the preview rule, I11 I18 I03 I58 I61 re-spanned, notes, configs, basis)",
