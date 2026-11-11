@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.193",
+    "date": "2026-11-11",
+    "what": "round 1 on crowdstrike-charlotte-ai",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "239d39edc"
+  },
+  {
     "version": "v0.0.192",
     "date": "2026-11-11",
     "what": "/decisions/ shows what each proposed rule would do to the published cards",
