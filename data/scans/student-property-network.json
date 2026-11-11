@@ -19,8 +19,52 @@
   "published": "2026-11-11"
  },
  "review": {
-  "status": "draft",
-  "rounds": []
+  "status": "round-1",
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "I08,I09,I20,I58,S3",
+      "severity": "pass",
+      "finding": "All three sources fetched on 2026-11-11 (the FAQ page is JS-light plain text; the interview twin and llms.txt are plain text). Each note matches its source. Each span is present verbatim and under fifteen words (I09 span has 14 words, S3 span 14, I20 13). Every URL cited (all five answers) is a key of the scan's captures; not_credited and announced are empty, so no further URL needs checking. Grades documented for statements and observed for the S3 probe are right; mode default is right (the FAQ and llms.txt describe the scanner as it runs for everyone, nothing is opt-in). Indicators fit their text: I08 'executes actions itself' (adds roles to the listings), I09 one domain's data (job postings only), I20 purpose stated, I58 data described, S3 an llms.txt that resolves."
+     },
+     {
+      "answer": "levels",
+      "severity": "pass",
+      "finding": "Card computed: A- R1 C- O1. R1 rests on I09 alone (rule: any of I09, I01). O1 rests on I20 with I58 (rule: I20 and any of I56, I22, I58). Autonomy is 0: level 3 needs I08 plus one of I17, I18, I19, and none is credited; level 1 needs I15 (the person operates every action), which the sources do not say. Control is 0: I47 and I38 have no source. The card has level one in two dimensions, so the publication rule (level one or more in at least one dimension) is met."
+     },
+     {
+      "answer": "I09",
+      "severity": "note",
+      "finding": "The only source for R1 is the PrompTugal.news interview page, which reports what the founders said on camera; it is a media page, not the company's own document, and the page itself says the figures are theirs and unchecked. It is also published by a site of the same operator group as this repository, and the page discloses RiskMandate's interest. Grade documented is defensible because the scan's note says the answer rests on the interview, but the reader should know Reach 1 depends on this single source. The interview span is the page's paraphrase, not the founder's words."
+     },
+     {
+      "answer": "I20,I58",
+      "severity": "note",
+      "finding": "I20 and I58 rest on near-identical sentences (the scanner checks UK real estate firms' careers pages), so Openness 1 rests on one fact counted twice. I58 'the data it uses is described' is thin: the sources name where roles come from, not what is stored or how it is used. I20 states purpose (finding roles) but not permitted tasks. Both are within what the rules ask for at level one; the reviewer's call is only that I58 is the weaker credit. Another sentence in the FAQ and llms.txt (members get an alert when a new role matches) adds nothing to either."
+     },
+     {
+      "answer": "I08",
+      "severity": "note",
+      "finding": "I08 is credited but does not lift Autonomy because no I17, I18 or I19 source exists. That is correct: the interview says a language model decides acceptance onto the list and names no step where a person is consulted or approves, but it does not say there is none, so it must not be written as an absence. No answer is missing for I17 to I19 on these three sources."
+     },
+     {
+      "answer": "S1,S4,I22,I57,I05",
+      "severity": "note",
+      "finding": "S1 (in production) is not credited and rightly so: the sources give a count of open roles (175 now) and, on the interview, 27 universities, and the site's own figure of 300+ student members; none is a usage figure for the capability that acts (sessions, tasks, pull requests), and a member or listing count is not one. S4 is not credited and rightly so: llms.txt is a human and agent readable index, not an interface agents call, and no MCP server, agent card or API is described. The scan lists no not_credited entries, although the assessment block records I05 and I57 as lowered by the challenger and the interview names failure modes (accepting bad jobs) that are not published for users, so I22 is also correctly absent. Adding not_credited entries for these, with reasons, would make the card more informative; this is the scan's choice and does not change a level."
+     },
+     {
+      "answer": "S3",
+      "severity": "note",
+      "finding": "S3 is observed by probe and the llms.txt resolves with status 200 on the live fetch. It does not move a level: Openness 3 needs I50 (published evaluations) as well. The captured byte counts differ by a few bytes from the fetched file (llms.txt 8202 vs 8196, FAQ 63105 vs 63099), which is the capture tool counting differently; the hashes were not recomputed and a change of text in the meantime is not seen in the spans."
+     }
+    ]
+   }
+  ]
  },
  "assessment": {
   "by": "gamma.studio@web-summit.dinis",
