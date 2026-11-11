@@ -131,6 +131,49 @@
       "finding": "Answered and verified against live pages (every capture sha256 matches a fresh fetch today, so nothing changed under the scan): I12 moved to not_credited with a reason that matches the overview page; the 'what' line now says A2A is between its own agents and the not_credited S4 entry says no outside A2A endpoint is documented (the overview page has A2A and Agent Cards only inside Data Insights); S3 span 'OpenAPI Specs' is the heading in llms.txt and the section links eight .yaml descriptions, observed is right; I42 note no longer reads as verified (page names no mechanism); I45 note attributes each half to its page (authorization page, overview page, MCP page) and the spans are found; I61 note says the list is open; I10, I11, I04, I14 unchanged and still match their pages; all spans found and under fifteen words. Programmatic check: every URL in any answer, note, not_credited or announced entry is a key of captures (0 missing). The India lab hiring item is cut from announced; its capture (www.emergence.ai/latest-news) is now cited nowhere and can be dropped. Note: the response text says the field edit was outside the file's edits, but the cut is present."
      }
     ]
+   },
+   {
+    "round": 3,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I08,I18",
+      "severity": "should-fix",
+      "finding": "Round-two finding 1 is partly answered. Done: the unsourced clause about the platform's own store is cut, and both notes now name the three workflows (DQ execution, DQ assessment, metadata assessment); both spans are exact in the releases page (2026.04 and 2026.03) and under fifteen words; no note relies on an uncaptured page. Not done: the Data Governance workflows page (https://docs.emergence.ai/data-governance/workflows.md) is still not captured and not cited, and the response says the I18 clause citing it was cut because it is not among the captures. I read it live today: its diagram runs the Profiling, Enrichment and DQ generation flows into a User Approval step before the scorecard update, and its section 'Workflow approval and the scorecard' says that approving (Save) a profiling or enrichment run is what applies the changes. The I08 note presents the chain connection, ingestion, profiling and enrichment as running automatically and the I18 note says only that tag and rule generation keep approval, so a reader of the card learns less than the vendor's own page shows about where a person still approves. Autonomy 3 and 4 rest on exactly these two answers (scorer: I10 and I18 used), so the omission matters. Fix: capture that page (tools/capture.mjs) and cite it in the I18 note, saying that approval is kept for tag and rule generation and for saving profiling and enrichment runs, or cut 'runs automatically' from the I08 note and keep the claim to what the releases page states."
+     },
+     {
+      "answer": "I08",
+      "severity": "should-fix",
+      "finding": "New problem in a changed field: the I08 note puts the eight-step enrichment pipeline under '(2026.03)'. In the releases page the bullet 'Automated data intelligence enrichment' is in the 2026.04 section (as is the 'results are written directly' span); only the event-driven ingestion and auto-chained profiling bullet is 2026.03. The same wrong version is repeated in the studio's round-two response. The bullet says the pipeline 'runs after profiling'. Correct the version label (for example name 2026.04 for the pipeline) so the note matches the cited page."
+     },
+     {
+      "answer": "I25,I21",
+      "severity": "note",
+      "finding": "Round-two finding 2 is answered. Span 'project membership is enforced server-side against your JWT's claims' is exact on the MCP page (9 words); the note now says X-Project-ID selects a project but grants no access, drops the identity scopes, and says only this page states the allowlist as current. I checked: the authorization and agents pages have no mention of an allowlist, and the llm-gateway page (target architecture, announced) lists it too, which the note covers by 'as current'. The I21 note is accurate. Remaining judgment, not a fix: the span shows the server checking membership, which limits access from the platform side; the part where the caller asks for a narrower scope is the X-Project-ID sentence, which the note says. Reach 3 still holds on S4 plus I25 either way."
+     },
+     {
+      "answer": "I10",
+      "severity": "note",
+      "finding": "The new clause in the I10 note matches the 2026.04 bullet (Snowflake connector for cataloging, profiling and natural-language querying alongside PostgreSQL and Redshift) and the connections page marks postgres, redshift and snowflake Implemented, with MySQL, BigQuery, Databricks and SMB Planned. Span exact. The sources are data sources read by the platform's own analyses; the workflows page shows results written to the platform's own PostgreSQL store. This is a reading for A4 'across systems', not an error."
+     },
+     {
+      "answer": "captures",
+      "severity": "note",
+      "finding": "Programmatic check: every URL in any answer, note, not_credited entry and announced entry is a key of captures (0 missing, 21 captures). The capture www.emergence.ai/latest-news is cited nowhere and can be dropped. Fresh fetches today match the stored SHA-256 for all 19 docs.emergence.ai captures; the two www.emergence.ai pages differ from their stored hashes on a plain fetch, which the home page (served dynamically) is likely to do; the only claim taken from the home page is the announced marketing line, which does not affect a level."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A4 R3 C2 O2; gate prints OK; no em-dash and no at-sign outside agent identifiers. Re-argued against A4: it stands on I18 plus I10, and I18 is the contestable answer, because the vendor's own workflows page keeps a person's Save on profiling and enrichment and the releases page keeps approval on generation, so 'approves critical decisions only' versus 'approves each action' (I16) is a judgment on one release-note bullet that the page it cites for the three workflows does not contradict, but the card must not read wider than those three workflows; the studio already concedes that wording. Against R3: S4 (hosted MCP server, documented, not observed live) plus I25 carry it; I14 is only available and internal A2A, and without I25 Reach is 2, so it publishes on any single removal."
+     },
+     {
+      "answer": "I12,S4,I14,S3,I23,I38,I45,I41,I42,I48,I04,I11,I20,I22,I26,I29,I39,I57,I58,I61,I68,what,not_credited,announced",
+      "severity": "pass",
+      "finding": "Verified unchanged since round two and still matching their live pages: spans exact and under fifteen words (validated programmatically), notes consistent with the cited pages, I12 in not_credited with a matching reason, the what line names A2A as between its own agents, S3 observed on llms.txt, I42 does not read as verified, announced entries match the pages marked Planned or target architecture, and the studio's levels response is accurate except for the 2026.03 label noted above."
+     }
+    ]
    }
   ],
   "responses": [
