@@ -232,6 +232,76 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-11",
     "response": "No change to these answers. The at-sign in the coding-agent configuration note (the plugin's name written with an at-sign; now reworded) cannot be changed by the apply tool's fields; the studio should reword it to 'through the Trent plugin or the remote MCP server'."
+   },
+   {
+    "round": 2,
+    "answer": "I25",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Replaced. I25 now cites the plugin README (already a key of captures; a fresh fetch on 11 November 2026 has the same SHA-256, a056747b...): 'Trent reads a repository through the Trent GitHub App you install on it.' (13 words, exact). Repository access goes through a GitHub App installed on the repository, which is narrower than the whole account, so R3 and C2 stand. The OAuth scopes in the MCP metadata (openid, profile, offline_access) are identity scopes and are not used for I25."
+   },
+   {
+    "round": 2,
+    "answer": "I58",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Replaced. Span and note now carry the same sentence: the span is the start of the llm-info 'Sources:' sentence (13 words, exact on the live page, fetched 11 November 2026), and the note lists that sentence's sources only; the data-location clause is dropped. O2 and O3 stand."
+   },
+   {
+    "round": 2,
+    "answer": "report",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Fixed by the studio: the customer name written with an at-sign is gone from the report's stories, span and analysis."
+   },
+   {
+    "round": 2,
+    "answer": "I08",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Kept. Raising a ticket in Linear or Jira is an action Trent executes in another system, which is what I08 asks; it stays mode available on the connectors configuration, so A3 is shown as available, not shipped."
+   },
+   {
+    "round": 2,
+    "answer": "I21",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Note reworded as suggested: it now says the post states a limit and does not list the tools. Feeds no level; no score change."
+   },
+   {
+    "round": 2,
+    "answer": "I24",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "No change. The 401 probe response for both endpoints is kept in the vault raw files (raw/ans-001.txt, read 2026-11-11T15:45Z) for publication."
+   },
+   {
+    "round": 2,
+    "answer": "basis",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "No change needed; basis passes."
+   },
+   {
+    "round": 2,
+    "answer": "captures",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "No change needed. The new I25 source (plugin README) is already a key of captures with an unchanged hash; I58 keeps the llm-info URL, also a key of captures."
+   },
+   {
+    "round": 2,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "A3: argued, I08 (ticket raised in Linear or Jira, an action Trent executes) plus I17 (span exact; exceptions come to the team), both mode available, so A3 shows as available. R3: argued, I24 and S4 observed and captured, and I25 now rests on the README's GitHub App sentence, a scoped grant rather than the FAQ's 'level you choose'. C2: argued, I38 (span exact) plus the same I25. O3: argued, I50 (benchmark results with method) and S3 observed, with O2 on I22 (Keycloak failure case) and I58 (Sources sentence, span and note now aligned). Signature unchanged at A3 R3 C2 O3."
+   },
+   {
+    "round": 2,
+    "answer": "I10,I11,I13,I16,I17,I20,I22,I38,I50,I57,S3,S4",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "No change; all pass."
    }
   ]
  },
@@ -306,7 +376,7 @@
   },
   "I21": {
    "e": "https://trent.ai/blog/agent-native-product-surface/",
-   "n": "Trent's post on its hosted MCP server says access changes and irreversible actions, such as deleting projects, managing keys and installing GitHub apps, stay in the dashboard.",
+   "n": "Trent's post on its hosted MCP server states a limit: access changes and irreversible actions, such as deleting projects, managing keys and installing GitHub apps, stay in the dashboard; it does not list the tools.",
    "span": "access changes and irreversible actions stay in the dashboard.",
    "g": "documented",
    "m": "default"
@@ -326,9 +396,9 @@
    "method": "probe: on 11 November 2026 an HTTP GET of https://mcp.trent.ai/mcp without credentials returned 401 with a WWW-Authenticate Bearer header whose resource_metadata names this URL (the EU endpoint answered the same way); an HTTP GET of this URL returned 200 with the metadata"
   },
   "I25": {
-   "e": "https://trent.ai/product/",
-   "n": "The customer chooses the level of access the agent works with, from a URL-only assessment to a repository, agent definitions or design documents.",
-   "span": "The agent loop runs at whatever level of access you choose.",
+   "e": "https://raw.githubusercontent.com/trnt-ai/trent-agent-plugin/main/README.md",
+   "n": "Trent's plugin README says Trent reads a repository through the Trent GitHub App installed on that repository, and that the plugin sends only the repository's owner and name.",
+   "span": "Trent reads a repository through the Trent GitHub App you install on it.",
    "g": "documented",
    "m": "default"
   },
@@ -355,8 +425,8 @@
   },
   "I58": {
    "e": "https://trent.ai/llm-info/",
-   "n": "The llm-info page lists the sources Trent reads (a GitHub repository, a live URL, a code upload, design documents, agent definitions) and says data is held in the region the team signs in to.",
-   "span": "Data is held in the region the team signs in to.",
+   "n": "The llm-info page lists the sources Trent reads: a GitHub repository, a live web URL, a direct code upload, design documents and product specs, and agent definitions.",
+   "span": "Sources: a GitHub repository (repositories and Actions, kept current as the code changes)",
    "g": "documented",
    "m": "default"
   },
@@ -438,47 +508,47 @@
   "https://raw.githubusercontent.com/trnt-ai/trent-agent-plugin/main/README.md": {
    "sha256": "a056747bba23a8f4f36081326b957518d1536ac35101f67e118867a68ea07d8a",
    "bytes": 5722,
-   "read_at": "2026-11-11T12:52Z"
+   "read_at": "2026-11-11T18:44Z"
   },
   "https://registry.modelcontextprotocol.io/v0/servers?search=ai.trent": {
    "sha256": "0056625dac60bb455d0658719bad6db07fe83f12f9c8d41c3944d67ec284f0c9",
    "bytes": 2730,
-   "read_at": "2026-11-11T15:47Z"
+   "read_at": "2026-11-11T18:44Z"
   },
   "https://trent.ai/blog/agent-native-product-surface/": {
    "sha256": "1f5c25d1c31843867d8f4685e69f051efd4c91d44edb658d707843d5c53cf2f0",
    "bytes": 151012,
-   "read_at": "2026-11-11T15:47Z"
+   "read_at": "2026-11-11T18:44Z"
   },
   "https://trent.ai/blog/trent-cursor-grok-vs-cwe-bench-cve/": {
    "sha256": "e692cc6619d26461169638b41b797954901f2065fd102a64f9fe2a5bc555f54f",
    "bytes": 176052,
-   "read_at": "2026-11-11T15:47Z"
+   "read_at": "2026-11-11T18:44Z"
   },
   "https://trent.ai/llm-info/": {
-   "sha256": "a29c88e03786c447c38aab10c8af7416157319856e5e7f8a8032a05097ced7d0",
-   "bytes": 108628,
-   "read_at": "2026-11-11T15:47Z"
+   "sha256": "b778bcdcf9d753228c576f776091e0038d5d9e19db8cf2a4c55cb4102c1b0e79",
+   "bytes": 108621,
+   "read_at": "2026-11-11T18:44Z"
   },
   "https://trent.ai/llms.txt": {
    "sha256": "54c2e280f0fb7400617afcf342f759f7b38d839d8ac1093b4bb9b5e8a3f3d08c",
    "bytes": 16414,
-   "read_at": "2026-11-11T15:47Z"
+   "read_at": "2026-11-11T18:44Z"
   },
   "https://trent.ai/product/": {
    "sha256": "3875cd1875b911f2d8ab2febf2c8da71bdc75596a07d152d8b274a1ea073b8a0",
    "bytes": 169660,
-   "read_at": "2026-11-11T15:47Z"
+   "read_at": "2026-11-11T18:44Z"
   },
   "https://trent.ai/use-cases/autonomous-remediation/": {
    "sha256": "2dbe240250b850087f556df4480e2c3be99855d046959daca1129886fa2a2c04",
    "bytes": 78742,
-   "read_at": "2026-11-11T15:47Z"
+   "read_at": "2026-11-11T18:44Z"
   },
   "https://mcp.trent.ai/.well-known/oauth-protected-resource/mcp": {
    "sha256": "be55b3a70157699a8ac37290eb54e125e0b577b5ee9ee63525b41f1360e618d2",
    "bytes": 185,
-   "read_at": "2026-11-11T15:47Z"
+   "read_at": "2026-11-11T18:44Z"
   }
  }
 }
