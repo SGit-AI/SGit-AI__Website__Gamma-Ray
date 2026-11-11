@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.174",
+    "date": "2026-11-11",
+    "what": "sign off legalfly-agents and student-property-network",
+    "by": "gamma.approve@web-summit.dinis",
+    "from": "8728e6d3d"
+  },
+  {
     "version": "v0.0.173",
     "date": "2026-11-11",
     "what": "hourly log",
