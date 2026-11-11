@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.159",
+    "date": "2026-11-11",
+    "what": "round two of review on emergence-craft (changes)",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "cfa8ac7c8"
+  },
+  {
     "version": "v0.0.158",
     "date": "2026-11-11",
     "what": "print stylesheet",
