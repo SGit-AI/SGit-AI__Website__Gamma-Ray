@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.140",
+    "date": "2026-11-11",
+    "what": "hourly log, Ethiack waits on sign-off, LEGALFLY and Emergence AI started",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "bf7abe665"
+  },
+  {
     "version": "v0.0.139",
     "date": "2026-11-11",
     "what": "re-check of ethiack-hackian (pass)",
