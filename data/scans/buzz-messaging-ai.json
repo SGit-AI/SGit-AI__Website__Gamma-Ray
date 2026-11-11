@@ -126,6 +126,39 @@
       "finding": "Verified against fresh fetches on 2026-11-11 into my own folder: every span is in its cited source (I08 11 words, I10 14, I11 8, I16 7, I20 12, I38 9, I58 13, S3 3), all under fifteen. Every URL cited anywhere in the scan (answers, announced, not_credited, notes) is a key of captures, compared programmatically; no uncited page is relied on (the assistant page is gone from the announced entry). I08 is documented and available, I11 documented and available with cfg connected, I38 documented and default (agents.md says only created once the person confirms), S3 observed (llms.txt and agents.md resolve). Captures were re-read at 03:48 and sha256 values updated, and live byte counts differ by a few bytes on some pages (page build noise), but none of the cited sentences changed. No em-dashes and no at-signs in the scan except the agent names. not_credited is empty, which matches the lowered ids in the assessment."
      }
     ]
+   },
+   {
+    "round": 3,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "basis",
+      "severity": "should-fix",
+      "finding": "Not answered. The studio response says the basis was rewritten and 'interviewed as' removed, but git diff a44fb47..HEAD shows the basis line unchanged: it still reads 'Buzz Messaging (BuzzMSG A.I LTD); interviewed as Buzz Messaging AI's own public pages (product, documentation, blog, customer stories, legal and security pages)'. The response is therefore not true of the scan. The wording still mixes the company's own pages with the third-party interview, and it lists blog, customer stories, legal and security pages, none of which is a key of captures (the captures are work, integrations, agents.md, llms.txt, about, ai-facts and the interview). Replace with a plain statement: the company's own public pages as captured on 2026-11-11 (work, integrations, agents.md, llms.txt, about, ai-facts), plus one third-party interview used only for announced items."
+     },
+     {
+      "answer": "I20",
+      "severity": "note",
+      "finding": "Source moved to agents.md and the span is verbatim there (12 words), so the round-two note is answered in form. The span, however, is the Buzz work paragraph sentence ('multiplayer AI agents that work in Notion, Google Drive and Google Calendar'), the same marketing-style line as before, while the note describes the AI agents section. Use the span from that section ('Agents read and create in Notion, Google Drive and Google Calendar, search the web') so that the span matches the note and O1 does not rest on a purpose line."
+     },
+     {
+      "answer": "I16,I38",
+      "severity": "note",
+      "finding": "Unchanged by design and the response is true: the note says creation only, and agents.md says anything an agent would create is only created once the person who asked confirms. Edits to Docs, Sheets and Slides and booking meetings (agents.md integrations list) are still not stated as gated. A2 on I16 alone and C1 on I38 alone still rest on one sentence."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A2 R2 C1 O1 reproduced. Weakest credits: A2 and C1 both depend on the single agents.md sentence on confirmation of creation, and the same sentence appears on the work page; if read strictly (each action, high-impact only) both fall and the card would publish only on R2 and O1, still above the rule. O1 rests on I20 (purpose line) plus I58 (room files); I58 is default only for room files, which is now narrowed correctly. R2 stands on I11 alone if I10 were questioned. No level three or four, so no argue-down beyond this."
+     },
+     {
+      "answer": "I08,I10,I11,I58,S3,announced,what,captures",
+      "severity": "pass",
+      "finding": "Verified against fresh fetches on 2026-11-11 in my own folder. Changed fields since a44fb47: what (reworded as round two asked; matches agents.md: created tasks can sync two-way with Jira or Linear, creation waits for the asker), I20 (source and note, discussed above), I58 (note narrowed to room files; span verbatim in agents.md, 13 words, grade documented, mode default correct), announced (control policy entry removed; the four remaining entries are each in their cited captured page: early 2027 in ai-facts, Gmail, Slack and Zapier coming soon in integrations, phases 2 and 3 in about, own API keys and Mistral in the interview), captures re-read at 06:44. Every span is in its source and under fifteen words (I08 11, I10 14, I11 8, I16 7, I20 12, I38 9, I58 13, S3 3). Every URL in answers, announced and notes is a key of captures (compared programmatically); not_credited is empty. sha256 of agents.md matches the capture; work and llms.txt differ by a few bytes (page build noise) with the cited sentences present. I16 note confirmed answered (creation only), I58 answered, announced answered, what answered, I10 pass retained. No em-dashes in the scan."
+     }
+    ]
    }
   ],
   "responses": [

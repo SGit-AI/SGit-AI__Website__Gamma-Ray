@@ -111,6 +111,54 @@
       "finding": "New problem, outside the scan file but cited as the card's report: the report fact 'On the day read, the site listed 171 open real estate roles' with span '171 open now' cites llms.txt, but the captured and live llms.txt says '175 open now' for all roles (120 graduate schemes, 5, 19, 30), and the 00:54 and 03:48 captures have the same sha256, so '171 open now' never appears in the captured text. Fix the report (175, read date) or drop the fact. Also the report analysis says 'Disclosed' and 'Contained' carry the card; its 'Contained' sentence says the model decision 'keeps the scanner's work to one domain', which is the studio's reading, not the page's words."
      }
     ]
+   },
+   {
+    "round": 3,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "I09",
+      "severity": "pass",
+      "finding": "Round-two I09 finding answered. The scan now cites the company FAQ with the span \"SPN's AI job scanner checks the careers pages of UK real estate firms\" (13 words), present once in my live fetch of the FAQ (sha256 6376c3..., identical to the capture) and again in the question 'How does SPN find opportunities?'. The note says what the page says and has no 'only'. The scan note no longer says Reach 1 rests on the media page."
+     },
+     {
+      "answer": "I20,I58",
+      "severity": "pass",
+      "finding": "Round-two I20,I58 finding answered. I58 is gone from answers and listed in not_credited with a reason, so the one sentence is no longer counted twice; Openness is 0 and the card is shown O-. I20 span (14 words) is in the live llms.txt under 'How roles are found' (hash 4aca6b..., identical to capture). The scan note now says neither company page carries a date of its own."
+     },
+     {
+      "answer": "report",
+      "severity": "pass",
+      "finding": "Round-two report finding answered. The report fact now reads 'On 11 November 2026, the site listed 175 open real estate roles' with span '175 open now', which is the first line of the live llms.txt list; the analysis also says 175. The 'Contained' sentence now cites the FAQ's own words and says the interview sentence carries no level. No em-dashes or at-signs were added outside agent ids."
+     },
+     {
+      "answer": "I05,I57",
+      "severity": "pass",
+      "finding": "The not_credited entries agreed in round two are now present for I05, I57 and I58, each with reason and source. Reasons hold: the interview says own Python scrapers and a model decides; the FAQ text has no channel for reporting a scanner problem (searched the rendered text). Every URL in answers, not_credited and announced is a key of captures (compared programmatically, none missing). Grades, modes (default) and the other spans (I08 11 words, S3 14 words) are unchanged and exact in the live text."
+     },
+     {
+      "answer": "I20",
+      "severity": "note",
+      "finding": "I20 is still credited although its own note concedes the page gives what the scanner does, not permitted tasks, which is half the indicator's wording ('purpose and permitted tasks'). It lifts nothing now, but a credited answer whose note says the indicator is only partly met shows more than the sources do. Either move it to not_credited or word the note as a partial reading; no level changes."
+     },
+     {
+      "answer": "report",
+      "severity": "note",
+      "finding": "The report's facts cite five URLs that are not keys of the scan's captures (the site home page, /about, /download, the App Store listing, Companies House). The gate may not require it, but 'capture before publish' is not met for those facts, and the App Store fact's span is only the page title, which does not carry the 'first released 8 October 2026, version 1.0.1' text the fact states. Not part of the card."
+     },
+     {
+      "answer": "S3",
+      "severity": "note",
+      "finding": "The interview capture hash in the scan (5b335e...) does not match my live fetch (23d85b...), same length 4908. Only the moving footer changes, as round two found. No credited answer cites that page now; it only supports the I05 not_credited entry and report facts."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "The card is A- R1 C- O- (node card.mjs: Reach 1 used I09, nothing else), and it publishes on Reach alone. Argument against it: I09 asks that the agent works in one domain's data; the FAQ sentence says what the scanner checks and adds, which is one domain's pages, but does not say its work is limited to them, so Reach 'Contained' is the weakest reading of the indicator, from one sentence of a self-description with no limit or control stated. It is shown honestly: the card names I09 and the FAQ, the report calls the rest not yet evidenced, and the studio says in the scan that the card depends on this one credit. I would keep the beta label prominent and add that dependence to the public card text."
+     }
+    ]
    }
   ],
   "responses": [

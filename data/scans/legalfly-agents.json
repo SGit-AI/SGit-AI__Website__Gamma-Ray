@@ -136,6 +136,34 @@
       "finding": "Checked by program: every URL in answers, announced and not_credited is a key of captures (twelve keys, none missing); all fourteen spans are found in their cited source after whitespace and quote normalisation and none exceeds 12 words; no em-dash and no email in the scan (the at-sign appears only in the by fields). Announced items (Salesforce for other agents planned, Commission 'will be used', Gartner news item, anonymisation claim) match their pages. Round one findings I07, I10, I22, I16, I38 and the S1/S4 not_credited entries are answered as stated; only the Control not_credited entry is not."
      }
     ]
+   },
+   {
+    "round": 3,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Argue against Autonomy 3 (A3 R2 C1 O2). I08 now rests on one template card on the workflows page ('drafts a DPIA where high risk is found and updates your register'). It is a vendor description of a template in available mode, and 'updates your register' says what the template does, not that any customer runs it or that it writes without a person checking the draft. I17 rests on one line, 'with Legal approving anything not clearly covered', which describes a helpdesk template that routes to a person. Both are single template blurbs with no customer, no usage and no documentation page; remove either and Autonomy is 2 (I16). The scan says this itself in its round-two response, and the card shows 'avail available', so the reading is defensible and honestly labelled. Publication rule met (level at least one in every dimension)."
+     },
+     {
+      "answer": "not_credited",
+      "severity": "note",
+      "finding": "The third not_credited entry cites the Legal Radar page's audit trail in its text but names only the Agent Studio URL as source. Both pages are captured and both phrases are exact ('full activity logs', 'Governed outputs' on Agent Studio; 'audit trail' on Legal Radar), so no rule is broken; naming the Legal Radar URL in the why text would make it self-contained. Not required."
+     },
+     {
+      "answer": "I08",
+      "severity": "note",
+      "finding": "Changed field verified on a fresh fetch of the workflows page: span 'drafts a DPIA where high risk is found and updates your register' is exact, 12 words, under the New Processing Activity DPIA Assessment template. The note's other examples (emailed redlines, routing drafts for signature) are on the same page ('emails you the results', 'routes them for review and signature'). Indicator I08 (executes actions itself, needs statement) fits; grade documented, mode available, cfg agent-studio correct."
+     },
+     {
+      "answer": "captures,announced,not_credited,answers,spans",
+      "severity": "pass",
+      "finding": "Round two's only should-fix (third not_credited entry) is answered: the entry no longer says no page states an action log, says the Agent Studio page and Legal Radar claim activity logs and an audit trail as product statements that cannot earn I41 (needs operation), and the sign-in clause is gone. Its remaining absence claims (no pause or stop, no written limit) hold: I searched all fetched pages for pause, kill switch, stop or cancel a workflow and found nothing. Round-two notes (I07, I08/I17, I38, I10/I22/I16, I57/I36, S1/S4) are unchanged and still true; the studio's responses match the file. Every URL cited in any note, announced or not_credited entry is a key of the twelve captures (compared programmatically; the only odd hit was a trailing comma in a review finding's text). All 14 spans are found exactly in fresh fetches and are 12 words or fewer; announced items (Salesforce planned, Commission 'will be used', Gartner news item, anonymisation 'only legal AI' claim) match their pages. No em-dash and no email in the scan; the at-sign appears only in by fields. Card via card.mjs: A3 R2 C1 O2."
+     }
+    ]
    }
   ],
   "responses": [
