@@ -10,7 +10,7 @@
  "basis": "Student Property Network's own public pages (product, documentation, blog, customer stories, legal and security pages)",
  "seen_by_operator": null,
  "what": "Python scrapers collect roles from UK real estate firms' careers pages into a database; a large language model decides whether each role is accepted onto the list, and accepted roles appear in the app and site.",
- "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. The company was interviewed on the record by PrompTugal.news; where an answer rests on the interview page, its note says so. PrompTugal.news belongs to the same operator group as this site, and its page says so; Reach 1 rests on that page alone.",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. Every credited answer rests on the company's own FAQ or llms.txt; neither page carries a date of its own, so the date is the capture. The company was also interviewed on the record by PrompTugal.news, which belongs to the same operator group as this site, as its page says; the description of how the scanner works draws on that interview, and no credited answer rests on it.",
  "grant": null,
  "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
  "vault": {
@@ -162,6 +162,62 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "Noted: the few bytes are the capture of a page served dynamically; the spans are in both copies."
+   },
+   {
+    "round": 2,
+    "answer": "I09",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Re-sourced to the company's own FAQ, span 'SPN's AI job scanner checks the careers pages of UK real estate firms' (verified in the captured FAQ, sha256 6376c3...). The note now says only what the page says, without 'only', and Reach 1 no longer rests on the PrompTugal.news page; the scan note says so."
+   },
+   {
+    "round": 2,
+    "answer": "I20,I58",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Conceded for I58: no distinct span describes the data (the interview's 'into a database' sentence would put Openness back on the operator group's media page), so I58 is removed and recorded under not_credited, and Openness falls to 0. I20 is kept as the minimal reading with a note that says it states what the scanner does, not a list of permitted tasks; it no longer lifts a level, and the scan note now says the company's pages carry no date of their own."
+   },
+   {
+    "round": 2,
+    "answer": "S1,S4,I22,I57,I05",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Done: not_credited now has entries with reasons for I05 (interview suggests an in-house build, no page says the organisation controls identity, tools and boundaries) and I57 (no reporting or contest channel on the FAQ), plus I58 withdrawn this round. S1, S4 and I22 stay uncredited for the reasons in round one."
+   },
+   {
+    "round": 2,
+    "answer": "S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Agreed, no change to the answer: the interview hash pins one build of a moving footer, not the statement. After this round no credited answer rests on the interview page; it remains a capture only as the source of the I05 not_credited entry."
+   },
+   {
+    "round": 2,
+    "answer": "I08,S3,I09,I20,I58",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "I08 and S3 unchanged. I09 re-sourced, I20 note reworded and I58 removed, as in the responses above."
+   },
+   {
+    "round": 2,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Reach 1: re-sourced to the FAQ, which names the one domain the scanner works in (UK real estate firms' careers pages); the indicator asks for one domain's data, not a statement of a limit, and the note does not say 'only'. Openness 1: conceded, I58 removed, Openness is 0."
+   },
+   {
+    "round": 2,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Recomputed: the card is now A- R1 C- O-, resting on I09 from the company's FAQ; it still meets the publication rule on Reach alone, and depends on that one credit."
+   },
+   {
+    "round": 2,
+    "answer": "report data/reports/student-property-network.json",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Handled by the report studio itself, outside this answer set: the report's '171 open now' fact will be corrected to the captured figure or dropped, and the 'Contained' sentence reworded to what the FAQ says."
    }
   ]
  },
@@ -186,23 +242,16 @@
    "m": "default"
   },
   "I09": {
-   "e": "https://promptugal.news/interviews/student-property-network/leo-tashev-and-fraser-lloyd/index.md",
-   "n": "PrompTugal.news's interview page reports, in its own paraphrase, the founders saying a language model decides which collected jobs go onto the list; the scanner works on job postings only. This page is the only source for Reach 1.",
-   "span": "a large language model decides whether each job is accepted onto the list",
+   "e": "https://studentpropertynetwork.com/faq",
+   "n": "The company's FAQ says its AI job scanner checks the careers pages of UK real estate firms and adds new roles from them.",
+   "span": "SPN's AI job scanner checks the careers pages of UK real estate firms",
    "g": "documented",
    "m": "default"
   },
   "I20": {
    "e": "https://studentpropertynetwork.com/llms.txt",
-   "n": "The company's llms.txt states what the scanner is for: finding roles on UK real estate firms' careers pages.",
+   "n": "The company's llms.txt says, under how roles are found, that an AI job scanner checks UK real estate firms' careers pages and adds new roles as they open; it states what the scanner does, not a list of permitted tasks.",
    "span": "an AI job scanner checks UK real estate firms' careers pages around the clock",
-   "g": "documented",
-   "m": "default"
-  },
-  "I58": {
-   "e": "https://studentpropertynetwork.com/faq",
-   "n": "The FAQ describes the data the scanner reads: the careers pages of UK real estate firms.",
-   "span": "checks the careers pages of UK real estate firms around the clock",
    "g": "documented",
    "m": "default"
   },
@@ -215,7 +264,23 @@
    "method": "probe"
   }
  },
- "not_credited": [],
+ "not_credited": [
+  {
+   "what": "I05: built in-house, the organisation controlling its identity, tools and boundaries",
+   "why": "The interview page reports the founders saying they collect jobs with their own scrapers, written in Python, and a language model decides; that suggests an in-house build, but no page says the organisation controls the agent's identity, tools and boundaries. Lowered by the challenger.",
+   "source": "https://promptugal.news/interviews/student-property-network/leo-tashev-and-fraser-lloyd/index.md"
+  },
+  {
+   "what": "I57: a channel to report problems with it or contest its output",
+   "why": "The FAQ describes the scanner and member alerts but names no channel to report a problem with a listed role or to contest the scanner's output. Lowered by the challenger.",
+   "source": "https://studentpropertynetwork.com/faq"
+  },
+  {
+   "what": "I58: the data it uses is described",
+   "why": "The only sentence on the company's pages is the one that says the scanner checks UK real estate firms' careers pages, which is the same fact already used for I20 and I09; nothing describes what is stored, kept or used. Withdrawn in round two rather than count one sentence twice.",
+   "source": "https://studentpropertynetwork.com/faq"
+  }
+ ],
  "announced": [],
  "configurations": [
   {
@@ -227,19 +292,19 @@
  ],
  "captures": {
   "https://promptugal.news/interviews/student-property-network/leo-tashev-and-fraser-lloyd/index.md": {
-   "sha256": "fe9fc2f392de49500d552b9dede7cb4584b9b1ee019faa2a99df163f61ccccc1",
+   "sha256": "5b335e8baae46cba7318ed69514b2f0e2b38afa137e5252ca958f6bad4de6867",
    "bytes": 4908,
-   "read_at": "2026-11-11T03:48Z"
+   "read_at": "2026-11-11T06:46Z"
   },
   "https://studentpropertynetwork.com/faq": {
    "sha256": "6376c3177452b84d562be3834bacfcd1de722af41817373d895553889467c60e",
    "bytes": 63105,
-   "read_at": "2026-11-11T03:48Z"
+   "read_at": "2026-11-11T06:46Z"
   },
   "https://studentpropertynetwork.com/llms.txt": {
    "sha256": "4aca6bfcf273c74584fc8f22d189956aca234890c1f9ff5b026846865d58b5d4",
    "bytes": 8202,
-   "read_at": "2026-11-11T03:48Z"
+   "read_at": "2026-11-11T06:46Z"
   }
  }
 }
