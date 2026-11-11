@@ -7,7 +7,7 @@
  "kind": "product-shape",
  "read": "2026-11-11",
  "tier": "public",
- "basis": "Trent AI's own public pages (product, documentation, blog, customer stories, legal and security pages)",
+ "basis": "Trent AI's own public pages (the product page, a use-case page, the llm-info page, llms.txt and two blog posts), the plugin README on GitHub, the MCP Registry listing and the public OAuth metadata of the MCP endpoint",
  "seen_by_operator": null,
  "what": "Agent that keeps code, infrastructure, agents and docs in one context, judges exploitable findings as attack chains, hands fixes to the team's coding agents, reviews and re-scans to verify.",
  "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. From the studio's Web Summit 2026 agents list.",
@@ -89,6 +89,92 @@
      }
     ]
    }
+  ],
+  "responses": [
+   {
+    "round": 1,
+    "answer": "S4",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Cut the challenge clause from S4: its note now says only what the captured registry listing shows, and the method records the registry fetch with its date. The OAuth challenge was probed again read-only on 11 November 2026 (headers saved under raw/ans-001.txt, metadata under raw/ans-002.json) and is now its own answer, I24, observed, with the metadata URL as source; the studio must capture that URL."
+   },
+   {
+    "round": 1,
+    "answer": "I17",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Changed the span to the exceptions sentence, 'The findings that need human attention, Trent brings to you proactively' (11 words, exact on the captured page), and reworded the note to the confirm-once routine path and the recommended decision. Mode available, cfg auto-remediation, unchanged."
+   },
+   {
+    "round": 1,
+    "answer": "I08",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "The note now names the team connectors from the llm-info page and says the page calls this path Manual because people make the fix; 'itself' is dropped. Against the A2 argument: I08 asks whether the agent executes an action, and filing a ticket in Jira or Linear is an action Trent executes in another system; 'Manual' names who makes the fix, and the routine-task half of A3 comes from I17 (the fully automatic path), so A3 holds, shown as available."
+   },
+   {
+    "round": 1,
+    "answer": "I25",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Span changed to 'The agent loop runs at whatever level of access you choose.' (exact, same FAQ answer), which ties the chosen access to the agent; I25's own text (narrower access than the whole account) holds on it, so C2 stands. For R3's authorisation half the endpoint's OAuth metadata is now observed and credited as I24 (unauthenticated call refused, authorisation server and scopes published), and the captured agent-native post documents the OAuth browser sign-in for the remote server; R3 holds."
+   },
+   {
+    "round": 1,
+    "answer": "I22",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Kept, with the note weakened to say it is a research post and not a product limits page; the span is unchanged and exact. Against O3: O1 holds on I20 and I58, O2 on I58 (now a product-level data statement) and I22 (a known failure case the vendor published), O3 on I50 and S3, both unchallenged; if a research post is ruled not to count as documentation for users, O2 and therefore O3 fall to O1."
+   },
+   {
+    "round": 1,
+    "answer": "I58",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Moved from the plugin README to the captured llm-info page, which describes the data for the product as a whole: the sources Trent reads and that data is held in the region the team signs in to (span exact, 10 words)."
+   },
+   {
+    "round": 1,
+    "answer": "I52",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Conceded: I52 removed and recorded in not_credited, since a vendor statement that a report exists on request is self-reported and a third party's answer must be documented or better. I21 is kept as documented (the vendor stating its own limits is what the indicator asks), with the note reworded so it no longer says 'through MCP' and names the post it comes from."
+   },
+   {
+    "round": 1,
+    "answer": "basis",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Rewritten to name only what is captured: the product page, a use-case page, the llm-info page, llms.txt, two blog posts, the plugin README, the MCP Registry listing and, for the new I24, the MCP endpoint's OAuth metadata (to be captured by the studio). No adjectives; seen_by_operator stays null."
+   },
+   {
+    "round": 1,
+    "answer": "report",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "The report's own sources (the home page, about-us, openclaw, asmm, the funding post and the rest) are captured into the vault's report-captures.json with hashes in the report's captures field; the studio will recapture them after these answers. The scan is not changed for this finding; the OAuth claim in the report is now backed by I24 and its probe."
+   },
+   {
+    "round": 1,
+    "answer": "captures",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "No change needed; note that the new I24 source (https://mcp.trent.ai/.well-known/oauth-protected-resource/mcp) must be captured before publication so every answer URL is again a key of captures."
+   },
+   {
+    "round": 1,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Card stays A3 R3 C2 O3. The weak points are addressed: I17 and I25 spans now carry their indicators, I08 is argued, R3's authorisation also rests on the observed I24, and O2 rests on a product-level I58; the remaining risk is I22 (research post), named in its note."
+   },
+   {
+    "round": 1,
+    "answer": "I10,I11,I13,I16,I20,I38,I50,I57,S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "No change to these answers. The at-sign in the coding-agent configuration note ('trent@trent') cannot be changed by the apply tool's fields; the studio should reword it to 'through the Trent plugin or the remote MCP server'."
+   }
   ]
  },
  "assessment": {
@@ -108,7 +194,7 @@
  "answers": {
   "I08": {
    "e": "https://trent.ai/use-cases/autonomous-remediation/",
-   "n": "Trent files remediation tickets in the team's Linear or Jira itself.",
+   "n": "Through the team connectors the llm-info page lists (Jira, Linear, Slack, Notion), Trent raises remediation tickets in Linear or Jira; the page calls this path Manual because people then make the fix.",
    "span": "Trent raises a ticket in Linear or Jira with exact remediation instructions.",
    "g": "documented",
    "m": "available",
@@ -147,8 +233,8 @@
   },
   "I17": {
    "e": "https://trent.ai/use-cases/autonomous-remediation/",
-   "n": "In the fully automatic path Trent hands finding categories cleared once with the team to the customer's coding agent, reviews and verifies the fix, and brings the rest to people with a recommended decision.",
-   "span": "Trent identifies the findings that can be fixed without a person",
+   "n": "In the fully automatic path Trent confirms a category of finding with the team once, then hands such findings to the coding agent and verifies the fix; findings that need a person come to the team with a recommended decision.",
+   "span": "The findings that need human attention, Trent brings to you proactively",
    "g": "documented",
    "m": "available",
    "cfg": "auto-remediation"
@@ -162,22 +248,29 @@
   },
   "I21": {
    "e": "https://trent.ai/blog/agent-native-product-surface/",
-   "n": "Actions the agent may not take through MCP are defined: access changes and irreversible actions are kept in the dashboard.",
+   "n": "Trent's post on its hosted MCP server says access changes and irreversible actions, such as deleting projects, managing keys and installing GitHub apps, stay in the dashboard.",
    "span": "access changes and irreversible actions stay in the dashboard.",
    "g": "documented",
    "m": "default"
   },
   "I22": {
    "e": "https://trent.ai/blog/trent-cursor-grok-vs-cwe-bench-cve/",
-   "n": "A published benchmark describes a failure case where Trent reached the vulnerable code but reported a different issue.",
+   "n": "A research post on Trent's blog, not a product limits page, reports a known failure case: in Keycloak Trent reached the vulnerable code but reported a redirect issue instead.",
    "span": "reaching the right code did not always produce the right diagnosis.",
    "g": "documented",
    "m": "default"
   },
+  "I24": {
+   "e": "https://mcp.trent.ai/.well-known/oauth-protected-resource/mcp",
+   "n": "The US MCP endpoint refuses a call without credentials and points to public OAuth metadata that names auth.trent.ai as its authorisation server and the scopes openid, profile and offline_access.",
+   "g": "observed",
+   "m": "default",
+   "method": "probe: on 11 November 2026 an HTTP GET of https://mcp.trent.ai/mcp without credentials returned 401 with a WWW-Authenticate Bearer header whose resource_metadata names this URL (the EU endpoint answered the same way); an HTTP GET of this URL returned 200 with the metadata"
+  },
   "I25": {
    "e": "https://trent.ai/product/",
-   "n": "The customer chooses the level of access, from a URL-only assessment to repositories, agent definitions or documents.",
-   "span": "You control what level of access to provide.",
+   "n": "The customer chooses the level of access the agent works with, from a URL-only assessment to a repository, agent definitions or design documents.",
+   "span": "The agent loop runs at whatever level of access you choose.",
    "g": "documented",
    "m": "default"
   },
@@ -195,13 +288,6 @@
    "g": "documented",
    "m": "default"
   },
-  "I52": {
-   "e": "https://trent.ai/llm-info/",
-   "n": "The penetration test is stated to be independent of the builders.",
-   "span": "an independent penetration test report is available on request through the Trust Center.",
-   "g": "documented",
-   "m": "default"
-  },
   "I57": {
    "e": "https://trent.ai/product/",
    "n": "Users can contest a finding's severity and correct requirements; corrections are recorded.",
@@ -210,9 +296,9 @@
    "m": "default"
   },
   "I58": {
-   "e": "https://raw.githubusercontent.com/trnt-ai/trent-agent-plugin/main/README.md",
-   "n": "The plugin README describes what data is sent where: repository access through a GitHub App, review content, uploaded documents, regional servers.",
-   "span": "Trent reads a repository through the Trent GitHub App",
+   "e": "https://trent.ai/llm-info/",
+   "n": "The llm-info page lists the sources Trent reads (a GitHub repository, a live URL, a code upload, design documents, agent definitions) and says data is held in the region the team signs in to.",
+   "span": "Data is held in the region the team signs in to.",
    "g": "documented",
    "m": "default"
   },
@@ -226,14 +312,20 @@
   },
   "S4": {
    "e": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.trent",
-   "n": "A remote MCP server, ai.trent/trent, is published in the MCP Registry with US and EU endpoints; the US endpoint answers with an OAuth challenge.",
+   "n": "The MCP Registry lists a remote MCP server, ai.trent/trent, with a US endpoint and an EU endpoint.",
    "span": "Security reviews, threat models over a repo or website, and remediation tracking",
    "g": "observed",
    "m": "default",
-   "method": "probe"
+   "method": "probe: an HTTP GET of the MCP Registry search for ai.trent on 11 November 2026 (status 200), the copy captured; three versions listed, 0.3.0 the latest, each with mcp.trent.ai and mcp.eu.trent.ai as remotes"
   }
  },
- "not_credited": [],
+ "not_credited": [
+  {
+   "what": "People who did not build it take part in assessing it (I52): the llm-info page says an independent penetration test report is available on request through the Trust Center.",
+   "why": "The vendor states that a report exists; the report is not public, so who took part cannot be read, and a self-reported answer is not allowed on a third party's card.",
+   "source": "https://trent.ai/llm-info/"
+  }
+ ],
  "announced": [
   {
    "what": "Fewer approval pauses and more deliberate review triggers 'still ahead' in the remediation flow",
@@ -293,37 +385,42 @@
   "https://registry.modelcontextprotocol.io/v0/servers?search=ai.trent": {
    "sha256": "0056625dac60bb455d0658719bad6db07fe83f12f9c8d41c3944d67ec284f0c9",
    "bytes": 2730,
-   "read_at": "2026-11-11T12:52Z"
+   "read_at": "2026-11-11T15:47Z"
   },
   "https://trent.ai/blog/agent-native-product-surface/": {
-   "sha256": "74f434329547e937e152a7664d40f74743d69383a4a1331e31ff73843c7db116",
+   "sha256": "1f5c25d1c31843867d8f4685e69f051efd4c91d44edb658d707843d5c53cf2f0",
    "bytes": 151012,
-   "read_at": "2026-11-11T12:52Z"
+   "read_at": "2026-11-11T15:47Z"
   },
   "https://trent.ai/blog/trent-cursor-grok-vs-cwe-bench-cve/": {
-   "sha256": "1dc18b25218f7a1cfd94880c371ede95337d6986ed23c263056b2ad18b364364",
+   "sha256": "e692cc6619d26461169638b41b797954901f2065fd102a64f9fe2a5bc555f54f",
    "bytes": 176052,
-   "read_at": "2026-11-11T12:52Z"
+   "read_at": "2026-11-11T15:47Z"
   },
   "https://trent.ai/llm-info/": {
-   "sha256": "6f9f05c7cd3607a7d525eddbf97e23114b49a34a53ecef105228b8df2b5766d5",
-   "bytes": 108621,
-   "read_at": "2026-11-11T12:52Z"
+   "sha256": "a29c88e03786c447c38aab10c8af7416157319856e5e7f8a8032a05097ced7d0",
+   "bytes": 108628,
+   "read_at": "2026-11-11T15:47Z"
   },
   "https://trent.ai/llms.txt": {
    "sha256": "54c2e280f0fb7400617afcf342f759f7b38d839d8ac1093b4bb9b5e8a3f3d08c",
    "bytes": 16414,
-   "read_at": "2026-11-11T12:52Z"
+   "read_at": "2026-11-11T15:47Z"
   },
   "https://trent.ai/product/": {
-   "sha256": "964b83f7004bf487c3da17c1ee1d0f43325841d0eed1e5889fde90aad9d2f427",
+   "sha256": "3875cd1875b911f2d8ab2febf2c8da71bdc75596a07d152d8b274a1ea073b8a0",
    "bytes": 169660,
-   "read_at": "2026-11-11T12:52Z"
+   "read_at": "2026-11-11T15:47Z"
   },
   "https://trent.ai/use-cases/autonomous-remediation/": {
-   "sha256": "f5a51c127945d0be8366300bff7f7e0893484d902778b31d1e2945313e263430",
+   "sha256": "2dbe240250b850087f556df4480e2c3be99855d046959daca1129886fa2a2c04",
    "bytes": 78742,
-   "read_at": "2026-11-11T12:52Z"
+   "read_at": "2026-11-11T15:47Z"
+  },
+  "https://mcp.trent.ai/.well-known/oauth-protected-resource/mcp": {
+   "sha256": "be55b3a70157699a8ac37290eb54e125e0b577b5ee9ee63525b41f1360e618d2",
+   "bytes": 185,
+   "read_at": "2026-11-11T15:47Z"
   }
  }
 }
