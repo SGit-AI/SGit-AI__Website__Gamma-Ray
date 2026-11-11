@@ -304,6 +304,20 @@
     "by": "gamma.field@web-summit.dinis",
     "at": "2026-11-10",
     "response": "Every page a not_credited entry cites is now captured and hashed: the third help article (How can I access Alfie), the October 2025 and December 2025 releases, the security page, the OpenAPI description, the privacy policy, and the September 2025 rebrand release, which the I65 entry named in words and now cites by URL. Fetched once each on 2026-11-10, saved in the vault (captures/x01 to x07) and in the scan's captures with their SHA-256; each entry's claim was checked in its capture (for example 'two coordinated AI agents', ISO 27001, Abacus.AI, 'handoff to a human expert'). No claim was cut."
+   },
+   {
+    "round": 4,
+    "answer": "I65",
+    "by": "gamma.field@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Reworded as asked: the rebrand release presents Pebl as AI-first and names Alfie as its AI assistant; only the June 2026 release says Alfie evolves from assistant to workforce agent."
+   },
+   {
+    "round": 4,
+    "answer": "I57",
+    "by": "gamma.field@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "The December 2025 release (captured) is now named, with its URL, as the source of 'smart-routing to specialists'; the October 2025 release stays the source of the handoff."
    }
   ]
  },
@@ -347,7 +361,7 @@
   "lowered_after_review": [
    "I15"
   ],
-  "captures_note": "tools/capture.mjs captures the sources of answers; the pages cited only by not_credited entries were captured the same way (fetched once, SHA-256, saved in the vault as captures/x01 to x07, marked cited_by not_credited in the vault's captures.json) and merged into captures. A later run of tools/capture.mjs rewrites captures from answers only and would drop them (asked of gamma-ray@)."
+  "captures_note": "tools/capture.mjs (since 2026-11-10T21:15Z) collects the pages behind answers, not_credited and announced entries and merges into captures; the seven pages first captured by hand (vault captures/x01 to x07) are in that set."
  },
  "answers": {
   "I01": {
@@ -477,7 +491,7 @@
    "source": "https://hellopebl.com/platform/alfie-ai-assistant/"
   },
   {
-   "what": "I57: handoff to a human expert and smart-routing to specialists.",
+   "what": "I57: handoff to a human expert and smart-routing to specialists (the December 2025 release, https://hellopebl.com/news/pebl-introduces-new-ai-agents-redefine-speed-intelligence-and-compliance-global-hiring/).",
    "why": "These route a question Alfie cannot answer to a person; no source describes a channel to report a problem with Alfie or contest its output. The site's SpeakUp! hotline is a company whistleblowing line, not for Alfie.",
    "source": "https://hellopebl.com/news/companies-can-now-expand-their-workforce-globally-minutes-pebls-ai-assistant-alfie/"
   },
@@ -512,7 +526,7 @@
    "source": "https://hellopebl.com/legal/privacy-policy/"
   },
   {
-   "what": "I65: the June 2026 release and the September 2025 rebrand release (https://hellopebl.com/news/velocity-global-rebrands-as-pebl-introducing-ai-first-global-hiring-platform/) present Pebl as 'AI-first' and Alfie as moving from assistant to workforce agent.",
+   "what": "I65: the September 2025 rebrand release (https://hellopebl.com/news/velocity-global-rebrands-as-pebl-introducing-ai-first-global-hiring-platform/) presents Pebl as 'AI-first' and names Alfie as its AI assistant; the June 2026 release says Alfie evolves from assistant to workforce agent.",
    "why": "Product positioning in press releases, not a stated strategy for agents.",
    "source": "https://hellopebl.com/news/pebl-says-hr-chatbot-era-ending-alfie-evolves-assistant-workforce-agent/"
   },
