@@ -10,7 +10,7 @@
  "basis": "Student Property Network's own public pages (product, documentation, blog, customer stories, legal and security pages)",
  "seen_by_operator": null,
  "what": "Python scrapers collect roles from UK real estate firms' careers pages into a database; a large language model decides whether each role is accepted onto the list, and accepted roles appear in the app and site.",
- "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. The company was interviewed on the record by PrompTugal.news; where an answer rests on the interview page, its note says so.",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. The company was interviewed on the record by PrompTugal.news; where an answer rests on the interview page, its note says so. PrompTugal.news belongs to the same operator group as this site, and its page says so; Reach 1 rests on that page alone.",
  "grant": null,
  "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
  "vault": {
@@ -64,6 +64,57 @@
      }
     ]
    }
+  ],
+  "responses": [
+   {
+    "round": 1,
+    "answer": "I08,I09,I20,I58,S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Thank you; no change to these answers beyond the I09 note."
+   },
+   {
+    "round": 1,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Agreed: A- R1 C- O1, and Autonomy is shown as not yet evidenced, never as none."
+   },
+   {
+    "round": 1,
+    "answer": "I09",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "The note now says the span is the interview page's paraphrase and that it is the only source for Reach 1; the scan's note says PrompTugal.news belongs to the same operator group, as the page itself discloses."
+   },
+   {
+    "round": 1,
+    "answer": "I20,I58",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept: both meet the level one rule as written. The report says what the scanner reads and does not claim more about storage or use; I58 is the weaker credit, as noted."
+   },
+   {
+    "round": 1,
+    "answer": "I08",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Agreed. The report says no public page states the person's role, and does not say there is none."
+   },
+   {
+    "round": 1,
+    "answer": "S1,S4,I22,I57,I05",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Agreed; none is credited, and I05 and I57 sit in the challenger's lowered list."
+   },
+   {
+    "round": 1,
+    "answer": "S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Noted: the few bytes are the capture of a page served dynamically; the spans are in both copies."
+   }
   ]
  },
  "assessment": {
@@ -88,7 +139,7 @@
   },
   "I09": {
    "e": "https://promptugal.news/interviews/student-property-network/leo-tashev-and-fraser-lloyd/index.md",
-   "n": "PrompTugal.news's interview page reports the founders saying a language model decides which collected jobs go onto the list; the scanner works on job postings only.",
+   "n": "PrompTugal.news's interview page reports, in its own paraphrase, the founders saying a language model decides which collected jobs go onto the list; the scanner works on job postings only. This page is the only source for Reach 1.",
    "span": "a large language model decides whether each job is accepted onto the list",
    "g": "documented",
    "m": "default"
@@ -128,19 +179,19 @@
  ],
  "captures": {
   "https://promptugal.news/interviews/student-property-network/leo-tashev-and-fraser-lloyd/index.md": {
-   "sha256": "6d4647e469ef27f66fc3b63731c676d2e4a7f98f6b8ff59a3da3253aea6c1846",
+   "sha256": "fe9fc2f392de49500d552b9dede7cb4584b9b1ee019faa2a99df163f61ccccc1",
    "bytes": 4908,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T03:48Z"
   },
   "https://studentpropertynetwork.com/faq": {
    "sha256": "6376c3177452b84d562be3834bacfcd1de722af41817373d895553889467c60e",
    "bytes": 63105,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T03:48Z"
   },
   "https://studentpropertynetwork.com/llms.txt": {
    "sha256": "4aca6bfcf273c74584fc8f22d189956aca234890c1f9ff5b026846865d58b5d4",
    "bytes": 8202,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T03:48Z"
   }
  }
 }
