@@ -1,0 +1,274 @@
+{
+ "id": "crowdstrike-charlotte-ai",
+ "name": "Charlotte AI",
+ "operator": "CrowdStrike (the vendor); each customer is the operator of its own use",
+ "company": "crowdstrike",
+ "ours": false,
+ "kind": "product-shape",
+ "read": "2026-11-11",
+ "tier": "public",
+ "basis": "CrowdStrike's own public pages, each listed with its hash in this scan's captures",
+ "seen_by_operator": null,
+ "what": "AI agents in the Falcon platform for security operations: conversational AI, prebuilt agents (for example Detection Triage), multi-agent investigations, and AgentWorks for custom agents.",
+ "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. From the studio's Web Summit 2026 agents list. Features the vendor labels preview or pre-beta are not counted.",
+ "grant": null,
+ "grant_note": "Not measured. No deployment shape for this product is published in the capability grammar.",
+ "vault": {
+  "id": "kyc8b0sz",
+  "read_key": "sgit_public_read_b3c157d6d5ad0ecefbe0800092cbf167a6dc2ad50ee5d3fc22d41efb9a958c85:kyc8b0sz",
+  "published": "2026-11-11"
+ },
+ "review": {
+  "status": "draft",
+  "rounds": []
+ },
+ "assessment": {
+  "by": "gamma.studio@web-summit.dinis",
+  "researcher_assessor": "a sub-agent of gamma.studio",
+  "challenger": "a sub-agent of gamma.studio",
+  "lowered": [
+   "I14",
+   "I19",
+   "I41",
+   "I50",
+   "I63",
+   "I69",
+   "S1",
+   "S3"
+  ],
+  "fixed": [
+   "I10",
+   "I58"
+  ],
+  "added_by_challenger": [],
+  "files": "in the vault: work/assessment.json, work/challenger.json"
+ },
+ "answers": {
+  "I01": {
+   "e": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/agentic-security-workforce/",
+   "n": "Charlotte AI ships prebuilt agents that a customer uses as supplied.",
+   "span": "Automate manual work with out-of-the-box agents.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I03": {
+   "e": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/",
+   "n": "Customers can build custom agents in AgentWorks, a no-code builder working on their Falcon data.",
+   "span": "Build custom security agents in AgentWorks, no code required",
+   "g": "documented",
+   "m": "available",
+   "cfg": "agentworks"
+  },
+  "I07": {
+   "e": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/",
+   "n": "By default the prebuilt agents produce information, summaries and recommendations, not actions.",
+   "span": "By default, Charlotte AI's prebuilt agents are limited to generating information, summaries, and recommendations.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I08": {
+   "e": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/",
+   "n": "Teams can configure actions to run autonomously through Agentic SOAR workflows or AgentWorks agents.",
+   "span": "Actions can be set to execute autonomously or require human approval before running",
+   "g": "documented",
+   "m": "available",
+   "cfg": "autonomous-actions"
+  },
+  "I10": {
+   "e": "https://www.crowdstrike.com/en-us/resources/customer-stories/green-thumb-industries/",
+   "n": "A named customer uses Charlotte AI across several Falcon platform modules.",
+   "span": "We’re using Charlotte AI across multiple platform modules",
+   "g": "documented",
+   "m": "default"
+  },
+  "I11": {
+   "e": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/",
+   "n": "Agentic SOAR connects to third-party tools and agents through bidirectional MCP.",
+   "span": "Connect to any tool or third-party agent through bidirectional MCP.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "agentic-soar"
+  },
+  "I12": {
+   "e": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/agentic-soar/",
+   "n": "Agentic SOAR workflows hand work and context from one agent to the next.",
+   "span": "so context carries from one agent to the next",
+   "g": "documented",
+   "m": "available",
+   "cfg": "agentic-soar"
+  },
+  "I13": {
+   "e": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/agentic-soar/",
+   "n": "Workflows can combine CrowdStrike, custom and third-party agents.",
+   "span": "Run CrowdStrike-native, custom, and third-party agents as one coordinated workflow.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "agentic-soar"
+  },
+  "I16": {
+   "e": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/",
+   "n": "Detection Triage gives a verdict and recommendation; the team decides what happens to the detection.",
+   "span": "Security teams decide whether to escalate, close, or route detections",
+   "g": "documented",
+   "m": "default"
+  },
+  "I18": {
+   "e": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/",
+   "n": "In AgentWorks the team sets which actions run automatically and which wait for analyst approval.",
+   "span": "configure what gets automated and what’s gated behind analyst approval",
+   "g": "documented",
+   "m": "available",
+   "cfg": "agentworks"
+  },
+  "I20": {
+   "e": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/agentic-security-workforce/",
+   "n": "Each prebuilt agent's task is stated, for example Detection Triage classifies detections and recommends next steps.",
+   "span": "Classifies new detections and recommends next steps.",
+   "g": "documented",
+   "m": "default"
+  },
+  "I21": {
+   "e": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/",
+   "n": "For AgentWorks agents the team assigns authorised tools and activation conditions.",
+   "span": "assign authorized tools, and set the conditions under which agents activate",
+   "g": "documented",
+   "m": "available",
+   "cfg": "agentworks"
+  },
+  "I25": {
+   "e": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/charlotte-ai-agentworks/",
+   "n": "Role-based access controls limit each AgentWorks agent to its authorised scope.",
+   "span": "Role-based access controls ensure each agent operates only within its authorized scope.",
+   "g": "documented",
+   "m": "available",
+   "cfg": "agentworks"
+  },
+  "I38": {
+   "e": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/",
+   "n": "Actions affecting the customer environment need explicit configuration and approval by an authorised team member.",
+   "span": "require explicit configuration and approval by an authorized member of the security team",
+   "g": "documented",
+   "m": "default"
+  },
+  "I58": {
+   "e": "https://www.crowdstrike.com/en-us/resources/customer-stories/green-thumb-industries/",
+   "n": "Charlotte AI answers are described as grounded in Falcon platform telemetry.",
+   "span": "grounded in the same CrowdStrike Falcon® telemetry that powers the platform",
+   "g": "documented",
+   "m": "default"
+  },
+  "I61": {
+   "e": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/charlotte-ai-agentworks/",
+   "n": "AgentWorks names its infrastructure and the model families it supports.",
+   "span": "AI models, including OpenAI GPT,",
+   "g": "documented",
+   "m": "available",
+   "cfg": "agentworks"
+  },
+  "S4": {
+   "e": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.CrowdStrike/falcon-mcp",
+   "n": "CrowdStrike's falcon-mcp server is on the MCP registry; its AgentWorks module lets other agents invoke Charlotte AI agents.",
+   "span": "Connects AI agents with CrowdStrike Falcon for security analysis and automation.",
+   "g": "observed",
+   "m": "available",
+   "cfg": "mcp",
+   "method": "probe"
+  }
+ },
+ "not_credited": [],
+ "announced": [
+  {
+   "what": "Unified Charlotte Agentic SOAR workspace (public preview)",
+   "source": "https://www.crowdstrike.com/en-us/blog/crowdstrike-delivers-next-evolution-of-agentic-soc/"
+  },
+  {
+   "what": "Coordinated expert agents with an orchestrator agent for cross-domain investigations",
+   "source": "https://www.crowdstrike.com/en-us/blog/crowdstrike-delivers-next-evolution-of-agentic-soc/"
+  },
+  {
+   "what": "Third-party agents connecting through a CrowdStrike-managed MCP server (stated GA)",
+   "source": "https://www.crowdstrike.com/en-us/blog/crowdstrike-delivers-next-evolution-of-agentic-soc/"
+  },
+  {
+   "what": ">98% Detection Triage decision accuracy against Falcon Complete MDR decisions (vendor benchmark)",
+   "source": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/"
+  }
+ ],
+ "configurations": [
+  {
+   "id": "shipped",
+   "name": "As shipped",
+   "note": "Charlotte AI with its documented defaults.",
+   "on": []
+  },
+  {
+   "id": "agentworks",
+   "name": "Agentworks",
+   "note": "Customer builds custom agents in Charlotte AI AgentWorks (access on request or through Charlotte AI credits).",
+   "on": [
+    "agentworks"
+   ]
+  },
+  {
+   "id": "autonomous-actions",
+   "name": "Autonomous actions",
+   "note": "Customer configures response actions to run without per-action approval, in Agentic SOAR workflows or AgentWorks agents; off by default.",
+   "on": [
+    "autonomous-actions"
+   ]
+  },
+  {
+   "id": "agentic-soar",
+   "name": "Agentic soar",
+   "note": "Customer uses Charlotte Agentic SOAR to orchestrate CrowdStrike, custom and third-party agents and tools.",
+   "on": [
+    "agentic-soar"
+   ]
+  },
+  {
+   "id": "mcp",
+   "name": "Mcp",
+   "note": "Customer connects agents through falcon-mcp (open source, self-hosted, maintenance mode) or the hosted CrowdStrike MCP server, with Falcon API credentials.",
+   "on": [
+    "mcp"
+   ]
+  }
+ ],
+ "captures": {
+  "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.CrowdStrike/falcon-mcp": {
+   "sha256": "d05ccad1c7ba406b422fd26cd8ad3cd64e793e06e5e626c4bc0c05179abafa94",
+   "bytes": 33320,
+   "read_at": "2026-11-11T15:55Z"
+  },
+  "https://www.crowdstrike.com/en-us/blog/crowdstrike-delivers-next-evolution-of-agentic-soc/": {
+   "sha256": "eb7445d95aa784aac0500055c3501df403290f24204a518dc3c56888f69a334f",
+   "bytes": 178901,
+   "read_at": "2026-11-11T15:55Z"
+  },
+  "https://www.crowdstrike.com/en-us/platform/charlotte-ai/": {
+   "sha256": "d73c042e2b831c4fcedda5b37801d44fb5b13b9840d1bc7f93b419398b80f5a2",
+   "bytes": 485576,
+   "read_at": "2026-11-11T15:55Z"
+  },
+  "https://www.crowdstrike.com/en-us/platform/charlotte-ai/agentic-security-workforce/": {
+   "sha256": "6a393c7b290b1242765e147a51d60a6a52459cecf6ecee66fde776c835d22e4e",
+   "bytes": 497463,
+   "read_at": "2026-11-11T15:55Z"
+  },
+  "https://www.crowdstrike.com/en-us/platform/charlotte-ai/agentic-soar/": {
+   "sha256": "54263915666834c0e8c327967090db9d8bf55bc7224794e34651a5ab73f128b2",
+   "bytes": 383325,
+   "read_at": "2026-11-11T15:55Z"
+  },
+  "https://www.crowdstrike.com/en-us/platform/charlotte-ai/charlotte-ai-agentworks/": {
+   "sha256": "b7999202b8235f3843294383e397ce17e8d811a298fc56676b1e6d78ca6582bf",
+   "bytes": 425164,
+   "read_at": "2026-11-11T15:55Z"
+  },
+  "https://www.crowdstrike.com/en-us/resources/customer-stories/green-thumb-industries/": {
+   "sha256": "ebb9717d1c6c895548995bde12bb4c668316dc5153572b89be63faa2b7dd8069",
+   "bytes": 412017,
+   "read_at": "2026-11-11T15:55Z"
+  }
+ }
+}
