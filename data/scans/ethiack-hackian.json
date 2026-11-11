@@ -275,6 +275,34 @@
       "finding": "Added by the reviewer after the reader reported, from the scan as it stands: five announced entries cite pages that are not keys of captures. Four cite https://ethiack.com/info-hub/product/spring-release-2026 (the MCP server, step-by-step execution visibility, Active Directory testing, the ServiceNow, Wiz, AWS and GCP integrations) and one cites https://docs.ethiack.com/docs/portal/findings/retesting (automatic retesting, not yet available). The reader checked the not_credited entries, which are captured; the announced list is held to the same rule on the other scans (a cited page must be captured and hashed, or the entry cut). Capture the two pages or cut the entries; none carries a level."
      }
     ]
+   },
+   {
+    "round": 6,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "I19",
+      "severity": "pass",
+      "finding": "Answered. I19 is no longer in answers; it is a not_credited entry on the captured policy-guidelines page. Its reason matches the live page: an agentic test relies on the policy to make decisions in real time (quote exact), the page does not say full autonomy or name a person monitoring. No answer or note still depends on it."
+     },
+     {
+      "answer": "announced",
+      "severity": "pass",
+      "finding": "Answered. announced now holds one entry (marketing figures) citing https://ethiack.com/hackian, a key of captures; the quoted figures (75%, 30x) are on the live page. The spring-release and retesting URLs appear only inside review.rounds and review.responses history text, not in any note, answer, not_credited or announced entry."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card now A- R2 C1 O1 (node card.mjs). Autonomy has no level: I08 alone does not reach level one and no mode of person involvement is evidenced. Reach 2 rests on I10 (continuous-mode breadth sentence, documented, default) or I11 (Beacon into internal networks, documented, available, configuration beacon); Control 1 rests on I47 (customer guardrails in the policy, documented); Openness 1 rests on I20 and I22, vendor documentation, none observed. The card publishes on Reach, Control and Openness. All Reach and Control credits are vendor documentation."
+     },
+     {
+      "answer": "I08, I10, I11, I20, I22, I39, I41, I47, I50, I57, S1, S3, not_credited I12 and I04, announced",
+      "severity": "pass",
+      "finding": "No change to the scan file since the commit that recorded round five (fe39d1f); no commit after it touches the file. Re-fetched live: all twelve answer spans are exact in their sources and under fifteen words (I50 is 14); S3 llms.txt resolves. not_credited quotes (Primary Focus sentence; Non-destructive exploit generation; builds and executes sophisticated exploit chains) are on the live pages. Every URL in answers, notes, not_credited and announced is a key of captures (11 keys, compared programmatically). No new problems found."
+     }
+    ]
    }
   ],
   "responses": [
