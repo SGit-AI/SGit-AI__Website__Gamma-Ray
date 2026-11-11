@@ -244,7 +244,7 @@
     "answer": "I08,I18",
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
-    "response": "I08: the unsourced clause about the platform's own store is cut, and the note names the three workflows (DQ execution, DQ assessment, metadata assessment) instead of 'Data Governance workflows'. I18: the note names the same three workflows and now states, citing the Data Governance workflows page (saved as raw/ans-001.md, URL https://docs.emergence.ai/data-governance/workflows.md, to be captured), that profiling and enrichment runs also keep a Save approval before they change the scorecard, so approval is shown as kept for tag and rule generation and for applying profiling and enrichment results."
+    "response": "I08: the unsourced clause about the platform's own store is cut, and the note names the three workflows (DQ execution, DQ assessment, metadata assessment) instead of 'Data Governance workflows'. I18: the note names the same three workflows and now states, citing the Data Governance workflows page (saved as raw/ans-001.md, URL https://docs.emergence.ai/data-governance/workflows.md, to be captured), that profiling and enrichment runs also keep a Save approval before they change the scorecard, so approval is shown as kept for tag and rule generation and for applying profiling and enrichment results. On applying, the studio kept the I18 note to the captured releases page only and cut the clause citing the workflows page, which is not among the captures."
    },
    {
     "round": 2,
@@ -333,7 +333,7 @@
   },
   "I18": {
    "e": "https://docs.emergence.ai/releases/index.md",
-   "n": "The release notes (2026.03) say the DQ execution, DQ assessment and metadata assessment workflows no longer require approval because they are read-only analyses, while DQ tag and rule generation still require approval; the Data Governance workflows page adds that a person approves (Save) a profiling or enrichment run before its changes apply to the scorecard.",
+   "n": "The release notes (2026.03) say the DQ execution, DQ assessment and metadata assessment workflows no longer require approval because they are read-only analyses, while DQ tag and rule generation still require approval.",
    "span": "results are available immediately on completion, since these are read-only analyses",
    "g": "documented",
    "m": "default"
