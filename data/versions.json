@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.160",
+    "date": "2026-11-11",
+    "what": "round two of review on promptugal-newsroom-team (our own scan)",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "2baa97bc7"
+  },
+  {
     "version": "v0.0.159",
     "date": "2026-11-11",
     "what": "round two of review on emergence-craft (changes)",
