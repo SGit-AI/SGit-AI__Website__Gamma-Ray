@@ -159,6 +159,39 @@
       "finding": "Verified against fresh fetches on 2026-11-11 in my own folder. Changed fields since a44fb47: what (reworded as round two asked; matches agents.md: created tasks can sync two-way with Jira or Linear, creation waits for the asker), I20 (source and note, discussed above), I58 (note narrowed to room files; span verbatim in agents.md, 13 words, grade documented, mode default correct), announced (control policy entry removed; the four remaining entries are each in their cited captured page: early 2027 in ai-facts, Gmail, Slack and Zapier coming soon in integrations, phases 2 and 3 in about, own API keys and Mistral in the interview), captures re-read at 06:44. Every span is in its source and under fifteen words (I08 11, I10 14, I11 8, I16 7, I20 12, I38 9, I58 13, S3 3). Every URL in answers, announced and notes is a key of captures (compared programmatically); not_credited is empty. sha256 of agents.md matches the capture; work and llms.txt differ by a few bytes (page build noise) with the cited sentences present. I16 note confirmed answered (creation only), I58 answered, announced answered, what answered, I10 pass retained. No em-dashes in the scan."
      }
     ]
+   },
+   {
+    "round": 4,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "basis",
+      "severity": "pass",
+      "finding": "Answered. The basis now names work, integrations, agents.md, llms.txt, about and ai-facts, all keys of captures (checked programmatically), plus one third-party interview used only for announced items (also a key of captures). No adjectives about the company; 'interviewed as' and the uncaptured blog, customer stories, legal and security pages are gone. The scan carries seen_by_operator null and the report note, not a separate statement; no rule needs more here. The studio response is true of the file."
+     },
+     {
+      "answer": "ids",
+      "severity": "pass",
+      "finding": "git diff 2380dd2..HEAD shows only two changes: the basis line and the round 3 response. No answer, span, grade, mode, note, announced entry or capture changed. Re-fetched all cited pages on 2026-11-11: every span found verbatim and under fifteen words (I08 11, I10 14, I11 8, I16 7, I20 12, I38 9, I58 13, S3 3). Every URL anywhere in the scan (answers, announced, notes) is a key of captures. No em-dashes, no at-signs outside agent names."
+     },
+     {
+      "answer": "I20",
+      "severity": "note",
+      "finding": "Round three note still true: the span is the purpose line ('multiplayer AI agents that work in Notion, Google Drive and Google Calendar') while the note describes the AI agents section tasks. The span is exact and supports purpose; O1 also has I58. Not a defect that blocks."
+     },
+     {
+      "answer": "I16,I38",
+      "severity": "note",
+      "finding": "Round three note still true: A2 on I16 and C1 on I38 rest on one sentence about creation being confirmed; edits and bookings are not stated as gated. The notes say creation only, so the claim is not overstated."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card computed: A2 R2 C1 O1 (A2 on I16, R2 on I10 and I11, C1 on I38, O1 on I20 and I58). No level below one, so it still publishes. No level three or four."
+     }
+    ]
    }
   ],
   "responses": [
