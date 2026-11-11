@@ -20,7 +20,10 @@
  },
  "review": {
   "status": "approved",
-  "signoff": {"by": "gamma.approve@web-summit.dinis", "at": "2026-11-11"},
+  "signoff": {
+   "by": "gamma.approve@web-summit.dinis",
+   "at": "2026-11-11"
+  },
   "rounds": [
    {
     "round": 1,
@@ -267,6 +270,20 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "Handled by the report studio itself, outside this answer set: the report's '171 open now' fact will be corrected to the captured figure or dropped, and the 'Contained' sentence reworded to what the FAQ says."
+   },
+   {
+    "round": 3,
+    "answer": "I20",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Moved to not_credited with the reason: the page states what the scanner does, not its permitted tasks. No level changes."
+   },
+   {
+    "round": 3,
+    "answer": "report",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "The report's sources (facts, people, solutions and the home page) are captured into the vault's report-captures.json and listed with their hashes in the report's captures; the App Store fact now states only the seller, with that span, and the start of the version history."
    }
   ]
  },
@@ -297,13 +314,6 @@
    "g": "documented",
    "m": "default"
   },
-  "I20": {
-   "e": "https://studentpropertynetwork.com/llms.txt",
-   "n": "The company's llms.txt says, under how roles are found, that an AI job scanner checks UK real estate firms' careers pages and adds new roles as they open; it states what the scanner does, not a list of permitted tasks.",
-   "span": "an AI job scanner checks UK real estate firms' careers pages around the clock",
-   "g": "documented",
-   "m": "default"
-  },
   "S3": {
    "e": "https://studentpropertynetwork.com/llms.txt",
    "n": "An llms.txt resolves at the company's site and describes the app and how roles are found.",
@@ -328,6 +338,11 @@
    "what": "I58: the data it uses is described",
    "why": "The only sentence on the company's pages is the one that says the scanner checks UK real estate firms' careers pages, which is the same fact already used for I20 and I09; nothing describes what is stored, kept or used. Withdrawn in round two rather than count one sentence twice.",
    "source": "https://studentpropertynetwork.com/faq"
+  },
+  {
+   "what": "I20 (purpose and permitted tasks stated in writing)",
+   "why": "The llms.txt says, under how roles are found, that an AI job scanner checks UK real estate firms' careers pages and adds new roles; that states what it does, not a list of permitted tasks, which is half of the indicator, so it is not credited.",
+   "source": "https://studentpropertynetwork.com/llms.txt"
   }
  ],
  "announced": [],

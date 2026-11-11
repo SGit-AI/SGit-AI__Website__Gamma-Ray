@@ -35,9 +35,9 @@
    "span": "175 open now"
   },
   {
-   "fact": "App Store listing by STUDENT PROPERTY NETWORK LTD, first released 8 October 2026, version 1.0.1",
+   "fact": "App Store listing by STUDENT PROPERTY NETWORK LTD; its version history starts at version 1.0 on 8 October (2026)",
    "url": "https://apps.apple.com/gb/app/student-property-network/id6804379862",
-   "span": "Student Property Network App - App Store"
+   "span": "STUDENT PROPERTY NETWORK LTD"
   }
  ],
  "people": [
@@ -116,29 +116,44 @@
  "method": "A researcher-assessor gathered and captured the sources and mapped the evidence to indicators, without assigning a level. A challenger argued against every level three and four and every doubtful credit.",
  "captures": {
   "https://apps.apple.com/gb/app/student-property-network/id6804379862": {
-   "sha256": "bcc8e886b5d84c551bdf98abe67474d2960c7b8e342c07267bb13c1944b7d8d3",
+   "sha256": "07ea834362dfc7188338d79e38bf0ce5da75d5c141a17e68cccd570350adab04",
    "bytes": 541528,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T12:44Z"
   },
   "https://find-and-update.company-information.service.gov.uk/company/17416353": {
    "sha256": "0f65982a18a7a72a9fa830333c3224846577a57f3c5b29d6d9b43b1675b66583",
    "bytes": 35345,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T12:44Z"
   },
   "https://promptugal.news/interviews/student-property-network/leo-tashev-and-fraser-lloyd/index.md": {
-   "sha256": "6d4647e469ef27f66fc3b63731c676d2e4a7f98f6b8ff59a3da3253aea6c1846",
+   "sha256": "67271ef3edb9b6de6d3bf001d3fc8d3a390ef5567f7e7318647d48becce3cbd1",
    "bytes": 4908,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T12:44Z"
+  },
+  "https://studentpropertynetwork.com/": {
+   "sha256": "13db1f0991d9b4517c73dc49dd292908734504939c5f1d18acfce68400738478",
+   "bytes": 147465,
+   "read_at": "2026-11-11T12:44Z"
   },
   "https://studentpropertynetwork.com/about": {
-   "sha256": "2a4a3b45f56870f54737892aaab61e3e1aa720d140c6ffee1e31603a4ee3567c",
+   "sha256": "a10995e50e1b668f43daefe2442fd64d0eca4e78ae808a10de37663a123fcee6",
    "bytes": 73407,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T12:44Z"
+  },
+  "https://studentpropertynetwork.com/download": {
+   "sha256": "08b943f149701d3da174029eecedeb815c4f198866d6294cba2c7c6cbd4f0661",
+   "bytes": 36656,
+   "read_at": "2026-11-11T12:44Z"
+  },
+  "https://studentpropertynetwork.com/faq": {
+   "sha256": "6376c3177452b84d562be3834bacfcd1de722af41817373d895553889467c60e",
+   "bytes": 63105,
+   "read_at": "2026-11-11T12:44Z"
   },
   "https://studentpropertynetwork.com/llms.txt": {
-   "sha256": "4aca6bfcf273c74584fc8f22d189956aca234890c1f9ff5b026846865d58b5d4",
+   "sha256": "71332e22b0391c44bbbd35786ba2a1ad8e9b9cf01b883581333a09e6b811439e",
    "bytes": 8202,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T12:44Z"
   }
  }
 }
