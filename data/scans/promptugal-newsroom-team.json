@@ -401,6 +401,99 @@
       "finding": "Verified answered. I39: re-sourced to CLAUDE.md, section Hourly runs, which has 'If board/HOLD.md exists, stop after pulling and say why', and policies.json R11 ('Only Dinis lifts a hold', barrier rule); the note says declared, not a hook, and that carrying out is not shown, which is true (a note: the 9 November order is on the guidance page, which is a capture but not the cited source; name it, since the 8 November stop at 20:42 UTC on the summit-set page is better evidence of a way to stop). I37: R4 in policies.json is as quoted, mode observe, and the conductor relaxation (create_session and update_trigger) is in proposed_relaxations; CLAUDE.md has the hand-over where the conductor starts a new session; the note is accurate. I11: CLAUDE.md, The OpenRouter key, says the key is read from the environment and sent only to openrouter.ai: supported, declared. S3: llms.txt resolves (200); it says 'Every page below has a markdown twin'; the note now attributes that to the file and says it was not probed (I probed four of its links, all 200, not needed for the credit). The grade and the indicator are right. Grant: null, grant_note honest. The unchanged answers I04, I10, I14, I20, I21, I30, I31, I34, I40, I56 still match CLAUDE.md, policies.json and the participant page as fetched; modes are all deployed, which is right for a deployment. No em-dashes in the scan. Round one findings fully answered: I39, I37, I11, S3 (four of ten; I41, I43, S1, scope, levels and the grouped notes are open)."
      }
     ]
+   },
+   {
+    "round": 3,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I41",
+      "severity": "pass",
+      "finding": "Round two answered: TRUE. Method now names a clone at commit 4addcad8, counts for the 27 roles in scope only, and opens a conductor report. I re-counted from a fresh clone (newest commit e5ce2ff, 11 Nov 12:07 UTC, shallow, so 4addcad8 itself is not reachable): the 27 role folders all exist, 1,170 reports now, 1,156 of them with a run name before 09:07 UTC on 11 Nov (the scan says 1,152; the gap is the start-time versus commit-time difference, within a few files). Reports with no tool calls in scope: 16, exactly as written. Conductor run 2026-11-11T06-37-24Z has tool_calls total 7, by_kind git 3, shell 1, release 1, remote-read 1, other 1: matches 'seven in five kinds'. Grade observed for operation fact I41 is right for the agents in scope; completeness stated as rule R10 and not shown, which is true (R10 is barrier review). The captured tree page (277,521 bytes, read 11 Nov 09:08Z) cannot hold the counts and GitHub returned 403 to me, so the counts rest on the named clone and cannot be re-read from the capture: acceptable, and the method says so."
+     },
+     {
+      "answer": "I41",
+      "severity": "note",
+      "finding": "One folder, named dev.portugal with the account suffix added, sits beside dev.portugal in board/runs and is not counted in the 27. It is a naming slip in the repository, not an out-of-scope agent; saying so in the method would close the question for the next reader."
+     },
+     {
+      "answer": "I43",
+      "severity": "should-fix",
+      "finding": "Round two partly answered. Done: I43 moved to not_credited, card Control falls to 2 (I verified the card), the source is cited and is a key of captures, the 22 abp reports (16 on 6 Nov, 5 on 7 Nov, 1 on 8 Nov, the last written 2026-11-08T20:50Z, which says abp missed thirteen wakes) are right. Still wrong: (1) the 'moved' field still says logging and monitoring are cited to 'hourly reviews committed in the public repository, which are observed' and that only one answer was removed; both now contradict not_credited and the removal of I43. Round two asked for this change and it was not made. (2) not_credited says 'Run reports kept being written (302 on 10 November)'. That is the count over every folder of board/runs (304 in my clone); for the 27 roles in scope it is 107. In a scan whose rule is that every count is of the roles in scope, the figure is out of scope and about three times too large. (3) The cited page is the summit-set page given 9 Nov about 02:30 UTC. It predates the big stop of 9 Nov 23:30 UTC and the restart of 10 Nov, so 'at the date of the card the review is not running' is an inference from a two-day-old page. It is a sound inference (no abp report after 8 Nov and no abp run report after 7 Nov 18:37Z in the repository), but the entry should say that the page is of 9 November, and that no abp report is seen after 8 November, not that the page shows the state on 11 November."
+     },
+     {
+      "answer": "S1",
+      "severity": "should-fix",
+      "finding": "Round two partly answered. Reproduced: in the live newsroom/versions.json (1,228 rows, newest first) the oldest 1,197 rows, which are the set captured on 11 Nov, give 712 rows whose by field is one of the 27 roles followed by the PrompTugal.dinis suffix. Count, cutoff and the self-given by field are now right. Still wrong: 'The rest are by agents not in scope: desk agents of other operators and agents of the same operator on other teams.' In those 1,197 rows, 90 are by agents of this same PrompTugal.dinis account on this same site that are not in the team table: conductor.b (75), social.watch (10), journalist.newsroom (3), reporter.newsroom (2). conductor.b is the account B conductor named in the summit-set page. Say 'not by a role in the team table' and list these, or the sentence misdescribes 90 rows. Also the method cites the by-field rule but not the live row count at the date; the capture hash on file (37c2a540) no longer matches the live file because the file grows, which is expected, so the method should say the first 1,197 rows by version."
+     },
+     {
+      "answer": "scope of the team",
+      "severity": "should-fix",
+      "finding": "Round two partly answered. Done: scope_note now lists the 27 roles by role name from the CLAUDE.md team table (I counted 27 table rows) and the counts of I41 and S1 follow that list, as I verified. Remaining: the note names other operators and other teams as the agents left out, but not the agents of this team and operator that run on the site and are not in the table (conductor.b, which starts account B's agents; social.watch; journalist.newsroom; reporter.newsroom; 110 conductor.b run folders). Without them the reader would think the 27 roles are everything that PrompTugal.dinis runs. Add one sentence naming them as out of scope. Also I12 says 'sixteen agents and their dotted workers' for twenty-seven roles: the table has 20 plain roles and 7 dotted ones (dev.search, dev.pages, dev.graphs, dev.portugal, dev.data, dev.verify, designer.experiments), and CLAUDE.md says sixteen, or twenty-five with dotted workers. Write 'twenty-seven rows in the team table' and drop the parenthesis."
+     },
+     {
+      "answer": "I47",
+      "severity": "should-fix",
+      "finding": "Round two asked for a counted reading by barrier. The count written is wrong. policies.json v1.7.0 core rules by barrier: rule R1 and R11 (two), review R10 (one), hook R2, R3, R4, R5, R6, R7, R8, R9 (eight), total eleven. The note says 'one is a rule only (R11), one is a review (R10), three have a hook (R3, R4, R7)', which gives five of eleven and omits R1 and five hook rules. Correct to two, one and eight. This is a factual error introduced by the round-two rewrite. It does not move the card (I47 only offers a second route to Control 1, and I38 already gives it) but it understates the hooks and is a count the gate cannot catch."
+     },
+     {
+      "answer": "I38",
+      "severity": "should-fix",
+      "finding": "Round two corrections done: the note is now about actions (R4, only he merges to main) and not decisions. But Control 2 rests on I38 with I23, so the note should carry what the source says against it: R4 is a hook in observe mode (logged, not blocked, as the I37 and I48 notes say) and the same CLAUDE.md orders 'when in doubt, push' to dev, which deploys to production, with no person. Add 'declared; the R4 hook logs and does not block; releases to dev, which is production, need no person' so the I38 note does not read stronger than I37 and I48 beside it."
+     },
+     {
+      "answer": "I61",
+      "severity": "pass",
+      "finding": "TRUE. Now reads 'for some roles': CLAUDE.md line on dotted workers says they run on Sonnet and dev on Opus, and the table marks researcher and backup as Sonnet; no model is stated for the others."
+     },
+     {
+      "answer": "I33,I48,I27,I46,grant_note",
+      "severity": "pass",
+      "finding": "TRUE. I33 names security (pre and post review, can write a hold), accountant (budgets) and abp (behaviour policies): matches the team table rows. I48 says the hooks log and do not block (mode observe, breakers.rules empty, all off): matches policies.json v1.7.0. I27 says it rests on the repository file and the conductor entry is not confirmed on the key service: keys.json carries 'not yet submitted to or confirmed on pki.sgit.ai.'. I46 is labelled a reading. grant_note now says a grant is logged and not enforced, and grant is null with an honest note: nothing claimed for RiskMandate beyond the sources; the 23 capabilities match lens.json."
+     },
+     {
+      "answer": "I29",
+      "severity": "note",
+      "finding": "Round two asked that I29 say it rests on the repository file and that the conductor entry is unconfirmed; the note is unchanged ('The key list and the team table are the registry.'). keys.json also lists agents of other operators, so it is not the registry of the 27 roles alone. Low weight: I29 does not touch a level."
+     },
+     {
+      "answer": "I18",
+      "severity": "should-fix",
+      "finding": "Round two asked to cite the Decisions section and to drop or qualify 'the main branch is his to merge'; the I18 note is unchanged. The clause is supported inside the file (Branches and versions: 'a major release is a pull request from dev to main that only Dinis merges'; and the reviewers section says main stays untouched), so it is not false, but Autonomy 4 rests on I18 alone, so the note should name the sections: Decisions are pages (decisions that are his alone wait for him), Hourly runs (scheduled wakes without a person) and Branches and versions. It also should say 'declared' on the face of the answer, not only by grade."
+     },
+     {
+      "answer": "I08",
+      "severity": "note",
+      "finding": "Round two suggested regrading I08 observed with a method, since versions.json shows releases by named roles (712 of them) and run reports show commits. It is left self-reported and the response did not say why. Allowed for a scan of ourselves and I08 is needs statement, so this is not an error; the observed reading would give A3 an observed leg."
+     },
+     {
+      "answer": "I56",
+      "severity": "note",
+      "finding": "The disclosure page says 'An AI agent, the web-summit newsroom agent, writes and publishes the pages' and names the human in charge. The note says 'built and run by AI agents with a named operator'. The page names one agent of the web-summit team, which is not one of the 27 roles. The disclosure fact is true for the site; the note could say who the page names. O1 holds either way."
+     },
+     {
+      "answer": "I39",
+      "severity": "note",
+      "finding": "Re-sourced and worded as declared (rule, not a hook): CLAUDE.md Hourly runs has the hold file rule and R11 is barrier rule. No board/HOLD.md exists in the repository history I cloned. The note says 'A stop of the whole team was ordered on 9 November 2026' but cites neither the page nor its capture; the big-stop page is a capture key read 10 Nov and no answer cites it. It is true (page given 9 Nov 23:30 UTC) and the 8 Nov 20:42 UTC stop on the summit-set page, which is a cited capture, is better evidence of a way to stop. Optional: name that page in the note."
+     },
+     {
+      "answer": "captures",
+      "severity": "pass",
+      "finding": "TRUE. Every answer URL and the not_credited source are keys of captures, and read is 2026-11-11. Hashes match the live files for CLAUDE.md (19ada272), policies.json (a9c449b9, which is also the hash in the run reports), the abp README (617ecee4) and the summit-set page (191ef4f7). Live keys.json, llms.txt, versions.json and the participant page differ since capture (participant is generated with the site version; the others grow), which is expected. Two captures are orphans read on 10 Nov 03:32Z and not cited by any answer: the big-stop page and the abp reports tree; harmless but stale. The GitHub tree pages return 403 from here, so I41 is checked against a clone and not the capture. No em-dashes or at-signs in the scan; the gate prints OK (v0.0.176)."
+     },
+     {
+      "answer": "levels",
+      "severity": "pass",
+      "finding": "Card computed: A4 R2 C2 O1 (A used I10, I12, I18; R used I10, I11, next I25; C used I38, I23, next I43; O used I20, I56, next I22). Every dimension is at least one, so it may publish. Control 3 was removed as asked (I43 not credited): TRUE. Against Autonomy 4: it stands on I18 alone (A3 needs I08 and I18; A4 needs level 3, I10 or I12, and I18). Remove I18 and Autonomy falls below one (I07, I15, I16, I17, I19 not evidenced, which is not no); remove I08 and the same; remove I10 and I12 serves. I18 is declared in the team's own CLAUDE.md, is consistent with hourly wakes without a person, 'when in doubt, push', and operator-only decisions, and the big stop of 9 Nov shows Dinis overriding at will. I accept A4 as declared if the I18 note names its sections (see I18). No level three is held: Reach 3 lacks I25, Control 3 lacks I43, Openness 2 has only I61 of the two needed. Control 2 rests on I38 and I23, both self-reported statements; see the I38 finding."
+     },
+     {
+      "answer": "round-two findings",
+      "severity": "note",
+      "finding": "Of the eight actionable round-two findings, fully answered: I41, levels (Control to 2) and captures (3). Partly: I43 (moved text and the 302 count still wrong), S1 (the 'rest' description wrong for 90 rows), scope of the team (same-team agents outside the table not named), the grouped wording item (I61, I38, I33, I48, I27, I46 and grant_note done; I47 now counts wrongly; I29 untouched), and I18 with I08 (unchanged). The ninth heading (I39, I37, I11, S3, grant) was verified answered in round two and still holds."
+     }
+    ]
    }
   ],
   "responses": [
