@@ -30,9 +30,9 @@
    "span": "The founders say they work with 27 universities"
   },
   {
-   "fact": "On the day read, the site listed 171 open real estate roles",
+   "fact": "On 11 November 2026, the site listed 175 open real estate roles",
    "url": "https://studentpropertynetwork.com/llms.txt",
-   "span": "171 open now"
+   "span": "175 open now"
   },
   {
    "fact": "App Store listing by STUDENT PROPERTY NETWORK LTD, first released 8 October 2026, version 1.0.1",
@@ -73,8 +73,8 @@
  ],
  "stories": [],
  "analysis": [
-  "**The shape.** The SPN AI job scanner reads {sig:student-property-network} ({stage:student-property-network}). Student Property Network makes a free UK app that lists real estate graduate schemes, internships, placements and events for students. Its AI job scanner reads the careers pages of UK real estate firms and adds new roles to the listings as they open; on the day we read the site it listed 171 open roles. The founders, Leo Tashev and Fraser Lloyd, spoke to PrompTugal.news at Night Summit 2026.",
-  "**Where the evidence is strongest.** What the scanner is for and what it reads are written down twice, in the company's llms.txt and its FAQ: roles on UK real estate firms' careers pages. That carries Disclosed. PrompTugal.news's interview page reports the founders saying that a large language model decides whether each collected job is accepted onto the list, which keeps the scanner's work to one domain, job postings, and carries Contained.",
+  "**The shape.** The SPN AI job scanner reads {sig:student-property-network} ({stage:student-property-network}). Student Property Network makes a free UK app that lists real estate graduate schemes, internships, placements and events for students. Its AI job scanner reads the careers pages of UK real estate firms and adds new roles to the listings as they open; on the day we read the site it listed 175 open roles. The founders, Leo Tashev and Fraser Lloyd, spoke to PrompTugal.news at Night Summit 2026.",
+  "**Where the evidence is strongest.** What the scanner is for and what it reads are written down twice, in the company's llms.txt and its FAQ: roles on UK real estate firms' careers pages. That carries Disclosed. PrompTugal.news's interview page reports the founders saying that a large language model decides whether each collected job is accepted onto the list, and the company's FAQ says the scanner reads one kind of page, UK real estate firms' careers pages; that carries Contained.",
   "**What is not yet evidenced.** Autonomy and Control show no level. The FAQ says the scanner adds roles itself, but no public page says what role a person plays around it: whether someone reviews what it adds, is consulted on exceptions, or monitors it. Nor does any page state a rule that limits it. This is a company incorporated in August 2026 with an app first released in October, and both gaps are a page away.",
   "**What would move it.** Autonomy 3: a page saying the scanner adds roles on its own and naming when a person is consulted. Control 1: one written rule the scanner follows, such as which pages it reads or what it will not list. Reach 2: a documented connection to a named service. Openness 2: a page on the scanner's limits and known failure cases, or the name of the model it uses.",
   "**Seen, and not counted.** The challenger lowered two credits. The interview page's summary that the scrapers are the founders' own does not say what the agent is or where its boundaries lie, so the in-house build is not counted. The About page's feedback channel covers anything wrong on the site; it names neither the scanner nor AI output, so it is not counted as a way to report the agent's mistakes."
@@ -84,7 +84,7 @@
   "standfirst": "The GAMMA-Ray studio reads the AI job scanner in Student Property Network's app from its public pages: it finds real estate roles on firms' careers pages and adds them to the listings as they open.",
   "body": [
    "Student Property Network Ltd, incorporated in England in August 2026, makes a free app that lists real estate roles and events for UK students. Its founders, Leo Tashev and Fraser Lloyd, spoke to PrompTugal.news at Night Summit 2026. We read the app's AI job scanner only from public sources, captured and hashed on 11 November 2026, and the published rules computed the card.",
-   "**Reach 1, Contained.** The interview page reports a language model deciding which collected jobs go onto the list; the scanner works on job postings only. A documented connection to a named service would reach level 2.",
+   "**Reach 1, Contained.** The FAQ says the scanner reads one kind of page, UK real estate firms' careers pages, and the interview page reports a language model deciding which collected jobs go onto the list. A documented connection to a named service would reach level 2.",
    "**Openness 1, Disclosed.** The llms.txt and the FAQ say what the scanner is for and what it reads: UK real estate firms' careers pages. A page on its limits and known failure cases would reach level 2.",
    "**Autonomy and Control, not yet evidenced.** A page naming when a person is consulted would reach Autonomy 3, and one written rule the scanner follows would reach Control 1.",
    "The card is beta and Student Property Network has not seen it. It can claim the card and add evidence; corrections are dated."
@@ -94,7 +94,7 @@
    "standfirst": "O estúdio GAMMA-Ray lê o scanner de empregos com IA da aplicação Student Property Network a partir das suas páginas públicas: encontra vagas no imobiliário nas páginas de carreiras das empresas e acrescenta-as às listagens.",
    "body": [
     "A Student Property Network Ltd, constituída em Inglaterra em agosto de 2026, faz uma aplicação gratuita com vagas e eventos do setor imobiliário para estudantes no Reino Unido. Os fundadores, Leo Tashev e Fraser Lloyd, falaram com o PrompTugal.news na Night Summit 2026. Lemos apenas fontes públicas, capturadas e com hash a 11 de novembro de 2026.",
-    "**Alcance 1.** Um modelo de linguagem decide que vagas entram na lista; o scanner trabalha só com ofertas de emprego. **Abertura 1.** O llms.txt e as perguntas frequentes dizem para que serve e o que lê.",
+    "**Alcance 1.** As perguntas frequentes dizem que o scanner lê um só tipo de página, as páginas de carreiras de empresas imobiliárias do Reino Unido. **Abertura 1.** O llms.txt e as perguntas frequentes dizem para que serve e o que lê.",
     "**Autonomia e Controlo, ainda sem evidência.** Uma página a dizer quando uma pessoa é consultada, e uma regra escrita, fariam subir ambos. O cartão é beta e a Student Property Network ainda não o viu; pode reclamá-lo e acrescentar evidência. As correções são datadas."
    ]
   }
