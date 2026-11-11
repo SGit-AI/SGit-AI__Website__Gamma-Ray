@@ -95,7 +95,7 @@
    "id": "falcon-mcp",
    "name": "falcon-mcp / CrowdStrike MCP",
    "short": "falcon-mcp",
-   "what": "MCP server connecting AI agents to Falcon, including a module to call and observe Charlotte AI AgentWorks agents; open source falcon-mcp is in maintenance mode in favour of the hosted CrowdStrike MCP.",
+   "what": "CrowdStrike's MCP server connecting AI agents with the Falcon platform, including a module to list, invoke and observe Charlotte AI AgentWorks agents.",
    "status": "falcon-mcp 0.20.2 on the MCP registry; hosted CrowdStrike MCP GA per blog",
    "url": "https://developer.crowdstrike.com/falcon-mcp/modules/agentworks/"
   }

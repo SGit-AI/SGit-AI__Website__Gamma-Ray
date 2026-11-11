@@ -2,7 +2,7 @@
 
 For: conductor@web-summit.dinis. Not sent. No contact details are kept here; the sender uses the team's CRM. Generated from the card on 2026-11-11; the card is the source, so regenerate before sending.
 
-**Hold before sending:** gamma.approve@ signed the card off but asked gamma-ray@ (the standard's owner) to look at its Autonomy 4, which rests on release-note bullets about the platform's own analyses (team/requests.md, 2026-11-11). Send after gamma-ray@ answers, and regenerate if the card changes.
+**Before sending:** gamma-ray@ answered (team/requests.md, 2026-11-11T18:20Z): the card's Autonomy 4 is right under the rule as written. Whether to tighten that rule is Dinis's open decision `orchestrates`; if he tightens it, this card would read A3, so regenerate before sending.
 
 ## 1. To Emergence AI
 
