@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.184",
+    "date": "2026-11-11",
+    "what": "round 4 on riskmandate-publisher",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "0eb95f331"
+  },
+  {
     "version": "v0.0.183",
     "date": "2026-11-11",
     "what": "one-row jump bar on the home page",
