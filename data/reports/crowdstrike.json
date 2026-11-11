@@ -135,17 +135,17 @@
  "analysis": [
   "**The shape.** Charlotte AI reads {sig:crowdstrike-charlotte-ai} ({stage:crowdstrike-charlotte-ai}) with its options on; as shipped, it reads A2 · R2 · C1 · O1. CrowdStrike, headquartered in Austin, Texas, sells the Falcon platform for endpoint, identity, cloud and SIEM security. Charlotte AI is its set of AI agents for security operations: prebuilt agents such as Detection Triage, AgentWorks for building custom agents, and Charlotte Agentic SOAR for workflows that combine agents and tools.",
   "**What holds as shipped.** By default the prebuilt agents produce information, summaries and recommendations, not actions: Detection Triage gives a verdict and a recommendation, and the team decides what happens to the detection. CrowdStrike's product page says actions affecting the customer's environment need explicit configuration and approval by an authorised team member. Named customers describe their use: Blackbaud runs Charlotte AI on every detection to build an event timeline for triage, Universidad Europea de Madrid reports less initial investigation time, and Green Thumb Industries uses it across several Falcon modules.",
-  "**What holds with options on.** In AgentWorks, a team builds custom agents without code, assigns each its authorised tools, limits it by role-based access to its scope, and sets which actions run automatically and which wait for an analyst's approval. Agentic SOAR workflows hand work and context from one agent to the next and can combine CrowdStrike, custom and third-party agents. The falcon-mcp server, listed in the MCP registry, lets other agents call Charlotte AI agents. These carry Autonomy 4, Reach 3, Control 2 and Openness 2, each marked available.",
+  "**What holds with options on.** In AgentWorks, a team builds custom agents without code, grounded in its own data and policies, assigns each its authorised tools, limits it by role-based access to its scope, and configures which agent actions execute automatically and which require human review. CrowdStrike's developer documentation for the falcon-mcp server describes a tool that invokes an AgentWorks (Charlotte AI) agent and returns its reply, with the API scopes each tool needs. These carry Autonomy 4, Reach 3, Control 2 and Openness 2, each marked available; Autonomy 4's reach across systems rests on a named customer's statement that it uses Charlotte AI across several Falcon modules.",
   "**What would move it.** As shipped, Autonomy 3 needs a page showing a prebuilt agent acting on its own with a person consulted on exceptions. Control 3: a documented log of agent actions observed in operation, or a way to pause or stop an agent. Openness 3: published evaluation results with their method and data; Charlotte AI's page gives a triage accuracy figure, but not the report behind it. The In production badge needs a named customer or usage figures for actions the agents take on their own.",
-  "**Seen, and not counted.** The challenger lowered eight credits. Features CrowdStrike labels public preview or pre-beta, such as the unified Agentic SOAR workspace with per-workflow autonomy and coordinated expert agents, are listed as announced. The triage accuracy figure of over 98% has a one-line method and no published report. The ISO/IEC 42001 certification is in a press release whose wording includes Charlotte AI, but no certificate or certifier's scope was captured. Blackbaud's figure counts all uses, analysts' questions included, and its automatic runs produce information for triage, so the card shows no In production badge. The site-wide llms.txt does not mention the agents."
+  "**Seen, and not counted.** The challenger lowered eight credits. Features CrowdStrike labels public preview or pre-beta, such as the unified Agentic SOAR workspace, per-workflow autonomy and orchestrated investigations by coordinated agents, are listed as announced or not credited, so Agentic SOAR's hand-offs between agents are not counted. The triage accuracy figure of over 98% has a one-line method and no published report. The ISO/IEC 42001 certification is in a press release whose wording includes Charlotte AI, but no certificate or certifier's scope was captured. Blackbaud's figure counts all uses, analysts' questions included, and its automatic runs produce information for triage, so the card shows no In production badge. The site-wide llms.txt does not mention the agents."
  ],
  "article": {
   "title": "CrowdStrike's Charlotte AI on the GAMMA-Ray Spectrum: {sig:crowdstrike-charlotte-ai}",
   "standfirst": "The GAMMA-Ray studio reads Charlotte AI from CrowdStrike's public pages: agents that recommend by default, with a team deciding which actions may run on their own.",
   "body": [
    "CrowdStrike, founded in 2011 and headquartered in Austin, Texas, sells the Falcon security platform. We read Charlotte AI, its AI agents for security operations, only from public sources, captured and hashed on 11 November 2026, and the published rules computed the card. With its options on it reads {sig:crowdstrike-charlotte-ai}; as shipped, A2 · R2 · C1 · O1.",
-   "**Autonomy 4, Orchestrates (available).** In AgentWorks the team sets which actions run automatically and which wait for an analyst, and Agentic SOAR hands work between agents. As shipped, the prebuilt agents recommend and the team decides (level 2).",
-   "**Reach 3, Open protocol (available).** The falcon-mcp server lets other agents call Charlotte AI agents, each limited to its authorised scope. As shipped, it works across Falcon's modules (level 2).",
+   "**Autonomy 4, Orchestrates (available).** In AgentWorks the team configures which agent actions run automatically and which require human review, and a named customer uses Charlotte AI across several Falcon modules. As shipped, the prebuilt agents recommend and the team decides (level 2).",
+   "**Reach 3, Open protocol (available).** CrowdStrike's falcon-mcp documentation describes a tool that invokes an AgentWorks agent, with the API scopes it needs; each agent is limited to its authorised scope. As shipped, it works across Falcon's modules (level 2).",
    "**Control 2, Configurable (available).** Each AgentWorks agent gets authorised tools and a role-based scope; as shipped, actions on the environment need an authorised person's approval (level 1). A log of agent actions observed in operation would reach level 3.",
    "**Openness 2, Documented (available).** What each agent does, the telemetry it uses and AgentWorks' model families are public. Published evaluation results would reach level 3.",
    "The card is beta and CrowdStrike has not seen it. It can claim the card and add evidence; corrections are dated."
@@ -155,7 +155,7 @@
    "standfirst": "O estúdio GAMMA-Ray lê o Charlotte AI a partir das páginas públicas da CrowdStrike: agentes que, por omissão, recomendam, com a equipa a decidir que ações podem correr sozinhas.",
    "body": [
     "A CrowdStrike, fundada em 2011 e com sede em Austin, no Texas, vende a plataforma de segurança Falcon. Lemos o Charlotte AI, os seus agentes de IA para operações de segurança, apenas a partir de fontes públicas, capturadas e com hash a 11 de novembro de 2026. Com as opções ligadas, lê-se {sig:crowdstrike-charlotte-ai}; tal como vem, A2 · R2 · C1 · O1.",
-    "**Autonomia 4 (opcional).** No AgentWorks a equipa define que ações correm sozinhas e quais esperam por um analista. **Alcance 3 (opcional).** O servidor falcon-mcp deixa outros agentes chamar agentes do Charlotte AI. **Controlo 2 (opcional).** Cada agente tem ferramentas autorizadas e um âmbito por papel.",
+    "**Autonomia 4 (opcional).** No AgentWorks a equipa define que ações dos agentes correm sozinhas e quais exigem revisão humana. **Alcance 3 (opcional).** A documentação do falcon-mcp descreve uma ferramenta que chama um agente do AgentWorks, com os âmbitos de API necessários. **Controlo 2 (opcional).** Cada agente tem ferramentas autorizadas e um âmbito por papel.",
     "**Abertura 2 (opcional).** O que cada agente faz e os dados que usa são públicos. O cartão é beta e a CrowdStrike ainda não o viu; pode reclamá-lo e acrescentar evidência. As correções são datadas."
    ]
   }
@@ -178,74 +178,74 @@
  "method": "A researcher-assessor gathered and captured the sources and mapped the evidence to indicators, without assigning a level. A challenger argued against every level three and four and every doubtful credit.",
  "captures": {
   "https://developer.crowdstrike.com/falcon-mcp/modules/agentworks/": {
-   "sha256": "8a8208fa5d5bf95f4eccca7cb37858281ffc2c5c84dfb5e5cf6013f1fa750191",
-   "bytes": 213693,
-   "read_at": "2026-11-11T15:55Z"
+   "sha256": "298bb392e56ffb4acafd3bf8544dc3b4d4dd440f67a276ab139fcb71675aa9d8",
+   "bytes": 213694,
+   "read_at": "2026-11-11T18:49Z"
   },
   "https://en.wikipedia.org/wiki/CrowdStrike": {
    "sha256": "8da087b9aa71b5ca1b71b73533ae7b6979c0356311e7d69858f5a47283a69371",
    "bytes": 442174,
-   "read_at": "2026-11-11T15:55Z"
+   "read_at": "2026-11-11T18:49Z"
   },
   "https://www.crowdstrike.com/": {
-   "sha256": "8690fc392e274819c7309dfc7e87d70d6d5da0d48cf83f7e09f339e0e753cc13",
-   "bytes": 632704,
-   "read_at": "2026-11-11T15:55Z"
+   "sha256": "aa61904aca770fbf0ec841ef2eddb75773e8d9ab1076f7128e8ff561247171be",
+   "bytes": 632705,
+   "read_at": "2026-11-11T18:49Z"
   },
   "https://www.crowdstrike.com/en-us/about-us/executive-team/": {
-   "sha256": "d05197ded8b420f17eee58a7ed957e90a4733c57cba898429b3e62def9607d39",
-   "bytes": 353071,
-   "read_at": "2026-11-11T15:55Z"
+   "sha256": "dcadc6cd514e82d718f77ccb4fb3f39af993578b93750629aced73ac1689b277",
+   "bytes": 353072,
+   "read_at": "2026-11-11T18:49Z"
   },
   "https://www.crowdstrike.com/en-us/blog/how-ai-leading-security-teams-are-building-the-agentic-soc/": {
-   "sha256": "4beec1eed103e0215f5f1a783bc29d570e166bfad55a65a9b9a3b6091baedc41",
-   "bytes": 175013,
-   "read_at": "2026-11-11T15:55Z"
+   "sha256": "acb008a0d4286cf75ba920c328bb4b67b600cdcb3f63aeb151446b5398e0e8f1",
+   "bytes": 175014,
+   "read_at": "2026-11-11T18:49Z"
   },
   "https://www.crowdstrike.com/en-us/platform/charlotte-ai/": {
-   "sha256": "f5418cf98b2d71d1a08b032a1bac55ca422dada6a1ee9d93313ec51a0fe877b3",
-   "bytes": 485576,
-   "read_at": "2026-11-11T15:55Z"
+   "sha256": "75df24c5e24eb8c8ad46442966fedfa089fe5c3594854fdc94265352f8c71556",
+   "bytes": 485577,
+   "read_at": "2026-11-11T18:49Z"
   },
   "https://www.crowdstrike.com/en-us/platform/charlotte-ai/agentic-security-workforce/": {
-   "sha256": "314bdad78916c2dfe0ae3a4ff9780d61660024ce6e66571d9898d5321f039b12",
-   "bytes": 497463,
-   "read_at": "2026-11-11T15:55Z"
+   "sha256": "cb8cda92fdedff2fad1294801c1e976426c7323673806da31672a506ebb94000",
+   "bytes": 497464,
+   "read_at": "2026-11-11T18:49Z"
   },
   "https://www.crowdstrike.com/en-us/platform/charlotte-ai/agentic-soar/": {
-   "sha256": "4ea8ad46ae20fd74686689a331dd4bc68f7435bd0c15c0b7283401b9ceee635b",
-   "bytes": 383325,
-   "read_at": "2026-11-11T15:55Z"
+   "sha256": "9551e347f1c96870d8d4e757aa2d9f1964be743f731e22cc5542dab043827ef3",
+   "bytes": 383326,
+   "read_at": "2026-11-11T18:49Z"
   },
   "https://www.crowdstrike.com/en-us/platform/charlotte-ai/charlotte-ai-agentworks/": {
-   "sha256": "af63631dfdc6c85db2357ccb019cd780cd7c3d62b60b835be86a3863abf60a34",
-   "bytes": 425164,
-   "read_at": "2026-11-11T15:55Z"
+   "sha256": "6c7c6e5d1ea4f1cacab7c25e4a3b47808e618e5f5f0f64f2ec5a9ffeb33b2efa",
+   "bytes": 425165,
+   "read_at": "2026-11-11T18:49Z"
   },
   "https://www.crowdstrike.com/en-us/press-releases/crowdstrike-achieves-iso-42001-certification/": {
-   "sha256": "7a8c49fc47ac337e7cb9e431e259849c5c2394a52a2745ce5c88da30dfce4ed0",
-   "bytes": 330472,
-   "read_at": "2026-11-11T15:55Z"
+   "sha256": "96eae72a57562f4749076ae8c39bb3b3c1d33f908bb27b54019e5144dbb24a9f",
+   "bytes": 330473,
+   "read_at": "2026-11-11T18:49Z"
   },
   "https://www.crowdstrike.com/en-us/resources/customer-stories/blackbaud/": {
-   "sha256": "9d23b087f93736a28d110eaf74b7e6cd3ea67d4c0d2673997cde8a8cc1885b2b",
-   "bytes": 409806,
-   "read_at": "2026-11-11T15:55Z"
+   "sha256": "9a13b99aa45726b2a8d5695379f9f3059d468f525fc7bc3d237acb6362e845b2",
+   "bytes": 409807,
+   "read_at": "2026-11-11T18:49Z"
   },
   "https://www.crowdstrike.com/en-us/resources/customer-stories/green-thumb-industries/": {
-   "sha256": "e3a6967b813c81dddf9016cc0814a61134f18716bc03b1e955ea8dcf9791ef7e",
-   "bytes": 412017,
-   "read_at": "2026-11-11T15:55Z"
+   "sha256": "89ca4e0d92dafe5609231cbd32d863b7df6b992aacac9cdb70b452022c0d1665",
+   "bytes": 412018,
+   "read_at": "2026-11-11T18:49Z"
   },
   "https://www.crowdstrike.com/en-us/resources/customer-stories/mondelez-builds-modern-soc-with-crowdstrike-ai-powered-falcon/": {
-   "sha256": "9b9d64217a5c242bd0d7424e3277fdc423d9fe7a0687111b6a68981dbfc81e5b",
-   "bytes": 418442,
-   "read_at": "2026-11-11T15:55Z"
+   "sha256": "685ad0886ad024e7c00edb7c02acb09556277eafaa62d9e2c93f9f7dd6ead8df",
+   "bytes": 418443,
+   "read_at": "2026-11-11T18:49Z"
   },
   "https://www.crowdstrike.com/en-us/resources/customer-stories/universidad-europea-de-madrid/": {
-   "sha256": "62344dcfb3a7774c7ce89539359bdb61163fcb3333dcfc58a7e13f0a0d2b30f2",
-   "bytes": 413299,
-   "read_at": "2026-11-11T15:55Z"
+   "sha256": "356b4386dd98413c581a60e7afb66e4c96ce452c717bfdf1be8c741ac17db02c",
+   "bytes": 413300,
+   "read_at": "2026-11-11T18:49Z"
   }
  }
 }
