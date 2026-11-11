@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.170",
+    "date": "2026-11-11",
+    "what": "round 3 on emergence-craft",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "c15b3a730"
+  },
+  {
     "version": "v0.0.169",
     "date": "2026-11-11",
     "what": "round 3 on buzz-messaging-ai, legalfly-agents, student-property-network",
