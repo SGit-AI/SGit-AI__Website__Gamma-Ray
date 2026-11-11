@@ -340,6 +340,48 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-11",
     "response": "No change; all pass."
+   },
+   {
+    "round": 3,
+    "answer": "I25",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Mode kept default; note reworded to say why the GitHub App is part of the shipped product. (1) The README sentence describes how Trent's service reads a repository, not what the plugin does: the same bullet says the plugin uploads nothing and sends only owner and name, so the read through the App happens on Trent's side whatever client calls it; and Trent's agent-native product post (already a key of captures, the I38 source, fresh fetch 11 November 2026) lists 'installing GitHub apps' among the actions kept in Trent's dashboard, outside the plugin; the RBAC post (trent.ai/blog/organization-workspaces-role-based-access-control/, raw/ans-005.html, not cited in the answer) also says admins 'create GitHub App connections' in the workspace. README re-fetched today, SHA-256 a056747b unchanged, span exact. Had the mode moved to available with cfg coding-agent, the scorer would show A3 R3 C2 O3 unchanged with R3 and C2 marked available (checked: work/alt-r3-available.json). (2) Agreed that R3 and C2 both rest on this one sentence; recorded, no change."
+   },
+   {
+    "round": 3,
+    "answer": "I58",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Pass; no change."
+   },
+   {
+    "round": 3,
+    "answer": "report",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Pass; no change."
+   },
+   {
+    "round": 3,
+    "answer": "I08,I21,I24,basis,captures",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Notes acknowledged; no change. I08 stays the only A3 credit on the Manual-path ticket reading, shown as available; I21 feeds no level; the I24 probe is in the vault raw files and the metadata URL is a key of captures."
+   },
+   {
+    "round": 3,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Acknowledged; signature A3 R3 C2 O3 unchanged. The single-answer dependencies named (A3 on I08, R3 and C2 on I25, O2 on I22 and I58) are as stated; I25's mode is answered above and stays default."
+   },
+   {
+    "round": 3,
+    "answer": "ids,captures,basis,levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Pass; no change. The only edit is I25's note; its source, span, grade and mode are unchanged, so spans and capture keys still hold."
    }
   ]
  },
@@ -435,7 +477,7 @@
   },
   "I25": {
    "e": "https://raw.githubusercontent.com/trnt-ai/trent-agent-plugin/main/README.md",
-   "n": "Trent's plugin README says Trent reads a repository through the Trent GitHub App installed on that repository, and that the plugin sends only the repository's owner and name.",
+   "n": "Trent's plugin README says Trent reads a repository through the Trent GitHub App installed on that repository and the plugin sends only the repository's owner and name, and Trent's agent-native product post lists installing GitHub apps among the actions kept in Trent's dashboard.",
    "span": "Trent reads a repository through the Trent GitHub App you install on it.",
    "g": "documented",
    "m": "default"
@@ -546,47 +588,47 @@
   "https://raw.githubusercontent.com/trnt-ai/trent-agent-plugin/main/README.md": {
    "sha256": "a056747bba23a8f4f36081326b957518d1536ac35101f67e118867a68ea07d8a",
    "bytes": 5722,
-   "read_at": "2026-11-11T18:44Z"
+   "read_at": "2026-11-11T21:44Z"
   },
   "https://registry.modelcontextprotocol.io/v0/servers?search=ai.trent": {
    "sha256": "0056625dac60bb455d0658719bad6db07fe83f12f9c8d41c3944d67ec284f0c9",
    "bytes": 2730,
-   "read_at": "2026-11-11T18:44Z"
+   "read_at": "2026-11-11T21:44Z"
   },
   "https://trent.ai/blog/agent-native-product-surface/": {
    "sha256": "1f5c25d1c31843867d8f4685e69f051efd4c91d44edb658d707843d5c53cf2f0",
    "bytes": 151012,
-   "read_at": "2026-11-11T18:44Z"
+   "read_at": "2026-11-11T21:44Z"
   },
   "https://trent.ai/blog/trent-cursor-grok-vs-cwe-bench-cve/": {
    "sha256": "e692cc6619d26461169638b41b797954901f2065fd102a64f9fe2a5bc555f54f",
    "bytes": 176052,
-   "read_at": "2026-11-11T18:44Z"
+   "read_at": "2026-11-11T21:44Z"
   },
   "https://trent.ai/llm-info/": {
    "sha256": "b778bcdcf9d753228c576f776091e0038d5d9e19db8cf2a4c55cb4102c1b0e79",
    "bytes": 108621,
-   "read_at": "2026-11-11T18:44Z"
+   "read_at": "2026-11-11T21:44Z"
   },
   "https://trent.ai/llms.txt": {
    "sha256": "54c2e280f0fb7400617afcf342f759f7b38d839d8ac1093b4bb9b5e8a3f3d08c",
    "bytes": 16414,
-   "read_at": "2026-11-11T18:44Z"
+   "read_at": "2026-11-11T21:44Z"
   },
   "https://trent.ai/product/": {
    "sha256": "3875cd1875b911f2d8ab2febf2c8da71bdc75596a07d152d8b274a1ea073b8a0",
    "bytes": 169660,
-   "read_at": "2026-11-11T18:44Z"
+   "read_at": "2026-11-11T21:44Z"
   },
   "https://trent.ai/use-cases/autonomous-remediation/": {
    "sha256": "2dbe240250b850087f556df4480e2c3be99855d046959daca1129886fa2a2c04",
    "bytes": 78742,
-   "read_at": "2026-11-11T18:44Z"
+   "read_at": "2026-11-11T21:44Z"
   },
   "https://mcp.trent.ai/.well-known/oauth-protected-resource/mcp": {
    "sha256": "be55b3a70157699a8ac37290eb54e125e0b577b5ee9ee63525b41f1360e618d2",
    "bytes": 185,
-   "read_at": "2026-11-11T18:44Z"
+   "read_at": "2026-11-11T21:44Z"
   }
  }
 }
