@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.166",
+    "date": "2026-11-11",
+    "what": "hourly log",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "4e08b3df5"
+  },
+  {
     "version": "v0.0.165",
     "date": "2026-11-11",
     "what": "emergence-craft: round 2 answered (I08 clause cut and notes name the three workflows, I18 cites the workflows page, I10 and I25 notes, I25 span)",
