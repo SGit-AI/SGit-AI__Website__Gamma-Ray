@@ -19,8 +19,102 @@
   "published": "2026-11-11"
  },
  "review": {
-  "status": "draft",
-  "rounds": []
+  "status": "round-1",
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "S4",
+      "severity": "must-fix",
+      "finding": "The note says the falcon-mcp AgentWorks module lets other agents invoke Charlotte AI agents. The cited registry record (captured, hash matches, span exact, 11 words) says only that the server connects AI agents with Falcon for security analysis and automation; it does not mention Charlotte AI or AgentWorks. The page that would carry the claim, developer.crowdstrike.com/falcon-mcp/modules/agentworks/, is in the report's captures but is not a key of this scan's captures and is not cited by the answer. The note is stronger than the span and relies on an uncaptured page. As captured, the evidence shows a Falcon MCP server, not an interface of Charlotte AI, so S4 (scope: the product publishes an interface other agents can call) is not carried. Capture and cite the developer page with a span about the AgentWorks module, or cut the note to what the registry says and reconsider the credit. Reach 3 rests on this single answer."
+     },
+     {
+      "answer": "S4",
+      "severity": "should-fix",
+      "finding": "Reach 3 also needs documented authorisation for the interface. I25 (role-based scope of AgentWorks agents) is about a different feature than the MCP server; the registry record itself lists API client id and secret variables, which would be the authorisation evidence for the interface. The pairing S4 + I25 mixes two configurations (mcp and agentworks). Also the registry lists falcon-mcp as stdio, self-run; the scan's own configuration note calls it maintenance mode, which no captured page says (see captures)."
+     },
+     {
+      "answer": "captures",
+      "severity": "should-fix",
+      "finding": "The configuration note for mcp says falcon-mcp is open source, self-hosted and in maintenance mode, and the hosted CrowdStrike MCP server exists. 'Maintenance mode' appears in no captured page of this scan (the developer.crowdstrike.com page that the report cites is not in the scan's captures). The agentworks configuration note ('access on request or through credits') and the autonomous-actions note ('off by default') are supported by the captured charlotte-ai and agentworks pages. Every URL cited in answers, announced entries and the report's cited pages that matter to the scan: all answer URLs and both announced URLs are keys of captures; but the report cites nine URLs (developer page, Wikipedia, home page, executive team, blog on agentic SOC, ISO press release, Blackbaud, Mondelez, Universidad Europea) that are in the report's captures and not the scan's, which is acceptable for the report only. Scan capture hashes: the registry record matches byte for byte; the five crowdstrike.com pages differ from a live fetch by 1 to 4 bytes (dynamic page content), so the stored hashes are of the studio's own fetch and cannot be reproduced exactly; the blog capture (178,901 bytes) matches the live size."
+     },
+     {
+      "answer": "I11",
+      "severity": "should-fix",
+      "finding": "Inconsistent with the scan's own rule (features the vendor labels preview are not counted). The captured blog (cited in announced) states 'Unified agentic SOAR workspace (Public Preview)' and lists as announced 'Third-party agents connecting through a CrowdStrike-managed MCP server (stated GA)'. Yet I11, I12 and I13 are credited from the Agentic SOAR page and the charlotte-ai page ('Connect to any tool or third-party agent through bidirectional MCP', 'Run CrowdStrike-native, custom, and third-party agents as one coordinated workflow'), which describe the same unified workspace (AgentWorks, SOAR orchestration and Foundry in one workspace). Neither page carries a preview label, but the vendor's own blog does. Either say in each note that the workspace is in public preview and move the answers to announced, or explain why these sentences describe GA features. Reach 2 does not depend on this (I10 also gives R2), and Autonomy 4 does not (I10 also satisfies the orchestration clause)."
+     },
+     {
+      "answer": "I13",
+      "severity": "note",
+      "finding": "Span exact (10 words) and in the same paragraph as I12's span but a different sentence, so no sentence is counted twice. I13 and I11 both rest on third-party agents in Agentic SOAR (see I11 preview point); I12 span 'so context carries from one agent to the next' carries the handoff of context, and the scope (agents with their own context and authority) is met only loosely, since the page does not say each agent has its own authority."
+     },
+     {
+      "answer": "I18",
+      "severity": "should-fix",
+      "finding": "Autonomy 3 and 4 both rest on I18 (I17 and I19 are not answered), and I18 reads 'works independently; the person approves critical decisions only'. The span, 'configure what gets automated and what's gated behind analyst approval' (10 words, exact, from the charlotte-ai page), carries that a team can set approval gates, not that the agent works independently with a person approving only critical decisions. It is a configurability statement; the independent mode is not described as an operating pattern. The note ('the team sets which actions run automatically and which wait') matches the span, so it is honestly worded, but the indicator is read generously. Consider whether a stronger span exists (the page text 'Actions can be set to execute autonomously or require human approval' is I08's span); the same capability then supports I08 and I18, which is two indicators from one idea."
+     },
+     {
+      "answer": "I08",
+      "severity": "note",
+      "finding": "Span exact (13 words) and the sentence is in the FAQ. The note says 'through Agentic SOAR workflows or AgentWorks agents'; that part is in the preceding sentence of the page, not in the span, but the page says it. Mode available and cfg autonomous-actions correct ('does not take automated response actions by default'). Not an operation fact (needs: statement). The Agentic SOAR half of the note touches the preview question (see I11). Autonomy 3 is credited from I08 + I18, which sit in two different configurations (autonomous-actions and agentworks); the card merges 'available' options across configurations, which the spectrum rules allow ('available' is marked), but no single configuration shows A4."
+     },
+     {
+      "answer": "I03",
+      "severity": "should-fix",
+      "finding": "I03 asks for a low-code or no-code builder that acts on real organisational data. The span, 'Build custom security agents in AgentWorks, no code required' (9 words, exact), carries the builder only. The note adds 'working on their Falcon data', which the span does not carry; the agentworks page says agents are built on the Falcon security data foundation but that sentence is in the I21 context, not cited here. Add a span for the data part or cut it from the note. I03 matters only for the as-shipped A2 route alternative; the card's A2 as shipped comes through I16."
+     },
+     {
+      "answer": "I10",
+      "severity": "should-fix",
+      "finding": "The span, 'We're using Charlotte AI across multiple platform modules' (8 words, exact), is a customer quote on a vendor-hosted case study; the report itself labels customer stories 'customer-reported'. The grade is documented and mode default. A testimonial on the vendor's own page is a statement by the customer, not product documentation or an observation, so the note should say it is a customer's statement (or the grade should be self-reported). 'Several domains or systems' is read as several Falcon modules, which are modules of one vendor platform. The answer is also used for Reach 2 and Autonomy 4 as one possible route; both have other routes via I11 or I12/I13."
+     },
+     {
+      "answer": "I58",
+      "severity": "should-fix",
+      "finding": "Used for Openness 1 (with I20) and Openness 2 (with I61), so it carries both. The span, 'grounded in the same CrowdStrike Falcon telemetry that powers the platform' (11 words, exact), is the case-study writer's sentence in a customer story, not a description of the data in documentation. It names a source of data in one phrase; 'the data it uses is described' is met only minimally. The product page has text ('Every answer traces back to the data behind it') that was not used. Cite a product or documentation page, or accept O2 as thin: it rests on I58 and I61 together, and I61's credit is also partial."
+     },
+     {
+      "answer": "I61",
+      "severity": "should-fix",
+      "finding": "The note says AgentWorks 'names its infrastructure and the model families it supports', but the span is only 'AI models, including OpenAI GPT,' (5 words, exact, includes a trailing comma). The span does not carry the infrastructure (AWS Bedrock, in the same sentence) or the other model families (Anthropic Claude, NVIDIA Nemotron). The indicator asks that models and third-party components are listed; the page says 'and more', so the list is open. Widen the span within fifteen words ('AWS Bedrock and supports multiple AI models, including OpenAI GPT,' is 11 words) and say the list is not complete. Openness 2 rests on I61 (with I58)."
+     },
+     {
+      "answer": "I38",
+      "severity": "note",
+      "finding": "Span exact (13 words), mode default correct, supports Control 1 and, with I25, Control 2. The sentence is next to the I07 span in the same paragraph (different sentences, no double count). 'Explicit configuration and approval by an authorised member' is ambiguous: it can mean approval of the configuration, not a person's approval of each high-impact action, which is what the indicator says. The note repeats the vendor's words without resolving that. Same ambiguity for I16 (the span says the team decides what to do with a detection, a recommendation-only agent, which does fit)."
+     },
+     {
+      "answer": "I25",
+      "severity": "note",
+      "finding": "Span exact (12 words), cfg agentworks, available. 'Narrower access than the whole account' is carried by role-based scope per agent. Used in Reach 3 and Control 2 though it describes AgentWorks agents; Control 2 as an available option is fair, but the Control 2 claim 'as shipped' versus 'with options on' differs: the card shows C2 only with options on, consistent with the report's text (as shipped C1)."
+     },
+     {
+      "answer": "basis",
+      "severity": "should-fix",
+      "finding": "The basis reads \"CrowdStrike's own public pages, each listed with its hash in this scan's captures\". Two problems: (1) the S4 source is the Model Context Protocol registry, not a CrowdStrike page, so the basis is not accurate; (2) it contains no statement that its subject has not seen it, and seen_by_operator is null (the report says seen_by_subject false). Most pages named are captured; the basis names no uncaptured page. No adjectives. Note also that the scan note says features labelled preview are not counted, which conflicts with I11 to I13 (see I11)."
+     },
+     {
+      "answer": "report",
+      "severity": "should-fix",
+      "finding": "data/reports/crowdstrike.json: 1) The analysis says 'The falcon-mcp server, listed in the MCP registry, lets other agents call Charlotte AI agents', which the registry does not say (see S4). 2) The report says falcon-mcp 0.20.2 is on the registry: confirmed (latest, published 2026-11-03). 3) It says the unified Agentic SOAR workspace is in public preview (blog) and counts the Agentic SOAR sentences under 'What holds with options on' (see I11). 4) 'Pre-beta' and 'public preview' for coordinated expert agents: confirmed in the blog. 5) 'Over 98%' triage accuracy: the page says 'benchmarked at over 98% accuracy against decisions from the CrowdStrike Falcon Complete Next-Gen MDR team'; the report's 'one-line method' is fair. 6) Nine report URLs are not captured in the scan (acceptable) but the facts they carry (ISO 42001 date, Wikipedia founding, press release dateline) were not re-read in this round; the ISO claim is correctly marked 'no certificate captured'. Also the report says 'Charlotte AI AgentWorks status: available to customers on request or via free credits': the charlotte-ai page supports the free credits (50 monthly) but not 'on request' in the text I could read. No adjectives about the company were found; style check: no em-dashes or at-signs in the quoted material."
+     },
+     {
+      "answer": "pass",
+      "severity": "pass",
+      "finding": "Checked and fine: spans exact and under fifteen words for I01, I07 (14), I08 (13), I11, I12, I13, I16, I20, I21, I25, I38 and S4; grades documented and modes right for I01, I07, I16, I20, I38 (default) and I03, I08, I11, I12, I13, I18, I21, I25, I61 (available, with a cfg naming the configuration); no operation fact is credited (all needs: statement); every answer cites a key of captures; all fifteen indicator ids exist; configurations are named and each answer outside the default carries a cfg; kind product-shape gets no governance level. I01 (out-of-the-box agents) and I20 (Detection Triage task) are carried by their spans."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card (node card.mjs): A4 R3 C2 O2 (as shipped per the report: A2 R2 C1 O1). Autonomy 4 = I08 + I18 (A3) + I10/I12/I13 + I18: it rests on I18 (configurability only; should-fix) and I08 (a feature available through settings), the orchestration clause also on I10 (customer quote) so it survives if I12/I13 go to announced. Reach 3 = S4 + I25: rests on S4, which the captured registry record does not carry for Charlotte AI (must-fix); without S4 Reach would be 2 (I10 or I11). Control 2 = I38 + I25: I38 span carries 'approval' ambiguously; I25 carries role-based scope; holds. Openness 2 = I58 + I61 (I20 + I58 for O1): thin, rests on a customer-story sentence and a partial span. Level one or more in every dimension, so the card publishes once changes are made."
+     }
+    ]
+   }
+  ]
  },
  "assessment": {
   "by": "gamma.studio@web-summit.dinis",
