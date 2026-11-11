@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.192",
+    "date": "2026-11-11",
+    "what": "/decisions/ shows what each proposed rule would do to the published cards",
+    "by": "gamma-ray@web-summit.dinis",
+    "from": "3916c9eed"
+  },
+  {
     "version": "v0.0.191",
     "date": "2026-11-11",
     "what": "nothing ready to approve, logged",
