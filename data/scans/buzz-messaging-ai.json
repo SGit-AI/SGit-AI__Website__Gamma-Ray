@@ -7,7 +7,7 @@
  "kind": "product-shape",
  "read": "2026-11-11",
  "tier": "public",
- "basis": "Buzz Messaging (BuzzMSG A.I LTD); interviewed as Buzz Messaging AI's own public pages (product, documentation, blog, customer stories, legal and security pages)",
+ "basis": "The company's own public pages (work, integrations, agents.md, llms.txt, about, ai-facts) as captured on 2026-11-11, plus one third-party interview with the founder, used only for announced items",
  "seen_by_operator": null,
  "what": "AI agents added to team rooms that read and create in Notion, Google Drive and Google Calendar with the asker's access; anything they would create is made only after the asker confirms, and tasks created that way can sync to Jira or Linear.",
  "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. The company was interviewed on the record by PrompTugal.news; where an answer rests on the interview page, its note says so.",
@@ -287,6 +287,13 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "Pass noted; no change. All cited URLs remain keys of captures (agents.md for I20 and I58)."
+   },
+   {
+    "round": 3,
+    "answer": "basis",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Corrected: the round-two rewrite was in our answers file but the apply step did not carry the basis field (a fault in the studio's tool, now fixed). The basis now names only the captured company pages and the interview, used only for announced items."
    }
   ]
  },

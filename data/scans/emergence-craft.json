@@ -309,6 +309,20 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-10",
     "response": "Pass noted; no change except I10's note gaining a second clause from the captured releases page (span unchanged). The www.emergence.ai/latest-news capture is now cited nowhere and can be dropped from captures by the studio."
+   },
+   {
+    "round": 3,
+    "answer": "I08,I18",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "The workflows page is now captured and cited: the I18 note says approval is kept for tag and rule generation and for saving profiling and enrichment runs, and a not_credited entry on that page says so for readers. The I08 note no longer says the enrichment runs automatically into the scorecard."
+   },
+   {
+    "round": 3,
+    "answer": "I08",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Version labels corrected: ingestion chaining into profiling is 2026.03; the enrichment pipeline that runs after profiling is 2026.04."
    }
   ]
  },
@@ -347,7 +361,7 @@
   },
   "I08": {
    "e": "https://docs.emergence.ai/releases/index.md",
-   "n": "The release notes say (2026.04) that the DQ execution, DQ assessment and metadata assessment workflows write their results directly when they finish, with no pending approval, and (2026.03) that creating a data connection triggers ingestion, which chains into profiling, after which an eight-step LLM enrichment pipeline runs automatically.",
+   "n": "The release notes (2026.04) say the DQ execution, DQ assessment and metadata assessment workflows write their results directly when they finish, with no pending approval; (2026.03) creating a data connection triggers ingestion, which chains into profiling; (2026.04) an eight-step LLM enrichment pipeline runs after profiling.",
    "span": "results are written directly when the workflow finishes",
    "g": "documented",
    "m": "default"
@@ -376,7 +390,7 @@
   },
   "I18": {
    "e": "https://docs.emergence.ai/releases/index.md",
-   "n": "The release notes (2026.03) say the DQ execution, DQ assessment and metadata assessment workflows no longer require approval because they are read-only analyses, while DQ tag and rule generation still require approval.",
+   "n": "The release notes (2026.03) say the DQ execution, DQ assessment and metadata assessment workflows no longer require approval because they are read-only analyses, while DQ tag and rule generation still require approval; the Data Governance workflows page (captured) says a person's approval (Save) of a profiling or enrichment run is what applies its changes to the scorecard.",
    "span": "results are available immediately on completion, since these are read-only analyses",
    "g": "documented",
    "m": "default"
@@ -527,6 +541,11 @@
    "what": "S4 through A2A: an A2A endpoint that an outside agent can call",
    "why": "Agent Cards are documented for discovery by the Talk2Data service and the Insights agent inside Data Insights; no page read documents an A2A endpoint for outside agents. S4 rests on the MCP server only.",
    "source": "https://docs.emergence.ai/data-insights/overview.md"
+  },
+  {
+   "what": "Fully unattended profiling and enrichment",
+   "why": "The Data Governance workflows page says approving (Save) a profiling or enrichment run is what applies its changes; so a person still approves those runs, and only the three read-only assessment workflows write without approval.",
+   "source": "https://docs.emergence.ai/data-governance/workflows.md"
   }
  ],
  "announced": [
@@ -688,6 +707,11 @@
    "sha256": "9822c368ab2db547d0f002b623adf13a314c33231fadf12cabfe15f373e0769a",
    "bytes": 311101,
    "read_at": "2026-11-11T00:58Z"
+  },
+  "https://docs.emergence.ai/data-governance/workflows.md": {
+   "sha256": "21f2dfe05cea0bb7095af7ac6ca09701c38257aa0e632a59e6a2659dab0f7d32",
+   "bytes": 11232,
+   "read_at": "2026-11-11T09:43Z"
   }
  }
 }
