@@ -74,6 +74,71 @@
      }
     ]
    }
+  ],
+  "responses": [
+   {
+    "round": 1,
+    "answer": "I08,I11,I20,I38,I58,S3",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Pass noted; no change to these answers (I08, I11, S3 kept as they are; I20, I38, I58 answered below)."
+   },
+   {
+    "round": 1,
+    "answer": "I16",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Note reworded to say the confirmation gate is stated for creation only; source, span, grade and mode unchanged. A2 stays on proposed creations needing approval, as the reviewer accepts."
+   },
+   {
+    "round": 1,
+    "answer": "I38",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept: the note already says creating anything waits for confirmation, and the indicator is read as creation in the person's connected tools (tasks, pages, documents) needing approval; edits and bookings are not claimed. C1 rests on it alone, which the card shows as is."
+   },
+   {
+    "round": 1,
+    "answer": "I10",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Source moved to the captured agents.md, whose span names three systems (Notion, Google Drive, Google Calendar) plus the web; note adds the two-way Jira or Linear sync from the same page. Mode available, configuration connected, unchanged."
+   },
+   {
+    "round": 1,
+    "answer": "I20",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept: llms.txt states the agents' purpose in writing; O1 also rests on I58, and the agents.md section on AI agents lists the tasks (read, create, search, files in the room) if I20 is challenged."
+   },
+   {
+    "round": 1,
+    "answer": "I58",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Kept as default: the span describes files shared in the room, read with the asker's own access, which needs no connection; the connected tools are in the same sentence but the credit does not depend on them."
+   },
+   {
+    "round": 1,
+    "answer": "announced (bring your own model)",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Entry reworded to say only what its cited, captured interview page says (own API keys, Mistral among recommended providers, from the founder); the clause about the uncaptured assistant page is removed."
+   },
+   {
+    "round": 1,
+    "answer": "announced (other entries)",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Pass noted; no change."
+   },
+   {
+    "round": 1,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-10",
+    "response": "Card unchanged at A2 R2 C1 O1 after these edits (rescored); no level three or four, so no argue-against round."
+   }
   ]
  },
  "assessment": {
@@ -104,9 +169,9 @@
    "cfg": "connected"
   },
   "I10": {
-   "e": "https://www.buzzmessaging.ai/integrations",
-   "n": "Agents work across Google Drive, Google Calendar and Notion, and tasks sync with Jira or Linear.",
-   "span": "Agents read, create and edit Docs, Sheets and Slides.",
+   "e": "https://www.buzzmessaging.ai/agents.md",
+   "n": "The feature reference says agents read and create in Notion, Google Drive and Google Calendar and search the web, and created tasks can sync two-way with Jira or Linear.",
+   "span": "Agents read and create in Notion, Google Drive and Google Calendar, search the web",
    "g": "documented",
    "m": "available",
    "cfg": "connected"
@@ -121,7 +186,7 @@
   },
   "I16": {
    "e": "https://www.buzzmessaging.ai/work",
-   "n": "Anything an agent would create appears as a card and is made only once the asker confirms.",
+   "n": "The page states that anything an agent would create appears as a card and is made only once the asker confirms; it states this gate for creation only.",
    "span": "Nothing is made until the asker confirms",
    "g": "documented",
    "m": "default"
@@ -171,7 +236,7 @@
    "source": "https://www.buzzmessaging.ai/about"
   },
   {
-   "what": "Bring your own model / own API keys, Mistral recommended (founder in the interview; not on the company's site, whose assistant page says there are no API keys to manage)",
+   "what": "Bring your own model: users bring their own API keys, with Mistral named among the providers Buzz recommends (founder, in the interview)",
    "source": "https://promptugal.news/interviews/buzz-messaging-ai/guy-ben-zvi/"
   },
   {
@@ -197,39 +262,39 @@
  ],
  "captures": {
   "https://promptugal.news/interviews/buzz-messaging-ai/guy-ben-zvi/": {
-   "sha256": "1451460cb619b710538b10fa520322c2cfee8576cee4f2ae3d92398cc7eab290",
+   "sha256": "91776ecc4c123170bb5b120481b1a5d022ee4e01758d5d53f288c2d03bad2f85",
    "bytes": 23871,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T03:48Z"
   },
   "https://www.buzzmessaging.ai/about": {
    "sha256": "b6d9b03c68f83750d6123fccde29710909f7d22ed970e55228e72503b1117962",
    "bytes": 64019,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T03:48Z"
   },
   "https://www.buzzmessaging.ai/agents.md": {
    "sha256": "9f05b87402e97f71b1dcd8bb12ffab257f320d33325805fcfa112c0ab1060789",
    "bytes": 5633,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T03:48Z"
   },
   "https://www.buzzmessaging.ai/ai-facts": {
    "sha256": "fd1f636cf02dd92d2494ed068d716262267f4862957fc36fef0d2baf3be2b61e",
    "bytes": 52007,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T03:48Z"
   },
   "https://www.buzzmessaging.ai/integrations": {
-   "sha256": "2477a2ee38abf07aa6945afec61430b82df55bf206ea5e911fe27b881c374a09",
-   "bytes": 64504,
-   "read_at": "2026-11-11T00:54Z"
+   "sha256": "02ea082a17809ab0a8a15aaafdc32552be0b286d8e120df90aa08bb0c918d4de",
+   "bytes": 64547,
+   "read_at": "2026-11-11T03:48Z"
   },
   "https://www.buzzmessaging.ai/llms.txt": {
    "sha256": "0f35ce1fc202a5f2e31b841cca940ee45759f4eed94839683ed77f868f1f2ddb",
    "bytes": 10333,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T03:48Z"
   },
   "https://www.buzzmessaging.ai/work": {
-   "sha256": "05898111121fe43b3298950de3b8607cae2e739c9f4b3142b5ac3b8135a8d6ed",
+   "sha256": "29e0eb5387e4e51cdead8ea4a938920c9a1775a00a65c1d46ab772967384ffe3",
    "bytes": 85968,
-   "read_at": "2026-11-11T00:54Z"
+   "read_at": "2026-11-11T03:48Z"
   }
  }
 }
