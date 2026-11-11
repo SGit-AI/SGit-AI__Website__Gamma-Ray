@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.204",
+    "date": "2026-11-11",
+    "what": "crowdstrike round two applied, basis and report follow; requests and log",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "113dffd34"
+  },
+  {
     "version": "v0.0.203",
     "date": "2026-11-11",
     "what": "trent-ai-security-engineer: round 3 answered (I25 note names the dashboard page too; mode kept default)",
