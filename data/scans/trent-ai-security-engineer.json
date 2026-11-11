@@ -19,8 +19,77 @@
   "published": "2026-11-11"
  },
  "review": {
-  "status": "draft",
-  "rounds": []
+  "status": "round-1",
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "S4",
+      "severity": "must-fix",
+      "finding": "The note says the US endpoint 'answers with an OAuth challenge'. The only captured source is the MCP Registry listing, which shows two remotes (mcp.trent.ai and mcp.eu.trent.ai) and no challenge. The probe of mcp.trent.ai is not captured (no key in `captures`), and the plugin README (captured, not cited here) says only that authentication happens in the browser. Either capture the endpoint response and cite it, or cut the clause. The report analysis repeats the claim ('our read-only probe of the US endpoint received a sign-in challenge'). The registry-observed part (a published MCP server with US and EU remotes) is sound; the span is the registry description and is exact (12 words). Level R3 still holds on the registry listing alone."
+     },
+     {
+      "answer": "I17",
+      "severity": "should-fix",
+      "finding": "A3 rests on I08 plus I17. The I17 span ('Trent identifies the findings that can be fixed without a person') carries only the identification step. The note adds 'cleared once with the team', handing to the coding agent, verification, and 'brings the rest to people with a recommended decision'. Those are on the same captured page, but in other sentences, so the span does not carry the indicator (routine tasks handled, person consulted on exceptions). Use a span that reaches the confirm-once sentence or the 'recommended decision' sentence. Mode available with cfg auto-remediation is right: the page presents it as one of three paths, not the default."
+     },
+     {
+      "answer": "I08",
+      "severity": "should-fix",
+      "finding": "A3 also rests on I08. The span is exact (12 words) and is the 'Manual' path: 'Trent raises a ticket in Linear or Jira'. Mode available is right, but cfg `connectors` rests on the llm-info page (Team connectors: Jira, Linear, Slack, Notion), which this answer neither cites nor names in the note. Add that connection to the note, or cite it. The word 'itself' in the note is an inference from 'Trent raises'. It is acceptable, but the page calls this path Manual, which fits a ticket handed to a person better than an action executed by the agent. Argue against A3: if a reviewer reads Manual as the lowest-autonomy path, A3 would drop to A2 (I16, which is credited)."
+     },
+     {
+      "answer": "I25",
+      "severity": "should-fix",
+      "finding": "I25 carries two levels. R3 needs it as 'documented authorisation' for the open interface, and C2 needs it as a permission scope. The span 'You control what level of access to provide.' is a product-page FAQ answer about source access (URL-only, repository, agent definitions, documents). It says nothing about authorisation of the MCP interface. It supports C2 well enough, but R3's authorisation half rests on a sentence about a different thing. If the OAuth sign-in were captured (see S4) it would carry R3; without it, R3 rests on a stretch. Without I25 R3 drops to R2 (I10, I11) and C2 drops to C1."
+     },
+     {
+      "answer": "I22",
+      "severity": "should-fix",
+      "finding": "I22 ('limits and known failure cases are documented for those who use it') is credited on one benchmark-blog sentence about two Keycloak runs. That is a vendor research post, not user-facing documentation of limits. The span is exact, 11 words, and the note is accurate. O2 (needs two of I22, I58, I61) rests on this and on I58. Argue against O3: O3 is cumulative, so O1 and O2 must hold first, and O2 depends on a research-post sentence plus I58 (next finding). Lower I22 to a weaker framing in the note, or add a product-page limits statement."
+     },
+     {
+      "answer": "I58",
+      "severity": "should-fix",
+      "finding": "I58 comes from the plugin README, which describes what the plugin sends and where, not the data the product uses overall. The note says 'plugin README describes...', which is honest, but the indicator ('The data it uses is described') is credited to the product, and it carries O2 together with I22. Note the scope (plugin only) or find a product-level data statement (the llm-info page names the Trust Center and subprocessors, uncited)."
+     },
+     {
+      "answer": "I52",
+      "severity": "should-fix",
+      "finding": "I52 (tier declared) is graded 'documented'. The page is the vendor's own sentence that 'an independent penetration test report is available on request'. That is a vendor claim that a report exists, not evidence that people who did not build it took part. The note ('stated to be independent') is honest, but the grade should read self-reported, and the answer should not be used toward any level. It is not used in the card; the report says 'independent check that can be read' would reach O4, which is consistent. Same for I21 (tier declared, graded documented): the text is the vendor's own statement of its design, not a published limits definition; its note says 'through MCP' while the span does not."
+     },
+     {
+      "answer": "basis",
+      "severity": "must-fix",
+      "finding": "The basis reads 'product, documentation, blog, customer stories, legal and security pages'. Captured pages are the product page, use-case page, llm-info, llms.txt, two blog posts, the plugin README and the MCP Registry. No documentation, customer-stories, legal or security page is captured (the trust.trent.ai page is cited nowhere). Rewrite it to name only what is captured: the product page, a use-case page, the llm-info page, llms.txt, two blog posts, the plugin README and the MCP Registry listing. It has no adjectives; the not-seen statement is carried by seen_by_operator null as in the other 23 scans, and the report says Trent AI has not seen the card."
+     },
+     {
+      "answer": "report",
+      "severity": "must-fix",
+      "finding": "The report cites URLs that are not keys of `captures`: https://trent.ai/ , https://trent.ai/about-us/ (six people entries, the London and San Francisco fact), https://trent.ai/openclaw/ , https://asmm.trent.ai/ , and https://trent.ai/blog/trent-ai-raises-13m-to-secure-the-agentic-age/ (design partners story). Capture them or drop the facts. The six people entries are named, public, professional roles, but rest on an uncaptured page. The three llm-info facts, the product and plugin README facts and the use-case story span are captured and exact. The report also repeats the S4 OAuth-probe claim. Check that a named-person list on a company report is permitted by the team rules before publication."
+     },
+     {
+      "answer": "captures",
+      "severity": "pass",
+      "finding": "Every URL in `answers` and `announced` is a key of `captures` (8 of 8). The announced entries are all sourced on captured pages and are phrased as announced, not as present."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A3 R3 C2 O3 as computed. A3 = I08 + I17 (both available, so A3 is shown as available, not shipped). R3 = S4 + I25. C2 = I38 + I25. O3 = I50 + S3, with O1 and O2 from I20, I22, I58 (cumulative). A4 is not reached (no I18/I19). Weakest points: R3 and C2 both rest on one I25 sentence; A3 rests on a Manual-path span and an incomplete I17 span; O2 rests on a research-post sentence and a plugin README. C1 (I38) is solid: the span is the dashboard sentence and the note matches. The card publishes at level one or more in every dimension. A3 or R3 would be lower if I17/I25 are not strengthened; level three claims for a draft are high."
+     },
+     {
+      "answer": "I10,I11,I13,I16,I20,I38,I50,I57,S3",
+      "severity": "pass",
+      "finding": "Spans are exact in the captured text and all under fifteen words (checked programmatically: 6 to 13 words). Notes are supported by the cited pages; I10, I11 and I13 notes add details found elsewhere on the same page. I13 and I16 are available/coding-agent, correct. I50 (33-47% of 43 instances, 28 CVEs, runs) and I22 notes match the benchmark post. I38 note matches the dashboard sentence. I57 (challenge a severity, corrections recorded) matches the product FAQ. S3 is observed by probing llms.txt, correct. No operation-fact indicators are credited as documented. No em-dashes or at-signs observed in the scan fields (the configuration note names the trent plugin as a name with an at-sign in it, which contains an at-sign and will trip the gate: reword)."
+     }
+    ]
+   }
+  ]
  },
  "assessment": {
   "by": "gamma.studio@web-summit.dinis",
