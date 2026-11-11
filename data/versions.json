@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.149",
+    "date": "2026-11-11",
+    "what": "round one of review on legalfly-agents (changes)",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "ff6a7b863"
+  },
+  {
     "version": "v0.0.148",
     "date": "2026-11-11",
     "what": "round one of review on buzz-messaging-ai (changes)",
