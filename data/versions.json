@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.187",
+    "date": "2026-11-11",
+    "what": "/reports/ lists carded signatures and a count of the rest",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "76c6c52a6"
+  },
+  {
     "version": "v0.0.186",
     "date": "2026-11-11",
     "what": "Buzz Messaging AI and Emergence AI published; claim notes (Emergence's on hold for the A4 look)",
