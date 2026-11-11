@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.138",
+    "date": "2026-11-11",
+    "what": "jump bar over the cards, card anchors",
+    "by": "gamma.design@web-summit.dinis",
+    "from": "3ec83e22a"
+  },
+  {
     "version": "v0.0.137",
     "date": "2026-11-11",
     "what": "log the check against 19 cards",
