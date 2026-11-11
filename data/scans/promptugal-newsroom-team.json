@@ -494,6 +494,79 @@
       "finding": "Of the eight actionable round-two findings, fully answered: I41, levels (Control to 2) and captures (3). Partly: I43 (moved text and the 302 count still wrong), S1 (the 'rest' description wrong for 90 rows), scope of the team (same-team agents outside the table not named), the grouped wording item (I61, I38, I33, I48, I27, I46 and grant_note done; I47 now counts wrongly; I29 untouched), and I18 with I08 (unchanged). The ninth heading (I39, I37, I11, S3, grant) was verified answered in round two and still holds."
      }
     ]
+   },
+   {
+    "round": 4,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I18",
+      "severity": "should-fix",
+      "finding": "Round three: answered in part. Done and true: the note now says 'Declared in CLAUDE.md' and names the sections Decisions are pages (only a decision that is the operator's alone, titled For Dinis, waits for him), Hourly runs and When in doubt, push to production (dev is production), and Branches and versions (a major release is a pull request that only he merges); I read all four in the captured CLAUDE.md (hash 19ada272, matches a fresh fetch). Still wrong: 'agents are woken hourly' is written in the present tense without its limit. The Hourly runs section says each agent is woken every hour 'tonight and into Friday morning' (6 November), not as a standing rule, and the pages the scan itself captured show other cadences and stops: the summit-set page (9 November) gives hourly, every 2 h and every 3 h by role and says every agent was stopped at 20:42 UTC on 8 November, and the big-stop page (9 November, 23:30 UTC) pauses wakes again. Autonomy 4 rests on this answer alone, so its wording should not read stronger than its source. Suggest: 'agents are woken on a schedule (CLAUDE.md says every hour for the night of 6 November; the summit-set page of 9 November gives one to three hours by role) and release without a person'. The level is not changed by the wording: the releases (S1, 712 observed) and run reports corroborate agents acting without a person, but they are cited under S1 and I41, not I18."
+     },
+     {
+      "answer": "moved",
+      "severity": "pass",
+      "finding": "Round three item 1: TRUE (answered). The moved field now reads 'Control 3 to 2', cites logging to run reports as observed, says monitoring (I43) is no longer credited and that the reviews stop on 8 November. It no longer says hourly reviews are observed and no longer contradicts not_credited. The card agrees: Control 2, next I43."
+     },
+     {
+      "answer": "I43",
+      "severity": "pass",
+      "finding": "Round three items 2 and 5: TRUE (answered). not_credited now says 107 run reports on 10 November for the roles in scope. I recounted from a shallow clone of the public repository at commit 4addcad8 (reachable after a deeper fetch): 107 reports with a 2026-11-10 name across the 27 role folders (303 across every folder, so the old 302 was every folder); 1,152 in all in the 27 folders; 16 with tool_calls total 0. abp: 22 reports in board/abp/reports (first 2026-11-06-04, last 2026-11-08-20, written 2026-11-08T20:50Z, says thirteen wakes were missed); last abp run report 2026-11-07T18-37-33Z (18:37 UTC): all as written. The entry now says the cited page is of 9 November about 02:30 UTC (the page header says 'about 02:30 UTC') and that it does not show 11 November. The source is a key of captures and its hash (191ef4f7) matches a fresh fetch."
+     },
+     {
+      "answer": "I43",
+      "severity": "note",
+      "finding": "The not_credited text says the cited page 'predates the stop of 9 November and the restart of 10 November'. The stop is on the captured big-stop page (23:30 UTC, 9 November), but that page is not named in the entry, and the restart of 10 November has no cited source (it is inferred from run reports dated 10 November). Say 'and run reports are dated 10 November' or cite the big-stop page. Also, the repository's board/schedule.json lists the abp task as enabled (every two hours) while no abp report or run report exists after 8 and 7 November: a conflict with the entry's reading that it is not running; it does not change the card because I43 is not credited, and the entry may mention it."
+     },
+     {
+      "answer": "S1",
+      "severity": "pass",
+      "finding": "Round three item 4: TRUE (answered). I read newsroom/versions.json from the clone at 4addcad8 (1,197 rows, file hash 37c2a540, equal to the stored capture hash) and from the live file (now 1,279 rows): in the oldest 1,197 rows by version, 712 rows have a by field that is a role in scope followed by the operator suffix; the rest by this operator outside the table are conductor.b 75, social.watch 10, journalist.newsroom 3, reporter.newsroom 2: exactly as written. 'Not by a role in the team table' is right, the method names the first 1,197 rows and says the live file grows. Grade observed, mode deployed, indicator S1 right; not a named customer and the self-given by field are stated, so S1 earns only the In production badge."
+     },
+     {
+      "answer": "scope",
+      "severity": "pass",
+      "finding": "Round three item 4 (scope part) and I12: TRUE (answered). The scope note now names conductor.b, social.watch, journalist.newsroom and reporter.newsroom as out of scope; I12 says 'Twenty-seven rows in the team table' (I counted 27 rows in the captured CLAUDE.md table, 20 plain and 7 dotted), no longer the wrong 'sixteen agents' parenthesis."
+     },
+     {
+      "answer": "scope",
+      "severity": "note",
+      "finding": "A punctuation slip on the face of the scope note: it ends '... reporter.newsroom., and counts below are of the roles in scope only.' (full stop, comma). Fix to 'reporter.newsroom; counts below are of the roles in scope only.' The S1 method field also writes an at-sign before the operator suffix ('followed by' and the suffix); the gate allows it, but the house style says no at-sign characters, so write 'the operator suffix'."
+     },
+     {
+      "answer": "I47",
+      "severity": "pass",
+      "finding": "Round three item 3: TRUE (answered). policies.json v1.7.0 (hash a9c449b9, equals a fresh fetch): core rules by barrier are rule R1 and R11 (two), review R10 (one), hook R2 to R9 (eight); total eleven. The note says exactly that and that the hooks run in observe mode. Grade self-reported, indicator right (a limit that is a rule in prose; it is labelled a reading)."
+     },
+     {
+      "answer": "I38",
+      "severity": "pass",
+      "finding": "Round three I38 finding: TRUE (answered). Now 'Declared: no new session, agent, scheduled task or workflow without the operator (R4), and only he merges to main. The R4 hook logs and does not block, and releases to dev, which is production, need no person.' R4 text, barrier hook, and mode observe with breakers off are in policies.json; the dev-is-production line is in CLAUDE.md. It no longer reads stronger than I37 and I48. Control 2 therefore still rests on two self-reported statements (I38, I23); that is within the rules for a statement fact, and I23 is credited on the Spectrum reading of its scope (documented grants), the governance reading would not count it."
+     },
+     {
+      "answer": "I29",
+      "severity": "note",
+      "finding": "Round three grouped-wording item (6): partly answered. I29 is still 'The key list and the team table are the registry.' keys.json also lists agents of other operators, and the note does not say it rests on the repository file or that the conductor entry is unconfirmed (I27 says so, I29 does not). I08 was left self-reported without a stated reason (allowed: statement fact; an observed reading from the 712 releases would give A3 an observed leg). I56 still says 'built and run by AI agents with a named operator' while the disclosure page names one agent of the web-summit team as the writer, not one of the 27 roles. I39 still does not name the page that shows the stop of the whole team. None changes a level; all low weight."
+     },
+     {
+      "answer": "captures",
+      "severity": "note",
+      "finding": "Stored hashes against fresh fetches (11 November, later in the day): equal for CLAUDE.md (19ada272), abp README (617ecee4), policies.json (a9c449b9), big-stop page (3f727382) and summit-set page (191ef4f7). Different for participant.md (only the generated site version stamp, v0.1.1228 to v0.1.1279), llms.txt, keys.json and versions.json (live files that grow); keys.json and versions.json equal the stored hash at clone commit 4addcad8 (5b79edc2, 37c2a540), so the captures are the 09:07 UTC state and are right. The two GitHub tree pages return 403 here, so I41 rests on the named clone, as the method says. Every answer URL and the not_credited source are keys of captures; the big-stop page and the abp reports tree are captures no answer cites (harmless). The scan is unchanged in its read date (2026-11-11). Gate prints OK (v0.0.192); the scan has no em-dash."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card computed: A4 R2 C2 O1 (A used I10, I12, I18; R used I10, I11, next I25; C used I38, I23, next I43; O used I20, I56, next I22). Every dimension is at least one. Against Autonomy 4: level 3 needs I08 and I18, level 4 needs level 3, I10 or I12, and I18, so it stands on I18 alone, declared in the team's own CLAUDE.md. Remove I18 and Autonomy falls below one (I07, I15, I16, I17, I19 not evidenced, which is not no). Counter-evidence read this round: the hourly wording was for one night, cadences are one to three hours and the whole team was stopped by the operator on 8 and 9 November, which shows the operator can stop it, not that it fails to act alone; 712 releases and 1,152 run reports in the public repository show agents acting without a person present at the time. I hold A4 as declared once the I18 wording is corrected as above. No level three is held in any other dimension: Reach 3 lacks I25, Control 3 lacks I43 (not credited, correctly), Openness 2 has one of the two needed. Control 2 rests on I38 and I23, both self-reported."
+     },
+     {
+      "answer": "grant",
+      "severity": "pass",
+      "finding": "grant is null with an honest grant_note (one grant per agent as paths, hosts and tools; not translated into the 23 capabilities; logged, not enforced: observe mode). Nothing is scored from a grant and nothing is claimed for RiskMandate beyond what its site says. Grouped pass: I04, I08, I10, I11, I14, I20, I21, I26, I27, I30 to I34, I37, I39 to I41, I46, I48, I61, S3 unchanged since round three and still as verified; I12, I47, I38, S1 and the scope note re-checked as above."
+     }
+    ]
    }
   ],
   "responses": [
