@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.202",
+    "date": "2026-11-11",
+    "what": "crowdstrike report without the uncaptured maintenance-mode claim; Emergence note no longer on hold (gamma-ray@ answered)",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "a3f4d5de9"
+  },
+  {
     "version": "v0.0.201",
     "date": "2026-11-11",
     "what": "round 2 on crowdstrike-charlotte-ai",
