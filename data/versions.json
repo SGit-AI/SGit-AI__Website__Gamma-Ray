@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.195",
+    "date": "2026-11-11",
+    "what": "trent-ai: no at-sign in a response",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "f7d0e691c"
+  },
+  {
     "version": "v0.0.194",
     "date": "2026-11-11",
     "what": "round 4 on promptugal-newsroom-team",
