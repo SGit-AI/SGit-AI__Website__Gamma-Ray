@@ -391,7 +391,23 @@
    "m": "default"
   }
  },
- "not_credited": [],
+ "not_credited": [
+  {
+   "what": "S1 (In production)",
+   "why": "The clients page names customers with outcome figures, but none is tied to Agent Studio workflows, the capability that acts; the European Commission item says the technology will be used, which is not use.",
+   "source": "https://www.legalfly.com/clients"
+  },
+  {
+   "what": "S4 (a published agent interface: MCP server, agent card or agent API)",
+   "why": "The Salesforce MCP integration is one the product consumes; no captured page describes an MCP server, agent card or API that LEGALFLY publishes for its agents.",
+   "source": "https://help.legalfly.com/articles/38318067078162-salesforce"
+  },
+  {
+   "what": "I41 action log, I39 pause or stop, I47 written limits (Control above level 1)",
+   "why": "The Agent Studio page lists 'full activity logs' and 'Governed outputs' and the Legal Radar page an audit trail for compliance actions, but these are product statements; I41 needs an observed log, and no captured page states a way to pause or stop a running workflow or a written rule limiting what the agents may do.",
+   "source": "https://www.legalfly.com/agentstudio"
+  }
+ ],
  "announced": [
   {
    "what": "Salesforce support in agents other than Discovery is planned",
@@ -446,13 +462,13 @@
    "read_at": "2026-11-11T06:45Z"
   },
   "https://trust.legalfly.com": {
-   "sha256": "b39fed645ffd91f33abdf5e9d8645efa3a7fd12cf0888f618bc9dd84f3b1ec6e",
+   "sha256": "6bee28c83d447f9f4fdba494f0ea897b9152622ce3814c2ddcef5d3fc7ed6763",
    "bytes": 235282,
    "read_at": "2026-11-11T06:45Z"
   },
   "https://www.legalfly.com/": {
-   "sha256": "e8128b5f761d3539bd0f7176f8b1466e91d4449451147d633ca487e0cf417e6b",
-   "bytes": 630663,
+   "sha256": "d00b85ca102296d76791aa86ea667b44cc8d9ef03afa20b47d120f839539038c",
+   "bytes": 632665,
    "read_at": "2026-11-11T06:45Z"
   },
   "https://www.legalfly.com/agents": {
