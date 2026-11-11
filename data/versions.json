@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.197",
+    "date": "2026-11-11",
+    "what": "crowdstrike-charlotte-ai: round 1 answered (S4 on the developer page, I12 I13 to not_credited under the preview rule, I11 I18 I03 I58 I61 re-spanned, notes, configs, basis)",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "6189f76bf"
+  },
+  {
     "version": "v0.0.196",
     "date": "2026-11-11",
     "what": "trent-ai-security-engineer: round 2 answered (I25 on the per-repository GitHub App, I58 span and note on one sentence, I21 note)",
