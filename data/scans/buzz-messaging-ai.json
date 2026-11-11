@@ -19,8 +19,62 @@
   "published": "2026-11-11"
  },
  "review": {
-  "status": "draft",
-  "rounds": []
+  "status": "round-1",
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I08,I11,I20,I38,I58,S3",
+      "severity": "pass",
+      "finding": "Spans found verbatim in the current captures and under fifteen words (I08 11, I11 8, I20 12, I38 9, I58 13, S3 3). Every URL in notes, announced entries and answers is a key of captures (checked programmatically). Grades and modes fit: I08, I10, I11 are available (each needs a person or admin to connect the tool; the pages say so), I20, I38, I58 are default, S3 is observed (llms.txt and agents.md resolve, fetched 2026-11-11). /work, /integrations and agents.md are server-rendered text, no JS-embedded reliance. No em-dashes or at-signs in notes."
+     },
+     {
+      "answer": "I16",
+      "severity": "should-fix",
+      "finding": "The indicator reads 'the person reviews and approves each action'. The sources (work: 'Nothing is made until the asker confirms'; agents.md: 'Anything an agent would create ... is only created once the person who asked confirms') gate creation only. Reads, web search and, on the integrations page, 'edit Docs, Sheets and Slides' and 'book meetings' are not said to wait for confirmation; integrations says only 'Anything they'd create waits for a yes'. Grade documented and mode default are right, but the note ('Anything an agent would create appears as a card') should say creation only, and the answer is thin for Autonomy 2: it is the single fact behind it. Autonomy 2 stays defensible (proposed creations need approval), so no level change is required."
+     },
+     {
+      "answer": "I38",
+      "severity": "note",
+      "finding": "Source supports it (agents.md span exact, work page says the same). Two weak points: (a) the confirmation covers creation of tasks, pages, documents; whether that is 'high-impact' is a judgement, and edits and calendar bookings are not stated to be gated; (b) the same sentence feeds A2 (I16) and C1 (I38), so one statement carries two dimensions. C1 rests on this alone (I47 not claimed). Removing I38 drops Control to below one, but the card still publishes on A2, R2, O1."
+     },
+     {
+      "answer": "I10",
+      "severity": "note",
+      "finding": "Note says 'across Google Drive, Google Calendar and Notion, and tasks sync with Jira or Linear' and the integrations page does list all of them under Available now, but the span ('Agents read, create and edit Docs, Sheets and Slides.') is the Drive line only, one system. Consider a span or second wording showing several systems. R2 is not at risk because I11 also satisfies the rule (any of I10, I11)."
+     },
+     {
+      "answer": "I20",
+      "severity": "note",
+      "finding": "llms.txt text is a one-line product description ('multiplayer AI agents that work in Notion, Google Drive and Google Calendar'), which states purpose; permitted tasks are only implied. Acceptable for O1 together with I58, but it is a marketing sentence, and O1 would fall if I20 were challenged."
+     },
+     {
+      "answer": "I58",
+      "severity": "note",
+      "finding": "Documented and default are defensible, but the data an agent can read exists only after a person connects the tool, so one could argue for available on the Notion, Drive and Calendar part. The span itself (files shared in the room, with the asking person's own access) is in the room regardless of connection, which supports default."
+     },
+     {
+      "answer": "announced (bring your own model)",
+      "severity": "should-fix",
+      "finding": "The entry says the company's assistant page states there are no API keys to manage. I confirmed that sentence on the features AI assistant page, but that page is not a key of captures (uncaptured page relied on, though its URL is not cited). Either capture it and cite the URL, or reword to say only that the founder said it and the company's pages do not mention it."
+     },
+     {
+      "answer": "announced (other entries)",
+      "severity": "pass",
+      "finding": "Early 2027 calls (ai-facts and about), Gmail, Slack, Zapier coming soon (integrations), infrastructure phases 2 and 3 (about), and the founder's control-policy remark (interview) are each in their cited, captured source."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card A2 R2 C1 O1 (node card.mjs). No level three or four, so no argue-against round needed. A2 via I16 alone; R2 via I10 and I11; C1 via I38 alone; O1 via I20 and I58. O2 would need a second of I22, I61 (not claimed). No S1 or S4 claim, so the In production badge and agent-interface checks do not apply. Card publishes (level one or more in every dimension). Product-shape: no governance level, consistent with rules."
+     }
+    ]
+   }
+  ]
  },
  "assessment": {
   "by": "gamma.studio@web-summit.dinis",
