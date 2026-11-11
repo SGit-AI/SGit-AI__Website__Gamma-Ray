@@ -167,49 +167,49 @@
  "method": "A researcher-assessor gathered and captured the sources and mapped the evidence to indicators, without assigning a level. A challenger argued against every level three and four and every doubtful credit.",
  "captures": {
   "https://asmm.trent.ai/": {
-   "sha256": "d544fc097b420820ea4e18d22a7ee110a66467552842bae3f3f4a27011a53fa0",
+   "sha256": "c402e9d3cbe25fc579b6faa4519b4f245c7f8f71969fdf47d7c070fdd9f1d7d0",
    "bytes": 58425,
-   "read_at": "2026-11-11T12:52Z"
+   "read_at": "2026-11-11T15:47Z"
   },
   "https://raw.githubusercontent.com/trnt-ai/trent-agent-plugin/main/README.md": {
    "sha256": "a056747bba23a8f4f36081326b957518d1536ac35101f67e118867a68ea07d8a",
    "bytes": 5722,
-   "read_at": "2026-11-11T12:52Z"
+   "read_at": "2026-11-11T15:47Z"
   },
   "https://trent.ai/": {
-   "sha256": "7b9f8652997fb986a189e3e3e68ef5b1b12659316214e159ff90bb60aadd47a0",
+   "sha256": "3d5a9046f5a179125dede22deeb278a3b40c3e71d5559eda2076953c7734617c",
    "bytes": 84716,
-   "read_at": "2026-11-11T12:52Z"
+   "read_at": "2026-11-11T15:47Z"
   },
   "https://trent.ai/about-us/": {
-   "sha256": "7076ecf951297f7a60d04a19d31d924c383684becebd3b396231bbc03b2fc304",
+   "sha256": "41dc69946c5ab4c98686062c44d5e5d2e67c2c1636ba1e032eb58cd458236c80",
    "bytes": 104607,
-   "read_at": "2026-11-11T12:52Z"
+   "read_at": "2026-11-11T15:47Z"
   },
   "https://trent.ai/blog/trent-ai-raises-13m-to-secure-the-agentic-age/": {
-   "sha256": "4ec34c49bc7ad0b4f2364d2a6413a02ddbbc07f813bf7fb8a6444b9e08ef0a39",
+   "sha256": "f40ab53be160559f2cb19ba08598b34cd8128158ea9154725b4b25c1fa774d1c",
    "bytes": 127200,
-   "read_at": "2026-11-11T12:52Z"
+   "read_at": "2026-11-11T15:47Z"
   },
   "https://trent.ai/llm-info/": {
-   "sha256": "6f9f05c7cd3607a7d525eddbf97e23114b49a34a53ecef105228b8df2b5766d5",
-   "bytes": 108621,
-   "read_at": "2026-11-11T12:52Z"
+   "sha256": "a29c88e03786c447c38aab10c8af7416157319856e5e7f8a8032a05097ced7d0",
+   "bytes": 108628,
+   "read_at": "2026-11-11T15:47Z"
   },
   "https://trent.ai/openclaw/": {
-   "sha256": "372310642b8c4a0a0e272d2b11c0ce1525a14a4269a3a6a79275eeef6b0eb4c6",
+   "sha256": "59cf0339db64bd85c0c83e8a25826d31820f459807554f6331257adc6da8f1c7",
    "bytes": 137037,
-   "read_at": "2026-11-11T12:52Z"
+   "read_at": "2026-11-11T15:47Z"
   },
   "https://trent.ai/product/": {
-   "sha256": "964b83f7004bf487c3da17c1ee1d0f43325841d0eed1e5889fde90aad9d2f427",
+   "sha256": "3875cd1875b911f2d8ab2febf2c8da71bdc75596a07d152d8b274a1ea073b8a0",
    "bytes": 169660,
-   "read_at": "2026-11-11T12:52Z"
+   "read_at": "2026-11-11T15:47Z"
   },
   "https://trent.ai/use-cases/autonomous-remediation/": {
-   "sha256": "f5a51c127945d0be8366300bff7f7e0893484d902778b31d1e2945313e263430",
+   "sha256": "2dbe240250b850087f556df4480e2c3be99855d046959daca1129886fa2a2c04",
    "bytes": 78742,
-   "read_at": "2026-11-11T12:52Z"
+   "read_at": "2026-11-11T15:47Z"
   }
  }
 }
