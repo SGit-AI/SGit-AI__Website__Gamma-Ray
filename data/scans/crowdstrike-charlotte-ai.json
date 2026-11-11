@@ -317,6 +317,111 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-11",
     "response": "After these answers the card is A4 R3 C2 O2: Reach 3 rests on S4 from the developer page plus I25; Autonomy 4 on I08 and I18 with I10 as its only orchestration route; Openness 2 on I58 from a product page and I61, whose span now carries the infrastructure and the first model family, with the open list stated. Every dimension is at level one or more."
+   },
+   {
+    "round": 2,
+    "answer": "report",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Fixed by the studio: the falcon-mcp solutions entry in data/reports/crowdstrike.json no longer says maintenance mode or names a hosted server; it follows the captured developer page only."
+   },
+   {
+    "round": 2,
+    "answer": "I10",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Accepted that the customer remark does not carry Autonomy 4's cross-system half. I10 now cites the vendor's AgentWorks blog (fetched, raw/ans-002.html; to be captured): a partner's agent 'runs periodic Falcon Next-Gen SIEM queries across both Falcon telemetry and ExtraHop' Reveal(X), automatically opening cases and correlating detections above a threshold, a multi-step workflow across two systems in use; mode available, cfg agentworks. Cost: as shipped Reach falls from 2 to 1, since I10 is no longer a default answer."
+   },
+   {
+    "round": 2,
+    "answer": "I18",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Kept as available, cfg agentworks, with the note now opening 'A setting, not a deployment shown', as the reviewer's condition asks. Autonomy 3 no longer rests on I18: I17 is added from the same captured FAQ ('routine investigation steps - so analysts can focus on the complex, judgment-intensive work'), which matches I17's text (routine tasks handled, person on the hard cases) more closely than I18 matches the configurable gate; I18 now matters only for Autonomy 4."
+   },
+   {
+    "round": 2,
+    "answer": "S4",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "No change in this round. The developer page's READ and WRITE scope text is the interface's authorisation and is on the page S4 already cites (captured); the S4 note names those scopes. I25 stays as the indicator the rule asks for, cfg agentworks, which the mcp configuration needs anyway; the reviewer's point that I25 is from another page is stated here."
+   },
+   {
+    "round": 2,
+    "answer": "I11",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Agreed on both points: the note now keeps only the AgentWorks half (agents connect to the tools teams already run) and drops the inbound third-party MCP clause. Span unchanged; no level moves."
+   },
+   {
+    "round": 2,
+    "answer": "I03",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "No change; noted."
+   },
+   {
+    "round": 2,
+    "answer": "I58",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "No change; Openness is thin and the card says so through the count rule."
+   },
+   {
+    "round": 2,
+    "answer": "I61",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "No change; noted."
+   },
+   {
+    "round": 2,
+    "answer": "I08",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "No change. Its off-by-default status stays in the note and Autonomy 3 and 4 show only with the autonomous-actions option on; the new I10 source shows an AgentWorks agent acting (opening cases) in use, which answers the point that nothing shows an agent acting end to end."
+   },
+   {
+    "round": 2,
+    "answer": "I38",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "No change; the reading stated in round one stands and the note keeps the vendor's words."
+   },
+   {
+    "round": 2,
+    "answer": "I25",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "No change; see S4."
+   },
+   {
+    "round": 2,
+    "answer": "basis",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "The studio should add to the basis: 'CrowdStrike has not seen this rating.' The new I10 blog is to be added to captures by tools/capture.mjs."
+   },
+   {
+    "round": 2,
+    "answer": "captures",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Noted. The new I10 source is not yet a key of captures; capture must run before publication."
+   },
+   {
+    "round": 2,
+    "answer": "levels",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Autonomy 3 now rests on I08 (autonomous-actions) and I17 (default) instead of I18. Autonomy 4 rests on I18 read explicitly as a setting and I10 now from a vendor-described cross-system agent workflow; still A4 with options on, only with agentworks and autonomous-actions together. As shipped is now A2 R1 C1 O1."
+   },
+   {
+    "round": 2,
+    "answer": "pass",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Noted; new spans I10 and I17 verified on fetched pages (raw/ans-002.html, raw/ans-003.html), 12 and 13 words, no em-dash (the dash in the I17 span is an ASCII hyphen on the page)."
    }
   ]
  },
@@ -373,15 +478,16 @@
    "cfg": "autonomous-actions"
   },
   "I10": {
-   "e": "https://www.crowdstrike.com/en-us/resources/customer-stories/green-thumb-industries/",
-   "n": "A named customer states, in a case study on the vendor's site, that it uses Charlotte AI across several Falcon platform modules.",
-   "span": "We’re using Charlotte AI across multiple platform modules",
+   "e": "https://www.crowdstrike.com/en-us/blog/how-ai-leading-security-teams-are-building-the-agentic-soc/",
+   "n": "The vendor's blog on AgentWorks describes a partner's agent that runs periodic queries across Falcon telemetry and the partner's own network product, opening cases and correlating detections when activity crosses a threshold.",
+   "span": "runs periodic Falcon Next-Gen SIEM queries across both Falcon telemetry and ExtraHop",
    "g": "documented",
-   "m": "default"
+   "m": "available",
+   "cfg": "agentworks"
   },
   "I11": {
    "e": "https://www.crowdstrike.com/en-us/blog/crowdstrike-delivers-next-evolution-of-agentic-soc/",
-   "n": "The vendor's blog labels as generally available that AgentWorks agents reach the tools teams already run and third-party agents connect to Falcon tools through a CrowdStrike-managed MCP server.",
+   "n": "The vendor's blog labels as generally available that AgentWorks agents connect to the tools teams already run.",
    "span": "Connect to any tool, any agent (GA)",
    "g": "documented",
    "m": "available",
@@ -394,9 +500,16 @@
    "g": "documented",
    "m": "default"
   },
+  "I17": {
+   "e": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/",
+   "n": "The vendor's FAQ states that Charlotte AI automates alert triage, enrichment and routine investigation steps so that analysts focus on complex, judgment-intensive work.",
+   "span": "routine investigation steps - so analysts can focus on the complex, judgment-intensive work",
+   "g": "documented",
+   "m": "default"
+  },
   "I18": {
    "e": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/",
-   "n": "AgentWorks lets teams choose which agent actions run automatically and which wait for human review, applying oversight by action type and environment sensitivity.",
+   "n": "A setting, not a deployment shown: AgentWorks lets teams configure which agent actions run automatically and which wait for human review, by action type and environment sensitivity.",
    "span": "configure which agent actions execute automatically and which require human review",
    "g": "documented",
    "m": "available",
@@ -461,6 +574,11 @@
    "what": "Several agents coordinating and handing context to one another in Agentic SOAR workflows, including third-party agents (I12, I13)",
    "why": "The vendor's blog labels the unified Agentic SOAR workspace public preview and agentic investigations with an orchestrator agent pre-beta; this scan does not credit features so labelled.",
    "source": "https://www.crowdstrike.com/en-us/blog/crowdstrike-delivers-next-evolution-of-agentic-soc/"
+  },
+  {
+   "what": "A named customer's statement that it uses Charlotte AI across multiple platform modules (former I10 source)",
+   "why": "Replaced as the I10 source: it describes an assistant used in several modules of one platform, not an agent working across systems.",
+   "source": "https://www.crowdstrike.com/en-us/resources/customer-stories/green-thumb-industries/"
   }
  ],
  "announced": [
@@ -524,19 +642,19 @@
    "read_at": "2026-11-11T15:55Z"
   },
   "https://www.crowdstrike.com/en-us/blog/crowdstrike-delivers-next-evolution-of-agentic-soc/": {
-   "sha256": "5f1b60c913f919ed8bd5b2988315755249a3687cf680b0913365d7e4fadbcacb",
+   "sha256": "674347f57deab57035e93beeeaa8b2b664f9418a911e48401c5ee3a2be5f6046",
    "bytes": 178902,
-   "read_at": "2026-11-11T18:49Z"
+   "read_at": "2026-11-11T21:47Z"
   },
   "https://www.crowdstrike.com/en-us/platform/charlotte-ai/": {
-   "sha256": "a375105a6c1d4b20ed805225cbed8a58cdf61d14f7f47a09d111d28f6d103398",
+   "sha256": "7d5c1a4dca95f38ba43058ffa163d89d9b5b9a293f4d4a836515be2447936b0c",
    "bytes": 485577,
-   "read_at": "2026-11-11T18:49Z"
+   "read_at": "2026-11-11T21:47Z"
   },
   "https://www.crowdstrike.com/en-us/platform/charlotte-ai/agentic-security-workforce/": {
-   "sha256": "9617d151689b18efa75fff143421689772b87c13c75e37d9d195d81ed8796c90",
+   "sha256": "39568f0931bf69c92bb7801dc8e8d171eaeaef933c2e35bf4ee9c75b7156456b",
    "bytes": 497464,
-   "read_at": "2026-11-11T18:49Z"
+   "read_at": "2026-11-11T21:47Z"
   },
   "https://www.crowdstrike.com/en-us/platform/charlotte-ai/agentic-soar/": {
    "sha256": "54263915666834c0e8c327967090db9d8bf55bc7224794e34651a5ab73f128b2",
@@ -544,19 +662,24 @@
    "read_at": "2026-11-11T15:55Z"
   },
   "https://www.crowdstrike.com/en-us/platform/charlotte-ai/charlotte-ai-agentworks/": {
-   "sha256": "00ccc49dadbbc5df373bce37c7bc39da8c342d9883db2d164ffc2391a5642bac",
+   "sha256": "03bbf336a4d1fb367c245d7938c2dfa3d1c713c8f0a0bbcedfb2d39bd6d37930",
    "bytes": 425165,
-   "read_at": "2026-11-11T18:49Z"
+   "read_at": "2026-11-11T21:47Z"
   },
   "https://www.crowdstrike.com/en-us/resources/customer-stories/green-thumb-industries/": {
-   "sha256": "9f05c6faa2f5e6c4be3f1297a4f0d4b418a3da61d92a0855edfec802d7970db7",
+   "sha256": "def6aebc90a842f7ef4f68b074df54830527e608e9f189d6403dcec8c96f58c9",
    "bytes": 412018,
-   "read_at": "2026-11-11T18:49Z"
+   "read_at": "2026-11-11T21:47Z"
   },
   "https://developer.crowdstrike.com/falcon-mcp/modules/agentworks/": {
-   "sha256": "015c4ca7905812315131d83ce909234a63525076f6b5002366a84e1db23dab58",
+   "sha256": "24bccf4c4e1ef67933443bdad40f4d19024383ee0c48418c3cb5d9e5e12d1fa1",
    "bytes": 213694,
-   "read_at": "2026-11-11T18:49Z"
+   "read_at": "2026-11-11T21:47Z"
+  },
+  "https://www.crowdstrike.com/en-us/blog/how-ai-leading-security-teams-are-building-the-agentic-soc/": {
+   "sha256": "2cb995e3116efe6ce75face6dabfa5c65342d84c9f5ea6d25f080d578777a076",
+   "bytes": 175014,
+   "read_at": "2026-11-11T21:47Z"
   }
  }
 }
