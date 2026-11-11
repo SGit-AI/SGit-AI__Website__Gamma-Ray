@@ -19,8 +19,77 @@
   "published": "2026-11-11"
  },
  "review": {
-  "status": "draft",
-  "rounds": []
+  "status": "round-1",
+  "rounds": [
+   {
+    "round": 1,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I07",
+      "severity": "should-fix",
+      "finding": "Two problems. (a) Mode: the Salesforce help article says LEGALFLY must activate the integration on request and each user then connects, so the fact holds only when turned on; it is recorded as default with no cfg. It should be mode available, cfg integrations. (b) Indicator: I07 is 'retrieves information and recommends actions; a person acts'. The article shows Discovery retrieving and summarising Salesforce records and says it cannot create, update or delete; it says nothing about recommending actions. The note itself says only retrieves and summarises. Move to a better-fitting indicator or cut. No level changes: Autonomy 2 would come from I16 anyway, and I07 only counts together with I02 to I05, none of which is answered."
+     },
+     {
+      "answer": "I08,I17",
+      "severity": "note",
+      "finding": "Argued against Autonomy 3 (Acts), the only level three or four on the card (A3 R2 C1 O2). It rests on I08 (workflows page, template 'Multi-Document Review & Redline': 'redlines related documents and emails you the results') and I17 (same page, template 'Legal Helpdesk Triage': 'with Legal approving anything not clearly covered'). Both spans exist verbatim; both are vendor template descriptions on a workflow-library marketing page, two different templates, with no usage figure, no documentation page and no customer named for them. Both are marked available/agent-studio, so the mode is shown honestly (the card prints 'avail available'). Remove either one and Autonomy falls to 2 (I16, default). Many sibling templates on the same page say 'drafts ... for attorney review', which is level two behaviour. The reading is defensible under the rule as written, but the reviewer should know level three is a single page of template blurbs in available mode. Not a must-fix; nothing is wrong with the evidence. The page says 'Start from LEGALFLY pre-built workflows or build your own', which supports available. The page text is in the HTML (not JS-only)."
+     },
+     {
+      "answer": "I38",
+      "severity": "should-fix",
+      "finding": "Control 1 rests on I38 alone (I47 is not answered; remove I38 and Control has no level). Indicator I38 is 'High-impact actions need a person's approval'. The span on the Agent Studio page is 'Set approval and review steps where a decision is needed' under 'Human in the loop'. That says a builder can place approval steps; it does not say high-impact actions require one. The mode (available, agent-studio) is correct. Either keep it with a note that it shows the ability to add approval steps (the card's Control 1 'Stated' reads that way), or say why no other indicator fits. Level one is thin but honest if the wording of the note is softened; the note 'Workflow builders can place approval and review steps before a workflow continues' is accurate to the source."
+     },
+     {
+      "answer": "I10",
+      "severity": "should-fix",
+      "finding": "The note says Discovery can search connected folders 'alongside LEGALFLY's own sources'. The integrations page span ('Connect SharePoint and Google Drive to access your documents directly in LEGALFLY.') and the text around it ('let Discovery search your folders without moving documents') do not say 'alongside LEGALFLY's own sources'; I found no such wording on that page. Cut that clause or cite where it is said. The fact itself (connectors to SharePoint and Google Drive, mode available) is right and R2 stands on I11 as well."
+     },
+     {
+      "answer": "I22",
+      "severity": "should-fix",
+      "finding": "The span ('This integration is currently read-only.') is exact and on the Salesforce page, but the note's second clause (security FAQ says anonymisation can hide needed context and how to adjust it) comes from https://www.legalfly.com/security, not the cited source. That URL is a key of captures and the FAQ line is there ('What if anonymisation hides information we need? You can adjust anonymisation levels or whitelist specific terms'), but the answer's source field points elsewhere. State in the note which page says it. The indicator is 'limits and known failure cases are documented'; a read-only limit of one integration is a thin fit, and an FAQ on anonymisation is a product tip, not a failure case. Openness 2 does not depend on I22 (I58 and I61 are two of the three): removing I22 leaves Openness 2."
+     },
+     {
+      "answer": "I57",
+      "severity": "note",
+      "finding": "Span 'Submit a request' (3 words) is on the help centre home page and in the Salesforce article. It is a generic support-request form; the indicator is 'a channel to report problems with it or contest its output'. The page does not say the form is for reporting problems with agent output. Acceptable as documented, but it is the weakest fit in the scan. It feeds no level (Openness 3 also needs I50, which is not answered)."
+     },
+     {
+      "answer": "I36",
+      "severity": "note",
+      "finding": "Tier is declared (not public), grade documented. The trust centre lists a request-only document titled 'EU AI Act Article 50 - Technical Documentation and Transparency Information'; the note says the document was not read, which is honest. A document title identifies that a law is considered, which is a loose reading of 'the laws that apply to it are identified'. Q10 is outside the public levels, so it changes no level."
+     },
+     {
+      "answer": "I16",
+      "severity": "note",
+      "finding": "The span is from the June 2026 product highlights post's section on fixed comments: 'When a reviewer applies a suggested redraft during a contract review'. It shows a reviewer applies suggestions; 'each one' in the note is a small step beyond it. The integrations page ('playbooks can be applied with instant redraft suggestions') supports it better. Default mode is plausible for the Review agent. Autonomy 2 is not at risk."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card (node card.mjs): A3 (I08,I17, available) R2 (I10,I11, available) C1 (I38, available) O2 (I22,I58,I61). Every level except Openness rests on available-mode facts; the card shows this. S1 and S4 are not answered and not in not_credited. S1: the clients page names customers (Nemetschek Group, Duvel Moortgat, Agristo, PIF Group, ECS and others) with outcome figures, but none is tied to Agent Studio workflows (the capability that acts), and the European Commission item says the technology 'will be used', so no In production badge is justified; say so in not_credited. S4: the Salesforce MCP integration is one the product consumes, which does not count; I found no published MCP server, agent card or agent API on any captured page, so Reach 3 is correctly absent. The June blog and the legal-radar page are text in the HTML; the pages were readable without the embedded JSON."
+     },
+     {
+      "answer": "captures",
+      "severity": "pass",
+      "finding": "Every URL cited in answers, announced and notes is a key of the scan's 12 captures (compared programmatically; no uncaptured URL). The scan has no not_credited entries. All 13 spans are found exactly in their sources (words, not apostrophe style) and are under fifteen words (max 12). No em-dash, email or at-sign in the scan's prose that I saw."
+     },
+     {
+      "answer": "I20,I11,I58,I61,I08,I17",
+      "severity": "pass",
+      "finding": "I20 (agents page: Discovery 'Legally trained agent for research and advice grounded in verified sources', default), I11 (Salesforce MCP integration after per-user authorisation, available), I58 (Legal Radar FAQ lists the types of institutions monitored; narrow, one agent, but it says what it says), I61 (trust centre subprocessors list names Anthropic and OpenAI as AI inference providers with data locations, 'pseudonymised content only, unless a customer explicitly enables' appears for both), I08 and I17 (source says it; grade documented and mode available correct; see level note). Grades are documented throughout; no operation-needing indicator is used."
+     },
+     {
+      "answer": "announced",
+      "severity": "pass",
+      "finding": "The four announced items match their sources: Salesforce for other agents 'is planned' (help article), European Commission DG HR 'will be used' (clients page), the Gartner news item and the anonymisation marketing claim (security page, marked not assessed). All four URLs are captured."
+     }
+    ]
+   }
+  ]
  },
  "assessment": {
   "by": "gamma.studio@web-summit.dinis",
