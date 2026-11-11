@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.201",
+    "date": "2026-11-11",
+    "what": "round 2 on crowdstrike-charlotte-ai",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "4a45b0e7d"
+  },
+  {
     "version": "v0.0.200",
     "date": "2026-11-11",
     "what": "round 3 on trent-ai-security-engineer",
