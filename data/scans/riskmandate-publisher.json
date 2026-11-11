@@ -506,6 +506,59 @@
       "finding": "Verified answered against the live pages and the scan as it stands. I18 and I38: notes use the page's words ('No branch rule exists', merge and CI are settings, the role line 'publishes what the lead has accepted as a patch release on dev', the lead decides 'what is published' on team/); no 'no person approving'; quoted spans under fifteen words. I56: kept, and the scan note and the I56 note say Openness 1 is a site-level disclosure; I verified 'This site is made by one person and two agents' on team/ and 'kept by one person and their agents' on agents/; the second option of the round-two finding is taken, and the awkward pairing of the indicator text with a note that says the source does not meet it is disclosed on the card. I32 moved to not_credited with a reason and a captured source. I34 now says 'the first draft to argue with', as at 26 September 2026 (both verified). I45 note says what enforces it (mandatory egress proxy, 403 on CONNECT, verified) and that the governance rating does not credit it. Captures: all seven keys re-fetched today, every sha256 and byte count equals the live bytes; every URL cited in answers, not_credited, grant source and mandate source is a key of captures; the repository source file and the 5 September template probe have no link on the page and the round-two response says so (the page states Apache-2.0 open source on its footer). Mandate unchanged and equals publisher.json. Style: no em-dash and no at-sign in the scan's notes outside the by fields of reviewer entries; no private persons named (the lead is named on the public team page as a professional role)."
      }
     ]
+   },
+   {
+    "round": 4,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "I22",
+      "severity": "pass",
+      "finding": "Checked against a fresh fetch of team/publisher.html. The span 'A wrong deploy is fixed forward with a new release' is 10 words and occurs once, exactly, in the page text (in the create.record.world row of the grant table). The note matches the page: section 04 gives 'The delta, derived 4 in excess, 3 unbounded'; section 06 'What would bound it' lists the controls; the page says 'A credential found in a file is an incident: rotate it, then find how it got there'. The indicator (I22, scope none, needs statement, tier public) asks for limits and known failure cases documented for those who use it; the delta, the unbounded rows and the two failure handlings are about this agent's own grant, not RiskMandate in general. Grade self-reported is honest (prose, no probe); mode deployed is right (it describes the running deployment). Not stronger than the page: the note says 'handled' for a deploy fix and an incident rule, which the page does."
+     },
+     {
+      "answer": "I22",
+      "severity": "note",
+      "finding": "The note cites sections 04 and 06 first and the span comes from the grant table (section 03), and the credential sentence from the mandate text (section 02); the note does say 'the page also says', so it is not wrong. Optional: say which section carries the fix-forward sentence. Not blocking."
+     },
+     {
+      "answer": "I58",
+      "severity": "pass",
+      "finding": "The span 'What it reads, what it writes, and the tier of each.' is 11 words and occurs once, exactly, as the subtitle of section 05 'The surfaces it touches'. The section is a table with columns Surface, Tier, Reads, Writes, What stands in the way, for the repository, the live site, the console, the stories vault, the board, the session transcript and environment secrets, so the note ('each surface (the repository, the live site, the stories vault and others) with its tier, what the agent reads, what it writes and what stands in the way') is supported and not stronger. It is the agent's own data surfaces, not RiskMandate in general. Indicator I58 (scope none, statement, public) fits. Self-reported deployed is honest. The span is the section's own heading line, a self-description; the table rows below it carry the substance, which the note names."
+     },
+     {
+      "answer": "captures",
+      "severity": "pass",
+      "finding": "Every URL in answers (6 pages plus versions/index.json, publisher.json, llms.txt, agents/, team/, versions.html) is a key of captures; no other URL cited in the scan outside the vault read key. A fresh curl of all 7 captured URLs today returned the same SHA-256 and byte count as stored (7 of 7 match)."
+     },
+     {
+      "answer": "changes since round three",
+      "severity": "pass",
+      "finding": "git diff aac2b21 to HEAD on the scan shows only: the note sentence about Openness 1 removed (correct: it is no longer true), I22 and I58 added, and the round-3 response added to review.responses. No other answer, grant, mandate, moved, not_credited or caption changed. No em-dash, no at-sign in the scan outside the agent identity strings, no adjectives about a company found in the new text. Gate: node build/validate.mjs prints OK (v0.0.180)."
+     },
+     {
+      "answer": "O2",
+      "severity": "pass",
+      "finding": "Card computed: riskmandate-publisher A4 R2 C2 O2. Openness 2 rule is two of I22, I58, I61; it now uses I22 and I58 (both answered, both supported above), and I61 is a not_credited entry with a stated reason, so 2 does not lean on I56. Openness 1 (I20 plus any of I56, I22, I58) also no longer rests on I56 alone. Next unlock is I50 (an evaluation or measurement), correct: S3 is observed but Openness 3 needs I50 first. Both Openness answers are self-reported from one page, a declared source; the card does not claim more, and the round-2 trust issue is the same single source."
+     },
+     {
+      "answer": "A4",
+      "severity": "note",
+      "finding": "Argued against Autonomy 4: it rests on I18 alone for the lift (with I08 and I10 or I12), self-reported, from a policy page dated 'as at 26 September 2026'. The page's own wording, 'a story goes out only when the lead has accepted it by message' and 'the rest of the site is the agent's own work under the rules', can be read as approval of every story rather than critical decisions only. The scan's I18 note quotes both and says 'No branch rule exists; merge and CI are settings', so the reading is stated, not hidden; the I38 note keeps the approval fact separate. It is acceptable as a declared self-report on our own scan, unchanged since round three; not a new issue."
+     },
+     {
+      "answer": "I56",
+      "severity": "note",
+      "finding": "I56 stays answered although its own note says neither page states the agent tells the people it talks to, in a conversation, that it is an AI. Rounds two and three looked at this and accepted the site-level reading; the card no longer depends on it for any level, so it is harmless to the computed card. Left for the studio to keep or drop; not blocking."
+     },
+     {
+      "answer": "scan",
+      "severity": "pass",
+      "finding": "No new problem found. review.status still reads round-2 on the scan, which is the reviewer's field, not the studio's. Round three's one should-fix (I22 and I58 evidenced but unanswered) is answered correctly and verified."
+     }
+    ]
    }
   ],
   "responses": [
