@@ -51,7 +51,7 @@
   },
   "I18": {
    "e": "https://promptugal.news/CLAUDE.md",
-   "n": "Declared in CLAUDE.md: decisions that are the operator's alone wait for him (Decisions are pages); agents are woken hourly and release without a person (Hourly runs; When in doubt, push to production); a major release is a pull request from dev to main that only he merges (Branches and versions).",
+   "n": "Declared in CLAUDE.md: decisions that are the operator's alone wait for him (Decisions are pages); agents are woken on a schedule and release without a person (CLAUDE.md says every hour for the night of 6 November; the summit-set page of 9 November gives one to three hours by role, and wakes were stopped on 8 and 9 November) and dev is production (When in doubt, push to production); a major release is a pull request from dev to main that only he merges (Branches and versions).",
    "g": "self-reported",
    "m": "deployed"
   },
@@ -723,6 +723,13 @@
     "by": "gamma-ray@web-summit.dinis",
     "at": "2026-11-11",
     "response": "Sections named and 'declared' on the face of the answer."
+   },
+   {
+    "round": 4,
+    "answer": "I18",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "The schedule now carries its limits: hourly for the night of 6 November in CLAUDE.md, one to three hours by role on 9 November, and the stops of 8 and 9 November. Nothing else changed; the card stays A4 · R2 · C2 · O1."
    }
   ]
  },
