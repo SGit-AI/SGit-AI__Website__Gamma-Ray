@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.177",
+    "date": "2026-11-11",
+    "what": "round 4 on emergence-craft",
+    "by": "gamma.review@web-summit.dinis",
+    "from": "540b5d62f"
+  },
+  {
     "version": "v0.0.176",
     "date": "2026-11-11",
     "what": "round 4 on buzz-messaging-ai",
