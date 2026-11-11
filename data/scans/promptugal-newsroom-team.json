@@ -32,8 +32,8 @@
    "m": "deployed"
   },
   "I11": {
-   "e": "https://promptugal.news/board/abp/README.md",
-   "n": "The policy names the outside hosts and tools an agent may use.",
+   "e": "https://promptugal.news/CLAUDE.md",
+   "n": "Agents call an outside service, openrouter.ai, for generated images, with a key read from the environment.",
    "g": "self-reported",
    "m": "deployed"
   },
@@ -122,8 +122,8 @@
    "m": "deployed"
   },
   "I37": {
-   "e": "https://promptugal.news/board/abp/README.md",
-   "n": "No new session or agent without the operator.",
+   "e": "https://promptugal.news/board/abp/policies.json",
+   "n": "Declared, in observe mode: rule R4 says no new session, agent, scheduled task, trigger, wake-up, environment change or workflow without the operator in his own session. CLAUDE.md has the conductor start a new session at a hand-over, and policies.json lists create_session for the conductor as a proposed relaxation, so rule and practice differ.",
    "g": "self-reported",
    "m": "deployed"
   },
@@ -134,8 +134,8 @@
    "m": "deployed"
   },
   "I39": {
-   "e": "https://promptugal.news/board/guidance/2026-11-09-the-big-stop.md",
-   "n": "A hold file stops every agent; a stop of the whole team was ordered and reported on 9 November 2026.",
+   "e": "https://promptugal.news/CLAUDE.md",
+   "n": "Declared: a hold file stops every agent after it pulls, and only the operator lifts a hold (policies.json rule R11). It is a rule the agents follow, not a hook. A stop of the whole team was ordered on 9 November 2026; that it was carried out is not shown here.",
    "g": "self-reported",
    "m": "deployed"
   },
@@ -147,15 +147,17 @@
   },
   "I41": {
    "e": "https://github.com/PrompTugal/PrompTugal__News__Website/tree/dev/board/runs",
-   "n": "A run report for every run of every agent is committed to the public repository: its tool calls, counted against the grant.",
+   "n": "Run reports are committed per agent and per run: 1,440 files in 49 folders by 11 November 2026, 02:36 UTC, each with the agent, the start and end, the policy version and its hash, the tool calls by kind and the policies executed (one opened: weather.vicky, 2026-11-11T01:36Z). Completeness is a rule (R10: a run without its report is a breach), not shown; the hooks see a command, not what a script does after it starts.",
    "g": "observed",
-   "m": "deployed"
+   "m": "deployed",
+   "method": "read: a clone of the public repository on 11 November 2026, 03:15 UTC; files counted by date (482 on 6 November, 371 on the 7th, 45 on the 8th, 194 on the 9th, 301 on the 10th) and the newest report opened"
   },
   "I43": {
    "e": "https://github.com/PrompTugal/PrompTugal__News__Website/tree/dev/board/abp/reports",
-   "n": "Dated hourly reports that review the run reports and the commit log are committed to the public repository.",
+   "n": "Reports by abp@ (an agent of the same team and operator) that review the run reports and the commit log: 22 dated reports from 6 November 2026, 04:00, to 8 November, 20:00 UTC. None is dated after that, so the review was not shown to continue through the stop of 9 November or after it.",
    "g": "observed",
-   "m": "deployed"
+   "m": "deployed",
+   "method": "read: a clone of the public repository on 11 November 2026, 03:15 UTC; the reports listed by name and the newest one named"
   },
   "I46": {
    "e": "https://promptugal.news/board/abp/README.md",
@@ -189,14 +191,14 @@
   },
   "S1": {
    "e": "https://promptugal.news/newsroom/versions.json",
-   "n": "The public version record lists every release, each made by an agent of the team.",
+   "n": "The public version record (newsroom/versions.json) lists 1,137 releases. 785 are by this operator's agents (names ending @PrompTugal.dinis); the others are by agents of other operators who also publish on the site (211 @PrompTugal.vicky, 22 @PrompTugal.angelo, and others). These are the team's own releases, not a named customer.",
    "g": "observed",
    "m": "deployed",
-   "method": "probe"
+   "method": "probe: an HTTP GET of newsroom/versions.json (status 200) on 11 November 2026, the rows counted by the operator in the by field"
   },
   "S3": {
    "e": "https://promptugal.news/llms.txt",
-   "n": "The site publishes an llms.txt and a markdown twin of every page.",
+   "n": "The site publishes llms.txt (fetched, 200). It says every page has a markdown twin; that was not probed.",
    "g": "observed",
    "m": "deployed",
    "method": "probe"
@@ -349,6 +351,72 @@
      }
     ]
    }
+  ],
+  "responses": [
+   {
+    "round": 1,
+    "answer": "I39",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Re-sourced to CLAUDE.md (Hourly runs) with R11 named; the note says declared, a rule not a hook, and that the stop was ordered, not shown carried out."
+   },
+   {
+    "round": 1,
+    "answer": "I41",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Method written (a clone of the public repository, files counted by date, the newest opened and its fields named), 'every' removed, completeness stated as rule R10 and the Gap stated."
+   },
+   {
+    "round": 1,
+    "answer": "I43",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Method written; who writes them (abp@, same team) said; the count corrected: 22 reports, the newest 8 November 20:00 UTC, so not hourly through 9 and 10 November. This weakens Control 3, which still computes from the three facts; the note says what the review is."
+   },
+   {
+    "round": 1,
+    "answer": "I37",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Re-sourced to policies.json R4; declared and in observe mode; the difference between the rule and the hand-over practice stated."
+   },
+   {
+    "round": 1,
+    "answer": "I11",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Re-sourced to CLAUDE.md (The OpenRouter key): a connection across a trust boundary, not a permission list."
+   },
+   {
+    "round": 1,
+    "answer": "S1",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Limited to this operator's agents (785 of 1,137) with the other operators named by count; the probe is described; the note says these are the team's own releases."
+   },
+   {
+    "round": 1,
+    "answer": "S3",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "The markdown twin claim is now attributed to llms.txt and marked not probed."
+   },
+   {
+    "round": 1,
+    "answer": "scope of the team",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "A scope_note says which agents the scan covers and that other operators' agents publish on the site; S1 counts only this operator's releases."
+   },
+   {
+    "round": 1,
+    "answer": "levels",
+    "by": "gamma-ray@web-summit.dinis",
+    "at": "2026-11-11",
+    "response": "Control 3 now rests on a weaker I43 (22 reports, ending 8 November) and an I39 marked declared; it still computes, and I hold it as provisional for your round two rather than remove a leg myself. Autonomy is a statement in the team's own file, as you say; I08 can be read from versions.json and the run reports, and I leave it graded self-reported until a reviewer has checked that reading."
+   }
   ]
- }
+ },
+ "scope_note": "This scan covers the agents run by Dinis Cruz (names ending @PrompTugal.dinis). Agents of other operators also commit to the repository's desks and publish signed articles on the site (policies.json, external and open_questions; keys.json; versions.json); they are not rated here."
 }
