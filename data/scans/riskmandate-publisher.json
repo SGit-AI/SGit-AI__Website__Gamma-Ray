@@ -449,6 +449,49 @@
       "finding": "Verified against the live pages: S3 llms.txt resolves (hash equals capture) and all 158 html pages it lists have a markdown twin at the same path (158 of 158 return 200), so 'a markdown twin of every page' holds for the pages llms.txt lists; grade observed with a probe by GET is reproducible. I04 (Claude Code on the web, managed container), I08 (patch release on dev, which deploys), I10 (repository, stories vault, live site), I11 (code host and vault host), I20 (wanted, refused, unstated), I21 (tools and skills listed), I29 (team page lists the two agents), I30 (Owner: the lead), I41 (release notes only; correctly a claim and recorded in moved), I45 (mandatory egress proxy, refusal on CONNECT), I47 (instances are prose, 'the grant does not know them'), I49 (4 excess, 3 unbounded equal the page header). Modes deployed are right. No answer carries a span. No em-dash and no at-sign in notes. I did not run the gate (it writes _site); the style check was done by search."
      }
     ]
+   },
+   {
+    "round": 3,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I22,I58",
+      "severity": "should-fix",
+      "finding": "Round-two finding partly answered. The response answers only I22 and says no limits or failure cases written for those who use the agent were found. The page does carry them: team/publisher.html section 04 gives the delta (4 in excess, 3 unbounded), section 06 is 'What would bound it', and the page says 'A wrong deploy is fixed forward with a new release' and 'A credential found in a file is an incident: rotate it'. The scan itself relies on 'the grant does not know them' for I47, so the same page is read as stating limits in one answer and as having none in another. I58 gets no response at all: the surfaces table on the same page says what the agent reads and writes, by tier. The scan has neither an answer nor a not_credited entry with a reason for either. Either answer both from the page (the card computes Openness 2 and Openness 1 then no longer rests on I56 alone), or add each to not_credited with the reason and the captured source, and say in the response why the section 04 and 06 text does not meet the indicator."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card computed today: A4 R2 C2 O1 (node card.mjs). Argued against A4: the rule is I08, plus I10 or I12, plus I18. I18 is the only fact at Autonomy 3 and above that carries the lift, and it is a self-reported sentence in a document the page itself dates 'as at 26 September 2026', read 10 November. The page says the lead accepts each story by message before it goes out, which is per-item approval of the agent's main output; I18 holds only through the reading that the lead decides what is published and the agent does the rest, and the page says of itself 'It does not decide'. The I18 and I38 notes now say what the page says (no 'no person approving'), so the round-two wording defect is fixed and A4 is the rule's result; A3 remains the more cautious public reading and the card shows A4 with moderate trust. Remove I10 and I12 together and it is A3; remove I18 and it is 0. R2 rests on I10 or I11, two items from one page. C2 rests on I38 (stories, and what is published) and I23 (documented grant list, Spectrum reading); remove either and Control is 1 via I47. C3 is blocked (I39 and I43 unanswered). O1 rests on I20 and I56; I56 is a site-level disclosure and the scan note and the I56 note say so. The card meets the publish rule (level one or more in all four dimensions)."
+     },
+     {
+      "answer": "I27",
+      "severity": "note",
+      "finding": "I27 'Its identity is cryptographic and can be checked by others'. The note now says the key on agents/ is the site's mailbox identity shared by six roles, and adds that the publisher's commits are signed with its session key (a grant row, observed in its own container, no evidence file). So the only public check by others is for an identity that is not the publisher's alone; the second half is the operator's statement. The answer is used in no level (Control 4 is blocked), so this is a note: consider saying that the identity checkable by others is the shared one, and that the publisher's own is stated, not checkable."
+     },
+     {
+      "answer": "I23",
+      "severity": "note",
+      "finding": "I23 graded documented with a reason added (the grant is a machine-readable list). The lens defines documented as 'the vendor, or a published tool, says so' and self-reported as the operator without an independent probe; here the operator wrote both the list and the prose, so the reason is a judgement and it is stated, which answers the round-two finding. Carries Control 2 together with I38; the note says the governance rating does not credit it. Left as a note."
+     },
+     {
+      "answer": "S1",
+      "severity": "note",
+      "finding": "S1 is answered as asked: the note no longer says the agent 'began releasing'; it says the 40 releases are dated 26 September 2026 or later (checked against the live index: 155 releases, 29 June to 4 November, 40 from 26 September, v1.34.19 and v1.34.20 both dated 2026-09-26, 35 marked reconstructed), that the page names those two as shipped 'this way' on that day, and that the index does not name authors. Remaining judgement: the In production badge rests on two named releases of one day plus an unattributed count, and the scope asks for usage figures for what the agent does on its own. The note says this plainly; the badge is the rule's result and stays a note."
+     },
+     {
+      "answer": "grant,build",
+      "severity": "pass",
+      "finding": "Round-two build point answered. build/build.mjs line 167 now prints the scan's caveat as 'Our note on this profile:' after the source link and prints 'Its publisher states' only when grant.statement is set; our scan has statement null, so no sentence of ours appears as the operator's. Built locally (node build/build.mjs, 389 pages): _site/scans/riskmandate-publisher/index.md line 52 shows 'Our note on this profile: Rows graded observed ...' and line 72 shows the create.schedule.host row as 'documented: From the catalogue template's probe of 5 September 2026, not this deployment; no evidence file is captured.' The page says the template was measured 5 September and the rows were read again on 26 September, so the row note is true. Only claude-code-local and claude-code-web still carry grant.statement, with their own publisher's words. The 17 rows still equal publisher.json as in round two; the grant is counted and shown, never scored."
+     },
+     {
+      "answer": "I18,I38,I56,S1,I23,I32,I34,I45,captures",
+      "severity": "pass",
+      "finding": "Verified answered against the live pages and the scan as it stands. I18 and I38: notes use the page's words ('No branch rule exists', merge and CI are settings, the role line 'publishes what the lead has accepted as a patch release on dev', the lead decides 'what is published' on team/); no 'no person approving'; quoted spans under fifteen words. I56: kept, and the scan note and the I56 note say Openness 1 is a site-level disclosure; I verified 'This site is made by one person and two agents' on team/ and 'kept by one person and their agents' on agents/; the second option of the round-two finding is taken, and the awkward pairing of the indicator text with a note that says the source does not meet it is disclosed on the card. I32 moved to not_credited with a reason and a captured source. I34 now says 'the first draft to argue with', as at 26 September 2026 (both verified). I45 note says what enforces it (mandatory egress proxy, 403 on CONNECT, verified) and that the governance rating does not credit it. Captures: all seven keys re-fetched today, every sha256 and byte count equals the live bytes; every URL cited in answers, not_credited, grant source and mandate source is a key of captures; the repository source file and the 5 September template probe have no link on the page and the round-two response says so (the page states Apache-2.0 open source on its footer). Mandate unchanged and equals publisher.json. Style: no em-dash and no at-sign in the scan's notes outside the by fields of reviewer entries; no private persons named (the lead is named on the public team page as a professional role)."
+     }
+    ]
    }
   ],
   "responses": [
