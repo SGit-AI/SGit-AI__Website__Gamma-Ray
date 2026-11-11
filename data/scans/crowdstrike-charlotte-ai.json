@@ -8,7 +8,7 @@
  "read": "2026-11-11",
  "tier": "public",
  "basis": "CrowdStrike's own public pages, each listed with its hash in this scan's captures",
- "seen_by_operator": null,
+ "seen_by_operator": false,
  "what": "AI agents in the Falcon platform for security operations: conversational AI, prebuilt agents (for example Detection Triage), multi-agent investigations, and AgentWorks for custom agents.",
  "note": "A scan of a product as its vendor documents it, not of any one deployment. Made by the report studio: a researcher-assessor, a challenger, then the scorer. From the studio's Web Summit 2026 agents list. Features the vendor labels preview or pre-beta are not counted.",
  "grant": null,
