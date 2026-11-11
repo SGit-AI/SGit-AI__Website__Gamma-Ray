@@ -231,7 +231,7 @@
     "answer": "I10,I11,I13,I16,I20,I38,I50,I57,S3",
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-11",
-    "response": "No change to these answers. The at-sign in the coding-agent configuration note ('trent@trent') cannot be changed by the apply tool's fields; the studio should reword it to 'through the Trent plugin or the remote MCP server'."
+    "response": "No change to these answers. The at-sign in the coding-agent configuration note (the plugin's name written with an at-sign; now reworded) cannot be changed by the apply tool's fields; the studio should reword it to 'through the Trent plugin or the remote MCP server'."
    }
   ]
  },
