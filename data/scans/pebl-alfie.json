@@ -218,6 +218,34 @@
       "finding": "The card reads A- · R1 · C1 · O2 (node card.mjs). Autonomy shows no level because I08 (Alfie submits and approves time off) is documented but no source states Alfie's mode (whether a person confirms each action, or Alfie acts on its own), so I15, I16 and I17 stay unmet and no Autonomy rung is reached; the operator question (decision acts-without-mode) is open and I do not decide it. The card publishes under the rule of level one in at least one dimension through R, C and O. The weakest credited level is C1, which rests on one sentence of the product FAQ, 'Alfie inherits platform permissions, it does not bypass them' (I47), a rule in prose about role limits, not a description of how a person approves, overrides or stops Alfie; without it the card is A0 R1 C0 O2, still publishable."
      }
     ]
+   },
+   {
+    "round": 5,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "I65,I57",
+      "severity": "pass",
+      "finding": "Round four: both answered. I65 now says the September 2025 rebrand release presents Pebl as AI-first and names Alfie as its AI assistant, and that the June 2026 release says Alfie evolves from assistant to workforce agent. Fresh fetches of both (captured, 200): the rebrand release has AI-first and 'Alfie, Pebl's AI assistant' with no workforce-agent wording; the June 2026 release has the title 'Alfie Evolves from Assistant to Workforce Agent'. I57 now names the December 2025 release by URL for smart-routing; that page says 'Alfie automatically uses smart-routing to connect users to the right global employment specialist', and the October 2025 source says 'seamless handoff to a human expert'. Both URLs are keys of captures."
+     },
+     {
+      "answer": "I57",
+      "severity": "note",
+      "finding": "Reading only: the I57 'what' puts the December URL in a bracket after the whole sentence, so it can be read as sourcing both the handoff and smart-routing; the handoff wording is on the October page, which remains the entry source. The claim is true and both pages are captured, so no change is needed."
+     },
+     {
+      "answer": "I01,I07,I08,I09,I20,I22,I23,I40,I47,I58,I61,I67,I68,S3,I12,I15,I17,I43,I51,I63,S4",
+      "severity": "pass",
+      "finding": "Part B: git diff e844ed3..HEAD on the scan is empty, and since the round-four commit only the I65 and I57 not_credited texts, two round-4 responses and the captures_note changed; no answer, span, grade, mode or capture changed. Every https URL in answers, not_credited, announced, configurations, notes and review (13 found) is a key of captures, compared programmatically against the current 13 keys. No em-dash; at-sign characters occur only in the review by-fields and the two references to the agent in notes, as in other scans. The earlier-verified spans, grades and not_credited reasons stand."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "The card reads A– · R1 · C1 · O2 (node card.mjs pebl-alfie). Autonomy shows no level because no source states Alfie's mode (whether a person confirms each action or Alfie acts alone), so I15, I16 and I17 stay unmet; the operator question (acts-without-mode) is open and I do not decide it. The card publishes under the rule of level one in at least one dimension through R, C and O. The weakest credited level is C1, resting on one product FAQ sentence, 'Alfie inherits platform permissions, it does not bypass them' (I47), a statement about role limits and not about how a person approves, overrides or stops Alfie; without it the card is A0 R1 C0 O2, still publishable."
+     }
+    ]
    }
   ],
   "responses": [
