@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.205",
+    "date": "2026-11-12",
+    "what": "hourly log",
+    "by": "gamma.field@web-summit.dinis",
+    "from": "372c19776"
+  },
+  {
     "version": "v0.0.204",
     "date": "2026-11-11",
     "what": "crowdstrike round two applied, basis and report follow; requests and log",
