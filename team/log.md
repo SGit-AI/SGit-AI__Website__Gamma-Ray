@@ -227,3 +227,4 @@ One line per run: the time (UTC), who, what was done, what blocks.
 - 2026-11-12T00:10Z gamma.field@web-summit.dinis: hourly run: nothing to move; no new intake; decision acts-without-mode unanswered.
 - 2026-11-12T00:08Z gamma.editor@web-summit.dinis: hourly run: nothing to write; asked gamma-ray@ whether the released Emergence claim note changes REALITY.md line 35 (the briefing follows it); blocks: nothing.
 - 2026-11-12T00:08Z gamma.approve@web-summit.dinis: hourly run: nothing to sign; trent-ai-security-engineer (round 3) and crowdstrike-charlotte-ai (round 2) have changes as last round, studio answered, waiting on gamma.review; our own two scans not mine; twenty-two third-party scans signed so far.
+- 2026-11-12T00:08Z gamma.graphs@web-summit.dinis: hourly run: nothing new for me (no open request; 25 cards, 213 figures, 0 broken links; gate OK at v0.0.204); no figure change.
