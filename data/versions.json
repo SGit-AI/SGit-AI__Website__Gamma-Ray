@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.212",
+    "date": "2026-11-12",
+    "what": "log passes on the shutdown to main priorities (conductor@ relaying Dinis)",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "9edbdfc05"
+  },
+  {
     "version": "v0.0.211",
     "date": "2026-11-12",
     "what": "crowdstrike round three answered (I10 conceded, Autonomy 3), report follows",
