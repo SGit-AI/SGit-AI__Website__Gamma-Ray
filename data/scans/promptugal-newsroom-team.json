@@ -567,6 +567,44 @@
       "finding": "grant is null with an honest grant_note (one grant per agent as paths, hosts and tools; not translated into the 23 capabilities; logged, not enforced: observe mode). Nothing is scored from a grant and nothing is claimed for RiskMandate beyond what its site says. Grouped pass: I04, I08, I10, I11, I14, I20, I21, I26, I27, I30 to I34, I37, I39 to I41, I46, I48, I61, S3 unchanged since round three and still as verified; I12, I47, I38, S1 and the scope note re-checked as above."
      }
     ]
+   },
+   {
+    "round": 5,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I18",
+      "severity": "should-fix",
+      "finding": "Round four answered partly. The new wording does carry its limits, stays self-reported and deployed, and the CLAUDE.md claim is right: section Hourly runs says each agent is woken every hour on 6 November 'tonight and into Friday morning'. Two statements go past the pages. (1) 'one to three hours by role on 9 November': the summit-set page (hash matches the capture, fresh fetch) also lists dev.portugal and dev.verify at 'every 4 h', so the range is one to four hours. (2) 'wakes were stopped on 8 and 9 November': the summit-set page says every agent was stopped at 20:42 UTC on 8 November, but the big-stop page of 9 November (about 23:30 UTC) pauses the wakes of four named roles on account A and orders every other agent on account B paused, while the main conductor of the other team and conductor.b keep waking every two hours and gamma-ray keeps working, and the work stops 'unless it is critical'. So the second stop was partial and the wording should say which wakes were paused (the 8 November stop was of every agent; the 9 November one, of all but the conductors, with an exception for critical work). Also say whether the present state is known: the answer no longer claims a cadence now, which is right, but it also does not say the schedule at the date of the card is not shown. Fix the range to one to four hours and word the 9 November stop as the page words it; the card does not move."
+     },
+     {
+      "answer": "scope",
+      "severity": "note",
+      "finding": "Left unfixed: the scope note still ends 'reporter.newsroom., and counts below are of the roles in scope only.' (a full stop and a comma). Fixing is optional; a semicolon in place of the full stop and comma would read right."
+     },
+     {
+      "answer": "S1",
+      "severity": "note",
+      "finding": "Left unfixed: the S1 method still writes an at-sign character before the operator suffix. The gate allows it; the house style says no at-sign characters, so write 'the operator suffix of this team'. Optional."
+     },
+     {
+      "answer": "I43",
+      "severity": "note",
+      "finding": "Left unfixed: the not_credited text of I43 still says the cited page 'predates the stop of 9 November and the restart of 10 November'. The cited summit-set page and the big-stop page say nothing of a restart on 10 November (the big stop says any person may override it and restart any agent), and no captured source states one. Either cite a captured source for the restart or write 'any restart after the stop of 9 November'. The 107 run reports on 10 November (roles in scope) would also need its own method line, since it is a count from the repository directory, not from the cited page. Optional, but it is a claim without a source."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card computed (card.mjs): A4 R2 C2 O1, unchanged. Autonomy 4 argued against once more: it needs A3 (I08 and I18 as the only A3 leg answered), I10 or I12 (both answered), and I18 or I19, so it stands on I18 alone; without it Autonomy falls below one (I04 answered, but I07, I15, I16, I17, I19 not evidenced, which is not no). As now worded I18 still supports 'works independently; the person approves critical decisions only': CLAUDE.md Decisions are pages (only a decision that is the operator's alone waits for him; the owner of a team decision ships), scheduled wakes releasing to dev with 'When in doubt, push to production', and the big-stop page showing the operator ordering and any person overriding. The limits (cadence ended by two stops, the exception for critical work) weaken the 'hourly' claim but not the independence claim, so A4 holds as declared, resting on one document written by the subject. Fixing the two details in the I18 finding does not change the level. Control 2 and Reach 2 unchanged; I43 stays not credited."
+     },
+     {
+      "answer": "ids",
+      "severity": "pass",
+      "finding": "Only I18 and the round-four response entry changed since the round-four commit (diff read). The cited pages for I18 are keys of captures (CLAUDE.md, summit-set, big-stop); stored SHA-256 matched a fresh fetch for those three and for policies.json and the abp README. participant.md differs in hash at the same byte length (a page with a version badge, not changed in this round); keys.json, llms.txt and versions.json have grown since capture, as the S1 method already says for versions.json; the two GitHub tree pages were not fetchable. Grade self-reported and mode deployed on I18 are right for a declared deployed statement; the indicator is right; no em-dashes, no at-sign characters or email addresses in the new I18 text."
+     }
+    ]
    }
   ],
   "responses": [

@@ -184,6 +184,29 @@
       "finding": "Programmatic check of every span in the scan: all 16 spans found exactly in freshly fetched pages, 6 to 13 words; every source URL in answers, not_credited, announced and the report is a key of the relevant captures; live SHA-256 of the README, llm-info, llms.txt, product page, use-case page and OAuth metadata match the captures. Grades and modes of I08, I10, I11, I13, I16, I17, I20, I21, I22, I38, I50, I57, S3, S4 are right; operation facts credited only as observed (S3, S4, I24); I52 is out in not_credited as self-reported. No at-sign or em-dash outside by fields. No new problems found."
      }
     ]
+   },
+   {
+    "round": 4,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "ids",
+      "severity": "note",
+      "finding": "Round three finding (I25 mode default, README-only source): partly answered, enough to stand. Page text read (my own fetch, README SHA-256 a056747b, same as captures): the README says 'Repository scans. Trent reads a repository through the Trent GitHub App you install on it. The plugin does not upload your repository; it sends the repository's owner and name.' That bullet describes Trent's service side, so the studio's reading (the read through the App happens on Trent's side whatever client calls it) is sound. The captured agent-native product post says 'Deleting projects, managing keys, creating organizations, inviting members, and installing GitHub apps' stay in the dashboard, which places GitHub App installation in the product dashboard, outside the plugin. The captured llm-info and product pages name a GitHub repository connector as a default source ('Sources: a GitHub repository (repositories and Actions, kept current as the code changes)') and the product FAQ says 'You control what level of access to provide', but neither page says 'GitHub App' or per-repository install, and the blog sentence does not say whose GitHub apps. So the App as the default mechanism is stated in one captured page (the README) and implied by another; the studio's response also cites an uncaptured RBAC post, which cannot count. Default mode is defensible, not proven; residual weakness is that R3 and C2 each lean on one README sentence. Not blocking. If Dinis wants the stricter reading, mode available with cfg coding-agent gives the same signature with R3 and C2 shown available (the studio checked this)."
+     },
+     {
+      "answer": "ids",
+      "severity": "pass",
+      "finding": "Re-check of the only changed answer field since round three (commit 6367e6a is the last to touch the scan or report; nothing after): I25 note. Span 'Trent reads a repository through the Trent GitHub App you install on it.' is 13 words and found exactly in the README text. Note states only what the README and the blog say (plugin sends owner and name; installing GitHub apps is kept in the dashboard) and claims no more; grade documented fits a first-party statement; right indicator (narrower access than the whole account, I25). The I25 source, span, grade, mode are unchanged from round three, as the response says. Capture times were refreshed to 2026-11-11T21:44Z with unchanged SHA-256 values for the README. Other answers re-read: all spans found and under fifteen words (I08 12, I10 11, I11 7, I13 12, I16 6, I17 11, I20 7, I21 9, I22 11, I25 13, I38 10, I50 11, I57 11, I58 13, S3 8, S4 12; I24 observed has no span). Every answer source URL (9 distinct) is a key of captures; URLs in the report are keys of the report's own captures; the other URLs in the scan occur only in review text and the probe method line, not as sources. No em-dash and no at-sign in either file (checked programmatically). New problems: none."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card computed with card.mjs: A3 R3 C2 O3. A3 used I08, I17 (available) next I18. R3 used I24, S4, I25 (all default or observed, none available) next S2. C2 used I38, I25 next I41, I39, I43. O3 used I50, I57, S3 next I63. R3 and C2 both still follow from I25 as graded (mode default); without I25 R would drop and C would drop to the single I38 credit. They stand on one README sentence each as before; the studio recorded this dependency."
+     }
+    ]
    }
   ],
   "responses": [
