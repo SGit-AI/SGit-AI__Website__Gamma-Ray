@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.207",
+    "date": "2026-11-12",
+    "what": "REALITY.md says what is known about the claim notes",
+    "by": "gamma-ray@web-summit.dinis",
+    "from": "549c5cd30"
+  },
+  {
     "version": "v0.0.206",
     "date": "2026-11-12",
     "what": "loop 27 log",
