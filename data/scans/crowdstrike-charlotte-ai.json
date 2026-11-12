@@ -475,6 +475,20 @@
     "by": "gamma.studio@web-summit.dinis",
     "at": "2026-11-11",
     "response": "Noted; new spans I10 and I17 verified on fetched pages (raw/ans-002.html, raw/ans-003.html), 12 and 13 words, no em-dash (the dash in the I17 span is an ASCII hyphen on the page)."
+   },
+   {
+    "round": 3,
+    "answer": "I10",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-12",
+    "response": "Conceded. The example sits in the Agentic SOAR section and is not tied to AgentWorks on any captured page; I10 moved to not_credited with that reason. Autonomy falls from 4 to 3 with options on (I08 and I17); the report and article follow."
+   },
+   {
+    "round": 3,
+    "answer": "S4",
+    "by": "gamma.studio@web-summit.dinis",
+    "at": "2026-11-12",
+    "response": "The S4 note now says Reach 3 takes I25 from the AgentWorks page, not from the server, and that the page documents an open-source module without saying CrowdStrike runs it for customers."
    }
   ]
  },
@@ -529,14 +543,6 @@
    "g": "documented",
    "m": "available",
    "cfg": "autonomous-actions"
-  },
-  "I10": {
-   "e": "https://www.crowdstrike.com/en-us/blog/how-ai-leading-security-teams-are-building-the-agentic-soc/",
-   "n": "The vendor's blog on AgentWorks describes a partner's agent that runs periodic queries across Falcon telemetry and the partner's own network product, opening cases and correlating detections when activity crosses a threshold.",
-   "span": "runs periodic Falcon Next-Gen SIEM queries across both Falcon telemetry and ExtraHop",
-   "g": "documented",
-   "m": "available",
-   "cfg": "agentworks"
   },
   "I11": {
    "e": "https://www.crowdstrike.com/en-us/blog/crowdstrike-delivers-next-evolution-of-agentic-soc/",
@@ -615,7 +621,7 @@
   },
   "S4": {
    "e": "https://developer.crowdstrike.com/falcon-mcp/modules/agentworks/",
-   "n": "CrowdStrike's developer documentation for its falcon-mcp server describes an AgentWorks module whose tools list and invoke Charlotte AI AgentWorks agents, each tool with named Charlotte AI Agent Definition API scopes.",
+   "n": "CrowdStrike's developer documentation for its falcon-mcp server describes an AgentWorks module whose tools list and invoke Charlotte AI AgentWorks agents, each tool with named Charlotte AI Agent Definition API scopes. Reach 3 pairs this interface with I25, which comes from the AgentWorks page (each AgentWorks agent limited to its authorised scope), not from the server's own page; the developer page documents an open-source module and does not say CrowdStrike runs the server for customers.",
    "span": "Invoke an AgentWorks (Charlotte AI) agent and return its reply.",
    "g": "documented",
    "m": "available",
@@ -632,6 +638,11 @@
    "what": "A named customer's statement that it uses Charlotte AI across multiple platform modules (former I10 source)",
    "why": "Replaced as the I10 source: it describes an assistant used in several modules of one platform, not an agent working across systems.",
    "source": "https://www.crowdstrike.com/en-us/resources/customer-stories/green-thumb-industries/"
+  },
+  {
+   "what": "I10 (works across disparate systems), from the RDP Surveillance Agent example",
+   "why": "The blog places the example under Charlotte Agentic SOAR, which connects AgentWorks, CrowdStrike and third-party agents, and does not say the agent is an AgentWorks agent; this scan credits nothing from Agentic SOAR while its workspace is in public preview, so the example is not credited and Autonomy 4 is not reached.",
+   "source": "https://www.crowdstrike.com/en-us/blog/how-ai-leading-security-teams-are-building-the-agentic-soc/"
   }
  ],
  "announced": [
