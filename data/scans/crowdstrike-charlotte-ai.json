@@ -196,6 +196,59 @@
       "finding": "Checked and fine: I01, I07, I16, I20, I21 (declared tier, available, cfg agentworks), spans exact and under fifteen words; grades documented; modes and cfg stated per answer for the product-shape; no governance level or held level; every changed answer maps to a real indicator whose text it addresses; not_credited and announced entries carry sources that are captured; style: no em-dash or at-sign in my text."
      }
     ]
+   },
+   {
+    "round": 3,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "changes",
+    "findings": [
+     {
+      "answer": "I10",
+      "severity": "should-fix",
+      "finding": "Source now captured (a key of captures, 175,014 bytes, equal to the live size) and the span 'runs periodic Falcon Next-Gen SIEM queries across both Falcon telemetry and ExtraHop' is exact in the blog (12 words). The note is not stronger than the page on what the agent does (periodic queries over Falcon and ExtraHop Reveal(X) context via federated search, opening cases and correlating detections above a Critical or High threshold), and the sentence is present tense, a partner's agent shown in use, so it is a better source for the cross-system clause than the customer remark. But the cfg is not supported. The blog places the ExtraHop example under 'Unified Orchestration Across the Entire Security Stack', introduced by 'Charlotte Agentic SOAR makes this possible. It connects AgentWorks agents, CrowdStrike's turnkey agents, and trusted third-party agents', and it never says the RDP Surveillance Agent is an AgentWorks agent or was built in AgentWorks (the AgentWorks product page has no ExtraHop text either). The note's opening 'The vendor's blog on AgentWorks' is the studio's gloss: the page is about building an agentic SOC, and this example sits in the Agentic SOAR section. The scan's own agentic-soar configuration says nothing is credited from Agentic SOAR (preview), and I12/I13 were moved to not_credited for third-party agents in Agentic SOAR workflows; I10 now credits a third-party agent in the same orchestration layer under cfg agentworks. Autonomy 4 (the only level above 3 on the card) rests on this answer as its cross-system clause (I10 and I18, the rule's I10/I12/I13 any-clause). Fix: say in the note that the blog attributes the example to Charlotte Agentic SOAR and does not say the agent is an AgentWorks agent, and either set cfg to agentic-soar (then A4 is not credited, since that configuration credits nothing) or give a captured page that ties the ExtraHop agent to AgentWorks. As it stands the card shows A4 under 'Agentworks and Autonomous actions' on a link the page does not make."
+     },
+     {
+      "answer": "S4",
+      "severity": "should-fix",
+      "finding": "Round-two point on S4/I25 pairing is unchanged and argued, not answered. S4 itself is fine: the developer page is a key of captures, the span 'Invoke an AgentWorks (Charlotte AI) agent and return its reply.' is exact (10 words) and in the live page, grade documented, mode available, cfg mcp. Reach 3 (rule: S4 or I14 or I24, and I25) rests on S4 as the interface answer, and on I25 for authorisation. I25 is credited from the AgentWorks product page about role-based scope of AgentWorks agents (cfg agentworks), not the authorisation of the MCP interface; the READ/WRITE Charlotte AI Agent Definition scope text that does describe the interface's authorisation sits on the developer page, which no answer cites. The studio's response says the S4 note names those scopes and that mcp needs AgentWorks; true, and the card lists both configurations, but the pairing still credits the interface's authorisation from another feature's page. Either add an answer (I25 or an access-control indicator) citing the developer page scopes with its own cfg mcp, or state in the S4 note that Reach 3 takes I25 from AgentWorks, not from the server. Also the page documents an open-source module and does not say CrowdStrike runs the server for customers."
+     },
+     {
+      "answer": "I18",
+      "severity": "note",
+      "finding": "Round-two point answered: note opens 'A setting, not a deployment shown', span 'configure which agent actions execute automatically and which require human review' (11 words) is exact in the live charlotte-ai FAQ, mode available, cfg agentworks, note not stronger than the page (the page says oversight varies by action type, environment sensitivity or compliance requirements). Autonomy 3 no longer rests on it. It remains the only I18/I19 answer, so Autonomy 4 still needs it, read as a configurable gate; I08 comes from the same FAQ answer (and adjacent sentence), so A4 leans on one capability counted through two indicators. Label is honest."
+     },
+     {
+      "answer": "I17",
+      "severity": "note",
+      "finding": "Added since round two. Span 'routine investigation steps - so analysts can focus on the complex, judgment-intensive work' (13 words) is exact in the live charlotte-ai FAQ (the page uses a hyphen; no em-dash in the scan). Note matches the sentence ('automates alert triage, enrichment and routine investigation steps'); mode default, grade documented, cfg none. Two readings to keep in view: the sentence is a general statement about Charlotte AI, not a prebuilt agent shown completing a task end to end, and it sits beside I07's default span that the prebuilt agents are limited to generating information, summaries and recommendations, so 'handles routine tasks' is read from marketing text. It does not lift the shipped card, because Autonomy 3 also needs I08, which is an available option."
+     },
+     {
+      "answer": "I11",
+      "severity": "pass",
+      "finding": "Round-two note answered: the note now says only the AgentWorks half ('agents connect to the tools teams already run' as labelled GA by the vendor's blog); span 'Connect to any tool, any agent (GA)' is exact (7 words) in the captured blog; mode available, cfg agentworks. The span is a heading and the supporting sentence follows it, which is acceptable. Reach 2 with options on does not rest on I11 alone (I10 also, subject to the I10 cfg finding)."
+     },
+     {
+      "answer": "report",
+      "severity": "pass",
+      "finding": "Round-two finding answered: the falcon-mcp entry in data/reports/crowdstrike.json no longer says maintenance mode or names a hosted server ('CrowdStrike's MCP server connecting AI agents with the Falcon platform, including a module to list, invoke and observe Charlotte AI AgentWorks agents'). Its status line still says 'hosted CrowdStrike MCP GA per blog', which the captured blog supports ('connect into Falcon tools through a CrowdStrike-managed MCP server', labelled GA). The report's as-shipped signature now reads A2 R1 C1 O1, consistent with the scorer. Report analysis states the I10 example as 'a CrowdStrike blog on building agents' and 'that is a setting, and no page shows it in a deployment', which is honest; it inherits the I10 cfg issue (it places the example under AgentWorks)."
+     },
+     {
+      "answer": "basis",
+      "severity": "pass",
+      "finding": "Round-two point answered: the basis text now ends 'CrowdStrike has not seen this rating.' seen_by_operator is false. The basis names only pages that are keys of captures; the registry record is captured but cited by no answer (harmless)."
+     },
+     {
+      "answer": "captures",
+      "severity": "pass",
+      "finding": "Checked programmatically: every URL in answers, announced, not_credited, configurations, notes and basis is a key of captures (7 distinct, none missing), including the new I10 blog (read_at 2026-11-11T21:47Z, bytes equal to a live fetch today). The scan has no em-dash and its only at-signs are in agent identifiers in review/responses. All 16 answer spans were found in the live pages and are under fifteen words. No operation fact is credited (every answer has needs: statement). Hashes of the crowdstrike.com pages are the studio's own fetch and cannot be reproduced byte for byte; live sizes differ by 1 to 3 bytes. Note: tools/capture.mjs ran, so the studio's statement 'capture must run before publication' is now met for this scan."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Computed (node card.mjs and per configuration): all options on A4 R3 C2 O2. As shipped A2 R1 C1 O1 (the studio's own round-two response and the report say R1; the R2 in the brief for this round is not what the scorer gives). Agentworks on: A2 R2 C2 O2. Agentworks and mcp: A2 R3 C2 O2. Agentworks and autonomous-actions: A4 R2 C2 O2. Option levels rest on: Autonomy 2 as shipped on I16 alone; Autonomy 3 with autonomous-actions on I08 (with I17 default); Autonomy 4 on I10 (agentworks, the I10 cfg finding) together with I18 (agentworks); Reach 1 as shipped on I01; Reach 2 with agentworks on I10 (I11 also qualifies); Reach 3 with mcp on S4 (with I25 from agentworks); Control 1 as shipped on I38 alone; Control 2 on I25 with I38; Openness 1 as shipped on I20 with I58; Openness 2 on I58 with I61 (I61 is an option, agentworks, so the single answer lifting it from 1 to 2 is I61). No dimension is below level one."
+     }
+    ]
    }
   ],
   "responses": [
