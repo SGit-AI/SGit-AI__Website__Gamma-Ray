@@ -249,6 +249,39 @@
       "finding": "Computed (node card.mjs and per configuration): all options on A4 R3 C2 O2. As shipped A2 R1 C1 O1 (the studio's own round-two response and the report say R1; the R2 in the brief for this round is not what the scorer gives). Agentworks on: A2 R2 C2 O2. Agentworks and mcp: A2 R3 C2 O2. Agentworks and autonomous-actions: A4 R2 C2 O2. Option levels rest on: Autonomy 2 as shipped on I16 alone; Autonomy 3 with autonomous-actions on I08 (with I17 default); Autonomy 4 on I10 (agentworks, the I10 cfg finding) together with I18 (agentworks); Reach 1 as shipped on I01; Reach 2 with agentworks on I10 (I11 also qualifies); Reach 3 with mcp on S4 (with I25 from agentworks); Control 1 as shipped on I38 alone; Control 2 on I25 with I38; Openness 1 as shipped on I20 with I58; Openness 2 on I58 with I61 (I61 is an option, agentworks, so the single answer lifting it from 1 to 2 is I61). No dimension is below level one."
      }
     ]
+   },
+   {
+    "round": 4,
+    "by": "gamma.review@web-summit.dinis",
+    "at": "2026-11-10",
+    "verdict": "pass",
+    "findings": [
+     {
+      "answer": "ids",
+      "severity": "note",
+      "finding": "Round-three finding 1 (I10 cfg and source) is answered: I10 is removed from answers and entered in not_credited with the Agentic SOAR reason. The cited blog (fetched) places the RDP Surveillance Agent paragraph right after 'Charlotte Agentic SOAR connects AgentWorks agents, CrowdStrike's turnkey agents, and trusted third-party agents' and never calls it an AgentWorks agent, so the reason is supported. The preview label comes from the other blog (in captures), not this one; the entry's wording is acceptable but a reader of the entry alone cannot see which page carries the preview label."
+     },
+     {
+      "answer": "S4",
+      "severity": "note",
+      "finding": "Round-three finding 2 (S4 and I25 pairing) is answered in the S4 note: it says I25 comes from the AgentWorks page, not the server page, and that the developer page documents an open-source module without saying CrowdStrike runs it for customers. The span (10 words) is found in the live developer page; grade documented, mode available, cfg mcp. Reach 3 still rests on a paired cfg (mcp needs agentworks, as the mcp configuration note says), consistent with the report."
+     },
+     {
+      "answer": "levels",
+      "severity": "note",
+      "finding": "Card (node card.mjs): A3 R3 C2 O2 with options on; as shipped A2 R1 C1 O1. Per configuration (agentworks, plus the stated needs): agentworks alone A2 R2 C2 O2; mcp with agentworks A2 R3 C2 O2; autonomous-actions A3 R2 C2 O2. Autonomy 3 rests on I08 (available, off by default; autonomous-actions option) plus I17 (default, FAQ statement) or I18 (setting, agentworks). Argument against A3: I08 is a setting the page says exists, with no deployment shown, and I17 is a vendor FAQ sentence about routine steps, so 'completes routine tasks end to end' is thin. It still meets the rule as written and the report labels it a setting, available, and says no page shows it in a deployment, so no change needed. Next unlock Autonomy 4 via I10 is stated consistently in report and scan."
+     },
+     {
+      "answer": "report",
+      "severity": "pass",
+      "finding": "Report and card text agree with the scan: Autonomy 3 with options on in the shape, 'what holds', 'what would move it', 'seen and not counted' (names the blog example as placed under Agentic SOAR), the level paragraph and the Portuguese line all say 3. The unrelated content/index.md change in the diff is not part of this scan."
+     },
+     {
+      "answer": "captures",
+      "severity": "pass",
+      "finding": "Programmatic check: every URL cited in answers, not_credited, announced, notes, what and basis is a key of captures (0 missing). Checked: no em-dash in the scan or report (agent ids in review.by are the only at-signs); validate.mjs run. Spans of I01 I03 I07 I08 I11 I16 I17 I18 I20 I21 I25 I38 I58 I61 and S4 are found on the fetched pages and each is under fifteen words; grades, modes and cfgs unchanged since round three apart from I10 removal."
+     }
+    ]
    }
   ],
   "responses": [
