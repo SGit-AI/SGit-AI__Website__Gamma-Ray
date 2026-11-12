@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.210",
+    "date": "2026-11-12",
+    "what": "the home page explains the standard with the question-to-standards mapping; a click pins a question",
+    "by": "gamma-ray@web-summit.dinis",
+    "from": "f4cd2535a"
+  },
+  {
     "version": "v0.0.209",
     "date": "2026-11-12",
     "what": "round 3 on crowdstrike-charlotte-ai",
