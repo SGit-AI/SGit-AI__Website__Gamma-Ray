@@ -43,7 +43,7 @@ export function graph(m, scanId, up = scanId ? '../../' : '../') {
         o += `<g class="q q-${q.id}${hit(q.ind.some(i => lit?.has(i.id)))}" data-q="${q.id}"><a href="${up}questions/#${slugQ(q)}"><rect x="0" y="${y - rowQ / 2 + 2}" width="${xQ + 14}" height="${rowQ - 4}" rx="4"/><text x="${xQ - 6}" y="${y - 2}" text-anchor="end">${esc(short(q.text, 46))}</text><text class="dim" x="${xQ - 6}" y="${y + 12}" text-anchor="end">${q.id.replace('Q', 'Q ')} · ${q.axis} · ${q.provisions.length} provisions in ${q.standards.length} instrument${q.standards.length === 1 ? '' : 's'}</text><circle cx="${xQ + 6}" cy="${y}" r="5" class="ax-${q.axis}"/></a></g>`
     }
     if (lit) return o + `</svg><p class="figcap">Lit: the ${lit.size} indicators with evidence for this agent, the questions they answer and the provisions they reach.</p>`
-    return o + '</svg><p class="figcap">Hover or tab to a question to see what one answer reaches. Hollow dots are provisions that no question reaches yet. Dashed lines are provisions that describe the absence of something.</p>'
+    return o + '</svg><p class="figcap">Hover or tab to a question to see what one answer reaches; click it to pin it and move around the graph, click again to open it. Hollow dots are provisions that no question reaches yet. Dashed lines are provisions that describe the absence of something.</p>'
 }
 
 // 2. The compression, as four bars.
@@ -128,7 +128,7 @@ export function pairs(m) {
 }
 
 // 7. The same connections as a ring: one node per instrument, one band per pair, as thick as the indicators they share.
-export function ring(m) {
+export function ring(m, up = '../') {
     const S = m.standards, W = 760, H = 560, cx = W / 2, cy = H / 2 + 4, r = 200
     const pos = Object.fromEntries(S.map((s, k) => { const a = -Math.PI / 2 + 2 * Math.PI * k / S.length; return [s.id, [cx + r * Math.cos(a), cy + r * Math.sin(a), a]] }))
     const max = Math.max(...Object.values(m.pairs).map(v => v.length))
@@ -136,7 +136,7 @@ export function ring(m) {
     for (const [k, v] of Object.entries(m.pairs).sort((a, b) => a[1].length - b[1].length)) { const [a, b] = k.split('|'), [x1, y1] = pos[a], [x2, y2] = pos[b]
         o += `<path class="band" d="M${x1.toFixed(1)},${y1.toFixed(1)} Q${cx},${cy} ${x2.toFixed(1)},${y2.toFixed(1)}" style="stroke-width:${(1 + 13 * v.length / max).toFixed(1)};opacity:${(0.25 + 0.6 * v.length / max).toFixed(2)}"><title>${esc(m.S.get(a).short)} and ${esc(m.S.get(b).short)}: ${v.length} shared indicators</title></path>` }
     for (const s of S) { const [x, y, a] = pos[s.id], lx = cx + (r + 22) * Math.cos(a), ly = cy + (r + 22) * Math.sin(a)
-        o += `<a href="../instruments/#${slug(s.name)}"><title>${esc(s.name)}: ${s.indicators} indicators cite it (its entry on the instruments page)</title><circle class="node s-${s.id}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(7 + s.indicators / 4).toFixed(1)}"/><text class="s-${s.id} nl" x="${lx.toFixed(1)}" y="${(ly + 4).toFixed(1)}" text-anchor="${Math.cos(a) > 0.3 ? 'start' : Math.cos(a) < -0.3 ? 'end' : 'middle'}">${esc(s.short)} <tspan class="dim">${s.indicators}</tspan></text></a>` }
+        o += `<a href="${up}instruments/#${slug(s.name)}"><title>${esc(s.name)}: ${s.indicators} indicators cite it (its entry on the instruments page)</title><circle class="node s-${s.id}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(7 + s.indicators / 4).toFixed(1)}"/><text class="s-${s.id} nl" x="${lx.toFixed(1)}" y="${(ly + 4).toFixed(1)}" text-anchor="${Math.cos(a) > 0.3 ? 'start' : Math.cos(a) < -0.3 ? 'end' : 'middle'}">${esc(s.short)} <tspan class="dim">${s.indicators}</tspan></text></a>` }
     return o + '</svg><p class="figcap">A node is as large as the number of indicators that cite the instrument. A band is as thick as the number two instruments share.</p>'
 }
 

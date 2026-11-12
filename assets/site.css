@@ -143,3 +143,5 @@ a:focus-visible,summary:focus-visible,button:focus-visible,input:focus-visible,s
 @media (max-width:700px){main.home .sp-card>p:not(.sp-foot),main.home .sp-card .sp-const{display:none}main.home .sp-card .sp-row{margin:8px 0 10px}main.home .sp-cards{gap:12px}}
 main.home .sp-jump{flex-wrap:nowrap;overflow-x:auto;padding-bottom:8px;scrollbar-width:thin;-webkit-mask-image:linear-gradient(90deg,#000 94%,transparent);mask-image:linear-gradient(90deg,#000 94%,transparent)}
 .sg-0{background:var(--hair);color:var(--ink2)}@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .sg-0{background:#3a3d48;color:#ecebe6}}
+/* the mashup graph: a pinned question */
+.graph .q.pinned rect{fill:var(--band);stroke:var(--accent);stroke-width:1.2}.graph-pin{font-size:13.5px;color:var(--ink2);margin:.2em 0 1em}.graph-pin button{font:inherit;color:var(--accent);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}

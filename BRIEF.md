@@ -143,6 +143,12 @@ With two photos of a stand at the summit (Pebl, "Meet Alfie. Your global hiring 
 
 What this settles: a new session, `gamma.field@web-summit.dinis` (`team/gamma.field.md`), takes each company met from a photo or a note to a draft card; the flow is data (`data/flow.json`) and drawn at `/flow/`. The photos are not committed: they show people.
 
+## The mapping on the home page (12 November)
+
+> The website looks pretty amazing. The only thing I would say is you missed, and you need to put that on the homepage, that view of the questions to the standards, because that's actually how you explain this thing. [...] That mashup bit needs to be on the homepage. That bit there is the key explanation. It's not even the mashup. That's actually the standard, because that's how you explain all of this. [...] When I click on the mashup, you jump straight to the questions. [...] I need to demo: I want to click and then move the mouse around.
+
+What this settles: the home page explains the standard through the mapping of questions to standards (the compression, the graph, the question by instrument matrix, the ring). On the graph, a click pins a question and a second click opens it.
+
 ## The rules given with the brief
 
 Public sources only. No rating is published without its evidence. (The first brief also said: not without the company having seen it. The operator replaced that on 10 November 2026: a rating made from public data may be published, labelled as beta and as not seen by its subject.) No contact details anywhere. Never push to the main branch. The name and the backronym stay as chosen.
