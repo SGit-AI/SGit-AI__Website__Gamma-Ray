@@ -32,7 +32,7 @@ A thing not listed here does not exist. (site v0.0.206)
 - **The flow from a stand to a card** (`/flow/`, `data/flow.json`): twelve steps, who does each (a person, an agent, code), what it leaves on record and the trust after it. **A field agent**, `gamma.field@web-summit.dinis` (since 10 November 2026, 13:00 UTC), takes companies met at Web Summit from intake (`data/intake/`) to a draft card. Two intakes exist (Pebl, Bind Flow); neither has a card yet.
 - **Three Spectrum decisions are open** and are the operator's: the name, stage by sum or by shape, the first cohort. From the second brief, also open: whether In production raises the stage, and whether a vendor-wide certificate counts for one product.
 
-- **No scan of anybody's deployment but our own.** No organisation has been rated. No vendor has been asked or shown anything; the product examples say so.
+- **No scan of anybody's deployment but our own.** No organisation has been rated. Claim notes for the published third-party cards are drafted in `studio/outreach/` and handed to the conductor; a person sends them, and whether any has reached a company is not recorded in this repository. No company has confirmed or corrected a card on record, so every card is Draft.
 - **No grant measured by us.** The grants shown were measured or derived by the Agent Behaviour Policy project; one of them (Claude Code on a machine) is derived, not measured.
 - **No check of the links.** Nobody, person or model, has checked the links between indicators and provisions one by one.
 - **No questionnaire.** The Declared tier is defined; the form an operator would fill in is not built.
