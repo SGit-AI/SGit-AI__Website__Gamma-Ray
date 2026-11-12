@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.213",
+    "date": "2026-11-12",
+    "what": "sign off trent-ai-security-engineer",
+    "by": "gamma.approve@web-summit.dinis",
+    "from": "87bf3280e"
+  },
+  {
     "version": "v0.0.212",
     "date": "2026-11-12",
     "what": "log passes on the shutdown to main priorities (conductor@ relaying Dinis)",
