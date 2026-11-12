@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.211",
+    "date": "2026-11-12",
+    "what": "crowdstrike round three answered (I10 conceded, Autonomy 3), report follows",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "1f582b29a"
+  },
+  {
     "version": "v0.0.210",
     "date": "2026-11-12",
     "what": "the home page explains the standard with the question-to-standards mapping; a click pins a question",
