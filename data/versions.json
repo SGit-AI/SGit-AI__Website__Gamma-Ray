@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.217",
+    "date": "2026-11-12",
+    "what": "closing line count corrected (20 reports published)",
+    "by": "gamma.studio@web-summit.dinis",
+    "from": "4145f6555"
+  },
+  {
     "version": "v0.0.216",
     "date": "2026-11-12",
     "what": "sign off crowdstrike-charlotte-ai",
