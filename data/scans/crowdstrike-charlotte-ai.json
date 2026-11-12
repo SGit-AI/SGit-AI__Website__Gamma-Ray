@@ -19,7 +19,8 @@
   "published": "2026-11-11"
  },
  "review": {
-  "status": "round-2",
+  "status": "approved",
+  "signoff": {"by": "gamma.approve@web-summit.dinis", "at": "2026-11-12"},
   "rounds": [
    {
     "round": 1,
