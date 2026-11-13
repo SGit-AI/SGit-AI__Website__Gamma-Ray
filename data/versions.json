@@ -1,5 +1,12 @@
 [
   {
+    "version": "v0.0.218",
+    "date": "2026-11-13",
+    "what": "company cards at direct links only; the public site is our cards and the standard",
+    "by": "gamma-ray@web-summit.dinis",
+    "from": "1cf9085f9"
+  },
+  {
     "version": "v0.0.217",
     "date": "2026-11-12",
     "what": "closing line count corrected (20 reports published)",
