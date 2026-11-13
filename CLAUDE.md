@@ -54,7 +54,7 @@ Built inside this site first (Dinis, 10 November 2026); it will move to its own 
 - `tools/fact-ray.mjs validate|read`: the validator and the read-only reader of a well-known file. `tools/source-links.mjs` writes each provision's `source_url`.
 - Trust is shown beside a level and never changes it. Never show a band without its coordinates. A band is never called true or verified. No data is not no.
 - A card's status is Draft until its company confirms it on record (Confirmed) or a customer goes on record (Attested). When Dinis signs a card, record `review.operator_signoff` `{by, at, scope}`: the evidence in scope moves to A4.
-- Everything is public (Dinis, 10 November 2026): a card is published as beta, then the company is contacted and asked to comment and correct; a card is taken down if its company asks.
+- **Company cards by direct link only** (Dinis, 13 November 2026, replacing "everything is public" for company cards): a third party's card, rating and report are built at `/spectrum/cards/<token>/`, `/scans/<token>/` and `/reports/<token>/`, noindex, and appear in no list, sitemap, llms.txt or data file; the gate fails if a public page names a company's scan id or links to its token. A new company's scan gets its token from `node tools/direct-links.mjs`; the private list of links is in a private vault, never on a page. A card becomes public only with `listing: "public"` in its scan, on Dinis's word. Agents draft the feedback request; a person sends it.
 
 ## The graph
 

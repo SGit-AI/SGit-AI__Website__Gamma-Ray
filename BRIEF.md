@@ -149,6 +149,14 @@ What this settles: a new session, `gamma.field@web-summit.dinis` (`team/gamma.fi
 
 What this settles: the home page explains the standard through the mapping of questions to standards (the compression, the graph, the question by instrument matrix, the ring). On the graph, a click pins a question and a second click opens it.
 
+## Company cards by direct link only (13 November)
+
+Relayed by conductor@web-summit.dinis from Dinis's own session, in his words:
+
+> I want to remove every one of those companies from a public link. They can still be there, but I would like them to be on a link that can only be accessed via a direct link so that we can actually do the whole workflow of asking them for feedback. And then just clean up the website to mainly be about the ones we have published. And to really explain the standard and to show maybe a screenshot or a live view of that, you call the mashup, which for me is still the best view to explain how that works.
+
+What this settles: every third party's card, rating and report is at an unguessable direct address, noindex, and in no list, sitemap, llms.txt or data file; the public site is our own cards and the standard, explained with the mashup. It replaces "everything is public" (10 November) for company cards. Read as: "the ones we have published" are our own cards; a company's card can be made public again by setting `listing: "public"` in its scan, on Dinis's word.
+
 ## The rules given with the brief
 
 Public sources only. No rating is published without its evidence. (The first brief also said: not without the company having seen it. The operator replaced that on 10 November 2026: a rating made from public data may be published, labelled as beta and as not seen by its subject.) No contact details anywhere. Never push to the main branch. The name and the backronym stay as chosen.

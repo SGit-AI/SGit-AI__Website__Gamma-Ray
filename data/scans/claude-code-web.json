@@ -285,7 +285,10 @@
  },
  "review": {
   "status": "approved",
-  "signoff": {"by": "gamma.approve@web-summit.dinis", "at": "2026-11-10"},
+  "signoff": {
+   "by": "gamma.approve@web-summit.dinis",
+   "at": "2026-11-10"
+  },
   "rounds": [
    {
     "round": 1,
@@ -496,5 +499,9 @@
     "response": "Read; no change needed. The card names the configurations."
    }
   ]
+ },
+ "direct": {
+  "token": "3900505be27747922741c01c",
+  "at": "2026-11-13"
  }
 }

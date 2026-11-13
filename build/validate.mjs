@@ -64,7 +64,8 @@ for (const p of gen.pages) {
     if (!fs.existsSync(twin)) bad('twin', `${p.file}: no markdown twin`)
     const h = fs.readFileSync(html, 'utf8')
     if (!h.includes(gen.version)) bad('version', `${p.file}: the version is not on the page`)
-    if (!llms.includes(`/${p.file}.md`)) bad('llms', `${p.file} is not in llms.txt`)
+    if (!p.noindex && !llms.includes(`/${p.file}.md`)) bad('llms', `${p.file} is not in llms.txt`)
+    if (p.noindex && llms.includes(`/${p.file}.md`)) bad('direct', `${p.file} is a direct-link page and is listed in llms.txt`)
     if (/\{\{|\?[a-zA-Z]+\?/.test(h.replace(/<svg[\s\S]*?<\/svg>/g, ''))) bad('page', `${p.file}: an unfilled placeholder`)
     for (const [, href] of h.matchAll(/href="([^"#?]+)(?:[#?][^"]*)?"/g)) {
         if (/^(https?:|mailto:)/.test(href)) continue
@@ -112,8 +113,16 @@ for (const f of walk(OUT).filter(f => /\.(html|md|txt|json)$/.test(f))) {
     if (o.photo && o.photo.published !== false) bad('intake', `${at}: a photo is never published from intake`)
     for (const c of o.booth_claims || []) if (!c.text || c.text.split(/\s+/).length >= 15) bad('intake', `${at}: a booth claim must be exact and under fifteen words`)
     if (o.scan && !fs.existsSync(path.join(ROOT, 'data/scans', o.scan + '.json'))) bad('intake', `${at}: scan ${o.scan} does not exist`) } }
+// 4f direct links (Dinis, 13 November 2026): no public page or file names a third party's scan id or links to its token
+{ const third = fs.readdirSync(path.join(ROOT, 'data/scans')).map(f => read('data/scans/' + f)).filter(s => !s.ours && s.listing !== 'public')
+  const toks = third.map(s => s.direct?.token).filter(Boolean), ids = third.map(s => s.id), priv = new Set(gen.pages.filter(p => p.noindex).flatMap(p => [p.file + '.html', p.file + '.md']))
+  for (const f of walk(OUT).filter(f => /\.(html|md|json|txt|xml)$/.test(f))) { const rel = path.relative(OUT, f).replace(/\\/g, '/'); if (priv.has(rel)) continue
+    const t = fs.readFileSync(f, 'utf8')
+    for (const k of toks) if (t.includes(k)) { bad('direct', `${rel}: links to a direct-link page`); break }
+    for (const id of ids) if (new RegExp('(^|[^a-z0-9-])' + id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '([^a-z0-9-]|$)').test(t)) { bad('direct', `${rel}: names the direct-link scan ${id}`); break } }
+  for (const p of gen.pages.filter(p => p.noindex)) if (!fs.readFileSync(path.join(OUT, p.file + '.html'), 'utf8').includes('noindex')) bad('direct', `${p.file}: no noindex`) }
 // 5 the version is CI's: version.txt, if present, is a plain number
 const vf = path.join(ROOT, 'build/version.txt'); if (fs.existsSync(vf) && !/^v\d+\.\d+\.\d+\n?$/.test(fs.readFileSync(vf, 'utf8'))) bad('version', 'build/version.txt is not vX.Y.Z')
 
 if (problems.length) { console.log(problems.join('\n')); console.log(`${problems.length} problem(s); the gate is red`); process.exit(1) }
-console.log(`OK (${gen.version}: ${gen.pages.length} pages, ${gen.totals.provisions} provisions, ${gen.totals.indicators} indicators, ${gen.totals.questions} questions, 8 checks)`)
+console.log(`OK (${gen.version}: ${gen.pages.length} pages, ${gen.totals.provisions} provisions, ${gen.totals.indicators} indicators, ${gen.totals.questions} questions, 9 checks)`)

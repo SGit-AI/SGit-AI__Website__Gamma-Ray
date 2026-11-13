@@ -396,7 +396,10 @@
  },
  "review": {
   "status": "approved",
-  "signoff": {"by": "gamma.approve@web-summit.dinis", "at": "2026-11-10"},
+  "signoff": {
+   "by": "gamma.approve@web-summit.dinis",
+   "at": "2026-11-10"
+  },
   "rounds": [
    {
     "round": 1,
@@ -785,5 +788,9 @@
    "why": "A rollout count, not a figure for work the agent completes on its own; the same page says Stripe treats AI assistants as engineers who need context, not ones who work autonomously.",
    "source": "https://claude.com/customers/stripe"
   }
- ]
+ ],
+ "direct": {
+  "token": "e58fb421e1339b61b26a9c79",
+  "at": "2026-11-13"
+ }
 }

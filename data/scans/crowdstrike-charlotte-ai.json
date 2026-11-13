@@ -20,7 +20,10 @@
  },
  "review": {
   "status": "approved",
-  "signoff": {"by": "gamma.approve@web-summit.dinis", "at": "2026-11-12"},
+  "signoff": {
+   "by": "gamma.approve@web-summit.dinis",
+   "at": "2026-11-12"
+  },
   "rounds": [
    {
     "round": 1,
@@ -779,5 +782,9 @@
    "bytes": 175014,
    "read_at": "2026-11-11T21:47Z"
   }
+ },
+ "direct": {
+  "token": "08033e187e2622aa86f21a64",
+  "at": "2026-11-13"
  }
 }

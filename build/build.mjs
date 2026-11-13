@@ -18,6 +18,18 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const OUT = path.join(ROOT, '_site'), SITE = 'https://gamma-ray.sgit.ai'
 const version = (fs.existsSync(path.join(ROOT, 'build/version.txt')) ? fs.readFileSync(path.join(ROOT, 'build/version.txt'), 'utf8').trim() : '') || 'v0.0.0'
 const m = load(ROOT)
+// Dinis, 13 November 2026: a third party's card is reachable only by a direct link, so the feedback workflow can run;
+// the public site is about our own published cards and the standard. DIRECT are built at /spectrum/cards/<token>/,
+// /scans/<token>/ and /reports/<token>/, marked noindex, and left out of every list, sitemap, llms.txt and data file.
+const ALL = m.scans, DIRECT = ALL.filter(s => !s.ours && s.listing !== 'public')
+for (const s of DIRECT) if (!s.direct || !s.direct.token) throw new Error(`${s.id}: no direct link (run node tools/direct-links.mjs)`)
+m.scans = ALL.filter(s => !DIRECT.includes(s)); m.drafts = []
+const mAll = { ...m, scans: ALL }
+// names and ids of the direct-link companies, kept out of anything served in public (the version log's subjects are CI's
+// words and are redacted where they are shown, not in the file)
+const directWords = [...new Set(DIRECT.flatMap(s => [s.id, s.name, s.company, s.operator].filter(x => x && x.length > 3)))].sort((a, b) => b.length - a.length)
+const redact = s => directWords.reduce((x, wd) => x.split(wd).join('a company card'), String(s))
+const versionsPublic = () => JSON.parse(fs.readFileSync(path.join(ROOT, 'data/versions.json'), 'utf8')).map(r => Object.fromEntries(Object.entries(r).map(([k, v]) => [k, typeof v === 'string' ? redact(v) : v])))
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 const pct = viz.pct
 
@@ -57,9 +69,9 @@ function md(src, figs) {
 
 // ---------- pages ----------
 const pages = []           // { url: 'standard/', title, summary, body (markdown), section }
-const NAV = [['spectrum/', 'Spectrum'], ['fact-ray/', 'FACT-Ray'], ['reports/', 'Reports'], ['scans/', 'Ratings'], ['standard/', 'The standard'], ['about/', 'About'], ['feedback/', 'Corrections']]
+const NAV = [['spectrum/', 'Spectrum'], ['fact-ray/', 'FACT-Ray'], ['scans/', 'Ratings'], ['standard/', 'The standard'], ['about/', 'About'], ['feedback/', 'Corrections']]
 const NAV_MORE = [['briefing/', 'The briefing'], ['decisions/', 'Open decisions'], ['flow/', 'From a stand to a card'], ['rating/', 'How a rating is made'], ['questions/', 'Questions'], ['mashup/', 'The mashup'], ['lens/', 'The lens'], ['coverage/', 'Coverage'], ['provisions/', 'The provisions'], ['instruments/', 'Instruments']]
-const figs = { homegraph: () => viz.graph(m, null, ''), homering: () => viz.ring(m, ''), reaches: () => viz.reaches(m, '../'), paths: id => viz.paths(GRAPHS.find(x => x.s.id === id).g, '../../'), cardpaths: id => { const x = GRAPHS.find(x => x.s.id === id); return x ? viz.paths(x.g, '../../../') : '' }, path: id => viz.pathGraph(GRAPHS.find(x => x.s.id === id).g, '../../'), cohort: () => viz.cohort(m, sp, '../'), walk: id => viz.cardWalk(m, sp, id), label: id => viz.label(m, id), profile: id => viz.profile(m, id), configs: id => viz.configs(m, id), pairs: () => viz.pairs(m), ring: () => viz.ring(m), scans: () => viz.scanMatrix(m), grant: id => viz.grantGrid(m, id), lit: id => viz.graph(m, id), graph: () => viz.graph(m), funnel: () => viz.funnel(m), coverage: () => viz.coverage(m), matrix: () => viz.matrix(m), quadrant: id => viz.quadrant(m, id) }
+const figs = { homegraph: () => viz.graph(m, null, ''), homering: () => viz.ring(m, ''), reaches: () => viz.reaches(m, '../'), paths: id => viz.paths(GRAPHS_ALL.find(x => x.s.id === id).g, '../../'), cardpaths: id => { const x = GRAPHS_ALL.find(x => x.s.id === id); return x ? viz.paths(x.g, '../../../') : '' }, path: id => viz.pathGraph(GRAPHS_ALL.find(x => x.s.id === id).g, '../../'), cohort: () => viz.cohort(m, sp, '../'), walk: id => viz.cardWalk(mAll, sp, id), label: id => viz.label(mAll, id), profile: id => viz.profile(mAll, id), configs: id => viz.configs(mAll, id), pairs: () => viz.pairs(m), ring: () => viz.ring(m), scans: () => viz.scanMatrix(m), grant: id => viz.grantGrid(mAll, id), lit: id => viz.graph(mAll, id), graph: () => viz.graph(m), funnel: () => viz.funnel(m), coverage: () => viz.coverage(m), matrix: () => viz.matrix(m), quadrant: id => viz.quadrant(mAll, id) }
 const figText = { homegraph: 'The mashup as a graph: questions on the left, indicators in the middle, the provisions of every instrument on the right.', homering: 'The instruments as a ring: two are joined when one indicator cites both.', reaches: 'One fold-out per question: its indicators and the instruments and provisions an answer reaches; the questions page lists the same.', paths: 'For each dimension, what its level rests on: one fold-out per fact, each opening that fact\'s path down to the source.', cardpaths: 'For each dimension, what its level rests on: one fold-out per fact, each opening that fact\'s path down to the source.', path: 'One path of a card graph, from the card down to the words on a public page and across to the provisions, with the verb on every edge.', cohort: 'The published cards side by side, one row each; the table below has the same.', walk: 'The walk from the card down to each indicator, its public source and the instruments it touches; the sections below list the same in text.', label: 'The label for this rating; its contents are in the text.', profile: 'One square per indicator, by question; every answer is listed below.', configs: 'The freedom level of each configuration; the table has the same.', pairs: 'How many indicators each pair of instruments shares; the same counts are in /data/summary.json.', ring: 'The instruments as a ring joined by shared indicators.', scans: 'Every scan against every question.', grant: 'The grant as a grid of capabilities; the table below has every row.', lit: 'The mashup graph with this agent\'s evidenced indicators lit.', graph: 'The mashup as a graph (questions, indicators, provisions). The same data: /data/questions.json, /data/indicators.json, /data/provisions.json.', funnel: 'The compression in four bars; the numbers are in the text.', coverage: 'Coverage of each instrument by tier; the table below has the numbers.', matrix: 'Questions by instruments; the questions page lists every citation.', quadrant: 'The quadrant of freedom against governance; the levels are in the text.' }
 function front(src) {
     const x = src.match(/^---\n([\s\S]*?)\n---\n/); const meta = {}
@@ -84,7 +96,7 @@ const gen = {
     'instruments': () => m.standards.map(s => `### ${s.name}\n\n| | |\n|---|---|\n| Publisher | ${s.publisher} |\n| Kind | ${s.kind} |\n| Date | ${s.date} |\n| Rates | ${s.rates} |\n| Source | [${s.url.replace(/^https:\/\//, '')}](${s.url}), read ${s.read} |\n| Licence | ${s.licence} |\n| Provisions here | ${s.n}, of which a question reaches ${s.linked} |\n\n**Caveat.** ${s.caveat}`).join('\n\n'),
     'outliers': () => m.standards.filter(s => s.outliers.length).map(s => `### ${s.short}: ${s.outliers.length} of ${s.n}\n\n` + s.outliers.map(p => `- ${p.ref}: ${p.text}`).join('\n')).join('\n\n'),
     'shared': () => `| Indicator | Tier | Instruments it moves |\n|---|---|---|\n` + m.indicators.map(i => [i, [...new Set(i.links.map(l => m.P.get(l.provision).standard))]]).filter(x => x[1].length >= 4).sort((a, b) => b[1].length - a[1].length).map(([i, ss]) => `| ${i.text} | ${TIER_LABEL[i.tier]} | ${ss.length}: ${ss.map(s => m.S.get(s).short).join(', ')} |`).join('\n'),
-    'versions': () => { const v = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/versions.json'), 'utf8')); return v.length ? `| Version | Date | What | By |\n|---|---|---|---|\n` + v.map(r => `| ${r.version} | ${r.date} | ${r.what} | ${r.by || ''} |`).join('\n') : 'No release has been numbered yet.' },
+    'versions': () => { const v = versionsPublic(); return v.length ? `| Version | Date | What | By |\n|---|---|---|---|\n` + v.map(r => `| ${r.version} | ${r.date} | ${r.what} | ${r.by || ''} |`).join('\n') : 'No release has been numbered yet.' },
     'feedback-lane': () => { const l = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/feedback-lane.json'), 'utf8')); return JSON.stringify({ endpoint: l.endpoint, vault_id: l.vault_id, append_token: l.append_token, recipient: { encrypt: l.recipient.encrypt } }) },
     'queue': () => {
         // the next step of each scan and who takes it, read from its review record (the flow, data/flow.json, steps 7 to 10)
@@ -115,7 +127,8 @@ const gen = {
 m.spectrumBefore = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/history/spectrum-0.1.json'), 'utf8'))
 const sp = loadSpectrum(ROOT), fr = loadFactRay(ROOT), TODAY = new Date().toISOString().slice(0, 10)
 const wkRead = d => { const f = d && path.join(ROOT, 'data/fact-ray/read', d + '.json'); return f && fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : null }
-const TRUST = { fr, of: new Map(m.scans.map(s => [s.id, scanClaims(fr, s, m, TODAY, wkRead(s.domain))])) }
+const TRUSTALL = { fr, of: new Map(ALL.map(s => [s.id, scanClaims(fr, s, m, TODAY, wkRead(s.domain))])) }
+const TRUST = { fr, of: new Map(m.scans.map(s => [s.id, TRUSTALL.of.get(s.id)])) }
 const SPX = buildSpectrum(m, sp, TRUST)
 Object.assign(gen, SPX.gens)
 const FRX = buildFactRay(ROOT, m, sp, SPX, TRUST, TODAY)
@@ -140,6 +153,8 @@ Object.assign(gen, {
     'decisions-count': () => String(DEC.filter(d => !d.answer).length)
 })
 const GRAPHS = SPX.cards.filter(x => x.c.publishable).map(({ s, c }) => ({ s, g: cardGraph(m, sp, s, c, TRUST.of.get(s.id)) }))
+const SPXD = buildSpectrum({ ...m, scans: DIRECT }, sp, TRUSTALL)
+const GRAPHS_ALL = [...GRAPHS, ...SPXD.cards.filter(x => x.c.publishable).map(({ s, c }) => ({ s, g: cardGraph(m, sp, s, c, TRUSTALL.of.get(s.id)) }))]
 Object.assign(gen, {
     'graph-verbs': () => `| Altitude | From | Verb | To | Reads as | Its inverse |\n|---|---|---|---|---|---|\n` + VERBS.map(v => `| ${v.altitude} | ${v.from} | \`${v.verb}\`${v.in_the_fifteen ? '' : ' (ours)'} | ${v.to} | ${v.reads} | \`${v.inverse}\` |`).join('\n'),
     'graph-cards': () => `| Card | Nodes | Edges | Open questions drawn | The graph |\n|---|---|---|---|---|\n` + GRAPHS.map(({ s, g }) => `| [${s.name}](@@/spectrum/cards/${s.id}/index.md) | ${g.nodes.length} | ${g.edges.length} | ${g.nodes.filter(n => n.type === 'question').length} | [${s.id}.json](@@/data/graphs/${s.id}.json) |`).join('\n'),
@@ -157,7 +172,7 @@ for (const [f, file, title, summary] of [['REALITY.md', 'about/reality', 'What e
 // one page per scan
 const MODE = { deployed: 'In this deployment', default: 'As shipped', available: 'Available, if the operator turns it on' }
 const STRONG = new Set(['observed', 'measured'])
-for (const s of m.scans) {
+for (const s of [...m.scans, ...DIRECT]) {
     const prod = s.product, g = s.g, FL = m.levels.freedom, GL = m.levels.governance
     const counts = (i, a) => i.needs === 'statement' || STRONG.has(a.g)
     const rows = m.questions.map(q => `### ${q.text}\n\n` + q.ind.map(i => { const a = s.answers[i.id]; if (!a) return `- *Not evidenced.* ${i.text}.`; const tagc = a.m === 'available' ? MODE.available : counts(i, a) ? MODE[a.m] : 'Claimed, not counted'; return `- **${tagc}.** ${i.text}. ${a.n} [Source](${a.e}) (${a.g}${counts(i, a) || a.m === 'available' ? '' : '; this fact has to be observed or measured to count'})` }).join('\n')).join('\n\n')
@@ -180,7 +195,7 @@ for (const s of m.scans) {
     })
 }
 
-for (const p of SPX.pages) pages.push({ ...p, body: p.body.replaceAll('@@/', '../../../') })
+for (const p of [...SPX.pages, ...SPXD.pages]) pages.push({ ...p, body: p.body.replaceAll('@@/', '../../../') })
 for (const p of FRX.pages) pages.push({ ...p, body: p.body.replaceAll('@@/', '../../') })
 
 // the company reports (studio/reports.mjs, the studio's). A report is published only when one of its solutions has a
@@ -188,6 +203,19 @@ for (const p of FRX.pages) pages.push({ ...p, body: p.body.replaceAll('@@/', '..
 const signedOff = new Set(m.scans.filter(s => !s.ours && s.review?.status === 'approved').map(s => s.id))
 const RPX = buildReports(m, sp, SPX, loadReports(ROOT).filter(r => r.solutions.some(s => signedOff.has(s.scan))))
 if (RPX.json.length) for (const p of RPX.pages) pages.push({ ...p, body: p.body.replaceAll('@@/', '../'.repeat(p.file.split('/').length - 1)) })
+// the companies' reports, each at its own direct link (the token of its first solution's scan); no index page lists them
+const directIds = new Set(DIRECT.filter(s => s.review?.status === 'approved' || s.review?.keep_published).map(s => s.id))
+const RPXD = buildReports({ ...m, scans: DIRECT }, sp, SPXD, loadReports(ROOT).filter(r => r.solutions.some(s => directIds.has(s.scan))))
+const reportToken = new Map(RPXD.json.map(r => { const s = DIRECT.find(d => r.solutions.some(x => x.card && x.card.scan === d.id)) || DIRECT.find(d => r.solutions.some(x => x.scan === d.id)); return [r.id, s ? s.direct.token : null] }))
+for (const p of RPXD.pages) if (p.file !== 'reports/index') pages.push({ ...p, body: p.body.replaceAll('@@/', '../'.repeat(p.file.split('/').length - 1)) })
+// move every page about a third party to its direct link, and rewrite the links between those pages
+const tok = new Map(DIRECT.map(s => [s.id, s.direct.token]))
+const retarget = b => b.replace(/(spectrum\/cards|scans)\/([a-z0-9-]+)\//g, (x, k, id) => tok.has(id) ? `${k}/${tok.get(id)}/` : x).replace(/reports\/([a-z0-9-]+)\//g, (x, id) => reportToken.get(id) ? `reports/${reportToken.get(id)}/` : x)
+for (const p of pages) {
+    const mm = p.file.match(/^(spectrum\/cards|scans|reports)\/([a-z0-9-]+)\/(index|article)$/)
+    const isDirect = mm && (mm[1] === 'reports' ? reportToken.has(mm[2]) && !RPX.json.some(r => r.id === mm[2]) : tok.has(mm[2]))
+    if (isDirect) { p.file = `${mm[1]}/${mm[1] === 'reports' ? reportToken.get(mm[2]) : tok.get(mm[2])}/${mm[3]}`; p.noindex = true; p.body = retarget(p.body) }
+}
 for (const c of SPX.json) { const r = RPX.json.find(r => r.solutions.some(s => s.card && s.card.scan === c.id)); if (r) Object.assign(c, { company: r.name, report: r.report }) }
 
 // ---------- write ----------
@@ -207,8 +235,8 @@ for (const p of pages) {
     const html = `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}${p.file === 'index' ? '' : ' · GAMMA-Ray'}</title>
-<meta name="description" content="${esc(p.summary || '')}">
-<link rel="canonical" href="${SITE}/${url}"><link rel="alternate" type="text/markdown" href="${up}${twin}">
+<meta name="description" content="${esc(p.summary || '')}">${p.noindex ? '<meta name="robots" content="noindex,nofollow">' : ''}
+${p.noindex ? '' : `<link rel="canonical" href="${SITE}/${url}">`}<link rel="alternate" type="text/markdown" href="${up}${twin}">
 <link rel="stylesheet" href="${up}assets/site.css"><link rel="icon" href="${up}assets/mark.svg" type="image/svg+xml">
 </head><body>
 <a class="skip" href="#main">Skip to the content</a>
@@ -222,13 +250,15 @@ ${p.file === 'reports/index' ? sigChips(md(p.body, figs)) : ['questions/index', 
 <script src="${up}assets/graph.js" defer></script>
 </body></html>
 `
-    w(p.file + '.html', html)
+    w(p.file + '.html', p.noindex ? retarget(html) : html)
     w(twin, `# ${title}\n\n> GAMMA-Ray ${version} (beta, for review; every rating is experimental). ${p.summary || ''}\n> Page: ${SITE}/${url} · Source: ${p.source}\n\n` + p.body.replace(/^# .*\n/, '').replace(/\{\{fig:([a-z-]+)(?::[a-z0-9-]+)?\}\}/g, (_, k) => `*Figure. ${figText[k]}*`).replace(/^<[^>]+>.*$/gm, s => s.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()))
     p.url = url; p.titleText = title
 }
 for (const f of fs.readdirSync(path.join(ROOT, 'assets'))) fs.copyFileSync(path.join(ROOT, 'assets', f), (fs.mkdirSync(path.join(OUT, 'assets'), { recursive: true }), path.join(OUT, 'assets', f)))
-for (const f of ['standards', 'provisions', 'indicators', 'questions', 'levels', 'lens', 'versions']) w(`data/${f}.json`, fs.readFileSync(path.join(ROOT, 'data', f + '.json')))
-for (const s of m.scans) w(`data/scans/${s.id}.json`, JSON.stringify(s, null, 1))
+for (const f of ['standards', 'provisions', 'indicators', 'questions', 'levels', 'lens']) w(`data/${f}.json`, fs.readFileSync(path.join(ROOT, 'data', f + '.json')))
+w('data/versions.json', JSON.stringify(versionsPublic(), null, 1))
+const directIdsAll = DIRECT.map(s => s.id).sort((a, b) => b.length - a.length), redactIds = s => directIdsAll.reduce((x, id) => x.split(id).join('a-company-card'), s)
+for (const s of m.scans) w(`data/scans/${s.id}.json`, redactIds(JSON.stringify(s, null, 1)))
 w('data/spectrum.json', fs.readFileSync(path.join(ROOT, 'data/spectrum.json')))
 w('data/cards.json', JSON.stringify({ spectrum: sp.version, beta: true, note: 'GAMMA-Ray Spectrum cards. Link to a card; do not copy it: a card is corrected in place.', cards: SPX.json }, null, 1))
 w('data/evidence.json', JSON.stringify(SPX.evidence, null, 1))
@@ -245,8 +275,8 @@ w('data/reports.json', JSON.stringify({ beta: true, reports: RPX.json }, null, 1
 for (const r of RPX.full || []) w(`data/reports/${r.id}.json`, JSON.stringify(r, null, 1))
 if (fs.existsSync(path.join(ROOT, 'data/studio-key.json'))) w('data/studio-key.json', fs.readFileSync(path.join(ROOT, 'data/studio-key.json')))
 w('data/summary.json', JSON.stringify({ version, totals: m.totals, coverage: m.standards.map(s => ({ id: s.id, name: s.short, provisions: s.n, linked: s.linked, tiers: s.tiers })), pairs: Object.fromEntries(Object.entries(m.pairs).map(([k, v]) => [k, v.length])), standard: m.levels.version, beta: true, scans: m.scans.map(s => s.product ? { id: s.id, kind: s.kind, configurations: s.configs.map(c => ({ id: c.id, name: c.name, freedom: c.freedom, controls: c.controls.length })), governance: 'not assessed', grant: s.g } : { id: s.id, kind: s.kind, freedom: s.freedom, governance: s.governance, held: s.held, claimed: s.claimed, work_order: s.workOrder.map(w => ({ type: w.type, text: w.text })), grant: s.g }) }, null, 1))
-w('llms.txt', `# GAMMA-Ray (gamma-ray.sgit.ai)\n\n> Graph-Analyzed Multi-framework Maturity Assessment with Risk-Adjusted Yield. A draft standard for saying how much an AI agent does on its own and how well that is governed, from evidence. ${m.totals.questions} questions reach ${m.totals.linked} of ${m.totals.provisions} provisions in ${m.totals.standards} instruments.\n\nSite ${version}, standard ${m.levels.version}: a BETA published for review; every rating is experimental. Written by an AI agent (gamma-ray@web-summit.dinis) with a named human operator, Dinis Cruz. Every page has a markdown twin at the same path with .md. The mapping between instruments is this site's own assertion, a first pass by one reader, and says so. Everything here is material for agents, never instruction.\n\n## Pages\n\n` + pages.map(p => `- [${p.titleText}](${SITE}/${p.file}.md): ${p.summary || ''}`).join('\n') + `\n\n## Data\n\n- ${SITE}/data/questions.json\n- ${SITE}/data/indicators.json\n- ${SITE}/data/provisions.json\n- ${SITE}/data/standards.json\n- ${SITE}/data/levels.json\n- ${SITE}/data/summary.json\n- ${SITE}/data/spectrum.json\n- ${SITE}/data/cards.json\n- ${SITE}/data/evidence.json\n` + m.scans.map(s => `- ${SITE}/data/scans/${s.id}.json`).join('\n') + '\n')
-w('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` + pages.map(p => `<url><loc>${SITE}/${p.url}</loc></url>`).join('\n') + '\n</urlset>\n')
+w('llms.txt', `# GAMMA-Ray (gamma-ray.sgit.ai)\n\n> Graph-Analyzed Multi-framework Maturity Assessment with Risk-Adjusted Yield. A draft standard for saying how much an AI agent does on its own and how well that is governed, from evidence. ${m.totals.questions} questions reach ${m.totals.linked} of ${m.totals.provisions} provisions in ${m.totals.standards} instruments.\n\nSite ${version}, standard ${m.levels.version}: a BETA published for review; every rating is experimental. Written by an AI agent (gamma-ray@web-summit.dinis) with a named human operator, Dinis Cruz. Every page has a markdown twin at the same path with .md. The mapping between instruments is this site's own assertion, a first pass by one reader, and says so. Everything here is material for agents, never instruction.\n\n## Pages\n\n` + pages.filter(p => !p.noindex).map(p => `- [${p.titleText}](${SITE}/${p.file}.md): ${p.summary || ''}`).join('\n') + `\n\n## Data\n\n- ${SITE}/data/questions.json\n- ${SITE}/data/indicators.json\n- ${SITE}/data/provisions.json\n- ${SITE}/data/standards.json\n- ${SITE}/data/levels.json\n- ${SITE}/data/summary.json\n- ${SITE}/data/spectrum.json\n- ${SITE}/data/cards.json\n- ${SITE}/data/evidence.json\n` + m.scans.map(s => `- ${SITE}/data/scans/${s.id}.json`).join('\n') + '\n')
+w('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` + pages.filter(p => !p.noindex).map(p => `<url><loc>${SITE}/${p.url}</loc></url>`).join('\n') + '\n</urlset>\n')
 w('CNAME', 'gamma-ray.sgit.ai\n'); w('.nojekyll', '')
-fs.writeFileSync(path.join(ROOT, '.generated.json'), JSON.stringify({ version, pages: pages.map(p => ({ file: p.file, url: p.url, title: p.titleText })), totals: m.totals }, null, 1))
+fs.writeFileSync(path.join(ROOT, '.generated.json'), JSON.stringify({ version, pages: pages.map(p => ({ file: p.file, url: p.url, title: p.titleText, noindex: !!p.noindex })), totals: m.totals }, null, 1))
 console.log(`built ${pages.length} pages, ${version}: ${m.totals.provisions} provisions, ${m.totals.linked} linked, ${m.totals.indicators} indicators, ${m.totals.questions} questions`)

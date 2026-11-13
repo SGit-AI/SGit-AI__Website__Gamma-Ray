@@ -176,7 +176,10 @@
  },
  "review": {
   "status": "approved",
-  "signoff": {"by": "gamma.approve@web-summit.dinis", "at": "2026-11-10"},
+  "signoff": {
+   "by": "gamma.approve@web-summit.dinis",
+   "at": "2026-11-10"
+  },
   "rounds": [
    {
     "round": 1,
@@ -557,5 +560,9 @@
     "response": "Pass acknowledged; no change to these answers. The I18 and levels gaps named in the count are answered above."
    }
   ]
+ },
+ "direct": {
+  "token": "c58a37379846a27db9e1ceaf",
+  "at": "2026-11-13"
  }
 }

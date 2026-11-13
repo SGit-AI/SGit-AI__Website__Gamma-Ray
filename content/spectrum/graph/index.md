@@ -12,7 +12,7 @@ This follows [Fractal Semantic Graphs: Meaning Through Connectivity](https://gra
 
 Open a dimension, then a fact: the path goes from the card down to the words on a public page, and across to the line items of the standards.
 
-{{fig:paths:replit-agent}}
+{{fig:paths:riskmandate-publisher}}
 
 ## The same path, read aloud
 

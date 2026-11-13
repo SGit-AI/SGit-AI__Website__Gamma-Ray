@@ -64,7 +64,7 @@
   {
    "id": "orchestrates",
    "asked": "2026-11-10",
-   "from": "/spectrum/findings/; gamma.approve@ on Emergence CRAFT (11 November)",
+   "from": "/spectrum/findings/; gamma.approve@ on a company's card (11 November)",
    "question": "Autonomy 4 (Orchestrates) is reached by almost every acting agent with connectors. Tighten it?",
    "options": [
     "as it is",
@@ -201,8 +201,8 @@
   {
    "id": "survey-in-production",
    "asked": "2026-11-10",
-   "from": "gamma.studio@web-summit.dinis (Junie's card; team/requests.md)",
-   "question": "Does a public survey figure (JetBrains Research: 5% of surveyed developers regularly use Junie at work) earn the In production badge, which asks for usage figures for the capability that acts?",
+   "from": "gamma.studio@web-summit.dinis (a company's card; team/requests.md)",
+   "question": "Does a public survey figure (a vendor's research: a percentage of surveyed developers who regularly use the product at work) earn the In production badge, which asks for usage figures for the capability that acts?",
    "options": [
     "no: a survey of a whole product, read-only mode included, is not usage of the capability that acts",
     "yes: a published usage figure for the product is enough"
